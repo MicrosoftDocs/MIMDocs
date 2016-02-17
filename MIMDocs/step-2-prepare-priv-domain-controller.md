@@ -22,7 +22,7 @@ In this step you will create a new domain for a new privileged access management
 
     2.  When installing, specify **Windows Server 2012 R2 Standard (Server with a GUI) x64**; do not select Data Center or Server Core.
 
-        ![](Image/PAM_GS_Select_WS2012.png)
+        ![](./media/PAM_GS_Select_WS2012.png)
 
     3.  Review and accept the license terms.
 

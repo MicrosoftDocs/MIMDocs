@@ -22,7 +22,7 @@ In this step, you will create a domain controller and a member workstation in a 
 
     1.  Specify Windows Server 2012 R2 Standard (Server with a GUI) x64.
 
-        ![](Image/PAM_GS_Select_WS2012.png)
+        ![](./media/PAM_GS_Select_WS2012.png)
 
     2.  Review and accept the license terms.
 
@@ -72,19 +72,19 @@ In this step, you will create a domain controller and a member workstation in a 
 
     2.  Navigate to *Forest: contoso.local, Domains, contoso.local, Domain Controllers, Default Domain Controllers Policy*. An informational message will appear.
 
-        ![](Image/PAM_GS_GroupPolicyManagement.png)
+        ![](./media/PAM_GS_GroupPolicyManagement.png)
 
     3.  Right-click on *Default Domain Controllers Policy* and select **Edit**... in the Right-click menu.  A new window will appear.
 
     4.  In the *Group Policy Management Editor* window, under the *Default Domain Controllers Policy* tree, navigate to and expand *Computer Configuration, Policies, Windows Settings, Security Settings, Local Policies, Audit Policy*.
 
-        ![](Image/PAM_GS_Group_Policy_Management_Editor.png)
+        ![](./media/PAM_GS_Group_Policy_Management_Editor.png)
 
     5.  In the details pane, right click on **Audit account management** and select **Properties** in the right-click menu. Click **Define these policy settings**, put a checkbox on Success, put a checkbox on *Failure*, click **Apply** and **OK**.
 
     6.  In the details pane, right click on **Audit directory service access** and select **Properties** in the right-click menu. Click **Define these policy settings**, put a checkbox on *Success*, put a checkbox on Failure, click **Apply** and **OK**.
 
-        ![](Image/PAM_GS_Group_Policy_Management_Editor2.png)
+        ![](./media/PAM_GS_Group_Policy_Management_Editor2.png)
 
 9. Close the Group Policy Management Editor window, the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:
 

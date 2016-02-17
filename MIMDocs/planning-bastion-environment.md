@@ -187,19 +187,19 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 4. Navigate to Forest: contoso.local, Domains, contoso.local, Domain Controllers, Default Domain Controllers Policy. An informational message will appear.
 
-![pam-group-policy-management-editor](Image/pam-group-policy-management.jpg)
+![pam-group-policy-management-editor](./media/pam-group-policy-management.jpg)
 
 5. Right-click on Default Domain Controllers Policy and select Edit... in the Right-click menu. A new window will appear.
 
 6. In the Group Policy Management Editor window, under the Default Domain Controllers Policy tree, navigate to and expand Computer Configuration, Policies, Windows Settings, Security Settings, Local Policies, Audit Policy.
 
-![pam-group-policy-management-editor](Image/pam-group-policy-management-editor.jpg)
+![pam-group-policy-management-editor](./media/pam-group-policy-management-editor.jpg)
 
 5. In the details pane, right click on Audit account management and select Properties in the right-click menu. Click Define these policy settings, put a checkbox on Success, put a checkbox on Failure, click Apply and OK.
 
 6. In the details pane, right click on Audit directory service access and select Properties in the right-click menu. Click Define these policy settings, put a checkbox on Success, put a checkbox on Failure, click Apply and OK.
 
-![pam-group-policy-management-editor2](Image/pam-group-policy-management-editor2.jpg)
+![pam-group-policy-management-editor2](./media/pam-group-policy-management-editor2.jpg)
 
 
 7. Close the Group Policy Management Editor window, the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:

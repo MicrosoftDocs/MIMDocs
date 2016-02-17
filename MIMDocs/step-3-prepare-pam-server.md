@@ -19,7 +19,7 @@ robots: noindex,nofollow
 
     1.  Specify Windows Server 2012 R2 Standard (Server with a GUI) x64.
 
-        ![](Image/PAM_GS_Select_WS2012.png)
+        ![](./media/PAM_GS_Select_WS2012.png)
 
     2.  Review and accept the license terms.
 

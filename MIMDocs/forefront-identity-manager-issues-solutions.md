@@ -29,7 +29,7 @@ When the requestor requests to add values to a reference-valued attribute (e.g.,
 
 If different or additional attributes of the referenced object should be included in the email, the system names of those attributes can be included within this field in the email template.  For example, `[//RequestParameter/AllChangesAuthorizationTable,”Domain”,”AccountName”,”DisplayName”]`
 
-![fim-request-email](./Image/fim-request-email.jpg)
+![fim-request-email](././media/fim-request-email.jpg)
 
 ## Issue: Another Issue
 blah blah blah

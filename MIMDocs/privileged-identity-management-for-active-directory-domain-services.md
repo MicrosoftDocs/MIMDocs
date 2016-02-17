@@ -34,7 +34,7 @@ PIM builds on the principle of just-in-time administration, which works in combi
 
 PIM setup and operation has four steps.
 
-![](Image/MIM_PIM_SetupProcess.png)
+![](./media/MIM_PIM_SetupProcess.png)
 
 1.  **Prepare**: Identify which groups in your existing forest have significant privileges. As part of PIM setup, these groups will have their members removed in the current forest and the groups will be created without members in the bastion forest.
 
@@ -51,7 +51,7 @@ Active Directory, the MIM Service, and other portions of this solution can also 
 
 The following example shows how PIM works in more detail.
 
-![](Image/MIM_PIM_howitworks.png)
+![](./media/MIM_PIM_howitworks.png)
 
 This administrative access pattern allows the bastion forest to issue time-limited group memberships, which in turn produce time-limited TGTs that existing Kerberos-based applications or services can honor and enforce, including applications and services in other forests that trust the bastion forest.
 

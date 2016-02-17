@@ -28,7 +28,7 @@ The *PRIV* and *CONTOSO* domain controllers are bound by a trust which allows fo
 
     3.  (Optional) Alternatively, use **DNS Manager** (located in Start, Application Tools, DNS) to confirm DNS name forwarding for the *PRIV* domain to *PRIVDC’s* IP address.  Using this program, expand the nodes *CORPDC, Forward Lookup Zones, contoso.local*, and ensure a key named *priv* is present as a Name Server (NS) type.
 
-        ![](Image/PAM_GS_DNS_Manager.png)
+        ![](./media/PAM_GS_DNS_Manager.png)
 
 2.  On *PAMSRV*, establish one-way trust with *CORPDC* so that the CORP domain controller trusts the *PRIV* forest.
 

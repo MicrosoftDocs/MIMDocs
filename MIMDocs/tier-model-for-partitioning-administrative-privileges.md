@@ -39,7 +39,7 @@ The following guidance provides a simple model for quickly classifying existing 
 
 Specific business needs may require other tiers or additional segmentation, but this model can be used as a starting point.
 
-![pam-tiers](Image/pam-tiers.png)
+![pam-tiers](./media/pam-tiers.png)
 
 ### Tiered Privilege Model Guidelines
 

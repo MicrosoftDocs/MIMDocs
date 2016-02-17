@@ -37,7 +37,7 @@ The following guidance provides a simple model for quickly classifying existing 
 Specific business needs may require other tiers or additional segmentation, but this model can be used as a starting point.
 
 <!---
-![](Image/image1.png)
+![](./media/image1.png)
 --->
 
 ### Tiered Privilege Model Guidelines

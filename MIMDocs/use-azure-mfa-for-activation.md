@@ -62,7 +62,7 @@ Next, you’ll generate a file that includes the authentication material which M
 
 6.  Click the **Download** link in the ZIP column for the file with language **SDK for ASP.net 2.0 C\#**.
 
-![Azure MFA Activation](Image/PAM-Azure-MFA-Activation-Image-1.png)
+![Azure MFA Activation](./media/PAM-Azure-MFA-Activation-Image-1.png)
 
 7.  Copy the resulting ZIP file to each system where MIM Service is installed. 
 
@@ -84,7 +84,7 @@ NOTE: Please be aware that the ZIP file contains keying material which is used t
 
 5.  Find these three parameters: LICENSE\_KEY, GROUP\_KEY, CERT\_PASSWORD.
 
-![MFA Activation](Image/PAM-Azure-MFA-Activation-Image-2.png)
+![MFA Activation](./media/PAM-Azure-MFA-Activation-Image-2.png)
 
 6.  Using Notepad, open *MfaSettings.xml* located in *C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service.*
 

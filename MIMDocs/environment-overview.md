@@ -19,4 +19,4 @@ This test lab comprises software which can be installed on four physical or virt
 > [!IMPORTANT]
 > This CTP is not compatible with the database or directory contents from the previous CTP.  If you have been previously evaluating MIM for PAM or other scenarios, please back up and archive the virtual machines used for that test, and start the deployment with new virtual machine images that have not previously be used for MIM scenarios.
 
-![](./Image/pam-test-lab-architecture.png)
+![](././media/pam-test-lab-architecture.png)

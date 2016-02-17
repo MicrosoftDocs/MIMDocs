@@ -100,7 +100,7 @@ In addition, a typical deployment of the bastion environment would also include 
 
 The following diagram illustrates one possible architecture:
 
-![bastion1](./Image/bastion1.png)
+![bastion1](././media/bastion1.png)
 
 Additional servers can be configured for each of these functions, in order to provide higher performance under load conditions, or for geographic redundancy as described below.
 
@@ -109,23 +109,23 @@ Selection of the appropriate deployment topology when an organization's resource
 
 One of the simplest approaches would be to host the bastion environment at a particular site.  Under normal conditions, users would connect to the MIM deployment in that site's bastion environment and request activation, and the activations would have effect across resources at each site.  In case the network link is broken or the site hosting the bastion environment is unavailable, offline credentials could be accessed at another site, in order to perform temporary administration until the network is reconnected.  This approach might be suitable for situations where local administration of a particular site, such as a branch office, is anticipated to be rare and limited to reconnecting that site to the remainder of an organization's network.
 
-![bastion2](./Image/bastion2.png)
+![bastion2](././media/bastion2.png)
 
 For high availability and DR across sites, it is also possible to deploy the components of the bastion environment in each site, sharing a common PRIV directory and common SQL database.  In this topology, should the network link be broken, users at each site can continue to operate independently.
 
-![bastion3](./Image/bastion3.png)
+![bastion3](././media/bastion3.png)
 
 One constraint on the above-illustrated deployment approach, however, is that SQL Server requires a cluster that spans both sites, which for some network and hardware choices may be complex to deploy. In that situation, consider as an alternative only replicating the Active Directory (PRIV forest) of the bastion environment.  In case there is a network break between sites, users in site B who have previously already activated their privileged roles would be able to continue to operate for administering resources in site B.
 
-![bastion4](./Image/bastion4.png)
+![bastion4](././media/bastion4.png)
 
 If each site represents a separate administrative boundary, then it is also possible to deploy multiple independent bastion environments.  While each bastion environment would have the same software, the domain names of each would be different, and there would be no commonality between the directories and databases of each bastion environment. A user who wishes to manage resources in a particular site would activate a user account in the bastion environment in that site.
 
-![bastion5](./Image/bastion5.png)
+![bastion5](././media/bastion5.png)
 
 Finally, more complex deployments are possible, as multiple bastion environments may be configured independently to manage resources in a particular domain.
 
-![bastion6](./Image/bastion6.png)
+![bastion6](././media/bastion6.png)
 
 ### Hosted bastion environment
 Some organizations have also considered establishing the bastion environment separate from any of their existing sites. The bastion environment software can be hosted on a virtualization platform either within the organization's networks, or at an external hosting provider.  When evaluating this approach, keep in mind that:

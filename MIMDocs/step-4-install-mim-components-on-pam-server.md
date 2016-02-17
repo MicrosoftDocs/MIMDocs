@@ -27,7 +27,7 @@ robots: noindex,nofollow
 
         -   MIM Portal
 
-            ![](Image/PAM_GS_MIM_2015_Service_Portal.png)
+            ![](./media/PAM_GS_MIM_2015_Service_Portal.png)
 
     2.  When configuring common services and the MIM database connection, specify “Create a new database”.
 
@@ -49,21 +49,21 @@ robots: noindex,nofollow
 
     11. Leave the PAM REST API hostname empty , and specify 8086 as the port number (as described in the screenshot below):
 
-        ![](Image/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
+        ![](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
     12. Configure the MIM PAM REST API account to use the same account as SharePoint (as the MIM Portal is co-located on this “*SharePoint*”, and the Application Pool Account Password as “*Pass@word1*” (the password specified in step 2 above), and the Application Pool Account Domain as “*PRIV*”.
 
-        ![](Image/PAM_GS_Configure_Component_Service.png)
+        ![](./media/PAM_GS_Configure_Component_Service.png)
 
         Note that a warning may appear that the Service Account is not secure in its current configuration.
 
     13. Configure the MIM PAM component service. Specify the account name as “*mimcomponent*”, and the Service Account Password as “*Pass@word1*” (the password specified in step 2 above), and the Service Account Domain as “*PRIV*”.
 
-        ![](Image/PAM_GS_Configure_MIM_PAM_component_service.png)
+        ![](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
 
     14. Configure PAM Monitoring service. Specify the account name as “*mimmonitor*”, and the Service Account Password as “*Pass@word1*” (the password specified in step 2 above), and the Service Account Domain as “*PRIV*”.
 
-        ![](Image/PAM_GS_Configur_PAM_Monitoring_service.png)
+        ![](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
 
     15. On the page Enter Information for MIM Password Portals, leave checkboxes empty and continue.  Then click **Next** to continue the installation.
 
