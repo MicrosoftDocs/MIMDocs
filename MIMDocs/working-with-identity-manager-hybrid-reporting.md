@@ -1,12 +1,12 @@
 ---
 title: Working with Identity Manager Hybrid Reporting
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -25,11 +25,11 @@ The first three Microsoft Identity Manager reports available in Azure AD are **P
 
 -   Self-service groups activity displays each attempt made by someone to add themselves to or delete themselves from a group and group creation.
 
-    ![](../Image/MIM_Hybrid_passwordreset.jpg)
+    ![](Image/MIM_Hybrid_passwordreset.jpg)
 
 > [!NOTE]
 > The reports currently present data for up to one month back.
-> 
+>
 > If you want to uninstall hybrid reports, uninstall the MIMreportingAgent.msi agent.
 
 ## Prerequisites
