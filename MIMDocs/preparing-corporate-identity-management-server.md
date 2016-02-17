@@ -1,12 +1,12 @@
 ---
 title: Preparing a Corporate Identity Management Server
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -36,7 +36,7 @@ author: Kgremban
 
 8.  Add the **Web Server (IIS)** and **Application Server** roles, the **.NET Framework** 3.5, 4.0, and 4.5 features, the **Active Directory** module for Windows PowerShell.
 
-    ![](../Image/MIM_DeployWS2.png)
+    ![](Image/MIM_DeployWS2.png)
 
 9. Run **Windows PowerShell** as an administrator.
 
@@ -166,15 +166,15 @@ Install **SQL Server 2014 Standard Edition**.
 
         ```
         $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
-        $w = Get-SPWebApplication http://corpidm.domain.local:82 
-        New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator 
-         -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin 
+        $w = Get-SPWebApplication http://corpidm.domain.local:82
+        New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
+         -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
         $s = SpSite($w.Url)
         $s.AllowSelfServiceUpgrade = $false
         $s.CompatibilityLevel
         ```
 
-    2.  Verify that the result of the *CompatibilityLevel* variable is “14”.  ([See http://technet.microsoft.com/library/jj863242(v=ws.10).aspx](http://technet.microsoft.com/library/jj863242%28v=ws.10%29.aspx) for more information). If the result is “15”, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
+    2.  Verify that the result of the *CompatibilityLevel* variable is “14”.  ([See Installing FIM 2010 R2 on SharePoint Foundation 2013](http://technet.microsoft.com/library/jj863242.aspx) for more information). If the result is “15”, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
 
 9. Disable **SharePoint Server-Side Viewstate**, and the SharePoint task "Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)", by running the following PowerShell commands in the **SharePoint 2013 Management Shell**:
 
@@ -187,11 +187,11 @@ Install **SQL Server 2014 Standard Edition**.
 
 10. On your identity management server, Open a new web browser tab, navigate to **http://localhost:82/** and login as *contoso\Administrator*.  An empty SharePoint site named *MIM Portal* will be shown.
 
-    ![](../Image/MIM_DeploySP1.png)
+    ![](Image/MIM_DeploySP1.png)
 
 11. Copy the URL, then in **Internet Explorer**, open **Internet Options**, change to the **Security tab**, select **Local intranet**, click on **Sites**, then click on **Advanced** and add the copied URL to the list. Click **OK** twice.
 
-    ![](../Image/MIM_DeploySP2.png)
+    ![](Image/MIM_DeploySP2.png)
 
 12. Open **Administrative**  , then **Tools**, **Services**, locate the SharePoint Administration service, and start it, if it is not already running.
 
@@ -207,4 +207,3 @@ If you would like to configure MIM to send and receive email or provision mailbo
 -   Download and install [Microsoft Unified Communications Managed API 4.0, Core Runtime 64-bit](http://www.microsoft.com/en-us/download/details.aspx?id=34992)
 
 -   Download and install [MS Exchange Server 2013 180-day Trial version](http://www.microsoft.com/en-us/evalcenter/evaluate-exchange-server-2013)
-

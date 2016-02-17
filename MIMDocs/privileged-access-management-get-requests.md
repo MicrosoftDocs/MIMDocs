@@ -1,11 +1,11 @@
 ---
 title: Get PAM Requests
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,16 +20,16 @@ Used by a privileged account to return a history of previously posted PAM reques
 
 Method  |Request URL  
 ---------|---------
-GET     |/api/pamresources/pamrequests 
+GET     |/api/pamresources/pamrequests
 
 ###Query Parameters
 Parameter | Description
-----------|-------------- 
-$filter | Optional. Specify any of the PAM Request properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](PAM-REST-API-Service-Details.md#Filtering)
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](PAM-REST-API-Service-Details.md#Versioning)
+----------|--------------
+$filter | Optional. Specify any of the PAM Request properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Filtering)
+v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Versioning)
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](PAM-REST-API-Service-Details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
 ###Request Body
 none
 
@@ -38,26 +38,26 @@ none
 Code  |Description  
 ---------|---------
 200 | OK
-401 | Unauthorized 
-403 | Forbidden 
+401 | Unauthorized
+403 | Forbidden
 408 | Request Timeout   
-500 | Internal Server Error 
-503 | Service Unavailable 
+500 | Internal Server Error
+503 | Service Unavailable
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](PAM-REST-API-Service-Details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
 ###Response Body
 A successful response contains a list of PAM request objects with the following properties.
 
 Property | Description
 --------|-------------
 RequestID | The unique identifier (GUID) for the PAM request.
-CreatorID | A unique identifier (GUID) for the Active Directory account that created the PAM request. 
+CreatorID | A unique identifier (GUID) for the Active Directory account that created the PAM request.
 Justification | The reason for elevation.
 DisplayName | The PAM request’s display name in MIM.
-CreationTime | The creation time of the request. 
-CreationMethod | The method used to create the request. 
-ExpirationTime | The expiration time of the request. 
+CreationTime | The creation time of the request.
+CreationMethod | The method used to create the request.
+ExpirationTime | The expiration time of the request.
 RoleID| The unique identifier (GUID) of the PAM role.
 RequestedTTL | The requested expiration timeout in seconds.
 RequestedTime | The requested time for elevation.

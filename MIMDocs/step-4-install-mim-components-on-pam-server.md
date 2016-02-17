@@ -1,12 +1,12 @@
 ---
 title: Step 4 – Install MIM components on PAM server and workstation
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -27,7 +27,7 @@ robots: noindex,nofollow
 
         -   MIM Portal
 
-            ![](../Image/PAM_GS_MIM_2015_Service_Portal.png)
+            ![](Image/PAM_GS_MIM_2015_Service_Portal.png)
 
     2.  When configuring common services and the MIM database connection, specify “Create a new database”.
 
@@ -49,21 +49,21 @@ robots: noindex,nofollow
 
     11. Leave the PAM REST API hostname empty , and specify 8086 as the port number (as described in the screenshot below):
 
-        ![](../Image/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
+        ![](Image/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
     12. Configure the MIM PAM REST API account to use the same account as SharePoint (as the MIM Portal is co-located on this “*SharePoint*”, and the Application Pool Account Password as “*Pass@word1*” (the password specified in step 2 above), and the Application Pool Account Domain as “*PRIV*”.
 
-        ![](../Image/PAM_GS_Configure_Component_Service.png)
+        ![](Image/PAM_GS_Configure_Component_Service.png)
 
         Note that a warning may appear that the Service Account is not secure in its current configuration.
 
     13. Configure the MIM PAM component service. Specify the account name as “*mimcomponent*”, and the Service Account Password as “*Pass@word1*” (the password specified in step 2 above), and the Service Account Domain as “*PRIV*”.
 
-        ![](../Image/PAM_GS_Configure_MIM_PAM_component_service.png)
+        ![](Image/PAM_GS_Configure_MIM_PAM_component_service.png)
 
     14. Configure PAM Monitoring service. Specify the account name as “*mimmonitor*”, and the Service Account Password as “*Pass@word1*” (the password specified in step 2 above), and the Service Account Domain as “*PRIV*”.
 
-        ![](../Image/PAM_GS_Configur_PAM_Monitoring_service.png)
+        ![](Image/PAM_GS_Configur_PAM_Monitoring_service.png)
 
     15. On the page Enter Information for MIM Password Portals, leave checkboxes empty and continue.  Then click **Next** to continue the installation.
 
@@ -105,7 +105,7 @@ robots: noindex,nofollow
 
     9. Close **Control Panel**.
 
-6.  From the sample web application archive, (download the archive from [here](https://github.com/Azure/identity-management-samples) )unpack the contents of the folder identity-management-samples-master\Privileged-Access-Management-Portal\src into a new folder Privileged Access Management Portal within the folder C:\Program Files\Microsoft Forefront Identity Manager\2010.
+6.  From the sample web application archive, (download the archive from [Identity Management samples](https://github.com/Azure/identity-management-samples)) unpack the contents of the folder identity-management-samples-master\Privileged-Access-Management-Portal\src into a new folder Privileged Access Management Portal within the folder C:\Program Files\Microsoft Forefront Identity Manager\2010.
 
 7.  Install and configure the sample web application for the MIM PAM REST API.
 
@@ -118,12 +118,12 @@ robots: noindex,nofollow
     2.  Enable the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file “*C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config*”. In the *&lt;system.webServer&gt;* section, add the following lines:
 
         ```
-        <httpProtocol> 
-                <customHeaders> 
-        <add name="Access-Control-Allow-Credentials" value="true"  /> 
-        <add name="Access-Control-Allow-Headers" value="content-type" /> 
+        <httpProtocol>
+                <customHeaders>
+        <add name="Access-Control-Allow-Credentials" value="true"  />
+        <add name="Access-Control-Allow-Headers" value="content-type" />
         <add name="Access-Control-Allow-Origin" value="http://pamsrv:8090" />  
-                </customHeaders> 
+                </customHeaders>
         </httpProtocol>
         ```
 
@@ -152,4 +152,3 @@ robots: noindex,nofollow
     6.  On the PAM Server address, specify as the hostname of the PRIV MIM server *pamsrv.priv.contoso.local*.
 
 9. After the installation completes, restart CORPWKSTN to complete the registration of the new PowerShell module.
-

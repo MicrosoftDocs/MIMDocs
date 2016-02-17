@@ -186,7 +186,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding. Specify *contoso.loca
 
    `setspn -S FIMService/pamsrv PRIV\MIMService`
 
-**NOTE:** This guide describes how to get started installing MIM 2016 server components on a single system for testing purposes.  Additional Kerberos configuration is required to install MIM 2016 server components on multiple systems for high availability, such as described [here](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
+**NOTE:** This guide describes how to get started installing MIM 2016 server components on a single system for testing purposes.  Additional Kerberos configuration is required to install MIM 2016 server components on multiple systems for high availability, such as described [in FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
 ### Configure delegation.
 

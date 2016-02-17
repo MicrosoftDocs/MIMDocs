@@ -1,12 +1,12 @@
 ---
 title: Step 3 – Prepare a PAM server
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -19,7 +19,7 @@ robots: noindex,nofollow
 
     1.  Specify Windows Server 2012 R2 Standard (Server with a GUI) x64.
 
-        ![](../Image/PAM_GS_Select_WS2012.png)
+        ![](Image/PAM_GS_Select_WS2012.png)
 
     2.  Review and accept the license terms.
 
@@ -85,7 +85,7 @@ robots: noindex,nofollow
         ```
 
     3.  Alternatively, using a text editor such as Notepad, open this file:
-        C:\Windows\System32\inetsrv\config\applicationHost.config 
+        C:\Windows\System32\inetsrv\config\applicationHost.config
         and on line 82 of that file, replace the tag value of *overrideModeDefault*:
 
         &lt;section name="windowsAuthentication" overrideModeDefault="Deny" /&gt;
@@ -172,13 +172,13 @@ robots: noindex,nofollow
 
         ```
         $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
-        $w = Get-SPWebApplication http://pamsrv.priv.contoso.local:82 
-        New-SPSite -Url $w.Url -Template $t -OwnerAlias PRIV\Administrator                -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias PRIV\BackupAdmin 
+        $w = Get-SPWebApplication http://pamsrv.priv.contoso.local:82
+        New-SPSite -Url $w.Url -Template $t -OwnerAlias PRIV\Administrator                -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias PRIV\BackupAdmin
         $s = SpSite($w.Url)
         $s.AllowSelfServiceUpgrade = $false
         $s.CompatibilityLevel
         ```
-        Verify that the result of the *CompatibilityLevel* variable is “14”.  ([See http://technet.microsoft.com/library/jj863242(v=ws.10).aspx](http://technet.microsoft.com/library/jj863242%28v=ws.10%29.aspx) for more information). If the result is “15”, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
+        Verify that the result of the *CompatibilityLevel* variable is “14”.  ([See Installing FIM 2010 R2 on SharePoint Foundation 2013](http://technet.microsoft.com/library/jj863242.aspx) for more information). If the result is “15”, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
 
     2.  Disable SharePoint server-side viewstate, and the SharePoint task "*Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers*", by running the following PowerShell commands in the **SharePoint 2013 Management Shell**:
 
@@ -192,4 +192,3 @@ robots: noindex,nofollow
 16. Open a new web browser tab, navigate to *http://pamsrv.priv.contoso.local:82/* and login as *PRIV\Administrator*.  An empty SharePoint site named “MIM Portal” will be shown. Then in Internet Explorer, open **Internet Options**, change to the **Security tab,** select **Local intranet**, and add the web site. (Note that if sign in fails, the Kerberos SPNs created earlier in step 2 might need to be updated.)
 
 17. Using **Services** (located in Administrative Tools), start the **SharePoint Administration** service, if not already running.
-

@@ -1,12 +1,12 @@
 ---
 title: Step 2 – Prepare PRIV domain controller
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -22,7 +22,7 @@ In this step you will create a new domain for a new privileged access management
 
     2.  When installing, specify **Windows Server 2012 R2 Standard (Server with a GUI) x64**; do not select Data Center or Server Core.
 
-        ![](../Image/PAM_GS_Select_WS2012.png)
+        ![](Image/PAM_GS_Select_WS2012.png)
 
     3.  Review and accept the license terms.
 
@@ -57,7 +57,7 @@ In this step you will create a new domain for a new privileged access management
         ```
         import-module activedirectory
         $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-        New-ADUser –SamAccountName MIMMA –name MIMMA 
+        New-ADUser –SamAccountName MIMMA –name MIMMA
         Set-ADAccountPassword –identity MIMMA –NewPassword $sp
         Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
         New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
@@ -66,19 +66,19 @@ In this step you will create a new domain for a new privileged access management
         New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
         Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
         Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName MIMSync –name MIMSync 
+        New-ADUser –SamAccountName MIMSync –name MIMSync
         Set-ADAccountPassword –identity MIMSync –NewPassword $sp
         Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName MIMService –name MIMService 
+        New-ADUser –SamAccountName MIMService –name MIMService
         Set-ADAccountPassword –identity MIMService –NewPassword $sp
         Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName SharePoint –name SharePoint 
+        New-ADUser –SamAccountName SharePoint –name SharePoint
         Set-ADAccountPassword –identity SharePoint –NewPassword $sp
         Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName SqlServer –name SqlServer 
+        New-ADUser –SamAccountName SqlServer –name SqlServer
         Set-ADAccountPassword –identity SqlServer –NewPassword $sp
         Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName BackupAdmin –name BackupAdmin 
+        New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
         Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
         Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
         Add-ADGroupMember "Domain Admins" SharePoint
@@ -163,4 +163,3 @@ In this step you will create a new domain for a new privileged access management
     6.  Close **Active Directory Users and Computers**.
 
 12. Restart the PRIVDC server so that these changes take effect.
-

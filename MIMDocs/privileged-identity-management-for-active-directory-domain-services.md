@@ -1,12 +1,12 @@
 ---
 title: Privileged Identity Management for Active Directory Domain Services (AD DS)
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -34,7 +34,7 @@ PIM builds on the principle of just-in-time administration, which works in combi
 
 PIM setup and operation has four steps.
 
-![](../Image/MIM_PIM_SetupProcess.png)
+![](Image/MIM_PIM_SetupProcess.png)
 
 1.  **Prepare**: Identify which groups in your existing forest have significant privileges. As part of PIM setup, these groups will have their members removed in the current forest and the groups will be created without members in the bastion forest.
 
@@ -51,7 +51,7 @@ Active Directory, the MIM Service, and other portions of this solution can also 
 
 The following example shows how PIM works in more detail.
 
-![](../Image/MIM_PIM_howitworks.png)
+![](Image/MIM_PIM_howitworks.png)
 
 This administrative access pattern allows the bastion forest to issue time-limited group memberships, which in turn produce time-limited TGTs that existing Kerberos-based applications or services can honor and enforce, including applications and services in other forests that trust the bastion forest.
 
@@ -76,8 +76,8 @@ As an example, let’s say a user was a member of an administrative group before
 Assuming the request is approved, the Action workflow communicates directly with bastion forest Active Directory to put a user in a group. For example, when Jen requests to administer the HR database, the administrative account for Jen is added to the privileged group in the bastion forest within seconds. Her administrative account’s membership in that group will expire after a time limit, such as an hour, or a day, or a week, or whatever is appropriate for that request. With Windows Server Technical Preview, that membership is associated in Active Directory with a time limit; with Windows Server 2012 R2 in the bastion forest, that time limit is enforced by MIM.
 
 > [!NOTE]
-> When you add a new member to a group, the change needs to replicate to other domain controllers (DCs) in the bastion forest. Replication latency can impact the ability for users to access resources. For more information about replication latency, see [How Active Directory Replication Topology Works](https://technet.microsoft.com/library/cc755994%28v=ws.10%29.aspx).
-> 
+> When you add a new member to a group, the change needs to replicate to other domain controllers (DCs) in the bastion forest. Replication latency can impact the ability for users to access resources. For more information about replication latency, see [How Active Directory Replication Topology Works](https://technet.microsoft.com/library/cc755994.aspx).
+>
 > In contrast, an expiring link is evaluated in real time by the Security Accounts Manager (SAM). This means that even though the addition of a group member is a change that needs to be replicated by the DC that receives the access request, the removal of a group member does not need to replicate. It’s evaluated instantaneously on any DC.
 
 This workflow is specifically intended for these administrative accounts. Administrators (or even scripts) who need only occasional access for privileged groups, can precisely request that access. MIM logs the request and the changes in Active Directory, and you can view them in Event Viewer. It is very easy to send the output of this system to enterprise monitoring solutions such as System Center 2012 - Operations Manager Audit Collection Services (ACS), or other third-party tools.
@@ -85,7 +85,6 @@ This workflow is specifically intended for these administrative accounts. Admini
 After the workflows are complete, users can verify that their accounts in the bastion forest are in the same groups in which their already-existing (“Corp” in the previous diagram) forest accounts were originally members, just as if they had been members all along. They can then use their account in the bastion forest to access existing apps in the existing forest. Those access rights will disappear automatically when the ticket expires, and all their group memberships will also expire, unless they are renewed.
 
 Related articles
-[Deployment Considerations for Privileged Access Management](https://technet.microsoft.com/en-us/library/mt620093.aspx)
-[Privileged Access Management Operations](https://technet.microsoft.com/en-us/library/mt561422.aspx)
-[Getting Started with Privileged Access Management](https://technet.microsoft.com/en-us/library/mt345568.aspx)
-
+[Deployment Considerations for Privileged Access Management](privileged-access-management-deployment-considerations.md)
+[Privileged Access Management Operations](privileged-access-management-operations.md)
+[Getting Started with Privileged Access Management](privileged-access-management-get-started.md)

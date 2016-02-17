@@ -1,11 +1,11 @@
 ---
 title: Privileged Access Management Operations
-ms.custom: 
+ms.custom:
   - inhenk
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -14,4 +14,4 @@ author: Kgremban
 ---
 # Privileged Access Management Operations
 ## In this section
-[Using Azure MFA for Activation](https://technet.microsoft.com/en-US/library/mt517876.aspx)
+[Using Azure MFA for Activation](use-azure-mfa-for-activation.md)

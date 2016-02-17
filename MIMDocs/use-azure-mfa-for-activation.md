@@ -1,6 +1,6 @@
 ---
 title: Using Azure MFA for activation
-ms.custom: 
+ms.custom:
   - inhenk
   - identity management
   - MIM
@@ -8,7 +8,7 @@ ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -62,7 +62,7 @@ Next, you’ll generate a file that includes the authentication material which M
 
 6.  Click the **Download** link in the ZIP column for the file with language **SDK for ASP.net 2.0 C\#**.
 
-![Azure MFA Activation](../Image/PAM-Azure-MFA-Activation-Image-1.png)
+![Azure MFA Activation](Image/PAM-Azure-MFA-Activation-Image-1.png)
 
 7.  Copy the resulting ZIP file to each system where MIM Service is installed. 
 
@@ -84,7 +84,7 @@ NOTE: Please be aware that the ZIP file contains keying material which is used t
 
 5.  Find these three parameters: LICENSE\_KEY, GROUP\_KEY, CERT\_PASSWORD.
 
-![MFA Activation](../Image/PAM-Azure-MFA-Activation-Image-2.png)
+![MFA Activation](Image/PAM-Azure-MFA-Activation-Image-2.png)
 
 6.  Using Notepad, open *MfaSettings.xml* located in *C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service.*
 
@@ -142,7 +142,7 @@ The following events can be found in the Privileged Access Management event log:
 
 To find out more information about failing telephone calls (event 101), you can also view or download a report from Azure MFA.
 
-1.  Open a web browser and connect to the Azure management portal at [https://manage.windowsazure.com](https://manage.windowsazure.com) as an Azure AD global administrator.
+1.  Open a web browser and connect to the [Azure management portal](https://manage.windowsazure.com) as an Azure AD global administrator.
 
 2.  Click **Active Directory** in the Azure Portal menu, and then click the **Multi-Factor Auth Providers** tab.
 

@@ -1,11 +1,11 @@
 ---
 title: Create PAM Request
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,49 +20,49 @@ Used by a privileged account to elevate to a PAM role.
 
 Method  |Request URL  
 ---------|---------
-POST     |/api/pamresources/pamrequests 
+POST     |/api/pamresources/pamrequests
 
 ###Query Parameters
 Parameter | Description
 --------|-------------
 Justification | Optional. The user-supplied reason for the elevation request.
 RoleId| Required. The unique identifier (GUID) of the PAM role to elevate to.
-RequestedTTL| Required. The requested expiration time, in seconds. 
+RequestedTTL| Required. The requested expiration time, in seconds.
 RequestedTime | Optoinal. The time to elevate privileges.  
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](PAM-REST-API-Service-Details.md#Versioning)
+v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Versioning)
 
 **Note**: You can specify the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* parameters as properties in the request body, rather than as query parameters. The *v* parameteer can only be specified as a query parameter.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](PAM-REST-API-Service-Details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
 ###Request Body
-Optional. As noted above, the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* paramters can be specified as properties of a request body instead of specifying them in the URL query string. 
+Optional. As noted above, the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* paramters can be specified as properties of a request body instead of specifying them in the URL query string.
 
 ##Response
 ###Response Codes
 Code  |Description  
 ---------|---------
 200 | OK
-401 | Unauthorized 
-403 | Forbidden 
+401 | Unauthorized
+403 | Forbidden
 408 | Request Timeout   
-500 | Internal Server Error 
-503 | Service Unavailable 
+500 | Internal Server Error
+503 | Service Unavailable
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](PAM-REST-API-Service-Details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
 ###Response Body
 A successful response contains a PAM request object with the following properties.
 
 Property | Description
 --------|-------------
 RequestID | The unique identifier (GUID) for the PAM request.
-CreatorID | The unique identifier (GUID) in the MIM service for the account that created the request. 
+CreatorID | The unique identifier (GUID) in the MIM service for the account that created the request.
 Justification | The reason for elevation.
 DisplayName | The PAM request’s display name in MIM.
-CreationTime | The creation time of the request. 
-CreationMethod | The method used to create the request. 
-ExpirationTime | The expiration time of the request. 
+CreationTime | The creation time of the request.
+CreationMethod | The method used to create the request.
+ExpirationTime | The expiration time of the request.
 RoleID| The unique identifier (GUID) of the PAM role.
 RequestedTTL | The requested expiration timeout in seconds.
 RequestedTime | The requested time for elevation.
@@ -115,4 +115,3 @@ HTTP/1.1 201 Created
     "RequestStatus":"PendingApproval"
 }
 ```       
-

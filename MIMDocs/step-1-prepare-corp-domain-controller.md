@@ -1,12 +1,12 @@
 ---
 title: Step 1 - Prepare the CORP domain controller
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -22,7 +22,7 @@ In this step, you will create a domain controller and a member workstation in a 
 
     1.  Specify Windows Server 2012 R2 Standard (Server with a GUI) x64.
 
-        ![](../Image/PAM_GS_Select_WS2012.png)
+        ![](Image/PAM_GS_Select_WS2012.png)
 
     2.  Review and accept the license terms.
 
@@ -58,7 +58,7 @@ In this step, you will create a domain controller and a member workstation in a 
         ```
         import-module activedirectory
         New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global          –SamAccountName CorpAdmins
-        New-ADUser –SamAccountName Jen –name Jen 
+        New-ADUser –SamAccountName Jen –name Jen
         Add-ADGroupMember –identity CorpAdmins –Members Jen
         $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
         Set-ADAccountPassword –identity Jen –NewPassword $jp
@@ -72,19 +72,19 @@ In this step, you will create a domain controller and a member workstation in a 
 
     2.  Navigate to *Forest: contoso.local, Domains, contoso.local, Domain Controllers, Default Domain Controllers Policy*. An informational message will appear.
 
-        ![](../Image/PAM_GS_GroupPolicyManagement.png)
+        ![](Image/PAM_GS_GroupPolicyManagement.png)
 
     3.  Right-click on *Default Domain Controllers Policy* and select **Edit**... in the Right-click menu.  A new window will appear.
 
     4.  In the *Group Policy Management Editor* window, under the *Default Domain Controllers Policy* tree, navigate to and expand *Computer Configuration, Policies, Windows Settings, Security Settings, Local Policies, Audit Policy*.
 
-        ![](../Image/PAM_GS_Group_Policy_Management_Editor.png)
+        ![](Image/PAM_GS_Group_Policy_Management_Editor.png)
 
     5.  In the details pane, right click on **Audit account management** and select **Properties** in the right-click menu. Click **Define these policy settings**, put a checkbox on Success, put a checkbox on *Failure*, click **Apply** and **OK**.
 
     6.  In the details pane, right click on **Audit directory service access** and select **Properties** in the right-click menu. Click **Define these policy settings**, put a checkbox on *Success*, put a checkbox on Failure, click **Apply** and **OK**.
 
-        ![](../Image/PAM_GS_Group_Policy_Management_Editor2.png)
+        ![](Image/PAM_GS_Group_Policy_Management_Editor2.png)
 
 9. Close the Group Policy Management Editor window, the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:
 
@@ -100,7 +100,7 @@ In this step, you will create a domain controller and a member workstation in a 
     2.  Type the following commands that will configure the source domain to permit remote procedure call (RPC) access to the security accounts manager (SAM) database.
 
         ```
-        New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1 
+        New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
         Restart-Computer
         ```
         This will restart CORPDC.  For further information on this registry setting, see: [http://support.microsoft.com/kb/322970](http://support.microsoft.com/kb/322970)
@@ -131,4 +131,3 @@ In this step, you will create a domain controller and a member workstation in a 
         $acl.SetAccessRule($car)
         Set-Acl c:\corpfs $acl
         ```
-

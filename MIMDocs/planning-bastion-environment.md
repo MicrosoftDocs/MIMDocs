@@ -248,4 +248,4 @@ For example, if CORPDC is a domain controller of the existing domain CONTOSO, an
 
 ### Selecting users and groups for inclusion
 
-The next step is defining the PAM roles, associating the users and groups to which they should have access. This will typically be a subset of the users and groups for the tier identified as being managed in the bastion environment. More information is in [*Defining roles for Privileged Access Management*](https://technet.microsoft.com/library/mt620091.aspx).
+The next step is defining the PAM roles, associating the users and groups to which they should have access. This will typically be a subset of the users and groups for the tier identified as being managed in the bastion environment. More information is in [Defining roles for Privileged Access Management](defining-roles-for-pam.md).

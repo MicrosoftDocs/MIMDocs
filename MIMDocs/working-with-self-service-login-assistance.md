@@ -1,12 +1,12 @@
 ---
 title: Working with Self-Service Login Assistance
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -50,7 +50,7 @@ This section assumes that you have downloaded and completed the deployment of th
 -   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client has to be deployed on the server or on a separate client computer.
 
 ## Prerequisites
-Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins nd Extensions](https://technet.microsoft.com/en-us/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/en-us/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/en-us/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/en-us/library/hh826057%28v=ws.10%29.aspx)
+Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins nd Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
 In the next section, you will set up your Azure MFA provider in Microsoft Azure Active Directory. As part of this, you’ll generate a file that includes the authentication material which MFA requires to be able to contact Azure MFA.  In order to proceed, you will need an Azure subscription.
 
@@ -66,13 +66,13 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 4.  In the **Name** field, enter **SSPRMFA** and click **Create**.
 
-    ![](../Image/MIM_SSPR_Azureportal.png)
+    ![](Image/MIM_SSPR_Azureportal.png)
 
 5.  Click **Active Directory** in the Azure Portal menu, and then click the **Multi-Factor Auth Providers** tab.
 
 6.  Click on **SSPRMFA** and then click **Manage** at the bottom of the screen.
 
-    ![](../Image/MIM_SSPR_ManageButton.png)
+    ![](Image/MIM_SSPR_ManageButton.png)
 
 7.  In the new window, on the left panel, under **Configure**, click on **Settings**.
 
@@ -82,7 +82,7 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 10. Click the **Download** link in the ZIP column for the file with language **SDK for ASP.net 2.0 C#**.
 
-    ![](../Image/MIM_SSPR_Azure_MFA.png)
+    ![](Image/MIM_SSPR_Azure_MFA.png)
 
 11. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
 
@@ -98,7 +98,7 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 5.  Find these three parameters: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
 
-    ![](../Image/MIM_SSPR_pFile.png)
+    ![](Image/MIM_SSPR_pFile.png)
 
 6.  In **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**, open the file: **MfaSettings**.xml.
 
@@ -116,11 +116,11 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 1.  Launch Internet Explorer and navigate to the MIM Portal, authenticating as the MIM administrator, then click on  **Workflows** in the left hand navigation bar.
 
-    ![](../Image/MIM_SSPR_workflow.jpg)
+    ![](Image/MIM_SSPR_workflow.jpg)
 
 2.  Check **Password Reset AuthN Workflow**.
 
-    ![](../Image/MIM_SSPR_PwdResetAuthNworkflow.jpg)
+    ![](Image/MIM_SSPR_PwdResetAuthNworkflow.jpg)
 
 3.  Click on the **Activities** tab and then scroll down to **Add Activity**.
 
@@ -136,9 +136,9 @@ Users in your organization can now register for password reset.  During this pro
 
 2.  In the **Phone Number** or **Mobile Phone**  field, they have to enter a country code, a space, and the phone number and click **Next**.
 
-    ![](../Image/MIM_SSPR_PhoneVerification.JPG)
+    ![](Image/MIM_SSPR_PhoneVerification.JPG)
 
-    ![](../Image/MIM_SSPR_mobilephoneverification.JPG)
+    ![](Image/MIM_SSPR_mobilephoneverification.JPG)
 
 ## How does it work for your users?
 Now that everything is configured and it’s running, you might want to know what your users are going to have to go through when they reset their passwords right before a vacation and come back only to realize that they completely forgot their passwords.
@@ -149,9 +149,9 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 #### Windows desktop login integrated password reset
 
-1.  If your user enters the wrong password several times, in the login screen, they will have the option to click **Problems logging in?** . ![](../Image/MIM_SSPR_problemsloggingin.JPG)
+1.  If your user enters the wrong password several times, in the login screen, they will have the option to click **Problems logging in?** . ![](Image/MIM_SSPR_problemsloggingin.JPG)
 
-    Clicking this link will take them to the MIM Password Reset screen where they can change their password or unlock their account.![](../Image/MIM_SSPR_keepcurrentorsetnewpwd.JPG)
+    Clicking this link will take them to the MIM Password Reset screen where they can change their password or unlock their account.![](Image/MIM_SSPR_keepcurrentorsetnewpwd.JPG)
 
 2.  The user will be directed to authenticate. If MFA was configured, the user will receive a phone call.
 
@@ -183,13 +183,12 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 3.  The user will have to choose if he wants to reset his password or unlock his account. If he chooses to unlock his account, the account will be unlocked.
 
-    ![](../Image/MIM_SSPR_accountUnlock.JPG)
+    ![](Image/MIM_SSPR_accountUnlock.JPG)
 
 4.  After successful authentication, the user will be given two options, either to keep his current password or to set a new password.
 
-5.  ![](../Image/MIM_SSPR-account-unlock.JPG)
+5.  ![](Image/MIM_SSPR-account-unlock.JPG)
 
 6.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
 
-    ![](../Image/MIM_SSPR_PR1.JPG)
-
+    ![](Image/MIM_SSPR_PR1.JPG)

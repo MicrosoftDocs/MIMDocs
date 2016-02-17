@@ -1,12 +1,12 @@
 ---
 title: Step 5 – Establish trust between PRIV and CORP forests
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -28,7 +28,7 @@ The *PRIV* and *CONTOSO* domain controllers are bound by a trust which allows fo
 
     3.  (Optional) Alternatively, use **DNS Manager** (located in Start, Application Tools, DNS) to confirm DNS name forwarding for the *PRIV* domain to *PRIVDC’s* IP address.  Using this program, expand the nodes *CORPDC, Forward Lookup Zones, contoso.local*, and ensure a key named *priv* is present as a Name Server (NS) type.
 
-        ![](../Image/PAM_GS_DNS_Manager.png)
+        ![](Image/PAM_GS_DNS_Manager.png)
 
 2.  On *PAMSRV*, establish one-way trust with *CORPDC* so that the CORP domain controller trusts the *PRIV* forest.
 
@@ -88,5 +88,4 @@ The *PRIV* and *CONTOSO* domain controllers are bound by a trust which allows fo
         ```
         The output should indicate either “**Enabling SID history for this trust**” or “**SID history is already enabled for this trust**”.
 
-        The output should also indicate that “**SID filtering is not enabled for this trust**”. See [http://technet.microsoft.com/library/cc772816(v=WS.10).aspx](http://technet.microsoft.com/library/cc772816%28v=WS.10%29.aspx)  for more information.
-
+        The output should also indicate that “**SID filtering is not enabled for this trust**”. See [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx)  for more information.

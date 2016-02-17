@@ -1,11 +1,11 @@
 ---
 title: Get PAM Session Info
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,15 +20,15 @@ Used by a privileged account to get the username of the account that is logged i
 
 Method  |Request URL  
 ---------|---------
-GET     |/api/session/sessioninfo 
+GET     |/api/session/sessioninfo
 
 ###Query Parameters
 Parameter | Description
-----------|-------------- 
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](PAM-REST-API-Service-Details.md#Versioning)
+----------|--------------
+v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Versioning)
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](PAM-REST-API-Service-Details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
 ###Request Body
 none
 
@@ -37,14 +37,14 @@ none
 Code  |Description  
 ---------|---------
 200 | OK
-401 | Unauthorized 
-403 | Forbidden 
+401 | Unauthorized
+403 | Forbidden
 408 | Request Timeout   
-500 | Internal Server Error 
-503 | Service Unavailable 
+500 | Internal Server Error
+503 | Service Unavailable
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](PAM-REST-API-Service-Details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
 ###Response Body
 A successful response returns a PAM session object with the following properties.
 
@@ -71,4 +71,3 @@ HTTP/1.1 200 OK
     ]
 }
 ```       
-

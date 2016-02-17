@@ -1,11 +1,11 @@
 ---
 title: Profile Operations
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -15,5 +15,5 @@ ms.assetid: d9880f36-035c-4f09-b105-ea478ced71d0
 
 ##In This Section
 
-- [Get Profile Data](Get-Profile-Data.md)
-- [Get Profile State Operations](Get-Profile-State-Operations.md)
+- [Get Profile Data](get-profile-data.md)
+- [Get Profile State Operations](get-profile-state-operations.md)

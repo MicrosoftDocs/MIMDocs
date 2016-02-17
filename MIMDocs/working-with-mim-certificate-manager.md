@@ -1,12 +1,12 @@
 ---
 title: Working with the MIM Certificate Manager
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -39,7 +39,7 @@ You create a certificate template for the CM  app the same way you ordinarily wo
 
 6.  Right-click the **Smartcard Logon** template and click **Duplicate Template**.
 
-7.  On the Compatibility tab, under Certification Authority select Windows Server 2008 and under Certificate Recipient select Windows 8.1/Windows Server 2012 R2. 
+7.  On the Compatibility tab, under Certification Authority select Windows Server 2008 and under Certificate Recipient select Windows 8.1/Windows Server 2012 R2.
     This step is crucial because it makes sure that you have a version 3 (or higher) certificate template, and only version 3 works with the certificate manager app. Because the version is set the first time you create and save the certificate template, if you didn’t create the certificate template in this way there is no way to modify it to the correct version and you should create a new one before proceeding.
 
 8.  On the **General** tab, in the **Display Name** field, type the name you want to appear in the app's UI, such as **Virtual Smart Card Logon**.
@@ -127,7 +127,7 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 10. In the command prompt, run the following command to repack and sign the .appx file.
 
     ```
-    cd .. 
+    cd ..
     makeappx pack /l /d .\appx /p <app package name>.appx
     ```
     where app package name is the same name you used when you created the copy.
@@ -157,7 +157,7 @@ Make sure when you create a profile template to set it to create/destroy the vSC
                                         a. Registers the MIM CM client app on the ADFS server.
                                         b. Registers the MIM CM server relying party (Tells the ADFS server that it issues tokens for the CM server).
                         For parameter information, see 'get-help -detailed'
-        .PARAMETER redirectUri 
+        .PARAMETER redirectUri
                         The redirectUri for CM client app. Will be added to ADFS server.
                         It can be found as follows:
                         1. Open the settings panel. Under settings, there is a "Redirect Uri" text box (an ADFS server address must be configured in order for the text to display).
@@ -246,5 +246,4 @@ Make sure when you create a profile template to set it to create/destroy the vSC
     -   For help with the **ConfigureMIimCMClientAndRelyingParty.ps1** script, run `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
 ## Deploy the app
-When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/en-us/library/dn613840.aspx), or [Intune](https://technet.microsoft.com/en-us/library/dn613839.aspx) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.
-
+When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), or [Intune](https://technet.microsoft.com/library/dn613839.aspx) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.

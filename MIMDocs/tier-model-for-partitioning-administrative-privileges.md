@@ -5,7 +5,7 @@ ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
+ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -17,7 +17,7 @@ author: Kgremban
 
 Today’s threat environment has dissolved the effectiveness of a perimeter focused defense, though the perimeter is still a valid component of a larger strategy. The loss of this perimeter requires an organization to assume breach has already happened and to design defenses for computing and business resources accordingly. In order to enable organizations to manage at scale, this document describes a security model intended to protect against elevation of privilege, which provides a good user experience (while still adhering to best practices and security principles).
 
-Partitioning administrative privileges into tiers simplifies the process of determining which users and groups are appropriate for inclusion in a [*bastion environment*](https://technet.microsoft.com/library/mt620090.aspx).
+Partitioning administrative privileges into tiers simplifies the process of determining which users and groups are appropriate for inclusion in a [bastion environment](planning-bastion-environment.md).
 
 ## Background: Elevation of Privilege in Active Directory forests
 
@@ -39,7 +39,7 @@ The following guidance provides a simple model for quickly classifying existing 
 
 Specific business needs may require other tiers or additional segmentation, but this model can be used as a starting point.
 
-![pam-tiers](/Image/pam-tiers.jpg)
+![pam-tiers](Image/pam-tiers.jpg)
 
 ### Tiered Privilege Model Guidelines
 
@@ -197,4 +197,4 @@ Logon restrictions can be enforced with:
 - Authentication policies and silos, if using Windows Server 2012 or later
 - Selective authentication, if the account is in a dedicated admin forest
 
-The next document, [*Planning a bastion environment*](https://technet.microsoft.com/library/mt620090.aspx), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
+The next document, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
