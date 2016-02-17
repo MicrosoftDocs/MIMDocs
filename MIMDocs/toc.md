@@ -8,7 +8,7 @@
 
 # Microsoft Identity Manager
 ## [Understand and evaluate](journey-understand-evaluate.md)
-### [Get to know MIM 2016](microsoft-identity-manager-2016.md)
+### [What is MIM 2016?](microsoft-identity-manager-2016.md)
 ### [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)
 ## [Plan and design](journey-plan-design.md)
 ### [Supported platforms](microsoft-identity-manager-2016-supported-platforms.md)
