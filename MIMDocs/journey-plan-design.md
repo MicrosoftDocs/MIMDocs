@@ -13,9 +13,8 @@ ms.topic: article
 ms.assetid:
 author: kgremban
 ---
-# Plan and design Microsoft Identity Manager
+# Plan and design
 This section provides content to help you plan your Microsoft Identity Manager deployment.
 
-## Microsoft Identity Manager
-Microsoft Identity Manager (MIM) 2016 is the latest version of Microsoft’s Identity and Access management (IAM) product suite, and replaces Forefront Identity Manager (FIM) 2010 R2.
-MIM provides identity data management and synchronization, authentication and authorization workflows, and self-service identity management capabilities for end-users – group management, credentials management, certificate management, etc.
+## [Supported platforms](microsoft-identity-manager-2016-supported-platforms.md)
+Before you deploy Microsoft Identity Manager, make sure your environment is ready by reviewing the supported platforms for MIM 2016.
