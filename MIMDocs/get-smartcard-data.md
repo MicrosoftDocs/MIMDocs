@@ -35,7 +35,7 @@ cardid | Optional. The smartcard UUID as denoted by MIM CM. This is the â€œuuidâ
 
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -49,7 +49,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object with the following properties:
 

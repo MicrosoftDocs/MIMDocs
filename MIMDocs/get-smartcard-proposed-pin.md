@@ -36,7 +36,7 @@ cardid | The card id.
 challenge | A base-64 encoded string representing the challenge issued by the smartcard.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -50,7 +50,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a string that represents the PIN proposed by the server.
 
