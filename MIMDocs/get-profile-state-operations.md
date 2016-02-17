@@ -1,11 +1,11 @@
 ---
 title: Get Profile State Operations
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,7 +20,7 @@ Gets a list of possible operations that can be performed by the current user on 
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/profiles/{id}/operations <br/>/CertificateManagement/api/v1.0/smartcards/{id}/operations 
+GET     |/CertificateManagement/api/v1.0/profiles/{id}/operations <br/>/CertificateManagement/api/v1.0/smartcards/{id}/operations
 
 ###URL Parameters
 Parameter | Description
@@ -28,7 +28,7 @@ Parameter | Description
 id | The identifier (GUID) of the profile or smartcard.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -42,17 +42,17 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a list of possible operations that can be performed by the user on the smartcard. This list may contain any number of the following: *OnlineUpdate*, *Renew*, *Recover*, *RecoverOnBehalf*, *Retire*, *Revoke*, and *Unblock*.
 
 ##Example
 
-###Request 
+###Request
 ```
 GET /certificatemanagement/api/v1.0/smartcards/438d1b30-f3b4-4bed-85fa-285e08605ba7/operations HTTP/1.1
 ```
-###Response 
+###Response
 ```
 HTTP/1.1 200 OK
 

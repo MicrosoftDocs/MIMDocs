@@ -36,7 +36,7 @@ The following guidance provides a simple model for quickly classifying existing 
 
 Specific business needs may require other tiers or additional segmentation, but this model can be used as a starting point.
 
-![](./media/image1.png)
+![](Image/image1.png)
 
 ### Tiered Privilege Model Guidelines
 
@@ -199,5 +199,3 @@ Logon restrictions can be enforced with:
 - Selective authentication, if the account is in a dedicated admin forest
 
 The next document, *planning a bastion environment* [link to adjoining TechNet article](http-//link-to-article), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
-
-  

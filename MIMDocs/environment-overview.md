@@ -1,12 +1,12 @@
 ---
 title: Environment Overview
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -19,5 +19,4 @@ This test lab comprises software which can be installed on four physical or virt
 > [!IMPORTANT]
 > This CTP is not compatible with the database or directory contents from the previous CTP.  If you have been previously evaluating MIM for PAM or other scenarios, please back up and archive the virtual machines used for that test, and start the deployment with new virtual machine images that have not previously be used for MIM scenarios.
 
-![](../Image/pam-test-lab-architecture.png)
-
+![](./Image/pam-test-lab-architecture.png)

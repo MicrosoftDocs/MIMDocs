@@ -1,11 +1,11 @@
 ---
 title: Get Smartcard or Profile Certificates
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,7 +20,7 @@ Gets a list of certificates associated with the particular smartcard or software
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/profiles/{id}/certificates <br/>/CertificateManagement/api/v1.0/smartcards/{id}/certificates 
+GET     |/CertificateManagement/api/v1.0/profiles/{id}/certificates <br/>/CertificateManagement/api/v1.0/smartcards/{id}/certificates
 
 ###URL Parameters
 Parameter | Description
@@ -28,7 +28,7 @@ Parameter | Description
 id | The identifier (GUID) of the profile or smartcard.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -42,26 +42,26 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Certificates.X509ClmCertificate](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.x509clmcertificate(v=vs.100%29.aspx) objects with the following properties:
 
 Name | Description
 -----|------------
-ArchivedOnCa | A Boolean value that indicates if the certificate is archived on the certification authority (CA). 
-CertificateType | The type of the certificate. 
-IsKeyHistory | A Boolean value that indicates if the certificate is a key history certificate. 
-SerialNumber | The certificate's serial number. 
-TemplateCommonName | The certificate template common name for the certificate. 
-Thumbprint | The certificate's thumbprint. 
+ArchivedOnCa | A Boolean value that indicates if the certificate is archived on the certification authority (CA).
+CertificateType | The type of the certificate.
+IsKeyHistory | A Boolean value that indicates if the certificate is a key history certificate.
+SerialNumber | The certificate's serial number.
+TemplateCommonName | The certificate template common name for the certificate.
+Thumbprint | The certificate's thumbprint.
 
 ##Example
 
-###Request 
+###Request
 ```
 GET /certificatemanagement/api/v1.0/smartcards/5badfea3-de31-4837-99f9-8249515a5473/certificates HTTP/1.1
 ```
-###Response 
+###Response
 ```
 HTTP/1.1 200 OK
 
@@ -103,4 +103,4 @@ HTTP/1.1 200 OK
 ##See Also
 
 - [Microsoft.Clm.Provision.FindOperations.FindCertificates Method](https://msdn.microsoft.com/en-us/library/microsoft.clm.provision.findoperations.findcertificates(v=vs.100%29.aspx)
-- [Microsoft.Clm.Shared.Certificates.X509ClmCertificate Class](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.x509clmcertificate(v=vs.100%29.aspx) 
+- [Microsoft.Clm.Shared.Certificates.X509ClmCertificate Class](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.x509clmcertificate(v=vs.100%29.aspx)

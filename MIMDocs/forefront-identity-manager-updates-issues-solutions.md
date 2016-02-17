@@ -14,10 +14,7 @@ author: Kgremban
 In this section, you will find updates to Forefront Identity Manager (FIM) and solutions to common issues.
 
 ## FIM Updates
-For more information about FIM updates head over to [FIM Updates](FIM-Updates.md).
+For more information about FIM updates head over to [FIM Updates](forefront-identity-manager-updates.md).
 
 ## FIM Issues and Solutions
-For a list of issues and their solutions, see [FIM Issues and Solutions](FIM-Issues-and-Solutions.md).
-
-
-
+For a list of issues and their solutions, see [FIM Issues and Solutions](forefront-identity-manager-issues-solutions.md).

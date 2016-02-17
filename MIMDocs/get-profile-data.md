@@ -1,11 +1,11 @@
 ---
 title: Get Profile Data
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -22,7 +22,7 @@ Gets a list of a user’s software certificate profiles with a list of possible 
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/profiles<br/>/CertificateManagement/api/v1.0/profiles/{id} <br/>/CertificateManagement/api/v1.0/requests/{requestid}/profiles 
+GET     |/CertificateManagement/api/v1.0/profiles<br/>/CertificateManagement/api/v1.0/profiles/{id} <br/>/CertificateManagement/api/v1.0/requests/{requestid}/profiles
 
 ###URL Parameters
 Parameter | Description
@@ -35,7 +35,7 @@ Parameter | Description
 ---------|------------
 status | Optional. Indicates the status of the profiles to retrieve data for. Possible status types are: "Active", "Approved", "Canceled", "Completed", "Denied", "Executing", "Failed", "None", and "Pending". <br/>If no status is specified, all profiles, regardless of status will be returned.
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -49,31 +49,31 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Profiles.Profile](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.profiles.profile(v=vs.100%29.aspx) objects with the following properties:
 
 Property | Description
 ---------|------------
-AssignedUserUuid | The identifier of the user to whom the profile is assigned. 
-Comment | The comment that describes the profile. 
-Flags | The flags that describe the profile. 
-ParentProfileUuid | The identifier of the old profile that the profile has replaced. 
-PrimaryProfileUuid | The identifier of the primary profile. 
+AssignedUserUuid | The identifier of the user to whom the profile is assigned.
+Comment | The comment that describes the profile.
+Flags | The flags that describe the profile.
+ParentProfileUuid | The identifier of the old profile that the profile has replaced.
+PrimaryProfileUuid | The identifier of the primary profile.
 ProfileOperations | The list of possible operations that can be performed by the current user on the profile.
-ProfileTemplateUuid | The identifier of the profile template that contains the policies and settings that govern the profile. 
-ProfileTemplateVersion | The version of the profile template at the time that the profile was created. 
-Status | The status of the profile. 
-Uuid | The profile's identifier. 
+ProfileTemplateUuid | The identifier of the profile template that contains the policies and settings that govern the profile.
+ProfileTemplateVersion | The version of the profile template at the time that the profile was created.
+Status | The status of the profile.
+Uuid | The profile's identifier.
 
 
 ##Example
 
-###Request 
+###Request
 ```
 GET /certificatemanagement/api/v1.0/profiles?status=Active HTTP/1.1
 ```
-###Response 
+###Response
 ```
 HTTP/1.1 200 OK
 

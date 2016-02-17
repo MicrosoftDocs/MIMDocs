@@ -1,11 +1,11 @@
 ---
 title: Get Smartcard Data
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -21,7 +21,7 @@ Gets a list of a user’s smartcard profiles with a list of possible operations 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/smartcards <br/> /CertificateManagement/api/v1.0/smartcards/{smartcarduuid}
- 
+
 
 ###URL Parameters
 Property| Description
@@ -35,7 +35,7 @@ cardid | Optional. The smartcard UUID as denoted by MIM CM. This is the “uuid�
 
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM%20REST%20API%20Service%20Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -49,25 +49,25 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM%20REST%20API%20Service%20Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object with the following properties:
 
 Name | Description
 -----|-----------
-AssignedUserUuid | The identifier of the user to whom the smart card is assigned. 
-Atr | The smart card answer-to-reset (ATR) string for the card that is currently being initialized. 
-Comment | The comment that describes the smart card. 
-Flags | The flags that describe the smart card. 
-Middleware | The middleware for the smart card. 
-ParentSmartcardUuid | The identifier of the old smart card that the smart card has replaced. 
-PermanentSmartcardUuid | The identifier of the permanent smart card that is associated with the smart card. 
-PrimarySmartcardUuid | The identifier of the primary smart card. 
-ProfileTemplateUuid | The identifier of the profile template that contains the policies and settings that govern the smart card. 
-ProfileTemplateVersion | The version of the profile template at the time that the smart card profile was created. 
-SerialNumber | The smart card's serial number. 
-Status | The status of the smart card. 
-Uuid | The smart card profile's identifier. 
+AssignedUserUuid | The identifier of the user to whom the smart card is assigned.
+Atr | The smart card answer-to-reset (ATR) string for the card that is currently being initialized.
+Comment | The comment that describes the smart card.
+Flags | The flags that describe the smart card.
+Middleware | The middleware for the smart card.
+ParentSmartcardUuid | The identifier of the old smart card that the smart card has replaced.
+PermanentSmartcardUuid | The identifier of the permanent smart card that is associated with the smart card.
+PrimarySmartcardUuid | The identifier of the primary smart card.
+ProfileTemplateUuid | The identifier of the profile template that contains the policies and settings that govern the smart card.
+ProfileTemplateVersion | The version of the profile template at the time that the smart card profile was created.
+SerialNumber | The smart card's serial number.
+Status | The status of the smart card.
+Uuid | The smart card profile's identifier.
 
 ##Example
 

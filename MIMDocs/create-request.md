@@ -1,11 +1,11 @@
 ---
 title: Create Request
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,13 +20,13 @@ Create a MIM CM request.
 
 Method  |Request URL  
 ---------|---------
-POST     |/CertificateManagement/api/v1.0/requests 
+POST     |/CertificateManagement/api/v1.0/requests
 
 ###URL Parameters
 none
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 The request body contains the following properties.
 
@@ -49,7 +49,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns the URI for the newly created request.
 ##Example
@@ -70,7 +70,7 @@ POST /CertificateManagement/api/v1.0/requests HTTP/1.1
 HTTP/1.1 201 Created
 
 "api/v1.0/requests/a9b4b42c-cc50-4c9b-89d1-bbc0bcd5a099"
-``` 
+```
 ###Request 2
 ```
 POST /CertificateManagement/api/v1.0/requests HTTP/1.1
@@ -88,7 +88,7 @@ HTTP/1.1 201 Created
 
 "api/v1.0/requests/0c96d73f-967b-420e-854a-43ad2a1504bc"
 ```       
-      
+
 ###Request 3
 ```
 POST /CertificateManagement/api/v1.0/requests HTTP/1.1

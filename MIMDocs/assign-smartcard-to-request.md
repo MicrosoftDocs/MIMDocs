@@ -1,11 +1,11 @@
 ---
 title: Assign Smartcard to a Request
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,12 +20,12 @@ Binds the specified smartcard to the specified request. Once bound, the request 
 
 Method  |Request URL  
 ---------|---------
-POST     |/CertificateManagement/api/v1.0/smartcards 
+POST     |/CertificateManagement/api/v1.0/smartcards
 
 ###URL Parameters
 none.
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 The request body contains the following properties.
 
@@ -46,7 +46,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a URI to the newly created smartcard object.
 ##Example

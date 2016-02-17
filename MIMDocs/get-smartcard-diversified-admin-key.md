@@ -1,11 +1,11 @@
 ---
 title: Get Smartcard Diversified Admin Key
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -22,12 +22,12 @@ Gets the diversified admin key for the specified smartcard.
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/diversifiedkey 
+GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/diversifiedkey
 
 ###URL Parameters
 Parameter | Description
 ---------|------------
-reqid | Required. The request identifier (MIM CM specific). 
+reqid | Required. The request identifier (MIM CM specific).
 scid | Required. The smartcard identifier (MIM CM specific). Obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object.
 ###Query Parameters
 Parameter | Description
@@ -36,7 +36,7 @@ atr | Optional. The smart card answer-to-reset (ATR) string.
 cardid | Required. The card id.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM%20REST%20API%20Service%20Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -50,17 +50,17 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM%20REST%20API%20Service%20Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a byte BLOB representing the diversified admin key.
 
 ##Example
 
-###Request 
+###Request
 ```
 GET /certificatemanagement/api/v1.0/requests/a9b4b42c-cc50-4c9b-89d1-bbc0bcd5a099/smartcards/17cf063d-e337-4aa9-a822-346554ddd3c9/diversifiedkey?cardid=bc88f13f-83ba-4037-8262-46eba1291c6e HTTP/1.1
 ```
-###Response 
+###Response
 ```
 HTTP/1.1 200 OK
 

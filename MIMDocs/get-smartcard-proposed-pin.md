@@ -1,11 +1,11 @@
 ---
 title: Get Smartcard Proposed PIN
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -22,12 +22,12 @@ Gets the server-generated user PIN.
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/smartcards/{id}/serverproposedpin 
+GET     |/CertificateManagement/api/v1.0/smartcards/{id}/serverproposedpin
 
 ###URL Parameters
 Parameter | Description
 ---------|------------
-id | The smartcard identifier (MIM CM specific). Obtained from the Microsft.Clm.Shared.Smartcard object. 
+id | The smartcard identifier (MIM CM specific). Obtained from the Microsft.Clm.Shared.Smartcard object.
 ###Query Parameters
 Parameter | Description
 ---------|------------
@@ -36,7 +36,7 @@ cardid | The card id.
 challenge | A base-64 encoded string representing the challenge issued by the smartcard.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -50,17 +50,17 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a string that represents the PIN proposed by the server.
 
 ##Example
 
-###Request 
+###Request
 ```
 GET GET /CertificateManagement/api/v1.0/smartcards/C6BAD97C-F97F-4920-8947-BE980C98C6B5/serverproposedpin HTTP/1.1
 ```
-###Response 
+###Response
 ```
 HTTP/1.1 200 OK
 

@@ -27,7 +27,7 @@ This is where the description of the update and directives to the reader go.
 ### Update 10/26/2015: Description title
 This is where the description of the update and directives to the reader go.
 ### Here is a test aninmation
-![Test Animated Gif](/Image/Test-Animated-Gif.gif)
+![Test Animated Gif](./Image/Test-Animated-Gif.gif)
 
 ### Here is a javascript test.
 <table>

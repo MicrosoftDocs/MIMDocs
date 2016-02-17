@@ -5,7 +5,7 @@ ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
+ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -79,7 +79,7 @@ In some cases, a user may be permanently assigned to a role, and so they do not 
 
 - A user account in the administrative forest, with a smartcard or virtual smartcard (for example, an account with an offline smartcard, needed for rare maintenance tasks)
 
-MIM enables dynamic role based assignments, in which the privileges are temporarily assigned to a user with a workflow and optional approval process. This can apply both for a user account in the administrative forest who authenticates with a password, and for one who authenticates with a smartcard or virtual smartcard. For organizations concerned about the potential for credential theft or misuse, the [Using Azure MFA for activation](https://technet.microsoft.com/library/mt517876.aspx) guide includes instructions for how to configure MIM to require an additional out of band check at the time of role activation.
+MIM enables dynamic role based assignments, in which the privileges are temporarily assigned to a user with a workflow and optional approval process. This can apply both for a user account in the administrative forest who authenticates with a password, and for one who authenticates with a smartcard or virtual smartcard. For organizations concerned about the potential for credential theft or misuse, the [Using Azure MFA for activation](use-azure-mfa-for-activation.md) guide includes instructions for how to configure MIM to require an additional out of band check at the time of role activation.
 
 ## Modeling delegated Active Directory permissions
 

@@ -1,11 +1,11 @@
 ---
 title: Get User Certificates
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,13 +20,13 @@ Gets the list of certificates associated with the specified user (retired certif
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/certificates 
+GET     |/CertificateManagement/api/v1.0/certificates
 
 ###URL Parameters
 none
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -40,32 +40,32 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Certificates.X509ClmCertificate](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.x509clmcertificate(v=vs.100).aspx) objects with the following properties:
 
 Name | Description
 -----|------------
-ArchivedOnCa | A Boolean value that indicates if the certificate is archived on the certification authority (CA). 
-CertificateType | The type of the certificate. 
-IsKeyHistory | A Boolean value that indicates if the certificate is a key history certificate. 
+ArchivedOnCa | A Boolean value that indicates if the certificate is archived on the certification authority (CA).
+CertificateType | The type of the certificate.
+IsKeyHistory | A Boolean value that indicates if the certificate is a key history certificate.
 Issuer | The issuer.
 NotAfter | The date and time after which the certificate is no longer valid
 NotBefore | The date and time at which the certificate becomes valid
 RequesterName | The account that requested the certificate.
-SerialNumber | The certificate's serial number. 
+SerialNumber | The certificate's serial number.
 Status | The status of the certificate.
-TemplateCommonName | The certificate template common name for the certificate. 
-Thumbprint | The certificate's thumbprint. 
+TemplateCommonName | The certificate template common name for the certificate.
+Thumbprint | The certificate's thumbprint.
 
 
 ##Example
 
-###Request 
+###Request
 ```
 GET /certificatemanagement/api/v1.0/certificates HTTP/1.1
 ```
-###Response 
+###Response
 ```
 HTTP/1.1 200 OK
 

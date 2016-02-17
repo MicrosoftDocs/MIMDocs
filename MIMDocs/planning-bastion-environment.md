@@ -5,7 +5,7 @@ ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
+ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -13,7 +13,7 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 author: Kgremban
 ---
 # Planning a bastion environment
- 
+
 > [!Note] {This content is derived from the white paper "Mitigating Pass-the-Hash and Other Credential Theft, version 2", developed by Microsoft Corporation Trustworthy Computing group.}
 
 ## Overview
@@ -187,19 +187,19 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 4. Navigate to Forest: contoso.local, Domains, contoso.local, Domain Controllers, Default Domain Controllers Policy. An informational message will appear.
 
-![pam-group-policy-management-editor](/Image/pam-group-policy-management.jpg)
+![pam-group-policy-management-editor](Image/pam-group-policy-management.jpg)
 
 5. Right-click on Default Domain Controllers Policy and select Edit... in the Right-click menu. A new window will appear.
 
 6. In the Group Policy Management Editor window, under the Default Domain Controllers Policy tree, navigate to and expand Computer Configuration, Policies, Windows Settings, Security Settings, Local Policies, Audit Policy.
 
-![pam-group-policy-management-editor](/Image/pam-group-policy-management-editor.jpg)
+![pam-group-policy-management-editor](Image/pam-group-policy-management-editor.jpg)
 
 5. In the details pane, right click on Audit account management and select Properties in the right-click menu. Click Define these policy settings, put a checkbox on Success, put a checkbox on Failure, click Apply and OK.
 
 6. In the details pane, right click on Audit directory service access and select Properties in the right-click menu. Click Define these policy settings, put a checkbox on Success, put a checkbox on Failure, click Apply and OK.
 
-![pam-group-policy-management-editor2](/Image/pam-group-policy-management-editor2.jpg)
+![pam-group-policy-management-editor2](Image/pam-group-policy-management-editor2.jpg)
 
 
 7. Close the Group Policy Management Editor window, the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:
@@ -207,7 +207,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 ```
 gpupdate /force /target:computere
 ```
-   
+
 The message “Computer Policy update has completed successfully.” should appear after a few minutes.
 
 8. The domain controllers must allow RPC over TCP/IP connections for LSA from the bastion environment. On older versions of Windows Server, TCP/IP support in LSA must be enabled in the registry:

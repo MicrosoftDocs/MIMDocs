@@ -1,11 +1,11 @@
 ---
 title: Get Request
-ms.custom: 
+ms.custom:
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: reference
@@ -20,7 +20,7 @@ Gets one or more specified MIM CM requests.
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/requests/{id} 
+GET     |/CertificateManagement/api/v1.0/requests/{id}
 
 ###URL Parameters
 Property| Description
@@ -30,10 +30,10 @@ id| Optional. The GUID of a request to retrieve.
 Property| Description
 ---------|--------
 targetuser| Optional. The target user of the request. If no target is specified, all requests, regardless of the target user, will be returned. <br/> **Note**: Only “current” is currently supported.
-status| Optional. Indicates the status of the request to retrieve. Possible status types are: *Approved*, *Canceled*, *Completed*, *Denied*, *Executing*, *Failed*, *None*, and *Pending*. <br/>If no status is specified, all requests, regardless of status will be returned. 
+status| Optional. Indicates the status of the request to retrieve. Possible status types are: *Approved*, *Canceled*, *Completed*, *Denied*, *Executing*, *Failed*, *None*, and *Pending*. <br/>If no status is specified, all requests, regardless of status will be returned.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -47,33 +47,33 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM-REST-API-Service-Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](configuration-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
 On success, returns one or more [Request](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.requests.request(v=vs.100%29.aspx) objects with the following properties:
 
 Name | Description
 -----|------------
-Comment | The comment that is associated with the MIM CM request. 
-Completed | The time that the MIM CM request was completed. 
-DataCollection | The data collection items that are associated with the MIM CM request. 
-DataCollectionFlags | The options for data collection for the MIM CM request. 
-Flags | The options that are associated with the MIM CM request. 
-IsDataCollectionComplete | A Boolean value that indicates if the data collection has been completed for the MIM CM request. 
-IsEnrollmentAgent | A Boolean value that indicates if an enrollment agent is required to run the MIM CM request. 
-IsSmartcard | A Boolean value that indicates if the MIM CM request is a smart card request or a software profile request. 
-NewProfileUuid | The identity of the new software profile that is produced by the MIM CM request. 
-NewSmartcardUuid | The identity of the new smart card that is assigned by the MIM CM request. 
-OldProfileUuid | The identity of the software profile for which the MIM CM request was created. 
-OldSmartcardUuid | The identity of the smart card for which the MIM CM request was created. 
-OriginatorUserUuid | The identity of the user who originated the MIM CM request 
-Priority | The MIM CM request's priority. 
-ProfileTemplateUuid | The identity of the profile template for which the MIM CM request was created. 
-RequestType | The type of the MIM CM request. 
-SecurityDescriptor | The security descriptor for the MIM CM request. 
-Status | The status of the MIM CM request. 
-Submitted | The time that the MIM CM request was submitted. 
-TargetUserUuid | The identity of the target user for the MIM CM request. 
-Uuid | The identifier for the MIM CM request. 
+Comment | The comment that is associated with the MIM CM request.
+Completed | The time that the MIM CM request was completed.
+DataCollection | The data collection items that are associated with the MIM CM request.
+DataCollectionFlags | The options for data collection for the MIM CM request.
+Flags | The options that are associated with the MIM CM request.
+IsDataCollectionComplete | A Boolean value that indicates if the data collection has been completed for the MIM CM request.
+IsEnrollmentAgent | A Boolean value that indicates if an enrollment agent is required to run the MIM CM request.
+IsSmartcard | A Boolean value that indicates if the MIM CM request is a smart card request or a software profile request.
+NewProfileUuid | The identity of the new software profile that is produced by the MIM CM request.
+NewSmartcardUuid | The identity of the new smart card that is assigned by the MIM CM request.
+OldProfileUuid | The identity of the software profile for which the MIM CM request was created.
+OldSmartcardUuid | The identity of the smart card for which the MIM CM request was created.
+OriginatorUserUuid | The identity of the user who originated the MIM CM request
+Priority | The MIM CM request's priority.
+ProfileTemplateUuid | The identity of the profile template for which the MIM CM request was created.
+RequestType | The type of the MIM CM request.
+SecurityDescriptor | The security descriptor for the MIM CM request.
+Status | The status of the MIM CM request.
+Submitted | The time that the MIM CM request was submitted.
+TargetUserUuid | The identity of the target user for the MIM CM request.
+Uuid | The identifier for the MIM CM request.
 
 ##Example
 
