@@ -25,8 +25,8 @@
 #### [For non-administrators](certificate-manager-for-non-administrators.md)
 #### [For software certificates](certificate-manager-for-software-certificates.md)
 ## [Develop applications](journey-develop-applications.md)
-### [Certificate Management REST API Reference](certificate-management-rest-api-reference.md)
-### [Privileged Access Management REST API Reference](privileged-access-management-rest-api-reference.md)
+### [Certificate Management REST API Reference](./reference/certificate-management-rest-api-reference.md)
+### [Privileged Access Management REST API Reference](./reference/privileged-access-management-rest-api-reference.md)
 
 <!---
 [Microsoft Identity Manager](microsoft-identity-manager.md)
