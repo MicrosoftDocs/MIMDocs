@@ -27,5 +27,5 @@ MIM works with Active Directory (AD), so follow these steps to set up your AD do
 ## [Server setup](preparing-corporate-identity-management-server.md)
 Use this article to deploy prepare your corporate identity management server. This includes Windows Server 2012 R2, SQL Server, and SharePoint.
 
-## [Install MIM 2016 components](microsoft-identity-manager-install-server-components.md)
-Once your domain and server are set up, this article helps you get started with MIM services and configure them to sync with AD. 
+## [Install MIM 2016 components](microsoft-identity-manager-2016-install-server-components.md)
+Once your domain and server are set up, this article helps you get started with MIM services and configure them to sync with AD.
