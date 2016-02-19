@@ -8,7 +8,7 @@
 
 # Microsoft Identity Manager
 ## [Understand and evaluate](journey-understand-evaluate.md)
-### [Get to know MIM 2016](microsoft-identity-manager-2016.md)
+### [What is MIM 2016?](microsoft-identity-manager-2016.md)
 ### [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)
 ## [Plan and design](journey-plan-design.md)
 ### [Supported platforms](microsoft-identity-manager-2016-supported-platforms.md)
@@ -20,7 +20,7 @@
 ### [Upgrade from Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
 ### [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ### [Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
-### [Self-Service Login Assistance](working-with-self-service-login-assistance.md)
+### [Self-Service Password Reset](working-with-self-service-password-reset.md)
 ### [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 #### [For non-administrators](certificate-manager-for-non-administrators.md)
 #### [For software certificates](certificate-manager-for-software-certificates.md)
