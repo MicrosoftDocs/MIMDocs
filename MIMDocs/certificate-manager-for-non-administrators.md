@@ -1,12 +1,12 @@
 ---
 title: Certificate Manager for Non-Administrators
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -20,7 +20,7 @@ If a user isn’t a local administrator on their computer, they won’t be able 
 
 1.  **Unpack the appx file**
 
-    Obtain a signing certificate. You can follow the steps to create one using AD CS [here](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop when you get to “Sign the Application”. Name the exported pfx file. Export to a .cer file as well, and import it to the client using the cer file of the new signing certificate.
+    Obtain a signing certificate. Follow the steps to [Sign Windows 8 applications using an internal PKI](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop when you get to “Sign the Application”. Name the exported pfx file. Export to a .cer file as well, and import it to the client using the cer file of the new signing certificate.
 
     Run the following to unpack the appx file:
 
@@ -87,4 +87,3 @@ If a user isn’t a local administrator on their computer, they won’t be able 
 7.  **Install the CM app in the non-admin account**
 
 8.  **Launch the CM app and enrolling for a virtual smartcard**
-

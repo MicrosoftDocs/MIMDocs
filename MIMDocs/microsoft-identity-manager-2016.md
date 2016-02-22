@@ -1,12 +1,12 @@
 ---
 title: Microsoft Identity Manager 2016
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -39,5 +39,4 @@ MIM supports an updated list of products and platforms including the latest Micr
 
 For more information about previously existing Identity Manager components, see the following:
 
--   [Microsoft BHOLDSuite](https://technet.microsoft.com/en-us/library/jj134096%28v=ws.10%29.aspx)
-
+-   [Microsoft BHOLD Suite](https://technet.microsoft.com/en-us/library/jj134096.aspx)
