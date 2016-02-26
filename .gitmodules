@@ -1,7 +1,3 @@
-[submodule "docs shared themes"]
-	path = MIMDocs/_themes
-	url = https://github.com/JialinXin/DocsThemes
-	branch = master
 [submodule "ThemeMIMUnderstand"]
 	path = MIMDocs/Understand/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
@@ -20,5 +16,9 @@
 	branch = master
 [submodule "ThemeMIMTroubleshoot"]
 	path = MIMDocs/Troubleshoot/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
+[submodule "docs shared themes"]
+	path = MIMDocs/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
