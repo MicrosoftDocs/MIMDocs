@@ -25,7 +25,7 @@ The first three Microsoft Identity Manager reports available in Azure AD are **P
 
 -   Self-service groups activity displays each attempt made by someone to add themselves to or delete themselves from a group and group creation.
 
-    ![](./media/MIM_Hybrid_passwordreset.jpg)
+    ![](media/MIM_Hybrid_passwordreset.jpg)
 
 > [!NOTE]
 > The reports currently present data for up to one month back.

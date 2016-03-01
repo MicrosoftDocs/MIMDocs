@@ -36,7 +36,7 @@ author: Kgremban
 
 8.  Add the **Web Server (IIS)** and **Application Server** roles, the **.NET Framework** 3.5, 4.0, and 4.5 features, the **Active Directory** module for Windows PowerShell.
 
-    ![](./media/MIM_DeployWS2.png)
+    ![](media/MIM-DeployWS2.png)
 
 9. Run **Windows PowerShell** as an administrator.
 
@@ -187,11 +187,11 @@ Install **SQL Server 2014 Standard Edition**.
 
 10. On your identity management server, Open a new web browser tab, navigate to **http://localhost:82/** and login as *contoso\Administrator*.  An empty SharePoint site named *MIM Portal* will be shown.
 
-    ![](./media/MIM_DeploySP1.png)
+    ![](media/MIM-DeploySP1.png)
 
 11. Copy the URL, then in **Internet Explorer**, open **Internet Options**, change to the **Security tab**, select **Local intranet**, click on **Sites**, then click on **Advanced** and add the copied URL to the list. Click **OK** twice.
 
-    ![](./media/MIM_DeploySP2.png)
+    ![](media/MIM-DeploySP2.png)
 
 12. Open **Administrative**  , then **Tools**, **Services**, locate the SharePoint Administration service, and start it, if it is not already running.
 
