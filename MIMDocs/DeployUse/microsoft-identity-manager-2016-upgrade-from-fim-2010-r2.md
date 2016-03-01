@@ -40,7 +40,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 3.  Open the **Services** console, locate **Forefront Identity Manager Synchronization Service**, and stop it.
 
-    ![](media/MIM_UpgFIM1.PNG)
+    ![](media/MIM-UpgFIM1.PNG)
 
 4.  Run the **MIM Synchronization Service installer**. The installer will detect the existing Sync version and suggest an upgrade. Click on the **Update** button to proceed.
 

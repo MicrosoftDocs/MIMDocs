@@ -82,7 +82,7 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 10. Click the **Download** link in the ZIP column for the file with language **SDK for ASP.net 2.0 C#**.
 
-    ![](media/MIM_SSPR_Azure_MFA.png)
+    ![](media/MIM-SSPR-Azure-MFA.png)
 
 11. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
 
