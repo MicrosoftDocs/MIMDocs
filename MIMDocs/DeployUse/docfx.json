@@ -6,12 +6,7 @@
           "**/*.md"
         ],
         "exclude": [
-          "**/obj/**",
-          "Understand/**",
-          "GetStarted/**",
-          "DeployUser/**",
-          "PlanDesign/**",
-          "Troubleshoot/**" 
+          "**/obj/**"
         ]
       }
     ],
@@ -24,20 +19,16 @@
           "**/*.gif",
           "**/*.bmp",
           "**/*.html",
+          "**/*.css",
           "_themes/**"
           ],
         "exclude": [
           "**/obj/**",
-          "_themes/DocPacker/**",
-          "Understand/**",
-          "GetStarted/**",
-          "DeployUser/**",
-          "PlanDesign/**",
-          "Troubleshoot/**" 
+          "_themes/DocPacker/**"
         ]
       }
     ],
-    "dest": "MIMDocs",
+    "dest": "MIMDocs/DeployUse",
     "template": "docs.html",
     "globalMetadata": {
       "layout": "Conceptual",
@@ -49,5 +40,5 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/MIM"
+  "basepath": "/MIM/DeployUse"
 }

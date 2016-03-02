@@ -27,13 +27,13 @@ author: Kgremban
 
 3.  In the welcome screen – click **Next**.
 
-    ![](././media/MIM_Install1.png)
+    ![](media/MIM-Install1.png)
 
 4.  Review the license terms and if you accept them, click **Next**.
 
 5.  In the feature selection screen click **Next**.
 
-    ![](././media/MIM_Install2.png)
+    ![](media/MIM-Install2.png)
 
 6.  In the Sync database configuration screen, select:
 
@@ -41,7 +41,7 @@ author: Kgremban
 
     2.  The SQL Server instance is: **The default instance**.
 
-        ![](././media/MIM_Install3.png)
+        ![](media/MIM-Install3.png)
 
 7.  Configure the Sync Service Account according to the account you created earlier:
 
@@ -51,7 +51,7 @@ author: Kgremban
 
     3.  Service Account Domain or local computer name: *contoso*
 
-        ![](././media/MIM_Install4.png)
+        ![](media/MIM-Install4.png)
 
 8.  Provide MIM Sync installer with the relevant security groups:
 
@@ -67,7 +67,7 @@ author: Kgremban
 
 9. In the security settings screen, check Enable firewall rules for inbound RPC communications, and click **Next**.
 
-    ![](././media/MIM_Install5.png)
+    ![](media/MIM-Install5.png)
 
 10. Click **Install** to begin the installation of MIM  Sync.
 
@@ -75,15 +75,15 @@ author: Kgremban
 
     2.  MIM Sync will now be installed.
 
-        ![](././media/MIM_Install6.png)
+        ![](media/MIM-Install6.png)
 
     3.  A notice on creating a backup for the encryption key will be shown – click OK, then select a folder to store the encryption key backup.
 
-        ![](././media/MIM_Install7.png)
+        ![](media/MIM-Install7.png)
 
     4.  When the installer successfully completes the installation, click **Finish**.
 
-        ![](././media/MIM_Install8.png)
+        ![](media/MIM-Install8.png)
 
     5.  You will be prompted to log off and log on for group membership changes to take effect. Click **Yes** to logoff.
 
@@ -101,23 +101,23 @@ author: Kgremban
 
 6.  When configuring common services and the MIM database connection, specify “Create a new database”.
 
-    ![](././media/MIM_Install10.png)
+    ![](media/MIM-Install10.png)
 
 7.  When configuring a mail server connection, set the mail server to  your Exchange server. If you do not have a mail server configured, specify localhost as the mail server name, and uncheck the top two checkboxes.
 
-    ![](././media/MIM_Install11.png)
+    ![](media/MIM-Install11.png)
 
 8.  Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
 
 9. Specify the Service Account name to use, for example, *MIMService*, and the Service Account password, for example, *Pass@word1* (the password in the first step above), your Service Account domain, for example, contoso and the Service Email Account, for example contoso.
 
-    ![](././media/MIM_Install12.png)
+    ![](media/MIM-Install12.png)
 
 10. Note that a warning may appear that the Service Account is not secure in its current configuration.
 
 11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMsync*.
 
-    ![](././media/MIM_Install13.png)
+    ![](media/MIM-Install13.png)
 
 12. Specify *CorpIDM (this computer's name)* as MIM Service server address for the MIM Portal.
 
@@ -135,7 +135,7 @@ author: Kgremban
 
     2.  Specify  CORPIDM as the Host Name for MIM Password Registration, and set the port to **8080**. Enable the opening the port in firewall.
 
-        ![](././media/MIM_Install14.png)
+        ![](media/MIM-Install14.png)
 
     3.  A warning will appear – read it and click **Next**.
 
@@ -147,7 +147,7 @@ author: Kgremban
 
     2.  Specify  *CorpIDname  http://CorpIDname.domain.local* as the Host Name for MIM Password Registration, port **8088**. Enable the opening the port in firewall.
 
-        ![](././media/MIM_Install15.png)
+        ![](media/MIM-Install15.png)
 
     3.  A warning will appear – read it and click **Next**.
 
@@ -155,7 +155,7 @@ author: Kgremban
 
 21. When all pre-installation definitions are ready, click **Install** to begin installing the selected **Service and Portal** components.
 
-    ![](././media/MIM_Install16.png)
+    ![](media/MIM-Install16.png)
 
 22. After installation completes, verify that the MIM Portal is active.
 

@@ -40,7 +40,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 3.  Open the **Services** console, locate **Forefront Identity Manager Synchronization Service**, and stop it.
 
-    ![](././media/MIM_UpgFIM1.PNG)
+    ![](media/MIM-UpgFIM1.PNG)
 
 4.  Run the **MIM Synchronization Service installer**. The installer will detect the existing Sync version and suggest an upgrade. Click on the **Update** button to proceed.
 
@@ -48,11 +48,11 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 6.  Enter the password for the service account that Sync is using, and click **Next**.
 
-    ![](././media/MIM_UpgFIM3.png)
+    ![](media/MIM-UpgFIM3.png)
 
 7.  Validate the security group names are correct and click **Next**.
 
-    ![](././media/MIM_UpgFIM4.png)
+    ![](media/MIM-UpgFIM4.png)
 
 8.  Leave unchanged the checkbox for  firewall rules for inbound RPC communications.
 
@@ -60,13 +60,13 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 10. The upgrade is now in progress. Do not exit the installer or restart the computer while the upgrade is in progress.
 
-    ![](././media/MIM_UpgFIM7.png)
+    ![](media/MIM-UpgFIM7.png)
 
 11. During the upgrade, a warning regarding the upgrade of the Sync database is shown. It is recommended that the DB is backed up prior to this beginning.
 
 12. When the upgrade completes successfully, click **Finish**.
 
-    ![](././media/MIM_UpgSP1.png)
+    ![](media/MIM-UpgSP1.png)
 
 13. Note that the **Synchronization Service** has restarted.
 
@@ -76,11 +76,11 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 2.  Open the **Services** console, locate **Forefront Identity Manager Service**, and stop it.
 
-    ![](././media/MIM_UpgFIM9.PNG)
+    ![](media/MIM-UpgFIM9.PNG)
 
 3.  Run the MIM Service and Portal installer. Click on the **Next** button to proceed.
 
-    ![](././media/MIM_UpgSP2.png)
+    ![](media/MIM-UpgSP2.png)
 
 4.  If you accept the license terms, click **Next** to proceed.
 
@@ -96,7 +96,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
     4.  **MIM Password Reset Portal:** this feature is needed for password reset.
 
-        ![](././media/MIM_UpgSP4.png)
+        ![](media/MIM-UpgSP4.png)
 
 7.  Once you selected all the items you wish to deploy, click **Next**.
 
@@ -108,23 +108,23 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 11. Enter the details of the mail server. If the server is located on the current server, enter “localhost” as the mail server address. Click **Next** to proceed.
 
-    ![](././media/MIM_UpgSP6.png)
+    ![](media/MIM-UpgSP6.png)
 
 12. Select a certificate for the Service to use in order to validate clients. You should use the existing certificate from the local certificate store that was previously used by FIM Service.
 
-    ![](././media/MIM_UpgSP7.png)
+    ![](media/MIM-UpgSP7.png)
 
     1.  If the existing certificate option is selected, click on the **Select Cert** button and select a certificate from the list in the popup window. Click **OK** and the **Next**.
 
-        ![](././media/MIM_UpgSP8.PNG)
+        ![](media/MIM-UpgSP8.PNG)
 
 13. Configure Service Account credentials for MIM Service. Note that the service account cannot be the same service account used by the Synchronization service. This should be the same account as was used by the FIM Service.
 
-    ![](././media/MIM_UpgSP9.png)
+    ![](media/MIM-UpgSP9.png)
 
 14. Configure the details of the MIM  Sync Server according to the deployment of MIM Service you configured in a previous step.
 
-    ![](././media/MIM_UpgSP10.png)
+    ![](media/MIM-UpgSP10.png)
 
 15. When installing the MIM Portal, provide the address of the MIM Service server. Click **Next**.
 
@@ -150,7 +150,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
     4.  Click **Next**.
 
-        ![](././media/MIM_UpgSP15.png)
+        ![](media/MIM-UpgSP15.png)
 
 20. In the next MIM Password Registration configuration screen:
 
@@ -158,7 +158,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
     2.  Determine whether this portal can be accessed by extranet and intranet users, or only intranet users, as was previously configured for FIM password reset.
 
-        ![](././media/MIM_UpgSP16.png)
+        ![](media/MIM-UpgSP16.png)
 
 21. If you are installing the MIM Password Reset Portal, provide access details and credentials for MIM Password Reset.
 
@@ -170,7 +170,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
     4.  Click **Next**.
 
-        ![](././media/MIM_UpgSP17.png)
+        ![](media/MIM-UpgSP17.png)
 
 22. In the next MIM Password Reset configuration screen:
 

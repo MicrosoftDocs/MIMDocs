@@ -11,6 +11,56 @@
             "type_mapping": {
                 "Conceptual": "Content"
             }
+        },
+                {
+            "docset_name": "MIMUnderstand",
+            "build_output_subfolder": "MIMDocs/Understand",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
+        },
+                {
+            "docset_name": "MIMPlanDesign",
+            "build_output_subfolder": "MIMDocs/PlanDesign",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
+        },
+        {
+            "docset_name": "MIMGetStarted",
+            "build_output_subfolder": "MIMDocs/GetStarted",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
+        },
+                {
+            "docset_name": "MIMDeployUse",
+            "build_output_subfolder": "MIMDocs/DeployUse",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
+        },
+                {
+            "docset_name": "MIMTroubleshoot",
+            "build_output_subfolder": "MIMDocs/Troubleshoot",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
         }
     ],
     "notification_subscribers": ["OPBuild@microsoft.com"],
