@@ -1,5 +1,5 @@
-# [Understand and explore](/Understand/journey-understand-explore.html)
-# [Plan and design](/PlanDesign/journey-plan-design.html)
+# [Understand and explore](/MIM/Understand/journey-understand-explore.html)
+# [Plan and design](/MIM/PlanDesign/journey-plan-design.html)
 # [Deploy and use](journey-deploy-use.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
@@ -12,4 +12,4 @@
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [For non-administrators](certificate-manager-for-non-administrators.md)
 ### [For software certificates](certificate-manager-for-software-certificates.md)
-# [Developer reference](/reference/microsoft-identity-manager-2016-developer-reference.html)
+# [Developer reference](/MIM/reference/microsoft-identity-manager-2016-developer-reference.html)
