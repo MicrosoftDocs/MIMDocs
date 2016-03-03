@@ -35,7 +35,7 @@ An administrative forest design has the following considerations:
 
 - A one-way trust is required from production environment to the admin forest. This can be a domain trust or a forest trust. The admin forest domain does not need to trust the managed domains and forests to manage Active Directory, though additional applications may require a two-way trust relationship, security validation, and testing.
 
-- Selective authentication should be used to restrict accounts in the admin forest to only logging on to the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the “Allowed to logon” right for domain controllers to designated Tier 0 admin accounts in the admin forest. See [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc755844%28v=ws.10%29.aspx) for more information.
+- Selective authentication should be used to restrict accounts in the admin forest to only logging on to the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the “Allowed to logon” right for domain controllers to designated Tier 0 admin accounts in the admin forest. See [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc755844.aspx) for more information.
 
 ## Deploying the forest
 

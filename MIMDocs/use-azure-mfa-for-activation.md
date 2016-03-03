@@ -1,7 +1,6 @@
 ---
 title: Using Azure MFA for activation
 ms.custom:
-  - inhenk
   - identity management
   - MIM
 ms.prod: identity-manager-2015

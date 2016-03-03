@@ -86,5 +86,5 @@ After the workflows are complete, users can verify that their accounts in the ba
 
 Related articles
 [Deployment Considerations for Privileged Access Management](privileged-access-management-deployment-considerations.md)
-[Privileged Access Management Operations](privileged-access-management-operations.md)
+[Using Azure MFA for Activation](use-azure-mfa-for-activation.md)
 [Getting Started with Privileged Access Management](privileged-access-management-get-started.md)
