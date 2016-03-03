@@ -1,2 +1,6 @@
-# [What is MIM 2016?](microsoft-identity-manager-2016.md)
-# [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)
+# [Understand and explore](journey-understand-evaluate.md)
+## [What is MIM 2016?](microsoft-identity-manager-2016.md)
+## [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)
+# [Plan and design](/MIM/PlanDesign/journey-plan-design.html)
+# [Deploy and use](/MIM/DeployUse/journey-deploy-use.html)
+# [Developer reference](/MIM/reference/microsoft-identity-manager-2016-developer-reference.html)
