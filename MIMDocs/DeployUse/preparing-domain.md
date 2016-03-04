@@ -11,22 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-author: Kgremban
+author: kgremban
 ---
 # Preparing the Domain
 
 ## Update the domain
 
-1.  MIM requires that Active Directory is already installed. Make sure you have a domain controller in your environment for a domain that you are able to administer.
+MIM requires that Active Directory is already installed. Make sure you have a domain controller in your environment for a domain that you are able to administer.
 
-2.  Log on to the domain controller as the domain administrator (*e. g. Contoso\Administrator*) and create the following user accounts for MIM services.
+> [!NOTE]
+> In all the examples below, **mimservername** represents the name of your domain controller, **domain** represents your domain name and **Pass@word1** represents an example password.
+
+1.  Sign in to the domain controller as the domain administrator (*e. g. Contoso\Administrator*) and create the following user accounts for MIM services.
 
     1.  Start PowerShell.
 
     2.  Type the following PowerShell script to update the domain.
-
-        > [!NOTE]
-        > In all the examples below, **mimservername** represents the name of your domain controller, **domain** represents your domain name and **Pass@word1** represents an example password.
 
         ```
         import-module activedirectory
@@ -54,7 +54,7 @@ author: Kgremban
         Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
         ```
 
-3.  Create security groups to all the groups.
+2.  Create security groups to all the groups.
 
     1.  Run the following PowerShell script:
 
@@ -68,7 +68,7 @@ author: Kgremban
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
 
-4.  Using PowerShell, add SPNs to enable Kerberos authentication for service accounts
+3.  Using PowerShell, add SPNs to enable Kerberos authentication for service accounts
 
     ```
     setspn -S http/mimservername.domain.local Domain\SharePoint
@@ -76,3 +76,7 @@ author: Kgremban
     setspn -S MIMService/mimservername.domain.local Domain\MIMService
     setspn -S MIMSync/mimservername.domain.local Domain\MIMSync
     ```
+
+>[!div class="step-by-step"]  
+[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/ppreparing-corporate-identity-management-server.html)
+**Preparing a Corporate Identity Management Server** 

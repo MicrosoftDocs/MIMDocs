@@ -1,5 +1,5 @@
 ---
-title: Preparing a Corporate Identity Management Server
+title: Preparing an identity management server
 ms.custom:
   - Identity Management
   - MIM
@@ -11,11 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a79eec00-022f-48d5-88e0-2743fe8af85d
-author: Kgremban
+author: kgremban
 ---
-# Preparing a Corporate Identity Management Server
+# Preparing an identity management server
 
-## Deploy and Configure Windows Server 2012 R2
+>[!div class="step-by-step"]
+[Previous](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/preparing-domain.html)
+**Preparing the domain**
+
+## Deploy and configure Windows Server 2012 R2
 
 1.  Create a Windows Server 2012 R2 machine, with a minimum of 8GB of RAM. When installing specify "Windows Server 2012 R2 Standard (Server with a GUI) x64" edition.
 
