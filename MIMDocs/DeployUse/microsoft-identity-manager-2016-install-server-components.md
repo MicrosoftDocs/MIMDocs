@@ -97,7 +97,7 @@ author: Kgremban
 
 4.  In the MIM Customer Experience Improvement Program screen, click **Next**.
 
-5.  For this deployment, when selecting component features, it is necessary to include  the MIM Service (except for MIM Reporting) and MIM Portal features. You can also select the MIM Password Reset Portal and MIM Password Reset Portal.
+5.  For this deployment, when selecting component features, it is necessary to include  the MIM Service (except for MIM Reporting) and MIM Portal features. You can also select the MIM Password Reset Portal and MIM Password Registration Portal.
 
 6.  When configuring common services and the MIM database connection, specify “Create a new database”.
 
@@ -203,7 +203,7 @@ author: Kgremban
 > Optional: At this point you can install MIM add-ins and extensions.
 
 ## Configure MIM Sync to Synchronize from Active Directory to MIM Service
-By default, MIM Sync does not have any connectors configured.   A typical first step is to use MIM Sync to populate the FIM Service database with existing Active Directory accounts.  For this, you will use the MIM Sync Service application.
+By default, MIM Sync does not have any connectors configured.   A typical first step is to use MIM Sync to populate the MIM Service database with existing Active Directory accounts.  For this, you will use the MIM Sync Service application.
 
 ### Create the MIM MA
 The MIM MA is a connector for MIM Sync to the MIM Service. To create this connector, you use the Create Management Agent wizard.
@@ -221,7 +221,7 @@ To create the MIM MA
 
 -   On the Create Management Agent page, provide the following settings, and then click **Next**.
 
-    -   Management agent for: FIM Service management agent
+    -   Management agent for: MIM Service management agent
 
     -   Name: MIMMA
 
@@ -229,9 +229,9 @@ To create the MIM MA
 
     -   Server: localhost
 
-    -   Database: FIMService
+    -   Database: MIMService
 
-    -   FIM Service base address: http://localhost:5725
+    -   MIM Service base address: http://localhost:5725
 
     -   Authentication mode: Windows integrated authentication
 
@@ -522,7 +522,7 @@ For the scenario in this document, you perform the following steps in the MIM Se
 
     -   To configure the Relationship Criteria, select objectSID from the MetaverseObject:person(Attribute) list and ObjectSID from the ConnectedSystemObject:person(Attribute)list.
 
-    -   Select Create Resource In FIM.
+    -   Select Create Resource In MIM.
 
 7.  On the Inbound Attribute Flow page, provide the following information, and then click Next:
 
