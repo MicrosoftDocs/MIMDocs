@@ -53,3 +53,6 @@ The performance computers running SQL Server that host the MIM Synchronization S
 - [Optimizing tempdb Performance](http://go.microsoft.com/fwlink/?LinkID=188267)
 
 - [SQL Server Best Practices Article](http://go.microsoft.com/fwlink/?LinkID=188268)
+
+## See also
+- The downloadable [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) goes into more detail about a test build and performance testing results.

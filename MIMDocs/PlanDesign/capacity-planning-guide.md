@@ -1,5 +1,5 @@
 ---
-title: Capacity Planning Guide
+title: Capacity planning guide
 ms.custom:
   - Identity Management
   - MIM
@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid:
 author: kgremban
 ---
-# Capacity Planning Guide
+# Capacity planning guide
 
 This guide was produced to assist in customer planning, but it should not be used alone to determine the appropriate servers, hardware, or topologies that are required for a Microsoft Identity Manager (MIM) deployment. Organizations are encouraged and expected to configure their own test environments to more accurately estimate capacity and performance. Microsoft cannot guarantee that organizations will experience the same capacity or performance characteristics, even if the MIM 2016 components are deployed and configured identically to the components that are described in this guide.
 
@@ -80,4 +80,4 @@ While working on MIM policy configuration objects, you should also consider the 
 
 
 ## See also
-- A downloadable copy of this document is available on the Microsoft download center as [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180).
+- The downloadable [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) goes into more detail about a test build and performance testing results.
