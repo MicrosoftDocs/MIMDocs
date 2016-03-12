@@ -1,5 +1,5 @@
 ---
-title: Preparing the Domain
+title: Preparing a domain
 ms.custom:
   - Identity Management
   - MIM
@@ -9,24 +9,22 @@ ms.suite: na
 ms.technology:
   - security
 ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: get-started-article
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 author: kgremban
 ---
-# Preparing the Domain
+# Preparing a domain
 
-## Update the domain
+## Create user accounts and groups
 
 MIM requires that Active Directory is already installed. Make sure you have a domain controller in your environment for a domain that you are able to administer.
 
 > [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **domain** represents your domain name and **Pass@word1** represents an example password.
+> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
 
-1.  Sign in to the domain controller as the domain administrator (*e. g. Contoso\Administrator*) and create the following user accounts for MIM services.
+1. Sign in to the domain controller as the domain administrator (*e. g. Contoso\Administrator*).
 
-    1.  Start PowerShell.
-
-    2.  Type the following PowerShell script to update the domain.
+2. Create the following user accounts for MIM services. Start PowerShell and type the following PowerShell script to update the domain.
 
         ```
         import-module activedirectory
@@ -56,8 +54,6 @@ MIM requires that Active Directory is already installed. Make sure you have a do
 
 2.  Create security groups to all the groups.
 
-    1.  Run the following PowerShell script:
-
     ```
     New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global 		–SamAccountName MIMSyncAdmins
     New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global 		–SamAccountName MIMSyncOperators
@@ -68,15 +64,15 @@ MIM requires that Active Directory is already installed. Make sure you have a do
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
 
-3.  Using PowerShell, add SPNs to enable Kerberos authentication for service accounts
+3.  Add SPNs to enable Kerberos authentication for service accounts
 
     ```
-    setspn -S http/mimservername.domain.local Domain\SharePoint
-    setspn -S http/mimservername Domain\SharePoint
-    setspn -S MIMService/mimservername.domain.local Domain\MIMService
-    setspn -S MIMSync/mimservername.domain.local Domain\MIMSync
+    setspn -S http/mimservername.contoso.local Contoso\SharePoint
+    setspn -S http/mimservername Contoso\SharePoint
+    setspn -S MIMService/mimservername.contoso.local Contoso\MIMService
+    setspn -S MIMSync/mimservername.contoso.local Contoso\MIMSync
     ```
 
 >[!div class="step-by-step"]  
-[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/ppreparing-corporate-identity-management-server.html)
-**Preparing a Corporate Identity Management Server** 
+[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-ws2012r2.html)
+**Preparing an identity management server: Windows Server 2012 R2**
