@@ -17,7 +17,7 @@ author: kgremban
 
 >[!div class="step-by-step"]
 [Previous](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-ws2012r2.html)
-**Preparing an identity management server: SQL Server 2014**
+**Preparing an identity management server: Windows Server 2012 R2**
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
