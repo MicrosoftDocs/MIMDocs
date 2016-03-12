@@ -3,7 +3,7 @@
 # [Deploy and use](journey-deploy-use.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
-### [Server setup: Windows Server](preparing-server-ws2012r2.md)
+### [Server setup: Windows Server](prepare-server-ws2012r2.md)
 ### [Server setup: SQL](prepare-server-sql2014.md)
 ### [Server setup: SharePoint](prepare-server-sharepoint.md)
 ### [Server setup: Exchange](prepare-server-exchange.md)
