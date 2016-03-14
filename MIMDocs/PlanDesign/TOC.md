@@ -1,5 +1,5 @@
 # [Understand and explore](/MIM/Understand/microsoft-identity-manager-2016.html)
-# [Plan and design](/MIM/PlanDesign/journey-plan-design.html)
+# [Plan and design](/MIM/PlanDesign/microsoft-identity-manager-2016-supported-platforms.html)
 ## [Supported platforms](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Capacity planning](capacity-planning-guide.md)
 ## [Deployment topology](topology-considerations.md)
