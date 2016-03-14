@@ -25,11 +25,19 @@ Comment: Restore after PAM content is included
 The privileged access management scenario is deployed differently than other MIM scenarios, as it requires a dedicated bastion forest environment.  If you want to learn more about deploying MIM for Privileged Identity Management, see [Getting Started with Privileged Access Management](privileged-access-management-get-started.md).
 --->
 
-## [Domain setup](preparing-domain.md)
-MIM works with Active Directory (AD), so follow these steps to set up your AD domain if you haven't already.
+## First: Prepare a Domain
+MIM works with Active Directory (AD), so follow these steps to configure your AD domain controller.
+- [Preparing a domain](preparing-domain.md)
 
-## [Server setup](preparing-corporate-identity-management-server.md)
-Use this article to deploy prepare your corporate identity management server. This includes Windows Server 2012 R2, SQL Server, and SharePoint.
+## Then: Prepare an identity management server
+Once your domain is in place and configured, prepare your corporate identity management server. This includes setting up
+- [Preparing an identity management server: Windows Server 2012 R2](prepare-server-ws2012r2.md)
+- [Preparing an identity management server: SQL Server 2014](prepare-server-sql2014.md)
+- [Preparing an identity management server: SharePoint](prepare-server-sharepoint.md)
+- [Preparing an identity management server: Exchange](prepare-server-exchange.md) (optional)
 
-## [Install MIM 2016 components](microsoft-identity-manager-2016-install-server-components.md)
-Once your domain and server are set up, this article helps you get started with MIM services and configure them to sync with AD.
+## Finally: Install Microsoft Identity Manager 2016 components
+Once your domain and server are set up, you're ready to install the MIM components and configure them to sync with AD.
+- [Installing MIM 2016: MIM Synchronization Service](install-mim-sync.md)
+- [Installing MIM 2016: MIM Service and Portal](install-mim-service-portal.md)
+- [Installing MIM 2016: Synchronize Active Directory and MIM Service](install-mim-sync-ad-service.md)
