@@ -1,5 +1,5 @@
 ---
-title: Supported Platforms for MIM 2016
+title: Supported Platforms for MIM 2016 | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM
@@ -14,6 +14,7 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 author: kgremban
 ---
 # Supported Platforms for MIM 2016
+
 | **MIM component** | **Platform** | **Version** |
 |-------------------|--------------|-------------|
 |**MIM Sync**|Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2|

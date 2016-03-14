@@ -1,17 +1,17 @@
 ---
-title: Certificate Manager for Software Certificates
-ms.custom: 
+title: Certificate Manager for Software Certificates | Microsoft Identity Manager
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
-author: Kgremban
+author: kgremban
 ---
 # Certificate Manager for Software Certificates
 To enroll and renew software certificates you don’t have to be an administrator and you don’t need a virtual smart card. It’s worth noting that at some point you will be prompted to allow a certificate operation and this is normal.
@@ -89,4 +89,3 @@ To enroll and renew software certificates you don’t have to be an administrato
 10. If you want to reissue archived certificates, check the boxes to the left of **Reissue archived certificates** and click on **OK**.
 
 11. If you are using the Virtual Smart Card CM, you have to disable data collection items because it doesn't work with data collection on. Disable data collection for each and every policy by clicking on the policy in the left pane, and then unchecking the box next to **Sample data item** and then click **Delete data collection items**. Then click **OK**.
-

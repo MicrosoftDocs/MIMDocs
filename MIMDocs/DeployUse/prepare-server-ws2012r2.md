@@ -1,5 +1,5 @@
 ---
-title: Preparing an identity management server: Windows Server 2012 R2
+title: Preparing an identity management server&#58; Windows Server 2012 R2 | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM

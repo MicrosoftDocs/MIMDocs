@@ -1,12 +1,12 @@
 ---
 title: Configuring the MIM Environment for Privileged Access Management
-ms.custom: 
+ms.custom:
   - Identity Management
   - MIM
 ms.prod: identity-manager-2015
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -31,4 +31,3 @@ There are seven steps to complete when setting up the environment for cross-fore
 7.  Demonstrate requesting, receiving, and making use of privileged elevated access to a protected resource.
 
 The following sections provide details about how to perform these tasks.
-

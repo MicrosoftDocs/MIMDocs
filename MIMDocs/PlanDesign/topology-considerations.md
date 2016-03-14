@@ -1,5 +1,5 @@
 ---
-title: Topology considerations
+title: Topology considerations | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM
@@ -10,7 +10,6 @@ ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid:
 author: kgremban
 ---
 

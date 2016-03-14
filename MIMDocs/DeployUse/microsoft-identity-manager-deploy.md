@@ -1,5 +1,5 @@
 ---
-title: Deploying MIM
+title: Deploying MIM | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM

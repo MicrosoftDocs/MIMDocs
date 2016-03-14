@@ -1,5 +1,5 @@
 ---
-title: Preparing a domain
+title: Preparing a domain | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM

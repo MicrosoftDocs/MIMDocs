@@ -1,5 +1,5 @@
 ---
-title: Deploy and use Microsoft Identity Manager
+title: Deploy and use Microsoft Identity Manager | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM
@@ -10,7 +10,6 @@ ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid:
 author: kgremban
 ---
 # Deploy and use Microsoft Identity Manager
@@ -32,4 +31,4 @@ Learn about the different reporting options for Identity Manager Hybrid Reportin
 Use MIM to enhance Self-Service Password Reset with important features like self-service account unlocking, user authentication via phone calls, and Multi-Factor Authentication (MFA).
 
 ## [Microsoft Identity Manager Certificate Manager](working-with-mim-certificate-manager.md)
-Set up the MIM Certificate Manager app from the Windows store to help your users easily manager their physical smart cards, virtual smart cards, and software certificates. 
+Set up the MIM Certificate Manager app from the Windows store to help your users easily manager their physical smart cards, virtual smart cards, and software certificates.
