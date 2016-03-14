@@ -10,7 +10,6 @@ ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid:
 author: kgremban
 ---
 # Preparing an identity management server: Windows Server 2012 R2
