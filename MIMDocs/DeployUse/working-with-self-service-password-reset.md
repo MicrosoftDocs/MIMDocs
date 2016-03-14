@@ -11,7 +11,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-author: Kgremban
+author: kgremban
 ---
 # Working with Self-Service Login Assistance
 Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
@@ -20,7 +20,7 @@ Microsoft Identity Manager 2016 provides additional functionality to the Self Se
 
 -   A new authentication gate,  Phone Gate, was added. This enables user authentication via telephone call.
 
--   Support has been added for Microsoft Azure Multi-Factor Authentication (MFA) service. This can be used for either the exiting SMS One-Time-Password Gate or the new Phone Gate.
+-   Support has been added for Microsoft Azure Multi-Factor Authentication (MFA) service. This can be used for either the existing SMS One-Time-Password Gate or the new Phone Gate.
 
 ## Azure for Multi-factor Authentication
 When using Azure multi-factor authentication, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the user trying to gain access is indeed the real user who own the identity. Once authenticated, the user can choose a new password to replace the old one.
