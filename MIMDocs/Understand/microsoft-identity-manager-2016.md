@@ -1,5 +1,5 @@
 ---
-title: Microsoft Identity Manager 2016
+title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM
@@ -11,7 +11,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-author: Kgremban
+author: kgremban
 ---
 # Microsoft Identity Manager 2016
 MIM 2016 builds on the already strong identity and access management capabilities of FIM 2010 R2 and adds hybrid experience and privilege access management capabilities as well as support for new platforms.

@@ -1,5 +1,5 @@
 ---
-title: Installing MIM 2016: MIM Service and Portal
+title: Installing MIM 2016&#58; MIM Service and Portal | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM
@@ -10,7 +10,6 @@ ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid:
 author: kgremban
 ---
 # Installing MIM 2016: MIM Service and Portal

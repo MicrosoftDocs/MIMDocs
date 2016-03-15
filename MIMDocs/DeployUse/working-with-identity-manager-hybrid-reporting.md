@@ -1,5 +1,5 @@
 ---
-title: Working with Identity Manager Hybrid Reporting
+title: Working with Identity Manager Hybrid Reporting | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM

@@ -1,5 +1,5 @@
 ---
-title: Working with Self-Service Login Assistance
+title: Working with Self-Service Login Assistance | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM

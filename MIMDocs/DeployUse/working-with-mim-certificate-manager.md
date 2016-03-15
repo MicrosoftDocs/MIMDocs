@@ -1,5 +1,5 @@
 ---
-title: Working with the MIM Certificate Manager
+title: Working with the MIM Certificate Manager | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM

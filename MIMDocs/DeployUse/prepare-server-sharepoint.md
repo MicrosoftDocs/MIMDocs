@@ -1,5 +1,5 @@
 ---
-title: Preparing an identity management server: SharePoint
+title: Preparing an identity management server&#58; SharePoint | Microsoft Identity Manager
 ms.custom:
   - Identity Management
   - MIM
@@ -10,7 +10,6 @@ ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid:
 author: kgremban
 ---
 # Preparing an identity management server: SharePoint
