@@ -33,7 +33,7 @@ The multitier topology is the most commonly used topology. It offers the greates
 
 In the multitier topology, a dedicated computer to host each SQL database (one for the MIM Service and another for the MIM Synchronization Service) is allocated. The scalability of the performance of the computers that host the SQL databases can be increased by adding or upgrading hardware, for example, by upgrading the CPUs, adding additional CPUs, increasing random access memory (RAM) or upgrading the RAM, or upgrading the hard drive configurations to increase read and write access and decrease latency.
 
-![](media/MIM-topo-multitier.png)
+![MIM multitier topology diagram](media/MIM-topo-multitier.png)
 
 In this configuration, the MIM Synchronization Service and its database are hosted on the same computer. However, you should be able to achieve similar performance if there is a one-gigabit dedicated network connection between the MIM Synchronization Service and its database when they are hosted on separate computers.
 
@@ -41,7 +41,7 @@ In this configuration, the MIM Synchronization Service and its database are host
 ## Multitier topology with multiple MIM services
 Synchronization of data with external systems can add a considerable load to the system and run over an extended period of time. If the synchronization configuration results in triggering policies with workflows, these policies contend for resources with end-user workflows. Such issues can be pronounced with authentication workflows, such as password resets, which are done in real time with an end user waiting for the process to complete. By providing one instance of the MIM Service for end user operations and a separate portal for administrative data synchronization, you can provide better responsiveness for end-user operations.
 
-![](media/MIM-topo-multitier-multiservice.png)
+![Multiple MIM multitier topology diagram](media/MIM-topo-multitier-multiservice.png)
 
 As with the standard multitier topology, you can increase MIM Portal performance by using an NLB cluster and by increasing the number of nodes in the cluster as needed.
 

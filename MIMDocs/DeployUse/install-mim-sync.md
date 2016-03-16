@@ -35,13 +35,13 @@ To install Microsoft Identity Manager 2016 components, first:
 
 3. In the welcome screen – click **Next**.
 
-    ![MIM installer wizard welcome page](media/MIM-Install1.png)
+    ![MIM installer wizard welcome image](media/MIM-Install1.png)
 
 4. Review the license terms and if you accept them, click **Next**.
 
 5. On the **Custom Setup** screen click **Next**.
 
-    ![Custom Setup page, select Microsoft Identity Manager Synchronization Service](media/MIM-Install2.png)
+    ![Custom Setup image](media/MIM-Install2.png)
 
 6.  In the Sync database configuration screen, select:
 
@@ -49,7 +49,7 @@ To install Microsoft Identity Manager 2016 components, first:
 
     2.  The SQL Server instance is: **The default instance**.
 
-    ![Database connection page, SQL Server configuration](media/MIM-Install3.png)
+    ![Database connection image](media/MIM-Install3.png)
 
 7.  Configure the Sync Service Account according to the account you created earlier:
 
@@ -59,7 +59,7 @@ To install Microsoft Identity Manager 2016 components, first:
 
     3.  Service Account Domain or local computer name: *contoso*
 
-    ![Service account page, use the MIMSync account](media/MIM-Install4.png)
+    ![Service account image](media/MIM-Install4.png)
 
 8.  Provide MIM Sync installer with the relevant security groups:
 
@@ -73,7 +73,7 @@ To install Microsoft Identity Manager 2016 components, first:
 
     5.  WMI Password Management= *contoso\MIMSyncPasswordReset*
 
-    ![Security groups page](media/MIM-Install5.png)
+    ![Security groups image](media/MIM-Install5.png)
 
 9. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
 
@@ -83,15 +83,15 @@ To install Microsoft Identity Manager 2016 components, first:
 
     2.  MIM Sync will now be installed.
 
-        ![](media/MIM-Install6.png)
+        ![MIM Sync installation status image](media/MIM-Install6.png)
 
     3.  A notice on creating a backup for the encryption key will be shown – click **OK**, then select a folder to store the encryption key backup.
 
-        ![](media/MIM-Install7.png)
+        ![MIM Sync backup encryption key notice image](media/MIM-Install7.png)
 
     4.  When the installer successfully completes the installation, click **Finish**.
 
-        ![](media/MIM-Install8.png)
+        ![MIM Sync installation success image](media/MIM-Install8.png)
 
     5.  You will be prompted to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
 

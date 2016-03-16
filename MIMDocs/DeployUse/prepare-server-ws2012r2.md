@@ -45,7 +45,7 @@ author: kgremban
 
 8. Add the **Web Server (IIS)** and **Application Server** roles, the **.NET Framework** 3.5, 4.0, and 4.5 features, and the **Active Directory module for Windows PowerShell**.
 
-    ![PowerShell features, select Active Directory module for Windows PowerShell](media/MIM-DeployWS2.png)
+    ![PowerShell features image](media/MIM-DeployWS2.png)
 
 9. In PowerShell, still as an administrator, type the following commands. Note that it may be necessary to specify a different location for the source files for **.NET Framework** 3.5 features. These features are typically not present when Windows Server installs, but are available in the side-by-side (SxS) folder on the OS install disk sources folder, e.g., “*d:\Sources\SxS\*”.
 
@@ -64,7 +64,7 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 3. On the details pane, right click on **Log on as a service**, and select **Properties**.
 
-    ![Local Security Policy, right click for policy properties](media/MIM-DeployWS3.png)
+    ![Local Security Policy image](media/MIM-DeployWS3.png)
 
 4. Click **Add User or Group**, and in the text box type `contoso\mimsync; contoso\mimma; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\mimsspr`, click **Check Names**, and click **OK**.
 
