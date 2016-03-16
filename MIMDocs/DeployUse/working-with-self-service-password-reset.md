@@ -16,65 +16,66 @@ author: kgremban
 # Working with Self-Service Login Assistance
 Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
 
--   The Self-Service Password Reset portal and Windows Log In screen now enable uses to unlock their accounts without changing their passwords, in addition to being able to reset their passwords. Commonly, users get locked out of their accounts for many legitimate reasons, such as because they accidentally entered an old password, they use bilingual computers and have the keyboard set to the wrong language or they attempt to log into a shared workstation already open to someone else's account.  Self-Service Account Unlock allows users to unlock their accounts on their own, without necessitating expensive calls to support administrators.
+-   The Self-Service Password Reset portal and Windows Log In screen now let users unlock their accounts without changing their passwords or calling support administrators. Users can get locked out of their accounts for many legitimate reasons, like if they enter an old password, use bilingual computers and have the keyboard set to the wrong language, or attempt to log into a shared workstation already open to someone else's account.
 
 -   A new authentication gate,  Phone Gate, was added. This enables user authentication via telephone call.
 
 -   Support has been added for Microsoft Azure Multi-Factor Authentication (MFA) service. This can be used for either the existing SMS One-Time-Password Gate or the new Phone Gate.
 
-## Azure for Multi-factor Authentication
-When using Azure multi-factor authentication, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the user trying to gain access is indeed the real user who own the identity. Once authenticated, the user can choose a new password to replace the old one.
+## Azure for Multi-Factor Authentication
+Microsoft Azure Multi-Factor Authentication is an authentication service that requires users to verify their sign-in attempts with a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-prem enterprise applications.
 
-Microsoft Azure Multi-Factor Authentication (MFA) is an authentication service that requires users to verify their sign-in attempts by using a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-prem enterprise applications.
-Azure MFA provides an additional authentication mechanism that can be integrated into and reinforce existing authentication processes, such as the one carried out by MIM for self-service login assistance.
+Azure MFA provides an additional authentication mechanism that can reinforce existing authentication processes, such as the one carried out by MIM for self-service login assistance.
+
+When using Azure MFA, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
 
 ## Preparing Microsoft Identity Manager to work with the self-service account unlock and password reset using MFA
 This section assumes that you have downloaded and completed the deployment of the Microsoft Identity Manager 2016, including the following components and services:
 
--   A Windows Server 2008 R2 or later has been set up as an Active Directory server including AD Domain Services and Domain Controller with a designated domain (a “corporate” domain).
+-   A Windows Server 2008 R2 or later has been set up as an Active Directory server including AD Domain Services and Domain Controller with a designated domain (a “corporate” domain)
 
 -   A Group Policy is defined for Account lockout
 
--   MIM 2016 Synchronization Service (Sync) has to be installed and running on a server that is domain-joined to the AD domain
+-   MIM 2016 Synchronization Service (Sync) is installed and running on a server that is domain-joined to the AD domain
 
--   MIM 2016 Service &amp; Portal including the SSPR Registration Portal and the SSPR Reset Portal, have to be installed and running on a server (could be collocated with Sync)
+-   MIM 2016 Service &amp; Portal including the SSPR Registration Portal and the SSPR Reset Portal, are installed and running on a server (could be co-located with Sync)
 
--   MIM Sync has to be configured for AD-FIM identity synchronization, including:
+-   MIM Sync is configured for AD-MIM identity synchronization, including:
 
     -   Configuring the Active Directory Management Agent (ADMA) for connectivity to AD DS and capability to import identity data from and export it to Active Directory.
 
-    -   Configuring the MIM Management Agent (FIM MA) for connectivity to FIM Service DB and capability to import identity data from and export it to the FIM database.
+    -   Configuring the MIM Management Agent (MIM MA) for connectivity to FIM Service DB and capability to import identity data from and export it to the FIM database.
 
     -   Configuring Synchronization Rules in the MIM Portal to allow user data synchronization and facilitate sync-based activities in the MIM Service.
 
--   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client has to be deployed on the server or on a separate client computer.
+-   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client is deployed on the server or on a separate client computer.
 
 ## Prerequisites
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins nd Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
 In the next section, you will set up your Azure MFA provider in Microsoft Azure Active Directory. As part of this, you’ll generate a file that includes the authentication material which MFA requires to be able to contact Azure MFA.  In order to proceed, you will need an Azure subscription.
 
-#### Register your multifactor authentication provider in Azure
+### Register your multi-factor authentication provider in Azure
 
-1.  Open a web browser and connect to the Azure management portal at manage.windowsazure.com as a Azure subscription administrator user.
-
-    Log into the Azure portal using your credentials.
+1.  Go to the [Azure classic portal](manage.windowsazure.com) and sign in as an Azure subscription administrator.
 
 2.  In the bottom left hand corner, click **New**.
 
 3.  Click **App Services &gt; Active Directory &gt; Multi-Factor Auth Provider &gt; Quick Create**.
 
-4.  In the **Name** field, enter **SSPRMFA** and click **Create**.
+![Azure Portal quick create MFA image](media/MIM-SSPR-Azureportal.png)
 
-    ![](media/MIM-SSPR-Azureportal.png)
+4.  In the **Name** field enter **SSPRMFA**, then click **Create**.
 
-5.  Click **Active Directory** in the Azure Portal menu, and then click the **Multi-Factor Auth Providers** tab.
+![Azure Portal MFA image](media/MIM-SSPR-Azureportal-2.png)
+
+5.  Click **Active Directory** in the Azure classic portal menu, and then click the **Multi-Factor Auth Providers** tab.
 
 6.  Click on **SSPRMFA** and then click **Manage** at the bottom of the screen.
 
-    ![](media/MIM-SSPR-ManageButton.png)
+    ![Azure portal Manage icon](media/MIM-SSPR-ManageButton.png)
 
-7.  In the new window, on the left panel, under **Configure**, click on **Settings**.
+7.  In the new window, on the left panel under **Configure**, click on **Settings**.
 
 8.  Under **Fraud Alert**, uncheck **Block user when fraud is reported** . This is done in order to prevent blocking the entire service.
 
@@ -82,23 +83,23 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 10. Click the **Download** link in the ZIP column for the file with language **SDK for ASP.net 2.0 C#**.
 
-    ![](media/MIM-SSPR-Azure-MFA.png)
+    ![Azure MFA download zip file image](media/MIM-SSPR-Azure-MFA.png)
 
 11. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
 
-#### Update the configuration file
+### Update the configuration file
 
-1.  Log intot he computer where MIM Service is installed, as the user who installed MIM.
+1. Sign into the computer where MIM Service is installed, as the user who installed MIM.
 
-2.  Create a new directory folder located below the directory where the MIM Service was installed, such as **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts**.
+2. Create a new directory folder located below the directory where the MIM Service was installed, such as **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts**.
 
-3.  Using Windows Explorer, navigate into the “pf\certs” folder of the ZIP file downloaded in the previous section, and copy the file **cert_key.p12** to the new directory.
+3. Using Windows Explorer, navigate into the **\pf\certs** folder of the ZIP file downloaded in the previous section, and copy the file **cert_key.p12** to the new directory.
 
-4.  In the SDK zip file, in the folder \pf, open the file **pf_auth.cs**.
+4.  In the SDK zip file, in the folder **\pf**, open the file **pf_auth.cs**.
 
 5.  Find these three parameters: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
 
-    ![](media/MIM-SSPR-pFile.png)
+    ![pf_auth.cs code image](media/MIM-SSPR-pFile.png)
 
 6.  In **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**, open the file: **MfaSettings**.xml.
 
@@ -116,11 +117,11 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 1.  Launch Internet Explorer and navigate to the MIM Portal, authenticating as the MIM administrator, then click on  **Workflows** in the left hand navigation bar.
 
-    ![](media/MIM-SSPR-workflow.jpg)
+    ![MIM Portal navigation image](media/MIM-SSPR-workflow.jpg)
 
 2.  Check **Password Reset AuthN Workflow**.
 
-    ![](media/MIM-SSPR-PwdResetAuthNworkflow.jpg)
+    ![MIM Portal Workflows image](media/MIM-SSPR-PwdResetAuthNworkflow.jpg)
 
 3.  Click on the **Activities** tab and then scroll down to **Add Activity**.
 
@@ -136,22 +137,26 @@ Users in your organization can now register for password reset.  During this pro
 
 2.  In the **Phone Number** or **Mobile Phone**  field, they have to enter a country code, a space, and the phone number and click **Next**.
 
-    ![](media/MIM-SSPR-PhoneVerification.JPG)
+    ![MIM Phone Verification image](media/MIM-SSPR-PhoneVerification.JPG)
 
-    ![](media/MIM-SSPR-mobilephoneverification.JPG)
+    ![MIM Mobile Phone Verification image](media/MIM-SSPR-mobilephoneverification.JPG)
 
 ## How does it work for your users?
 Now that everything is configured and it’s running, you might want to know what your users are going to have to go through when they reset their passwords right before a vacation and come back only to realize that they completely forgot their passwords.
 
-There are two ways a user can use the password reset and account unlock functionality, either from the Windows Log in screen, or from the self-service portal.
+There are two ways a user can use the password reset and account unlock functionality, either from the Windows sign-in screen, or from the self-service portal.
 
 By installing the MIM Add-ins and Extensions on a domain joined computer connected over your organizational network to the MIM Service, users can recover from a forgotten password at the desktop login experience.  The following steps will walk you through the process.
 
 #### Windows desktop login integrated password reset
 
-1.  If your user enters the wrong password several times, in the login screen, they will have the option to click **Problems logging in?** . ![](media/MIM-SSPR-problemsloggingin.JPG)
+1.  If your user enters the wrong password several times, in the sign-in screen, they will have the option to click **Problems logging in?** .
 
-    Clicking this link will take them to the MIM Password Reset screen where they can change their password or unlock their account.![](media/MIM-SSPR-keepcurrentorsetnewpwd.JPG)
+    ![Sign-in screen image](media/MIM-SSPR-problemsloggingin.JPG)
+
+    Clicking this link will take them to the MIM Password Reset screen where they can change their password or unlock their account.
+
+    ![MIM Password Reset image](media/MIM-SSPR-keepcurrentorsetnewpwd.JPG)
 
 2.  The user will be directed to authenticate. If MFA was configured, the user will receive a phone call.
 
@@ -183,12 +188,12 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 3.  The user will have to choose if he wants to reset his password or unlock his account. If he chooses to unlock his account, the account will be unlocked.
 
-    ![](media/MIM-SSPR-accountUnlock.JPG)
+    ![MIM Login Assistant Account Unlock image](media/MIM-SSPR-accountUnlock.JPG)
 
 4.  After successful authentication, the user will be given two options, either to keep his current password or to set a new password.
 
-5.  ![](media/MIM-SSPR-account-unlock.JPG)
+5.  ![MIM account unlocked success image](media/MIM-SSPR-account-unlock.JPG)
 
 6.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
 
-    ![](media/MIM-SSPR-PR1.JPG)
+    ![MIM Login Assistant Password Reset image](media/MIM-SSPR-PR1.JPG)

@@ -113,11 +113,11 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 4. On your identity management server, open a new web browser tab, navigate to http://localhost:82/ and login as *contoso\Administrator*.  An empty SharePoint site named *MIM Portal* will be shown.
 
-    ![MIM Portal at http://localhost:82/](media/MIM-DeploySP1.png)
+    ![MIM Portal at http://localhost:82/ image](media/MIM-DeploySP1.png)
 
 5. Copy the URL, then in Internet Explorer, open **Internet Options**, change to the **Security tab**, select **Local intranet**, and click **Sites**.
 
-    ![Use Internet Options to manage local intranet sites](media/MIM-DeploySP2.png)
+    ![Internet Options image](media/MIM-DeploySP2.png)
 
 6. In the **Local intranet** window, click on **Advanced** and paste the copied URL in the **Add this website to the zone** text box. Click **Add** then close the windows.
 

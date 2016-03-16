@@ -20,12 +20,12 @@ The first three Microsoft Identity Manager reports available in Azure AD are **P
 
 -   Password reset activity displays each instance when a user performed password reset using the SSPR and provides the gates or **Methods** used for authentication.
 
+    ![Azure hybrid reporting - password reset activity image](media/MIM-Hybrid-passwordreset.jpg)
+
 -   Password reset registration displays each time a user registers for the SSPR and the **Methods** used to authenticate, for example a mobile phone number or questions and answers.
     Note that for Password reset registration, no differentiation is made between SMS gate and MFA gate – both are considered **Mobile Phone**.
 
 -   Self-service groups activity displays each attempt made by someone to add themselves to or delete themselves from a group and group creation.
-
-    ![](media/MIM-Hybrid-passwordreset.jpg)
 
 > [!NOTE]
 > The reports currently present data for up to one month back.

@@ -41,23 +41,23 @@ If you didn't set up the MIM installation package in the last step, follow these
 
 6.  On the **Configure the MIM database connection** page, specify **Create a new database**.
 
-    ![Configure the MIM database connection page](media/MIM-Install10.png)
+    ![Configure the MIM database connection image](media/MIM-Install10.png)
 
 7.  On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server**. If you do not have a mail server configured, specify localhost as the mail server name and uncheck the top two checkboxes. Click **Next**.
 
-    ![Configure mail server connection](media/MIM-Install11.png)
+    ![Configure mail server connection image](media/MIM-Install11.png)
 
 8.  Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
 
 9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example *Pass@word1*, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
 
-    ![Configure the MIM service account page](media/MIM-Install12.png)
+    ![Configure the MIM service account image](media/MIM-Install12.png)
 
 10. Note that a warning may appear that the Service Account is not secure in its current configuration.
 
 11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMsync*.
 
-    ![Configure the Microsoft Identity Manager Service and Portal page](media/MIM-Install13.png)
+    ![Configure the MIM Service and Portal image](media/MIM-Install13.png)
 
 12. Specify *CORPIDM* (this computer's name) as MIM Service server address for the MIM Portal.
 
@@ -75,7 +75,7 @@ If you didn't set up the MIM installation package in the last step, follow these
 
 2.  Specify  *CORPIDM* as the Host Name for MIM Password Registration, and set the port to **8080**. Enable the **Open port in firewall** option.
 
-    ![Enter configuration information used by IIS page](media/MIM-Install14.png)
+    ![Enter configuration information used by IIS image](media/MIM-Install14.png)
 
 3.  A warning will appear – read it and click **Next**.
 
@@ -87,7 +87,7 @@ If you didn't set up the MIM installation package in the last step, follow these
 
 2.  Specify  *CORPIDM* as the Host Name for MIM Password Registration, and set the port to **8080**. Enable the **Open port in firewall** option.
 
-    ![Enter configuration information used by IIS page](media/MIM-Install15.png)
+    ![Enter configuration information used by IIS image](media/MIM-Install15.png)
 
 3.  A warning will appear – read it and click **Next**.
 
@@ -97,7 +97,7 @@ If you didn't set up the MIM installation package in the last step, follow these
 
 When all pre-installation definitions are ready, click **Install** to begin installing the selected **Service and Portal** components.
 
-![Install Microsoft Identity Manager Service and Portal page](media/MIM-Install16.png)
+![Install MIM Service and Portal image](media/MIM-Install16.png)
 
 After installation completes, verify that the MIM Portal is active.
 
