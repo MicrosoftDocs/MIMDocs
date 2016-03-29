@@ -15,7 +15,7 @@ author: kgremban
 # Installing MIM 2016: MIM Synchronization Service
 
 >[!div class="step-by-step"]
-[Previous](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-exchange.html)
+[Previous](prepare-server-exchange.md)
 **Preparing an identity management server: Exchange (optional)**
 
 > [!NOTE]
@@ -85,7 +85,7 @@ To install Microsoft Identity Manager 2016 components, first:
 
         ![MIM Sync installation status image](media/MIM-Install6.png)
 
-    3.  A notice on creating a backup for the encryption key will be shown – click **OK**, then select a folder to store the encryption key backup.
+    3.  A notice on creating a backup for the encryption key appears – click **OK**, then select a folder to store the encryption key backup.
 
         ![MIM Sync backup encryption key notice image](media/MIM-Install7.png)
 
@@ -93,8 +93,8 @@ To install Microsoft Identity Manager 2016 components, first:
 
         ![MIM Sync installation success image](media/MIM-Install8.png)
 
-    5.  You will be prompted to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
+    5.  You need to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
 
 >[!div class="step-by-step"]  
-[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/mim-install-service-portal.html)
+[Next](mim-install-service-portal.md)
 **Installing MIM 2016: MIM Service and Portal**

@@ -1,5 +1,5 @@
-# [Understand and explore](/MIM/Understand/microsoft-identity-manager-2016.html)
-# [Plan and design](/MIM/PlanDesign/microsoft-identity-manager-2016-supported-platforms.html)
+# [Understand and explore](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016)
+# [Plan and design](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms)
 # [Deploy and use](microsoft-identity-manager-deploy.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
@@ -17,4 +17,4 @@
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [For non-administrators](certificate-manager-for-non-administrators.md)
 ### [For software certificates](certificate-manager-for-software-certificates.md)
-# [Developer reference](/MIM/reference/microsoft-identity-manager-2016-developer-reference.html)
+# [Developer reference](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)

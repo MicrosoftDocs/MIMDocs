@@ -73,7 +73,7 @@ Microsoft Identity Manager policy configuration objects represent the business l
 
 While working on MIM policy configuration objects, you should also consider the following:
 
-- Will you be provisioning foreign security principles across multiple Active Directory Domain Services (AD DS) forests? Doing so will generate additional workflows and requests, which results in additional load on the system.
+- Will you be provisioning foreign security principles across multiple Active Directory Domain Services (AD DS) forests? Doing so will generate more workflows and requests, which results in additional load on the system.
 
 - Will you use codeless provisioning? If so, this affects the number of expected rules entries, as well as associated requests and workflows in the system.
 
