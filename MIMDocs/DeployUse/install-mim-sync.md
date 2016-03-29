@@ -96,5 +96,5 @@ To install Microsoft Identity Manager 2016 components, first:
     5.  You need to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
 
 >[!div class="step-by-step"]  
-[Next](mim-install-service-portal.md)
+[Next](install-mim-service-portal.md)
 **Installing MIM 2016: MIM Service and Portal**

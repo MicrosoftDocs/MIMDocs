@@ -141,5 +141,5 @@ After installation completes, verify that the MIM Portal is active.
 > Optional: At this point you can install MIM add-ins and extensions.
 
 >[!div class="step-by-step"]  
-[Next](mim-install-sync-ad-service.md)
+[Next](install-mim-sync-ad-service.md)
 **Installing MIM 2016: Synchronize Active Directory and MIM Service**

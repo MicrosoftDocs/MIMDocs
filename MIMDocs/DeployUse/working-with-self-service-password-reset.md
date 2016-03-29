@@ -57,7 +57,7 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 ### Register your multi-factor authentication provider in Azure
 
-1.  Go to the [Azure classic portal](manage.windowsazure.com) and sign in as an Azure subscription administrator.
+1.  Go to the [Azure classic portal](http://manage.windowsazure.com) and sign in as an Azure subscription administrator.
 
 2.  In the bottom left hand corner, click **New**.
 
