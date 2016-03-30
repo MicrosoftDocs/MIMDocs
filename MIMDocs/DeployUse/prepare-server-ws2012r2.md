@@ -15,7 +15,7 @@ author: kgremban
 # Preparing an identity management server: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
-[Previous](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/preparing-domain.html)
+[Previous](preparing-domain.md)
 **Preparing a domain**
 
 > [!NOTE]
@@ -98,5 +98,5 @@ Set up the server security policy to allow the newly-created accounts to run as 
         ```
 
 >[!div class="step-by-step"]  
-[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-sql2014.html)
+[Next](prepare-server-sql2014.md)
 **Preparing an identity management server: SQL Server 2014**

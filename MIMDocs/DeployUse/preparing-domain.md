@@ -74,5 +74,5 @@ MIM requires that Active Directory is already installed. Make sure you have a do
     ```
 
 >[!div class="step-by-step"]  
-[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-ws2012r2.html)
+[Next](prepare-server-ws2012r2.md)
 **Preparing an identity management server: Windows Server 2012 R2**

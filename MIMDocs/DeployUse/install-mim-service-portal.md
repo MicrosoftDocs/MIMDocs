@@ -15,7 +15,7 @@ author: kgremban
 # Installing MIM 2016: MIM Service and Portal
 
 >[!div class="step-by-step"]
-[Previous](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/install-mim-sync.html)
+[Previous](install-mim-sync.md)
 **Installing MIM 2016: MIM Synchronization Service**
 
 > [!NOTE]
@@ -123,7 +123,7 @@ After installation completes, verify that the MIM Portal is active.
 
     2.  Click on **Inbound Rules**.
 
-    3.  Verify that the two following rules are listed:
+    3.  Verify that the two following rules appear:
 
         -   Forefront Identity Manager Service (STS).
 
@@ -141,5 +141,5 @@ After installation completes, verify that the MIM Portal is active.
 > Optional: At this point you can install MIM add-ins and extensions.
 
 >[!div class="step-by-step"]  
-[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/mim-install-sync-ad-service.html)
+[Next](install-mim-sync-ad-service.md)
 **Installing MIM 2016: Synchronize Active Directory and MIM Service**

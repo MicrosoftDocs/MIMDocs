@@ -15,7 +15,7 @@ author: kgremban
 # Preparing an identity management server: SQL Server 2014
 
 >[!div class="step-by-step"]
-[Previous](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-ws2012r2.html)
+[Previous](prepare-server-ws2012r2.md)
 **Preparing an identity management server: Windows Server 2012 R2**
 
 > [!NOTE]
@@ -34,5 +34,5 @@ author: kgremban
     ```
 
 >[!div class="step-by-step"]  
-[Next](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-sharepoint.html)
+[Next](prepare-server-sharepoint.md)
 **Preparing an identity management server: SharePoint**

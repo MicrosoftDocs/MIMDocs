@@ -15,7 +15,7 @@ author: kgremban
 # Installing MIM 2016: Synchronize Active Directory and MIM Service
 
 >[!div class="step-by-step"]
-[Previous](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/install-mim-service-portal.html)
+[Previous](install-mim-service-portal.md)
 **Installing MIM 2016: MIM Service and Portal**
 
 > [!NOTE]
