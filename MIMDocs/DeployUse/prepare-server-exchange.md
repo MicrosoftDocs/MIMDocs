@@ -15,8 +15,8 @@ author: kgremban
 # Preparing an identity management server: Exchange
 
 >[!div class="step-by-step"]
-[Previous](prepare-server-sharepoint.md)
-**Preparing an identity management server: SharePoint**
+[« SharePoint](prepare-server-sharepoint.md)
+[MIM Synchronization Service »](install-mim-sync.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -35,5 +35,5 @@ If you would like to configure MIM to send and receive email or provision mailbo
 3. Download and install [MS Exchange Server 2013 180-day Trial version](http://www.microsoft.com/en-us/evalcenter/evaluate-exchange-server-2013)
 
 >[!div class="step-by-step"]  
-[Next](install-mim-sync.md)
-**Installing MIM 2016: MIM Synchronization Service**
+[« SharePoint](prepare-server-sharepoint.md)
+[MIM Synchronization Service »](install-mim-sync.md)

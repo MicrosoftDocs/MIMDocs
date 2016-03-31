@@ -15,8 +15,8 @@ author: kgremban
 # Preparing an identity management server: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
-[Previous](preparing-domain.md)
-**Preparing a domain**
+[« Preparing a domain](preparing-domain.md)
+[SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -98,5 +98,5 @@ Set up the server security policy to allow the newly-created accounts to run as 
         ```
 
 >[!div class="step-by-step"]  
-[Next](prepare-server-sql2014.md)
-**Preparing an identity management server: SQL Server 2014**
+[« Preparing a domain](preparing-domain.md)
+[SQL Server 2014 »](prepare-server-sql2014.md)

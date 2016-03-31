@@ -15,6 +15,9 @@ author: kgremban
 ---
 # Preparing a domain
 
+>[!div class="step-by-step"]  
+[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
+
 ## Create user accounts and groups
 
 MIM requires that Active Directory is already installed. Make sure you have a domain controller in your environment for a domain that you are able to administer.
@@ -74,5 +77,4 @@ MIM requires that Active Directory is already installed. Make sure you have a do
     ```
 
 >[!div class="step-by-step"]  
-[Next](prepare-server-ws2012r2.md)
-**Preparing an identity management server: Windows Server 2012 R2**
+[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)

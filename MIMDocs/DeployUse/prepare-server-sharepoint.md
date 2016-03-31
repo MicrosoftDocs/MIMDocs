@@ -15,8 +15,8 @@ author: kgremban
 # Preparing an identity management server: SharePoint
 
 >[!div class="step-by-step"]
-[Previous](prepare-server-sql2014.md)
-**Preparing an identity management server: SQL Server 2014**
+[« SQL Server 2014](prepare-server-sql2014.md)
+[Exchange Server »](prepare-server-exchange.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -124,5 +124,5 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 7. Open the **Administrative Tools** program, navigate to **Services**, locate the SharePoint Administration service, and start it if it is not already running.
 
 >[!div class="step-by-step"]  
-[Next](prepare-server-exchange.md)
-**Preparing an identity management server: Exchange (optional)**
+[« SQL Server 2014](prepare-server-sql2014.md)
+[Exchange Server »](prepare-server-exchange.md)
