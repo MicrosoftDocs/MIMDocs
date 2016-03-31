@@ -15,8 +15,8 @@ author: kgremban
 # Installing MIM 2016: MIM Service and Portal
 
 >[!div class="step-by-step"]
-[Previous](install-mim-sync.md)
-**Installing MIM 2016: MIM Synchronization Service**
+[« MIM Synchronization Service](install-mim-sync.md)
+[Synchronize AD and MIM Service »](install-mim-sync-ad-service.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -141,5 +141,5 @@ After installation completes, verify that the MIM Portal is active.
 > Optional: At this point you can install MIM add-ins and extensions.
 
 >[!div class="step-by-step"]  
-[Next](install-mim-sync-ad-service.md)
-**Installing MIM 2016: Synchronize Active Directory and MIM Service**
+[« MIM Synchronization Service](install-mim-sync.md)
+[Synchronize AD and MIM Service »](install-mim-sync-ad-service.md)

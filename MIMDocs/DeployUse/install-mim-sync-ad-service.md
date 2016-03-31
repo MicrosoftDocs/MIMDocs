@@ -15,8 +15,7 @@ author: kgremban
 # Installing MIM 2016: Synchronize Active Directory and MIM Service
 
 >[!div class="step-by-step"]
-[Previous](install-mim-service-portal.md)
-**Installing MIM 2016: MIM Service and Portal**
+[« MIM Service and Portal](install-mim-service-portal.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -434,3 +433,6 @@ To populate the MIM Service database with the objects, you need to run a synchro
         - In the **Run profiles** list, select the run profile you want to run.
 
         - To start the run profile, click **OK**.
+
+>[!div class="step-by-step"]
+[« MIM Service and Portal](install-mim-service-portal.md)

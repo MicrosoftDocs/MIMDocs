@@ -15,8 +15,8 @@ author: kgremban
 # Installing MIM 2016: MIM Synchronization Service
 
 >[!div class="step-by-step"]
-[Previous](prepare-server-exchange.md)
-**Preparing an identity management server: Exchange (optional)**
+[« Exchange Server](prepare-server-exchange.md)
+[MIM Service and Portal »](install-mim-service-portal.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -96,5 +96,5 @@ To install Microsoft Identity Manager 2016 components, first:
     5.  You need to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
 
 >[!div class="step-by-step"]  
-[Next](install-mim-service-portal.md)
-**Installing MIM 2016: MIM Service and Portal**
+[« Exchange Server](prepare-server-exchange.md)
+[MIM Service and Portal »](install-mim-service-portal.md)

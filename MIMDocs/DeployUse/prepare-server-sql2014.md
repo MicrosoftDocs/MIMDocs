@@ -15,8 +15,8 @@ author: kgremban
 # Preparing an identity management server: SQL Server 2014
 
 >[!div class="step-by-step"]
-[Previous](prepare-server-ws2012r2.md)
-**Preparing an identity management server: Windows Server 2012 R2**
+[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
+[SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -34,5 +34,5 @@ author: kgremban
     ```
 
 >[!div class="step-by-step"]  
-[Next](prepare-server-sharepoint.md)
-**Preparing an identity management server: SharePoint**
+[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
+[SharePoint »](prepare-server-sharepoint.md)
