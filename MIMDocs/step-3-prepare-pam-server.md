@@ -1,18 +1,30 @@
 ---
-title: Step 3 – Prepare a PAM server
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Step 3 – Prepare a PAM server | Microsoft Identity Manager
+description:
+keywords:
+author: 
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
-robots: noindex,nofollow
+
+# optional metadata
+
+ROBOTS: noindex,nofollow
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Step 3 – Prepare a PAM server
 
 1.  On a third virtual machine, install Windows Server 2012 R2, specifically Windows Server 2012 R2 Standard (Server with a GUI) x64, to make a new computer “*PAMSRV*”.   Note that since SQL Server and SharePoint 2013 will be installed on this computer, it requires a minimum of 8GB of RAM.

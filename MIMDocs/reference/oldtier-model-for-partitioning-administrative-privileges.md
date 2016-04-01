@@ -1,12 +1,30 @@
 ---
-title: OLDTier model for partitioning administrative privileges
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: OLDTier model for partitioning administrative privileges | Microsoft Identity Manager
+description:
+keywords:
+author: msmbaldwin
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
+ms.technology: security
 ms.assetid: 5ec11328-34be-45c0-98d9-8ce786c1e003
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # OLDTier model for partitioning administrative privileges
 # Tier Model for Partitioning Administrative Privileges
 

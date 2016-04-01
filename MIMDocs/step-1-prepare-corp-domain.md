@@ -1,13 +1,30 @@
 ---
-title: Step 1 - Prepare the CORP domain
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Step 1 - Prepare the CORP domain | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Step 1 - Prepare the CORP domain
 In this step, you will create a domain controller and a member workstation in a new domain in a new forest. This forest will simulate an existing forest that has resources to be managed. The resource to be protected for this scenario will be a file share.
 

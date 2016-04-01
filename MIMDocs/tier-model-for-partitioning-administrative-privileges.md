@@ -1,17 +1,30 @@
 ---
-title: Tier model for partitioning administrative privileges
-ms.custom: na
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Tier model for partitioning administrative privileges | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Tier model for partitioning administrative privileges
 ## Introduction
 

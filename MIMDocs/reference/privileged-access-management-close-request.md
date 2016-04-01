@@ -1,16 +1,30 @@
 ---
-title: Close PAM Request
-ms.custom:
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Close PAM Request | Microsoft Identity Manager
+description:
+keywords:
+author: msmbaldwin
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: reference
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
 ms.assetid: ca3a1a68-9a2b-47da-bfc1-eaa360cbe609
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Close PAM Request
 Used by a privileged account to close a request  that it initiated to elevate to a PAM role.
 

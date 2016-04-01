@@ -1,16 +1,30 @@
 ---
-title: Get Smartcard Diversified Admin Key
-ms.custom:
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Get Smartcard Diversified Admin Key | Microsoft Identity Manager
+description:
+keywords:
+author: msmbaldwin
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: reference
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
 ms.assetid: 68beeec1-8350-4e0e-946f-d94606e1e756
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Get Smartcard Diversified Admin Key
 Gets the diversified admin key for the specified smartcard.
 

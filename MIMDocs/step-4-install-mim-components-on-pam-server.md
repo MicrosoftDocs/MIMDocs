@@ -1,18 +1,30 @@
 ---
-title: Step 4 – Install MIM components on PAM server and workstation
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Step 4 – Install MIM components on PAM server and workstation | Microsoft Identity Manager
+description:
+keywords:
+author: 
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
-robots: noindex,nofollow
+
+# optional metadata
+
+ROBOTS: noindex,nofollow
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Step 4 – Install MIM components on PAM server and workstation
 
 1.  On *PAMSRV*, log in as *PRIV\Administrator* to be able to install MIM Service and Portal and the sample portal web application. (Note that you must be a domain administrator; if you are not running the following commands as a domain administrator, the subsequent trust validation checks in the next step will not be completed.)

@@ -1,17 +1,31 @@
-    ---
-title: Get Certificate Request Generation Options
-ms.custom:
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: reference
-ms.assetid: 36bd1fc9-3443-4028-90e7-a24fef0ec0ae
 ---
-# Get Certificate Request Generation Options
+# required metadata
+
+title: Get Certificate Request Generation Options | Microsoft Identity Manager
+description:
+keywords:
+author: msmbaldwin
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: reference
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 36bd1fc9-3443-4028-90e7-a24fef0ec0ae
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+    # Get Certificate Request Generation Options
 Gets parameters for client-side certificate request generation.
 
 **Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.

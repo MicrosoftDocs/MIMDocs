@@ -1,15 +1,30 @@
 ---
-title: FIM Updates, Issues and Solutions
-ms.custom: na
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: FIM Updates, Issues and Solutions | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: windows-server-2012
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: 1981db41-5c73-4572-9931-bddd83697430
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # FIM Updates, Issues and Solutions
 In this section, you will find updates to Forefront Identity Manager (FIM) and solutions to common issues.
 

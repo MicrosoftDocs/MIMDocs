@@ -1,18 +1,30 @@
 ---
-title: Privileged Identity Management for Active Directory Domain Services (AD DS)
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Privileged Identity Management for Active Directory Domain Services (AD DS) | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Privileged Identity Management for Active Directory Domain Services (AD DS)
 Privileged Identity Management is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server Technical Preview. It helps organizations restrict privileged access within an existing Active Directory environment.
 

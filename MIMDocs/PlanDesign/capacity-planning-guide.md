@@ -1,17 +1,30 @@
 ---
+# required metadata
+
 title: Capacity planning guide | Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: article
+description:
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Capacity planning guide
 
 This guide was produced to assist in customer planning, but it should not be used alone to determine the appropriate servers, hardware, or topologies that are required for a Microsoft Identity Manager (MIM) deployment. Organizations are encouraged and expected to configure their own test environments to more accurately estimate capacity and performance. Microsoft cannot guarantee that organizations will experience the same capacity or performance characteristics, even if the MIM 2016 components are deployed and configured identically to the components that are described in this guide.
