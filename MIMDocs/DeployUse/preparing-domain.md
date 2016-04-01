@@ -1,18 +1,30 @@
 ---
+# required metadata
+
 title: Preparing a domain | Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
+description:
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Preparing a domain
 
 >[!div class="step-by-step"]  

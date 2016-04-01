@@ -1,18 +1,30 @@
 ---
+# required metadata
+
 title: Working with the MIM Certificate Manager | Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Working with the MIM Certificate Manager
 After you have MIM 2016 and Certificate Manager up and running, you can deploy the MIM Certificate Manager Windows store application so that your users can easily manage their physical smart cards, virtual smart cards and software certificates. The steps to deploy MIM CM  app are as follows:
 

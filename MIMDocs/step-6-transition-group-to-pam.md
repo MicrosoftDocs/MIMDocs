@@ -1,17 +1,30 @@
 ---
-title: Step 6 – Transition a group to Privileged Access Management
-ms.custom: 
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Step 6 – Transition a group to Privileged Access Management | Microsoft Identity Manager
+description:
+keywords:
+author: 
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Step 6 – Transition a group to Privileged Access Management
 The privileged account creation in the PRIV forest is done using several new PowerShell cmdlets.  These cmdlets perform the following functions:
 

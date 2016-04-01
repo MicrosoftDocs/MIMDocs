@@ -1,16 +1,30 @@
 ---
-title: Get PAM Requests
-ms.custom:
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Get PAM Requests | Microsoft Identity Manager
+description:
+keywords:
+author: 
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: reference
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
 ms.assetid: 620eebd6-e4c3-473b-b824-ee6cfe83e509
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Get PAM Requests
 Used by a privileged account to return a history of previously posted PAM requests.
 

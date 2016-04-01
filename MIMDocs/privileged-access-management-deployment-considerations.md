@@ -1,12 +1,30 @@
 ---
-title: Deployment Considerations for Privileged Access Management
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Deployment Considerations for Privileged Access Management | Microsoft Identity Manager
+description:
+keywords:
+author: 
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: dd883415-d39f-4903-8b01-1c8b52e8d447
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Deployment Considerations for Privileged Access Management
 Welcome to CAPS Markdown Editor!
 ====

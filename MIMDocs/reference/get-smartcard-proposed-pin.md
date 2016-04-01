@@ -1,16 +1,30 @@
 ---
-title: Get Smartcard Proposed PIN
-ms.custom:
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Get Smartcard Proposed PIN | Microsoft Identity Manager
+description:
+keywords:
+author: 
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: reference
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
 ms.assetid: ced93932-9912-4b32-9586-ada69b38a796
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Get Smartcard Proposed PIN
 Gets the server-generated user PIN.
 

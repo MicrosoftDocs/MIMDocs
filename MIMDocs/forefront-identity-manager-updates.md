@@ -1,15 +1,30 @@
 ---
-title: FIM Updates
-ms.custom: na
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: FIM Updates | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: windows-server-2012
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: 50d639ef-d3c1-4ccc-b088-dcb5590fdcab
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # FIM Updates
 ## Forefront Identity Manager (FIM) Updates
 ### Update List

@@ -1,13 +1,30 @@
 ---
-title: Step 7 – Elevate a user’s access
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Step 7 – Elevate a user’s access | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Step 7 – Elevate a user’s access
 This step will demonstrate that a user can request access to a role via MIM.
 

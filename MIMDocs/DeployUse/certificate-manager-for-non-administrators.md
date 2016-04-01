@@ -1,18 +1,30 @@
 ---
+# required metadata
+
 title: Certificate Manager for Non-Administrators | Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
+description:
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Certificate Manager for Non-Administrators
 If a user isn’t a local administrator on their computer, they won’t be able to enroll a smartcard on their own machines by default. The following procedure enables you to work around this limitation.
 

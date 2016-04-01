@@ -1,18 +1,30 @@
 ---
+# required metadata
+
 title: Upgrading Forefront Identity Manager 2010 R2 to Microsoft Identity Manager 2016 | Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
+description:
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Upgrading Forefront Identity Manager 2010 R2 to Microsoft Identity Manager 2016
 This section discusses upgrading an existing test FIM 2010 R2 system to MIM 2016. The installers used for upgrading are the same ones used for fresh deployment.
 

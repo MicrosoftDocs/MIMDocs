@@ -1,16 +1,30 @@
 ---
-title: Approve or Reject a Pending PAM Request
-ms.custom:
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Approve or Reject a Pending PAM Request | Microsoft Identity Manager
+description:
+keywords:
+author: 
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: reference
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
 ms.assetid: 0632656f-ecf4-4090-85a8-216d5638140a
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Approve or Reject a Pending PAM Request
 Used by a privileged account to approve, close, or reject a request to elevate to a PAM role.
 

@@ -1,17 +1,30 @@
 ---
+# required metadata
+
 title: Installing MIM 2016&#58; Synchronize Active Directory and MIM Service | Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+description:
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Installing MIM 2016: Synchronize Active Directory and MIM Service
 
 >[!div class="step-by-step"]

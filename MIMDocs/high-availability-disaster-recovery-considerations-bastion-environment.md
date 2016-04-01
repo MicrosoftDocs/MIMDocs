@@ -1,13 +1,30 @@
 ---
-title: High availability and disaster recovery considerations for the bastion environment
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: High availability and disaster recovery considerations for the bastion environment | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # High availability and disaster recovery considerations for the bastion environment
 This article describes considerations for High Availability (HA) and Disaster Recovery (DR) when deploying Active Directory Domain Services (AD DS) and Microsoft Identity Manager 2016 (MIM) for Privileged Access Management (PAM).
 

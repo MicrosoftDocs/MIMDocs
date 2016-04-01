@@ -1,17 +1,30 @@
 ---
-title: Planning a bastion environment
-ms.custom: na
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Planning a bastion environment | Microsoft Identity Manager
+description:
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
-author: Kgremban
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Planning a bastion environment
 
 > [!Note] {This content is derived from the white paper "Mitigating Pass-the-Hash and Other Credential Theft, version 2", developed by Microsoft Corporation Trustworthy Computing group.}
