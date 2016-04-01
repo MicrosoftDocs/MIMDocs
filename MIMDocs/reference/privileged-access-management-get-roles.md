@@ -4,8 +4,8 @@
 title: Get PAM Roles | Microsoft Identity Manager
 description:
 keywords:
-author: 
-manager: stevenpo
+author: msmbaldwin
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: reference
 ms.prod: identity-manager-2015
