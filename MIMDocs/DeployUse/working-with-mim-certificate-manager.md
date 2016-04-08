@@ -2,7 +2,7 @@
 # required metadata
 
 title: Working with the MIM Certificate Manager | Microsoft Identity Manager
-description:
+description: Learn how to deploy the Certificate Manager app to enable your users to manage their own access rights. 
 keywords:
 author: kgremban
 manager: stevenpo

@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Preparing an identity management server&#58; Windows Server 2012 R2 | Microsoft Identity Manager
-description:
+title: Set up an identity management server&#58; Windows Server 2012 R2 | Microsoft Identity Manager
+description: Get the steps and minimum requirements to prepare Windows Server 2012 RS to work with MIM 2016.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Preparing an identity management server: Windows Server 2012 R2
+# Set up an identity management server: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Preparing a domain](preparing-domain.md)
