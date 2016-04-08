@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Topology considerations | Microsoft Identity Manager
-description:
+title: Topology considerations for deploying MIM | Microsoft Identity Manager
+description: Understand the MIM 2016 components, and get suggestions for how to deploy them in your environment. 
 keywords:
 author: kgremban
 manager: stevenpo
@@ -29,16 +29,23 @@ ms.suite: ems
 # Topology considerations
 You can deploy Microsoft Identity Manager (MIM) components on the same server or among multiple servers in multiple configurations. The topology that you select for your deployment affects the performance that you can achieve from MIM. This article introduces multiple deployment topologies that you may consider implementing.
 
-## Components
-When designing your deployment topology, it's important to know what each component does and how they all interact. You can host all the components on the same computer, or distribute them among multiple computers and servers.
+## MIM components
+When designing your deployment topology, it's important to know what each component does and how they all interact.
 
+- **MIM Portal** - an interface for password resets, group management, and administrative operations.
+    -
+- **MIM Service** - a web service that implements MIM 2016 identity management functionality.
+- **MIM Synchronization Service** - Synchronizes data with other identity systems.
+- **Microsoft SQL Server** - MIM Service and MIM Sync Service both store their data in SQL databases.
 
-| Component | Same computer | Separate server | Network Load Balancing cluster | Server cluster |
+The following table shows the options for hosting each of the MIM components. They can be hosted on the same computer, or distributed among multiple servers and clusters.
+
+| | MIM Portal | MIM Service | MIM Sync Service | SQL Server |
 | --- | --- | --- | --- | --- |
-| MIM Portal | Yes | Yes | Yes | |
-| MIM Service | Yes | Yes | Yes | |
-| MIM Synchronization Service | Yes | Yes | | |
-| Microsoft SQL Server | Yes | Yes | | Yes |
+| Same computer | Yes | Yes | Yes | Yes |
+| Separate server | Yes | Yes | Yes | Yes |
+| Network Load Balancing cluster | Yes | Yes | | |
+| Server cluster | | | | Yes |
 
 
 ## Multitier topology
