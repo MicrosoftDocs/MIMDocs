@@ -15,6 +15,6 @@
 ## [Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
 ## [Self-Service Password Reset](working-with-self-service-password-reset.md)
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
-### [For non-administrators](certificate-manager-for-non-administrators.md)
-### [For software certificates](certificate-manager-for-software-certificates.md)
+### [Enroll smartcards](certificate-manager-for-non-administrators.md)
+### [Create software certificates](certificate-manager-for-software-certificates.md)
 # [Developer reference](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)

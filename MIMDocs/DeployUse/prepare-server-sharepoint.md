@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Preparing an identity management server&#58; SharePoint | Microsoft Identity Manager
-description:
+title: Set up an identity management server&#58; SharePoint | Microsoft Identity Manager
+description: Install and configure SharePoint Foundation so that it can host the MIM Portal page. 
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Preparing an identity management server: SharePoint
+# Set up an identity management server: SharePoint
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)

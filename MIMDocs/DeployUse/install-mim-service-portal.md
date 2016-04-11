@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Installing MIM 2016&#58; MIM Service and Portal | Microsoft Identity Manager
-description:
+title: Install MIM 2016&#58; MIM Service and Portal | Microsoft Identity Manager
+description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,11 +25,11 @@ ms.suite: ems
 
 ---
 
-# Installing MIM 2016: MIM Service and Portal
+# Install MIM 2016: MIM Service and Portal
 
 >[!div class="step-by-step"]
 [« MIM Synchronization Service](install-mim-sync.md)
-[Synchronize AD and MIM Service »](install-mim-sync-ad-service.md)
+[Synchronize databases »](install-mim-sync-ad-service.md)
 
 > [!NOTE]
 > In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
@@ -82,7 +82,7 @@ If you didn't set up the MIM installation package in the last step, follow these
 
 16. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to MIM Portal.
 
-## MIM Password Registration Portal configuration screen
+## Configure MIM Password Registration Portal
 
 1.  Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to *Pass@word1*.
 
@@ -94,7 +94,7 @@ If you didn't set up the MIM installation package in the last step, follow these
 
 4. In the next MIM Password Registration Portal configuration screen, specify  *http://CorpIDM.contoso.local* as the MIM Service Server Address for the Password Registration Portal.
 
-## MIM Password Reset Portal configuration screen
+## Configure MIM Password Reset Portal
 
 1.  Set the service account name for SSPR Registration to *Contoso\MIMSSPRService* and its password to *Pass@word1*.
 
@@ -155,4 +155,4 @@ After installation completes, verify that the MIM Portal is active.
 
 >[!div class="step-by-step"]  
 [« MIM Synchronization Service](install-mim-sync.md)
-[Synchronize AD and MIM Service »](install-mim-sync-ad-service.md)
+[Synchronize databases »](install-mim-sync-ad-service.md)
