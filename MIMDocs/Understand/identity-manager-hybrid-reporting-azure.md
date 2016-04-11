@@ -35,7 +35,7 @@ If you have an Azure subscription, you can now easily create a report of events 
 -   Your data is yours: The reporting data can be easily exported from the on-premises Identity Manager or from Azure AD and can be used to generate custom view reports
 
 ## What is Azure AD Hybrid Reporting?
-With Hybrid reporting, Azure AD management portal can display unified identity management activity reports. This is regardless to where the activity was carried out, identity manager or Azure AD. For example, if you want to know who registered for self-service password reset (SSPR) in the last month, you can see it all in Azure AD management portal. In this report you will see users who registered to SSPR in both the [applications access panel](https://myapps.microsoft.com) and Identity Manager.
+With Hybrid reporting, Azure AD management portal can display unified identity management activity reports. This is regardless to where the activity was carried out, identity manager or Azure AD. For example, if you want to know who registered for self-service password reset (SSPR) in the last month, you can see it all in Azure AD management portal. In this report you will see users who registered for SSPR in both the [applications access panel](https://myapps.microsoft.com) and Identity Manager.
 
 ![Azure password reset activity image](media/MIM-Hybrid-passwordreset.jpg)
 
