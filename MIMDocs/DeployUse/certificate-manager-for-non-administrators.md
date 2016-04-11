@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Certificate Manager for Non-Administrators | Microsoft Identity Manager
-description:
+title: Enroll smartcards for non-administrators | Microsoft Identity Manager
+description: Learn how to enroll smartcards for users without administrator access to their machines so they can use Certificate Manager.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Certificate Manager for Non-Administrators
+# Enroll smartcards for non-administrators
 If a user isn’t a local administrator on their computer, they won’t be able to enroll a smartcard on their own machines by default. The following procedure enables you to work around this limitation.
 
 ## Enabling smartcard renewal for non-admins in MIM 2016 Certificate Manager

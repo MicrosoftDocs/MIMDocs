@@ -43,10 +43,3 @@ This is where the description of the update and directives to the reader go.
 This is where the description of the update and directives to the reader go.
 ### Here is a test aninmation
 ![Test Animated Gif](././media/Test-Animated-Gif.gif)
-
-### Here is a javascript test.
-<table>
-	<tr>
-		<td><a href="javascript:alert('hi');">data</a></td>
-	</tr>
-</table>

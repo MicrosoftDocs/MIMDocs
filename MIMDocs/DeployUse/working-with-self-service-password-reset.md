@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Working with Self-Service Login Assistance | Microsoft Identity Manager
-description:
+title: Working with Self-Service Password Reset | Microsoft Identity Manager
+description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication. 
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Working with Self-Service Login Assistance
+# Working with Self-Service Password Reset
 Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
 
 -   The Self-Service Password Reset portal and Windows Log In screen now let users unlock their accounts without changing their passwords or calling support administrators. Users can get locked out of their accounts for many legitimate reasons, like if they enter an old password, use bilingual computers and have the keyboard set to the wrong language, or attempt to log into a shared workstation already open to someone else's account.
@@ -41,7 +41,7 @@ Azure MFA provides an additional authentication mechanism that can reinforce exi
 
 When using Azure MFA, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
 
-## Preparing Microsoft Identity Manager to work with the self-service account unlock and password reset using MFA
+## Prerequisites to set up self-service account unlock and password reset using MFA
 This section assumes that you have downloaded and completed the deployment of the Microsoft Identity Manager 2016, including the following components and services:
 
 -   A Windows Server 2008 R2 or later has been set up as an Active Directory server including AD Domain Services and Domain Controller with a designated domain (a “corporate” domain)
@@ -62,7 +62,7 @@ This section assumes that you have downloaded and completed the deployment of th
 
 -   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client is deployed on the server or on a separate client computer.
 
-## Prerequisites
+## Prepare MIM to work with multi-factor authentication
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
 In the next section, you will set up your Azure MFA provider in Microsoft Azure Active Directory. As part of this, you’ll generate a file that includes the authentication material which MFA requires to be able to contact Azure MFA.  In order to proceed, you will need an Azure subscription.

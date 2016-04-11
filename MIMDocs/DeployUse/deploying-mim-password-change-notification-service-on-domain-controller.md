@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Deploying the MIM Password Change Notification Service (PCNS) on a Domain Controller | Microsoft Identity Manager
-description:
+title: Deploy the Password Change Notification Service | Microsoft Identity Manager
+description: Get the steps to install and configure the MIM Password Change Notification Service on your domain controller.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,10 +25,10 @@ ms.suite: ems
 
 ---
 
-# Deploying the MIM Password Change Notification Service (PCNS) on a Domain Controller
+# Deploy the MIM Password Change Notification Service on a domain controller
 
-## Installing PCNS
-The PCNS is a service that you install on the domain controllers that enables synchronization of passwords by MIM to other systems, such as another vendor's directory server. For password synchronization, install the PCNS on each domain controller server.
+## Install the Password Change Notification Service
+The Password Change Notification Service (PCNS) is a service that you install on the domain controllers that enables synchronization of passwords by MIM to other systems, such as another vendor's directory server. For password synchronization, install the PCNS on each domain controller server.
 
 1.  Login as a domain administrator to a Server running on Windows Server with the role of an Active Directory Domain Services.
 
@@ -62,5 +62,5 @@ The PCNS is a service that you install on the domain controllers that enables sy
 
 14. Restart your computer for the configuration changes made to MIM Password Change Notification Service to take effect. You can do it by clicking **Yes** in the popup that appears, or you can restart later.
 
-## Configuring PCNS
+## Configuring the Password Change Notification Service
 Once reconnected to the DC server as a domain administrator, go to *C:\Program Files\Microsoft Password Change Notification.* Run *pcnscfg.exe*.

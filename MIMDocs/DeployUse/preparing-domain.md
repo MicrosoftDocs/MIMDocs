@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Preparing a domain | Microsoft Identity Manager
-description:
+title: Set up a domain | Microsoft Identity Manager
+description: Create an Active Directory domain controller before installing MIM 2016
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Preparing a domain
+# Set up a domain
 
 >[!div class="step-by-step"]  
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Identity Manager Hybrid Reporting in Azure | Microsoft Identity Manager
-description:
+description: Azure Active Directory hybrid reporting lets you create custom reports that include both cloud and on-premises events.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -35,11 +35,11 @@ If you have an Azure subscription, you can now easily create a report of events 
 -   Your data is yours: The reporting data can be easily exported from the on-premises Identity Manager or from Azure AD and can be used to generate custom view reports
 
 ## What is Azure AD Hybrid Reporting?
-With Hybrid reporting, Azure AD management portal can display unified identity management activity reports. This is regardless to where the activity was carried out, identity manager or Azure AD. For example, if you want to know who registered to self-service password reset (SSPR) in the last month, you can see it all in Azure AD management portal. In this report you will see users who registered to SSPR in both the applications access panel (myapps.microsoft.com) and Identity Manager.
+With Hybrid reporting, Azure AD management portal can display unified identity management activity reports. This is regardless to where the activity was carried out, identity manager or Azure AD. For example, if you want to know who registered for self-service password reset (SSPR) in the last month, you can see it all in Azure AD management portal. In this report you will see users who registered to SSPR in both the [applications access panel](https://myapps.microsoft.com) and Identity Manager.
 
 ![Azure password reset activity image](media/MIM-Hybrid-passwordreset.jpg)
 
-## Why should I use Identity Manager Activity Reports in Azure AD?
+## Why should I use it?
 Hybrid reporting helps IT professionals address some common identity management reporting challenges.
 
 1.  Report identity management activities that were performed in different systems: Now you can see identity management reports from activities on Azure AD and Identity manager in Azure AD management portal.

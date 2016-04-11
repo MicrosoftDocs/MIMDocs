@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Upgrading Forefront Identity Manager 2010 R2 to Microsoft Identity Manager 2016 | Microsoft Identity Manager
-description:
+title: Upgrade from Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
+description: Learn how to upgrade your FIM 2010 R2 components, and then install the components that are new in MIM 2016.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Upgrading Forefront Identity Manager 2010 R2 to Microsoft Identity Manager 2016
+# Upgrade from Forefront Identity Manager 2010 R2 to Microsoft Identity Manager 2016
 This section discusses upgrading an existing test FIM 2010 R2 system to MIM 2016. The installers used for upgrading are the same ones used for fresh deployment.
 
 This section assumes that you have an existing FIM 2010 R2 solution deployed, in a test environment. Your servers are running on Windows Server 2012, Windows Server 2012 R2 or Windows Server 2008 R2 which are the common operating systems for FIM 2010 R2 servers, and all the local and environmental pre-requisites (SQL Server, Exchange Server, SharePoint Services, etc.) are configured for FIM 2010 R2.
@@ -44,7 +44,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 3.  Download or unpack the MIM software.
 
-## Upgrading MIM Synchronization Service
+## Upgrade the Synchronization Service
 
 1.  Login as an administrator to a server where FIM 2010 R2 Synchronization Service (“Sync”) is deployed.
 
@@ -82,7 +82,7 @@ This section assumes that you have an existing FIM 2010 R2 solution deployed, in
 
 13. Note that the **Synchronization Service** has restarted.
 
-## Upgrading Service and Portal
+## Upgrade the Service and Portal
 
 1.  Login as an administrator to a server where the  FIM 2010 R2 Service and Portal are deployed.
 

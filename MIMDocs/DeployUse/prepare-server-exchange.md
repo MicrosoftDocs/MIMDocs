@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Preparing an identity management server&#58; Exchange | Microsoft Identity Manager
-description:
+title: Set up an identity management server&#58; Exchange | Microsoft Identity Manager
+description: As an optional step, deploy Exchange Server to enable MIM 2016 to send mail and create mailboxes. 
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Preparing an identity management server: Exchange
+# Set up an identity management server: Exchange
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)

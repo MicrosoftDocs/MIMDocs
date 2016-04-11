@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Certificate Manager for Software Certificates | Microsoft Identity Manager
-description:
+title: Create software certificates | Microsoft Identity Manager
+description: Learn how to use Certificate Manager to create and renew software certificates with profile templates.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,10 +25,10 @@ ms.suite: ems
 
 ---
 
-# Certificate Manager for Software Certificates
+# Create software certificates with Certificate Manager
 To enroll and renew software certificates you don’t have to be an administrator and you don’t need a virtual smart card. It’s worth noting that at some point you will be prompted to allow a certificate operation and this is normal.
 
-## Creating a software certificate Profile Template in MIM 2016 Certificate Manager
+## Create a software certificate Profile Template in MIM 2016 Certificate Manager
 
 1.  Create a template for the certificate that you will request for the virtual smart card. Open the mmc.
 
