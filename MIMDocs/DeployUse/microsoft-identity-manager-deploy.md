@@ -43,13 +43,13 @@ MIM works with Active Directory (AD), so follow these steps to configure your AD
 
 ## Next: Prepare an identity management server
 Once your domain is in place and configured, prepare your corporate identity management server. This includes setting up:
-- [Server setup: Windows Server 2012 R2](prepare-server-ws2012r2.md)
-- [Server setup: SQL Server 2014](prepare-server-sql2014.md)
-- [Server setup: SharePoint](prepare-server-sharepoint.md)
-- [Server setup: Exchange Server](prepare-server-exchange.md) (optional)
+- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
+- [SQL Server 2014](prepare-server-sql2014.md)
+- [SharePoint](prepare-server-sharepoint.md)
+- [Exchange Server](prepare-server-exchange.md) (optional)
 
 ## Finally: Install Microsoft Identity Manager 2016 components
 Once you have set up the domain and server, you're ready to install the MIM components and configure them to sync with AD.
-- [Install MIM: MIM Synchronization Service](install-mim-sync.md)
-- [Install MIM: MIM Service and Portal](install-mim-service-portal.md)
-- [Install MIM: Synchronize Active Directory and MIM Service databases](install-mim-sync-ad-service.md)
+- [MIM Synchronization Service](install-mim-sync.md)
+- [MIM Service and Portal](install-mim-service-portal.md)
+- [Synchronize Active Directory and MIM Service databases](install-mim-sync-ad-service.md)

@@ -31,7 +31,10 @@ ms.suite: ems
 [« MIM Service and Portal](install-mim-service-portal.md)
 
 > [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
+> This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
+> - Domain controller name - **mimservername**
+> - Domain name - **contoso**
+> - Password - **Pass@word1**
 
 By default, MIM Synchronization Service (Sync) does not have any connectors configured.  A typical first step is to use MIM Sync to populate the MIM Service database with existing Active Directory accounts. For this, you will use the MIM Sync Service application.
 
@@ -40,7 +43,7 @@ The MIM management agent (MA) is a connector for MIM Sync to the MIM Service. To
 
 When you configure a MIM management agent, you need to specify a user account. This document uses **MIMMA** as the name for this account.
 
-> [!CAUTION]
+> [!NOTE]
 > The account you use for your MIM management agent must be the same account as the one you have specified during the installation of MIM Service.
 
 ###To create the MIM MA
@@ -89,19 +92,15 @@ When you configure a MIM management agent, you need to specify a user account. T
 
 8.  On the **Configure Object Type Mappings** page, add the following mapping, and then click **Next**
 
-    -   In the **Data Source Object Type** list, select **Person**.
-
-    -   To open the Mapping dialog box, click **Add Mapping**.
-
-    -   In the **Metaverse object type** list, select **person**.
-
-    -   To close the Mapping dialog box, click **OK**.
+    - Select **Person** in the **Data Source Object Type** list.
+    - Click **Add Mapping** to open the Mapping dialog box.
+    - Select **person** in the **Metaverse object type** list.
+    - Click **OK** to close the Mapping dialog box.
 
 9.  On the **Configure Attribute Flow** page, apply the following attribute flow mappings, and then click **Next**
 
-    ||||
-    |-|-|-|
     | **Flow Direction** | **Data Source Attribute** | **Metaverse Attribute** |
+    |-|-|-|
     |Import|Import|accountName|
     |Import|Import|company|
     |Import|Import|displayName|
@@ -302,7 +301,7 @@ To create run profiles for the MIMMA connector:
 
 5. To close the Configure Run Profiles dialog box, click **OK**.
 
-## Configuring the MIM Service
+## Configure the MIM Service
 
 Using the MIM Portal, you will create the AD user inbound synchronization rule for MIM Service.
 
@@ -346,18 +345,18 @@ To create the AD user inbound synchronization rule:
 
     For each row in this table, perform the following steps:
 
-    -   To open the Flow Definition dialog box, click **New Attribute Flow**.
+    - To open the Flow Definition dialog box, click **New Attribute Flow**.
 
-    -   On the **Source** tab, select the attribute shown for that row in the table.
+    - On the **Source** tab, select the attribute shown for that row in the table.
 
-    -   On the **Destination** tab, select the attribute shown for that row in the table.
+    - On the **Destination** tab, select the attribute shown for that row in the table.
 
-    -   To apply the attribute flow configuration, click **OK**.
+    - To apply the attribute flow configuration, click **OK**.
 
 8. On the **Summary** tab, click **Submit**.
 
-## Initializing the testing environment
-Before you can test your configuration with your AD data, you need to initialize the configuration. There are four steps to this process:
+## Initialize the testing environment
+There are four steps you need to take before you can test your MIM configuration with AD data:
 
 ### Enable Provisioning
 
@@ -373,13 +372,12 @@ Before you can test your configuration with your AD data, you need to initialize
 
 Run a complete synchronization cycle on this connector. The complete cycle consists of the following run profiles:
 
-    -   Full Import
+- Full Import
+- Full Synchronization
+- Export
+- Delta Import
 
-    -   Full Synchronization
-
-    -   Export
-
-    -   Delta Import
+Follow these steps to run each of the four run profiles.
 
 1. Open the Synchronization Service Manager and, on the **Tools** menu, click **Management Agents**.
 
@@ -395,19 +393,15 @@ Run a complete synchronization cycle on this connector. The complete cycle consi
 
     - To start the run profile, click **OK**.
 
-#### Configuring attribute flow precedence
+#### Configure attribute flow precedence
 
-During the initialization of the MIM connector, the configured synchronization rules have been brought into the metaverse.
+During the initialization of the MIM connector, the configured synchronization rules were brought into the metaverse.
 
 Adjust the attribute flow precedence for the attributes contributed by this connector to ensure that attributes already in AD can flow into the metaverse and later also into the MIM Service database.
 
-### Initializing the ADMA
+### Initialize the ADMA
 
-To initialize the Active Directory connector, you need to run a full import and a full synchronization on it. The full import is required to bring the existing objects from AD into the connector space. The full synchronization is required because the synchronization rules have changed by projecting the new synchronization rules from the MIM connector space into the metaverse. You'll
-
-    -   Full Import
-
-    -   Full Synchronization
+To initialize the Active Directory connector, you need to run a full import and a full synchronization on it. The full import brings the existing objects from AD into the connector space. The full synchronization updates the synchronization rules to match those of the MIM connector.
 
 1. Open the Synchronization Service Manager and in the **Tools** menu, click **Management Agents**.
 
@@ -423,29 +417,27 @@ To initialize the Active Directory connector, you need to run a full import and 
 
     - To start the run profile, click **OK**.
 
-### Populating the MIM Service database
+### Populate the MIM Service database
 
-To populate the MIM Service database with the objects, you need to run a synchronization cycle on the MIMMA connector. The cycle consists of the following run profile runs:
+To populate the MIM Service database with the objects, you need to run a synchronization cycle on the MIMMA connector. The cycle consists of:
 
-    -   Export
+- Export
+- Full Import
+- Full Synchronization
 
-    -   Full Import
+Follow these steps to run each of the three run profiles.
 
-    -   Full Sync
+1. Open the Synchronization Service Manager and click **Management Agents** on the **Tools** menu.
 
-    1. Open the Synchronization Service Manager and, on the **Tools** menu, click **Management Agents**.
+2. Select **MIMMA** in the **Management Agents** list.
 
-    2. In the **Management Agents** list, select **MIMMA**.
+3. Click **Run**  on the **Actions** menu to open the Run Management Agent dialog box.
 
-    3. To open the Run Management Agent dialog box, on the **Actions** menu, click **Run**.
+4. For each run profile listed above, complete the following steps:
 
-    4. For each run profile listed above, complete the following steps:
-
-        - To open the Run Management Agent dialog box, on the **Actions** menu, click **Run**.
-
-        - In the **Run profiles** list, select the run profile you want to run.
-
-        - To start the run profile, click **OK**.
+    - Click **Run** on the **Actions** menu to open the Run Management Agent dialog box.
+    - Select the run profile you want to run from the **Run profiles** list.
+    - Click **OK** to start the run profile.
 
 >[!div class="step-by-step"]
 [« MIM Service and Portal](install-mim-service-portal.md)

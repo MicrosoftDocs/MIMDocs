@@ -32,35 +32,36 @@ ms.suite: ems
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
+> This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
+> - Domain controller name - **mimservername**
+> - Domain name - **contoso**
+> - Password - **Pass@word1**
 
 ## Join Windows Server 2012 R2 to your domain
 
-1. Create a Windows Server 2012 R2 machine, with a minimum of 8GB of RAM. When installing specify "Windows Server 2012 R2 Standard (Server with a GUI) x64" edition.
+Start with a Windows Server 2012 R2 machine, with a minimum of 8GB of RAM. When installing specify "Windows Server 2012 R2 Standard (Server with a GUI) x64" edition.
 
-2. Log into the new computer as its administrator.
+1. Log into the new computer as its administrator.
 
-3. Using the Control Panel, give the computer a static IP address on the network. Configure that network interface to send DNS queries to the IP address of the domain controller in the previous step, and set the computer name to **CORPIDM**.  This will require a server restart.
+2. Using the Control Panel, give the computer a static IP address on the network. Configure that network interface to send DNS queries to the IP address of the domain controller in the previous step, and set the computer name to **CORPIDM**.  This will require a server restart.
 
-4. If the computer is on a virtual network which does not provide Internet connectivity, add an additional network interface to the computer that provides a connection to the Internet.  This is needed for SharePoint installation, and can be disabled after that step is completed.
+3. Open the Control Panel and join the computer to the domain that you configured in the last step, *contoso.local*.  This includes providing the username and credentials of a domain administrator such as *Contoso\Administrator*.  After the welcome message appears, close the dialog box and restart this server again.
 
-5. Open the Control Panel and join the computer to the domain that you configured in the last step, *contoso.local*.  This includes providing the username and credentials of a domain administrator such as *Contoso\Administrator*.  After the welcome message appears, close the dialog box and restart this server again.
+4. Sign in to the computer *CorpIDM* as a domain administrator such as *Contoso\Administrator*.
 
-6. Sign in to the computer *CorpIDM* as a domain administrator such as *Contoso\Administrator*.
+5. Launch a PowerShell window as administrator and type the following command to update the computer with the group policy settings.
 
-7. Launch a PowerShell window as administrator and type the following command to update the computer with the group policy settings.
+  ```
+  gpupdate /force /target:computer
+  ```
 
-    ```
-    gpupdate /force /target:computer
-    ```
+  After no more than a minute, it will complete with the message "Computer Policy update has completed successfully."
 
-    After no more than a minute, it will complete with the message "Computer Policy update has completed successfully."
-
-8. Add the **Web Server (IIS)** and **Application Server** roles, the **.NET Framework** 3.5, 4.0, and 4.5 features, and the **Active Directory module for Windows PowerShell**.
+6. Add the **Web Server (IIS)** and **Application Server** roles, the **.NET Framework** 3.5, 4.0, and 4.5 features, and the **Active Directory module for Windows PowerShell**.
 
     ![PowerShell features image](media/MIM-DeployWS2.png)
 
-9. In PowerShell, still as an administrator, type the following commands. Note that it may be necessary to specify a different location for the source files for **.NET Framework** 3.5 features. These features are typically not present when Windows Server installs, but are available in the side-by-side (SxS) folder on the OS install disk sources folder, e.g., “*d:\Sources\SxS\*”.
+7. In PowerShell, type the following commands. Note that it may be necessary to specify a different location for the source files for **.NET Framework** 3.5 features. These features are typically not present when Windows Server installs, but are available in the side-by-side (SxS) folder on the OS install disk sources folder, e.g., “*d:\Sources\SxS\*”.
 
     ```
     import-module ServerManager

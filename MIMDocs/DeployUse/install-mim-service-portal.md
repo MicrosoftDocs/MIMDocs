@@ -32,35 +32,36 @@ ms.suite: ems
 [Synchronize databases »](install-mim-sync-ad-service.md)
 
 > [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
+> This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
+> - Domain controller name - **mimservername**
+> - Domain name - **contoso**
+> - Password - **Pass@word1**
+> - Service account name - **MIMService**
 
-If you didn't set up the MIM installation package in the last step, follow these steps to install Microsoft Identity Manager 2016 components:
+If you didn't set up the MIM installation package in the last step, go back and install the Microsoft Identity Manager 2016 components before continuing.
 
-1. Sign in as *contoso\Administrator* to the CORPIDM server you are using for identity management.
-
-2. Unpack the MIM installation package or mount the MIM image DVD.
 
 ## Configure MIM Service and Portal for installation
 
-1.  Run the **MIM Service and Portal installer** from the unpacked **Service and Portal** sub-folder.
+1. Run the **MIM Service and Portal installer** from the unpacked **Service and Portal** sub-folder.
 
-2.  In the welcome screen, click **Next**.
+2. In the welcome screen, click **Next**.
 
-3.  Read the End-User License Agreement, and if you accept the license terms, click **Next**.
+3. Read the End-User License Agreement and click **Next** if you accept the license terms.
 
-4.  In the **MIM Customer Experience Improvement Program** screen, click **Next**.
+4. In the **MIM Customer Experience Improvement Program** screen, click **Next**.
 
-5.  When selecting component features for this deployment, make sure to include the MIM Service (except for MIM Reporting) and MIM Portal features. You can also select the MIM Password Reset Portal and MIM Password Change Notification Service.
+5. When selecting component features for this deployment, make sure to include the MIM Service (except for MIM Reporting) and MIM Portal features. You can also select the MIM Password Reset Portal and MIM Password Change Notification Service.
 
-6.  On the **Configure the MIM database connection** page, specify **Create a new database**.
+6. On the **Configure the MIM database connection** page, choose **Create a new database**.
 
     ![Configure the MIM database connection image](media/MIM-Install10.png)
 
-7.  On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server**. If you do not have a mail server configured, specify localhost as the mail server name and uncheck the top two checkboxes. Click **Next**.
+7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server**. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
 
     ![Configure mail server connection image](media/MIM-Install11.png)
 
-8.  Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
+8. Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
 
 9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example *Pass@word1*, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
 
@@ -109,8 +110,6 @@ If you didn't set up the MIM installation package in the last step, follow these
 ## Install MIM Service and Portal
 
 When all pre-installation definitions are ready, click **Install** to begin installing the selected **Service and Portal** components.
-
-![Install MIM Service and Portal image](media/MIM-Install16.png)
 
 After installation completes, verify that the MIM Portal is active.
 

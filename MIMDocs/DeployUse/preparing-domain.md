@@ -35,7 +35,10 @@ ms.suite: ems
 MIM requires that Active Directory is already installed. Make sure you have a domain controller in your environment for a domain that you are able to administer.
 
 > [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
+> This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
+> - Domain controller name - **mimservername**
+> - Domain name - **contoso**
+> - Password - **Pass@word1**
 
 1. Sign in to the domain controller as the domain administrator (*e. g. Contoso\Administrator*).
 

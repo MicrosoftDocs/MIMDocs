@@ -2,7 +2,7 @@
 # required metadata
 
 title: Topology considerations for deploying MIM | Microsoft Identity Manager
-description: Understand the MIM 2016 components, and get suggestions for how to deploy them in your environment. 
+description: Understand the MIM 2016 components, and get suggestions for how to deploy them in your environment.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -59,19 +59,13 @@ In this configuration, the MIM Synchronization Service and its database are host
 
 
 ## Multitier topology with multiple MIM services
-Synchronization of data with external systems can add a considerable load to the system and run over an extended period of time. If the synchronization configuration results in triggering policies with workflows, these policies contend for resources with end-user workflows. Such issues can be pronounced with authentication workflows, such as password resets, which are done in real time with an end user waiting for the process to complete. By providing one instance of the MIM Service for end user operations and a separate portal for administrative data synchronization, you can provide better responsiveness for end-user operations.
+Synchronizing data with external systems can take a long time and add a considerable load to the system during that period. If the synchronization configuration results in triggering policies with workflows, these policies contend for resources with end-user workflows. Such issues can be pronounced with authentication workflows, such as password resets, which are done in real time with an end user waiting for the process to complete. By providing one instance of the MIM Service for end user operations and a separate portal for administrative data synchronization, you can provide better responsiveness for end-user operations.
 
 ![Multiple MIM multitier topology diagram](media/MIM-topo-multitier-multiservice.png)
 
 As with the standard multitier topology, you can increase MIM Portal performance by using an NLB cluster and by increasing the number of nodes in the cluster as needed.
 
-The performance computers running SQL Server that host the MIM Synchronization Service and the MIM Service database will dramatically influence the overall performance of your MIM deployment. Therefore, follow the recommendations in SQL Server documentation for optimizing database performance. See the following documents for more information:
-
-- [Storage Top 10 Best Practices](http://go.microsoft.com/fwlink/?LinkID=183663)
-
-- [Optimizing tempdb Performance](http://go.microsoft.com/fwlink/?LinkID=188267)
-
-- [SQL Server Best Practices Article](http://go.microsoft.com/fwlink/?LinkID=188268)
+The computers running SQL Server that host the MIM Synchronization Service and the MIM Service database will dramatically influence the overall performance of your MIM deployment. Therefore, follow the recommendations in SQL Server documentation for optimizing database performance. See the following documents for more information:
 
 ## See also
 - The downloadable [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) goes into more detail about a test build and performance testing results.

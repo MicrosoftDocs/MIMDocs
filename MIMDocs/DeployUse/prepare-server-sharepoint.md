@@ -2,7 +2,7 @@
 # required metadata
 
 title: Set up an identity management server&#58; SharePoint | Microsoft Identity Manager
-description: Install and configure SharePoint Foundation so that it can host the MIM Portal page. 
+description: Install and configure SharePoint Foundation so that it can host the MIM Portal page.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -32,15 +32,18 @@ ms.suite: ems
 [Exchange Server »](prepare-server-exchange.md)
 
 > [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
+> This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
+> - Domain controller name - **mimservername**
+> - Domain name - **contoso**
+> - Password - **Pass@word1**
 
 
 ## Install **SharePoint Foundation 2013 with SP1**
 
 > [!NOTE]
-> It will require Internet connectivity for the installer to download its prerequisites.
+> The installer requires an Internet connection to download its prerequisites. If the computer is on a virtual network which does not provide Internet connectivity, add an additional network interface to the computer that provides a connection to the Internet. This can be disabled after installation is completed.
 
-The server will restart at the end of the installation.
+Follow these steps to install SharePoint Foundation 2013 SP1. After you finish installation, the server will restart.
 
 1.  Launch **PowerShell** as a domain administrator.
 
@@ -70,7 +73,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 2. Specify this server as the database server for the configuration database, and *Contoso\SharePoint* as the database access account for SharePoint to use.
 
-3. Specify a password as the farm security passphrase (it will not be used later in this lab environment).
+3. Create a password for the farm security passphrase.
 
 4. When the configuration wizard completes configuration task 10 of 10, click Finish and a web browser will open.
 
@@ -84,45 +87,41 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 ## Prepare SharePoint to host the MIM Portal
 
-1. Create a **SharePoint Foundation 2013 Web Application**.
+> [!NOTE]
+> Initially, SSL will not be configured. Be sure to configure SSL or equivalent before enabling access to this portal.
 
-    > [!NOTE]
-    > Initially, SSL will not be configured. Be sure to configure SSL or equivalent before enabling access to this portal.
+1. Launch  **SharePoint 2013 Management Shell** and run the following PowerShell script to create a **SharePoint Foundation 2013 Web Application**.
 
-    1. Launch  **SharePoint 2013 Management Shell** and run the following PowerShell script:
+    ```
+    $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
+    -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
+    ```
 
-        ```
-        $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
-        New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
-        -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
-        ```
+    > [!NOTE] A warning message will appear saying that Windows Classic authentication method is being used, and it may take several minutes for the final command to return. When completed, the output will indicate the URL of the new portal. Keep the **SharePoint 2013 Management Shell** window open to reference later.
 
-        2. Note that a warning message will appear that Windows Classic authentication method is being used, and it may take several minutes for the final command to return.  When completed, the output will indicate the URL of the new portal.  Keep the **SharePoint 2013 Management Shell** window open as it will be needed in a subsequent task.
+2. Launch  SharePoint 2013 Management Shell and run the following PowerShell script to create a **SharePoint Site Collection** associated with that web application.
 
-2. Create a **SharePoint Site Collection** associated with that web application.
+  ```
+  $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
+  $w = Get-SPWebApplication http://corpidm.contoso.local:82
+  New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
+  -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
+  $s = SpSite($w.Url)
+  $s.AllowSelfServiceUpgrade = $false
+  $s.CompatibilityLevel
+  ```
 
-    1. Launch  SharePoint 2013 Management Shell and run the following PowerShell script:
-
-        ```
-        $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
-        $w = Get-SPWebApplication http://corpidm.contoso.local:82
-        New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
-        -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
-        $s = SpSite($w.Url)
-        $s.AllowSelfServiceUpgrade = $false
-        $s.CompatibilityLevel
-        ```
-
-        2. Verify that the result of the *CompatibilityLevel* variable is “14”.  ([See Installing FIM 2010 R2 on SharePoint Foundation 2013](http://technet.microsoft.com/library/jj863242.aspx) for more information). If the result is “15”, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
+  > [!NOTE] Verify that the result of the *CompatibilityLevel* variable is “14”. If the result is “15”, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
 
 3. Disable **SharePoint Server-Side Viewstate** and the SharePoint task "Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)" by running the following PowerShell commands in the **SharePoint 2013 Management Shell**:
 
-    ```
-    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-    $contentService.ViewStateOnServer = $false;
-    $contentService.Update();
-    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-    ```
+  ```
+  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+  $contentService.ViewStateOnServer = $false;
+  $contentService.Update();
+  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+  ```
 
 4. On your identity management server, open a new web browser tab, navigate to http://localhost:82/ and login as *contoso\Administrator*.  An empty SharePoint site named *MIM Portal* will be shown.
 
