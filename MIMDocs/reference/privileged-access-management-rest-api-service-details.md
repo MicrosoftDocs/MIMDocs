@@ -16,7 +16,7 @@ ms.assetid: 54c78bbd-8da1-42ff-9edc-47d913011941
 # optional metadata
 
 #ROBOTS:
-#audience:
+audience: developer
 #ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
@@ -28,7 +28,6 @@ ms.suite: ems
 # PAM REST API Service Details
 The following sections discuss details of the Microsoft Identity Manager (MIM) Privileged Access Management (PAM) REST API.
 
-<a name="HttpHeaders"></a>
 ## HTTP Request and Response Headers
 
 HTTP Requests sent to the API should include the following headers (this list is not exhaustive):
@@ -47,7 +46,6 @@ Header | Description
 Content-Type | The API always returns "application/json".
 Content-Length | The length of the request body, if present, in bytes.
 
-<a name="Versioning"></a>
 ## Versioning 
 The current version of the API is 1. 
 The API version can be specified through a query parameter in the request URL, as in the following example: `http://localhost:8086/api/pamresources/pamrequests?v=1`
@@ -80,7 +78,7 @@ CORS is supported, but should be configured manually in IIS. Add the following e
 </system.webServer> 
 ```
 <br/>
-<a name="ErrorHandling"></a>
+
 ## Error Handling 
 The API returns HTTP error responses to indicate error conditions. Errors are OData compliant. The following table shows the error codes that may be returned to a client.
 
@@ -92,7 +90,7 @@ HTTP Status Code | Description
 500 | Internal Server Error 
 503 | Service Unavailable 
 <br/>
-<a name="Filtering"></a>
+
 ## Filtering 
 PAM REST API requests can include filters to specify the properties that should be included in the response. Filter syntax is based on OData expressions.
 

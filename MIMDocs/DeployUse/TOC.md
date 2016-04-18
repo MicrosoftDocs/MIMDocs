@@ -1,5 +1,5 @@
-# [Understand and explore](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016)
-# [Plan and design](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms)
+# [Understand and explore](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Plan and design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Deploy and use](microsoft-identity-manager-deploy.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
