@@ -32,7 +32,10 @@ ms.suite: ems
 [SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
+> This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
+> - Domain controller name - **mimservername**
+> - Domain name - **contoso**
+> - Password - **Pass@word1**
 
 ## Install **SQL Server 2014 Standard Edition**
 

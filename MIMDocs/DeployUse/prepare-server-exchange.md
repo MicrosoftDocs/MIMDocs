@@ -2,7 +2,7 @@
 # required metadata
 
 title: Set up an identity management server&#58; Exchange | Microsoft Identity Manager
-description: As an optional step, deploy Exchange Server to enable MIM 2016 to send mail and create mailboxes. 
+description: As an optional step, deploy Exchange Server to enable MIM 2016 to send mail and create mailboxes.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -31,11 +31,8 @@ ms.suite: ems
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM Synchronization Service »](install-mim-sync.md)
 
-> [!NOTE]
-> In all the examples below, **mimservername** represents the name of your domain controller, **contoso** represents your domain name, and **Pass@word1** represents an example password.
-
 ## Deploy Microsoft Exchange Server
-If you would like to configure MIM to send and receive email or provision mailboxes, then it is necessary to have Exchange present in the environment. If you do not have Exchange already deployed, then you can install a trial version for evaluation purposes.
+If you would like to configure MIM to send and receive email or provision mailboxes, then it is necessary to have Exchange present in the environment. If you do not have Exchange already deployed, then you can install a trial version for evaluation purposes:
 
 1. Download and install Microsoft Office 2010 Filter Packs - Version 2.0 + Microsoft Office 2010 Filter Packs - Version 2.0 SP1
 
