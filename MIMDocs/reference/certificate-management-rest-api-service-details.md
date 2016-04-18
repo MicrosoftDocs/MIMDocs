@@ -16,7 +16,7 @@ ms.assetid: 530047f1-e43b-4a69-9542-75bc1da57bf7
 # optional metadata
 
 #ROBOTS:
-#audience:
+audience: developer
 #ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
@@ -37,7 +37,6 @@ The following sections discuss details of the Microsoft Identity Manager (MIM) C
 - [Enabling Tracing and Logging](#TracingConfig)
 - [Error Handling and Troubleshooting](#ErrorHandling)
 
-<a name="Architecture"></a>
 ## Architecture 
 MIM CM REST API calls are handled by controllers. The following table shows the full list of controllers and samples of the context in which they can be used.
 
@@ -54,7 +53,7 @@ RequestsController| /api/v1.0/requests/{id} <br/> /api/v1.0/requests
 SmartcardsController| /api/v1.0/requests/{requestid}/smartcards/{id}/diversifiedkey <br/> /api/v1.0/requests/{requestid}/smartcards/{id}/serverproposedpin <br/> /api/v1.0/requests/{requestid}/smartcards/{id}/authenticationresponse <br/> /api/v1.0/requests/{requestid}/smartcards/{id} <br/> /api/v1.0/smartcards/{id} <br/> /api/v1.0/smartcards
 SmartcardsConfigurationController| /api/v1.0/profiletemplates/{profiletemplateid}/configuration/smartcards
 <br/>
-<a name="HttpHeaders"></a>
+
 ## HTTP Request and Response Headers
 
 HTTP Requests sent to the API should include the following headers (this list is not exhaustive):
@@ -73,11 +72,11 @@ Header | Description
 Content-Type | The API always returns "application/json".
 Content-Length | The length of the request body, if present, in bytes.
 
-<a name="Versioning"></a>
+
 ## API Versioning 
 The current version of the CM REST API is 1.0. The version is specified in the segment directly following the `/api` segment in the URI: `/api/v1.0`. In the future, the version number will change should there be major changes to the API interface.
 
-<a name="APIConfig"></a>
+
 ## Enabling the API 
 The `<ClmConfiguration>` section of the Web.config file has been extended with a new key:
 
@@ -89,7 +88,6 @@ The `<ClmConfiguration>` section of the Web.config file has been extended with a
 This key determines whether the CM REST API is exposed to clients. If the key is set to "false", the route mapping for the API is not performed on application startup. This means that any subsequent requests to API endpoints will return an HTTP 404 error code. The key is set to “disabled” by default.
 After changing this value to "true", remember to run **iisreset** on the server.
 
-<a name="TracingConfig"></a>
 ## Enabling Tracing and Logging 
 The MIM CM REST API emits trace data for each HTTP request sent to it. You can set the verbosity level of the trace information emitted by setting the following configuration value:
 
@@ -97,7 +95,7 @@ The MIM CM REST API emits trace data for each HTTP request sent to it. You can s
 <add name="Microsoft.Clm.Web.API" value="0" />
 ```
 <br/>
-<a name="ErrorHandling"></a>
+
 ## Error Handling and Troubleshooting 
 When exceptions occur while processing a request, the MIM CM REST API returns an HTTP status code to the web client. For common errors, the API returns an appropriate HTTP status code and an error code. 
 
