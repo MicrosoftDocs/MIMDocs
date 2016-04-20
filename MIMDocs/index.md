@@ -7,9 +7,6 @@ layout: HubPage
     <section id="hero-content">
       <h1>Microsoft Identity Manager Documentation</h1>
       <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchonization, identity-theft twarting, and more</h2>
-      <ol id="actions" class="action-list">
-        <li><a href="" class="button button-bordered">Learn More</a></li>
-      </ol>
       <h3>New to MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/">Visit the product page &rarr;</a></h3>
     </section>
 
@@ -40,7 +37,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="">
                 <div class="title column-third">
                   <span class="step-number">1</span>
@@ -83,7 +80,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="">
                 <div class="title column-third">
                   <span class="step-number">2</span>
