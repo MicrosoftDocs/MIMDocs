@@ -7,9 +7,6 @@ layout: HubPage
     <section id="hero-content">
       <h1>Microsoft Identity Manager Documentation</h1>
       <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchonization, identity-theft twarting, and more</h2>
-      <ol id="actions" class="action-list">
-        <li><a href="" class="button button-bordered">Learn More</a></li>
-      </ol>
       <h3>New to MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/">Visit the product page &rarr;</a></h3>
     </section>
 
