@@ -40,7 +40,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="">
                 <div class="title column-third">
                   <span class="step-number">1</span>
@@ -83,7 +83,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="">
                 <div class="title column-third">
                   <span class="step-number">2</span>
