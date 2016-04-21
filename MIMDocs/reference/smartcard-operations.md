@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Smartcard Operations | Microsoft Identity Manager
+title: Smart card Operations | Microsoft Identity Manager
 description:
 keywords:
 author: msmbaldwin
@@ -25,12 +25,12 @@ ms.suite: ems
 
 ---
 
-# Smartcard Operations
+# Smart card Operations
 ##In This Section
 
-- [Assign Smartcard to a Request](assign-smartcard-to-request.md)
-- [Get Smartcard Data](get-smartcard-data.md)
-- [Get Smartcard Authentication Response](get-smartcard-authentication-response.md)
-- [Get Smartcard Diversified Admin Key](get-smartcard-diversified-admin-key.md)
-- [Get Smartcard Proposed PIN](get-smartcard-proposed-pin.md)
-- [Update Smartcard Status](update-smartcard-status.md)
+- [Assign Smart card to a Request](assign-smartcard-to-request.md)
+- [Get Smart card Data](get-smartcard-data.md)
+- [Get Smart card Authentication Response](get-smartcard-authentication-response.md)
+- [Get Smart card Diversified Admin Key](get-smartcard-diversified-admin-key.md)
+- [Get Smart card Proposed PIN](get-smartcard-proposed-pin.md)
+- [Update Smart card Status](update-smartcard-status.md)
