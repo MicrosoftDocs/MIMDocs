@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Assign Smartcard to a Request | Microsoft Identity Manager
+title: Assign Smart card to a Request | Microsoft Identity Manager
 description:
 keywords:
 author: msmbaldwin
@@ -25,8 +25,8 @@ ms.suite: ems
 
 ---
 
-# Assign Smartcard to a Request
-Binds the specified smartcard to the specified request. Once bound, the request can only be executed with this card.
+# Assign Smart card to a Request
+Binds the specified smart card to the specified request. Once bound, the request can only be executed with this card.
 
 **Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
 ##Request
@@ -45,8 +45,8 @@ The request body contains the following properties.
 
 Property | Description
 ---------|-----------
-requestid | The ID of the request that the smartcard should be bound to.
-cardid | The cardid of the smartcard.
+requestid | The ID of the request that the smart card should be bound to.
+cardid | The cardid of the smart card.
 atr | The smart card answer-to-reset (ATR) string.
 
 
@@ -62,7 +62,7 @@ Code  |Description
 ###Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
-On success, returns a URI to the newly created smartcard object.
+On success, returns a URI to the newly created smart card object.
 ##Example
 
 ###Request

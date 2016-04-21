@@ -60,7 +60,7 @@ The Password Change Notification Service (PCNS) is a service that you install on
 
 13. When the installation completes successfully screen appears, click **Finish**.
 
-14. Restart your computer for the configuration changes made to MIM Password Change Notification Service to take effect. You can do it by clicking **Yes** in the popup that appears, or you can restart later.
+14. Restart your computer for the configuration changes made to MIM Password Change Notification Service to take effect. You can do it by clicking **Yes** in the pop-up window that appears, or you can restart later.
 
 ## Configuring the Password Change Notification Service
 Once reconnected to the DC server as a domain administrator, go to *C:\Program Files\Microsoft Password Change Notification.* Run *pcnscfg.exe*.

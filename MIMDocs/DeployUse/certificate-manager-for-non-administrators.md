@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Enroll smartcards for non-administrators | Microsoft Identity Manager
-description: Learn how to enroll smartcards for users without administrator access to their machines so they can use Certificate Manager.
+title: Enroll smart cards for non-administrators | Microsoft Identity Manager
+description: Learn how to enroll smart cards for users without administrator access to their machines so they can use Certificate Manager.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,10 +25,10 @@ ms.suite: ems
 
 ---
 
-# Enroll smartcards for non-administrators
-If a user isn’t a local administrator on their computer, they won’t be able to enroll a smartcard on their own machines by default. The following procedure enables you to work around this limitation.
+# Enroll smart cards for non-administrators
+If a user isn’t a local administrator on their computer, they won’t be able to enroll a smart card on their own machines by default. The following procedure enables you to work around this limitation.
 
-## Enabling smartcard renewal for non-admins in MIM 2016 Certificate Manager
+## Enabling smart card renewal for non-admins in MIM 2016 Certificate Manager
 
 1.  **Unpack the appx file**
 
@@ -80,7 +80,7 @@ If a user isn’t a local administrator on their computer, they won’t be able 
 
     3.  Type the name of the profile template, add “nonAdmin” and click **OK**.
 
-    4.  When the profile template general settings appear, scroll down all the way and under **Smartcard Configuration**, click **Change Settings**.
+    4.  When the profile template general settings appear, scroll down all the way and under **Smart card Configuration**, click **Change Settings**.
 
     5.  Under **Admin key initial value (hex)** enter the default admin key: "010203040506070801020304050607080102030405060708"
 
@@ -90,12 +90,12 @@ If a user isn’t a local administrator on their computer, they won’t be able 
 
     Non-admin users can't create the virtual smart card on the TPM, so you have to create it for them.
 
-6.  **Create a virtual smartcard using TpmVscMgr**
+6.  **Create a virtual smart card using TpmVscMgr**
 
-    Perform the following (still as the admin) to create an empty virtual smartcard on a machine. This can be done through Intune, SCCM or group policies.
+    Perform the following (still as the admin) to create an empty virtual smart card on a machine. This can be done through Intune, SCCM or group policies.
 
     `TpmVscMgr create /name MyVSC /pin default /adminkey default /generate`
 
 7.  **Install the CM app in the non-admin account**
 
-8.  **Launch the CM app and enrolling for a virtual smartcard**
+8.  **Launch the CM app and enrolling for a virtual smart card**
