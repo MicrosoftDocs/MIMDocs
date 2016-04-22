@@ -44,31 +44,31 @@ MIM requires that Active Directory is already installed. Make sure you have a do
 
 2. Create the following user accounts for MIM services. Start PowerShell and type the following PowerShell script to update the domain.
 
-        ```
-        import-module activedirectory
-        $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-        New-ADUser –SamAccountName MIMMA –name MIMMA
-        Set-ADAccountPassword –identity MIMMA –NewPassword $sp
-        Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName MIMSync –name MIMSync
-        Set-ADAccountPassword –identity MIMSync –NewPassword $sp
-        Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName MIMService –name MIMService
-        Set-ADAccountPassword –identity MIMService –NewPassword $sp
-        Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName MIMSSPR –name MIMSSPR
-        Set-ADAccountPassword –identity MIMSSPR –NewPassword $sp
-        Set-ADUser –identity MIMSSPR –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName SharePoint –name SharePoint
-        Set-ADAccountPassword –identity SharePoint –NewPassword $sp
-        Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName SqlServer –name SqlServer
-        Set-ADAccountPassword –identity SqlServer –NewPassword $sp
-        Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
-        New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
-        Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
-        Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
-        ```
+    ```
+    import-module activedirectory
+    $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+    New-ADUser –SamAccountName MIMMA –name MIMMA
+    Set-ADAccountPassword –identity MIMMA –NewPassword $sp
+    Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
+    New-ADUser –SamAccountName MIMSync –name MIMSync
+    Set-ADAccountPassword –identity MIMSync –NewPassword $sp
+    Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
+    New-ADUser –SamAccountName MIMService –name MIMService
+    Set-ADAccountPassword –identity MIMService –NewPassword $sp
+    Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
+    New-ADUser –SamAccountName MIMSSPR –name MIMSSPR
+    Set-ADAccountPassword –identity MIMSSPR –NewPassword $sp
+    Set-ADUser –identity MIMSSPR –Enabled 1 –PasswordNeverExpires 1
+    New-ADUser –SamAccountName SharePoint –name SharePoint
+    Set-ADAccountPassword –identity SharePoint –NewPassword $sp
+    Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
+    New-ADUser –SamAccountName SqlServer –name SqlServer
+    Set-ADAccountPassword –identity SqlServer –NewPassword $sp
+    Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
+    New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
+    Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
+    Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+    ```
 
 2.  Create security groups to all the groups.
 

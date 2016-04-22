@@ -51,11 +51,11 @@ Start with a Windows Server 2012 R2 machine, with a minimum of 8GB of RAM. When 
 
 5. Launch a PowerShell window as administrator and type the following command to update the computer with the group policy settings.
 
-  ```
-  gpupdate /force /target:computer
-  ```
+    ```
+    gpupdate /force /target:computer
+    ```
 
-  After no more than a minute, it will complete with the message "Computer Policy update has completed successfully."
+    After no more than a minute, it will complete with the message "Computer Policy update has completed successfully."
 
 6. Add the **Web Server (IIS)** and **Application Server** roles, the **.NET Framework** 3.5, 4.0, and 4.5 features, and the **Active Directory module for Windows PowerShell**.
 
@@ -105,11 +105,11 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 2.  Stop IIS with the command *iisreset /STOP*
 
-        ```
-        iisreset /STOP
-        C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-        iisreset /START
-        ```
+    ```
+    iisreset /STOP
+    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+    iisreset /START
+    ```
 
 >[!div class="step-by-step"]  
 [« Preparing a domain](preparing-domain.md)
