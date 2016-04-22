@@ -1,4 +1,4 @@
-# [Understand and evaluate](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Understand and explore](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
 # [Plan and design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Deploy and use](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
 # [Developer reference](microsoft-identity-manager-2016-developer-reference.md)
