@@ -49,4 +49,4 @@ The process of hybrid reporting follows these steps:
 5. The Azure classic portal retrieves the reporting data and renders this as the activity report.
 
 ## See also
-- Get more details about [Working with Identity Manager Hybrid Reporting](/microsoft-identity-manager/DeployUse/working-with-identity-manager-hybrid-reporting)
+- Get more details about [Working with Identity Manager Hybrid Reporting](../DeployUse/working-with-identity-manager-hybrid-reporting.md)

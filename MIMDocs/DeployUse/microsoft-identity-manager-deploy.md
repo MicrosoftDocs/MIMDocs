@@ -29,7 +29,7 @@ ms.suite: ems
 The articles in this section provide step-by-step instructions for deploying Microsoft Identity Manager (MIM) 2016 for end-user self-service scenarios on a fresh server that has not had FIM or MIM previously deployed.
 
 > [!NOTE]
-> The deployment topology described in this section is intended for only for getting started and learning about MIM.  The [capacity planning guide](/microsoft-identity-manager/plan-design/capacity-planning-guide) provides more information on topologies for production deployments.  We recommend reviewing that documentation before deploying MIM for production scale or use.
+> The deployment topology described in this section is intended for only for getting started and learning about MIM.  The [capacity planning guide](../plan-design/capacity-planning-guide.md) provides more information on topologies for production deployments.  We recommend reviewing that documentation before deploying MIM for production scale or use.
 
 <!---
 Comment: Restore after PAM content is included

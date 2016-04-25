@@ -29,7 +29,7 @@ ms.suite: ems
 
 Once you're ready to deploy Microsoft Identity Manager (MIM) use this guide, along with test environments, to design your deployment. This article walks through many common factors that you should take into consideration. Since every deployment is unique, however, testing your scenarios in a lab is still the best way to determine the appropriate servers, hardware, or topologies for your needs.
 
-If you aren't familiar with MIM 2016 and its components yet, get more details about [Microsoft Identity Manager 2016](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016) before continuing.
+If you aren't familiar with MIM 2016 and its components yet, get more details about [Microsoft Identity Manager 2016](../Understand/microsoft-identity-manager-2016.md) before continuing.
 
 ## Overview
 There are a number of variables that can affect the overall capacity and performance of your Microsoft Identity Manager deployment. The ways in which you physically deploy the MIM components (topology), as well as the hardware on which those components run, are important factors in determining the performance and capacity that you can expect from your MIM deployment. The number and complexity of the MIM policy configuration objects may be less obvious, but they are still significant factors to consider when planning for capacity. Finally, the expected scale of the deployment, as well as the load that is expected to be placed on it, are typically more obvious factors that affect performance and capacity.
