@@ -39,7 +39,7 @@ GET     |/api/pamresources/pamrequests
 ###Query Parameters
 Parameter | Description
 ----------|--------------
-$filter | Optional. Specify any of the PAM Request properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Filtering)
+$filter | Optional. Specify any of the PAM Request properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#filtering)
 v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
 
 ###Request Headers
