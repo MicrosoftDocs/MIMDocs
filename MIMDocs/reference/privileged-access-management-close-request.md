@@ -44,7 +44,7 @@ requestId | The identifier (GUID) of the PAM request to close, specified as foll
 ###Query Parameters
 Parameter | Description
 ----------|--------------
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Versioning)
+v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
 
 ###Request Headers
 For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.

@@ -43,7 +43,7 @@ Justification | Optional. The user-supplied reason for the elevation request.
 RoleId| Required. The unique identifier (GUID) of the PAM role to elevate to.
 RequestedTTL| Required. The requested expiration time, in seconds.
 RequestedTime | Optoinal. The time to elevate privileges.  
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Versioning)
+v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
 
 **Note**: You can specify the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* parameters as properties in the request body, rather than as query parameters. The *v* parameteer can only be specified as a query parameter.
 

@@ -44,7 +44,7 @@ approvalId | The identifier (GUID) of the approval object in PAM specified as fo
 ###Query Parameters
 Parameter | Description
 ----------|--------------
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Versioning)
+v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
 
 
 ###Request Headers
