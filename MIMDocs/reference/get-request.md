@@ -47,7 +47,7 @@ targetuser| Optional. The target user of the request. If no target is specified,
 status| Optional. Indicates the status of the request to retrieve. Possible status types are: *Approved*, *Canceled*, *Completed*, *Denied*, *Executing*, *Failed*, *None*, and *Pending*. <br/>If no status is specified, all requests, regardless of status will be returned.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -61,7 +61,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
 On success, returns one or more [Request](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.requests.request(v=vs.100%29.aspx) objects with the following properties:
 

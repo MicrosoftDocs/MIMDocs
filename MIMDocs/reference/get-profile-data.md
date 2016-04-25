@@ -49,7 +49,7 @@ Parameter | Description
 ---------|------------
 status | Optional. Indicates the status of the profiles to retrieve data for. Possible status types are: "Active", "Approved", "Canceled", "Completed", "Denied", "Executing", "Failed", "None", and "Pending". <br/>If no status is specified, all profiles, regardless of status will be returned.
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -63,7 +63,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Profiles.Profile](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.profiles.profile(v=vs.100%29.aspx) objects with the following properties:
 
