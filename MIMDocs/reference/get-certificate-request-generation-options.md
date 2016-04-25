@@ -25,7 +25,8 @@ ms.suite: ems
 
 ---
 
-    # Get Certificate Request Generation Options
+# Get Certificate Request Generation Options
+
 Gets parameters for client-side certificate request generation.
 
 **Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
