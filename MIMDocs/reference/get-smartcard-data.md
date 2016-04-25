@@ -40,16 +40,16 @@ GET     |/CertificateManagement/api/v1.0/smartcards <br/> /CertificateManagement
 ###URL Parameters
 Property| Description
 ---------|--------
-smartcarduuid | Optional. The smartcard UUID as denoted by MIM CM. This is the “uuid” field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object.
+smartcarduuid | Optional. The smartcard UUID as denoted by MIM CM. This is the “uuid” field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
 ###Query Parameters
 Property| Description
 ---------|--------
-cardid | Optional. The smartcard UUID as denoted by MIM CM. This is the “uuid” field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object.
+cardid | Optional. The smartcard UUID as denoted by MIM CM. This is the “uuid” field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -63,9 +63,9 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
-On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object with the following properties:
+On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object with the following properties:
 
 Name | Description
 -----|-----------
@@ -136,4 +136,4 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
--[Microsoft.Clm.Shared.Smartcards.Smartcard Class](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx)
+-[Microsoft.Clm.Shared.Smartcards.Smartcard Class](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)

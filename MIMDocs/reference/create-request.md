@@ -40,7 +40,7 @@ POST     |/CertificateManagement/api/v1.0/requests
 none
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Request Body
 The request body contains the following properties.
 
@@ -63,7 +63,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
 On success, returns the URI for the newly created request.
 ##Example
@@ -122,8 +122,8 @@ POST /CertificateManagement/api/v1.0/requests HTTP/1.1
 ```
 ##See Also
 
-- [Microsoft.Clm.Provision.RequestOperations.InitiateEnroll Method](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateenroll(v=vs.100%29.aspx)
-- [Microsoft.Clm.Provision.RequestOperations.InitiateOfflineUnblock Method](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateofflineunblock(v=vs.100%29.aspx)
-- [Microsoft.Clm.Provision.RequestOperations.InitiateRecover Method](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.provision.requestoperations.initiaterecover(v=vs.100%29.aspx)
-- [Microsoft.Clm.Provision.RequestOperations.InitiateRetire Method](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateretire(v=vs.100%29.aspx)
-- [Microsoft.Clm.Provision.RequestOperations.InitiateUnblock Method](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateunblock(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.InitiateEnroll Method](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateenroll.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.InitiateOfflineUnblock Method](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateofflineunblock.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.InitiateRecover Method](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.requestoperations.initiaterecover.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.InitiateRetire Method](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateretire.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.InitiateUnblock Method](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.requestoperations.initiateunblock.aspx)

@@ -40,10 +40,10 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}
 Parameter | Description
 ---------|------------
 reqid | Required. The Request identifier (MIM CM specific).
-scid | Required. The smartcard identifier (MIM CM specific). This is the "uuid" property in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object.
+scid | Required. The smartcard identifier (MIM CM specific). This is the "uuid" property in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
 ### Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ### Request Body
 The request body contains the following properties.
 
@@ -62,7 +62,7 @@ Code  |Description
 500 | Internal Error
 
 ### Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ### Response Body
 On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object with the following properties:
 

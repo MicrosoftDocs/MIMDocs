@@ -28,15 +28,6 @@ ms.suite: ems
 # CM REST API Service Details
 The following sections discuss details of the Microsoft Identity Manager (MIM) Certificate Management (CM) REST API.
 
-## In This Topic
-
-- [Architecture](#Architecture)
-- [HTTP Request and Response Headers](#HttpHeaders)
-- [API Versioning](#Versioning)
-- [Enabling the API](#APIConfig)
-- [Enabling Tracing and Logging](#TracingConfig)
-- [Error Handling and Troubleshooting](#ErrorHandling)
-
 ## Architecture 
 MIM CM REST API calls are handled by controllers. The following table shows the full list of controllers and samples of the context in which they can be used.
 

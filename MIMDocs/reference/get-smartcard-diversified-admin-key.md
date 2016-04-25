@@ -42,7 +42,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/dive
 Parameter | Description
 ---------|------------
 reqid | Required. The request identifier (MIM CM specific).
-scid | Required. The smartcard identifier (MIM CM specific). Obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object.
+scid | Required. The smartcard identifier (MIM CM specific). Obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 ###Query Parameters
 Parameter | Description
 ---------|------------
@@ -50,7 +50,7 @@ atr | Optional. The smart card answer-to-reset (ATR) string.
 cardid | Required. The card id.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Request Body
 none
 
@@ -64,7 +64,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
 On success, returns a byte BLOB representing the diversified admin key.
 
@@ -82,4 +82,4 @@ HTTP/1.1 200 OK
 ```       
 ##See ALso
 
-- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard Method (String, String, Request) Method](https://msdn.microsoft.com/en-us/library/windows/desktop/bb456812(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard Method (String, String, Request) Method](https://msdn.microsoft.com/library/windows/desktop/bb456812.aspx)

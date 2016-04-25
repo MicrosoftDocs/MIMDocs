@@ -39,10 +39,10 @@ GET     |/api/pamresources/pamroles
 ###Query Parameters
 Parameter | Description
 ----------|--------------
-$filter | Optional. Specify any of the PAM Role properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Filtering)
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#Versioning)
+$filter | Optional. Specify any of the PAM Role properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#filtering)
+v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
 ###Request Body
 none
 
@@ -58,7 +58,7 @@ Code  |Description
 503 | Service Unavailable
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
 ###Response Body
 A successful response contains a collection of one or more PAM roles, each of which has the following properties.
 

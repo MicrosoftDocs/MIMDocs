@@ -42,7 +42,7 @@ Parameter | Description
 requestid| Required. The GUID identifier of the MIM CM request for which the certificate request generation parameters are to be retrieved.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Request Body
 none.
 
@@ -57,7 +57,7 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
 On success, returns list of CertificateRequestGenerationOptions objects. Each CertificateRequestGenerationOptions object corresponds to a single certificate request that the client has to generate and has the following properties:
 
@@ -73,7 +73,7 @@ KeyStorageProviderNames | A list of acceptable key storage providers (KSPs) that
 KeyUsages | The operation that can be performed by the private key created for this certificate request. The default value is Signing.
 Subject | The subject name.
 
-**Note**: More information about these properties is available in the [Windows.Security.Cryptography.Certificates.CertificateRequestProperties class](https://msdn.microsoft.com/en-us/library/windows/apps/br212079.aspx) description, but be aware that there is not a one-to-one correspondence between this class and CertificateRequestGenerationOptions objects.
+**Note**: More information about these properties is available in the [Windows.Security.Cryptography.Certificates.CertificateRequestProperties class](https://msdn.microsoft.com/library/windows/apps/br212079.aspx) description, but be aware that there is not a one-to-one correspondence between this class and CertificateRequestGenerationOptions objects.
 
 ##Example
 
