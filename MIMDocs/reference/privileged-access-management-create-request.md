@@ -48,7 +48,7 @@ v | Optional. The API version. If not included, the current (most recently relea
 **Note**: You can specify the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* parameters as properties in the request body, rather than as query parameters. The *v* parameteer can only be specified as a query parameter.
 
 ###Request Headers
-For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
 ###Request Body
 Optional. As noted above, the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* paramters can be specified as properties of a request body instead of specifying them in the URL query string.
 
@@ -64,7 +64,7 @@ Code  |Description
 503 | Service Unavailable
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#HttpHeaders) in *PAM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
 ###Response Body
 A successful response contains a PAM request object with the following properties.
 
