@@ -6,7 +6,7 @@ layout: HubPage
 <article id="main">
     <section id="hero-content">
       <h1>Microsoft Identity Manager Documentation</h1>
-      <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchonization, identity-theft twarting, and more</h2>
+      <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchronization, identity-theft thwarting, and more</h2>
       <h3>New to MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/">Visit the product page &rarr;</a></h3>
     </section>
 
@@ -72,7 +72,7 @@ layout: HubPage
                 </li>
               </ul>
               <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016" class="see-more">See More</a>
-              
+
             </section>
 
           </li>
@@ -101,7 +101,7 @@ layout: HubPage
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-R2">
-                    <h3>Upgradiing From FIM 2010 R2</h3>
+                    <h3>Upgrading from FIM 2010 R2</h3>
                     <p>Upgrade an existing FIM 2010 R2 test system to MIM 2016.</p>
                     <h4>Learn more</h4>
                   </a>
