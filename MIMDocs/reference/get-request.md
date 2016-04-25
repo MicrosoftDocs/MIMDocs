@@ -63,7 +63,7 @@ Code  |Description
 ###Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
-On success, returns one or more [Request](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.requests.request(v=vs.100%29.aspx) objects with the following properties:
+On success, returns one or more [Request](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx) objects with the following properties:
 
 Name | Description
 -----|------------
@@ -165,6 +165,6 @@ HTTP/1.1 200 OK
 
 ##See Also
 
-- [Microsoft.Clm.Provision.FindOperations.FindRequest Method](http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests(v=vs.100%29.aspx)
-- [Microsoft.Clm.Shared.RequestPermission Enumeration](http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.requestpermission(v=vs.100%29.aspx)
-- [Microsoft.Clm.Shared.Requests.Request Class](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.requests.request(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.FindOperations.FindRequest Method](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
+- [Microsoft.Clm.Shared.RequestPermission Enumeration](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
+- [Microsoft.Clm.Shared.Requests.Request Class](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx)

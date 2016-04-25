@@ -59,7 +59,7 @@ Code  |Description
 ###Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
-On success, returns a policy object based on a [ProfileTemplatePolicy](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy(v=vs.100%29.aspx) object. At a minimum, the policy object will contain the properties in the following table, but may contain additional properties depending on the policy requested. For example, a request for an enroll policy will return an [EnrollPolicy](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates.enrollpolicy(v=vs.100%29.aspx) object. For more information, see the documentation for the policy object associated with the {type} parameter in the request. The documentation for the different types of policy objects can be found under the [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates(v=vs.100%29.aspx) documentation.
+On success, returns a policy object based on a [ProfileTemplatePolicy](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy.aspx) object. At a minimum, the policy object will contain the properties in the following table, but may contain additional properties depending on the policy requested. For example, a request for an enroll policy will return an [EnrollPolicy](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.enrollpolicy.aspx) object. For more information, see the documentation for the policy object associated with the {type} parameter in the request. The documentation for the different types of policy objects can be found under the [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.aspx) documentation.
 
 Property | Description
 ---------|------------
@@ -102,5 +102,5 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
-- [Microsoft.Clm.Shared.ProfileTemplates.ProfileTemplatePolicy Class](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy(v=vs.100%29.aspx)
-- [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates(v=vs.100%29.aspx)
+- [Microsoft.Clm.Shared.ProfileTemplates.ProfileTemplatePolicy Class](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy.aspx)
+- [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.aspx)

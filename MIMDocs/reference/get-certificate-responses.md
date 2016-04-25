@@ -66,7 +66,7 @@ Code  |Description
 ###Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
-On success, returns list of JSON-serialized [Microsoft.Clm.Shared.Certificates.Certificate](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.certificate(v=vs.100%29.aspx) objects with the following properties:
+On success, returns list of JSON-serialized [Microsoft.Clm.Shared.Certificates.Certificate](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.certificate.aspx) objects with the following properties:
 
 Property| Description
 ------|-------------
@@ -120,5 +120,5 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
-- [Microsoft.Clm.Provision.ExecuteOperations.Enroll Method](https://msdn.microsoft.com/en-us/library/microsoft.clm.provision.executeoperations.enroll.aspx)
-- [Microsoft.Clm.Shared.Certificates.Certificate Class](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.certificate(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.ExecuteOperations.Enroll Method](https://msdn.microsoft.com/library/microsoft.clm.provision.executeoperations.enroll.aspx)
+- [Microsoft.Clm.Shared.Certificates.Certificate Class](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.certificate.aspx)

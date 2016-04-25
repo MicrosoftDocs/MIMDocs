@@ -84,4 +84,4 @@ HTTP/1.1 201 Created
 ```       
 ##See Also
 
-- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard Method (String, String, Request)](https://msdn.microsoft.com/en-us/library/windows/desktop/bb456812(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard Method (String, String, Request)](https://msdn.microsoft.com/library/windows/desktop/bb456812.aspx)

@@ -42,7 +42,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/dive
 Parameter | Description
 ---------|------------
 reqid | Required. The request identifier (MIM CM specific).
-scid | Required. The smartcard identifier (MIM CM specific). Obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object.
+scid | Required. The smartcard identifier (MIM CM specific). Obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 ###Query Parameters
 Parameter | Description
 ---------|------------
@@ -82,4 +82,4 @@ HTTP/1.1 200 OK
 ```       
 ##See ALso
 
-- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard Method (String, String, Request) Method](https://msdn.microsoft.com/en-us/library/windows/desktop/bb456812(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard Method (String, String, Request) Method](https://msdn.microsoft.com/library/windows/desktop/bb456812.aspx)

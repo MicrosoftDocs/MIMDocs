@@ -64,7 +64,7 @@ Code  |Description
 ###Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
-On success, returns a [Microsoft.Clm.Shared.Requests.Request](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.requests.request.aspx) object with the following properties that describes the MIM CM request that has been marked as completed:
+On success, returns a [Microsoft.Clm.Shared.Requests.Request](https://msdn.microsoft.com/library/microsoft.clm.shared.requests.request.aspx) object with the following properties that describes the MIM CM request that has been marked as completed:
 
 Name | Description
 -----|------------
@@ -133,5 +133,5 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
-- [Microsoft.Clm.Provision.ExecuteOperations.Complete Method](https://msdn.microsoft.com/en-us/library/microsoft.clm.provision.executeoperations.complete.aspx)
-- [Microsoft.Clm.Shared.Requests.Request](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.requests.request.aspx)
+- [Microsoft.Clm.Provision.ExecuteOperations.Complete Method](https://msdn.microsoft.com/library/microsoft.clm.provision.executeoperations.complete.aspx)
+- [Microsoft.Clm.Shared.Requests.Request](https://msdn.microsoft.com/library/microsoft.clm.shared.requests.request.aspx)

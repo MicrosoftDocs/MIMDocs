@@ -58,7 +58,7 @@ Code  |Description
 ###Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
-On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Certificates.X509ClmCertificate](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.x509clmcertificate(v=vs.100%29.aspx) objects with the following properties:
+On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Certificates.X509ClmCertificate](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.x509clmcertificate.aspx) objects with the following properties:
 
 Name | Description
 -----|------------
@@ -116,5 +116,5 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
-- [Microsoft.Clm.Provision.FindOperations.FindCertificates Method](https://msdn.microsoft.com/en-us/library/microsoft.clm.provision.findoperations.findcertificates(v=vs.100%29.aspx)
-- [Microsoft.Clm.Shared.Certificates.X509ClmCertificate Class](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.certificates.x509clmcertificate(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.FindOperations.FindCertificates Method](https://msdn.microsoft.com/library/microsoft.clm.provision.findoperations.findcertificates.aspx)
+- [Microsoft.Clm.Shared.Certificates.X509ClmCertificate Class](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.x509clmcertificate.aspx)

@@ -65,7 +65,7 @@ Code  |Description
 ###Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
 ###Response Body
-On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Profiles.Profile](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.profiles.profile(v=vs.100%29.aspx) objects with the following properties:
+On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Profiles.Profile](https://msdn.microsoft.com/library/microsoft.clm.shared.profiles.profile.aspx) objects with the following properties:
 
 Property | Description
 ---------|------------
@@ -143,4 +143,4 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
-- [Microsoft.Clm.Shared.Profiles.Profile Class](https://msdn.microsoft.com/en-us/library/microsoft.clm.shared.profiles.profile(v=vs.100%29.aspx)
+- [Microsoft.Clm.Shared.Profiles.Profile Class](https://msdn.microsoft.com/library/microsoft.clm.shared.profiles.profile.aspx)

@@ -40,7 +40,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/auth
 Parameter | Description
 ---------|------------
 reqid | Required. The Request identifier (MIM CM specific).
-scid | Required. The smartcard identifier (MIM CM specific). Obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/en-us/library/microsoft.clm.shared.smartcards.smartcard(v=vs.100%29.aspx) object.
+scid | Required. The smartcard identifier (MIM CM specific). Obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 ###Query Parameters
 Parameter | Description
 ---------|------------
@@ -84,4 +84,4 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
-- [Microsoft.Clm.Provision.ExecuteOperations.GetBaseCspResponse Method](https://msdn.microsoft.com/en-us/library/microsoft.clm.provision.executeoperations.getbasecspresponse(v=vs.100%29.aspx)
+- [Microsoft.Clm.Provision.ExecuteOperations.GetBaseCspResponse Method](https://msdn.microsoft.com/library/microsoft.clm.provision.executeoperations.getbasecspresponse.aspx)

@@ -73,7 +73,7 @@ KeyStorageProviderNames | A list of acceptable key storage providers (KSPs) that
 KeyUsages | The operation that can be performed by the private key created for this certificate request. The default value is Signing.
 Subject | The subject name.
 
-**Note**: More information about these properties is available in the [Windows.Security.Cryptography.Certificates.CertificateRequestProperties class](https://msdn.microsoft.com/en-us/library/windows/apps/br212079.aspx) description, but be aware that there is not a one-to-one correspondence between this class and CertificateRequestGenerationOptions objects.
+**Note**: More information about these properties is available in the [Windows.Security.Cryptography.Certificates.CertificateRequestProperties class](https://msdn.microsoft.com/library/windows/apps/br212079.aspx) description, but be aware that there is not a one-to-one correspondence between this class and CertificateRequestGenerationOptions objects.
 
 ##Example
 
