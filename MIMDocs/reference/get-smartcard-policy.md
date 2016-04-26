@@ -35,7 +35,7 @@ Gets the profile template policy for the specified workflow. This data is used d
 
 Method  |Request URL  
 ---------|---------
-GET     |/CertificateManagement/api/v1.0/profiletemplates/{id}/policy/workflow/{type} 
+GET     |/CertificateManagement/api/v1.0/profiletemplates/{id}/policy/workflow/{type}
 
 ###URL Parameters
 Parameter| Description
@@ -58,26 +58,26 @@ Code  |Description
 500 | Internal Error
 
 ###Response Headers
-For common response headers, see [HTTP Request and Response Headers](CM%20REST%20API%20Service%20Details.md#HttpHeaders) in *CM REST API Service Details*.
+For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#HttpHeaders) in *CM REST API Service Details*.
 ###Response Body
-On success, returns a policy object based on a [ProfileTemplatePolicy](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy.aspx) object. At a minimum, the policy object will contain the properties in the following table, but may contain additional properties depending on the policy requested. For example, a request for an enroll policy will return an [EnrollPolicy](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates.enrollpolicy(v=vs.100%29.aspx) object. For more information, see the documentation for the policy object associated with the {type} parameter in the request. The documentation for the different types of policy objects can be found under the [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates(v=vs.100%29.aspx) documentation. 
+On success, returns a policy object based on a [ProfileTemplatePolicy](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy.aspx) object. At a minimum, the policy object will contain the properties in the following table, but may contain additional properties depending on the policy requested. For example, a request for an enroll policy will return an [EnrollPolicy](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.enrollpolicy) object. For more information, see the documentation for the policy object associated with the {type} parameter in the request. The documentation for the different types of policy objects can be found under the [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates) documentation.
 
 Property | Description
 ---------|------------
-ApprovalsNeeded | The number of approvals that are required for FIM CM requests for the policy. 
-AuthorizedApprover | The security descriptor for users who are authorized to approve FIM CM requests for the policy. 
-AuthorizedEnrollmentAgent | The security descriptor for users who can act as enrollment agents for the policy. 
-AuthorizedInitiator | The security descriptor for users who can initiate FIM CM requests for the policy. 
-CollectComments | A Boolean value that indicates if comment collection is enabled for FIM CM requests for the policy. 
-CollectRequestPriority | A Boolean value that indicates if request priority collection is enabled for FIM CM requests for the policy. 
-DefaultRequestPriority | The default priority for FIM CM requests for the policy. 
-Documents | The policy documents that are configured for the policy. 
-Enabled | A Boolean value that indicates if the policy is enabled. 
-EnrollAgentRequired | A Boolean value that indicates if enrollment agents are required for FIM CM requests for the policy. 
-OneTimePasswordPolicy | Gets how one-time passwords for FIM CM requests for the policy are distributed. 
-Personalization | The smart card personalization options for the policy. 
-PolicyDataCollection | The data collection items that are associated with the policy. 
-SelfServiceEnabled | A Boolean value that indicates if self-service initiation of FIM CM requests is enabled for the policy. 
+ApprovalsNeeded | The number of approvals that are required for FIM CM requests for the policy.
+AuthorizedApprover | The security descriptor for users who are authorized to approve FIM CM requests for the policy.
+AuthorizedEnrollmentAgent | The security descriptor for users who can act as enrollment agents for the policy.
+AuthorizedInitiator | The security descriptor for users who can initiate FIM CM requests for the policy.
+CollectComments | A Boolean value that indicates if comment collection is enabled for FIM CM requests for the policy.
+CollectRequestPriority | A Boolean value that indicates if request priority collection is enabled for FIM CM requests for the policy.
+DefaultRequestPriority | The default priority for FIM CM requests for the policy.
+Documents | The policy documents that are configured for the policy.
+Enabled | A Boolean value that indicates if the policy is enabled.
+EnrollAgentRequired | A Boolean value that indicates if enrollment agents are required for FIM CM requests for the policy.
+OneTimePasswordPolicy | Gets how one-time passwords for FIM CM requests for the policy are distributed.
+Personalization | The smart card personalization options for the policy.
+PolicyDataCollection | The data collection items that are associated with the policy.
+SelfServiceEnabled | A Boolean value that indicates if self-service initiation of FIM CM requests is enabled for the policy.
 
 ##Example
 
@@ -103,5 +103,5 @@ HTTP/1.1 200 OK
 ```       
 ##See Also
 
-- [Microsoft.Clm.Shared.ProfileTemplates.ProfileTemplatePolicy Class](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy.aspx)
-- [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.clm.shared.profiletemplates.aspx)
+- [Microsoft.Clm.Shared.ProfileTemplates.ProfileTemplatePolicy Class](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.profiletemplatepolicy.aspx)
+- [Microsoft.Clm.Shared.ProfileTemplates Namespace](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.profiletemplates.aspx)
