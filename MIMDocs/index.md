@@ -47,11 +47,9 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
     <div id="journeys">
       <section class="container">
         <ul class="journeys-list">
-
           <li class="journey-step">
-
-            <header class="journey-step-header expander row expanded">
-              <a href="">
+            <header class="journey-step-header row">
+              <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
                 <div class="title column-third">
                   <span class="step-number">1</span>
                   <p>Understand &amp; Explore</p>
@@ -60,41 +58,32 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
                     <h3>What is MIM 2016?</h3>
                     <p>Learn how MIM 2016 provides on-premises &amp; hybrid identity and access management capabilities.</p>
-                    <h4>Learn more</h4>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure">
                     <h3>Hybrid Reporting in Azure</h3>
                     <p>Create a single report of events that occur on-premises and in the cloud.</p>
-                    <h4>Learn more</h4>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms">
                     <h3>Supported Platforms</h3>
                     <p>The list of platforms, servers, and applications supported by MIM.</p>
-                    <h4>Learn more</h4>
                   </a>
                 </li>
               </ul>
-              <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016" class="see-more">See More</a>
-
             </section>
-
           </li>
-
           <li class="journey-step">
-
-            <header class="journey-step-header expander row expanded">
-              <a href="">
+            <header class="journey-step-header row">
+              <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
                 <div class="title column-third">
                   <span class="step-number">2</span>
                   <p>Deploy &amp; Use</p>
@@ -103,37 +92,29 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
                     <h3>First Time Deployment</h3>
                     <p>Deploy MIM on a fresh server that has not previously had FIM or MIM.</p>
-                    <h4>Learn more</h4>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-R2">
                     <h3>Upgrading from FIM 2010 R2</h3>
                     <p>Upgrade an existing FIM 2010 R2 test system to MIM 2016.</p>
-                    <h4>Learn more</h4>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller">
                     <h3>Password Change Notification Service</h3>
                     <p>Install PCNS on each domain controller server to enable password synchronization.</p>
-                    <h4>Learn more</h4>
                   </a>
                 </li>
               </ul>
-
-              <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy" class="see-more">See More</a>
             </section>
-
           </li>
-
         </ul>
       </section>
     </div>
