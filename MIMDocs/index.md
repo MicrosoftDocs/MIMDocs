@@ -88,7 +88,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
                   <span class="step-number">2</span>
                   <p>Deploy &amp; Use</p>
                 </div>
-                <p class="description column-two-thirds">Deploy and use ATA.
+                <p class="description column-two-thirds">Deploy and use MIM.
                 </p>
               </a>
             </header>
