@@ -1,0 +1,24 @@
+[submodule "ThemeMIMUnderstand"]
+	path = MIMDocs/Understand/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
+[submodule "ThemeMIMGetstarted"]
+	path = MIMDocs/GetStarted/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
+[submodule "ThemeMIMDeployUse"]
+	path = MIMDocs/DeployUse/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
+[submodule "ThemeMIMPlanDesign"]
+	path = MIMDocs/PlanDesign/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
+[submodule "ThemeMIMTroubleshoot"]
+	path = MIMDocs/Troubleshoot/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
+[submodule "docs shared themes"]
+	path = MIMDocs/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
