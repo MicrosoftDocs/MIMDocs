@@ -63,6 +63,5 @@
             }
         }
     ],
-    "notification_subscribers": ["OPBuild@microsoft.com"],
-    "branches_to_filter": ["live"]
+    "notification_subscribers": ["OPBuild@microsoft.com"]
 }
