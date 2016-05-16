@@ -6,7 +6,7 @@ description: Learn how to upgrade your FIM 2010 R2 components, and then install 
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,16 +25,22 @@ ms.suite: ems
 
 ---
 
-# Upgrade from Forefront Identity Manager 2010 R2 to Microsoft Identity Manager 2016
-This section discusses upgrading an existing test FIM 2010 R2 system to MIM 2016. The installers used for upgrading are the same ones used for fresh deployment.
+# Upgrade from Forefront Identity Manager 2010 R2
 
-This section assumes that you have an existing FIM 2010 R2 solution deployed, in a test environment. Your servers are running on Windows Server 2012, Windows Server 2012 R2 or Windows Server 2008 R2 which are the common operating systems for FIM 2010 R2 servers, and all the local and environmental pre-requisites (SQL Server, Exchange Server, SharePoint Services, etc.) are configured for FIM 2010 R2.
+If you have a Forefront Identity Manager (FIM) 2010 R2 environment and want to try out Microsoft Identity Manager (MIM) 2016, use this article as your guide. There are three phases in this upgrade:
 
-1.  MIM Synchronization Service (Sync) first will be installed and running on a server that is domain-joined to the AD domain and replaces the FIM 2010 R2 instance of Sync.
+1.  Install MIM Synchronization Service (Sync) on a server that is domain-joined to your Active Directory (AD) domain. This replaces the FIM 2010 R2 instance of Sync.
 
-2.  MIM Service and Portal, optionally  including the SSPR Registration Portal and the SSPR Service Portal, and excluding the Privileged Access Management feature set, will then be installed.
+2.  Install MIM Service and Portal. At this point, you can also choose to install the self-service password reset (SSPR) registration portal and service portal. and excluding the Privileged Access Management feature set, will then be installed.
 
-3.  MIM Add-ins and Extensions including the SSPR Windows Login integrated client can then  be deployed on a separate client computer.
+3.  Deploy the MIM add-ins and extensions a separate client computer. This includes the SSPR Windows Login integrated client.
+
+
+This guide assumes that you have the following already set up:
+- FIM 2010 R2 deployed in a test environment
+- Servers running on Windows Server 2012, Windows Server 2012 R2 or Windows Server 2008 R2
+- Local and environmental pre-requisites (SQL Server, Exchange Server, SharePoint Services, etc.) that are configured for FIM 2010 R2.
+
 
 ## Preparation
 
