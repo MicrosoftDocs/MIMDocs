@@ -23,14 +23,12 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
       <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchronization, identity-theft thwarting, and more</h2>
       <h3>New to MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="\_blank">Visit the product page &rarr;</a></h3>
     </section>
-
     <aside class="alert section-border">
       <p>Ready to get hands-on?</p>
       <ol class="action-list">
         <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Try Now</a></li>
       </ol>
     </aside>
-
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
@@ -43,7 +41,6 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </ul>
       </div>
     </section>
-
     <div id="journeys">
       <section class="container">
         <ul class="journeys-list">
@@ -118,7 +115,6 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </ul>
       </section>
     </div>
-
     <div class="section-border">
       <section class="resources container">
         <h2 class="section-heading"><span class="icon icon-options"></span> Developer Reference</h2>
@@ -132,7 +128,6 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </div>
       </section>
     </div>
-
     <aside class="alert alert-social">
       <p>Keep up with MIM support news</p>
       <ol class="action-list">
