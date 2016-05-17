@@ -6,7 +6,7 @@ description: Use this guide to understand the variables that should be considere
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Capacity planning guide
 
-Once you're ready to deploy Microsoft Identity Manager (MIM) use this guide, along with test environments, to design your deployment. This article walks through many common factors that you should take into consideration. Since every deployment is unique, however, testing your scenarios in a lab is still the best way to determine the appropriate servers, hardware, or topologies for your needs.
+Microsoft Identity Manager (MIM) lets you create, update, and remove user accounts throughout your organization. It also gives end users the ability to manage their own accounts self-service features. Even in a small environment, all these actions can add up quickly.
+
+Before you get started with MIM use this guide, along with test environments, to understand the appropriate scope for your deployment. This article walks through many common factors that you should take into consideration. Since every deployment is unique, however, testing your scenarios in a lab is still the best way to determine the appropriate servers, hardware, or topologies for your needs.
 
 If you aren't familiar with MIM 2016 and its components yet, get more details about [Microsoft Identity Manager 2016](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016) before continuing.
 
