@@ -80,7 +80,7 @@ ExpirationTime | The expiration time of the request.
 RoleID| The unique identifier (GUID) of the PAM role.
 RequestedTTL | The requested expiration timeout in seconds.
 RequestedTime | The requested time for elevation.
-RequestedStatus | The status of the request. Possible values are: "Active", "Closed", "Closing", "Expired", "Pending Approval", and "Rejected".
+RequestedStatus | The status of the request. Possible values are: "Active", "Closed", "Closing", "Expired", "PendingApproval","PendingMFA" and "Rejected".
 
 ##Example
 
