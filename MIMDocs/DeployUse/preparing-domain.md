@@ -30,9 +30,13 @@ ms.suite: ems
 >[!div class="step-by-step"]  
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
+Microsoft Identity Manger (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.
+
+This article walks you through the steps to prepare your domain to work alongside MIM.
+
 ## Create user accounts and groups
 
-MIM requires that Active Directory is already installed. Make sure you have a domain controller in your environment for a domain that you are able to administer.
+All the components of your MIM deployment need their own identities in the domain. This include the MIM components like Service and Sync, as well as SharePoint and SQL.
 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
