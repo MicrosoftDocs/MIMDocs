@@ -73,14 +73,13 @@ Property | Description
 RequestID | The unique identifier (GUID) for the PAM request.
 CreatorID | The unique identifier (GUID) in the MIM service for the account that created the request.
 Justification | The reason for elevation.
-DisplayName | The PAM request’s display name in MIM.
 CreationTime | The creation time of the request.
 CreationMethod | The method used to create the request.
 ExpirationTime | The expiration time of the request.
 RoleID| The unique identifier (GUID) of the PAM role.
 RequestedTTL | The requested expiration timeout in seconds.
 RequestedTime | The requested time for elevation.
-RequestedStatus | The status of the request. Possible values are: "Active", "Closed", "Closing", "Expired", "Pending Approval", and "Rejected".
+RequestStatus | The status of the request. Possible values are: "Processing", "Active", "Closed", "Closing", "Expired", "PendingApproval", "PendingMFA" and "Rejected".
 
 ##Example
 
