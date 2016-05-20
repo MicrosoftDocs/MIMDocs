@@ -17,5 +17,5 @@
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [Enroll smartcards](certificate-manager-for-non-administrators.md)
 ### [Create software certificates](certificate-manager-for-software-certificates.md)
-# [Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
+# [Use Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [Developer Reference](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)

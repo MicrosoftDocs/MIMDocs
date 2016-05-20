@@ -4,5 +4,5 @@
 ## [Capacity planning](capacity-planning-guide.md)
 ## [Deployment topology](topology-considerations.md)
 # [Deploy and Use](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
-# [Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
+# [Use Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [Developer Reference](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
