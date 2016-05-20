@@ -1,4 +1,5 @@
 # [Understand and Explore](/understand-explore/microsoft-identity-manager-2016.md)
 # [Plan and Design](/plan-design/microsoft-identity-manager-2016-supported-platforms.md)
 # [Deploy and Use](/deploy-use/microsoft-identity-manager-deploy.md)
+# [Privileged Access Management](/privileged-access-management/privileged-identity-management-for-active-directory-domain-services.md)
 # [Developer Reference](/reference/microsoft-identity-manager-2016-developer-reference.md)
