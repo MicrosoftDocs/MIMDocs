@@ -167,7 +167,7 @@ As the servers in the bastion environment will be joined to a domain, and depend
 Windows Server Active Directory Domain Services natively includes support for high availability and disaster recovery.
 
 #### Preparation
-A typical production deployment of privileged access management will include at least two domain controllers in the bastion environment.  Instructions for setting up the first domain controller in the bastion environment are included in the getting started guide, as [Prepare PRIV domain controller](step-2-prepare-the-priv-domain-controller.md).
+A typical production deployment of privileged access management will include at least two domain controllers in the bastion environment.  Instructions for setting up the first domain controller in the bastion environment are included in the getting started guide, as [Prepare PRIV domain controller](step-2-prepare-priv-domain-controller.md).
 
 The procedure for adding an additional domain controller can be found at [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](https://technet.microsoft.com/library/jj574134.aspx).  
 

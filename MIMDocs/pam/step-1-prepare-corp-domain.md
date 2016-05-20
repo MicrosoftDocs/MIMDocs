@@ -154,3 +154,6 @@ On another new virtual machine with no software installed, install Windows 8.1 E
    `$acl.SetAccessRule($car)`
 
    `Set-Acl c:\corpfs $acl`
+
+>[!div class="step-by-step"]
+[Step 2 »](step-2-prepare-priv-domain-controller.md)

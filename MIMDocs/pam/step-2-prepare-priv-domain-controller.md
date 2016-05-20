@@ -26,6 +26,11 @@ ms.suite: ems
 ---
 
 # Step 2 - Prepare the PRIV domain controller
+
+>[!div class="step-by-step"]
+[« Step 1](step-1-prepare-corp-domain.md)
+[Step 3 »](step-3-prepare-pam-server.md)
+
 ## Create a new privileged access management forest
 
 In this step you will create a new domain for a new privileged access management forest.
@@ -244,3 +249,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding. Specify *contoso.loca
 17. Close **Active Directory Users and Computers**.
 
 16. Restart the *PRIVDC* server so that these changes take effect.
+
+>[!div class="step-by-step"]
+[« Step 1](step-1-prepare-corp-domain.md)
+[Step 3 »](step-3-prepare-pam-server.md)
