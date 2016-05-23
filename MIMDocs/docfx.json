@@ -9,7 +9,7 @@
           "**/obj/**",
           "Understand/**",
           "GetStarted/**",
-          "DeployUser/**",
+          "DeployUse/**",
           "PlanDesign/**",
           "Troubleshoot/**" 
         ]
