@@ -28,8 +28,8 @@ ms.suite: ems
 # Step 3 – Prepare a PAM server
 
 >[!div class="step-by-step"]
-[« Step 1](step-1-prepare-corp-domain.md)
-[Step 3 »](step-3-prepare-pam-server.md)
+[« Step 2](step-2-prepare-priv-domain-controller.md)
+[Step 4 »](step-3-install-mim-components-on-pam-server.md)
 
 ## Install Windows Server 2012 R2
 On a third virtual machine, install Windows Server 2012 R2, specifically Windows Server 2012 R2 Standard (Server with a GUI) x64, to make a new computer “*PAMSRV*”.   Note that since SQL Server and SharePoint 2013 will be installed on this computer, it requires a minimum of 8GB of RAM.
@@ -197,3 +197,8 @@ Using the SharePoint Foundation 2013 with SP1 installer, install SharePoint’s 
 16. Open a new web browser tab, navigate to *http://pamsrv.priv.contoso.local:82/* and login as *PRIV\Administrator*.  An empty SharePoint site named “MIM Portal” will be shown. Then in Internet Explorer, open **Internet Options**, change to the **Security tab,** select **Local intranet**, and add the web site. (Note that if sign in fails, the Kerberos SPNs created earlier in step 2 might need to be updated.)
 
 17. Using **Services** (located in Administrative Tools), start the **SharePoint Administration** service, if not already running.
+
+
+>[!div class="step-by-step"]
+[« Step 2](step-2-prepare-priv-domain-controller.md)
+[Step 4 »](step-3-install-mim-components-on-pam-server.md)
