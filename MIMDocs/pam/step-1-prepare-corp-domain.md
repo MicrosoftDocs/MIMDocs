@@ -109,7 +109,7 @@ Note that in some cases the group may already exist - this is normal if the doma
 
 If you created a new CORP domain, then you should create additional users and groups for demonstrating the PAM scenario.  If you already have a domain you will be using as the CORP domain, and it has a user and a group that you can use for demonstration purposes, then you can skip to the section [Configure auditing](#configure-auditing).
 
->![NOTE] The user and group for demonstration purposes should not be domain administrators or controlled by the adminSDHolder settings in AD.
+> [!NOTE] The user and group for demonstration purposes should not be domain administrators or controlled by the adminSDHolder settings in AD.
 
 We're going to create a security group named *CorpAdmins* and a user named *Jen*. You can use different names if you wish.
 
@@ -217,7 +217,7 @@ You will need a resource for demonstrating the security group-based access contr
   Set-Acl c:\corpfs $acl
   ```
 
-In the next step, you will prepare the PRIV domain controller. 
+In the next step, you will prepare the PRIV domain controller.
 
 >[!div class="step-by-step"]
 [Step 2 »](step-2-prepare-priv-domain-controller.md)
