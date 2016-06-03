@@ -29,7 +29,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Start a free trial</a></li>
       </ol>
       <ol class="action-list">
-        <li><a href="https://connect.microsoft.com/site433/Downloads" target="\_blank" class="button-bordered button-translucent">Preview upcoming features</a></li>
+        <li><a href="http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=61395" target="\_blank" class="button-bordered button-translucent">Preview upcoming features</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
