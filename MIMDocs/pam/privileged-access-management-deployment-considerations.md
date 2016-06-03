@@ -35,5 +35,3 @@ The topics in this section describe:
 - [High availability and disaster recovery considerations for the bastion environment](high-availability-disaster-recovery-considerations-bastion-environment.md)  
 - [Tier modeling for partitioning administrative privileges](tier-model-for-partitioning-administrative-privileges.md)  
 - [Defining roles for privileged access management](defining-roles-for-pam.md)  
-
-If you want to begin deploying PAM immediately in a test lab, continue reading at the section [Getting started with privileged access management](privileged-access-management-get-started.md).

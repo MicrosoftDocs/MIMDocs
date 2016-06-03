@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Privileged Identity Management for Active Directory Domain Services (AD DS) | Microsoft Identity Manager
+title: Privileged Identity Management for Active Directory Domain Services | Microsoft Identity Manager
 description:
 keywords:
 author: kgremban
@@ -25,10 +25,10 @@ ms.suite: ems
 
 ---
 
-# Privileged Identity Management for Active Directory Domain Services (AD DS)
-Privileged Identity Management is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server Technical Preview. It helps organizations restrict privileged access within an existing Active Directory environment.
+# Privileged Identity Management for Active Directory Domain Services
+Privileged Identity Management is a solution that is based on Microsoft Identity Manager (MIM), Windows Server 2012 R2, and Windows Server Technical Preview. It helps organizations restrict privileged access within an existing Active Directory environment.
 
-NOTE: The PIM on-premises active directory feature is called Privileged Access Manager (PAM).
+The PIM on-premises Active Directory feature is called Privileged Access Manager (PAM).
 
 The process for setting up PIM includes creating a new bastion Active Directory forest. The bastion forest has a trust with your existing forest. It establishes a pristine environment that is known to be free of artifacts resulting from earlier malicious users or privileged credential theft, which helps an organization whose Active Directory environment might already be compromised have a foundation for re-establishing control. It also isolates the use of privileged accounts and reduces the corresponding risk of those credentials being stolen as they are not needed for non-administrative tasks.
 
