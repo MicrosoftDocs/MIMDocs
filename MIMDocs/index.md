@@ -21,14 +21,12 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
     <section id="hero-content">
       <h1>Microsoft Identity Manager Documentation</h1>
       <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchronization, identity-theft thwarting, and more</h2>
+      <h3>New to MIM? <a href="http://www.microsoft.com/server-cloud/products/microsoft-identity-manager/" target="\_blank">Visit the product page &rarr;</a></h3>      
     </section>
     <aside class="alert section-border">
       <p>Ready to get hands-on?</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Get a free trial</a></li>
-      </ol>
-      <ol class="action-list">
-        <li><a href="http://www.microsoft.com/server-cloud/products/microsoft-identity-manager/" target="\_blank" class="button-bordered button-translucent">Deploy in production</a></li>
+        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Start a free trial</a></li>
       </ol>
       <ol class="action-list">
         <li><a href="https://connect.microsoft.com/site433/Downloads" target="\_blank" class="button-bordered button-translucent">Preview upcoming features</a></li>
