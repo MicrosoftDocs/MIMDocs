@@ -99,27 +99,17 @@ When you configure a MIM management agent, you need to specify a user account. T
 
 9.  On the **Configure Attribute Flow** page, apply the following attribute flow mappings, and then click **Next**
 
-    | **Flow Direction** | **Data Source Attribute** | **Metaverse Attribute** |
+    | **Data Source Attribute** | **Flow Direction** | **Metaverse Attribute** |
     |-|-|-|
-    |Import|Import|accountName|
-    |Import|Import|company|
-    |Import|Import|displayName|
-    |Import|Import|employeeID|
-    |Import|Import|employeeType|
-    |Import|Import|firstName|
-    |Import|Import|lastName|
-    |Import|Import|Manager|
-    |Import|Import|objectSid|
-    |Export|Export|accountName|
-    |Export|Export|company|
-    |Export|Export|displayName|
-    |Export|Export|domain|
-    |Export|Export|employeeID|
-    |Export|Export|employeeType|
-    |Export|Export|firstName|
-    |Export|Export|lastName|
-    |Export|Export|manager|
-    |Export|Export|objectSid|
+    | AccountName | Export | accountName |
+    | DisplayName | Export | displayName |
+    | Domain | Export | domain |
+    | EmployeeID | Export | employeeID |
+    | EmployeeType | Export | employeeType |
+    | Email | Export | mail |
+    | FirstName | Export | firstName |
+    | LastName | Export | lastName |
+    | ObjectSID | Export | objectSid |
 
 10.  Select **Person** as the Data source object type.
 
@@ -151,17 +141,27 @@ When you configure a MIM management agent, you need to specify a user account. T
 
         -   To apply the flow mapping, click **New**.
 
-    | Flow Direction | Data Source Attribute | Metaverse Attribute |
+    | **Data Source Attribute** | **Flow Direction** | **Metaverse Attribute** |
     |-|-|-|
-    | Export | AccountName | accountName |
-    | Export | DisplayName | displayName |
-    | Export | Domain | domain |
-    | Export | Scope | scope |
-    | Export | Type | type |
-    | Export | Member | member |
-    | Export | MembershipLocked | membershipLocked |
-    | Export | MembershipAddWorkflow | membershipAddWorkflow |
-    | Export | Manager | manager |
+    | AccountName | Export | accountName |
+    | DisplayName | Export | displayName |
+    | Domain | Export | domain |
+    | Email | Export | mail |
+    | MailNickName | Export | mailNickName |
+    | Member | Export | member |
+    | ObjectSID | Export | objectSid |
+    | Scope | Export | scope |
+    | Type | Export | type |
+    | MembershipAddWorkflow | Export | membershipAddWorkflow |
+    | MembershipLocked | Export | membershipLocked |
+    | DisplayName | Import | displayName |
+    | Scope | Import | scope |
+    | Type | Import | type |
+    | Member | Import | member |
+    | AccountName | Import | accountName |
+    | DisplayedOwner | Import | displayedOwner |
+    | MailNickName | Import | mailNickName |
+
 
 11.  On the **Configure Deprovisioning** page, click **Next**
 
