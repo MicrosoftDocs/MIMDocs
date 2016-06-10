@@ -6,7 +6,7 @@ description:
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 06/10/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager

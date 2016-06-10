@@ -6,7 +6,7 @@ description:
 keywords:
 author:
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 06/10/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -87,7 +87,7 @@ The cmdlets need to be run once for each group, and once for each member of a gr
         ```
 
 
-If you want to demonstrate that cross-forest access rights are effective for the user's administrator account, continue to the next step. 
+If you want to demonstrate that cross-forest access rights are effective for the user's administrator account, continue to the next step.
 
 >[!div class="step-by-step"]
 [« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)

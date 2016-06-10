@@ -6,7 +6,7 @@ description:
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 06/10/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -40,4 +40,3 @@ The solution architecture for privileged access management (PAM) is based on two
 -   Extract and isolate administrative accounts from existing Active Directory forests
 
 This solution is primarily focused on domain accounts in which an end user will be authenticating and authorized to act as a role or application administrator of a particular collection of systems or across multiple services which rely upon Kerberos (or ADFS) with Active Directory-hosted security groups.  This test lab guide is not intended to cover scenarios for service accounts, local administrator accounts, shared accounts, or non-AD environments.
-
