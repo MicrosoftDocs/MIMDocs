@@ -4,7 +4,7 @@
 title: Step 6 – Transition a group to Privileged Access Management | Microsoft Identity Manager
 description:
 keywords:
-author: 
+author:
 manager: stevenpo
 ms.date: 04/28/2016
 ms.topic: article
@@ -26,59 +26,69 @@ ms.suite: ems
 ---
 
 # Step 6 – Transition a group to Privileged Access Management
-The privileged account creation in the PRIV forest is done using several new PowerShell cmdlets.  These cmdlets perform the following functions:
 
--   Creates a new group in the *PRIV* forest with the same *SID* (Security Identifier) as a group in the *CORP* forest and as an object in the MIM Service database corresponding to the group in the *PRIV* forest.
+>[!div class="step-by-step"]
+[« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+[Step 7 »](step-elevate-user-access.md)
 
--   For each user account, the cmdlets creates two objects in the MIM Service database, corresponding to the user in the *CORP* forest and the new user account in the *PRIV* forest.
+Privileged account creation in the PRIV forest is done using PowerShell cmdlets. These cmdlets perform the following functions:
 
--   Creates a *PAM Role* object in the MIM Service database.
+- Create a new group in the PRIV forest with the same Security Identifier (SID) as a group in the CORP forest. Create an object in the MIM Service database corresponding to the group in the PRIV forest.  
+- For each user account, create two objects in the MIM Service database, corresponding to the user in the CORP forest and the new user account in the PRIV forest.  
+- Create a **PAM Role** object in the MIM Service database.  
 
-    In this prerelease preview, the cmdlets needs to be run once for each group, and once for each member of a group.  (Note that the migration cmdlets do not change or modify any user or groups in the *CORP* forest: that is to be done manually by the PAM administrator subsequently.)
+The cmdlets need to be run once for each group, and once for each member of a group. The migration cmdlets do not change or modify any user or groups in the CORP forest: the PAM administrator will do that manually afterwards.
 
-    1.  Log into *PAMSRV* as a domain administrator and verify the services are running.
+1. Sign in to *PAMSRV*, either directly or from a PRIV workstation, as *PRIV\MIMAdmin*.
 
-        1.  Ensure you are logged into *PAMSRV* as *PRIV\Administrator*.
+2.  Launch PowerShell, and type the following commands.
 
-        2.  Open **Services**.
+    ```
+    Import-Module MIMPAM
+    Import-Module ActiveDirectory
+    ```
 
-        3.  Verify that the **Forefront Identity Manager** service is running.  If the service is not running, right-click on the service and select **start** to start the service.
+3.  Create a corresponding user account in PRIV for a user account in an existing forest, for demonstration purposes.
 
-    2.  Run the MIM PAM group and user management cmdlets to copy the CorpAdmins group and its member, Jen, from *CONTOSO* to *PRIV* domain.
+    Type the following commands into PowerShell.  If you did not create a user named *Jen* in domain *contoso.local* in an earlier step, then change the parameters of the 'New-PAMUser' command as appropriate. The password 'Pass@word1' is just an example and should be changed to a unique password value.
 
-        1.  Launch PowerShell and run the following commands, specifying the *CORP* domain admin (*CONTOSO\Administrator*) password where prompted:
+    ```
+    $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+    $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+    Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+    Set-ADUser –identity priv.Jen –Enabled 1
+    ```
 
-            ```
-            Import-Module MIMPAM
-            Import-Module ActiveDirectory
-            $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
-            $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca 
-            $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen 
-            $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-            Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-            Set-ADUser –identity priv.Jen –Enabled 1 
-            Add-ADGroupMember "Protected Users" priv.Jen
-            $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
-            ```
-            For reference, the **New-PAMGroup** command takes the following parameters:
+4. Copy a group and its member, Jen, from *CONTOSO* to *PRIV* domain, for demonstration purposes.
 
-            -   The CORP forest domain name in NetBIOS form
+    - Run the following commands, specifying the *CORP* domain admin (*CONTOSO\Administrator*) password where prompted:
 
-            -   The name of the group to copy from that domain
+        ```
+        $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
+        $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
+        $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
+        ```
 
-            -   The CORP forest Domain Controller NetBIOS name
+    For reference, the **New-PAMGroup** command takes the following parameters:
 
-            -   The credentials of an domain admin user in the CORP forest
+        -   The CORP forest domain name in NetBIOS form  
+        -   The name of the group to copy from that domain  
+        -   The CORP forest Domain Controller NetBIOS name  
+        -   The credentials of an domain admin user in the CORP forest  
 
-        Next, you will transition a user who is currently group member to JIT elevation, and then verify that cross-forest access rights are effective or the user's administrator account.
+5.  Optionally, on *CORPDC*, remove Jen’s account from the *CONTOSO CorpAdmins* group, if it is still present.  This is only needed for demonstration purposes, to illustrate how permissions can be associated with accounts created in the *PRIV* forest.
 
-    3.  On *CORPDC*, remove Jen’s account from the *CONTOSO CorpAdmins* group, if it is still present.
+    1.  Sign in to *CORPDC* as *CONTOSO\Administrator*.
 
-        1.  Log into *CORPDC* as *CONTOSO\Administrator*.
+    2.  Launch PowerShell, run the following command and confirm the change.
 
-        2.  Launch PowerShell, run the following command and confirm the change.
+        ```
+        Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
+        ```
 
-            ```
-            Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
-            ```
 
+If you want to demonstrate that cross-forest access rights are effective for the user's administrator account, continue to the next step. 
+
+>[!div class="step-by-step"]
+[« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+[Step 7 »](step-elevate-user-access.md)
