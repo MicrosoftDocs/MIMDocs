@@ -6,7 +6,7 @@ description:
 keywords:
 author:
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 06/10/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -87,8 +87,8 @@ Configure the server security policy to allow the newly-created accounts to run 
 13. Open Control Panel and switch to **User Accounts**.  
 14. Click **Give others access to this computer**.  
 15. Click **Add**, enter the user *MIMADMIN* in the domain *PRIV*, and on the next screen in the wizard, click **Add this user as an Administrator**.  
-    - Follow the same process three more times to add *sharepoint*, *mimservice*, and *mimcomponent* as administrators in the *PRIV* domain.  
-16. Close Control Panel.  
+16. Click **Add**, enter the user *SharePoint* in the domain *PRIV*, and on the next screen in the wizard, click **Add this user as an Administrator**.  
+17. Close Control Panel.  
 
 ## Change the IIS configuration
 There are two ways to change the IIS configuration to allow applications to use Windows Authentication mode. Make sure you are signed in as *MIMAdmin* and then follow one of these options.
