@@ -35,14 +35,6 @@ In this step, you will prepare to host the bastion environment. If necessary, yo
 
 If you already have an existing Active Directory (AD) domain with a domain controller running Windows Server 2012 R2 or later, where you are a domain administrator, you can use that domain instead.  
 
-## Prepare virtual machines for hosting PAM software
-
-PAM work with virtual machines (VMs) with separate drives that are connected to each other on a shared network. These virtual machines can be hosted by Windows 8.1, Windows Server 2012 R2, or other operating system platforms.
-
-You will need a minimum of three virtual machines.  If you don't already have an AD domain for PAM to manage, you will need one additional VM to act as a CORP domain controller.  If you wish to configure the PRIV software for high availability, you will also need two additional VMs.
-
-The drives where the virtual machine disk images will be stored need at least 120 GB of free disk space to hold all the VMs.  If you plan to deploy for high availability, make sure that the disk subsystem meets the requirements for SQL shared storage.  The shared storage can be in the form of Windows Server Failover Clustering cluster disks, disks on a Storage Area Network (SAN), or file shares on an SMB server. Note that these must be dedicated to the bastion environment; sharing storage with other workloads outside of the bastion environment is not recommended as it could jeopardize the integrity of the bastion environment.
-
 ## Prepare the CORP domain controller
 
 This section describes how you can set up a domain controller for a CORP domain. In the CORP domain, the administrative users are managed by the bastion environment. The DNS name of the CORP domain used in this example is *contoso.local*.

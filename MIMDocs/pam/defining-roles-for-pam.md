@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Defining roles for Privileged Access Management | Microsoft Identity Manager
+title: Define roles for Privileged Access Management | Microsoft Identity Manager
 description:
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 06/10/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,28 +25,37 @@ ms.suite: ems
 
 ---
 
-# Defining roles for Privileged Access Management
-## Oveview
+# Define roles for Privileged Access Management
 
-A typical way to define roles needed for privileged access management is to construct and review a spreadsheet that lists the roles, and identifies the governance requirements and the permissions required by each role.
+With Privileged Access Management, you can assign users to privileged roles that they can activate as needed for just-in-time access. These roles are definied manually and established in the bastion environment. This article walks you through the process of deciding which roles to manage through PAM, and how to define them with appropriate permissions and restrictions.
 
-The governance requirements will vary depending upon any existing identity and access policies or compliance requirements which the privileged access management controls are intended to address. The parameters to identify for each role might include identifying the owner of the role, the candidate users who can be in that role, and determining what authentication, approval or notification controls should be associated with the use of the role.
+A straightforward approach to defining roles for privileged access management is to compile all the information in a spreadsheet. List the roles in the roles, and use the columns to identify governance requirements and permissions.
 
-The role permissions will depend upon the applications being managed. This article uses as an example application Active Directory itself, dividing the permissions into two categories:
+The governance requirements will vary depending on existing identity and access policies or compliance requirements. The parameters to identify for each role might include the owner of the role, the candidate users who can be in that role, and what authentication, approval, or notification controls should be associated with the use of the role.
+
+The role permissions depend on the applications being managed. This article uses Active Directory as an example application, dividing the permissions into two categories:
 
 - Those needed to manage the Active Directory service itself (e.g., configure the replication topology)
 
 - Those needed to manage the data held in Active Directory (e.g., create user and groups)
 
-## Role selection considerations
+## Identify roles
 
-To get started, create a tab in a spreadsheet, and list each potential role in a row. To find the appropriate roles, identify the applications in scope for management (are they in tier 0, tier 1 or tier 2?), and the privileges that impact the confidentiality, integrity or availability of the application. Also consider any dependencies the application might have on other components of the system, such as databases, network or security infrastructure, or the virtualization or hosting platform. Then determine how to group those privileges so that users who are administrators can easily select the appropriate role, without inadvertently receiving too many permissions.
+Start by identifying all the roles that you might want to manage with PAM. On the spreadsheet, each potential role will have its own row.
 
-The goal for role modeling is to design for the least privilege assignment. This can be based on the current (or planned) organizational responsibilities for users, and would include the privilege required by the user's duties. It could also include the privileges that simplify operations, without creating risk.
+To find the appropriate roles, consider each application in scope for management:
+
+- Is the application in tier 0, tier 1 or tier 2?  
+- What are the privileges that impact the confidentiality, integrity or availability of the application?  
+- Does the application have dependencies on other components of the system, such as databases, network or security infrastructure, or the virtualization or hosting platform?
+
+Determine how to group those app considerations. You want roles that have clear boundaries, and give only enough permissions to complete common administrative tasks within the app.
+
+You always want to design roles for the least privilege assignment. This can be based on the current (or planned) organizational responsibilities for users, and would include the privilege required by the user's duties. It could also include the privileges that simplify operations, without creating risk.
 
 Other considerations in scoping the permissions to include a role are:
 
-- How many individuals are working in a particular role? If there are not at least 2, then it may be premature to define a role if no one would be exercising it, or are defined by a particular person's duties.
+- How many individuals are working in a particular role? If there are not at least 2, then it may be too narrowly defined to be useful, or you've defined a particular person's duties.
 
 - How many roles does a person take on? Would users be able to select the right role for their task?
 
@@ -54,13 +63,11 @@ Other considerations in scoping the permissions to include a role are:
 
 - Is it possible to separate administration and audit, so that a user in an administrative role cannot erase the audit records of their actions?
 
-An example list of roles is included at the end of this section.
+## Establish role governance requirements
 
-## Role governance requirements
+As you identify candidate roles, start to fill out the spreadsheet. Create columns for the requirements which are relevant to your organization. Some requirements to consider include:
 
-As you identify candidate roles, start to fill out the spreadsheet. Create columns for the requirements which are relevant to your organization, and for each role, specify the choices for each:
-
-- Who is the role owner that would be responsible for the further definition of role, choosing permissions, and maintaining the governance settings (change to how account is accessed, used, etc.) for the role?
+- Who is the role owner that would be responsible for the further definition of role, choosing permissions, and maintaining the governance settings for the role?
 
 - Who are the role holders (users) who will perform the role duties or tasks?
 
@@ -76,11 +83,11 @@ As you identify candidate roles, start to fill out the spreadsheet. Create colum
 
 - Is it required to provide a dedicated admin workstation to the role holders?
 
-- Which application permissions (see example list for AD) are associated with this role?
+- Which application permissions (see example list for AD below) are associated with this role?
 
-## Selecting an access method
+## Select an access method
 
-There may be multiple roles in a privileged access management system with the same permissions assigned to them, if different communities of users have distinct access governance requirements. For example, an organization may choose to apply different policies for their own full-time employees acting as administrators, than for outsourced IT employees of another organization acting as administrators.
+There may be multiple roles in a privileged access management system with the same permissions assigned to them, if different communities of users have distinct access governance requirements. For example, an organization may apply different policies for their full-time employees than for outsourced IT employees of another organization.
 
 In some cases, a user may be permanently assigned to a role, and so they do not need to request or activate a role assignment. Examples of permanent assignment scenarios include:
 
@@ -92,11 +99,11 @@ In some cases, a user may be permanently assigned to a role, and so they do not 
 
 - A user account in the administrative forest, with a smartcard or virtual smartcard (for example, an account with an offline smartcard, needed for rare maintenance tasks)
 
-MIM enables dynamic role based assignments, in which the privileges are temporarily assigned to a user with a workflow and optional approval process. This can apply both for a user account in the administrative forest who authenticates with a password, and for one who authenticates with a smartcard or virtual smartcard. For organizations concerned about the potential for credential theft or misuse, the [Using Azure MFA for activation](use-azure-mfa-for-activation.md) guide includes instructions for how to configure MIM to require an additional out of band check at the time of role activation.
+For organizations concerned about the potential for credential theft or misuse, the [Using Azure MFA for activation](use-azure-mfa-for-activation.md) guide includes instructions for how to configure MIM to require an additional out of band check at the time of role activation.
 
-## Modeling delegated Active Directory permissions
+## Delegate Active Directory permissions
 
-When a new domain is created in Active Directory, Windows Server automatically creates well-known groups such as "Domain Admins". While these groups simplify getting started and may be suitable as is for smaller organizations, in larger organizations or those requiring more isolation of administrative privileges, a goal for privileged access management projects has been to empty groups like "Domain Admins" and replace their use with additional groups which provide fine-grained permissions.
+Windows Server automatically creates default groups such as "Domain Admins" when new domains are created. These groups simplify getting started and may be suitable for smaller organizations. However, larger organizations, or those requiring more isolation of administrative privileges, should empty groups like Domain Admins and replace them with groups that provide fine-grained permissions.
 
 One of the limitations of the Domain Admins group is that it grants permissions for three separate functions: managing the Active Directory service itself, managing the data held in Active Directory, and enabling remote logon onto domain joined computers. Another limitation of the Domain Admins group is that it cannot have members from an external domain. So in its place, an organization could create new security groups that provide only the necessary permissions, and use MIM to dynamically provide administrator accounts with those group memberships.
 

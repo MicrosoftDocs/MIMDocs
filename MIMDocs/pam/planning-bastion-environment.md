@@ -6,7 +6,7 @@ description:
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 06/13/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -79,7 +79,7 @@ As administration of applications will be transitioned to the bastion environmen
 
 - Maintain a backup copy of AD and SQL for each change to users or role definitions in the dedicated admin forest.
 
-## Configuring appropriate Active Directory permissions
+## Configure appropriate Active Directory permissions
 
 The administrative forest should be configured to least privilege based on the requirements for Active Directory administration.
 
@@ -141,25 +141,23 @@ Although inconvenient, separate hardened workstations dedicated to users with hi
 
 - **Exploit mitigations** to mitigate against unknown threats and exploits, including the Enhanced Mitigation Experience Toolkit (EMET).
 
-- **Attack surface analysis** to prevent introduction of new attack vectors to Windows during installation of new software.
+- **Attack surface analysis** to prevent introduction of new attack vectors to Windows during installation of new software. Tools such as the Attack Surface Analyzer (ASA) help assess configuration settings on a host and identify attack vectors introduced by software or configuration changes.
 
-Use of tools such as the Attack Surface Analyzer (ASA) will help assess configuration settings on a host and identify attack vectors introduced by software or configuration changes.
+- **Administrative privileges** should not be given to users on their local computer.
 
-- Users should not need local computer administrative privileges.
-
-- Outgoing RDP sessions should have RestrictedAdmin mode, except when required by the role. See [What's New in Remote Desktop Services in Windows Server](https://technet.microsoft.com/library/dn283323.aspx) for more information.
+- **RestrictedAdmin mode** for outgoing RDP sessions, except when required by the role. See [What's New in Remote Desktop Services in Windows Server](https://technet.microsoft.com/library/dn283323.aspx) for more information.
 
 Some of these measures might seem extreme, but public revelations in recent years have illustrated the significant capabilities that skilled adversaries possess to compromise targets.
 
-### Establishing trust and preparing existing domains for management from the bastion environment
+## Prepare existing domains to be managed by the bastion environment
 
-MIM includes PowerShell cmdlets to assist in establishing trust between the existing AD domains and the dedicated administrative forest in the bastion environment. After the bastion environment is deployed, and before any users or groups are converted to JIT, then the New-PAMTrust and New-PAMDomainConfiguration cmdlets will update the domain trust relationships and create artifacts needed for AD and MIM.
+MIM uses PowerShell cmdlets to establish trust between the existing AD domains and the dedicated administrative forest in the bastion environment. After the bastion environment is deployed, and before any users or groups are converted to JIT, then the `New-PAMTrust` and `New-PAMDomainConfiguration` cmdlets will update the domain trust relationships and create artifacts needed for AD and MIM.
 
 When the existing Active Directory topology changes, the `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` and `Remove-PAMDomainConfiguration` cmdlets can be used to update the trust relationships.
 
-#### Procedures for establishing trust for each forest
+### Establish trust for each forest
 
-The New-PAMTrust cmdlet must be run once for each existing forest. It is invoked on the MIM Service computer in the administrative domain. The parameters to this command are the domain name of the top domain of the existing forest, and credential of an administrator of that domain.
+The `New-PAMTrust` cmdlet must be run once for each existing forest. It is invoked on the MIM Service computer in the administrative domain. The parameters to this command are the domain name of the top domain of the existing forest, and credential of an administrator of that domain.
 
 ```
 New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
@@ -167,81 +165,94 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 After establishing the trust, then configure each domain to enable management from the bastion environment, as described in the next section.
 
-#### Procedures for enabling management of each domain
+### Enable management of each domain
 
 There are seven requirements for enabling management for an existing domain.
 
-1. There must be a group in the existing domain, whose name is the NetBIOS domain name followed by three dollar signs, e.g., "CONTOSO$$$". The group scope must be "domain local" and the group type must be "Security". This will be needed for groups to be created in the dedicated administrative forest with the same Security identifier as groups in this domain. This can be done with the following PowerShell command, performed by an administrator of the existing domain and run on an workstation joined to the existing domain:
+#### 1. A security group on the local domain
+
+There must be a group in the existing domain, whose name is the NetBIOS domain name followed by three dollar signs, e.g., *CONTOSO$$$*. The group scope must be *domain local* and the group type must be *Security*. This is needed for groups to be created in the dedicated administrative forest with the same Security identifier as groups in this domain. Create this group with the following PowerShell command, performed by an administrator of the existing domain and run on an workstation joined to the existing domain:
 
 ```
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-2. The group policy settings on the domain controller for auditing, must include both success and failure auditing for Audit account management and Audit directory service access. This can be done with the Group Policy management console, performed by an administrator of the existing domain and run on a workstation joined to the existing domain:
+#### 2. Success and failure auditing
 
-3. **Configure auditing** Go to Start, Administrative Tools, and then launch Group Policy Management.
+The group policy settings on the domain controller for auditing must include both success and failure auditing for Audit account management and Audit directory service access. This can be done with the Group Policy management console, performed by an administrator of the existing domain and run on a workstation joined to the existing domain:
 
-4. Navigate to Forest: contoso.local, Domains, contoso.local, Domain Controllers, Default Domain Controllers Policy. An informational message will appear.
+3. Go to **Start** > **Administrative Tools** > **Group Policy Management**.
 
-![pam-group-policy-management-editor](media/pam-group-policy-management.jpg)
+4. Navigate to **Forest: contoso.local** > **Domains** > **contoso.local** > **Domain Controllers** > **Default Domain Controllers Policy**. An informational message will appear.
 
-5. Right-click on Default Domain Controllers Policy and select Edit... in the Right-click menu. A new window will appear.
+    ![Default domain controllers policy - screenshot](media/pam-group-policy-management.jpg)
 
-6. In the Group Policy Management Editor window, under the Default Domain Controllers Policy tree, navigate to and expand Computer Configuration, Policies, Windows Settings, Security Settings, Local Policies, Audit Policy.
+5. Right-click on **Default Domain Controllers Policy** and select **Edit**. A new window will appear.
 
-![pam-group-policy-management-editor](media/pam-group-policy-management-editor.jpg)
+6. In the Group Policy Management Editor window, under the Default Domain Controllers Policy tree, navigate to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **Audit Policy**.
 
-5. In the details pane, right click on Audit account management and select Properties in the right-click menu. Click Define these policy settings, put a checkbox on Success, put a checkbox on Failure, click Apply and OK.
+    ![Group policy management editor - screenshot](media/pam-group-policy-management-editor.jpg)
 
-6. In the details pane, right click on Audit directory service access and select Properties in the right-click menu. Click Define these policy settings, put a checkbox on Success, put a checkbox on Failure, click Apply and OK.
+5. In the details pane, right click on **Audit account management** and select **Properties**. Select **Define these policy settings**, put a checkbox on **Success**, put a checkbox on **Failure**, click **Apply** and **OK**.
 
-![pam-group-policy-management-editor2](media/pam-group-policy-management-editor2.jpg)
+6. In the details pane, right click on **Audit directory service access** and select **Properties**. Select **Define these policy settings**, put a checkbox on **Success**, put a checkbox on **Failure**, click **Apply** and **OK**.
 
+    ![Success and failure policy settings - screenshot](media/pam-group-policy-management-editor2.jpg)
 
-7. Close the Group Policy Management Editor window, the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:
+7. Close the Group Policy Management Editor window and the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:
 
-```
-gpupdate /force /target:computere
-```
+    ```
+    gpupdate /force /target:computere
+    ```
 
 The message “Computer Policy update has completed successfully.” should appear after a few minutes.
 
-8. The domain controllers must allow RPC over TCP/IP connections for LSA from the bastion environment. On older versions of Windows Server, TCP/IP support in LSA must be enabled in the registry:
+#### 3. Allow connections to the Local Security Authority
+
+The domain controllers must allow RPC over TCP/IP connections for Local Security Authority (LSA) from the bastion environment. On older versions of Windows Server, TCP/IP support in LSA must be enabled in the registry:
 
 ```
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-9. The `New-PAMDomainConfiguration` cmdlet must be run on the MIM Service computer in the administrative domain. The parameters to this command are the domain name of the existing domain, and credential of an administrator of that domain.
+#### 4. Create the PAM domain configuration
+
+The `New-PAMDomainConfiguration` cmdlet must be run on the MIM Service computer in the administrative domain. The parameters to this command are the domain name of the existing domain, and credential of an administrator of that domain.
 
 ```
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-10. The accounts in the bastion forest used to establish roles (admins who use the `New-PAMUser` and `New-PAMGroup` cmdlets), as well as the account used by the MIM monitor service, need read permissions in that domain.
+#### 5. Give read permissions to accounts
 
-For example, if CORPDC is a domain controller of the existing domain CONTOSO, and PRIV\\Administrator is the user in the bastion environment who needs read access, then following steps enable read access to the domain by an administrator and the monitoring service.
+The accounts in the bastion forest used to establish roles (admins who use the `New-PAMUser` and `New-PAMGroup` cmdlets), as well as the account used by the MIM monitor service, need read permissions in that domain.
 
-11. **On CORPDC, enable read access to AD by PRIV administrators and the monitoring service.** Ensure you are logged into CORPDC as a Contoso domain administrator (such as Contoso\Administrator).
+The following steps enable read access for the user *PRIV\Administrator* to the domain *Contoso* within the *CORPDC* domain controller:
 
-12. Launch Active Directory Users and Computers.
+1. Ensure you are logged into CORPDC as a Contoso domain administrator (such as Contoso\Administrator).
 
-13. Right click on the domain contoso.local and select Delegate Control.
+2. Launch Active Directory Users and Computers.
 
-14. On the Selected users and groups tab, click Add.
+3. Right click on the domain **contoso.local** and select **Delegate Control**.
 
-15. On the Select Users, Computers, or Groups popup, click Locations and change the location to priv.contoso.local. On the object name, type Domain Admins and click Check Names. When a popup appears, for the username type priv\administrator and the password.
+4. On the Selected users and groups tab, click **Add**.
 
-16. After Domain Admins, type "; MIMMonitor". After the names Domain Admins and MIMMonitor are underlined, click OK, then click Next.
+5. On the Select Users, Computers, or Groups popup, click **Locations** and change the location to *priv.contoso.local*. On the object name, type *Domain Admins* and click **Check Names**. When a popup appears, for the username type *priv\administrator* and the password.
 
-17. In the list of common tasks, select "Read all user information", then click Next and click Finish.
+6. After Domain Admins, type *; MIMMonitor*. After the names Domain Admins and MIMMonitor are underlined, click **OK**, then click **Next**.
+
+7. In the list of common tasks, select **Read all user information**, then click **Next** and **Finish**.
 
 18. Close Active Directory Users and Computers.
 
-> [!Note] {If the goal of the privileged access management project is to reduce the number of accounts with Domain Administrator privileges permanently assigned to the domain, there must be a *break glass* account in the domain, in case there is a later problem with the trust relationship. Accounts for emergency access to the production forest should exist in each domain, and should only be able to log into domain controllers. For organizations with multiple sites, additional accounts may be required for redundancy.}
+#### 6. A break glass account
 
-19. Finally, review the permissions on the *AdminSDHolder* object in the System container in that domain. The *AdminSDHolder* object has a unique Access Control List (ACL), which is used to control the permissions of security principals that are members of built-in privileged Active Directory groups. Note if any changes to the default permissions have been made that would impact users with administrative privileges in the domain, since those permissions will not apply to users whose account is in the bastion environment.
+If the goal of the privileged access management project is to reduce the number of accounts with Domain Administrator privileges permanently assigned to the domain, there must be a *break glass* account in the domain, in case there is a later problem with the trust relationship. Accounts for emergency access to the production forest should exist in each domain, and should only be able to log into domain controllers. For organizations with multiple sites, additional accounts may be required for redundancy.
 
-### Selecting users and groups for inclusion
+#### 7. Update permissions in the bastion environment
+
+Review the permissions on the *AdminSDHolder* object in the System container in that domain. The *AdminSDHolder* object has a unique Access Control List (ACL), which is used to control the permissions of security principals that are members of built-in privileged Active Directory groups. Note if any changes to the default permissions have been made that would impact users with administrative privileges in the domain, since those permissions will not apply to users whose account is in the bastion environment.
+
+## Select users and groups for inclusion
 
 The next step is defining the PAM roles, associating the users and groups to which they should have access. This will typically be a subset of the users and groups for the tier identified as being managed in the bastion environment. More information is in [Defining roles for Privileged Access Management](defining-roles-for-pam.md).
