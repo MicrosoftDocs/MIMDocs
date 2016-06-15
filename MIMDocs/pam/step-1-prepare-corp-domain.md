@@ -5,7 +5,7 @@ title: Step 1 - Prepare the host and the CORP domain | Microsoft Identity Manage
 description:
 keywords:
 author: kgremban
-manager: stevenpo
+manager: femila
 ms.date: 06/10/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager

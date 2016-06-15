@@ -5,7 +5,7 @@ title: Step 3 – Prepare a PAM server | Microsoft Identity Manager
 description:
 keywords:
 author:
-manager: stevenpo
+manager: femila
 ms.date: 06/10/2016
 ms.topic: article
 ms.prod: identity-manager-2015

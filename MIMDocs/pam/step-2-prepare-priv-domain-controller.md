@@ -5,7 +5,7 @@ title: Step 2 - Prepare the PRIV domain controller | Microsoft Identity Manager
 description:
 keywords:
 author: kgremban
-manager: stevenpo
+manager: femila
 ms.date: 06/10/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager

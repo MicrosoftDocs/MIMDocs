@@ -5,7 +5,7 @@ title: Step 6 – Transition a group to Privileged Access Management | Microsoft
 description:
 keywords:
 author:
-manager: stevenpo
+manager: femila
 ms.date: 06/10/2016
 ms.topic: article
 ms.prod: identity-manager-2015

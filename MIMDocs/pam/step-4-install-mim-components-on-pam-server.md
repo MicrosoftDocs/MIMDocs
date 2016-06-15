@@ -5,7 +5,7 @@ title: Step 4 – Install MIM components on PAM server and workstation | Microso
 description:
 keywords:
 author:
-manager: stevenpo
+manager: femila
 ms.date: 06/10/2016
 ms.topic: article
 ms.prod: identity-manager-2015

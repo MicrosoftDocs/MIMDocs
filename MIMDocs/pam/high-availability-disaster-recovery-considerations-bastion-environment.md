@@ -5,7 +5,7 @@ title: High availability and disaster recovery considerations for the bastion en
 description:
 keywords:
 author: kgremban
-manager: stevenpo
+manager: femila
 ms.date: 06/14/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager

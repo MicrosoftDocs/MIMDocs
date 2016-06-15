@@ -5,7 +5,7 @@ title: Step 5 – Establish trust between PRIV and CORP forests | Microsoft Iden
 description:
 keywords:
 author:
-manager: stevenpo
+manager: femila
 ms.date: 06/10/2016
 ms.topic: article
 ms.prod: identity-manager-2015

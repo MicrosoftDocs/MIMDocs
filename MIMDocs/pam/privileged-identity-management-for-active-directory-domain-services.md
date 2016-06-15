@@ -5,7 +5,7 @@ title: Privileged Access Management for Active Directory Domain Services | Micro
 description:
 keywords:
 author: kgremban
-manager: stevenpo
+manager: femila
 ms.date: 06/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015

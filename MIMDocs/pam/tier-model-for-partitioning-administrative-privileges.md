@@ -5,7 +5,7 @@ title: Tier model for partitioning administrative privileges | Microsoft Identit
 description:
 keywords:
 author: kgremban
-manager: stevenpo
+manager: femila
 ms.date: 06/14/2016
 ms.topic: article
 ms.prod: identity-manager-2015

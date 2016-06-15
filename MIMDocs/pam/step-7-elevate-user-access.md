@@ -5,7 +5,7 @@ title: Step 7 – Elevate a user’s access | Microsoft Identity Manager
 description:
 keywords:
 author: kgremban
-manager: stevenpo
+manager: femila
 ms.date: 06/10/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
