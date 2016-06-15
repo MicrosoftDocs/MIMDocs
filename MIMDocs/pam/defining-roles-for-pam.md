@@ -105,25 +105,30 @@ For organizations concerned about the potential for credential theft or misuse, 
 
 Windows Server automatically creates default groups such as "Domain Admins" when new domains are created. These groups simplify getting started and may be suitable for smaller organizations. However, larger organizations, or those requiring more isolation of administrative privileges, should empty groups like Domain Admins and replace them with groups that provide fine-grained permissions.
 
-One of the limitations of the Domain Admins group is that it grants permissions for three separate functions: managing the Active Directory service itself, managing the data held in Active Directory, and enabling remote logon onto domain joined computers. Another limitation of the Domain Admins group is that it cannot have members from an external domain. So in its place, an organization could create new security groups that provide only the necessary permissions, and use MIM to dynamically provide administrator accounts with those group memberships.
+One limitation of the Domain Admins group is that it cannot have members from an external domain. Another limitation is that it grants permissions for three separate functions:  
+- Managing the Active Directory service itself  
+- Managing the data held in Active Directory  
+- Enabling remote logon onto domain joined computers.
 
-### Example Active Directory service management permissions
+In place of default groups like Domain Admins, create new security groups that provide only the necessary permissions, and use MIM to dynamically provide administrator accounts with those group memberships.
+
+### Service management permissions
 
 The following table gives examples of permissions which would be relevant to include in roles for managing AD.
 
 | Role | Description |
 | ---- | ---- |
 | Domain/DC Maintenance | Membership in the Domain\Administrators group that allows for troubleshooting and altering the domain controller operating system, promoting a new domain controller into an existing domain in the forest and AD role delegation.
-|Manage Virtual DCs | Manage domain controller (DC) virtual machines (VMs) using the virtualization management software. This privilege may be granted via full control of all virtual machines in the management tool or by using the Role-based access control (RBAC) functionality. |
-| Extend Schema | Manage the schema including extending it to include new object definitions and alter permissions to schema objects and alter schema default permissions for object types |
+|Manage Virtual DCs | Manage domain controller (DC) virtual machines (VMs) using the virtualization management software. This privilege may be granted via full control of all virtual machines in the management tool or Role-based access control (RBAC) functionality. |
+| Extend Schema | Manage the schema, including adding new object definitions, altering permissions to schema objects, and altering schema default permissions for object types |
 | Backup Active Directory Database | Take a backup copy of the Active Directory Database in its entirety, including all secrets entrusted to the DC and the Domain. |
 | Manage Trusts and Functional Levels | Create and delete trusts with external domains and forests. |
-| Manage Sites, Subnets and Replication | Manage the Active Directory replication topology objects including modifying sites, subnets, and site link objects and initiate replication operations |
-| Manage GPOs | Create, delete and modify Group Policy Objects throughout the domain |
-| Manage Zones | Create, delete and modify DNS Zones and objects in the Active Directory |
+| Manage Sites, Subnets, and Replication | Manage the Active Directory replication topology objects including modifying sites, subnets, and site link objects and initiating replication operations |
+| Manage GPOs | Create, delete, and modify Group Policy Objects throughout the domain |
+| Manage Zones | Create, delete, and modify DNS Zones and objects in the Active Directory |
 | Modify Tier 0 OUs | Modify Tier 0 OUs and contained objects in the Active Directory |
 
-### Example Active Directory data management permissions
+### data management permissions
 
 The following table gives examples of permissions which would be relevant to include in roles for managing or using the data held in AD.
 
@@ -147,7 +152,7 @@ The following sections give examples for typical enterprise scenarios.
 
 ### Tier 0 - Administrative forest
 
-Role suitable for accounts in the bastion environment might include:
+Roles suitable for accounts in the bastion environment might include:
 
 - Emergency access to the administrative forest
 - "Red Card" admins: users who are administrators of the administrative forest

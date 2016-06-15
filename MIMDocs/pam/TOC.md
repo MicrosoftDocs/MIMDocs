@@ -8,7 +8,7 @@
 ### [Environment overview](environment-overview.md)
 ### [Tier model](tier-model-for-partitioning-administrative-privileges.md)
 ### [Plan a bastion environment](planning-bastion-environment.md)
-### [Define roles for PAM](defining-roles-for-pam.md)
+### [Define roles](defining-roles-for-pam.md)
 ### [High availability and disaster recovery](high-availability-disaster-recovery-considerations-bastion-environment.md)
 ### [Hardware and software requirements](hardware-software-requirements.md)
 ## [Deploy MIM for Privileged Access Management](configuring-mim-environment-for-pam.md)

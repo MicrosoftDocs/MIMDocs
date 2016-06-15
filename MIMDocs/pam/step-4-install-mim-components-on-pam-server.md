@@ -52,6 +52,8 @@ Follow the guidelines of the installer and complete the installation.
 
 2.  When configuring common services and the MIM database connection, specify **Create a new database**.
 
+    > [!NOTE] If you install MIM Service multiple times for high availability, specify **Use an existing database** for all subsequent installations.
+
 3.  When configuring a mail server connection, set the mail server to the hostname of an Exchange or SMTP server for the CORP environment (specify *corpdc.contoso.local* if you do not have a mail server) and uncheck the **Use SSL** and **Mail Server is Exchange Server 2007 or Exchange Server 2010** checkboxes.
 
 4.  Choose to generate a new self-signed certificate.

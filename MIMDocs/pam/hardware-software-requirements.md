@@ -6,7 +6,7 @@ description:
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 06/10/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-No hardware requirements beyond those of the underlying software platforms, sufficient memory or disk space and network connectivity is required. This test lab is not intended to demonstrate performance, scalability or high availability, and does not represent a recommended deployment topology for large enterprises or production environments.
+No hardware requirements beyond those of the underlying software platforms, sufficient memory or disk space and network connectivity is required. This article provides the minimum requirements for a basic deployment. It is not intended to demonstrate performance, scalability, or high availability, and does not represent a recommended deployment topology for large enterprises or production environments.
 
 ## Installing from software packages
 
@@ -49,14 +49,14 @@ If you do not have licenses for Windows, SQL Server, or Windows Server you can d
 
 ### TechNet Evaluation Center
 
-[Download Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)
-[Download Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)
-[Download Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
+- [Download Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
+- [Download Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
+- [Download Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
 
 ### Microsoft Download Center
 
-[Download SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)
-[Download SharePoint Foundation 2013 SP! and its prerequisites](https://www.microsoft.com/download/details.aspx?id=42039)
+- [Download SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
+- [Download SharePoint Foundation 2013 SP1 and its prerequisites](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## Hardware requirements
 

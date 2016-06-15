@@ -109,7 +109,7 @@ If you want to us a text editor such as Notepad:
 4. Save the file, and restart IIS with the PowerShell command `iisreset /START`
 
 ## Install SQL Server
-Install either SQL Server 2012 (Service Pack 1 or later) or SQL Server 2014. The following steps assume SQL 2014.
+If SQL Server is not in the bastion environment already, install either SQL Server 2012 (Service Pack 1 or later) or SQL Server 2014. The following steps assume SQL 2014.
 
 1. Make sure you are signed in as *MIMAdmin*.
 2. Right click on PowerShell and select **Run as administrator**.   
