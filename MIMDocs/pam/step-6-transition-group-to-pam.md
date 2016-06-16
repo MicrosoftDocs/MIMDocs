@@ -6,7 +6,7 @@ description:
 keywords:
 author:
 manager: femila
-ms.date: 06/10/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -33,13 +33,14 @@ ms.suite: ems
 
 Privileged account creation in the PRIV forest is done using PowerShell cmdlets. These cmdlets perform the following functions:
 
-- Create a new group in the PRIV forest with the same Security Identifier (SID) as a group in the CORP forest. Create an object in the MIM Service database corresponding to the group in the PRIV forest.  
+- Create a new group in the PRIV forest with the same Security Identifier (SID) as a group in the CORP forest.  
+- Create an object in the MIM Service database corresponding to the group in the PRIV forest.  
 - For each user account, create two objects in the MIM Service database, corresponding to the user in the CORP forest and the new user account in the PRIV forest.  
-- Create a **PAM Role** object in the MIM Service database.  
+- Create a PAM Role object in the MIM Service database.  
 
 The cmdlets need to be run once for each group, and once for each member of a group. The migration cmdlets do not change or modify any user or groups in the CORP forest: the PAM administrator will do that manually afterwards.
 
-1. Sign in to *PAMSRV*, either directly or from a PRIV workstation, as *PRIV\MIMAdmin*.
+1. Sign in to PAMSRV, either directly or from a PRIV workstation, as *PRIV\MIMAdmin*.
 
 2.  Launch PowerShell, and type the following commands.
 
@@ -50,7 +51,7 @@ The cmdlets need to be run once for each group, and once for each member of a gr
 
 3.  Create a corresponding user account in PRIV for a user account in an existing forest, for demonstration purposes.
 
-    Type the following commands into PowerShell.  If you did not create a user named *Jen* in domain *contoso.local* in an earlier step, then change the parameters of the 'New-PAMUser' command as appropriate. The password 'Pass@word1' is just an example and should be changed to a unique password value.
+    Type the following commands into PowerShell.  If you did not use the name *Jen* to create the user in contoso.local earlier, then change the parameters of the command as appropriate. The password 'Pass@word1' is just an example and should be changed to a unique password value.
 
     ```
     $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
@@ -59,9 +60,9 @@ The cmdlets need to be run once for each group, and once for each member of a gr
     Set-ADUser –identity priv.Jen –Enabled 1
     ```
 
-4. Copy a group and its member, Jen, from *CONTOSO* to *PRIV* domain, for demonstration purposes.
+4. Copy a group and its member, Jen, from CONTOSO to PRIV domain, for demonstration purposes.
 
-    - Run the following commands, specifying the *CORP* domain admin (*CONTOSO\Administrator*) password where prompted:
+    Run the following commands, specifying the CORP domain admin (CONTOSO\Administrator) password where prompted:
 
         ```
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
@@ -76,9 +77,9 @@ The cmdlets need to be run once for each group, and once for each member of a gr
         -   The CORP forest Domain Controller NetBIOS name  
         -   The credentials of an domain admin user in the CORP forest  
 
-5.  Optionally, on *CORPDC*, remove Jen’s account from the *CONTOSO CorpAdmins* group, if it is still present.  This is only needed for demonstration purposes, to illustrate how permissions can be associated with accounts created in the *PRIV* forest.
+5.  (Optional) On CORPDC, remove Jen’s account from the **CONTOSO CorpAdmins** group, if it is still present.  This is only needed for demonstration purposes, to illustrate how permissions can be associated with accounts created in the PRIV forest.
 
-    1.  Sign in to *CORPDC* as *CONTOSO\Administrator*.
+    1.  Sign in to CORPDC as *CONTOSO\Administrator*.
 
     2.  Launch PowerShell, run the following command and confirm the change.
 
@@ -91,4 +92,4 @@ If you want to demonstrate that cross-forest access rights are effective for the
 
 >[!div class="step-by-step"]
 [« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Step 7 »](step-elevate-user-access.md)
+[Step 7 »](step-7-elevate-user-access.md)

@@ -105,7 +105,7 @@ An organization can select which functions in their bastion environment require 
 - SQL Server high availability with failover clusters requires at least two servers providing SQL Server, and these cannot be the same as a domain controller.
 - MIM Service should not be installed on the domain controller, in order to minimize the attack surface of each server.
 
-The smallest high availability topology for all functions in a bastion environment comprises at least four servers, and shared storage. Two of the servers must be configured as domain controllers, providing Active Directory Domain Services. Two servers distinct from the domain controllers would be configured as a failover cluster providing SQL Server.  And two servers distinct from the domain controllers, would provide the MIM Service.
+The smallest high availability topology for all functions in a bastion environment comprises at least four servers, and shared storage. Two of the servers must be configured as domain controllers, providing Active Directory Domain Services. The other two servers can be configured as a failover cluster providing SQL Server, and  provide the MIM Service.
 
 In addition, a typical deployment of the bastion environment would also include a privileged administration workstation for management of these servers, as well as a monitoring component
 

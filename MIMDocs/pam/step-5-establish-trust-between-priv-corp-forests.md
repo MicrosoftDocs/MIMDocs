@@ -6,7 +6,7 @@ description:
 keywords:
 author:
 manager: femila
-ms.date: 06/10/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -32,11 +32,11 @@ ms.suite: ems
 [Step 6 »](step-6-transition-group-to-pam.md)
 
 
-For each CORP domain such as *contoso.local*, the *PRIV* and *CONTOSO* domain controllers need to be bound by a trust. This lets users in the *PRIV* domain to access resources on the CORP domain.
+For each CORP domain such as contoso.local, the PRIV and CONTOSO domain controllers need to be bound by a trust. This lets users in the PRIV domain to access resources on the CORP domain.
 
 ## Connect each domain controller to its counterpart
 
-Prior to establishing trust, each domain controller must be configured for DNS name resolution for its counterpart, based on the other domain controller/DNS server’s IP address.
+Before establishing trust, each domain controller must be configured for DNS name resolution for its counterpart, based on the other domain controller/DNS server’s IP address.
 
 1.  If the domain controllers or server with the MIM software are deployed as virtual machines, ensure that there are no other DNS servers which are providing domain naming services to those computers.
     - If the virtual machines have multiple network interfaces, including network interfaces connected to public networks, you may need to temporarily disable those connections or override the Windows network interface settings. It's important to make sure that a DHCP-supplied DNS server address is not used by any virtual machines.
@@ -48,26 +48,26 @@ Prior to establishing trust, each domain controller must be configured for DNS n
     ```
     Check that the output indicates a nameserver record for the PRIV domain with the correct IP address.
 
-3.  If the domain controller is unable to route the PRIV domain, use **DNS Manager** (located in **Start** > **Application Tools** > **DNS**) to configure DNS name forwarding for the PRIV domain to PRIVDC’s IP address. If it is a superior domain (e.g., *contoso.local*), expand the nodes for this domain controller and its domain, such as **CORPDC** > **Forward Lookup Zones** > **contoso.local**, and ensure a key named *priv* is present as a Name Server (NS) type.
+3.  If the domain controller is unable to route the PRIV domain, use **DNS Manager** (located in **Start** > **Application Tools** > **DNS**) to configure DNS name forwarding for the PRIV domain to PRIVDC’s IP address. If it is a superior domain (e.g., contoso.local), expand the nodes for this domain controller and its domain, such as **CORPDC** > **Forward Lookup Zones** > **contoso.local**, and ensure a key named **priv** is present as a Name Server (NS) type.
 
     ![file structure for priv key - screenshot](./media/PAM_GS_DNS_Manager.png)
 
 ## Establish trust on PAMSRV
 
-On *PAMSRV*, establish one-way trust with each domain such as *CORPDC* so that the CORP domain controllers trust the *PRIV* forest.
+On PAMSRV, establish one-way trust with each domain such as CORPDC so that the CORP domain controllers trust the PRIV forest.
 
-1. Sign in to PAMSRV as a PRIV domain administrator (such as *PRIV\Administrator*).
+1. Sign in to PAMSRV as a PRIV domain administrator (PRIV\Administrator).
 
 2.  Launch PowerShell.
 
-3.  Type the following PowerShell commands for each existing forest. Enter the credential for the CORP domain administrator (e.g., *CONTOSO\Administrator*) when prompted.
+3.  Type the following PowerShell commands for each existing forest. Enter the credential for the CORP domain administrator (CONTOSO\Administrator) when prompted.
 
     ```
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
-4.  Type the following PowerShell commands for each domain in the existing forests. Enter the credential for the CORP domain administrator (e.g., *CONTOSO\Administrator*) when prompted.
+4.  Type the following PowerShell commands for each domain in the existing forests. Enter the credential for the CORP domain administrator (CONTOSO\Administrator) when prompted.
 
     ```
     $ca = get-credential
@@ -78,26 +78,17 @@ On *PAMSRV*, establish one-way trust with each domain such as *CORPDC* so that t
 
 For each existing forest, enable read access to AD by PRIV administrators and the monitoring service.
 
-1.  Sign in to the existing CORP forest domain controller, e.g., *CORPDC*, as a domain administrator for the top-level domain in that forest (such as *Contoso\Administrator*).
+1.  Sign in to the existing CORP forest domain controller, (CORPDC), as a domain administrator for the top-level domain in that forest (Contoso\Administrator).  
+2.  Launch **Active Directory Users and Computers**.  
+3.  Right click on the domain **contoso.local** and select **Delegate Control**.  
+4.  On the Selected Users and Groups tab, click **Add**.  
+5.  On the Select Users, Computers, or Groups window, click **Locations** and change the location to *priv.contoso.local*.  On the object name, type *Domain Admins* and click **Check Names**. When a popup appears, enter the username *priv\administrator* and its password.  
+6.  After Domain Admins, add "*; MIMMonitor*". Once the names **Domain Admins** and **MIMMonitor** are underlined, click **OK**, then click **Next**.  
+7.  In the list of common tasks, select **Read all user information**, then click **Next** and **Finish**.  
+8.  Close Active Directory Users and Computers.
 
-2.  Launch **Active Directory Users and Computers**.
-
-3.  Right click on the domain **contoso.local** and select **Delegate Control**.
-
-4.  On the Selected users and groups tab, click **Add**.
-
-5.  On the **Select Users, Computers, or Groups** popup, click **Locations** and change the location to *priv.contoso.local*.  On the object name, type *Domain Admins* and click **Check Names**. When a popup appears, enter the username *priv\administrator* and its password.
-
-6.  After *Domain Admins*, add "*; MIMMonitor*". Once the names **Domain Admins** and **MIMMonitor** are underlined, click **OK**, then click **Next**.
-
-7.  In the list of common tasks, select "**Read all user information**", then click **Next** and click **Finish**.
-
-8.  Close **Active Directory Users and Computers**.
-
-9.  Open a PowerShell window.
-
-10.  Use **netdom** to ensure SID history is enabled and SID filtering is disabled.  Type:
-
+9.  Open a PowerShell window.  
+10.  Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:  
     ```
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -107,9 +98,8 @@ For each existing forest, enable read access to AD by PRIV administrators and th
     The output should also indicate that **SID filtering is not enabled for this trust**. See [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx)  for more information.
 
 ## Start the Monitoring and Component services
-On *PAMSRV*, start the **monitoring and component services**.
 
-1.  Sign in to *PAMSRV* as a *PRIV* domain administrator (such as *PRIV\Administrator*).
+1.  Sign in to PAMSRV as a PRIV domain administrator (PRIV\Administrator).
 
 2.  Launch PowerShell.
 

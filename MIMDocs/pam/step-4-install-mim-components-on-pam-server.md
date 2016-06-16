@@ -4,9 +4,9 @@
 title: Step 4 – Install MIM components on PAM server and workstation | Microsoft Identity Manager
 description:
 keywords:
-author:
+author: kgremban
 manager: femila
-ms.date: 06/10/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -32,21 +32,17 @@ ms.suite: ems
 [Step 5 »](step-5-establish-trust-between-priv-corp-forests.md)
 
 
-1.  On *PAMSRV*, sign in as *PRIV\Administrator* to be able to install MIM Service and Portal and the sample portal web application.
+On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service and Portal and the sample portal web application.
 
   > [!NOTE] You must be a domain administrator; if you are not running the following commands as a domain administrator, the trust validation checks in the next step will not be completed.
 
-2.  If you have downloaded MIM, unpack the MIM installation archive to a new folder.
+If you have downloaded MIM, unpack the MIM installation archive to a new folder.
 
 ##  Run the Service and Portal install program.  
 
 Follow the guidelines of the installer and complete the installation.
 
-1.  When selecting component features, it is necessary to include the following:
-
-  -   MIM Service (include Privileged Access Management, but not MIM Reporting)
-
-  -   MIM Portal
+1.  When selecting component features, include MIM Service (with Privileged Access Management, but not MIM Reporting) and MIM Portal  
 
     ![Custom setup - screenshot](./media/PAM_GS_MIM_2015_Service_Portal.png)
 
@@ -54,7 +50,7 @@ Follow the guidelines of the installer and complete the installation.
 
     > [!NOTE] If you install MIM Service multiple times for high availability, specify **Use an existing database** for all subsequent installations.
 
-3.  When configuring a mail server connection, set the mail server to the hostname of an Exchange or SMTP server for the CORP environment (specify *corpdc.contoso.local* if you do not have a mail server) and uncheck the **Use SSL** and **Mail Server is Exchange Server 2007 or Exchange Server 2010** checkboxes.
+3.  When configuring a mail server connection, set the mail server to the hostname of an Exchange or SMTP server for the CORP environment (use corpdc.contoso.local if you do not have a mail server) and uncheck the **Use SSL** and **Mail Server is Exchange Server 2007 or Exchange Server 2010** checkboxes.
 
 4.  Choose to generate a new self-signed certificate.
 
@@ -64,9 +60,9 @@ Follow the guidelines of the installer and complete the installation.
     - Service Account Domain: *PRIV*  
     - Service Email Account: *MIMService@priv.contoso.local*  
 
-6.  Accept the defaults for the synchronization server hostname and specify the MIM Management Agent account as *PRIV\mimma*. A warning message will appear that the MIM synchronization service does not exist. This is OK, since the MIM synchronization service is not used in this scenario.
+6.  Accept the defaults for the synchronization server hostname and specify the MIM Management Agent account as *PRIV\MIMMA*. A warning message will appear that the MIM synchronization service does not exist. This is OK, since the MIM synchronization service is not used in this scenario.
 
-7.  Set *pamsrv* as MIM Service server address.
+7.  Set *PAMSRV* as MIM Service server address.
 
 8.  Set *http://pamsrv.priv.contoso.local:82* as the SharePoint site collection URL.
 
@@ -74,7 +70,7 @@ Follow the guidelines of the installer and complete the installation.
 
 10. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to the MIM portal site.
 
-11. Leave the PAM REST API hostname empty, and set 8086 as the port number.
+11. Leave the PAM REST API hostname empty, and set *8086* as the port number.
 
   ![Binding Information for the PAM REST API - screenshot](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
@@ -83,9 +79,9 @@ Follow the guidelines of the installer and complete the installation.
     - Application Pool Account Password: *Pass@word1* (or the password you created in Step 2)  
     - Application Pool Account Domain: *PRIV*  
 
-  ![Application pool account credentials - screenshot](./media/PAM_GS_Configure_Component_Service.png)
+    ![Application pool account credentials - screenshot](./media/PAM_GS_Configure_Component_Service.png)
 
-  Note that a warning may appear that the Service Account is not secure in its current configuration. That's OK.
+    A warning may appear that the Service Account is not secure in its current configuration. That's OK.
 
 13. Configure the MIM PAM component service:
     - Service Account Name: *MIMComponent*
@@ -101,7 +97,7 @@ Follow the guidelines of the installer and complete the installation.
 
   ![PAM Monitoring Service account credentials - screenshot](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
 
-15. On the **Enter Information for MIM Password Portals** page, leave checkboxes empty and continue. Click **Next** to continue the installation.
+15. On the Enter Information for MIM Password Portals page, leave checkboxes empty and continue. Click **Next** to continue the installation.
 
 After installation completes, the server will reboot, then verify that the MIM Portal is active and enable users to view their own object resource in MIM.
 
@@ -109,11 +105,11 @@ After installation completes, the server will reboot, then verify that the MIM P
 
 1. After PAMSRV reboots, sign in as PRIV\Administrator.
 
-2. Launch Internet Explorer and connect to the MIM Portal on *http://pamsrv.priv.contoso.local:82/identitymanagement*. There may be a short delay the first time this page is located.
+2. Launch Internet Explorer and connect to the MIM Portal on http://pamsrv.priv.contoso.local:82/identitymanagement. There may be a short delay the first time this page is located.
 
 3. If necessary, sign in as PRIV\Administrator for Internet Explorer.
 
-4. In Internet Explorer, open the **Internet Options**, change to the **Security** tab, and add the site to the *Local intranet* zone if it is not already there. Close the Internet Options dialog.
+4. In Internet Explorer, open the **Internet Options**, change to the **Security** tab, and add the site to the **Local intranet zone** if it is not already there. Close the Internet Options dialog.
 
 5. Using Internet Explorer to view MIM Portal, click on **Management Policy Rules**.
 
@@ -125,24 +121,17 @@ After installation completes, the server will reboot, then verify that the MIM P
 
 The firewall should allow incoming connections to TCP port 5725, 5726, 8086 and 8090.
 
-1.  Launch **Windows Firewall with Advanced Security** (located in Administrative Tools).
-
-2.  Click on **Inbound Rules**.
-
+1.  Launch **Windows Firewall with Advanced Security** (located in Administrative Tools).  
+2.  Click on **Inbound Rules**.  
 3.  Verify that these two rules are listed:  
     - Forefront Identity Manager Service (STS)
-    - Forefront Identity Manager Service (Webservice)
-
-4.  Click **New rule** > **Port** > **TCP**, and type the specific local ports *8086* and *8090*. Click through the wizard accepting the defaults, give the rule a name, and click **Finish**.
-
+    - Forefront Identity Manager Service (Webservice)  
+4.  Click **New rule** > **Port** > **TCP**, and type the specific local ports *8086* and *8090*. Click through the wizard accepting the defaults, give the rule a name, and click **Finish**.  
 5.  After completing the wizard, close the Windows Firewall application.
 
-6.  Launch **Control Panel**.
-
-7.  Under **Network and Internet** select **View network status and tasks**.
-
-8.  Verify that there is an active Network which is listed as being *priv.contoso.local* and a *Domain network*.
-
+6.  Launch **Control Panel**.  
+7.  Under Network and Internet select **View network status and tasks**.  
+8.  Verify that there is an active Network which is listed as being priv.contoso.local and a Domain network.  
 9. Close **Control Panel**.
 
 ## Set up the sample web application
@@ -151,15 +140,15 @@ In this section you will install and configure the sample web application for th
 
 1.  From the sample web application archive, download the [Identity Management samples](https://github.com/Azure/identity-management-samples) as a zip file.
 
-2. Unpack the contents of the folder *identity-management-samples-master\Privileged-Access-Management-Portal\src* into a new folder called **Privileged Access Management Portal** within the folder *C:\Program Files\Microsoft Forefront Identity Manager\2010*.
+2. Unpack the contents of the folder `identity-management-samples-master\Privileged-Access-Management-Portal\src` into a new folder called **Privileged Access Management Portal** within the folder `C:\Program Files\Microsoft Forefront Identity Manager\2010`.
 
-3.  Create new web site in IIS with a site name of **MIM Privileged Access Management Example Portal**, physical path *C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal*, and port 8090.  This can be done using the following PowerShell command:
+3.  Create new web site in IIS with a site name of **MIM Privileged Access Management Example Portal**, physical path `C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal`, and port 8090.  This can be done using the following PowerShell command:
 
   ```
   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
   ```
 
-3.  Set up the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file *C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config*. In the **&lt;system.webServer&gt;** section, add the following lines:
+4.  Set up the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file `C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config`. In the `<system.webServer>` section, add the following lines:
 
   ```
   <httpProtocol>
@@ -171,15 +160,15 @@ In this section you will install and configure the sample web application for th
   </httpProtocol>
   ```
 
-4.  Configure the sample web application. Using a text editor such as Notepad, edit the file *C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js*. In that file, set the value of **pamRespApiUrl** to *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5.  Configure the sample web application. Using a text editor such as Notepad, edit the file `C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js`. In that file, set the value of **pamRespApiUrl** to *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
 
-5.  Restart IIS so these changes take effect.
+6.  Restart IIS with the following command for these changes to take effect.
 
   ```
   iisreset
   ```
 
-6.  (Optional) Verify that the user can authenticate to the REST API. Open a web browser as the administrator on *pamsrv*.  Navigate to the web site URL *http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/* authenticate if needed, and ensure that a download occurs.
+7.  (Optional) Verify that the user can authenticate to the REST API. Open a web browser as the administrator on PAMSRV.  Navigate to the web site URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, authenticate if needed, and ensure that a download occurs.
 
 ## Install the MIM PAM requestor cmdlets
 
