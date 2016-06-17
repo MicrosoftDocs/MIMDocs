@@ -29,7 +29,7 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Step 7 »](step-elevate-user-access.md)
+[Step 7 »](step-7-elevate-user-access.md)
 
 Privileged account creation in the PRIV forest is done using PowerShell cmdlets. These cmdlets perform the following functions:
 

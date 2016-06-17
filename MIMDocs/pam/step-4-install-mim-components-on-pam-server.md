@@ -140,15 +140,15 @@ In this section you will install and configure the sample web application for th
 
 1.  From the sample web application archive, download the [Identity Management samples](https://github.com/Azure/identity-management-samples) as a zip file.
 
-2. Unpack the contents of the folder `identity-management-samples-master\Privileged-Access-Management-Portal\src` into a new folder called **Privileged Access Management Portal** within the folder `C:\Program Files\Microsoft Forefront Identity Manager\2010`.
+2. Unpack the contents of the folder **identity-management-samples-master\Privileged-Access-Management-Portal\src** into a new folder **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal**.
 
-3.  Create new web site in IIS with a site name of **MIM Privileged Access Management Example Portal**, physical path `C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal`, and port 8090.  This can be done using the following PowerShell command:
+3.  Create new web site in IIS with a site name of MIM Privileged Access Management Example Portal, physical path C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal, and port 8090.  This can be done using the following PowerShell command:
 
   ```
   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
   ```
 
-4.  Set up the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file `C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config`. In the `<system.webServer>` section, add the following lines:
+4.  Set up the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. In the **<system.webServer>** section, add the following lines:
 
   ```
   <httpProtocol>
@@ -160,7 +160,7 @@ In this section you will install and configure the sample web application for th
   </httpProtocol>
   ```
 
-5.  Configure the sample web application. Using a text editor such as Notepad, edit the file `C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js`. In that file, set the value of **pamRespApiUrl** to *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5.  Configure the sample web application. Using a text editor such as Notepad, edit the file **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Set the value of **pamRespApiUrl** to *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
 
 6.  Restart IIS with the following command for these changes to take effect.
 

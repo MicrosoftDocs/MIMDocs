@@ -6,7 +6,7 @@ description:
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -49,14 +49,14 @@ If you do not have licenses for Windows, SQL Server, or Windows Server you can d
 
 ### TechNet Evaluation Center
 
-- [Download Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
-- [Download Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
-- [Download Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
+- [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
+- [Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
+- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
 
 ### Microsoft Download Center
 
-- [Download SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
-- [Download SharePoint Foundation 2013 SP1 and its prerequisites](https://www.microsoft.com/download/details.aspx?id=42039)
+- [SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
+- [SharePoint Foundation 2013 SP1 and its prerequisites](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## Hardware requirements
 

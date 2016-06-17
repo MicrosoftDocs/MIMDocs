@@ -6,7 +6,7 @@ description:
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -28,7 +28,7 @@ ms.suite: ems
 # High availability and disaster recovery considerations for the bastion environment
 This article describes considerations for high availability and disaster recovery when deploying Active Directory Domain Services (AD DS) and Microsoft Identity Manager 2016 (MIM) for Privileged Access Management (PAM).
 
-Enterprises focus on high availability and disaster recover for workloads in Windows Server, SQL Server, and Active Directory. But the reliable availability of the bastion environment for Privileged Access Management is also important. The bastion environment is a critical part of the organization's IT infrastructure, as users interact with its components in order to take on administrative roles. For more information on high availability in general, please see the white paper [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc).
+Enterprises focus on high availability and disaster recover for workloads in Windows Server, SQL Server, and Active Directory. But the reliable availability of the bastion environment for Privileged Access Management is also important. The bastion environment is a critical part of the organization's IT infrastructure, as users interact with its components in order to take on administrative roles. For more information on high availability in general, you can download the white paper [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc).
 
 ## High availability and disaster recovery scenarios
 
@@ -163,7 +163,7 @@ The servers in the bastion environment will be joined to a domain, and dependent
 Windows Server Active Directory Domain Services natively includes support for high availability and disaster recovery.
 
 #### Preparation
-A typical production deployment of privileged access management includes at least two domain controllers in the bastion environment. Instructions for setting up the first domain controller in the bastion environment are included in the deployment articles, as [Prepare PRIV domain controller](step-2-prepare-priv-domain-controller.md).
+A typical production deployment of privileged access management includes at least two domain controllers in the bastion environment. Instructions for setting up the first domain controller in the bastion environment are included in step 2 of the deployment articles, [Prepare the PRIV domain controller](step-2-prepare-priv-domain-controller.md).
 
 The procedure for adding an additional domain controller can be found at [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](https://technet.microsoft.com/library/jj574134.aspx).  
 
