@@ -1,6 +1,7 @@
 # [Understand and Explore](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
 # [Plan and Design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Deploy and Use](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# [Use Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [Developer Reference](microsoft-identity-manager-2016-developer-reference.md)
 ## [Microsoft Identity Manager 2016 Developer Reference](microsoft-identity-manager-2016-developer-reference.md)
 ### [Certificate Management REST API Reference](certificate-management-rest-api-reference.md)
