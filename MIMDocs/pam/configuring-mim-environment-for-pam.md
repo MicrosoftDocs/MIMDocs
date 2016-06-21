@@ -44,4 +44,5 @@ These steps are laid out so that you can start from scratch and build a test env
 
 7.  Demonstrate requesting, receiving, and making use of privileged elevated access to a protected resource.
 
-The following sections provide details about how to perform these tasks.
+>[!div class="step-by-step"]
+[Start »](step-1-prepare-corp-domain.md)
