@@ -50,7 +50,8 @@ Logon restrictions should be enforced to ensure that highly privileged accounts 
 - Domain admins (tier 0) cannot log on to enterprise servers (tier 1) and standard user workstations (tier 2).
 - Server administrators (tier 1) cannot log on to standard user workstations (tier 2).
 
->[!NOTE] Server administrators should not be in to the domain admin group. Personnel with responsibilities for managing both domain controllers and enterprise servers should be given separate accounts.
+>[!NOTE] 
+> Server administrators should not be in to the domain admin group. Personnel with responsibilities for managing both domain controllers and enterprise servers should be given separate accounts.
 
 Logon restrictions can be enforced with:
 
