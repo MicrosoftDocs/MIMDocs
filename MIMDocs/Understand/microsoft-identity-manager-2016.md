@@ -36,4 +36,4 @@ Microsoft Identity Manager 2016 works alongside Azure to give you control over y
 ## Privileged Identity Management
 Privileged Identity Management controls and manages administrative access by providing temporary, task-based access to sensitive resources. This means you can give users only as much permission as necessary, which lowers the chances of a cyber attacker gaining full administrative access. In addition, Privileged Identity Management extracts and isolates administrative accounts from existing Active Directory forests.
 
-MIM supports an on-premises Privileged Identity Management solution for managing Active Directors. To get started, [Use Privileged Access Management](privileged-identity-management-for-active-directory-domain-services.md).
+MIM supports an on-premises Privileged Identity Management solution for managing Active Directors. To get started, [Use Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
