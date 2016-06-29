@@ -57,7 +57,8 @@ Install Windows Server 2012 R2, or Windows Server 2016 Technical Preview 4 or la
 
 In this section, you will add the Active Directory Domain Services (AD DS), DNS Server, and File Server (part of the File and Storage Services section) roles, and promote this server to a domain controller of a new forest contoso.local.
 
-> [!NOTE]  If you already have a domain to use as your CORP domain, and that domain uses Windows Server 2012 R2 or later as its domain controller, you can skip to [Create additional users and groups for demonstration purposes](#create-additional-users-and-groups-for-demonstration-purposes).
+> [!NOTE]  
+> If you already have a domain to use as your CORP domain, and that domain uses Windows Server 2012 R2 or later as its domain controller, you can skip to [Create additional users and groups for demonstration purposes](#create-additional-users-and-groups-for-demonstration-purposes).
 
 1. While signed in as an administrator, launch PowerShell.
 
@@ -99,7 +100,8 @@ In some cases the group may already exist - this is normal if the domain was als
 
 If you created a new CORP domain, then you should create additional users and groups for demonstrating the PAM scenario. The user and group for demonstration purposes should not be domain administrators or controlled by the adminSDHolder settings in AD.
 
-> [!NOTE] If you already have a domain you will be using as the CORP domain, and it has a user and a group that you can use for demonstration purposes, then you can skip to the section [Configure auditing](#configure-auditing).
+> [!NOTE] 
+> If you already have a domain you will be using as the CORP domain, and it has a user and a group that you can use for demonstration purposes, then you can skip to the section [Configure auditing](#configure-auditing).
 
 We're going to create a security group named *CorpAdmins* and a user named *Jen*. You can use different names if you wish.
 
@@ -171,7 +173,8 @@ This will restart the domain controller, CORPDC. For further information on this
 
 If you do not already have a workstation computer joined to the domain, follow these instructions to prepare one.  
 
-> [!NOTE] If you already have a workstation joined to the domain, skip to [Create a resource for demonstration purposes](#create-a-resource-for-demonstration-purposes).
+> [!NOTE] 
+> If you already have a workstation joined to the domain, skip to [Create a resource for demonstration purposes](#create-a-resource-for-demonstration-purposes).
 
 ### Install Windows 8.1 or Windows 10 Enterprise as a VM
 
