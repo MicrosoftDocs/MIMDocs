@@ -227,7 +227,8 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
-> [!NOTE] The other forests must also be able to route DNS queries for the PRIV forest to this domain controller.  If you have multiple existing Active Directory forests, then you must also add a DNS conditional forwarder to each of those forests.
+> [!NOTE] 
+> The other forests must also be able to route DNS queries for the PRIV forest to this domain controller.  If you have multiple existing Active Directory forests, then you must also add a DNS conditional forwarder to each of those forests.
 
 ### Configure Kerberos
 
@@ -240,7 +241,8 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
   setspn -S FIMService/pamsrv PRIV\MIMService
   ```
 
-> [!NOTE] The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
+> [!NOTE] 
+> The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
 ### Configure delegation to give MIM service accounts access
 
