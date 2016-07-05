@@ -2,7 +2,7 @@
 # required metadata
 
 title: Supported connectors | Microsoft Identity Manager
-description: Discover the management agents that help you connect data sources to MIM.
+description: Use connectors to manage data transfer between MIM and your directories.
 keywords:
 author: kgremban
 manager: femila
@@ -26,18 +26,15 @@ ms.suite: ems
 
 ---
 
-# Supported connectors in MIM 2016
+# Connect to your directories
 
 Connectors link specific connected data sources to Microsoft Identity Manager (MIM). A connector moves data from a connected data source to MIM. When data in MIM is modified, the connector can also export the data to the connected data source to keep it synchronized with MIM. Generally, there is at least one connector for each connected directory.
 
-There are two types of connectors:
-- **Call-based connectors** use an API function call to a data source to import or export data.
-
-- **File-based connectors** use a text file to import data from and export data to a connected data source.
+In Forefront Identity Manager, connectors were known as management agents. That term is still used in some articles or parts of the product, but know that both terms refer to the same concept.
 
 This article covers the connectors that are included in MIM, but the connector for Extensible Connectivity 2.0 makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## Call-based connectors
+## Supported connectors in MIM 2016
 
 | Name | Supported versions of the connected data source |
 | ---- | ----------------------------------------------- |
@@ -58,12 +55,6 @@ This article covers the connectors that are included in MIM, but the connector f
 | [Connector for Lotus Domino](https://msdn.microsoft.com/en-us/library/hh859750.aspx) | Lotus Notes Release v8.0.x or v8.5.x |
 | [SharePoint Services Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn511003.aspx) | SharePoint server 2013 or 2016 with User Profile service application (UPA) |
 | [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | SAP ECC 5.0 or 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 |
-
-
-## File-based connectors
-
-| Name | Supported versions of the connected data source |
-| ---- | ----------------------------------------------- |
 | Attribute-Value Pair text file | Attribute-value pair text files |
 | Delimited text file | Delimited text files |
 | Directory Services Mark-up Language (DSML) | Directory Services Markup Language (DSML) 2.0 |
