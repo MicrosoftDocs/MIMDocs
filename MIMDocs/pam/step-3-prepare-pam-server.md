@@ -123,7 +123,8 @@ If SQL Server is not in the bastion environment already, install either SQL Serv
 
 Using the SharePoint Foundation 2013 with SP1 installer, install SharePoint’s software prerequisites on PAMSRV.
 
-> [!NOTE] This installer requires an internet connection to download the prerequisites. And after they are installed, the server will restart.
+> [!NOTE] 
+> This installer requires an internet connection to download the prerequisites. And after they are installed, the server will restart.
 
 1. Right click on PowerShell and select **Run as administrator**.  
 2. Change to the directory where SharePoint was unpacked.  
@@ -162,7 +163,8 @@ After the wizards complete, use PowerShell to create a SharePoint Foundation 201
 
 2. A warning message will appear that Windows Classic authentication method is being used, and it may take several minutes for the final command to return.  When completed, the output will give the URL of the new portal.
 
-> [!NOTE] Keep the SharePoint 2013 Management Shell window open to use it in the next step.
+> [!NOTE] 
+> Keep the SharePoint 2013 Management Shell window open to use it in the next step.
 
 ## Create a SharePoint site collection
 Next, create a SharePoint Site Collection associated with that web application to host the MIM Portal.

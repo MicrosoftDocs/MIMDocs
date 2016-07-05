@@ -5,8 +5,8 @@ title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
 description: Understand how MIM 2016 works to create a safer, more convenient identity management experience in the cloud and on-premises.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -36,16 +36,4 @@ Microsoft Identity Manager 2016 works alongside Azure to give you control over y
 ## Privileged Identity Management
 Privileged Identity Management controls and manages administrative access by providing temporary, task-based access to sensitive resources. This means you can give users only as much permission as necessary, which lowers the chances of a cyber attacker gaining full administrative access. In addition, Privileged Identity Management extracts and isolates administrative accounts from existing Active Directory forests.
 
-## Supported platforms
-
-MIM supports an updated list of products and platforms including the latest Microsoft platforms and Office/server stacks, Windows Client OS, Windows Server OS, SharePoint, SQL and Outlook, specifically:
-
--   Windows 8.1 with Internet Explorer 8 and higher
-
--   Windows Server 2012 R2
-
--   SQL 2014
-
--   Outlook 2013
-
--   System Center Service Manager 2012 and 2012 R2
+MIM supports an on-premises Privileged Identity Management solution for managing Active Directors. To get started, [Use Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
