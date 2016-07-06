@@ -6,7 +6,7 @@ description: Use connectors to manage data transfer between MIM and your directo
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/05/2016
+ms.date: 07/06/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -41,7 +41,7 @@ This article covers the connectors that are included in MIM, but the connector f
 | Active Directory Domain Services | Active Directory 2000, 2003, 2003 R2, 2008, 2008 R2, 2012 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Active Directory Global Address List (GAL) | Active Directory Global Address List (GAL) – Exchange 2000, 2003, 2007, 2010, 2013 |
-| Extensible Connectivity 2.0 | Any call-based data source |
+| Extensible Connectivity 2.0 | Any call-based or file-based data source |
 | MIM Service | Microsoft Identity Manager 2016 |
 | IBM DB2 Universal Database | IBM DB2 version 9.1, 9.5 or 9.7; IBM DB2 OLEDB v9.5 FP5 or v9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
@@ -58,6 +58,5 @@ This article covers the connectors that are included in MIM, but the connector f
 | Attribute-Value Pair text file | Attribute-value pair text files |
 | Delimited text file | Delimited text files |
 | Directory Services Mark-up Language (DSML) | Directory Services Markup Language (DSML) 2.0 |
-| Extensible Connectivity 2.0 | Any file-based data source |
 | Fixed-Width text file | Fixed-width text files |
 | LDAP Data Interchange Format (LDIF) | LDAP Data Interchange Format (LDIF) |
