@@ -3,7 +3,7 @@ asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
 
 title: Microsoft Identity Manager Documentation
-description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
+description: Technical documentation for Microsoft Identity Manager Documentation - on-premises identity & access management
 keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
 author: msstevenpo
 manager: stevenpo
