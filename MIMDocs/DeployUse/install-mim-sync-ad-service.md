@@ -6,7 +6,7 @@ description: Use management agents and the MIM Sync Service to sync your Active 
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 07/12/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -322,7 +322,7 @@ To create the AD user inbound synchronization rule:
 
     -   Metaverse Resource Type: person
     -   External System: ADMA
-    -   External System Resource Type: person
+    -   External System Resource Type: user
 
 6. On the **Relationship** tab, provide the following information, and then click **Next**:
 
@@ -334,10 +334,10 @@ To create the AD user inbound synchronization rule:
 
     | Flow Rule | Source | Destination |
     |-|-|-|
-    |Rule 1|samAccountName|f|
+    |Rule 1|samAccountName|accountName|
     |Rule 2|displayName|displayName|
-    |Rule 3|EmployeeType|EmployeeType|
-    |Rule 4|givenName|givenName|
+    |Rule 3|EmployeeType|employeeType|
+    |Rule 4|givenName|firstName|
     |Rule 5|sn|lastName|
     |Rule 6|Manager|manager|
     |Rule 7|objectSID|ObjectSID|
