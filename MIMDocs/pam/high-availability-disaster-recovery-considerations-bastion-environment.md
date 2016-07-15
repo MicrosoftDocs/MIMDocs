@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: High availability and disaster recovery considerations for the bastion environment | Microsoft Identity Manager
-description:
+title: PAM disaster recovery | Microsoft Identity Manager
+description: Learn how to configure Privileged Access Management for high availability and disaster recovery.
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -167,7 +167,7 @@ A typical production deployment of privileged access management includes at leas
 
 The procedure for adding an additional domain controller can be found at [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](https://technet.microsoft.com/library/jj574134.aspx).  
 
->[!NOTE] 
+>[!NOTE]
 > If the domain controller is to be hosted on a virtualization platform such as Hyper-V, review the caveats in [Virtualized Domain Controller Deployment and Configuration](https://technet.microsoft.com/library/jj574223.aspx).
 
 #### Recovery
@@ -205,7 +205,7 @@ For high availability, see the Windows Server documents for [Failover Clustering
 
 For production deployment across multiple servers, you can use Network Load Balancing (NLB) to distribute the processing load.  You should also have a single alias (for instance, A or CNAME records) so that one common name is exposed to the user.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > If you use a load-balancing technology other than the NLB feature in Windows Server 2012 R2, make sure your solution will redirect one session to the same server and not to a random server.
 
 In a multi-server MIM deployment, each MIM Service has an external host name, a service name, and a service partition name.  The default value of the service name is the computer's name, and the default value of the external hostname and service partition name are configured during MIM Service installation on the screen that asks for the MIM Service Server address. These three names are stored in file %ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config file as attributes `externalHostName`, `serviceName` and `servicePartitionName` of the `resourceManagementService` configuration node.  
