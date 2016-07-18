@@ -2,9 +2,9 @@
 asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
 
-title: Microsoft Identity Manager Documentation
+title: Identity Manager Documentation | Microsoft Docs
 description: Technical documentation for Microsoft Identity Manager Documentation - on-premises identity & access management
-keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
+keywords: identity manager documentation, microsoft identity manager, MIM
 author: msstevenpo
 manager: stevenpo
 ms.date: 04/28/2016
@@ -16,10 +16,10 @@ ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 
 ---
-# Microsoft Identity Management Documentation
+# Identity Management Documentation
 <article id="main">
     <section id="hero-content">
-      <h1>Microsoft Identity Manager Documentation</h1>
+      <h1>Identity Manager Documentation</h1>
       <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchronization, identity-theft thwarting, and more</h2>
       <h3>New to MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Visit the product page &rarr;</a></h3>     
     </section>
