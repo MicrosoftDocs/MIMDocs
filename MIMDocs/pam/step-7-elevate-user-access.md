@@ -99,7 +99,7 @@ Activate by requesting privileged access via the PAM sample portal.
 8. On the left tab, click **Activate**. Select the **PAM role** and then click **Activate**.
 
 > [!Note] 
-> In this environment, you can also learn how to develop applications which use the PAM REST API, described in the [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md).
+> In this environment, you can also learn how to develop applications which use the PAM REST API, described in the [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
 ## Summary
 Once you have completed the steps in this walkthrough, you will have demonstrated a Privileged Access Management scenario, in which user privileges are elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. The decision of which security groups represent privileged roles is coordinated by the PAM administrator. Once access rights are migrated to the Privileged Access Management system, access that was previously possible with the original user account is now made possible only by signing in with a special privileged account, and made available upon request. As a result, group memberships for highly privileged groups are effective for a limited amount of time.
