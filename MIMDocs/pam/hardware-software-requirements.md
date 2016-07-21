@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Hardware and software requirements | Microsoft Identity Manager
-description:
+title: PAM software requirements | Microsoft Identity Manager
+description: Find the hardware and software requirements for a successful deployment of Privileged Access Management
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,7 +25,11 @@ ms.suite: ems
 
 ---
 
-No hardware requirements beyond those of the underlying software platforms, sufficient memory or disk space and network connectivity is required. This article provides the minimum requirements for a basic deployment. It is not intended to demonstrate performance, scalability, or high availability, and does not represent a recommended deployment topology for large enterprises or production environments.
+# Hardware and software requirements
+
+Privileged Access Management has no hardware requirements beyond those of the underlying software platforms. Just make sure you have sufficient memory or disk space, and network connectivity.
+
+This article provides the minimum requirements for a basic deployment. It is not intended to demonstrate performance, scalability, or high availability, and does not represent a recommended deployment topology for large enterprises or production environments.
 
 ## Installing from software packages
 

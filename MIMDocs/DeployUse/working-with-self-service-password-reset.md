@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Working with Self-Service Password Reset | Microsoft Identity Manager
-description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication. 
+title: Self-Service Password Reset | Microsoft Identity Manager
+description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
