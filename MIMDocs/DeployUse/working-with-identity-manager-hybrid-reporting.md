@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Working with Identity Manager Hybrid Reporting | Microsoft Identity Manager
+title: Hybrid reporting in Azure | Microsoft Identity Manager
 description: Learn how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

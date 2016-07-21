@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Understand the components of PAM | Microsoft Identity Manager
-description:
+title: Understand the PAM components | Microsoft Identity Manager
+description: Privileged Access Management shares some components with MIM, and has a few of its own. Learn how these work together.
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/13/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

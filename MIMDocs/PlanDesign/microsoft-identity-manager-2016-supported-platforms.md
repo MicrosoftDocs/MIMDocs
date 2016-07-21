@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Supported Platforms for MIM 2016 | Microsoft Identity Manager
+title: Supported software platforms | Microsoft Identity Manager
 description: Find the products and versions that are compatible with each of the MIM 2016 components
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Supported Platforms for MIM 2016
+# Supported platforms for MIM 2016
 
 | **MIM component** | **Platform** | **Version** |
 |-------------------|--------------|-------------|

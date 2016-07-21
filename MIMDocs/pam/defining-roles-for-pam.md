@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Define roles for Privileged Access Management | Microsoft Identity Manager
-description:
+title: Define privileged roles for PAM | Microsoft Identity Manager
+description: Decide which privileged roles should be managed, and define the management policy for each. 
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Define roles for Privileged Access Management
 
-With Privileged Access Management, you can assign users to privileged roles that they can activate as needed for just-in-time access. These roles are definied manually and established in the bastion environment. This article walks you through the process of deciding which roles to manage through PAM, and how to define them with appropriate permissions and restrictions.
+With Privileged Access Management, you can assign users to privileged roles that they can activate as needed for just-in-time access. These roles are defined manually and established in the bastion environment. This article walks you through the process of deciding which roles to manage through PAM, and how to define them with appropriate permissions and restrictions.
 
 A straightforward approach to defining roles for privileged access management is to compile all the information in a spreadsheet. List the roles in the roles, and use the columns to identify governance requirements and permissions.
 
