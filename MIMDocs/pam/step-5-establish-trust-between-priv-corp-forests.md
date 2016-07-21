@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Step 5 – Establish trust between PRIV and CORP forests | Microsoft Identity Manager
-description:
+title: Deploy PAM step 5 – Forest link | Microsoft Identity Manager
+description: Establish trust between the PRIV and CORP forests so that privileged users in PRIV can still access resources in CORP.
 keywords:
-author:
+author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

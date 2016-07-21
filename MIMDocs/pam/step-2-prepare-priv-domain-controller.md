@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Step 2 - Prepare the PRIV domain controller | Microsoft Identity Manager
-description:
+title: Deploy PAM step 2 - PRIV DC | Microsoft Identity Manager
+description: Prepare the PRIV domain controller, which will provide the bastion environment where Privileged Access Management is isolated.
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -227,7 +227,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > The other forests must also be able to route DNS queries for the PRIV forest to this domain controller.  If you have multiple existing Active Directory forests, then you must also add a DNS conditional forwarder to each of those forests.
 
 ### Configure Kerberos
@@ -241,7 +241,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
   setspn -S FIMService/pamsrv PRIV\MIMService
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
 ### Configure delegation to give MIM service accounts access

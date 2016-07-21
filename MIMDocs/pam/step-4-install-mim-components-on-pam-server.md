@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Step 4 – Install MIM components on PAM server and workstation | Microsoft Identity Manager
-description:
+title: Deploy PAM step 4 – Install MIM | Microsoft Identity Manager
+description: Install and configure MIM Service and Portal on your Privileged Access Management server and workstations.
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -34,7 +34,7 @@ ms.suite: ems
 
 On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service and Portal and the sample portal web application.
 
-  > [!NOTE] 
+  > [!NOTE]
   > You must be a domain administrator; if you are not running the following commands as a domain administrator, the trust validation checks in the next step will not be completed.
 
 If you have downloaded MIM, unpack the MIM installation archive to a new folder.
@@ -49,7 +49,7 @@ Follow the guidelines of the installer and complete the installation.
 
 2.  When configuring common services and the MIM database connection, specify **Create a new database**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > If you install MIM Service multiple times for high availability, specify **Use an existing database** for all subsequent installations.
 
 3.  When configuring a mail server connection, set the mail server to the hostname of an Exchange or SMTP server for the CORP environment (use corpdc.contoso.local if you do not have a mail server) and uncheck the **Use SSL** and **Mail Server is Exchange Server 2007 or Exchange Server 2010** checkboxes.

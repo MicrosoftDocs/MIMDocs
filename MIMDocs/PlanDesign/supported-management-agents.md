@@ -6,7 +6,7 @@ description: Use connectors to manage data transfer between MIM and your directo
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/06/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

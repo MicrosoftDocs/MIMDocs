@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Set up an identity management server&#58; SharePoint | Microsoft Identity Manager
+title: Configure SharePoint | Microsoft Identity Manager
 description: Install and configure SharePoint Foundation so that it can host the MIM Portal page.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -98,7 +98,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
     -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
-    > [!NOTE] 
+    > [!NOTE]
     > A warning message will appear saying that Windows Classic authentication method is being used, and it may take several minutes for the final command to return. When completed, the output will indicate the URL of the new portal. Keep the **SharePoint 2013 Management Shell** window open to reference later.
 
 2. Launch  SharePoint 2013 Management Shell and run the following PowerShell script to create a **SharePoint Site Collection** associated with that web application.
@@ -113,7 +113,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
   $s.CompatibilityLevel
   ```
 
-  > [!NOTE] 
+  > [!NOTE]
   > Verify that the result of the *CompatibilityLevel* variable is “14”. If the result is “15”, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
 
 3. Disable **SharePoint Server-Side Viewstate** and the SharePoint task "Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)" by running the following PowerShell commands in the **SharePoint 2013 Management Shell**:
