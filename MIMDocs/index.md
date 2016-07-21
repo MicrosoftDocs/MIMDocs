@@ -41,6 +41,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </ul>
         <ul class="column column-half">
           <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Deploy MIM software on a Fresh Server</a></li>
+          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Learn about Privileged Access Management</a></li>
         </ul>
       </div>
     </section>
