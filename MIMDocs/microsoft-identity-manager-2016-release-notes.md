@@ -2,11 +2,11 @@
 # required metadata
 
 title: Release Notes for MIM 2016 | Microsoft Identity Manager
-description:
+description: Find information about the recent MIM releases. 
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager

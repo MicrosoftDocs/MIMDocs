@@ -5,8 +5,8 @@ title: Capacity planning guide | Microsoft Identity Manager
 description: Use this guide to understand the variables that should be considered before deploying MIM 2016, including load levels and policy decisions.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 05/13/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

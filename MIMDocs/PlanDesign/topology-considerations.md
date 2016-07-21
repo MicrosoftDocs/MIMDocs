@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Topology considerations for deploying MIM | Microsoft Identity Manager
+title: Topology guide for deployment | Microsoft Identity Manager
 description: Understand the MIM 2016 components, and get suggestions for how to deploy them in your environment.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

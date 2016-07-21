@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Upgrade from Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
+title: Upgrade from FIM 2010 R2 | Microsoft Identity Manager
 description: Learn how to upgrade your FIM 2010 R2 components, and then install the components that are new in MIM 2016.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 05/13/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

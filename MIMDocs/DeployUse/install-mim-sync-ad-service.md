@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Install MIM 2016&#58; Synchronize Active Directory and MIM Service | Microsoft Identity Manager
+title: Synchronize AD and MIM Service | Microsoft Identity Manager
 description: Use management agents and the MIM Sync Service to sync your Active Directory and MIM databases.
 keywords:
 author: kgremban
-manager: stevenpo
-ms.date: 07/12/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
