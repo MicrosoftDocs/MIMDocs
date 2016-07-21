@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Environment Overview | Microsoft Identity Manager
-description:
+title: PAM environment overview | Microsoft Identity Manager
+description: Find the required number and configuration of virtual machines to successfully deploy Privileged Access Management
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,9 +25,9 @@ ms.suite: ems
 
 ---
 
-# Environment Overview
+# Environment overview
 
-PAM work with virtual machines (VMs) with separate drives that are connected to each other on a shared network. These virtual machines can be hosted by Windows 8.1, Windows Server 2012 R2, or other operating system platforms.
+Privileged Access Management works with virtual machines (VMs) with separate drives that are connected to each other on a shared network. These virtual machines can be hosted by Windows 8.1, Windows Server 2012 R2, or other operating system platforms.
 
 ![PAM servers: relationships and supported platforms - diagram](media/pam-test-lab-architecture.png)
 

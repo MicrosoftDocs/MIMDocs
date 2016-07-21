@@ -5,9 +5,9 @@ layout: HubPage
 title: Identity Manager Documentation | Microsoft Docs
 description: Technical documentation for Microsoft Identity Manager Documentation - on-premises identity & access management
 keywords: identity manager documentation, microsoft identity manager, MIM
-author: msstevenpo
-manager: stevenpo
-ms.date: 04/28/2016
+author: kgremban
+manager: femila
+ms.date: 07/21/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -20,7 +20,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 <article id="main">
     <section id="hero-content">
       <h1>Identity Manager Documentation</h1>
-      <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchronization, identity-theft thwarting, and more</h2>
+      <h2>Learn how to set up on-premises identity management with Microsoft Identity Manager. Tutorials show you how to configure identity synchronization, identity-theft prevention, and more.</h2>
       <h3>New to MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Visit the product page &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">

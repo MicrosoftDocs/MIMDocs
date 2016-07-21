@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Tier model for partitioning administrative privileges | Microsoft Identity Manager
-description:
+title: PAM environment tier model | Microsoft Identity Manager
+description: Learn about the tier model that segregates your system based on vulnerability to risk.
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -50,7 +50,7 @@ Logon restrictions should be enforced to ensure that highly privileged accounts 
 - Domain admins (tier 0) cannot log on to enterprise servers (tier 1) and standard user workstations (tier 2).
 - Server administrators (tier 1) cannot log on to standard user workstations (tier 2).
 
->[!NOTE] 
+>[!NOTE]
 > Server administrators should not be in to the domain admin group. Personnel with responsibilities for managing both domain controllers and enterprise servers should be given separate accounts.
 
 Logon restrictions can be enforced with:

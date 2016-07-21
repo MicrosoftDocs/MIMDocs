@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Step 1 - Prepare the host and the CORP domain | Microsoft Identity Manager
-description:
+title: Deploy PAM Step 1 - CORP domain | Microsoft Identity Manager
+description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/10/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -100,7 +100,7 @@ In some cases the group may already exist - this is normal if the domain was als
 
 If you created a new CORP domain, then you should create additional users and groups for demonstrating the PAM scenario. The user and group for demonstration purposes should not be domain administrators or controlled by the adminSDHolder settings in AD.
 
-> [!NOTE] 
+> [!NOTE]
 > If you already have a domain you will be using as the CORP domain, and it has a user and a group that you can use for demonstration purposes, then you can skip to the section [Configure auditing](#configure-auditing).
 
 We're going to create a security group named *CorpAdmins* and a user named *Jen*. You can use different names if you wish.
@@ -173,7 +173,7 @@ This will restart the domain controller, CORPDC. For further information on this
 
 If you do not already have a workstation computer joined to the domain, follow these instructions to prepare one.  
 
-> [!NOTE] 
+> [!NOTE]
 > If you already have a workstation joined to the domain, skip to [Create a resource for demonstration purposes](#create-a-resource-for-demonstration-purposes).
 
 ### Install Windows 8.1 or Windows 10 Enterprise as a VM
