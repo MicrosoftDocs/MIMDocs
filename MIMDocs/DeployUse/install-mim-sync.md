@@ -6,7 +6,7 @@ description: Get started with the MIM 2016 components by installing and configur
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -59,7 +59,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![Custom Setup image](media/MIM-Install2.png)
 
-6.  In the Sync database configuration screen, select:
+6.  In the Sync Service database configuration screen, select:
 
     1.  The SQL Server is located on: **This computer**.
 
@@ -77,7 +77,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![Service account image](media/MIM-Install4.png)
 
-8.  Provide MIM Sync installer with the relevant security groups:
+8.  Provide MIM Sync Service installer with the relevant security groups:
 
     1. Administrator = *contoso\MIMSyncAdmins*
 
@@ -93,11 +93,11 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 9. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
 
-10. Click **Install** to begin the installation of MIM Sync.
+10. Click **Install** to begin the installation of MIM Sync Service.
 
     1. A warning concerning the MIM Sync service account may appear – click **OK**.
 
-    2. MIM Sync will install.
+    2. MIM Sync Service will install.
 
     3. A notice on creating a backup for the encryption key appears – click **OK**, then select a folder to store the encryption key backup.
 
