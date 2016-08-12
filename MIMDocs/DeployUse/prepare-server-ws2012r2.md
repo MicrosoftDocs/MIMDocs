@@ -6,7 +6,7 @@ description: Get the steps and minimum requirements to prepare Windows Server 20
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -80,7 +80,7 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
     ![Local Security Policy image](media/MIM-DeployWS3.png)
 
-4. Click **Add User or Group**, and in the text box type `contoso\mimsync; contoso\mimma; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\mimsspr`, click **Check Names**, and click **OK**.
+4. Click **Add User or Group**, and in the text box type `contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`, click **Check Names**, and click **OK**.
 
 5. Click **OK** to close the **Log on as a service Properties** window.
 
