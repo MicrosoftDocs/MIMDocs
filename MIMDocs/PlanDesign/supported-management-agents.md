@@ -6,7 +6,7 @@ description: Use connectors to manage data transfer between MIM and your directo
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -60,3 +60,7 @@ This article covers the connectors that are included in MIM, but the connector f
 | Directory Services Mark-up Language (DSML) | Directory Services Markup Language (DSML) 2.0 |
 | Fixed-Width text file | Fixed-width text files |
 | LDAP Data Interchange Format (LDIF) | LDAP Data Interchange Format (LDIF) |
+
+## Related topics
+
+[Management agents in FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)

@@ -6,7 +6,7 @@ description: Get the steps to configure and install MIM Service and Portal for M
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -99,7 +99,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 1.  Set the service account name for SSPR Registration to *Contoso\MIMSSPRService* and its password to *Pass@word1*.
 
-2.  Specify  *CORPIDM* as the Host Name for MIM Password Registration, and set the port to **8080**. Enable the **Open port in firewall** option.
+2.  Specify  *CORPIDM* as the Host Name for MIM Password Reset Portal, and set the port to **8088**. Enable the **Open port in firewall** option.
 
     ![Enter configuration information used by IIS image](media/MIM-Install15.png)
 
