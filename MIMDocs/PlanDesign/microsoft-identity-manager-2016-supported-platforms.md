@@ -6,7 +6,7 @@ description: Find the products and versions that are compatible with each of the
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -55,7 +55,7 @@ ms.suite: ems
 || PAM PowerShell requestor cmdlets (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (Server and CA integration) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || Certificate authority | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-|| MIM CM database | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
+|| MIM CM database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 |
 | **MIM Certificate Management** (Application) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (Client and Bulk Client) | Windows | Windows 7 |
 | **MIM BHOLD Suite** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
