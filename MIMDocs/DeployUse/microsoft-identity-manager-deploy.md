@@ -6,7 +6,7 @@ description: Get the full list of steps involved in deploying Microsoft Identity
 keywords:
 author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -31,7 +31,7 @@ The articles in this section provide step-by-step instructions for deploying Mic
 > [!NOTE]
 > The deployment topology described in this section is intended for only for getting started and learning about MIM.  The [capacity planning guide](/microsoft-identity-manager/plan-design/capacity-planning-guide) provides more information on topologies for production deployments.  We recommend reviewing that documentation before deploying MIM for production scale or use.
 
-The privileged access management scenario is deployed differently than other MIM scenarios, as it requires a dedicated bastion forest environment.  If you want to learn more about deploying MIM for Privileged Identity Management, see [Getting Started with Privileged Access Management](/microsoft-identity-manager/pam/privileged-access-management-get-started).
+The privileged access management scenario is deployed differently than other MIM scenarios, as it requires a dedicated bastion forest environment.  If you want to learn more about deploying MIM for Privileged Identity Management, see [Configure the MIM environment for Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam).
 
 The process for deploying MIM 2016 is very similar to the process for its predecessor, FIM 2010 R2. If you want to refer to the FIM documentation, see the [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310).
 
