@@ -6,7 +6,7 @@ description:
 keywords:
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -49,7 +49,7 @@ According to the [Tier model](tier-model-for-partitioning-administrative-privile
 
 The production *CORP* forest should trust the administrative *PRIV* forest, but not the other way around. This can be a domain trust or a forest trust. The admin forest domain does not need to trust the managed domains and forests to manage Active Directory, though additional applications may require a two-way trust relationship, security validation, and testing.
 
-Selective authentication should be used to ensure that accounts in the admin forest only use the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the “Allowed to logon” right for domain controllers to designated Tier 0 admin accounts in the admin forest. See [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc755844.aspx) for more information.
+Selective authentication should be used to ensure that accounts in the admin forest only use the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the “Allowed to logon” right for domain controllers to designated Tier 0 admin accounts in the admin forest. See [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) for more information.
 
 ## Maintain logical separation
 
@@ -155,7 +155,7 @@ MIM uses PowerShell cmdlets to establish trust between the existing AD domains a
 
 When the existing Active Directory topology changes, the `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` and `Remove-PAMDomainConfiguration` cmdlets can be used to update the trust relationships.
 
-### Establish trust for each forest
+## Establish trust for each forest
 
 The `New-PAMTrust` cmdlet must be run once for each existing forest. It is invoked on the MIM Service computer in the administrative domain. The parameters to this command are the domain name of the top domain of the existing forest, and credential of an administrator of that domain.
 
@@ -165,11 +165,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 After establishing the trust, then configure each domain to enable management from the bastion environment, as described in the next section.
 
-### Enable management of each domain
+## Enable management of each domain
 
 There are seven requirements for enabling management for an existing domain.
 
-#### 1. A security group on the local domain
+### 1. A security group on the local domain
 
 There must be a group in the existing domain, whose name is the NetBIOS domain name followed by three dollar signs, e.g., *CONTOSO$$$*. The group scope must be *domain local* and the group type must be *Security*. This is needed for groups to be created in the dedicated administrative forest with the same Security identifier as groups in this domain. Create this group with the following PowerShell command, performed by an administrator of the existing domain and run on an workstation joined to the existing domain:
 
@@ -177,7 +177,7 @@ There must be a group in the existing domain, whose name is the NetBIOS domain n
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-#### 2. Success and failure auditing
+### 2. Success and failure auditing
 
 The group policy settings on the domain controller for auditing must include both success and failure auditing for Audit account management and Audit directory service access. This can be done with the Group Policy management console, performed by an administrator of the existing domain and run on a workstation joined to the existing domain:
 
@@ -207,7 +207,7 @@ The group policy settings on the domain controller for auditing must include bot
 
 The message “Computer Policy update has completed successfully.” should appear after a few minutes.
 
-#### 3. Allow connections to the Local Security Authority
+### 3. Allow connections to the Local Security Authority
 
 The domain controllers must allow RPC over TCP/IP connections for Local Security Authority (LSA) from the bastion environment. On older versions of Windows Server, TCP/IP support in LSA must be enabled in the registry:
 
@@ -215,7 +215,7 @@ The domain controllers must allow RPC over TCP/IP connections for Local Security
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-#### 4. Create the PAM domain configuration
+### 4. Create the PAM domain configuration
 
 The `New-PAMDomainConfiguration` cmdlet must be run on the MIM Service computer in the administrative domain. The parameters to this command are the domain name of the existing domain, and credential of an administrator of that domain.
 
@@ -223,7 +223,7 @@ The `New-PAMDomainConfiguration` cmdlet must be run on the MIM Service computer 
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-#### 5. Give read permissions to accounts
+### 5. Give read permissions to accounts
 
 The accounts in the bastion forest used to establish roles (admins who use the `New-PAMUser` and `New-PAMGroup` cmdlets), as well as the account used by the MIM monitor service, need read permissions in that domain.
 
@@ -245,11 +245,11 @@ The following steps enable read access for the user *PRIV\Administrator* to the 
 
 18. Close Active Directory Users and Computers.
 
-#### 6. A break glass account
+### 6. A break glass account
 
 If the goal of the privileged access management project is to reduce the number of accounts with Domain Administrator privileges permanently assigned to the domain, there must be a *break glass* account in the domain, in case there is a later problem with the trust relationship. Accounts for emergency access to the production forest should exist in each domain, and should only be able to log into domain controllers. For organizations with multiple sites, additional accounts may be required for redundancy.
 
-#### 7. Update permissions in the bastion environment
+### 7. Update permissions in the bastion environment
 
 Review the permissions on the *AdminSDHolder* object in the System container in that domain. The *AdminSDHolder* object has a unique Access Control List (ACL), which is used to control the permissions of security principals that are members of built-in privileged Active Directory groups. Note if any changes to the default permissions have been made that would impact users with administrative privileges in the domain, since those permissions will not apply to users whose account is in the bastion environment.
 
