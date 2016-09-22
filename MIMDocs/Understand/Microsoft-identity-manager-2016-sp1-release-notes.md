@@ -62,7 +62,7 @@ PAM Deployment Scripts allow administrators to streamline the installation of th
 ####PAM Cmdlets for Authentication Policy Silo configuration
 Service pack 1 introduces new Cmdlets to harden the security of your bastion forest. These Cmdlets automatically create an Authentication Policy Silo, bound to an Authentication Policy Template. 
 
-.[!Note]
+>[!Note]
 These Cmdlets run automatically as part of the deployments scripts.
 
 
