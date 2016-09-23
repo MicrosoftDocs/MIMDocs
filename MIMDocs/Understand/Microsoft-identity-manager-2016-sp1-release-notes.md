@@ -4,11 +4,11 @@
 title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
 description: Understand how MIM 2016 works to create a safer, more convenient identity management experience in the cloud and on-premises.
 keywords:
-author: kgremban
-manager: femila
-ms.date: 08/11/2016
+author: barclayn
+manager: mbaldwin
+ms.date: 09/23/2016
 ms.topic: article
-ms.prod: identity-manager-2015
+ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
