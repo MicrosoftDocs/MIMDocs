@@ -1,6 +1,5 @@
 ---
 # required metadata
-
 title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
 description: Understand how MIM 2016 works to create a safer, more convenient identity management experience in the cloud and on-premises.
 keywords:
@@ -11,10 +10,8 @@ ms.topic: article
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-
-# optional metadata
-
+ms.assetid:ccdd8a9f-02da-440a-81a8-354800dcd2a8
+#optional metadata:
 #ROBOTS:
 #audience:
 #ms.devlang:
@@ -22,6 +19,7 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
+---
 
 # What’s new for Microsoft Identity Manager 2016 Service Pack 1 #
 
