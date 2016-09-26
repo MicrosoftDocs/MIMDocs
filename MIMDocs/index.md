@@ -7,7 +7,7 @@ description: Technical documentation for Microsoft Identity Manager Documentatio
 keywords: identity manager documentation, microsoft identity manager, MIM
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 09/25/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -36,12 +36,12 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">What is Microsoft Identity Manager?</a></li>
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Identity Management REST API Reference</a></li>
+          <li><mark><b>NEW</b></mark><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">Microsoft Identity Manager 2016 Service Pack 1</a></li>
+          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Deploy MIM software on a Fresh Server</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Deploy MIM software on a Fresh Server</a></li>
-          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Learn about Privileged Access Management</a></li>
+          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Identity Management REST API Reference</a></li>
+          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">MIM 2016 overview</a></li>
         </ul>
       </div>
     </section>
@@ -75,7 +75,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms">
-                    <h3>Supported Platforms</h3>
+                    <h3>Supported platforms</h3>
                     <p>The list of platforms, servers, and applications supported by MIM.</p>
                   </a>
                 </li>
