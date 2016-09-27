@@ -35,29 +35,32 @@ The rest of the data in the <PAMValidation/> node needs to be edited only if it 
 Use the following steps to perform validation:
 
 Step 1:
-  * Login to the CORPDC as a CORP Domain Admin
-  * Run PowerShell as Administrator
-  * cd $env:SYSTEMDRIVE\PAM
-  * Import-module .\PAMValidation.psm1
-  * Create-PAMValidationonCORPDCConfig
+
+    1. Login to the CORPDC as a CORP Domain Admin
+    2. Run PowerShell as Administrator
+    3. cd $env:SYSTEMDRIVE\PAM
+    4. Import-module .\PAMValidation.psm1
+    5. Create-PAMValidationonCORPDCConfig
 
 This will create the necessary groups and users needed for validation
 
 Step 2:
-  * Login to the PAM Server ad MIMAdmin
-  * Run PowerShell as Administrator
-  * cd $env:SYSTEMDRIVE\PAM
-  * import-module .\PAMValidation.psm1
-  * move-PAMVAlidationUsersToPAM
+
+    1. Login to the PAM Server ad MIMAdmin
+    2. Run PowerShell as Administrator
+    3. cd $env:SYSTEMDRIVE\PAM
+    4. import-module .\PAMValidation.psm1
+    5. move-PAMVAlidationUsersToPAM
 
 This step migrates the users and groups to the PAM environment
 
 Step 3:
-  * Login to the CORP client as a local administrator
-  * Run PowerShell as Administrator
-  * cd $env:SYSTEMDRIVE\PAM
-  * import-module .\PAMValidation.psm1
-  * Enable-PAMUsersCORPClientRemote
+
+    1. Login to the CORP client as a local administrator
+    2. Run PowerShell as Administrator
+    3. cd $env:SYSTEMDRIVE\PAM
+    4. import-module .\PAMValidation.psm1
+    5. Enable-PAMUsersCORPClientRemote
 
 
 This step will prompt you for the CORPAdmin credential. Once provided, it will add the required users to the ‘Remote Desktop Users’ and ‘Remote Management Users’ groups.
@@ -65,9 +68,9 @@ On the CORP Client, use the following command to open PowerShell as the PRIV use
 **Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
 From the PowerShell window, type:
 
-  * cd $env:SYSTEMDRIVE\PAM
-  * import-module .\PAMValidation.psm1
-  * test-PAMValidationScenarioNoApprovalRequest
+    1. cd $env:SYSTEMDRIVE\PAM
+    2. import-module .\PAMValidation.psm1
+    3. test-PAMValidationScenarioNoApprovalRequest
 
 
   This will show the status of the request.

@@ -28,11 +28,11 @@ ms.suite: ems
 **This is not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.
 
-  * Login to the CORP DC as administrator
-  * Run PowerShell as administrator
-  * cd $env:SYSTEMDRIVE\PAM
-  * .\PAMDeployment.ps1
-  * select Menu option 8 (Setup SID history/SID filtering)
+    1. Login to the CORP DC as administrator
+    2. Run PowerShell as administrator
+    3. cd $env:SYSTEMDRIVE\PAM
+    4. .\PAMDeployment.ps1
+    5. select Menu option 8 (Setup SID history/SID filtering)
 
 After successful execution you will see the following messages:<br/></br>
 For SID filtering: <br/></br>

@@ -27,7 +27,7 @@ ms.suite: ems
 
 # MIM2016 SP1 PAM deployment scripts
 
-In this service pack we are introducing a set of deployment scripts to make it easier to deploy PAM. These scripts are available at: <TODO/> . Before you attempt to use the scripts it is important that you make sure that the assumptions below apply to your environment.
+In this service pack we are introducing a set of deployment scripts to make it easier to deploy PAM. These scripts are available at the download center . Before you attempt to use the scripts it is important that you make sure that the assumptions below apply to your environment.
 
 Important Assumptions:
 1. The operating system on all machines is at least Windows Server 2012 R2. If you are trying out Windows Server 2016 Technical Preview 5, the PRIV domain controller must be installed with the TP5 build.

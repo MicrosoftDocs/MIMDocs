@@ -29,26 +29,26 @@ SharePoint must be SharePoint Foundation 2013 with SP1.
 
 For domain joined servers, login as MIMAdmin
 
-  * Run PowerShell as administrator
-  * .\PAMDeployment.ps1
-  * Select Menu Option 4 (SharePoint Setup)
+    1. Run PowerShell as administrator
+    2.  .\PAMDeployment.ps1
+    3.  Select Menu Option 4 (SharePoint Setup)
 
 
 For workgroup servers
 
-  * Run PowerShell as administrator
-  * cd $env:SYSTEMDRIVE\PAM
-  * .\PAMDeployment.ps1
-  * select Menu option 4 (SharePoint Setup)
+    1. Run PowerShell as administrator
+    2.  cd $env:SYSTEMDRIVE\PAM
+    3.  .\PAMDeployment.ps1
+    4. select Menu option 4 (SharePoint Setup)
 
 The machine will reboot several times as it installs SharePoint. Each time, the SharePoint setup must be re-run, being sure to login with the MIMAdmin account.
 If the machine installing SharePoint does not have Internet connectivity to download pre-requisites, they can be downloaded independently and put in a local folder. **This local folder path needs to be updated in the PAMConfiguration.xml file in <PrerequisitesBinaryLocation/>.** Please see Addendum 5 for the links to download the files.
 After installation, the SharePoint Configuration GUI will open, and walk through the steps to complete the SharePoint installation. Please select Complete Server and walk through the rest of the UI. After installation, it will prompt for running the Configuration Wizard. Complete the steps as given below.
 
-  * On the **Connect to server farm** tab, change to **create a new server farm.**
-  * Specify the **SQLServer** as the database server for the configuration database, and the **SharePoint ServiceAccount** as the databsea access acount for SharePoint to use.
-  * Specify a password as the farm security passphrase **(it will not be used later)**
-  * Accept the rest of the SharePoint configuration wizard default settings to make a single-server farm
+    1. On the **Connect to server farm** tab, change to **create a new server farm.**
+    2. Specify the **SQLServer** as the database server for the configuration database, and the **SharePoint ServiceAccount** as the databsea access acount for SharePoint to use.
+    3. Specify a password as the farm security passphrase **(it will not be used later)**
+    4. Accept the rest of the SharePoint configuration wizard default settings to make a single-server farm
 
-Details can be found in the **Configure SharePoint** section in [Step 3 - Prepare a PAM server](https://docs.microsoft.com/en-us/microsoft-identity-manager/pam/step-3-prepare-pam-server)
-When it completes, run the “.\PAMDeployment.ps1” script again, selecting Option 4 (SharePoint setup) to complete this step. 
+Details can be found in the **Configure SharePoint** section in [Step 3 - Prepare a PAM server](/microsoft-identity-manager/pam/step-3-prepare-pam-server)
+When it completes, run the “.\PAMDeployment.ps1” script again, selecting Option 4 (SharePoint setup) to complete this step.
