@@ -20,7 +20,7 @@
 ### [Step 6 - Create privileged accounts](step-6-transition-group-to-pam.md)
 ### [Step 7 - Elevate a user's access](step-7-elevate-user-access.md)
 ### [Set up Azure MFA](use-azure-mfa-for-activation.md)
-## [Configure PAM using scripts](/microsoft-identity-manager/understand-explore/sp1-deployment-scripts.md)
+## [Configure PAM using scripts](/microsoft-identity-manager/understand-explore/sp1-deployment-scripts)
 ### [Step 1 Configuring the Priv domain](sp1-step1-configuring-priv-domain.md)
 ### [Step 2 Configuring the CORP domain](sp1-step2-configuring-corp-domain.md)
 ### [Step 3 Configuring SQL](sp1-step3-installing-configuring-sql.md)
