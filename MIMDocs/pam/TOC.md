@@ -27,7 +27,7 @@
 ### [Step 4 Configuring SharePoint](sp1-step4-configuring-sharepoiint.md)
 ### [Step 5 Installing/Configuring PAM](sp1-step5-configuring-pam.md)
 ### [Step 6 Setup the PAM trust](sp1-step6-setup-pam-trust.md)
-### [sp1-step7-setup-sidhistory-sidfiltering.md](sp1-step7-setup-sidhistory-sidfiltering.md)
+### [Step 7 Setup SID history/SID filtering](sp1-step7-setup-sidhistory-sidfiltering.md)
 ### [Step 8 PAM deployment verification](sp1-step8-pam-deployment-verification.md)
 ### [Addendum](sp1-pam-deployment-addendum.md)
 # [Developer Reference](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
