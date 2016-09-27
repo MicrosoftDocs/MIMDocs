@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Step 3 Configuring the CORP domain
+title: Step 3 Configuring SQL
 description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
 keywords:
 author: barclayn

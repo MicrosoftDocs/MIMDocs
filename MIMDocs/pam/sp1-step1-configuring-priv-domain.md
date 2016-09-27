@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: MIM2016 SP1 PAM Deployment Scripts
+title: Step 1 Configuring the Priv domain
 description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
 keywords:
 author: barclayn

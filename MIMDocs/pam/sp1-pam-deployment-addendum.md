@@ -24,7 +24,7 @@ ms.suite: ems
 ---
 # Addendum:
 
-## Addendum 1 Setting up PRIV domain
+## Addendum 1 Setting up the PRIV domain
 
 After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Please update the DNSName, the NetbiosName, the DC name, the Database/Log Path & Sysvol Path. Also update the Domain & ForestMode. If you are testing Windows Server Technical Preview 5, please set the DomainMode & ForestMode to WinThreshold.
 
@@ -42,7 +42,7 @@ The DC will reboot automatically after completion. The directory Services Restor
   * Password contains at least one UPPERCASE character
   * Password contains at least one digit or special character
 
-## Addendum 2 Setting up CORP domain
+## Addendum 2 Setting up the CORP domain
 
 If you are just starting off with PAM, and want to setup a test environment, the script also allows configuration of a CORP Domain. After unzipping the compressed file to the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml adding the details of the CORP forest. Update the DNSName, NetbiosName, DC name, Database/Log Path, and Sysvol Path. The functional level should be at least Windows Server 2012 R2.
 
