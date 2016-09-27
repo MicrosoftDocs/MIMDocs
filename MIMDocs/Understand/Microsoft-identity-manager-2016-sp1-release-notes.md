@@ -38,7 +38,7 @@ We want to hear from you as well! If you have any feedback, comments, or concern
 
 ### MIM
 
-- **MIM Portal cross-browser compatibility for end-user self-service:** In this Service Pack we are introducing support for most major browsers. Users may now access and interact with the MIM Portal for self-service group and profile management from Edge, Chrome, FireFox, and Safari.
+- **MIM Portal cross-browser compatibility for end-user self-service:** In this Service Pack we are introducing support for most major browsers. Users may now access and interact with the MIM Portal for self-service group and profile management from Edge, Chrome, and Safari.
 
 - **MIM Service support for Exchange Online:** The MIM Service has long supported sending and receiving emails for approvals and notifications. Prior to SP1 MIM only supported Exchange Server or SMTP. With service pack 1, the MIM Service can send and receive requests as well as email notifications using an Office365 Exchange online account.
 
