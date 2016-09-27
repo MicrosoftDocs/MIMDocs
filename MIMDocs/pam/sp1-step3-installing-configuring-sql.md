@@ -27,17 +27,17 @@ ms.suite: ems
 # Step 3 Configuring SQL
 
 Before you move forward with the steps below make sure that you are using SQL Server 2012 SP1 or later, or SQL server 2014. For domain joined servers, login using the MIMAdmin account otherwise login as a local administrator
-    1. Run PowerShell as Administrator
-    2. cd $env:SYSTEMDRIVE\PAM
-    3. .\PAMDeployment.ps1
-    4. Select Menu Option 3 (SQL Server Setup)
+1. Run PowerShell as Administrator
+2. cd $env:SYSTEMDRIVE\PAM
+3. .\PAMDeployment.ps1
+4. Select Menu Option 3 (SQL Server Setup)
 
   If the server is not yet domain joined to the PRIV domain, it will prompt you for credentials, and join the server to the domain.
   After domain join, the machine will reboot. Upon successful reboot, logon to the server with the MIMAdmin account.
 
-      1. Run PowerShell as administrator
-      2. cd $env:SYSTEMDRIVE\PAM
-      3. .\PAMDeployment.ps1
-      4. Select Menu Option 3(SQL Server Setup)
+1. Run PowerShell as administrator
+2. cd $env:SYSTEMDRIVE\PAM
+3. .\PAMDeployment.ps1
+4. Select Menu Option 3(SQL Server Setup)
 
 When prompted, provide the password for the MIMAdmin service account, and let the installation continue. Once complete, move on to Step 4.

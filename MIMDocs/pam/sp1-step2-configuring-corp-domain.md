@@ -29,8 +29,8 @@ ms.suite: ems
 
 Once the SIDs.txt is copied to the CORPDC **not required for PRIVOnly deployments**
 
-    1. Login to CORPDC as Administrator
-    2. Run PowerShell as Administrator
-    3. cd $env:SYSTEMDRIVE\PAM
-    4. .\PAMDeployment.ps1 
-    5. select Menu Option 2 (CORP Forest Configuration)
+1. Login to CORPDC as Administrator
+2. Run PowerShell as Administrator
+3. cd $env:SYSTEMDRIVE\PAM
+4. .\PAMDeployment.ps1
+5. select Menu Option 2 (CORP Forest Configuration)

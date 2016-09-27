@@ -28,10 +28,10 @@ ms.suite: ems
 **This is not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.
 
-    1. Login to the PAMServer with the MIMAdmin Account
-    2. Run PowerShell as administrator
-    3. cd $env:SYSTEMDRIVE\PAM
-    4. .\PAMDeployment.ps1
-    5. select Menu option 6 (PAM trust setup)
+1. Login to the PAMServer with the MIMAdmin Account
+2. Run PowerShell as administrator
+3. cd $env:SYSTEMDRIVE\PAM
+4. .\PAMDeployment.ps1
+5. select Menu option 6 (PAM trust setup)
 
   When prompted, enter the credentials for the CORP admin account. After providing credentials, the trust will be established and the configuration is complete.
