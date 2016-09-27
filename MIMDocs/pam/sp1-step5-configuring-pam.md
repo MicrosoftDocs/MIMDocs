@@ -30,7 +30,7 @@ For a domain joined PAMServer, login as MIMAdmin, otherwise login as a local adm
   * .\PAMDeploymnet.ps1
   * select menu option 5 (MIM PAM Setup)
 
->[!NOTE]) If the machine is not already domain joined to PRIV, it will ask for credentials. After the domain join, the machine will reboot.
+>[!NOTE] If the machine is not already domain joined to PRIV, it will ask for credentials. After the domain join, the machine will reboot.
 
 After the PAMServer reboots, log back into the machine with the MIMAdmin account.
 
