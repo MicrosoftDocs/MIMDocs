@@ -6,7 +6,7 @@ description: Understand how MIM 2016 works to create a safer, more convenient id
 keywords:
 author: barclayn
 manager: mbaldwin
-ms.date: 09/27/2016
+ms.date: 09/28/2016
 ms.topic: article
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 # What’s new for Microsoft Identity Manager 2016 Service Pack 1 #
 
-As part of the regular release cycle for servicing and updating Microsoft Identity Manager, we’re pleased to announce Microsoft Identity Manager (MIM) 2016 Service Pack 1 (SP1). This document outlines the updates, enhancements, features, and changes included in this release.
+As part of the regular release cycle for servicing and updating Microsoft Identity Manager, we’re pleased to announce [Microsoft Identity Manager (MIM) 2016 Service Pack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212). This document outlines the updates, enhancements, features, and changes included in this release.
 
 If you encounter issues during a production deployment of MIM SP1, please contact Microsoft customer support.
 
