@@ -32,7 +32,23 @@ This table describes the supported platforms and version for each component of M
 | **MIM component** | **Platform** | **Version** |
 |-------------------|--------------|-------------|
 | **MIM Sync** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
-| - | MIM Sync database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+|   | MIM Sync database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+||  | Active Directory for user provisioning, PCNS and GAL Sync (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+|  | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2007 |
+|  | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
+
+| **MIM component** | **Platform** | **Version** |
+|-------------------|--------------|-------------|
+**MIM Sync** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
+| MIM Sync database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 *
+| Active Directory for user provisioning, PCNS and GAL Sync (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2007 
+
+
+| **MIM component** | **Platform** | **Version** |
+|-------------------|--------------|-------------|
+| **MIM Sync** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
+|  | MIM Sync database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 |  | Active Directory for user provisioning, PCNS and GAL Sync (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 |  | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
 |  | Development environment (optional) | Visual Studio 2012<br/>Visual Studio 2013 |
