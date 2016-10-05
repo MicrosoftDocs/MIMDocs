@@ -41,3 +41,7 @@ Before you move forward with the steps below make sure that you are using SQL Se
 4. Select Menu Option 3(SQL Server Setup)
 
 When prompted, provide the password for the MIMAdmin service account, and let the installation continue. Once complete, move on to Step 4.
+
+>[!div class="step-by-step"]
+[« Step 2](sp1-step2-configuring-corp-domain.md)
+[Step 4 »](sp1-step4-configuring-sharepoint.md)

@@ -22,7 +22,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-# Addendum:
+# PAM deployment scripts addendum:
 
 ## Addendum 1 Setting up the PRIV domain
 
@@ -74,4 +74,4 @@ Proceed with Step 8 provided above.
 
 ## Addendum 4 if something goes wrong
 
-All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file and email it to [mim2016@microsoft.com](mim2016@microsoft.com) along with details of the operation and the error.
+All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file and email it to [mim2016@microsoft.com](mailto:mim2016@microsoft.com) along with details of the operation and the error.
