@@ -4,7 +4,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -30,7 +30,8 @@ For a domain joined PAMServer, login as MIMAdmin, otherwise login as a local adm
 3. .\PAMDeploymnet.ps1
 4. select menu option 5 (MIM PAM Setup)
 
->[!NOTE] If the machine is not already domain joined to PRIV, it will ask for credentials. After the domain join, the machine will reboot.
+>[!NOTE]
+>If the machine is not already domain joined to PRIV, it will ask for credentials. After the domain join, the machine will reboot.
 
 After the PAMServer reboots, log back into the machine with the MIMAdmin account.
 

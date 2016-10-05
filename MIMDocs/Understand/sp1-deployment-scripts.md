@@ -36,6 +36,7 @@ Important Assumptions:
 4. The environment has three dedicated (physical or virtual) machines independently running CORPDC, PRIVDC, and PAMSERVER.
 5. For the validation option, it is assumed a dedicated client machine exists to execute this step.
 
->[!NOTE] If you run into any problem with script execution you may need to take a look at the logs. All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file and email it to mim2016@microsoft.com along with details of the operation and the error.
+>[!NOTE]
+>If you run into any problem with script execution you may need to take a look at the logs. All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file and email it to mim2016@microsoft.com along with details of the operation and the error.
 
-Ready to get started with the PAM deployment scripts? Start at [Configure PAM using scripts](microsoft-identity-manager/pam/sp1-pam-configure-using-scripts).
+Ready to get started with the PAM deployment scripts? Start at [Configure PAM using scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts).

@@ -4,7 +4,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -28,7 +28,8 @@ ms.suite: ems
 The Deployment package comes with verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
 To use the Deployment Verification, modify the PAMDeploymentConfig.xml section called <PamValidation/> .
 
->[!Note] Validation requires a Client machine domain joined to the CORP Domain with the PAM client side components installed. Please see Addendum for scripts on how to install a client.
+>[!NOTE]
+>Validation requires a Client machine domain joined to the CORP Domain with the PAM client side components installed. Please see Addendum for scripts on how to install a client.
 
 The client machine name must be updated in the <PAMValidationClient/> tag of the PAMDeploymentConfig.xml
 The rest of the data in the <PAMValidation/> node needs to be edited only if it conflicts with existing users/groups, as this validation will attempt to create them.
