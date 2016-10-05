@@ -41,3 +41,7 @@ After the PAMServer reboots, log back into the machine with the MIMAdmin account
 
   When prompted, enter the password the MIM Monitor Account, MIM Component Account, MIM MA Account, MIM Service Account, MIM Admin Account and the SharePoint Account.
   Once installation completes, the machine will reboot.
+
+>[!div class="step-by-step"]
+[« Step 4](sp1-step4-configuring-sharepoint.md)
+[Step 6 »](sp1-step6-setup-pam-trust.md)

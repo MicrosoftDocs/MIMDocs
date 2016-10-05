@@ -42,3 +42,6 @@ For functional levels below Windows Server 2016, dismiss the warning that additi
 
 Copy the SIDs.txt that is generated in $env:SYSTEMDRIVE\PAM to the similar folder on the CORPDC. This is required by the CORPDC to setup permissions for PRIV users to read CORP user properties.
 Once the script completes, it will prompt you to reboot the machine for the changes to take effect.
+
+>[!div class="step-by-step"]
+[Step 2 »](sp1-step2-configuring-corp-domain.md)

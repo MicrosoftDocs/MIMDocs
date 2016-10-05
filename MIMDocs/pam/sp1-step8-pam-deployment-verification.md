@@ -76,3 +76,7 @@ From the PowerShell window, type:
   This will show the status of the request.
   Initially the user will not have access to the resource. After the user is Just-In-Time added to the role, the user is granted access. Once the request duration expires, the user again will not have access.
   The script uses the default (11 minutes) for the request to expire.
+
+>[!div class="step-by-step"]
+[« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Addendum »](sp1-pam-deployment-addendum.md)

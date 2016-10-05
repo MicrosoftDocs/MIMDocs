@@ -35,3 +35,7 @@ Login to the PAMServer with the MIMAdmin account.
 5. select Menu option 6 (PAM trust setup)
 
   When prompted, enter the credentials for the CORP admin account. After providing credentials, the trust will be established and the configuration is complete.
+
+>[!div class="step-by-step"]
+[« Step 5](sp1-step5-configuring-pam.md)
+[Step 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)

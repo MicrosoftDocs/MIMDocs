@@ -6,7 +6,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -70,3 +70,7 @@ Before you proceed update teh PAMDeploymentConfig.xml and place the updated copy
 | PAMServer   | MIMAdmin  | Import-module .\PAMValidation.psm1 ; Move-PAMValidationUsersToPAM  |
 | CORPClient  | CORP User (local admin)   |   Import-module .\PAMValidation.psm1 ; Enable-PAMUsersCORPClientRemote |
 |  CORPClient | <PRIV>\PRIV.pamRequestor user and in the case of PRIVOnly : <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+
+
+>[!div class="step-by-step"]
+[Start »](sp1-step1-configuring-priv-domain.md)
