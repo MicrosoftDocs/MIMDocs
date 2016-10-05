@@ -23,7 +23,7 @@ ms.suite: ems
 
 ---
 
-# Setup SID history/SID filtering
+# Step 7 Set up SID history/SID filtering
 
 **This is not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.
