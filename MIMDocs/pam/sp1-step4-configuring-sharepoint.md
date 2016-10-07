@@ -52,3 +52,7 @@ After installation, the SharePoint Configuration GUI will open, and walk through
 
 Details can be found in the **Configure SharePoint** section in [Step 3 - Prepare a PAM server](/microsoft-identity-manager/pam/step-3-prepare-pam-server)
 When it completes, run the “.\PAMDeployment.ps1” script again, selecting Option 4 (SharePoint setup) to complete this step.
+
+>[!div class="step-by-step"]
+[« Step 3](sp1-step3-installing-configuring-sql.md)
+[Step 5 »](sp1-step5-configuring-pam.md)
