@@ -6,7 +6,7 @@ description:
 keywords:
 author: msmbaldwin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 10/17/2016
 ms.topic: reference
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
