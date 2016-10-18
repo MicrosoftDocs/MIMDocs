@@ -6,7 +6,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -34,3 +34,7 @@ Once the SIDs.txt is copied to the CORPDC **not required for PRIVOnly deployment
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
 5. select Menu Option 2 (CORP Forest Configuration)
+
+>[!div class="step-by-step"]
+[« Step 1](sp1-step1-configuring-priv-domain.md)
+[Step 3 »](sp1-step3-installing-configuring-sql.md)
