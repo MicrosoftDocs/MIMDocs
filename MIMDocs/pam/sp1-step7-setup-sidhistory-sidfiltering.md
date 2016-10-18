@@ -23,7 +23,7 @@ ms.suite: ems
 
 ---
 
-# Setup SID history/SID filtering
+# Step 7 Set up SID history/SID filtering
 
 **This is not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.
@@ -39,3 +39,7 @@ For SID filtering: <br/></br>
 “Setting the trust to not filter SIDs” or “SID filtering is not enabled for this trust”. </br></br>
 For SID history: </br></br>
 “Enabling SID history for this trust” or “SID history is already enabled for this trust”.
+
+>[!div class="step-by-step"]
+[« Step 6](sp1-step6-setup-pam-trust.md)
+[Step 8 »](sp1-step8-pam-deployment-verification.md)
