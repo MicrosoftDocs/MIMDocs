@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Set up a domain
 
->[!div class="step-by-step"]  
+>[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
 Microsoft Identity Manger (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.
@@ -74,7 +74,7 @@ All the components of your MIM deployment need their own identities in the domai
     Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
     ```
 
-2.  Create security groups to all the groups.
+3.  Create security groups to all the groups.
 
     ```
     New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global 		–SamAccountName MIMSyncAdmins
@@ -86,14 +86,14 @@ All the components of your MIM deployment need their own identities in the domai
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
 
-3.  Add SPNs to enable Kerberos authentication for service accounts
+4.  Add SPNs to enable Kerberos authentication for service accounts
 
     ```
     setspn -S http/mimservername.contoso.local Contoso\SharePoint
     setspn -S http/mimservername Contoso\SharePoint
-    setspn -S MIMService/mimservername.contoso.local Contoso\MIMService
-    setspn -S MIMSync/mimservername.contoso.local Contoso\MIMSync
+    setspn -S FIMService/mimservername.contoso.local Contoso\MIMService
+    setspn -S FIMSynchronizationService/mimservername.contoso.local Contoso\MIMSync
     ```
 
->[!div class="step-by-step"]  
+>[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
