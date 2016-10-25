@@ -6,7 +6,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -26,6 +26,10 @@ ms.suite: ems
 ---
 
 # Step 2 Configuring the CORP domain
+
+>[!div class="step-by-step"]
+[« Step 1](sp1-step1-configuring-priv-domain.md)
+[Step 3 »](sp1-step3-installing-configuring-sql.md)
 
 Once the SIDs.txt is copied to the CORPDC **not required for PRIVOnly deployments**
 

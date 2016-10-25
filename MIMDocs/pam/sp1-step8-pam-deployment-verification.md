@@ -4,7 +4,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -24,6 +24,10 @@ ms.suite: ems
 ---
 
 # Step 8 Pam deployment verification
+
+>[!div class="step-by-step"]
+[« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Addendum »](sp1-pam-deployment-addendum.md)
 
 The Deployment package comes with verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
 To use the Deployment Verification, modify the PAMDeploymentConfig.xml section called <PamValidation/> .
