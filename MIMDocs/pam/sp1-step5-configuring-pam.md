@@ -4,7 +4,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -23,6 +23,10 @@ ms.suite: ems
 
 ---
 # Step 5 Installing/configuring PAM
+
+>[!div class="step-by-step"]
+[« Step 4](sp1-step4-configuring-sharepoint.md)
+[Step 6 »](sp1-step6-setup-pam-trust.md)
 
 For a domain joined PAMServer, login as MIMAdmin, otherwise login as a local administrator.
 1. Run PowerShell as Administrator
