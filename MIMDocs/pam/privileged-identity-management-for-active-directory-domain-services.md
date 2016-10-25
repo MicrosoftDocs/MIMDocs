@@ -6,7 +6,7 @@ description: Learn about Privileged Access Management, and how it can help you m
 keywords:
 author: kgremban
 manager: femila
-ms.date: 07/27/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -87,6 +87,8 @@ There are a number of ways in which a user can submit a request, including:
 - The MIM Services Web Services API  
 - A REST endpoint  
 - Windows PowerShell (`New-PAMRequest`)
+
+Get details about the [Privileged Access Management cmdlets](https://technet.microsoft.com/library/mt604080.aspx).
 
 ## What workflows and monitoring options are available?
 As an example, let’s say a user was a member of an administrative group before PIM is set up. As part of PIM setup, the user is removed from the administrative group, and a policy is created in MIM. The policy specifies that if that user requests administrative privileges and is authenticated by MFA, the request is approved and a separate account for the user will be added to the privileged group in the bastion forest.
