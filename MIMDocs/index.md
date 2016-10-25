@@ -126,6 +126,8 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
           <ul class="column-half">
             <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">Certificate Management REST API Reference</a></li>
           </ul>
+        </div>
+        <div class="resource-list row">
           <ul class="column-half">
             <li><a href="https://technet.microsoft.com/library/mt604080.aspx">Privileged Access Management cmdlets</a></li>
           </ul>
