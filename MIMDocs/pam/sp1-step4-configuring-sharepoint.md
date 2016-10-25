@@ -4,7 +4,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -24,6 +24,10 @@ ms.suite: ems
 ---
 
 # Step 4 Configuring SharePoint
+
+>[!div class="step-by-step"]
+[« Step 3](sp1-step3-installing-configuring-sql.md)
+[Step 5 »](sp1-step5-configuring-pam.md)
 
 SharePoint must be SharePoint Foundation 2013 with SP1.
 

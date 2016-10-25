@@ -6,7 +6,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 # Step 3 Configuring SQL
+
+>[!div class="step-by-step"]
+[« Step 2](sp1-step2-configuring-corp-domain.md)
+[Step 4 »](sp1-step4-configuring-sharepoint.md)
 
 Before you move forward with the steps below make sure that you are using SQL Server 2012 SP1 or later, or SQL server 2014. For domain joined servers, login using the MIMAdmin account otherwise login as a local administrator
 1. Run PowerShell as Administrator

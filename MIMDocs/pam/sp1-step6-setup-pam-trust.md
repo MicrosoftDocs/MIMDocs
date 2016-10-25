@@ -4,7 +4,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -24,6 +24,10 @@ ms.suite: ems
 ---
 
 # Step 6 Set up the PAM trust
+
+>[!div class="step-by-step"]
+[« Step 5](sp1-step5-configuring-pam.md)
+[Step 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 **This is not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.

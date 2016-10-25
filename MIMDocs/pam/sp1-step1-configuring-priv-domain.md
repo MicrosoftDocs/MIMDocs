@@ -6,7 +6,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -25,6 +25,9 @@ ms.suite: ems
 
 ---
 # Step 1 Configuring the Priv domain
+
+>[!div class="step-by-step"]
+[Step 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Login to the PRIVDC as Administrator
   * If this is a PRIV-Only environment, login to the CORPDC
