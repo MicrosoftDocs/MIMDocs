@@ -50,11 +50,11 @@ When you configure a MIM management agent, you need to specify a user account. T
 
 1.  Open the Synchronization Service Manager.
 
-2.  To open the Create Management Agent wizard, on the **Actions** menu, click **Create**.
+2.  To open the Create Management Agent wizard, change to the **Managment Actions** page, then, on the **Actions** menu, click **Create**.
 
 3.  On the **Create Management Agent** page, provide the following settings, and then click **Next**.
 
-    -   Management agent for: MIM Service management agent
+    -   Management agent for: FIM Service management agent
 
     -   Name: MIMMA
 
@@ -62,7 +62,7 @@ When you configure a MIM management agent, you need to specify a user account. T
 
     -   Server: localhost
 
-    -   Database: MIMService
+    -   Database: FIMService
 
     -   MIM Service base address: http://localhost:5725
 
@@ -76,17 +76,17 @@ When you configure a MIM management agent, you need to specify a user account. T
 
 5.  On the **Selected Object Types** page, verify that the object types that are listed below are selected, and then click **Next**
 
-    -   ExpectedRuleEntry
-
     -   DetectedRuleEntry
+
+    -   ExpectedRuleEntry
+    
+    -   Group
+    
+    -   Person
 
     -   SynchronizationRule
 
-    -   Person
-
-    -   Group
-
-6.  On the **Selected Attributes** page, verify that all listed attributes are selected, and then click **Next**.
+6.  On the **Selected Attributes** page, check **Show All** and verify that all listed attributes are selected, and then click **Next**.
 
 7.  On the **Configure Connector Filter** page, click **Next**.
 
@@ -96,28 +96,18 @@ When you configure a MIM management agent, you need to specify a user account. T
     - Click **Add Mapping** to open the Mapping dialog box.
     - Select **person** in the **Metaverse object type** list.
     - Click **OK** to close the Mapping dialog box.
+    - Select **Group** in the **Data Source Object Type** list.
+    - Click **Add Mapping** to open the Mapping dialog box.
+    - Select **group** in the **Metaverse object type** list.
+    - Click **OK** to close the Mapping dialog box.
 
-9.  On the **Configure Attribute Flow** page, apply the following attribute flow mappings, and then click **Next**
+9.  On the **Configure Attribute Flow** page, create attribute flow mappings as shown below, and then click **Next**
 
-    | **Data Source Attribute** | **Flow Direction** | **Metaverse Attribute** |
-    |-|-|-|
-    | AccountName | Export | accountName |
-    | DisplayName | Export | displayName |
-    | Domain | Export | domain |
-    | EmployeeID | Export | employeeID |
-    | EmployeeType | Export | employeeType |
-    | Email | Export | mail |
-    | FirstName | Export | firstName |
-    | LastName | Export | lastName |
-    | ObjectSID | Export | objectSid |
-
-10.  Select **Person** as the Data source object type.
-
-    -   Select **Person** as the Metaverse object type.
+    -   Select **Person** as the Data source and Metaverse object types.
 
     -   Select **Direct** as the Mapping Type.
 
-    -   For each row in the previous table, complete the following steps:
+    -   For each row in the following table, complete these steps:
 
         -   Select the **Flow direction** shown for that row in the table.
 
@@ -126,8 +116,20 @@ When you configure a MIM management agent, you need to specify a user account. T
         -   Select the **Metaverse attribute** shown for that row in the table.
 
         -   To apply the flow mapping, click **New**.
+        
+    | **Data Source Attribute** | **Flow Direction** | **Metaverse Attribute** |
+    |-|-|-|
+    | AccountName | Export | accountName |
+    | DisplayName | Export | displayName |
+    | Domain | Export | domain |
+    | Email | Export | mail |
+    | EmployeeID | Export | employeeID |
+    | EmployeeType | Export | employeeType |
+    | FirstName | Export | firstName |
+    | LastName | Export | lastName |
+    | ObjectSID | Export | objectSid |
 
-    -   Select **Group** as the data source type and as the metaverse object type.
+    -   Select **Group** as the Data source type and Metaverse object types.
 
     -   Select **Direct** as the Mapping Type.
 
@@ -154,18 +156,17 @@ When you configure a MIM management agent, you need to specify a user account. T
     | Type | Export | type |
     | MembershipAddWorkflow | Export | membershipAddWorkflow |
     | MembershipLocked | Export | membershipLocked |
-    | DisplayName | Import | displayName |
-    | Scope | Import | scope |
-    | Type | Import | type |
-    | Member | Import | member |
     | AccountName | Import | accountName |
     | DisplayedOwner | Import | displayedOwner |
+    | DisplayName | Import | displayName |
     | MailNickName | Import | mailNickName |
+    | Member | Import | member |
+    | Scope | Import | scope |
+    | Type | Import | type |
 
+10.  On the **Configure Deprovisioning** page, click **Next**
 
-11.  On the **Configure Deprovisioning** page, click **Next**
-
-12.  To create the management agent, on the **Configure Extensions** page, click **Finish**.
+11.  To create the management agent, on the **Configure Extensions** page, click **Finish**.
 
 ## Create the AD management agent
 The Active Directory management agent is a connector for AD Domain Services. To create this connector, you use the Create Management Agent wizard.
@@ -200,11 +201,7 @@ The Active Directory management agent is a connector for AD Domain Services. To 
 
     - In the **Object types** list, select **user** and **group**.
 
-7. On the **Select Attributes** page, provide the following settings, and then click **Next**:
-
-    - Select **Show All**.
-
-8. In the **Attributes** list, select the following attributes:
+7. On the **Select Attributes** page, check **Show ALL**, elect the following attributes, and then click **Next**:
 
     -   company
     -   displayName
@@ -212,8 +209,8 @@ The Active Directory management agent is a connector for AD Domain Services. To 
     -   employeeType
     -   givenName
     -   groupType
-    -   manager
     -   managedBy
+    -   manager
     -   member
     -   objectSid
     -   sAMAccountName
@@ -222,15 +219,15 @@ The Active Directory management agent is a connector for AD Domain Services. To 
     -   unicodePwd
     -   userAccountControl
 
-9. On the **Configure Connector Filter** page, click **Next**.
+8. On the **Configure Connector Filter** page, click **Next**.
 
-10. On the **Configure Join and Projection Rules** page, click **Next**.
+9. On the **Configure Join and Projection Rules** page, click **Next**.
 
-11. On the **Configure Attribute Flow** page, click **Next**.
+10. On the **Configure Attribute Flow** page, click **Next**.
 
-12. On the **Configure Deprovisioning** page, click **Next**.
+11. On the **Configure Deprovisioning** page, click **Next**.
 
-13. On the **Configure Extensions** page, click **Finish**.
+12. On the **Configure Extensions** page, click **Finish**.
 
 
 ## Create Run Profiles
@@ -328,7 +325,7 @@ To create the AD user inbound synchronization rule:
 
     -   To configure the Relationship Criteria, select **ObjectSID** from the MetaverseObject:person(Attribute) list and from the ConnectedSystemObject:person(Attribute)list.
 
-    -   Select **Create Resource in MIM**.
+    -   Select **Create Resource in FIM**.
 
 7. On the **Inbound Attribute Flow** page, provide the following information, and then click **Next**:
 
