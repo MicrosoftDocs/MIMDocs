@@ -8,7 +8,6 @@ author: kgremban
 manager: femila
 ms.date: 09/29/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144

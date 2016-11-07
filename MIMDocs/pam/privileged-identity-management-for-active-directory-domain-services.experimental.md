@@ -8,7 +8,6 @@ author: kgremban
 manager: femila
 ms.date: 07/27/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
