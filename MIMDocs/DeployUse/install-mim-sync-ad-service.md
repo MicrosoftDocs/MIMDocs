@@ -8,7 +8,6 @@ author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
@@ -79,9 +78,9 @@ When you configure a MIM management agent, you need to specify a user account. T
     -   DetectedRuleEntry
 
     -   ExpectedRuleEntry
-    
+
     -   Group
-    
+
     -   Person
 
     -   SynchronizationRule
@@ -116,7 +115,7 @@ When you configure a MIM management agent, you need to specify a user account. T
         -   Select the **Metaverse attribute** shown for that row in the table.
 
         -   To apply the flow mapping, click **New**.
-        
+
     | **Data Source Attribute** | **Flow Direction** | **Metaverse Attribute** |
     |-|-|-|
     | AccountName | Export | accountName |
