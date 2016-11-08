@@ -1,0 +1,46 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "Understand/**",
+          "GetStarted/**",
+          "DeployUse/**",
+          "PlanDesign/**",
+          "Troubleshoot/**" 
+        ]
+      }
+    ],
+    "resource": [
+        {
+          "files": [
+          "**/images/**", 
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.bmp",
+          "**/*.html"
+          ],
+        "exclude": [
+          "**/obj/**",
+          "_themes/**",
+          "Understand/**",
+          "GetStarted/**",
+          "DeployUse/**",
+          "PlanDesign/**",
+          "Troubleshoot/**" 
+        ]
+      }
+    ],
+    "dest": "MIMDocs",
+    "template": "docs.html",
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "/enterprise-mobility/toc.json"
+    }
+  }
+}
