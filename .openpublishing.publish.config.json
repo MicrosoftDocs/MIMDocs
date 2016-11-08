@@ -68,6 +68,7 @@
     "OPBuild@microsoft.com"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/MIMDocs",
+  "git_repository_branch_open_to_public_contributors" : "master",
   "skip_source_output_uploading": false,
   "dependent_repositories": [
     {
