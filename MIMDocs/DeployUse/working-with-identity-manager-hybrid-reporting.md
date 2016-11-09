@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Hybrid reporting in Azure | Microsoft Identity Manager
+title: Hybrid reporting in Azure | Microsoft Docs
 description: Learn how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 keywords:
 author: kgremban

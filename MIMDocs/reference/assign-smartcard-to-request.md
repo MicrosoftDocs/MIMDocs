@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Assign Smart card to a Request | Microsoft Identity Manager
+title: Assign Smart card to a Request | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

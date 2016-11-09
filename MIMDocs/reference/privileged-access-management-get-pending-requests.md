@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Pending PAM Requests | Microsoft Identity Manager
+title: Get Pending PAM Requests | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

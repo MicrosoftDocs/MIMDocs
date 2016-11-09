@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Self-service smart card renewal | Microsoft Identity Manager
+title: Self-service smart card renewal | Microsoft Docs
 description: Learn how to enroll smart cards for users without administrator access to their machines so they can use Certificate Manager.
 keywords:
 author: kgremban

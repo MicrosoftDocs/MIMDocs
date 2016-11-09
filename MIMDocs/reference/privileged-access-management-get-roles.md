@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get PAM Roles | Microsoft Identity Manager
+title: Get PAM Roles | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

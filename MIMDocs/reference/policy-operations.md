@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Policy Operations | Microsoft Identity Manager
+title: Policy Operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

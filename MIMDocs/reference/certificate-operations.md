@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Certificate Operations | Microsoft Identity Manager
+title: Certificate Operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

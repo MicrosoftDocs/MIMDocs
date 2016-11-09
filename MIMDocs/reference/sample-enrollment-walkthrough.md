@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Sample Enrollment Walkthrough | Microsoft Identity Manager
+title: Sample Enrollment Walkthrough | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

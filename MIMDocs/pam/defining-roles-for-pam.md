@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Define privileged roles for PAM | Microsoft Identity Manager
+title: Define privileged roles for PAM | Microsoft Docs
 description: Decide which privileged roles should be managed, and define the management policy for each.
 keywords:
 author: kgremban

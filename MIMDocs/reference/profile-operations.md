@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Profile Operations | Microsoft Identity Manager
+title: Profile Operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

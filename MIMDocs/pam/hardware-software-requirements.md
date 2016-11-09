@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: PAM software requirements | Microsoft Identity Manager
+title: PAM software requirements | Microsoft Docs
 description: Find the hardware and software requirements for a successful deployment of Privileged Access Management
 keywords:
 author: kgremban

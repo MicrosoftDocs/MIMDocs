@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Smartcard Authentication Response | Microsoft Identity Manager
+title: Get Smartcard Authentication Response | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

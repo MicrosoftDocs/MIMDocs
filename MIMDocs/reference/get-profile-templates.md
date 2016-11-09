@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Profile Templates | Microsoft Identity Manager
+title: Get Profile Templates | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

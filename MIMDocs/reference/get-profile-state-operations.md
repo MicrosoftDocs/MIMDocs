@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Profile State Operations | Microsoft Identity Manager
+title: Get Profile State Operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

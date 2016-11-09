@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Smartcard Data | Microsoft Identity Manager
+title: Get Smartcard Data | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

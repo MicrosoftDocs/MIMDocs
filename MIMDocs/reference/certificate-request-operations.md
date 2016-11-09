@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Certificate Request Operations | Microsoft Identity Manager
+title: Certificate Request Operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

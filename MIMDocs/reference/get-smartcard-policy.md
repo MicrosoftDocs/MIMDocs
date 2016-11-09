@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Smartcard Policy | Microsoft Identity Manager
+title: Get Smartcard Policy | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create PAM Request | Microsoft Identity Manager
+title: Create PAM Request | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

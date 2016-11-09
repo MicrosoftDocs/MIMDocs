@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Deploy and configure PAM | Microsoft Identity Manager
+title: Deploy and configure PAM | Microsoft Docs
 description: The roadmap for installing and MIM and configuring it for Privileged Access Management.
 keywords:
 author: kgremban

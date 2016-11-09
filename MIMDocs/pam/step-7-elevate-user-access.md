@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Deploy PAM step 7 – user access | Microsoft Identity Manager
+title: Deploy PAM step 7 – user access | Microsoft Docs
 description: As the final step, grant a privileged user temporary access to demonstrate that your Privileged Access Management deployment was successful.
 keywords:
 author: kgremban

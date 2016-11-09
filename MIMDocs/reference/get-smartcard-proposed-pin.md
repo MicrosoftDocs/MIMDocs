@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Smartcard Proposed PIN | Microsoft Identity Manager
+title: Get Smartcard Proposed PIN | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Supported software platforms | Microsoft Identity Manager
+title: Supported software platforms | Microsoft Docs
 description: Find the products and versions that are compatible with each of the MIM 2016 components
 keywords:
 author: kgremban

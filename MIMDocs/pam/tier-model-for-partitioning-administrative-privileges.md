@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: PAM environment tier model | Microsoft Identity Manager
+title: PAM environment tier model | Microsoft Docs
 description: Learn about the tier model that segregates your system based on vulnerability to risk.
 keywords:
 author: kgremban

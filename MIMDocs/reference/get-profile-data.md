@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Profile Data | Microsoft Identity Manager
+title: Get Profile Data | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

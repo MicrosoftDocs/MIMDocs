@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Certificate Responses | Microsoft Identity Manager
+title: Get Certificate Responses | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

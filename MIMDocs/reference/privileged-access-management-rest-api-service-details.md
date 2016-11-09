@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: PAM REST API Service Details | Microsoft Identity Manager
+title: PAM REST API Service Details | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

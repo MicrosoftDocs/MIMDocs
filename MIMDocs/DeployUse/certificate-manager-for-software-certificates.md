@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create software certificates | Microsoft Identity Manager
+title: Create software certificates | Microsoft Docs
 description: Learn how to use Certificate Manager to create and renew software certificates with profile templates.
 keywords:
 author: kgremban

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What is hybrid reporting | Microsoft Identity Manager
+title: What is hybrid reporting | Microsoft Docs
 description: Azure Active Directory hybrid reporting lets you create custom reports that include both cloud and on-premises events.
 keywords:
 author: kgremban

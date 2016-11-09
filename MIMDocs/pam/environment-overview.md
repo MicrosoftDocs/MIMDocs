@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: PAM environment overview | Microsoft Identity Manager
+title: PAM environment overview | Microsoft Docs
 description: Find the required number and configuration of virtual machines to successfully deploy Privileged Access Management
 keywords:
 author: kgremban

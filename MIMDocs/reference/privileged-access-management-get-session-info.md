@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get PAM Session Info | Microsoft Identity Manager
+title: Get PAM Session Info | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

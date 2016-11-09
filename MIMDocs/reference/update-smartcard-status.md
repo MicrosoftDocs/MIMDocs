@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Update Smartcard Status | Microsoft Identity Manager
+title: Update Smartcard Status | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

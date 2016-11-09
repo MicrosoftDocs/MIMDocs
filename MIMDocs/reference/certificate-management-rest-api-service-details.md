@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: CM REST API Service Details | Microsoft Identity Manager
+title: CM REST API Service Details | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

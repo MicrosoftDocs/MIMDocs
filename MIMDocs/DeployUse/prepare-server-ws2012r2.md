@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Windows Server | Microsoft Identity Manager
+title: Configure Windows Server | Microsoft Docs
 description: Get the steps and minimum requirements to prepare Windows Server 2012 RS to work with MIM 2016.
 keywords:
 author: kgremban

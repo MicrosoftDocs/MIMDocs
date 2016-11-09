@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Request | Microsoft Identity Manager
+title: Get Request | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

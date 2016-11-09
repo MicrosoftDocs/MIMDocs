@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Close PAM Request | Microsoft Identity Manager
+title: Close PAM Request | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get User Certificates | Microsoft Identity Manager
+title: Get User Certificates | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

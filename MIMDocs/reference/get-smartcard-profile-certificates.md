@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Smartcard or Profile Certificates | Microsoft Identity Manager
+title: Get Smartcard or Profile Certificates | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

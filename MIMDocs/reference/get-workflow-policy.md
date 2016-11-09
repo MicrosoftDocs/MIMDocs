@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Workflow Policy | Microsoft Identity Manager
+title: Get Workflow Policy | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

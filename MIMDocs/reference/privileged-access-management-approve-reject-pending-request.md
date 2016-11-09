@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Approve or Reject a Pending PAM Request | Microsoft Identity Manager
+title: Approve or Reject a Pending PAM Request | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

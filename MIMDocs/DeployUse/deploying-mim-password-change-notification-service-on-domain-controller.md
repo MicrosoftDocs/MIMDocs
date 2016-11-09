@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Password change notifications | Microsoft Identity Manager
+title: Password change notifications | Microsoft Docs
 description: Get the steps to install and configure the MIM Password Change Notification Service on your domain controller.
 keywords:
 author: kgremban

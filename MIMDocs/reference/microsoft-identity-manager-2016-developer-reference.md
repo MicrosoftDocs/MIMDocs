@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft Identity Manager 2016 Developer Reference | Microsoft Identity Manager
+title: Microsoft Identity Manager 2016 Developer Reference | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

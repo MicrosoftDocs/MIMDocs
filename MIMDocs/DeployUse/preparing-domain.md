@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up a domain | Microsoft Identity Manager
+title: Set up a domain | Microsoft Docs
 description: Create an Active Directory domain controller before installing MIM 2016
 keywords:
 author: kgremban

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Certificate Management REST API Reference | Microsoft Identity Manager
+title: Certificate Management REST API Reference | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get Certificate Request Generation Options | Microsoft Identity Manager
+title: Get Certificate Request Generation Options | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin

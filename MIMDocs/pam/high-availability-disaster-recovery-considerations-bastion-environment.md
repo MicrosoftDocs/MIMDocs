@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: PAM disaster recovery | Microsoft Identity Manager
+title: PAM disaster recovery | Microsoft Docs
 description: Learn how to configure Privileged Access Management for high availability and disaster recovery.
 keywords:
 author: kgremban
