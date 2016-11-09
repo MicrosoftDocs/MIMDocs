@@ -5,6 +5,7 @@ title: Password change notifications | Microsoft Identity Manager
 description: Get the steps to install and configure the MIM Password Change Notification Service on your domain controller.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article

@@ -5,6 +5,7 @@ title: PAM disaster recovery | Microsoft Identity Manager
 description: Learn how to configure Privileged Access Management for high availability and disaster recovery.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article

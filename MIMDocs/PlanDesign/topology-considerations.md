@@ -5,6 +5,7 @@ title: Topology guide for deployment | Microsoft Identity Manager
 description: Understand the MIM 2016 components, and get suggestions for how to deploy them in your environment.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article

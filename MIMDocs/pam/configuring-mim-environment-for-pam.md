@@ -5,6 +5,7 @@ title: Deploy and configure PAM | Microsoft Identity Manager
 description: The roadmap for installing and MIM and configuring it for Privileged Access Management.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article

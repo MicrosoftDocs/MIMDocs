@@ -5,6 +5,7 @@ title: Certificate Operations | Microsoft Identity Manager
 description:
 keywords:
 author: msmbaldwin
+ms.author: mbaldwin
 manager: mbaldwin
 ms.date: 10/17/2016
 ms.topic: reference

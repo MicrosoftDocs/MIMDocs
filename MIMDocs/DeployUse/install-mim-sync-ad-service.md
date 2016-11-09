@@ -5,6 +5,7 @@ title: Synchronize AD and MIM Service | Microsoft Identity Manager
 description: Use management agents and the MIM Sync Service to sync your Active Directory and MIM databases.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article

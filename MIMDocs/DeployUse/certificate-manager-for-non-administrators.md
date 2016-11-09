@@ -5,6 +5,7 @@ title: Self-service smart card renewal | Microsoft Identity Manager
 description: Learn how to enroll smart cards for users without administrator access to their machines so they can use Certificate Manager.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article

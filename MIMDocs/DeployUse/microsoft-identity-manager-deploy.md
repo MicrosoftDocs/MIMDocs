@@ -5,6 +5,7 @@ title: Deploy MIM 2016 | Microsoft Identity Manager
 description: Get the full list of steps involved in deploying Microsoft Identity Manager 2016, from preparing the environment to configuring the portals.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/07/2016
 ms.topic: article

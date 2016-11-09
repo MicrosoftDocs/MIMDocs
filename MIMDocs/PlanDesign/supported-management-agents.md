@@ -5,6 +5,7 @@ title: Supported connectors | Microsoft Identity Manager
 description: Use connectors to manage data transfer between MIM and your directories.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article

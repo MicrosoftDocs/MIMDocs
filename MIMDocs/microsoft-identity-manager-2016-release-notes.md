@@ -5,6 +5,7 @@ title: Release Notes for MIM 2016 | Microsoft Identity Manager
 description: Find information about the recent MIM releases. 
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article

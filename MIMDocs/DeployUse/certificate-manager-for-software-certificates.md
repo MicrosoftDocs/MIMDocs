@@ -5,6 +5,7 @@ title: Create software certificates | Microsoft Identity Manager
 description: Learn how to use Certificate Manager to create and renew software certificates with profile templates.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article

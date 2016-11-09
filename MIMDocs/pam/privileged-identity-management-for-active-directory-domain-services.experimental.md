@@ -5,6 +5,7 @@ title: What is PAM for ADDS? | Microsoft Identity Manager
 description: Learn about Privileged Access Management, and how it can help you manage and protect your Active Directory environment.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/27/2016
 ms.topic: article

@@ -5,6 +5,7 @@ title: Planning a bastion environment | Microsoft Identity Manager
 description:
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/16/2016
 ms.topic: article
