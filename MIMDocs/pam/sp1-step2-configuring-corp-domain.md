@@ -5,6 +5,7 @@ title: Step 2 Configuring the CORP domain
 description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
 keywords:
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
 ms.date: 10/25/2016
 ms.topic: article

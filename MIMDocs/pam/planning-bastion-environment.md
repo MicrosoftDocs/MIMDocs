@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Planning a bastion environment | Microsoft Identity Manager
+title: Planning a bastion environment | Microsoft Docs
 description:
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/16/2016
 ms.topic: article

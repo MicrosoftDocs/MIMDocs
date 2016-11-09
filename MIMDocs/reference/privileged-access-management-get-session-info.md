@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Get PAM Session Info | Microsoft Identity Manager
+title: Get PAM Session Info | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
+ms.author: mbaldwin
 manager: mbaldwin
 ms.date: 10/17/2016
 ms.topic: reference

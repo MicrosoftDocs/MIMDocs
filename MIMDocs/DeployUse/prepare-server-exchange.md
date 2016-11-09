@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Configure Exchange server | Microsoft Identity Manager
+title: Configure Exchange server | Microsoft Docs
 description: As an optional step, deploy Exchange Server to enable MIM 2016 to send mail and create mailboxes.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article

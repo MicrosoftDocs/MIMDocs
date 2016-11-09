@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Smart card Operations | Microsoft Identity Manager
+title: Smart card Operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
+ms.author: mbaldwin
 manager: mbaldwin
 ms.date: 10/17/2016
 ms.topic: reference

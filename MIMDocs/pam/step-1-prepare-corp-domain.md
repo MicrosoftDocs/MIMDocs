@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Deploy PAM Step 1 - CORP domain | Microsoft Identity Manager
+title: Deploy PAM Step 1 - CORP domain | Microsoft Docs
 description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
