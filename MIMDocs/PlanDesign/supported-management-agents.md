@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Supported connectors | Microsoft Identity Manager
+title: Supported connectors | Microsoft Docs
 description: Use connectors to manage data transfer between MIM and your directories.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
@@ -41,7 +42,7 @@ This article covers the connectors that are included in MIM, but the connector f
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Active Directory Global Address List (GAL) | Active Directory Global Address List (GAL) – Exchange 2000, 2003, 2007, 2010, 2013 |
 | Extensible Connectivity 2.0 | Any call-based or file-based data source |
-| MIM Service | Microsoft Identity Manager 2016 |
+| MIM Service | Microsoft Docs 2016 |
 | IBM DB2 Universal Database | IBM DB2 version 9.1, 9.5 or 9.7; IBM DB2 OLEDB v9.5 FP5 or v9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Novell eDirectory version 8.7.3, 8.8.5 and 8.8.6 |

@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Cancel, Abandon, or Complete a Request | Microsoft Identity Manager
+title: Cancel, Abandon, or Complete a Request | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
+ms.author: mbaldwin
 manager: mbaldwin
 ms.date: 10/17/2016
 ms.topic: reference
