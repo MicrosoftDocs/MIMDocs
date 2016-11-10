@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
+title: Microsoft Identity Manager 2016 | Microsoft Docs
 description: Understand how MIM 2016 works to create a safer, more convenient identity management experience in the cloud and on-premises.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article

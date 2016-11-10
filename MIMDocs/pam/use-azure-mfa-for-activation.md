@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Use Azure MFA to activate PAM | Microsoft Identity Manager
+title: Use Azure MFA to activate PAM | Microsoft Docs
 description: Set up Azure MFA as a second layer of security when your users activate roles in Privileged Access Management.
 keywords:
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article

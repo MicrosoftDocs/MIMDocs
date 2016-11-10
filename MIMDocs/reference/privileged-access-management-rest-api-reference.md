@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Privileged Access Management REST API Reference | Microsoft Identity Manager
+title: Privileged Access Management REST API Reference | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
+ms.author: mbaldwin
 manager: mbaldwin
 ms.date: 10/17/2016
 ms.topic: reference
