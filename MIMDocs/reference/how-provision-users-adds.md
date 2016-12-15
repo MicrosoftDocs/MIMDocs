@@ -39,7 +39,7 @@ information.
 In this section, you will find information about the scope of this document. In
 general, "How Do I" guides are targeted at readers who already have basic
 experience with the process of synchronizing objects with FIM as covered in the
-related Getting Started (http://go.microsoft.com/FWLink/p/?LinkId=190486) Guides.
+related [Getting Started Guides](http://go.microsoft.com/FWLink/p/?LinkId=190486).
 
 ### Audience
 
@@ -86,7 +86,7 @@ and does not include the time required to set up the test environment.
 
 If you have questions regarding the content of this document or if you have
 general feedback you would like to discuss, feel free to post a message to the
-Forefront Identity Manager 2010 forum (http://go.microsoft.com/FWLink/p/?LinkId=189654).
+[Forefront Identity Manager 2010 forum](http://go.microsoft.com/FWLink/p/?LinkId=189654).
 
 ## Scenario Description
 
@@ -117,7 +117,7 @@ The following illustration outlines the required environment.
 
 You can run all components on one computer.
 
->[!NOTE]| For more information about setting up FIM, see the FIM Installation Guide (http://go.microsoft.com/FWLink/p/?LinkId=165845). |
+>[!NOTE]| For more information about setting up FIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845). |
 
 ## Scenario Components List
 
@@ -157,8 +157,7 @@ create that are outside of your FIM environment.
 
 
 You need the OU as a container for the provisioned sample user. For more
-information about creating OUs, see Create a New Organizational Unit
-(http://go.microsoft.com/FWLink/p/?LinkId=189655).
+information about creating OUs, see [Create a New Organizational Unit](http://go.microsoft.com/FWLink/p/?LinkId=189655).
 
 Create an OU called FIMObjects in your AD DS.
 
@@ -172,8 +171,7 @@ For the scenario in this guide, you need two Active Directory user accounts:
 
 In both cases, it is sufficient to create regular user accounts. More
 information about the specific requirements of both accounts is found later in
-this document. For more information about creating users, see Create a New User
-Account (http://go.microsoft.com/FWLink/p/?LinkId=189656).
+this document. For more information about creating users, see [Create a New User Account](http://go.microsoft.com/FWLink/p/?LinkId=189656).
 
 
 ## Configuring the FIM Synchronization Service
@@ -198,7 +196,7 @@ use a regular user account. However, to import data from AD DS, the account must
 have the right to poll changes from the DirSync control. If you want your
 management agent to export data to AD DS, you need to grant the account
 sufficient rights on the target OUs. For more information about this topic, see
-Configuring the ADMA Account (http://go.microsoft.com/FWLink/p/?LinkId=189657).
+[Configuring the ADMA Account](http://go.microsoft.com/FWLink/p/?LinkId=189657).
 
 To create a user in AD DS, you are required to flow out the object's DN. In
 addition to this, it is a good practice to flow the first name, last name, and
@@ -218,8 +216,7 @@ Ensure that the value you specify as unicodePwd complies with the password polic
 When you set a password for AD DS accounts, you also need to create an account
 as an enabled account. You accomplish this by setting the userAccountControl
 attribute. For more information about the userAccountControl attribute, see
-Using FIM to Enable or Disable Accounts in Active Directory
-(http://go.microsoft.com/FWLink/p/?LinkId=189658).
+[Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658).
 
 The following table lists the most important scenario-specific settings that you
 need to configure.
@@ -247,8 +244,7 @@ You should use a regular user account. The account must be the same account as
 the one you specified during the installation of FIM. For a script that you can
 use to determine the name of the FIMMA account that you specified during setup
 and to test whether this account is still valid, see Using Windows PowerShell to
-Do a FIM MA Account Configuration Quick Test
-(http://go.microsoft.com/FWLink/p/?LinkId=189659).
+Do a [FIM MA Account Configuration Quick Test](http://go.microsoft.com/FWLink/p/?LinkId=189659).
 
 The following table lists the most important scenario-specific settings you need
 to configure. Create the management agent based on the information provided in the table below.  
@@ -311,9 +307,7 @@ provision your resource to AD DS according to your configuration.
 To configure the FIM Service, navigate in Windows Internet Explorer® to
 http://localhost/identitymanagement. On the FIM Portal page, to create the
 provisioning policy, go to the related pages from the Administration section. To
-verify your configuration, you should run the script in Using Windows PowerShell
-to document your provisioning policy configuration
-(http://go.microsoft.com/FWLink/p/?LinkId=189661).
+verify your configuration, you should run the script in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661).
 
 ### Step 6: Create the synchronization rule
 
@@ -598,9 +592,7 @@ your outbound synchronization rule is now active on the object in the metaverse.
 Because a new object has been provisioned to the ADMA connector space, you
 should have one Add pending export on this management agent. By using a script
 made for this purpose, you can see one reported Add pending export for the
-Fabrikam ADMA. To use the script, see Using Windows PowerShell to Display the
-Export State of a Management Agent
-(http://go.microsoft.com/FWLink/p/?LinkId=189664).
+Fabrikam ADMA. To use the script, see [Using Windows PowerShell to Display the Export State of a Management Agent](http://go.microsoft.com/FWLink/p/?LinkId=189664).
 
 ![Pending exports for management Agent](media/how-provision-users-adds/image029.jpg)
 
@@ -637,8 +629,7 @@ new test objects. For objects with a
 
 populated ExpectedRulesList attribute, this can result in orphaned ERE objects.
 For a description of how you can remove these objects from your test
-environment, see A Method to Remove Orphaned ExpectedRuleEntry Objects from Your
-Environment (http://go.microsoft.com/FWLink/p/?LinkId=189667).
+environment, see [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment](http://go.microsoft.com/FWLink/p/?LinkId=189667).
 
 In a typical synchronization scenario that includes AD DS as a synchronization
 target, FIM is not authoritative for all attributes of an object. For example,
@@ -651,8 +642,7 @@ connector space. When you manage objects with multiple sources for attribute
 values, you need to ensure that you configure your attribute flow precedence
 correctly. If the attribute flow precedence is not correctly configured, the
 synchronization engine blocks attribute values from being populated. You can
-find more information about attribute flow precedence in the article About
-Attribute Flow Precedence (http://go.microsoft.com/FWLink/p/?LinkId=189675).
+find more information about attribute flow precedence in the article [About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675).
 
 See Also
 =========
