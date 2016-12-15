@@ -117,7 +117,7 @@ The following illustration outlines the required environment.
 
 You can run all components on one computer.
 
->[!NOTE]|
+>[!NOTE]
 For more information about setting up FIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845). |
 
 ## Scenario Components List
@@ -608,7 +608,8 @@ successive synchronization runs.
 
 Run the run profiles according to the instructions in this section.
 
->[!IMPORTANT] Each run profile run must succeed without an error.
+>[!IMPORTANT]
+Each run profile run must succeed without an error.
 
 ### Step 14: Verify the provisioned user in AD DS
 
