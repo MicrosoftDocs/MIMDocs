@@ -117,7 +117,8 @@ The following illustration outlines the required environment.
 
 You can run all components on one computer.
 
->[!NOTE]| For more information about setting up FIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845). |
+>[!NOTE]|
+For more information about setting up FIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845). |
 
 ## Scenario Components List
 
@@ -285,7 +286,8 @@ in this guide.
 Create run profiles for each management agent according to the previous table.
 
 
->[!Note] For more information, see the Create a Management Agent Run Profile in FIM Help.                                                                                                                  
+>[!Note]
+For more information, see the Create a Management Agent Run Profile in FIM Help.                                                                                                                  
 
 
 **Important:** Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660). |                                                                                |
@@ -360,7 +362,8 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 
 
 
- >[!NOTE] Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
+ >[!NOTE]
+ Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
 
 ### Step 7: Create the workflow
 
