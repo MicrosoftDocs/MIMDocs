@@ -294,8 +294,8 @@ For more information, see the Create a Management Agent Run Profile in FIM Help.
 
 
 >[!Important]
- Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660). |                                                                                |
-
+ Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+ 
 
 ## Configuring the FIM Service
 
