@@ -378,7 +378,7 @@ configuration.  Create a workflow according to the data in the tables below.
 | Run On Policy Update                 | False                                                           |
 
 | Synchronization rule                 |                                                                 |
-|--------------------------------------------------------------------------------------------------------|
+|--------------------------------------|-----------------------------------------------------------------|
 | Name                                 | Active Directory User Outbound Synchronization Rule             |
 | Action                               | Add                                                             |
 
@@ -400,7 +400,7 @@ configuration.  Create an MPR according to the data in the tables below.
 | Disabled                             | False                                                       |
 
 | Transition definition                |                                                             |
-|----------------------------------------------------------------------------------------------------|
+|--------------------------------------|-------------------------------------------------------------|
 | Transition Type                      | Transition In                                               |
 | Transition Set                       | All Contractors                                             |
 
