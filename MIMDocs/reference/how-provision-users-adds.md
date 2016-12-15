@@ -346,7 +346,7 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 
                                                            |
 | Initial outbound attribute flows        | |                                                             |
-|-------------------|---------------------- |
+|-------------------|---------------------- |---------------|
 | Allow nulls                 | Destination                                                                 | Source                                                    |
 | false                       | dn                                                                          | \+("CN=",displayName,",OU=FIMObjects,DC=fabrikam,DC=com") |
 | false                       | userAccountControl                                                          | **Constant:** 512                                         |
