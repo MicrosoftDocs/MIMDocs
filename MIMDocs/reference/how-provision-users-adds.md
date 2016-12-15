@@ -408,6 +408,7 @@ configuration.  Create an MPR according to the data in the tables below.
 | Transition Set                       | All Contractors                                             |
 
 | Policy workflows                     |                                                             |
+|--------------------------------------|-------------------------------------------------------------|
 | Type                                 | Action                                                      |
 | Display Name                         | Active Directory User Provisioning Workflow                 |
 
