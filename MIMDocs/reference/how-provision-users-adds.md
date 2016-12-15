@@ -230,7 +230,10 @@ need to configure.
 | Select attributes                                       | 1. Click **Show All.** <br/>   2. Select the following attributes: <br/> &nbsp;&nbsp;&nbsp;&#176; **displayName** <br/> &nbsp;&nbsp;&nbsp;&#176; **givenName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **sn** <br/> &nbsp;&nbsp;&nbsp;&#176;  **SamAccountName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **unicodePwd** <br/> &nbsp;&nbsp;&nbsp;&#176;  **userAccountControl**     
 
 For more information, see the following topics in Help:
-<br> &nbsp;&nbsp;&nbsp;&#176; Create a Management Agent <br/>&nbsp;&nbsp;&nbsp;&#176;  Connect to an Active Directory Forest <br/>&nbsp;&nbsp;&nbsp;&#176;  Using the Management Agent for Active Directory <br/>&nbsp;&nbsp;&nbsp;&#176;  Configure Directory Partitions
+- Create a Management Agent
+- Connect to an Active Directory Forest
+- Using the Management Agent for Active Directory
+- Configure Directory Partitions
 
 >[!Note]
 Ensure that you have an import attribute flow rule configured for the ExpectedRulesList attribute.
@@ -256,7 +259,7 @@ to configure. Create the management agent based on the information provided in t
 | Connect to database     | Use the following settings: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183; **FIM Service base address:** http://localhost:5725 <br/> <br/> Provide the information about the account you created for this management agent |
 | Select Object types                                     | In addition to the already selected Object types, select **Person.**   |
 | Configure Object type mappings                          | In addition to the already existing object type mappings, add a mapping for the **Data Source Object Type** Person to the **Metaverse** Object Type person. |
-| Configure attribute flow                                | In addition to the already existing attribute flow mappings, add the following attribute flow mappings: <br/> ![Attribute flow](media/how-provision-users-adds/image018.jpg) |
+| Configure attribute flow                                | In addition to the already existing attribute flow mappings, add the following attribute flow mappings: <br/><br/> ![Attribute flow](media/how-provision-users-adds/image018.jpg) |
 
 
 
