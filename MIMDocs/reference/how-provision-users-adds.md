@@ -223,7 +223,7 @@ The following table lists the most important scenario-specific settings that you
 need to configure.
 
 | Management agent designer page                          | Configuration                                                  |
-|--------------------------------------------------------------------------------------------------------------------------|
+|---------------------------------------------------------|----------------------------------------------------------------|
 | Create management agent                                 | 1. **Management agent for:** AD DS  <br/> 2.  **Name:** Fabrikam ADMA |
 | Connect to Active Directory forest                      | 1. **Select directory partitions:** “DC=Fabrikam,DC=com”   <br/>   2. Click **Containers** to open the **Select Containers** dialog box and ensure that **FIMObjects** is the only OU that is selected.        |
 | Select Object types                                     | In addition to the already selected Object types, select **user.** |
@@ -327,7 +327,7 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 
 
 | Scope |                                                                             |                                                           
-|---------------|
+|--------|-------|
 | Metaverse Resource Type | person |                                                         
 | External System                   |Fabrikam ADMA                                                               |                                                       
 | External System Resource Type                                                                              | user      
@@ -335,25 +335,25 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 
 
 | Relationship ||
-|------------                                                                             |                                                           |
+|------------|---------|
 | Create Resource In External System                                                                         | True                                                                        |                                                           
 | Enable Deprovisioning                                                                                      | False                                                                       |                                                           
 
 | Relationship criteria                                                                                      | |
-|--------------------                                                           |
+|------------|----------|
 | ILM Attribute     | Data Source Attribute                                                       |
 | Data Source Attribute         | sAMAccountName    |
 
                                                            |
 | Initial outbound attribute flows        | |                                                             |
-|----------------------------------------- |
+|-------------------|---------------------- |
 | Allow nulls                 | Destination                                                                 | Source                                                    |
 | false                       | dn                                                                          | \+("CN=",displayName,",OU=FIMObjects,DC=fabrikam,DC=com") |
 | false                       | userAccountControl                                                          | **Constant:** 512                                         |
 | false                                                                     | unicodePwd                    | Constant: P\@\$\$W0rd                                    |
 
 | Persistent outbound attribute flows  |                                                                     |                                                           |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
 | Allow nulls                                                                                                | Destination                                                                 | Source                                                    |
 | false                                                                                                      | sAMAccountName                                                              | accountName                                               |
 | false                                                                                                      | displayName                                                                 | displayName                                               |
