@@ -58,7 +58,7 @@ in the following documents:
 
 -   [Introduction to Inbound Synchronization](http://go.microsoft.com/FWLink/p/?LinkId=189652)
 
--   [Introduction to Outbound Synchronization](http://go.microsoft.com/FWLink/p/?LinkId=189653)6666
+-   [Introduction to Outbound Synchronization](http://go.microsoft.com/FWLink/p/?LinkId=189653)
 
 The content in this document is scoped to function as an extension to these
 introductory documents.
@@ -118,7 +118,7 @@ The following illustration outlines the required environment.
 You can run all components on one computer.
 
 >[!NOTE]
-For more information about setting up FIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845). |
+For more information about setting up FIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## Scenario Components List
 
@@ -293,7 +293,8 @@ Create run profiles for each management agent according to the previous table.
 For more information, see the Create a Management Agent Run Profile in FIM Help.                                                                                                                  
 
 
-**Important:** Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660). |                                                                                |
+>[!Important]
+ Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660). |                                                                                |
 
 
 ## Configuring the FIM Service
@@ -347,7 +348,6 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 | ILM Attribute     | Data Source Attribute                                                       |
 | Data Source Attribute         | sAMAccountName    |
 
-                                                           |
 | Initial outbound attribute flows        | |                                                             |
 |-------------------|---------------------- |---------------|
 | Allow nulls                 | Destination                                                                 | Source                                                    |
