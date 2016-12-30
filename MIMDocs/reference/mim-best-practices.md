@@ -8,7 +8,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 12/29/2016
+ms.date: 12/30/2016
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -25,7 +25,7 @@ Forefront® Identity Manager (FIM) 2010.
 
 ## SQL setup
 >[!NOTE]
-The following recommendations for setting up a server running SQL presume a SQL instance dedicated to the FIMService and to the FIMSynchronizationService databases. If you are running the FIMService in a consolidated environment, you will have to make adjustments appropriate for your configuration.
+The following recommendations for setting up a server running SQL presume a SQL instance dedicated to the FIMService and a SQL instance dedicated to the FIMSynchronizationService database. If you are running the FIMService in a consolidated environment, you will have to make adjustments appropriate for your configuration.
 
 Configuration of the Structured Query Language (SQL) server is critical to
 optimal system performance. Achieving optimum FIM performance in large-scale
@@ -83,8 +83,7 @@ recovery mode may be appropriate during the initial system load to limit the use
 of your disk space, but the data created after your most recent backup is
 exposed to data loss. When using Full recovery mode, you need to manage the disk
 usage through backups which include frequent backups of the transaction log to
-prevent high disk space usage. For more information, see Recovery Model Overview
-(http://go.microsoft.com/fwlink/?LinkID=185370).
+prevent high disk space usage. For more information, see [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370).
 
 ### Limit SQL server memory
 
@@ -314,8 +313,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = AUTO
 
 If you have to switch to Simple recovery mode, ensure that you reconfigure your
 backup schedule in accordance with your organization’s backup policy. Additional
-details of FIM backup schedules are available in the [FIM Backup and Restore
-Guide](http://go.microsoft.com/fwlink/?LinkID=165864).
+details of FIM backup schedules are available in the [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## Configuration Migration
 
@@ -689,8 +687,8 @@ nesting the set itself.
 You may encounter cases where you cannot avoid nesting sets to satisfy a
 functional requirement. These are the primary situations where you should nest
 sets. For example, to define the set of all the groups without Full-Time
-Employee owners, the nesting of sets must be used as follows: /Group[not(Owner =
-/Set[ObjectID = ‘X’]/ComputedMember], where ‘X’ is the ObjectID of the set of
+Employee owners, the nesting of sets must be used as follows: `/Group[not(Owner =
+/Set[ObjectID = ‘X’]/ComputedMember]`, where ‘X’ is the ObjectID of the set of
 All Full Time Employees.
 
 #### Minimize the use of negative conditions
