@@ -22,7 +22,7 @@ The following tables contain error codes that might appear in the Synchronizatio
 
 ## Connection errors
 
-| Error                   Description                                    |
+| Error                  | Description                                    |
 |--------------------------|--------------------------------------------|
 | failed=connection         | Connection to the connected directory has failed for a reason other than authentication. For example, the network is unavailable, or the target server is offline.                                                                                                                                                                                                                                                                                                                      |
 | dropped-connection        | The connection between the management agent and the connected directory no longer exists. The management agent tries to reconnect to the connected directory in many instances.                                                                                                                                                                                                                                                                                                         |
