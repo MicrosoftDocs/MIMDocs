@@ -20,8 +20,7 @@ ms.assetid:
 
 # Microsoft Identity Manager 2016 Best Practices
 
-This topic describes the best practices for deploying and operating Microsoft®
-Forefront® Identity Manager (FIM) 2010.
+This topic describes the best practices for deploying and operating Microsoft Identity Manager 2016 (MIM)
 
 ## SQL setup
 >[!NOTE]
@@ -49,7 +48,7 @@ growth of the data files. For sample sizes of the FIM database, see the [FIM Cap
 
 ### To presize SQL data and log files
 
-1.  Start SQL Server Enterprise Manager.
+1.  Start SQL Server Management Studio.
 
 2.  Navigate to the database FIMService, right-click FIMService, and then click
     Properties.
@@ -68,7 +67,7 @@ in the tempdb file.
 
 ### To create additional tempdb files
 
-1.  Start SQL Server Enterprise Manager.
+1.  Start SQL Server Mangement Studio.
 
 2.  Navigate to the database tempdb in System Databases, right-click tempdb, and
     then click Properties.
@@ -155,7 +154,7 @@ The following are best practices for configuring Microsoft Exchange Server for t
 
 #### To configure the service account
 
-1.  In the Exchange Management Console, select the **FIM Service service account.**
+1.  In the Exchange Management Console, select the **FIM Service service account**.
 
 2.  Select Properties, select Mail Flow Settings, and then select **Mail Delivery
     Restrictions.**
@@ -194,7 +193,7 @@ and potential performance problems with FIM 2010. To disable SharePoint indexing
 
 8.  On the Edit Timer Job page, click Disable.
 
-## FIM 2010 Initial Data Load
+## MIM 2016 Initial Data Load
 
 This section lists a series of steps to increase the performance of the initial
 data load from external system to FIM 2010. It is important to understand that a
@@ -216,7 +215,7 @@ MA) has completed.
 
 To temporarily turn off full-text search:
 
-1.  Start SQL Enterprise Manager.
+1.  Start SQL Server Management Studio.
 
 2.  Select New Query.
 
@@ -694,7 +693,7 @@ All Full Time Employees.
 #### Minimize the use of negative conditions
 
 Negative conditions are the membership conditions that make use of the following
-operators or functions: !=, not(), \< , \<=. To optimize for performance, where
+operators or functions: `!=`, `not()`, `\<` , `\<=`. To optimize for performance, where
 possible, express the condition that you want with multiple positive conditions
 rather than as a negative condition.
 
@@ -789,7 +788,9 @@ There are 13 Core attributes assigned to all resource types. You should not in
 any way modify their relationship to any resource type. The 13 Core attributes
 are:
 
--   CreatedTime • Creator
+-   CreatedTime
+
+-   Creator
 
 -   DeletedTime
 
@@ -877,9 +878,9 @@ cause the request to get stuck in the authorizing phase. For multiple approvals,
 either include a larger list of approvers in the approval or sequence the two
 activities back-to-back.
 
-#### Authorization activities should not modify FIM resources data
+#### Authorization activities should not modify MIM resources data
 
-Avoid using activities that modify the FIM resources, such as the Function
+Avoid using activities that modify the MIM resources, such as the Function
 Evaluator Activity, as part of the workflows in authorization workflows. Because
 the request has not been committed while in the authorization point of
 processing, any modifications performed to the identity information can be
