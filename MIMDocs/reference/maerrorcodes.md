@@ -18,14 +18,12 @@ ms.assetid:
 
 # Management Agent Run Error Codes
 
-The following tables contain error codes that might appear in the
-Synchronization Service Manager user interface in Microsoft® Forefront Identity
-Manager (FIM) 2010 R2, as well as descriptions for each of those errors.
+The following tables contain error codes that might appear in the Synchronization Service Manager user interface in Microsoft® Forefront Identity Manager (FIM) 2010 R2, as well as descriptions for each of those errors.
 
 ## Connection errors
 
-| Error                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Error                   Description                                    |
+|--------------------------|--------------------------------------------|
 | failed=connection         | Connection to the connected directory has failed for a reason other than authentication. For example, the network is unavailable, or the target server is offline.                                                                                                                                                                                                                                                                                                                      |
 | dropped-connection        | The connection between the management agent and the connected directory no longer exists. The management agent tries to reconnect to the connected directory in many instances.                                                                                                                                                                                                                                                                                                         |
 | failed-authentication     | Authentication is not possible using the supplied credentials.                                                                                                                                                                                                                                                                                                                                                                                                                          |
