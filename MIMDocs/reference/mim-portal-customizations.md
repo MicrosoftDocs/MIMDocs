@@ -4,7 +4,7 @@
 title: Policy Operations | Microsoft Docs
 description:
 keywords:
-author: barclayyn
+author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 12/31/2016
