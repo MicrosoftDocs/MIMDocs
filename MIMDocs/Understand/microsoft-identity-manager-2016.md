@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager 2016 | Microsoft Docs
-description: Understand how MIM 2016 works to create a safer, more convenient identity management experience in the cloud and on-premises.
+description: MIM includes the access management capabilities of FIM 2010 and helps you manage users, credentials, policies, and access within your organization.
 keywords:
 author: kgremban
 ms.author: kgremban
