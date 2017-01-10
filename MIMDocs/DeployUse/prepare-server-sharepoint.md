@@ -7,7 +7,7 @@ keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 12/01/2016
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -94,8 +94,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
     ```
     $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
-    -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
     > [!NOTE]
