@@ -1,11 +1,11 @@
 ---
 title: Step 8 PAM deployment verification
-description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
+description: The scripted deployment of PAM includes verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
 keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
