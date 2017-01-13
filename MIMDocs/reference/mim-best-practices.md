@@ -27,7 +27,7 @@ This topic describes the best practices for deploying and operating Microsoft Id
 The following recommendations for setting up a server running SQL presume a SQL instance dedicated to the FIMService and a SQL instance dedicated to the FIMSynchronizationService database. If you are running the FIMService in a consolidated environment, you will have to make adjustments appropriate for your configuration.
 
 Configuration of the Structured Query Language (SQL) server is critical to
-optimal system performance. Achieving optimum FIM performance in large-scale
+optimal system performance. Achieving optimum MIM performance in large-scale
 implementations depends on the application of best practices for a server
 running SQL. For more information, see the following topics about SQL best
 practices:
@@ -44,7 +44,7 @@ practices:
 
 Do not rely on autogrow. Instead, manage the growth of these files manually. You
 can leave autogrow on for safety reasons, but you should proactively manage the
-growth of the data files. For sample sizes of the FIM database, see the [FIM Capacity Planning Guide](http://go.microsoft.com/fwlink/?LinkID=185246).
+growth of the data files. For sample sizes of the MIM database, see the [FIM Capacity Planning Guide](http://go.microsoft.com/fwlink/?LinkID=185246).
 
 ### To presize SQL data and log files
 
@@ -87,7 +87,7 @@ prevent high disk space usage. For more information, see [Recovery Model Overvie
 ### Limit SQL server memory
 
 Depending on how much memory you have on your SQL server and if you share the
-SQL server with other services (that is, FIM 2010 R2 Service and FIM 2010 R2
+SQL server with other services (that is, MIM 2016 Service and MIM 2016
 Synchronization Service), you might want to restrict the memory consumption of
 SQL. You can do this through the following steps.
 
@@ -148,7 +148,7 @@ Members of the FIMService Administrators set have unique permissions critical to
 
 ### Configuring FIM Service service Exchange mailbox
 
-The following are best practices for configuring Microsoft Exchange Server for the FIM 2010 R2 Service service account.
+The following are best practices for configuring Microsoft Exchange Server for the MIM 2016 Service service account.
 
 - Configure the service account so that it can accept mail only from internal e-mail addresses. Specifically, the service account mailbox should never be able to receive mail from external SMTP servers.
 
@@ -167,7 +167,7 @@ For further information, see [Configure Message Delivery Restrictions](http://go
 
 -   Configure the service account so that it has a mailbox storage quota of 5 GB. For optimum results, follow the best practices listed in [Configure Storage Quotas for a Mailbox](http://go.microsoft.com/fwlink/?LinkID=156929).
 
-## FIM Portal
+## MIM Portal
 
 
 ### Disable SharePoint indexing
@@ -176,13 +176,13 @@ We recommend that you disable Microsoft Office SharePoint® indexing. There are
 no documents that need to be indexed, and indexing causes many error log entries
 and potential performance problems with FIM 2010. To disable SharePoint indexing
 
-1.  On the server that hosts the FIM 2010 Portal, click Start.
+1.  On the server that hosts the MIM 2016 Portal, click Start.
 
 2.  Click All Programs.
 
 3.  In the All Programs list, click Administrative Tools.
 
-4.  Under Administrative Tools, click SharePoint 3.0 Central Administration.
+4.  Under Administrative Tools, click SharePoint Central Administration.
 
 5.  On the Central Administration page, click Operations.
 
@@ -210,7 +210,7 @@ Ensure that you have applied the best practices covered in the SQL setup section
 ### Step 1: Configure the SQL server for initial data load
 When you plan to initially load a lot of data, you can shorten the time it takes
 to populate the database by temporarily turning off the full-text search and
-turning it on again after the export on the FIM 2010 R2 management agent (FIM
+turning it on again after the export on the MIM 2016 management agent (FIM
 MA) has completed.
 
 To temporarily turn off full-text search:
@@ -237,7 +237,7 @@ space usage.
 
 >[!IMPORTANT]   Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
 
-### Step 2: Apply the minimum necessary FIM configuration during the load process
+### Step 2: Apply the minimum necessary MIM configuration during the load process
 
 During the initial load process, you should only apply the minimum configuration
 required to your FIM configuration for your management policy rules (MPRs) and
@@ -280,10 +280,10 @@ perform the following steps:
 4.  Delta import on all affected target management agents with staged export
     operations.
 
-### Step 4: Apply your full FIM configuration
+### Step 4: Apply your full MIM configuration
 
 
-Once your initial data load is completed, you should apply the full FIM
+Once your initial data load is completed, you should apply the full MIM
 configuration for your deployment.
 
 Depending on your scenarios, this may include the creation of additional sets,
@@ -353,7 +353,7 @@ Service may fail to start workflow activities with the incorrect version number.
 
 ### Avoid cyclic references
 
-In general, cyclic references are not recommended in a FIM configuration.
+In general, cyclic references are not recommended in a MIM configuration.
 However, cycles sometimes occur when Set A refers to Set B and Set B also refers
 to Set A. To avoid issues with cyclic references, you should change the
 definition of Set A or Set B so that they both do not refer to each other. Then,
@@ -365,13 +365,13 @@ references of configuration objects.
 
 ## Security
 
-### FIM MA account
+### MIM MA account
 
-The FIM MA account is not considered a service account and should be a regular
+The MIM MA account is not considered a service account and should be a regular
 user account. The accounts must be able to log on locally in order for the FIM
 Synchronization Service service account to be able to impersonate it.
 
-To enable the FIM MA account to log on locally
+To enable the MIM MA account to log on locally
 
 1.  Click Start, click Administrative Tools, and then click Local Security
     Policy.
@@ -384,9 +384,9 @@ To enable the FIM MA account to log on locally
 
 ### FIM Synchronization Service and FIM Services accounts
 
-To configure the servers running the FIM server components in a secure manner,
+To configure the servers running the MIM server components in a secure manner,
 the service accounts should be restricted. Using the previous procedure to turn
-on the FIM MA account, set the following restrictions on the FIM Synchronization
+on the MIM MA account, set the following restrictions on the FIM Synchronization
 Service and FIM Service accounts:
 
 -   Deny logon as a batch job
@@ -418,7 +418,7 @@ Portal server to secure the traffic between the clients and the server.
 
 To implement SSL:
 
-1.  On the FIM Portal server, open IIS Manager.
+1.  On the MIM Portal server, open IIS Manager.
 
 2.  Click the local computer name.
 
@@ -499,10 +499,10 @@ For optimal performance configuration:
 
 ### Request Management
 
-By default FIM 2010 purges expired system objects, which includes completed
+By default MIM 2016 purges expired system objects, which includes completed
 requests with associated approvals, approval responses, and workflow instances
 on a 30-day interval. If your organization needs a longer request history, you
-should export requests from FIM and store them in an auxiliary database to
+should export requests from MIM and store them in an auxiliary database to
 preserve them beyond the 30-day window. While the 30-day request deletion window
 is configurable, extending this window can negatively impact performance due to
 the additional objects in the system.
@@ -511,7 +511,7 @@ the additional objects in the system.
 
 #### Use the appropriate MPR type
 
-FIM provides two types of MPRs, Request and Set Transition:
+MIM provides two types of MPRs, Request and Set Transition:
 
 -   Request MPR (RMPR)
 
@@ -534,7 +534,7 @@ Use the principle of least privilege when applying your configuration. MPRs
 control the access policy to your FIM deployment. Enable only those features
 used by most of your users. For example, not all users use FIM for group
 management, so associated group management MPRs should be disabled. By default,
-FIM ships with most nonadministrator permissions disabled.
+FIM ships with most non-administrator permissions disabled.
 
 #### Duplicate built-in MPRs instead of directly modifying
 
@@ -546,7 +546,7 @@ process do not negatively impact your system configuration.
 #### End-user permissions should use explicit attribute lists scoped to users business needs
 
 Using explicit attribute lists helps to prevent the accidental granting of
-permissions to nonprivileged users when attributes are added to objects.
+permissions to non-privileged users when attributes are added to objects.
 Administrators should explicitly need to grant access to new attributes instead
 of trying to remove access.
 
@@ -628,7 +628,7 @@ apply the action workflows to new members of the Transition Set.
 #### Avoid associating the same entitlement with two different Transition Sets
 
 Associating the same entitlement with two different Transition Sets can cause an
-unnecessary revoking and regranting of entitlements if the resource moves from
+unnecessary revoking and re-granting of entitlements if the resource moves from
 one set to the other. As a best practice, ensure that one set contains all
 resources that require the associated entitlement. This ensures a one-to-one
 relationship between the Transition Set and the entitlement granting the
@@ -721,7 +721,7 @@ reset on a computer that they are logged on to.
 
 #### Do not set the AvoidPdcOnWan registry key to true
 
-When using FIM 2010 password reset, do not set the AvoidPdcOnWan registry key to
+When using MIM 2016 password reset, do not set the AvoidPdcOnWan registry key to
 true.
 
 If this registry key is set to true, the user very likely goes through the
@@ -758,7 +758,7 @@ supported.
 #### Require reregistration when adding, removing, or changing the order of activities in an existing workflow
 
 When adding, removing, or changing the order of authentication activities in an
-existing workflow, always select the option to require reregistration. Users who
+existing workflow, always select the option to require re-registration. Users who
 attempt to authenticate for password reset after an activity has been added to
 or removed from a workflow, but before they have reregistered, may encounter
 unwanted effects.
@@ -767,10 +767,10 @@ unwanted effects.
 
 #### Consider adding a privacy disclaimer to the user profile page
 
-In FIM, by default, some user profile information may be displayed to other
+In MIM, by default, some user profile information may be displayed to other
 users. As a courtesy to the users, administrators should consider adding custom
 text consistent with their company's policies to the User Profile page. For more
-information about adding custom text to a FIM Portal page, see Introduction to
+information about adding custom text to a MIM Portal page, see Introduction to
 [Configuring and Customizing the FIM Portal](http://go.microsoft.com/fwlink/?LinkID=165848).
 
 ### Schema
@@ -779,7 +779,7 @@ information about adding custom text to a FIM Portal page, see Introduction to
 
 Though the Person and Group resource types are not marked as Core resource
 types, the resources themselves or the attributes assigned to them should not be
-deleted. The user interface (UI) in the FIM Portal requires that the Person and
+deleted. The user interface (UI) in the MIM Portal requires that the Person and
 Group resource types and their attributes are present.
 
 #### Do not modify the core attributes
@@ -845,7 +845,7 @@ is regarded as a valid value. Not present is regarded as a null.
 
 ### Workflow and Request Processing
 
-#### Do not delete default workflows that are shipped with FIM 2010
+#### Do not delete default workflows that are shipped with MIM 2016
 
 The following workflows are shipped with FIM 2010 and should not be deleted:
 
