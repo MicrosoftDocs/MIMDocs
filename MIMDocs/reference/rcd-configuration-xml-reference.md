@@ -149,6 +149,7 @@ UocTextBox control to edit the Description attribute of a group:
 
 By using an **XMLDataSource**, you can specify custom data that the RCDC can consume for a given resource. In this case, the XML data must be specified in the RCDC. As an alternative, this data source can be used to reference a built-in XML data structure to render the UI for summary pages. You control what type of **XMLDataSource** to use when you define it in the RCDC.
 
+
 | TypeName                 | Description   | | |
 |--------------------------|------------|
 | **XMLDataSource**            | The data source represents XML data. It can be in either XSL or embedded XSL formats: <br/>**XSL format:** <br/> Microsoft.IdentityManagement.WebUI.Controls.dll<my:XmlDataSource my:Name=" <br/>summaryTransformXsl"my:Parameters=”Microsoft.IdentityManagement.WebUI.Controls.Resources.DefaultSummary.xsl”> </my:XmlDataSource><br/> **Embedded XSL format:** <br/> <my:XmlDataSource my:Name="RequestStatusTransformXsl"> <br/> <xsl:stylesheet version="1.0" xmlns:xsl=http://www.w3.org/1999/XSL/Transform <br/> xmlns:msxsl="urn:schemas-microsoft-com:xslt"><br/></xsl:stylesheet></my:XmlDataSource>                       |No | ```Xpath[;namespaces]``` <br/> Where:Xpath is a valid XML xpath to select the required note, most often “/” (root) <br/>Namespaces is an optional list of prefix=URI strings, delimited by semicolons, if required for the xpath to work against namespaced XML. |
@@ -400,7 +401,8 @@ Attributes:
     attribute to false. By default, this optional, Boolean-type attribute is set
     to true. This attribute is functional only on a Content Grouping.
 
-  >[!NOTE] When there is only one Content Grouping in a Panel, this feature does not work. When there is more than one Content Grouping in a Panel, it behaves as described above.
+  >[!NOTE]
+  When there is only one Content Grouping in a Panel, this feature does not work. When there is more than one Content Grouping in a Panel, it behaves as described above.
 
 6.  **IsHeader**: This attribute is an optional, Boolean attribute that defines
     whether the Grouping is a Header Grouping. If this attribute is not
