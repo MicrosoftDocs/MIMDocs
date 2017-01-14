@@ -2,12 +2,12 @@
 # required metadata
 
 title: Step 3 Configuring SQL
-description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
+description: This article is step 3 of the series of articles covering how to configure Privileged Identity Manager using scripts and it discusses the SQL server configuration steps.
 keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
