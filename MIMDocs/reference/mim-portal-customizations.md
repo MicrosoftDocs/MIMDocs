@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 12/31/2016
+ms.date: 01/14/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -22,14 +22,14 @@ ms.assetid:
 >[!Warning]
 Be sure to clear the browser cache when any CSS customizations are made.
 
-In FIM 2010 R2 , you can customize selected elements of the password portals,
+In Microsoft Identity Manager 2016 (MIM), you can customize selected elements of the password portals,
 including the banner logo, string resources, and cascading style sheets.
 
 In order to do this, a few things are required depending on the level of
 customization. The following is a list of items that are involved in customizing
-the FIM 2010 R2 password registration and reset portals.
+the MIM 2016 password registration and reset portals.
 
--   Customizations Folder - This is the folder that FIM 2010 R2 will check prior
+-   Customizations Folder - This is the folder that MIM 2016 will check prior
     to using the defaults. Each portal that will be customized requires a
     Customizations folder. Customizations should only be done in this folder
     because setup will not overwrite it on upgrades, change mode installs or
@@ -44,16 +44,16 @@ the FIM 2010 R2 password registration and reset portals.
     the logo or can be entirely replaced with your own customizations.
 
 For detailed step-by-step instructions on customizing the password registration
-and password reset portals see Test Lab Guide: Demonstrating FIM 2010 R2
+and password reset portals see Test Lab Guide: Demonstrating MIM 2016
 Password Registration and Reset Portal Customization.
 
 >[!WARGNING]
-In order for FIM to recognize any customized changes, you must restart IIS by running iisreset.
+In order for MIM to recognize any customized changes, you must restart IIS by running iisreset.
 
 
 ## Creating the Customizations folder
 
-On startup, FIM will look for the Strings.resources file in the Customizations
+On startup, MIM will look for the Strings.resources file in the Customizations
 folder before using the defaults. You must create a Customizations folder under
 the directory for the portal you wish to customize (i.e. Password Registration
 Portal or Password Reset Portal). If you want to customize both portals then you
@@ -375,7 +375,7 @@ background:url(../Customizations/contosologo.png) no-repeat scroll 0 0 transpare
 
 
 >[!IMPORTANT]
-In order for FIM to recognize any customized changes, you must restart IIS by running iisreset.                                                                                                                                                                                       
+In order for MIM to recognize any customized changes, you must restart IIS by running iisreset.                                                                                                                                                                                       
 
 The following is a more advanced example of a Style.css file. This file provides smartphone and ipad specific information for displaying the portals on these devices.
 
