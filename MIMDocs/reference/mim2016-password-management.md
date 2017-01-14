@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 01/03/2017
+ms.date: 01/14/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -81,10 +81,10 @@ Reference.
 Password synchronization works with the password change notification service
 (PCNS) on an Active Directory domain, and allows password changes that originate
 from Active Directory to be automatically propagated to other connected data
-sources. FIM accomplishes this by running as a Remote Procedure Call (RPC)
+sources. MIM accomplishes this by running as a Remote Procedure Call (RPC)
 server that listens for a password change notification from an Active Directory
 domain controller. When the password change request is received and
-authenticated, it is processed by FIM and propagated to the appropriate
+authenticated, it is processed by MIM and propagated to the appropriate
 management agents.
 
 >[!IMPORTANT]
@@ -98,7 +98,7 @@ an exclusion group. These groups are used to restrict the flow of sensitive
 passwords from the domain. For example, to send passwords for all users, but not
 send administrative passwords, you might choose to use Domain Users as the
 inclusion group, and Domain Admins as the exclusion group. For more information
-about configuring the password change notification service, see [Using Password Synchronization](https://technet.microsoft.com/en-us/library/jj590288(v=ws.10).aspx)
+about configuring the password change notification service, see [Using Password Synchronization](https://technet.microsoft.com/library/jj590288(v=ws.10).aspx)
 
 The components involved in the password synchronization process are:
 
@@ -137,7 +137,7 @@ The components involved in the password synchronization process are:
     synchronization is enabled, the RPC server on the server running MIM is
     started, enabling it to receive notifications from the password change
     notification service. RPC dynamically selects a range of ports to use. If
-    you require FIM to communicate with the Active Directory forest through a
+    you require MIM to communicate with the Active Directory forest through a
     firewall, you must open a range of ports.
 
 -   **Password extension DLL** – The password extension DLL provides a way to
@@ -147,7 +147,7 @@ The components involved in the password synchronization process are:
     "export_password" that does not actually exist in the connected directory
     but can be accessed and set in provisioning rules extensions or can be used
     during export attribute flow. For more information about configuring
-    password extensions, see the FIM Developer Reference.
+    password extensions, see the [FIM Developer Reference](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx).
 
 ## Preparing for password synchronization
 
@@ -260,7 +260,7 @@ synchronization errors:
     the operation succeeds or the retry limits are hit.
 
 -   **Activating a warm standby server running MIM after a failure** – In the case
-    of the primary server running MIM failing, you can configure a warm standby server for password synchronization, and activate it with no loss of password changes. For more information, see [MIISactivate: Server Activation Tool](https://technet.microsoft.com/en-us/library/jj590194(v=ws.10).aspx)
+    of the primary server running MIM failing, you can configure a warm standby server for password synchronization, and activate it with no loss of password changes. For more information, see [MIISactivate: Server Activation Tool](https://technet.microsoft.com/library/jj590194(v=ws.10).aspx)
 
 Some failures are serious enough that no amount of retries is likely to result
 in a successful operation. In these cases, an error event is logged and the
