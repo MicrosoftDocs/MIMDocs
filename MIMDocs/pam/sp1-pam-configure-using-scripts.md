@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure PAM using Scripts
-description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
+description: This article is part of the series for configuring PAM using scripts. It covers the modification of the XML file that will be used by the PAM deployment scripts.
 keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configure PAM using scripts
 
-If you choose to install SQL and SharePoint on separate servers, they must be configured using the following instructions below. If SQL, SharePoint and the PAM components are installed on the same machine, the below steps must be run from that machine.
+If you choose to install SQL and SharePoint on separate servers, they must be configured using the instructions below. If SQL, SharePoint and the PAM components are installed on the same machine, the below steps must be run from that machine.
 
 The steps below assume that a PRIV Domain is already setup, for instructions to configure a PRIV domain, view the addendum at the end of the document.
 
