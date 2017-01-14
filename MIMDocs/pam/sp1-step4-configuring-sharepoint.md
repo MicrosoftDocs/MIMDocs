@@ -1,11 +1,11 @@
 ---
 title: Step 4 Configuring SharePoint
-description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
+description: This is step 4 of configuring PAM with scripts. In this step you configure SharePoint so that it can be used as part of your PAM deployment.
 keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
