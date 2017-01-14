@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 12/15/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -21,16 +21,16 @@ ms.assetid:
 
 # How Do I Provision Users to AD DS
 
-Applies To: Microsoft Identity Manager 2016 SP1
+Applies To: Microsoft Identity Manager 2016 SP1 (MIM)
 
 One basic requirement for an identity management system is the ability to
 provision resources to an external system.
 
 This guide walks you through the main building blocks that are involved in the
-process of provisioning users from Microsoft® Forefront® Identity Manager (FIM)
-2010 to Active Directory® Domain Services (AD DS), outlines how you can verify
+process of provisioning users from Microsoft® Identity Manager (MIM)
+2016 to Active Directory® Domain Services (AD DS), outlines how you can verify
 whether your scenario works as expected, provides suggestions for managing
-Active Directory users by using FIM 2010, and lists additional sources for
+Active Directory users by using MIM 2016, and lists additional sources for
 information.
 
 ## Before You Begin
@@ -38,21 +38,21 @@ information.
 
 In this section, you will find information about the scope of this document. In
 general, "How Do I" guides are targeted at readers who already have basic
-experience with the process of synchronizing objects with FIM as covered in the
+experience with the process of synchronizing objects with MIM as covered in the
 related [Getting Started Guides](http://go.microsoft.com/FWLink/p/?LinkId=190486).
 
 ### Audience
 
 
 This guide is intended for information technology (IT) professionals who already
-have a basic understanding of how the FIM synchronization process works and are
+have a basic understanding of how the MIM synchronization process works and are
 interested in getting hands-on experience and more conceptual information about
 specific scenarios.
 
 ### Prerequisite knowledge
 
 
-This document assumes that you have access to a running instance of FIM and that
+This document assumes that you have access to a running instance of MIM and that
 you have experience in configuring simple synchronization scenarios as outlined
 in the following documents:
 
@@ -71,7 +71,7 @@ requirements of a basic lab environment. The focus is to give you an
 understanding of the concepts and technologies discussed.
 
 This document helps you develop a solution that involves managing groups in AD
-DS by using FIM.
+DS by using MIM.
 
 ### Time requirements
 
@@ -91,12 +91,12 @@ general feedback you would like to discuss, feel free to post a message to the
 ## Scenario Description
 
 
-Fabrikam, a fictitious company, is planning to use FIM to manage the user
-accounts in the corporation’s AD DS by using FIM. As part of this process,
+Fabrikam, a fictitious company, is planning to use MIM to manage the user
+accounts in the corporation’s AD DS by using MIM. As part of this process,
 Fabrikam needs to provision users to AD DS. To start the initial testing,
-Fabrikam has installed a basic lab environment that consists of FIM and AD DS.
+Fabrikam has installed a basic lab environment that consists of MIM and AD DS.
 In this lab environment, Fabrikam is testing a scenario that consists of a user
-that was manually created in the FIM Portal. The objective of this scenario is
+that was manually created in the MIM Portal. The objective of this scenario is
 to provision the user as an enabled user with a predefined password to AD DS.
 
 ## Scenario Design
@@ -107,7 +107,6 @@ To use this guide, you need three architectural components:
 -   Active Directory domain controller
 
 -   Computer running FIM Synchronization Service
-
 -   Computer running FIM Portal
 
 The following illustration outlines the required environment.
@@ -118,7 +117,7 @@ The following illustration outlines the required environment.
 You can run all components on one computer.
 
 >[!NOTE]
-For more information about setting up FIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+For more information about setting up MIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## Scenario Components List
 
@@ -126,16 +125,16 @@ For more information about setting up FIM, see the [FIM Installation Guide](http
 The following table lists the components that are a part of the scenario in this
 guide.
 
-| ![Organizational Unit](media/how-provision-users-adds/image005.jpg)   | Organizational unit                | FIM objects – Organizational unit (OU) that is used as a target for the provisioned users.                                                       |
+| ![Organizational Unit](media/how-provision-users-adds/image005.jpg)   | Organizational unit                | MIM objects – Organizational unit (OU) that is used as a target for the provisioned users.                                                       |
 |----------------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![User accounts](media/how-provision-users-adds/image006.jpg)   | User accounts                      | &#183; **ADMA** – Active Directory user account with sufficient rights to connect to AD DS.<br/> &#183; **FIMMA** - Active Directory user account with sufficient rights to connect to FIM.
+| ![User accounts](media/how-provision-users-adds/image006.jpg)   | User accounts                      | &#183; **ADMA** – Active Directory user account with sufficient rights to connect to AD DS.<br/> &#183; **FIMMA** - Active Directory user account with sufficient rights to connect to MIM.
                                                                  |
-| ![Management agents and run profiles](media/how-provision-users-adds/image007.jpg)  | Management agents and run profiles | &#183; **Fabrikam ADMA** – Management agent that exchanges data with AD DS. <br/> &#183; Fabrikam FIMMA - Management agent that exchanges data with FIM.                                                                                 |
+| ![Management agents and run profiles](media/how-provision-users-adds/image007.jpg)  | Management agents and run profiles | &#183; **Fabrikam ADMA** – Management agent that exchanges data with AD DS. <br/> &#183; Fabrikam FIMMA - Management agent that exchanges data with MIM.                                                                                 |
 | ![Synchronization rules](media/how-provision-users-adds/image008.jpg)  | Synchronization rules              | Fabrikam Group Outbound Synchronization Rule – Outbound synchronization rule that provisions users to AD DS.                                     |
 | ![Sets](media/how-provision-users-adds/image009.jpg)   | Sets                               | All Contractors – Set with dynamic membership for all objects with an EmployeeType attribute value of Contractor.                                |
-| ![Workflows](media/how-provision-users-adds/image010.jpg)  | Workflows                          | AD Provisioning Workflow - Workflow to bring the FIM user into the scope of the AD Outbound Synchronization Rule.                                |
+| ![Workflows](media/how-provision-users-adds/image010.jpg)  | Workflows                          | AD Provisioning Workflow - Workflow to bring the MIM user into the scope of the AD Outbound Synchronization Rule.                                |
 | ![Management policy rules](media/how-provision-users-adds/image011.jpg)   | Management policy rules            | AD Provisioning Management Policy Rule - Management policy rule (MPR) that triggers when a resource becomes a member of the All Contractors set. |
-| ![FIM users](media/how-provision-users-adds/image012.jpg) | FIM users                          | Britta Simon - FIM user that you provision to AD DS.                                                                                             |
+| ![MIM users](media/how-provision-users-adds/image012.jpg) | MIM users                          | Britta Simon - MIM user that you provision to AD DS.                                                                                             |
 
 
 
@@ -152,7 +151,7 @@ following figure.
 
 
 In this section, you will find instructions for the resources that you need to
-create that are outside of your FIM environment.
+create that are outside of your MIM environment.
 
 ### Step 1: Create the OU
 
@@ -160,7 +159,7 @@ create that are outside of your FIM environment.
 You need the OU as a container for the provisioned sample user. For more
 information about creating OUs, see [Create a New Organizational Unit](http://go.microsoft.com/FWLink/p/?LinkId=189655).
 
-Create an OU called FIMObjects in your AD DS.
+Create an OU called MIMObjects in your AD DS.
 
 ### Step 2: Create the Active Directory user accounts
 
@@ -225,7 +224,7 @@ need to configure.
 | Management agent designer page                          | Configuration                                                  |
 |---------------------------------------------------------|----------------------------------------------------------------|
 | Create management agent                                 | 1. **Management agent for:** AD DS  <br/> 2.  **Name:** Fabrikam ADMA |
-| Connect to Active Directory forest                      | 1. **Select directory partitions:** “DC=Fabrikam,DC=com”   <br/>   2. Click **Containers** to open the **Select Containers** dialog box and ensure that **FIMObjects** is the only OU that is selected.        |
+| Connect to Active Directory forest                      | 1. **Select directory partitions:** “DC=Fabrikam,DC=com”   <br/>   2. Click **Containers** to open the **Select Containers** dialog box and ensure that **MIMObjects** is the only OU that is selected.        |
 | Select Object types                                     | In addition to the already selected Object types, select **user.** |
 | Select attributes                                       | 1. Click **Show All.** <br/>   2. Select the following attributes: <br/> &nbsp;&nbsp;&nbsp;&#176; **displayName** <br/> &nbsp;&nbsp;&nbsp;&#176; **givenName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **sn** <br/> &nbsp;&nbsp;&nbsp;&#176;  **SamAccountName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **unicodePwd** <br/> &nbsp;&nbsp;&nbsp;&#176;  **userAccountControl**     
 
@@ -245,7 +244,7 @@ account that is used by the management agent in the data exchange with the FIM
 Service.
 
 You should use a regular user account. The account must be the same account as
-the one you specified during the installation of FIM. For a script that you can
+the one you specified during the installation of MIM. For a script that you can
 use to determine the name of the FIMMA account that you specified during setup
 and to test whether this account is still valid, see Using Windows PowerShell to
 Do a [FIM MA Account Configuration Quick Test](http://go.microsoft.com/FWLink/p/?LinkId=189659).
@@ -290,12 +289,12 @@ Create run profiles for each management agent according to the previous table.
 
 
 >[!Note]
-For more information, see the Create a Management Agent Run Profile in FIM Help.                                                                                                                  
+For more information, see the Create a Management Agent Run Profile in MIM Help.                                                                                                                  
 
 
 >[!Important]
  Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660).
- 
+
 
 ## Configuring the FIM Service
 
@@ -311,7 +310,7 @@ scope of the synchronization rule, you enable the synchronization engine to
 provision your resource to AD DS according to your configuration.
 
 To configure the FIM Service, navigate in Windows Internet Explorer® to
-http://localhost/identitymanagement. On the FIM Portal page, to create the
+http://localhost/identitymanagement. On the MIM Portal page, to create the
 provisioning policy, go to the related pages from the Administration section. To
 verify your configuration, you should run the script in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661).
 
@@ -325,9 +324,8 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 | Name                                                                                                       | Active Directory User Outbound Synchronization Rule                         |                                                          
 | Description                                                                                               |                                                                             |                                                           
 | Precedence                                                                                                | 2                                                                           |                                                           
-| Data Flow Direction                                                                                        | Outbound                                                                    |                                                           
-                                                                                                                                                                                     | Dependency                                                                  |                                                
-
+| Data Flow Direction   | Outbound             |       
+| Dependency       |         |                                         
 
 
 | Scope |                                                                             |                                                           
@@ -351,7 +349,7 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 | Initial outbound attribute flows        | |                                                             |
 |-------------------|---------------------- |---------------|
 | Allow nulls                 | Destination                                                                 | Source                                                    |
-| false                       | dn                                                                          | \+("CN=",displayName,",OU=FIMObjects,DC=fabrikam,DC=com") |
+| false                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
 | false                       | userAccountControl                                                          | **Constant:** 512                                         |
 | false                                                                     | unicodePwd                    | Constant: P\@\$\$W0rd                                    |
 
@@ -459,7 +457,7 @@ configuration, you:
 
 4.  Verify that the user exists in AD DS.
 
-### Step 10: Create a sample user in FIM
+### Step 10: Create a sample user in MIM
 
 
 The following table lists the properties of the sample user. Create a sample user according the data in the table below.
@@ -626,7 +624,7 @@ Summary
 =======
 
 The objective of this document is to introduce you to the main building blocks
-for synchronizing a user in FIM with AD DS. In your initial testing, you should
+for synchronizing a user in MIM with AD DS. In your initial testing, you should
 first start with the minimum of attributes that are required to complete a task
 and add more attributes to your scenario when the general steps work as
 expected. Keeping the complexity to a minimal level simplifies the process of
@@ -640,7 +638,7 @@ For a description of how you can remove these objects from your test
 environment, see [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment](http://go.microsoft.com/FWLink/p/?LinkId=189667).
 
 In a typical synchronization scenario that includes AD DS as a synchronization
-target, FIM is not authoritative for all attributes of an object. For example,
+target, MIM is not authoritative for all attributes of an object. For example,
 when you manage user objects in AD DS by using FIM, at a minimum, the domain and
 the objectSID attributes need to be contributed by the AD DS management agent.
 The account name, domain, and objectSID attributes are required if you want to
