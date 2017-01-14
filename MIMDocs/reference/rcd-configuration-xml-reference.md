@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 01/04/2017
+ms.date: 01/14/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -19,10 +19,9 @@ ms.assetid:
 # Resource Control Display Configuration XML Reference
 
 Resource control display configuration (RCDC) resources are user-defined
-resources that you can use to control how other resources in the Microsoft®
-Forefront® Identity Manager (FIM) 2010 data store appear in the user interface
+resources that you can use to control how other resources in the Microsoft Identity Manager 2016 (MIM) data store appear in the user interface
 (UI) to the end user. Each RCDC resource contains an XML configuration file that
-you can change to add, modify, or remove UI text and UI controls. While FIM 2010
+you can change to add, modify, or remove UI text and UI controls. While MIM 2016
 provides several default RCDC resources, you can also create custom RCDC
 resources for custom resources. For more information about using the RCDC UI in
 the FIM Portal, see [Introduction to Configuring and Customizing the FIM Portal](http://go.microsoft.com/fwlink/?LinkID=165848) in the FIM documentation.
@@ -102,7 +101,7 @@ and **XmlDataSource**.
 
 -   **ObjectDataSources** specify a Microsoft .NET class that provides the data to
     the RC. There is a fixed set of available types of ObjectDataSources
-    provided in FIM 2010 that the administrator can choose to consume when
+    provided in MIM 2016 that the administrator can choose to consume when
     authoring RCDCs.
 
 -   **XMLDataSources** provide a simple way to structure XML-based data, and they
@@ -258,7 +257,7 @@ An Event is an empty element, and it has two attributes.
 
 2.  **Handler**: This is the unique name of a handler. When the event is triggered,
     usually a program method is called to handle the change of the state of the
-    control. In this release of FIM 2010, the following cases are not supported:
+    control. In this release of MIM 2016, the following cases are not supported:
     removing an existing handler from an existing control, creating a new
     handler, and attaching to an existing or new control.
 
@@ -302,7 +301,7 @@ The Panel element contains four attributes:
     VerbContext attribute on the RCDC governs if the resource layout is in
     Wizard mode or Tab mode. If it is set to 0 (Create mode), it is also in
     Wizard mode. Otherwise, it is in Tab mode. For more information, see
-    Introduction to Configuring and Customizing the FIM Portal in the FIM
+    Introduction to Configuring and Customizing the FIM Portal in the MIM
     documentation.
 
 3.  **Caption**: This attribute is currently deprecated. The user can specify
@@ -411,7 +410,7 @@ Attributes:
     Grouping is a Summary grouping. If this attribute is not specified, it is
     set to false.
 
-![](media/rcd-configuration-xml-reference/image005.jpg)
+![RCD configuration XML](media/rcd-configuration-xml-reference/image005.jpg)
 
 The following XML sample code generates the previous Header Grouping. The Header
 Grouping is the area with the text Sample Header Grouping.
@@ -429,7 +428,7 @@ Grouping is the area with the text Sample Header Grouping.
 <!--End of Header Grouping Sample-->
 ```
 
-![](media\rcd-configuration-xml-reference/image007.jpg)
+![RCD configuration XML](media\rcd-configuration-xml-reference/image007.jpg)
 
 The following XML sample code generates the previous Content Grouping. The content Grouping is the leftmost tab with the text **Sample Content Grouping**.
 
@@ -447,7 +446,7 @@ The following XML sample code generates the previous Content Grouping. The conte
 <!--End of Content Grouping Sample-->
 ```
 
-![](media/rcd-configuration-xml-reference/image010.jpg)
+![RCD configuration XML](media/rcd-configuration-xml-reference/image010.jpg)
 
 The following XML sample code generates the previous Summary Grouping. The
 Summary Grouping is the rightmost tab with the text **Summary**.
@@ -521,7 +520,7 @@ A Control contains following elements:
 
 1.  **Help**: This element is ignored. It functions only in Grouping.
 
-2.  **CustomProperties**: This element is not supported in FIM 2010.
+2.  **CustomProperties**: This element is not supported in MIM 2010.
 
 3.  **Options**: This element is used only in combination with the **UocDropDownList**
     or **UocRadioButtonList** Controls. It is not functional with any other
@@ -587,7 +586,7 @@ A Control contains the following attributes:
 8. ExpandArea: This attribute indicates whether the control spans the full screen. This is an optional, Boolean-type attribute. The default value is set to false.
 
     >[!NOTE]
-    In FIM 2010, the Caption and Description attributes are disabled when this attribute is set to true. You must use the UocLabel control to provide a caption for an expanded control.
+    In MIM 2016, the Caption and Description attributes are disabled when this attribute is set to true. You must use the UocLabel control to provide a caption for an expanded control.
 9. **Hint**: This is an optional, string-type attribute. The text in the Hint attribute helps the end user decide what is a valid input for the control. The Hint appears underneath the control.
 
 10.  **AutoPostback**: This is an optional, Boolean-type attribute. The default value is false. If set to false, refreshing the page may not refresh the control. For information about AutoPostback, look for the Microsoft ASP.NET UI control property of the same name.
@@ -802,11 +801,11 @@ edited manually.
 For more information about creating custom attributes, see Introduction to Custom Resource and Attribute Management in the FIM 2010 documentation.
 
 >[!IMPORTANT]
-This section does not provide information about the basics of formatting or editing HTML. To modify Help files in FIM 2010, you should already be familiar with editing HTML
+This section does not provide information about the basics of formatting or editing HTML. To modify Help files in MIM 2016, you should already be familiar with editing HTML
 
 
 **Location of the Help files**: All the Help files for the MIM Portal are located in
-the following folder on the FIM 2010 server:
+the following folder on the MIM 2016 server:
 
   `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html`
 
@@ -948,7 +947,7 @@ state and the enabled state, the user can no longer enter data in the text box.
 
 **Description**: This is a simple button control that you can use to trigger certain
 actions. However, because you cannot specify your own handler in this release of
-FIM 2010, the use of this control is limited.
+MIM 2016 , the use of this control is limited.
 
 **Properties**:
 
@@ -1318,7 +1317,7 @@ format. The recommended data types to use this control with are formatted string
 (XML) and binary types.
 
 >[!NOTE]
-In this release of FIM 2010, the user must close the Internet Explorer window in which he or she opened the file and then refresh the page. After refreshing the Internet Explorer window, the user can then start the download to save or open the same file again in the original window.
+In this release of MIM 2016, the user must close the Internet Explorer window in which he or she opened the file and then refresh the page. After refreshing the Internet Explorer window, the user can then start the download to save or open the same file again in the original window.
 
 
 Properties:
@@ -1391,7 +1390,7 @@ content is not yet submitted to the server. The recommended data types to use
 this control with are as follows: formatted string (XML) or binary types.
 
 >[!NOTE]
-In this release of FIM 2010, there is no indication of the upload progress or status. When the file is uploaded to the local data source, the text box is cleared.
+In this release of MIM 2016, there is no indication of the upload progress or status. When the file is uploaded to the local data source, the text box is cleared.
 
 
 Properties:
@@ -1442,8 +1441,8 @@ The following code segment generates the upload control in the previous figure:
 
 Name: UocFilterBuilder
 
-Description: This is a complex control that allows the user to render a FIM 2010
-XPath expression. Some FIM 2010 XPath expressions are not supported. For
+Description: This is a complex control that allows the user to render a MIM 2016
+XPath expression. Some MIM 2016 XPath expressions are not supported. For
 information about how to use the filter builder, see the Help for the filter
 builder.
 
@@ -1459,7 +1458,7 @@ Properties:
     comma (,).
 
 3.  Value: This is the value with which the filter builder is rendered. In this
-    release of FIM 2010, only a binding with string-type data that contains an
+    release of MIM 2016, only a binding with string-type data that contains an
     XPath expression is supported. The Filter attribute is a recommended
     attribute for binding this control.
 
@@ -2292,7 +2291,7 @@ See the Simple control samples section for a complete sample of this control.
 ## Appendix A: Default XSD Schema
 
 The following is the complete XSD schema for all default RCDCs that are provided
-with FIM 2010:
+with MIM 2016:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
