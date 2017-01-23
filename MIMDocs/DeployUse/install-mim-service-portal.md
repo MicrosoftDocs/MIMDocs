@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install MIM Service and Portal | Microsoft Docs
+title: Install Microsoft Identity Manager Service and Portal | Microsoft Docs
 description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016
 keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security

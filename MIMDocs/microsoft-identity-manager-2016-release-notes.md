@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Release Notes for MIM 2016 | Microsoft Docs
-description: Find information about the recent MIM releases. 
+title: Release Notes for Microsoft Identity Manager 2016 | Microsoft Docs
+description: Find information about the recent MIM releases.
 keywords:
 author: kgremban
 ms.author: kgremban
