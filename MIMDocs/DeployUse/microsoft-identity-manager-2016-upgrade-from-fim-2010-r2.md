@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Upgrade from FIM 2010 R2 | Microsoft Docs
+title: Upgrade from FIM 2010 R2 to Microsoft Identity Manager 2016 | Microsoft Docs
 description: Learn how to upgrade your FIM 2010 R2 components, and then install the components that are new in MIM 2016.
 keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
