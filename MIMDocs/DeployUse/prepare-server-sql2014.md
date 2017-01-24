@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure SQL Server | Microsoft Docs
+title: Configure SQL Server for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Install SQL Server 2014 in preparation for your MIM 2016 installation.
 keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security

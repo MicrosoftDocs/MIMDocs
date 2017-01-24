@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Deploy and configure PAM | Microsoft Docs
+title: Configure MIM 2016 for Privileged Access Management | Microsoft Docs
 description: The roadmap for installing and MIM and configuring it for Privileged Access Management.
 keywords:
 author: kgremban
