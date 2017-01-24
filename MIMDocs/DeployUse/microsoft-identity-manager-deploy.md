@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Deploy MIM 2016 | Microsoft Docs
+title: Steps required to deploy Microsoft Identity Manager 2016 | Microsoft Docs
 description: Get the full list of steps involved in deploying Microsoft Identity Manager 2016, from preparing the environment to configuring the portals.
 keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 09/07/2016
+ms.date: 01/27/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
