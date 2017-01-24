@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Self-Service Password Reset | Microsoft Docs
+title: Working with the Self-Service Password Reset portal | Microsoft Docs
 description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication.
 keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
