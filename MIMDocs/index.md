@@ -5,7 +5,7 @@ description: Learn how to use Microsoft Identity Manager.
 ---
 # Microsoft Identity Manager Documentation
 
-Microsoft Identity Manager 2016 binds Microsoft’s identity and access management solutions together by 
+Microsoft Identity Manager 2016 binds Microsoft's identity and access management solutions together by 
 seamlessly bridging multiple on-premises authentication stores like Active Directory, LDAP, Oracle, 
 and other applications with Azure Active Directory. This provides consistent experiences to on-premises 
 LOB applications and SaaS solutions.
@@ -22,7 +22,7 @@ LOB applications and SaaS solutions.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>What’s new for Microsoft Identity Manager 2016 Service Pack 1</h3>
+                        <h3>What's new for Microsoft Identity Manager 2016 Service Pack 1</h3>
                     </div>
                 </div>
             </div>
