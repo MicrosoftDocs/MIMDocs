@@ -4,10 +4,10 @@
 title: Upgrade from FIM 2010 R2 to Microsoft Identity Manager 2016 | Microsoft Docs
 description: Learn how to upgrade your FIM 2010 R2 components, and then install the components that are new in MIM 2016.
 keywords:
-author: kgremban
-ms.author: kgremban
+author: fimguy
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -205,3 +205,5 @@ This guide assumes that you have the following already set up:
 4. Note that the **Forefront Identity Manager Service** has restarted.
 
 Note: If the FIM Add-ins and Extensions are currently deployed on user’s computers for SSPR, do not configure the new MFA phone gates for password reset until after all FIM Add-ins and Extensions have been upgraded to MIM 2016.  As the FIM 2010 and FIM 2010 R2 Add-ins and Extensions do not recognize the new gates, they will give an error and a user will not be able to complete password reset.
+
+For Microsoft Identity Manager 2016 SP1 upgrade guidance see the following [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)
