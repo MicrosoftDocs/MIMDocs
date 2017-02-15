@@ -144,6 +144,6 @@ Perform the install as described in the [Getting started guide](/microsoft-ident
 
 ## More information
 
-- [Privileged Access Management for Active Directory Domain Services](microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-- [Configure the MIM environment for Privileged Access Management](microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
+- [Privileged Access Management for Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
+- [Configure the MIM environment for Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
 - [Configure PAM using scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
