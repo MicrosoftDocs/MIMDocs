@@ -19,6 +19,7 @@
 ### [Step 5 - Establish trust between PRIV and CORP](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Step 6 - Create privileged accounts](step-6-transition-group-to-pam.md)
 ### [Step 7 - Elevate a user's access](step-7-elevate-user-access.md)
+### [Deploy MIM PAM with Windows Server 2016](deploy-pam-with-windows-server-2016.md)
 ### [Set up Azure MFA](use-azure-mfa-for-activation.md)
 ## [Configure PAM using scripts](sp1-pam-configure-using-scripts.md)
 ### [Step 1 Configuring the Priv domain](sp1-step1-configuring-priv-domain.md)
