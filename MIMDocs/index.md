@@ -70,7 +70,7 @@ LOB applications and SaaS solutions.
 ---
 <br>
 >[!Warning]
-Alert! Forefront Identity Manager support is ending 10/10/2017. [For More information please review the product lifecycle site](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+Forefront Identity Manager support is ending 10/10/2017. [For More information please review the product lifecycle site](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 <h2>Reference</h2>
 <ul class="panelContent cardsFTitle">
