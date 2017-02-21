@@ -5,9 +5,9 @@ description: Learn how to use Microsoft Identity Manager.
 ---
 # Microsoft Identity Manager Documentation
 
-Microsoft Identity Manager 2016 binds Microsoft's identity and access management solutions together by 
-seamlessly bridging multiple on-premises authentication stores like Active Directory, LDAP, Oracle, 
-and other applications with Azure Active Directory. This provides consistent experiences to on-premises 
+Microsoft Identity Manager 2016 binds Microsoft's identity and access management solutions together by
+seamlessly bridging multiple on-premises authentication stores like Active Directory, LDAP, Oracle,
+and other applications with Azure Active Directory. This provides consistent experiences to on-premises
 LOB applications and SaaS solutions.
 
 <ul class="panelContent cardsFTitle">
@@ -48,7 +48,7 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy"> 
+        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -68,6 +68,9 @@ LOB applications and SaaS solutions.
 </ul>
 
 ---
+<br>
+>[!Warning]
+Alert! Forefront Identity Manager support is ending 10/10/2017. [For More information please review the product lifecycle site](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 <h2>Reference</h2>
 <ul class="panelContent cardsFTitle">
