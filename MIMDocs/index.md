@@ -70,7 +70,7 @@ LOB applications and SaaS solutions.
 ---
 <br>
 >[!Warning]
-Forefront Identity Manager support is ending 10/10/2017. [For More information please review the product lifecycle site](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+Forefront Identity Manager mainstream support is ending 10/10/2017. Please [upgrade](/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) to Microsoft Identity Manager 2016. </br> - For More information on our support lifecycle policy please review the information provided [here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) </br> - For information on public releases of identity products review the post titled [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 
 <h2>Reference</h2>
 <ul class="panelContent cardsFTitle">
