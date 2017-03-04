@@ -131,13 +131,13 @@ Perform the install as described in the [Getting started guide](/microsoft-ident
     -   After establishing trust, log onto PRIVDC as PRIV\\Administrator, launch PowerShell and type the following commands:
   ```
     netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
 
      netdom trust contoso.local /domain:priv.contoso.local /quarantine:no
-     /usero:contoso\\administrator /passwordo:Pass\@word1  
+     /usero:contoso\administrator /passwordo:Pass@word1  
 
      netdom trust contoso.local /domain:priv.contoso.local /enablepimtrust:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
   ```
 
 -   Item #5 (verification of trust) is **not required when both CORP and PRIV domains are at Windows Server 2016 domain functional level**.
