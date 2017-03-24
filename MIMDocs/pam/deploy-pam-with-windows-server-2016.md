@@ -92,7 +92,7 @@ Perform the install as described in the [Getting started guide](/microsoft-ident
 
  -   After configuring delegation, and before restarting the server, authorize the MIM administrators to create and update authentication policy.
 
-     a.  Launch an elevated command prompt and type the following commands, substituting the name of your MIM administrator account for “mimadmin” in each of the four lines:
+     a.  Launch an elevated **Command prompt** and type the following commands, substituting the name of your MIM administrator account for “mimadmin” in each of the four lines:
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
