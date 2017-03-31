@@ -42,18 +42,6 @@
 ## [Upgrade from Forefront Identity Manager 2012 R2](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
 ## Service and Portal
 ### [FIM 2010 Kerberos settings](https://technet.microsoft.com/library/jj134299)
-## Password Change Notification Service
-### [Deploy the MIM password Change Notification Service on a domain controller](/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
-### [Password Change Notification Download](https://www.microsoft.com/download/details.aspx?id=19495)
-## Reporting
-###[Identity Manager Hybrid Reporting](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting.md)
-###[System Center Service Manager Reporting Integration](https://technet.microsoft.com/library/jj133845)
-## Synchronization Service
-### [Walkthrough - How To Guides (GalSync, Password Management)](https://technet.microsoft.com/library/cc720550)
-### [Configuring Global Address List (GAL) Synchronization with Forefront Identity Manager (FIM) 2010](https://technet.microsoft.com/video/configuring-global-address-list-gal-synchronization-with-forefront-identity-manager-fim-2010.aspx)
-### [Understanding Data Synchronization with External Systems](https://technet.microsoft.com/library/ff608273)
-### [Understanding Deprovisioning](https://technet.microsoft.com/library/hh859718)
-## Service
 ### [FIM 2010 R2 Common User and Group Configuration](https://technet.microsoft.com/library/jj150431)
 ### [Cross-Forest Management Deployment Guide](https://technet.microsoft.com/library/ff721965)
 ### [Troubleshooting FIM 2010](https://technet.microsoft.com/library/gg607341)
@@ -70,6 +58,18 @@
 ### [Password Reset Deployment with Forefront Identity Manager 2010](https://technet.microsoft.com/video/video/password-reset-deployment-with-forefront-identity-manager-fim-2010)
 ### [Kerberos and Self-Service Password Reset](https://technet.microsoft.com/library/jj134304)
 ### [Maintaining Forefront Identity Manager 2010 R2 - Self-Service Password Reset](https://technet.microsoft.com/library/jj134290)
+## Password Change Notification Service
+### [Deploy the MIM password Change Notification Service on a domain controller](/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
+### [Password Change Notification Download](https://www.microsoft.com/download/details.aspx?id=19495)
+## Reporting
+###[Identity Manager Hybrid Reporting](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting.md)
+###[System Center Service Manager Reporting Integration](https://technet.microsoft.com/library/jj133845)
+## Synchronization Service
+### [Walkthrough - How To Guides (GalSync, Password Management)](https://technet.microsoft.com/library/cc720550)
+### [Configuring Global Address List (GAL) Synchronization with Forefront Identity Manager (FIM) 2010](https://technet.microsoft.com/video/configuring-global-address-list-gal-synchronization-with-forefront-identity-manager-fim-2010.aspx)
+### [Understanding Data Synchronization with External Systems](https://technet.microsoft.com/library/ff608273)
+### [Understanding Deprovisioning](https://technet.microsoft.com/library/hh859718)
+
 ### Password Reset Deployment Guide
 ## Certificate Manager
 ### [Enroll smart cards for non-administrators](/microsoft-identity-manager/deploy-use/certificate-manager-for-non-administrators.md)
