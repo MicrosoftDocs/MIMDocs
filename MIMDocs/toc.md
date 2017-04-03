@@ -1,5 +1,5 @@
 # Understand and Explore
-## [Introducing Microsoft Identity Manager 2016](understand-explore/microsoft-identity-manager-2016.md)
+## [Introducing Microsoft Identity Manager 2016](/understand-explore/microsoft-identity-manager-2016)
 ## [Pre-installation and Topology Configuration](https://technet.microsoft.com/library/ff602886)
 ## Fundamentals
 ### Synchronization Service
@@ -70,7 +70,6 @@
 ### [Configuring Global Address List (GAL) Synchronization with Forefront Identity Manager (FIM) 2010](https://technet.microsoft.com/video/configuring-global-address-list-gal-synchronization-with-forefront-identity-manager-fim-2010.aspx)
 ### [Understanding Data Synchronization with External Systems](https://technet.microsoft.com/library/ff608273)
 ### [Understanding Deprovisioning](https://technet.microsoft.com/library/hh859718)
-
 ### Password Reset Deployment Guide
 ## Certificate Manager
 ### [Enroll smart cards for non-administrators](deploy-use/certificate-manager-for-non-administrators.md)
