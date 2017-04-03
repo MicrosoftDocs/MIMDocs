@@ -1,6 +1,6 @@
 # [Understand and Explore](microsoft-identity-manager-2016.md)
 ## [What is MIM 2016?](microsoft-identity-manager-2016.md)
-## [What’s new in service pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
+## [What's new in service pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
 ### [MIM2016 SP1 PAM deployment scripts](sp1-deployment-scripts.md)
 ## [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)# [Plan and Design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Deploy and Use](microsoft-identity-manager-deploy.md)
