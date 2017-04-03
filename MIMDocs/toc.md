@@ -1,5 +1,5 @@
-# [Understand and Explore](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-## [Introduction to Microsoft Identity Manager](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016.md)
+# [Understand and Explore](/microsoft-identity-manager/understand/microsoft-identity-manager-2016)
+## [Introduction to Microsoft Identity Manager](/microsoft-identity-manager/understand/microsoft-identity-manager-2016.md)
 ## [Pre-installation and Topology Configuration](https://technet.microsoft.com/library/ff602886)
 ## Fundamentals
 ### Synchronization Service
@@ -19,7 +19,7 @@
 ### Connectors
 #### [Connector Version release history](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history.md)
 ### [Password change notification service](https://technet.microsoft.com/en-us/library/839a9291-a78f-4959-8e6a-3bf68bf62700)
-# [Plan and Design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+# [Plan and Design](/microsoft-identity-manager/plandesign/microsoft-identity-manager-2016-supported-platforms)
 ## [Supported platforms for Microsoft Identity Manager 2016](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md)
 ## [Capacity Planning guide](/microsoft-identity-manager/PlanDesign/capacity-planning-guide.md)
 ## [Topology considerations](/microsoft-identity-manager/PlanDesign/topology-considerations.md)
@@ -37,9 +37,9 @@
 ### [Hardware and Software Requirements](/microsoft-identity-manager/pam/hardware-software-requirements.md)
 ## [Self Service Password Reset](https://technet.microsoft.com/library/jj134278)
 ## [Reporting](https://technet.microsoft.com/library/jj133851)
-# [Deploy and Use](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# [Deploy and Use](/microsoft-identity-manager/deployuse/microsoft-identity-manager-deploy)
 ## Deploy Identity Manager
-## [Upgrade from Forefront Identity Manager 2012 R2](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
+## [Upgrade from Forefront Identity Manager 2012 R2](/microsoft-identity-manager/deployuse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
 ## Service and Portal
 ### [FIM 2010 Kerberos settings](https://technet.microsoft.com/library/jj134299)
 ### [FIM 2010 R2 Common User and Group Configuration](https://technet.microsoft.com/library/jj150431)
@@ -59,10 +59,10 @@
 ### [Kerberos and Self-Service Password Reset](https://technet.microsoft.com/library/jj134304)
 ### [Maintaining Forefront Identity Manager 2010 R2 - Self-Service Password Reset](https://technet.microsoft.com/library/jj134290)
 ## Password Change Notification Service
-### [Deploy the MIM password Change Notification Service on a domain controller](/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
+### [Deploy the MIM password Change Notification Service on a domain controller](/microsoft-identity-manager/deployuse/deploying-mim-password-change-notification-service-on-domain-controller.md)
 ### [Password Change Notification Download](https://www.microsoft.com/download/details.aspx?id=19495)
 ## Reporting
-###[Identity Manager Hybrid Reporting](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting.md)
+###[Identity Manager Hybrid Reporting](/microsoft-identity-manager/deployuse/working-with-identity-manager-hybrid-reporting.md)
 ###[System Center Service Manager Reporting Integration](https://technet.microsoft.com/library/jj133845)
 ## Synchronization Service
 ### [Walkthrough - How To Guides (GalSync, Password Management)](https://technet.microsoft.com/library/cc720550)
@@ -72,8 +72,8 @@
 
 ### Password Reset Deployment Guide
 ## Certificate Manager
-### [Enroll smart cards for non-administrators](/microsoft-identity-manager/deploy-use/certificate-manager-for-non-administrators.md)
-### [Create software certificates with Certificate Manager](/microsoft-identity-manager/deploy-use/certificate-manager-for-software-certificates.md)
+### [Enroll smart cards for non-administrators](/microsoft-identity-manager/deployuse/certificate-manager-for-non-administrators.md)
+### [Create software certificates with Certificate Manager](/microsoft-identity-manager/deployuse/certificate-manager-for-software-certificates.md)
 ## Privileged Access Management
 ### [Configure the MIM environment for Privileged Access management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
 ### [Configure PAM using scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
