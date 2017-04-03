@@ -2,7 +2,7 @@
 ## [What is MIM 2016?](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
 ## [What's new in service pack 1](/microsoft-identity-manager/understand-explore/Microsoft-identity-manager-2016-sp1-release-notes)
 ### [MIM2016 SP1 PAM deployment scripts](/microsoft-identity-manager/understand-explore/sp1-deployment-scripts)
-## [Hybrid reporting in Azure](/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure)# [Plan and Design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+## [Hybrid reporting in Azure](/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure)
 # [Plan and Design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 ## [Supported platforms](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 ## [Connect to directories](/microsoft-identity-manager/plan-design/supported-management-agents)
