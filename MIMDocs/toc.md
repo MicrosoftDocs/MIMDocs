@@ -1,5 +1,5 @@
 # Understand and Explore
-## [Introducing Microsoft Identity Manager 2016](understand/microsoft-identity-manager-2016.md)
+## [Introducing Microsoft Identity Manager 2016](understand-explore/microsoft-identity-manager-2016.md)
 ## [Pre-installation and Topology Configuration](https://technet.microsoft.com/library/ff602886)
 ## Fundamentals
 ### Synchronization Service
@@ -21,8 +21,8 @@
 ### [Password change notification service](https://technet.microsoft.com/en-us/library/839a9291-a78f-4959-8e6a-3bf68bf62700)
 # Plan and Design
 ## [Supported platforms for Microsoft Identity Manager 2016](plan-design/microsoft-identity-manager-2016-supported-platforms.md)
-## [Capacity Planning guide](plandesign/capacity-planning-guide.md)
-## [Topology considerations](plandesign/topology-considerations.md)
+## [Capacity Planning guide](plan-design/capacity-planning-guide.md)
+## [Topology considerations](plan-design/topology-considerations.md)
 ## Synchronization Service
 ### [Connect to your directories](plan-design/supported-management-agents.md)
 ## Service and Portal
@@ -53,17 +53,17 @@
 ### [Understanding Configuring and Customizing the FIM Portal](https://technet.microsoft.com/library/ff393653)
 ### [Understanding Custom Resource and Attribute Management](https://technet.microsoft.com/library/ff519007)
 ### [Understanding Expected State Detection](https://technet.microsoft.com/library/ff608269)
-## [Self Service Password Reset](deployuse/working-with-self-service-password-reset.md)
+## [Self Service Password Reset](deploy-use/working-with-self-service-password-reset.md)
 ### [Understanding Password Reset](https://technet.microsoft.com/library/gg214071)
 ### [Password Registration and Reset Portal Customization](https://technet.microsoft.com/library/hh877809)
 ### [Password Reset Deployment with Forefront Identity Manager 2010](https://technet.microsoft.com/video/video/password-reset-deployment-with-forefront-identity-manager-fim-2010)
 ### [Kerberos and Self-Service Password Reset](https://technet.microsoft.com/library/jj134304)
 ### [Maintaining Forefront Identity Manager 2010 R2 - Self-Service Password Reset](https://technet.microsoft.com/library/jj134290)
 ## Password Change Notification Service
-### [Deploy the MIM password Change Notification Service on a domain controller](deployuse/deploying-mim-password-change-notification-service-on-domain-controller.md)
+### [Deploy the MIM password Change Notification Service on a domain controller](deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
 ### [Password Change Notification Download](https://www.microsoft.com/download/details.aspx?id=19495)
 ## Reporting
-###[Identity Manager Hybrid Reporting](deployuse/working-with-identity-manager-hybrid-reporting.md)
+###[Identity Manager Hybrid Reporting](deploy-use/working-with-identity-manager-hybrid-reporting.md)
 ###[System Center Service Manager Reporting Integration](https://technet.microsoft.com/library/jj133845)
 ## Synchronization Service
 ### [Walkthrough - How To Guides (GalSync, Password Management)](https://technet.microsoft.com/library/cc720550)
@@ -73,8 +73,8 @@
 
 ### Password Reset Deployment Guide
 ## Certificate Manager
-### [Enroll smart cards for non-administrators](deployuse/certificate-manager-for-non-administrators.md)
-### [Create software certificates with Certificate Manager](deployuse/certificate-manager-for-software-certificates.md)
+### [Enroll smart cards for non-administrators](deploy-use/certificate-manager-for-non-administrators.md)
+### [Create software certificates with Certificate Manager](deploy-use/certificate-manager-for-software-certificates.md)
 ## Privileged Access Management
 ### [Configure the MIM environment for Privileged Access management](pam/configuring-mim-environment-for-pam.md)
 ### [Configure PAM using scripts](pam/sp1-pam-configure-using-scripts.md)
