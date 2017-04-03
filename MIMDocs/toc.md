@@ -38,9 +38,9 @@
 ## [Self Service Password Reset](https://technet.microsoft.com/library/jj134278)
 ## [Reporting](https://technet.microsoft.com/library/jj133851)
 # Deploy and Use
-## [Steps required to deploy MIM 2016](deployuse/microsoft-identity-manager-deploy.md)
+## [Steps required to deploy MIM 2016](deploy-use/microsoft-identity-manager-deploy.md)
 ## Deploy Identity Manager
-## [Upgrade from Forefront Identity Manager 2012 R2](deployuse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
+## [Upgrade from Forefront Identity Manager 2012 R2](deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
 ## Service and Portal
 ### [FIM 2010 Kerberos settings](https://technet.microsoft.com/library/jj134299)
 ### [FIM 2010 R2 Common User and Group Configuration](https://technet.microsoft.com/library/jj150431)
