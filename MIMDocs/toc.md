@@ -101,7 +101,7 @@
 ## [Reporting](https://technet.microsoft.com/library/jj133848)
 ### [Reporting Custom Reports and Extensibility](https://technet.microsoft.com/library/jj133861)
 ## Connectors
-## troubleshooting
+## Troubleshooting
 ### Synchronization Service
 ### Certificate Management
 ### Service and Portal
