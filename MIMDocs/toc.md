@@ -20,15 +20,15 @@
 #### [Connector Version release history](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-version-history)
 ### [Password change notification service](https://technet.microsoft.com/en-us/library/839a9291-a78f-4959-8e6a-3bf68bf62700)
 # Plan and Design
-## [Supported platforms for Microsoft Identity Manager 2016](PlanDesign/microsoft-identity-manager-2016-supported-platforms.md)
-## [Capacity Planning guide](PlanDesign/capacity-planning-guide.md)
-## [Topology considerations](PlanDesign/topology-considerations.md)
+## [Supported platforms for Microsoft Identity Manager 2016](plan-design/microsoft-identity-manager-2016-supported-platforms.md)
+## [Capacity Planning guide](plandesign/capacity-planning-guide.md)
+## [Topology considerations](plandesign/topology-considerations.md)
 ## Synchronization Service
 ### [Connect to your directories](plan-design/supported-management-agents.md)
 ## Service and Portal
 ### [Best practices](https://technet.microsoft.com/library/ff608274)
 ### [FIM 2010 Backup and Restore Guide](https://technet.microsoft.com/library/fim-2010-backup-and-restore-guide)
-### [Designing Business Policy Rules]
+### Designing Business Policy Rules
 ##  [Privileged Access Management](pam/environment-overview.md)
 ### [Tier Model](pam/tier-model-for-partitioning-administrative-privileges.md)
 ### [Plan a Bastion Environment](pam/planning-bastion-environment.md)
