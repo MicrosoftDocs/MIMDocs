@@ -1,5 +1,5 @@
 # Understand and Explore
-## [Introducing Microsoft Identity Manager 2016](understand-explore/microsoft-identity-manager-2016.md)
+## [Introducing Microsoft Identity Manager 2016](/understand-explore/microsoft-identity-manager-2016.md)
 ## [Pre-installation and Topology Configuration](https://technet.microsoft.com/library/ff602886)
 ## Fundamentals
 ### Synchronization Service
