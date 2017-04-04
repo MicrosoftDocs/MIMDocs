@@ -26,7 +26,7 @@ Once installed you will see the following new line in the Microsoft.ResourceMana
 *	Line 8:  ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
 *	Line 266 ``</system.diagnostics> ``
 
-![Highlighted sections showing the new dynamic logging entries](/media/mim-service-dynamic-logging/screen01.png)
+![Highlighted sections showing the new dynamic logging entries](media/mim-service-dynamic-logging/screen01.png)
 
 Logging levels of the dynamic can be found [here](https://msdn.microsoft.com/library/ms733025(v=vs.110).aspx#Anchor_3)
 
@@ -35,11 +35,11 @@ Logging levels of the dynamic can be found [here](https://msdn.microsoft.com/lib
 
 Dynamic logging config located at line 266 : Microsoft.ResourceManagement.Service.exe.config
 
-![Highlighted sections showing lines with the various logging areas available](/media/mim-service-dynamic-logging/screen02.png)
+![Highlighted sections showing lines with the various logging areas available](media/mim-service-dynamic-logging/screen02.png)
 
 By default the logging location will be at the **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service** , The FIM Service account will need write permission to this location to generate the dynamic log.
 
-![Folder location of the logs](/media/mim-service-dynamic-logging/screen03.png)
+![Folder location of the logs](media/mim-service-dynamic-logging/screen03.png)
 
  >[!NOTE]
  In case of unexpected errors (syntax errors in config file Microsoft.ResourceManagement.Service.exe.config or other mistakes) corresponding error message will be written into file Microsoft.ResourceManagement.Service.exe_Emergency.log under following path %TMP% or %TEMP% or %USERPROFILE% (first that exists).  
@@ -49,4 +49,4 @@ By default the logging location will be at the **C:\Program Files\Microsoft Fore
 
 To view the trace you can use the [Service Trace viewer tool](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx)
 
- ![Service trace viewer screenshot](/media/mim-service-dynamic-logging/screen04.png)
+ ![Service trace viewer screenshot](media/mim-service-dynamic-logging/screen04.png)
