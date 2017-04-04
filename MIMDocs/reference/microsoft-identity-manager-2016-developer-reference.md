@@ -30,5 +30,5 @@ ms.suite: ems
 
 ##In This Section
 
-- [Certficate Management (CM) REST API Reference](certificate-management-rest-api-reference.md)
+- [Certificate Management (CM) REST API Reference](certificate-management-rest-api-reference.md)
 - [Privileged Access Management (PAM) REST API Reference](privileged-access-management-rest-api-reference.md)
