@@ -92,6 +92,24 @@ Forefront Identity Manager (FIM) mainstream support is ending 10/10/2017. Please
         </div>
         </a>
     </li>
+        <li>
+        <a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_reference.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Certificate Management REST API Reference</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
     <li>
         <a href="https://blogs.technet.microsoft.com/iamsupport/">
         <div class="cardSize">
