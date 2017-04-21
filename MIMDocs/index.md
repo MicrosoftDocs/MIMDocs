@@ -30,7 +30,7 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -40,8 +40,7 @@ LOB applications and SaaS solutions.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Learn about Microsoft Identity Manager</h3>
-                    </div>
+                        <h3>Learn about Microsoft Identity Manager</h3>                    </div>
                 </div>
             </div>
         </div>
@@ -86,6 +85,24 @@ Forefront Identity Manager (FIM) mainstream support is ending 10/10/2017. Please
                     </div>
                     <div class="cardText">
                         <h3>Privileged Access Management REST API Reference</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+        <li>
+        <a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_reference.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Certificate Management REST API Reference</h3>
                     </div>
                 </div>
             </div>
