@@ -92,7 +92,7 @@ After the reporting agent is installed, the data from Microsoft Identity Manager
 5.  Make sure you select **MIM Service** in the Category drop down menu.
 
 > [!WARNING]
-> It can take some time for Microsoft Identity Manager audit data to appear in Azure AD.
+> It can take some time for Microsoft Identity Manager audit data to appear in Azure AD Portal.
 
 ## Stop creating hybrid reports
 If you want to stop uploading reporting audit data from Microsoft Identity Manager to Azure Active Directory, uninstall the hybrid reporting agent. Use the Windows **Add or Remove Programs** tool to uninstall Microsoft Identity Manager Hybrid Reporting.

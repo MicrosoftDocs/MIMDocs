@@ -39,14 +39,14 @@ Hybrid audit reporting helps IT professionals address common identity management
 
 ## How does it work?
 
-To collect the on-premises data, you first install a reporting agent on your Identity Manager 2016 server. The reporting agent is downloaded from the Microsoft Download Page [here](https://www.microsoft.com/en-us/download/details.aspx?id=####/).
+To collect the on-premises data, you first install a reporting agent on your Identity Manager 2016 server. The reporting agent is downloaded from the Microsoft Download Page [here](https://www.microsoft.com/en-us/download/details.aspx?id=55112).
 
 The process of hybrid reporting follows these steps:
 1. After the reporting agent is installed, the Identity Manager activity data is sent to the Windows Event Log.
 2. The reporting agent processes the events in the Windows Event Log and uploads them to Azure Portal.
 3. The activity data is stored in Azure for one month.
 4. When you request a report, the activity events are parsed and filtered for the required reports.
-5. The Azureportal retrieves the audit reporting data and renders this as the audit within the activity report.
+5. The Azure portal retrieves the audit reporting data and renders this as the audit within the activity report.
 
 ## See also
 - Get more details about [Working with Identity Manager Hybrid Reporting](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting)
