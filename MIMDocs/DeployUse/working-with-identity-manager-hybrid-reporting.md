@@ -4,10 +4,10 @@
 title: Working with Hybrid reporting in Azure using MIM 2016  | Microsoft Docs
 description: Learn how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 keywords:
-author: kgremban
+author: fimguy
 ms.author: kgremban
 manager: femila
-ms.date: 01/27/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -25,23 +25,23 @@ ms.suite: ems
 
 ---
 
-# Working with Identity Manager Hybrid Reporting
+# Working with Identity Manager Hybrid Reporting - Public Preview (Refresh)
 
 ## Available hybrid reports
 The first three Microsoft Identity Manager (MIM) reports available in Azure AD are **Password reset activity**, **Password reset registration** and **Self-service groups activity**.
 
 -   Password reset activity displays each instance when a user performed password reset using the SSPR and provides the gates or **Methods** used for authentication.
 
-    ![Azure hybrid reporting - password reset activity image](media/MIM-Hybrid-passwordreset2.jpg)
-
 -   Password reset registration displays each time a user registers for the SSPR and the **Methods** used to authenticate, for example a mobile phone number or questions and answers.
     Note that for Password reset registration, no differentiation is made between SMS gate and MFA gate – both are considered **Mobile Phone**.
 
 -   Self-service groups activity displays each attempt made by someone to add themselves to or delete themselves from a group and group creation.
 
+    ![Azure hybrid reporting - password reset activity image](media/MIM-Hybrid-passwordreset2.jpg)
+
 > [!NOTE]
-> The reports currently present data for up to one month back.
->
+> The reports currently present data for up to one month back.</br>
+> The previous hybrid agent must be uninstalled</br>
 > If you want to uninstall hybrid reports, uninstall the MIMreportingAgent.msi agent.
 
 ## Prerequisites
@@ -51,6 +51,21 @@ The first three Microsoft Identity Manager (MIM) reports available in Azure AD a
 2.  Make sure you have an Azure AD Premium tenant with a licensed administrator in your directory.
 
 3.  Make sure you have outgoing Internet connectivity from the Microsoft Identity Manager server to Azure.
+
+## Requirements
+The following table is a list of requirements for using Microsoft Identity Manager Hybrid Reporting.
+
+| Requirement | Description |
+| --- | --- |
+| Azure AD Premium | Hybrid Reporting is an Azure AD Premium feature and requires Azure AD Premium. </br></br>For more information, see [Getting started with Azure AD Premium](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium) </br>To start a free 30-day trial, see [Start a trial.](https://azure.microsoft.com/trial/get-started-active-directory/) |
+| You must be a global administrator of your Azure AD to get started |By default, only the global administrators can install and configure the agents to get started, access the portal, and perform any operations within Azure. </br></br>**Important:** The account used when installing the agents must be a work or school account. It cannot be a Microsoft account. For more information, see [Sign up for Azure as an organization](https://docs.microsoft.com/en-us/azure/active-directory/sign-up-organization) |
+| Microsoft Identity Manager Hybrid Agent is installed on each targeted MIM Service server | Hybrid reporting requires the agents to be installed and configured on targeted servers to receive the data and provide the Monitoring and Analytics capabilities </br>|
+| Outbound connectivity to the Azure service endpoints | During installation and runtime, the agent requires connectivity to Azure service endpoints. If outbound connectivity is blocked using Firewalls, ensure that the following endpoints are added to the allowed list: </br></br><li>&#42;.blob.core.windows.net </li><li>&#42;.servicebus.windows.net - Port: 5671 </li><li>&#42;.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li> |
+|Outbound connectivity based on IP Addresses | For IP address based filtering on firewalls, refer to the [Azure IP Ranges](https://www.microsoft.com/en-us/download/details.aspx?id=41653).|
+| SSL Inspection for outbound traffic is filtered or disabled | The agent registration step or data upload operations may fail if there is SSL inspection or termination for outbound traffic at the network layer. |
+| Firewall ports on the server running the agent. |The agent requires the following firewall ports to be open in order for the agent to communicate with the Azure service endpoints.</br></br><li>TCP port 443</li><li>TCP port 5671</li> |
+| Allow the following websites if IE Enhanced Security is enabled |If IE Enhanced Security is enabled, then the following websites must be allowed on the server that is going to have the agent installed.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>The federation server for your organization trusted by Azure Active Directory. For example: https://sts.contoso.com</li> |
+</BR>
 
 ## Install Microsoft Identity Manager Reporting Agent in Azure AD
 After the reporting agent is installed, the data from Microsoft Identity Manager activity is exported from MIM to windows event log. The MIM reporting agent processes the events, and uploads to Azure. In Azure, the events are parsed, decrypted, and filtered for the required reports.
@@ -79,7 +94,7 @@ After the reporting agent is installed, the data from Microsoft Identity Manager
 
     You can create report data by using the Microsoft Identity Manager Self Service Password Reset Portal to reset a user’s password. Make sure that the password reset completed successfully and then check that the data is displayed in the Azure AD management portal.
 
-## View hybrid reports in the Azure classic portal
+## View hybrid reports in the Azure Portal
 
 1.  Log into the [Azure portal](https://portal.azure.com/) with your global admin account for the tenant.
 
@@ -92,7 +107,7 @@ After the reporting agent is installed, the data from Microsoft Identity Manager
 5.  Make sure you select **MIM Service** in the Category drop down menu.
 
 > [!WARNING]
-> It can take some time for Microsoft Identity Manager audit data to appear in Azure AD.
+> It can take some time for Microsoft Identity Manager audit data to appear in Azure Portal.
 
 ## Stop creating hybrid reports
 If you want to stop uploading reporting audit data from Microsoft Identity Manager to Azure Active Directory, uninstall the hybrid reporting agent. Use the Windows **Add or Remove Programs** tool to uninstall Microsoft Identity Manager Hybrid Reporting.
