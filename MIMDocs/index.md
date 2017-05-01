@@ -30,7 +30,7 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
--        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
