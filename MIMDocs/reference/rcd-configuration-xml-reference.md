@@ -4,10 +4,10 @@
 title: Resource Control Display Configuration XML Reference | Microsoft Docs
 description:
 keywords:
-author: barclayn
-ms.author: barclayn
+author: fimguy
+ms.author: fimguy
 manager: mbaldwin
-ms.date: 01/14/2017
+ms.date: 05/1/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -19,14 +19,13 @@ ms.assetid:
 # Resource Control Display Configuration XML Reference
 
 Resource control display configuration (RCDC) resources are user-defined
-resources that you can use to control how other resources in the Microsoft Identity Manager 2016 (MIM) data store appear in the user interface
+resources that you can use to control how other resources in the Microsoft Identity Manager 2016 SP1 (MIM) data store appear in the user interface
 (UI) to the end user. Each RCDC resource contains an XML configuration file that
-you can change to add, modify, or remove UI text and UI controls. While MIM 2016
+you can change to add, modify, or remove UI text and UI controls. While MIM 2016 SP1
 provides several default RCDC resources, you can also create custom RCDC
 resources for custom resources. For more information about using the RCDC UI in
 the FIM Portal, see [Introduction to Configuring and Customizing the FIM Portal](http://go.microsoft.com/fwlink/?LinkID=165848) in the FIM documentation.
 
-For an overview of FIM 2010 documentation and guidance for using it, see the [Documentation Roadmap](https://technet.microsoft.com/library/ee534890(WS.10).aspx).
 
 ## Known Issues
 
@@ -80,34 +79,34 @@ The **ObjectControlConfiguration** element contains the following:
     **ObjectControlConfiguration**: element can contain up to 32 nodes of the
     **XmlDataSource** element.
 
-3.  **Panel**: In MIM 2016, the administrator can customize the layout of the RCDC
+3.  **Panel**: Administrator can customize the layout of the RCDC
     page by modifying elements inside the Panel elements. For more information,
     see the Panel section later in this document. An **ObjectControlConfiguration**
     element must have only one Panel element.
 
-4.  **Events**: In MIM 2016, because administrators cannot provide customized code
+4.  **Events**: Administrators cannot provide customized code
     behind, this feature is limited. This is the Event that a panel or a control
     can emit, based on a state change. For more information, see the Events
     section later in this document. An **ObjectControlConfiguration** element can
     contain optionally one **Event** element. In general, the use of custom **Events**
-    is not supported in MIM.
+    is not supported unless specifically developed in later enhancements.
 
 ## Data sources
 
-MIM 2016 uses data sources as a way to bind data to UI components. This helps
+Microsoft Identity Manager uses data sources as a way to bind data to UI components. This helps
 facilitate separation of the data from the presentation layer. There are two
 kinds of data sources in the RCDC resource configuration data: **ObjectDataSource**
 and **XmlDataSource**.
 
 -   **ObjectDataSources** specify a Microsoft .NET class that provides the data to
     the RC. There is a fixed set of available types of ObjectDataSources
-    provided in MIM 2016 that the administrator can choose to consume when
+    provided that the administrator can choose to consume when
     authoring RCDCs.
 
 -   **XMLDataSources** provide a simple way to structure XML-based data, and they
     can be used by administrators to provide customized data. The XML data must
     be specified directly in the RCDC, unless you use the built-in, predefined
-    XML structure that MIM 2016 provides. The built-in XML structure is used for
+    XML structure. The built-in XML structure is used for
     generating summary pages in the RC.
 
 In the RCDC, you can bind these data sources to attributes of the UI controls
@@ -115,7 +114,7 @@ that are specified in the RCDC to generate the UI.
 
 ### ObjectDataSource
 
-MIM 2016 provides the common data source types in the following table that are
+Microsoft Identity manager provides the common data source types in the following table that are
 available for all resource types (except where noted).
 
 | TypeName                        | Description     | Supports two-way binding | Supported binding syntax        |
@@ -258,7 +257,7 @@ An Event is an empty element, and it has two attributes.
 
 2.  **Handler**: This is the unique name of a handler. When the event is triggered,
     usually a program method is called to handle the change of the state of the
-    control. In this release of MIM 2016, the following cases are not supported:
+    control. the following cases are not supported:
     removing an existing handler from an existing control, creating a new
     handler, and attaching to an existing or new control.
 
@@ -302,8 +301,7 @@ The Panel element contains four attributes:
     VerbContext attribute on the RCDC governs if the resource layout is in
     Wizard mode or Tab mode. If it is set to 0 (Create mode), it is also in
     Wizard mode. Otherwise, it is in Tab mode. For more information, see
-    Introduction to Configuring and Customizing the FIM Portal in the MIM
-    documentation.
+    Introduction to Configuring and Customizing the FIM Portal in the documentation.
 
 3.  **Caption**: This attribute is currently deprecated. The user can specify
     captions for a page by including a Group that contains only header
@@ -522,7 +520,7 @@ A Control contains following elements:
 
 1.  **Help**: This element is ignored. It functions only in Grouping.
 
-2.  **CustomProperties**: This element is not supported in MIM 2010.
+2.  **CustomProperties**: This element is not supported.
 
 3.  **Options**: This element is used only in combination with the **UocDropDownList**
     or **UocRadioButtonList** Controls. It is not functional with any other
@@ -588,7 +586,7 @@ A Control contains the following attributes:
 8. ExpandArea: This attribute indicates whether the control spans the full screen. This is an optional, Boolean-type attribute. The default value is set to false.
 
     >[!NOTE]
-    In MIM 2016, the Caption and Description attributes are disabled when this attribute is set to true. You must use the UocLabel control to provide a caption for an expanded control.
+    The Caption and Description attributes are disabled when this attribute is set to true. You must use the UocLabel control to provide a caption for an expanded control.
 9. **Hint**: This is an optional, string-type attribute. The text in the Hint attribute helps the end user decide what is a valid input for the control. The Hint appears underneath the control.
 
 10.  **AutoPostback**: This is an optional, Boolean-type attribute. The default value is false. If set to false, refreshing the page may not refresh the control. For information about AutoPostback, look for the Microsoft ASP.NET UI control property of the same name.
@@ -794,7 +792,7 @@ such as Microsoft Visual Studio®. For more information, see [An Introduction to
 
 ### Customizing a Help file
 
-If you create new resources and attributes in MIM, you may want to update
+If you create new resources and attributes, you may want to update
 the existing Help files in the FIM Portal with content for your customized
 resources. Help files in the FIM Portal are in .htm format, and they can be
 edited manually.
@@ -803,11 +801,11 @@ edited manually.
 For more information about creating custom attributes, see Introduction to Custom Resource and Attribute Management in the FIM 2010 documentation.
 
 >[!IMPORTANT]
-This section does not provide information about the basics of formatting or editing HTML. To modify Help files in MIM 2016, you should already be familiar with editing HTML
+This section does not provide information about the basics of formatting or editing HTML. To modify Help files you should already be familiar with editing HTML
 
 
-**Location of the Help files**: All the Help files for the MIM Portal are located in
-the following folder on the MIM 2016 server:
+**Location of the Help files**: All the Help files for the Microsoft Identity Management 2016 SP1 Portal are located in
+the following folder on the MIM service server:
 
   `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html`
 
@@ -948,8 +946,7 @@ state and the enabled state, the user can no longer enter data in the text box.
 **Name**: UocButton
 
 **Description**: This is a simple button control that you can use to trigger certain
-actions. However, because you cannot specify your own handler in this release of
-MIM 2016 , the use of this control is limited.
+actions. However, because you cannot specify your own handler the use of this control is limited.
 
 **Properties**:
 
@@ -1178,7 +1175,7 @@ section.
     hh:mm:ss AM.
 
       <[!NOTE]
-      In this release of MIM, both **DateTime** and **DateOnly** format are supported, regardless of the user that is specifying the difference.
+      Both **DateTime** and **DateOnly** format are supported, regardless of the user that is specifying the difference.
 3.  **Value**: This is an optional, string-type attribute. You bind this attribute
     with a resource data source. The value of this attribute has to conform to
     the correct datetime format.
@@ -1319,7 +1316,7 @@ format. The recommended data types to use this control with are formatted string
 (XML) and binary types.
 
 >[!NOTE]
-In this release of MIM 2016, the user must close the Internet Explorer window in which he or she opened the file and then refresh the page. After refreshing the Internet Explorer window, the user can then start the download to save or open the same file again in the original window.
+In this release of Microsoft Identity Manager 2016 SP1, the user must close the Internet Explorer window in which he or she opened the file and then refresh the page. After refreshing the Internet Explorer window, the user can then start the download to save or open the same file again in the original window.
 
 
 Properties:
@@ -1392,7 +1389,7 @@ content is not yet submitted to the server. The recommended data types to use
 this control with are as follows: formatted string (XML) or binary types.
 
 >[!NOTE]
-In this release of MIM 2016, there is no indication of the upload progress or status. When the file is uploaded to the local data source, the text box is cleared.
+There is no indication of the upload progress or status. When the file is uploaded to the local data source, the text box is cleared.
 
 
 Properties:
@@ -1444,7 +1441,7 @@ The following code segment generates the upload control in the previous figure:
 Name: UocFilterBuilder
 
 Description: This is a complex control that allows the user to render a MIM 2016
-XPath expression. Some MIM 2016 XPath expressions are not supported. For
+XPath expression. Some XPath expressions are not supported. For
 information about how to use the filter builder, see the Help for the filter
 builder.
 
@@ -1459,8 +1456,8 @@ Properties:
     of ResourceTypeA, ResourceTypeB, where each resource type is separated by a
     comma (,).
 
-3.  Value: This is the value with which the filter builder is rendered. In this
-    release of MIM 2016, only a binding with string-type data that contains an
+3.  Value: This is the value with which the filter builder is rendered.
+    Only a binding with string-type data that contains an
     XPath expression is supported. The Filter attribute is a recommended
     attribute for binding this control.
 
@@ -1540,7 +1537,7 @@ only be used in a Summary Grouping, and it must be the only control. We strongly
 recommended that you use the sample code that is provided.
 
 >[!NOTE]
-This control has not been tested extensively in this release of MIM 2016.
+This control has not been tested extensively.
 
 
 Properties:
@@ -2293,224 +2290,227 @@ See the Simple control samples section for a complete sample of this control.
 ## Appendix A: Default XSD Schema
 
 The following is the complete XSD schema for all default RCDCs that are provided
-with MIM 2016:
+with Microsoft Identity Manager 2016 SP1:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema targetNamespace="http://schemas.microsoft.com/2006/11/ResourceManagement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/2006/11/ResourceManagement" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <xsd:attribute name="TypeName" type="my:requiredString"/>
-      <xsd:attribute name="Name" type="my:requiredAlphanumericString"/>
-      <xsd:attribute name="Parameters" type="xsd:string"/>
-      <xsd:attribute name="DisplayAsWizard" type="xsd:boolean"/>
-      <xsd:attribute name="Caption" type="xsd:string"/>
-      <xsd:attribute name="AutoValidate" type="xsd:boolean"/>
-      <xsd:attribute name="Enabled" type="xsd:string"/>
-      <xsd:attribute name="Visible" type="xsd:string"/>
-      <xsd:attribute name="IsSummary" type="xsd:boolean"/>
-      <xsd:attribute name="IsHeader" type="xsd:boolean"/>
-      <xsd:attribute name="HelpText" type="xsd:string"/>
-      <xsd:attribute name="Link" type="xsd:string"/>
-      <xsd:attribute name="Description" type="xsd:string"/>
-      <xsd:attribute name="ExpandArea" type="xsd:boolean"/>
-      <xsd:attribute name="Hint" type="xsd:string"/>
-      <xsd:attribute name="AutoPostback" type="xsd:string"/>
-      <xsd:attribute name="RightsLevel" type="my:requiredString"/>
-      <xsd:attribute name="Value" type="xsd:string"/>
-      <xsd:attribute name="Handler" type="my:requiredString"/>
-      <xsd:attribute name="ImageUrl" type="xsd:string"/>
-      <xsd:attribute name="RedirectUrl" type="xsd:string"/>
-      <xsd:attribute name="ClickBehavior" type="xsd:string"/>
-      <xsd:attribute name="EnableMode" type="xsd:string"/>
-      <xsd:attribute name="ValueType" type="xsd:string"/>
-      <xsd:element name="ObjectControlConfiguration">
-            <xsd:complexType>
-                  <xsd:sequence>
-                        <xsd:element ref="my:ObjectDataSource" minOccurs="0" maxOccurs="32"/>
-                        <xsd:element ref="my:XmlDataSource" minOccurs="0" maxOccurs="32"/>
-                        <xsd:element ref="my:Panel"/>
-                        <xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
-                  </xsd:sequence>
-                  <xsd:attribute ref="my:TypeName"/>
-                  <xsd:anyAttribute processContents="lax" namespace="http://www.w3.org/XML/1998/namespace"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="ObjectDataSource">
-            <xsd:complexType>
-                  <xsd:sequence/>
-                  <xsd:attribute ref="my:TypeName"/>
-                  <xsd:attribute ref="my:Name"/>
-                  <xsd:attribute ref="my:Parameters"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="XmlDataSource">
-            <xsd:complexType  mixed="true">
+	<xsd:attribute name="TypeName" type="my:requiredString"/>
+	<xsd:attribute name="Name" type="my:requiredAlphanumericString"/>
+	<xsd:attribute name="Parameters" type="xsd:string"/>
+	<xsd:attribute name="DisplayAsWizard" type="xsd:boolean"/>
+	<xsd:attribute name="Caption" type="xsd:string"/>
+	<xsd:attribute name="AutoValidate" type="xsd:boolean"/>
+	<xsd:attribute name="Enabled" type="xsd:string"/>
+	<xsd:attribute name="Visible" type="xsd:string"/>
+	<xsd:attribute name="IsSummary" type="xsd:boolean"/>
+	<xsd:attribute name="IsHeader" type="xsd:boolean"/>
+	<xsd:attribute name="HelpText" type="xsd:string"/>
+	<xsd:attribute name="Link" type="xsd:string"/>
+	<xsd:attribute name="Description" type="xsd:string"/>
+	<xsd:attribute name="ExpandArea" type="xsd:boolean"/>
+	<xsd:attribute name="Hint" type="xsd:string"/>
+	<xsd:attribute name="AutoPostback" type="xsd:string"/>
+	<xsd:attribute name="RightsLevel" type="my:requiredString"/>
+	<xsd:attribute name="Value" type="xsd:string"/>
+	<xsd:attribute name="Handler" type="my:requiredString"/>
+	<xsd:attribute name="ImageUrl" type="xsd:string"/>
+	<xsd:attribute name="RedirectUrl" type="xsd:string"/>
+	<xsd:attribute name="ClickBehavior" type="xsd:string"/>
+	<xsd:attribute name="EnableMode" type="xsd:string"/>
+	<xsd:attribute name="ValueType" type="xsd:string"/>
+	<xsd:attribute name="Condition" type="xsd:string"/>
+	<xsd:element name="ObjectControlConfiguration">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:ObjectDataSource" minOccurs="0" maxOccurs="32"/>
+				<xsd:element ref="my:XmlDataSource" minOccurs="0" maxOccurs="32"/>
+				<xsd:element ref="my:Panel"/>
+				<xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:TypeName"/>
+			<xsd:anyAttribute processContents="lax" namespace="http://www.w3.org/XML/1998/namespace"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ObjectDataSource">
+		<xsd:complexType>
+			<xsd:sequence/>
+			<xsd:attribute ref="my:TypeName"/>
+			<xsd:attribute ref="my:Name"/>
+			<xsd:attribute ref="my:Parameters"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="XmlDataSource">
+		<xsd:complexType  mixed="true">
       <xsd:sequence>
         <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
       </xsd:sequence>
       <xsd:attribute ref="my:Name"/>
       <xsd:attribute ref="my:Parameters"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Panel">
-            <xsd:complexType>
-                  <xsd:sequence>
-                        <xsd:element ref="my:Grouping" minOccurs="1" maxOccurs="16"/>
-                  </xsd:sequence>
-                  <xsd:attribute ref="my:Name"/>
-                  <xsd:attribute ref="my:DisplayAsWizard"/>
-                  <xsd:attribute ref="my:Caption"/>
-                  <xsd:attribute ref="my:AutoValidate"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Grouping">
-            <xsd:complexType>
-                  <xsd:sequence>
-                        <xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
-                        <xsd:element ref="my:Control" minOccurs="1" maxOccurs="256"/>
-                        <xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
-                  </xsd:sequence>
-                  <xsd:attribute ref="my:Name"/>
-                  <xsd:attribute ref="my:Caption"/>
-                  <xsd:attribute ref="my:Description"/>
-                  <xsd:attribute ref="my:Enabled"/>
-                  <xsd:attribute ref="my:Visible"/>
-                  <xsd:attribute ref="my:IsHeader"/>
-                  <xsd:attribute ref="my:IsSummary"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Help">
-            <xsd:complexType>
-                  <xsd:sequence/>
-                  <xsd:attribute ref="my:HelpText"/>
-                  <xsd:attribute ref="my:Link"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Control">
-            <xsd:complexType>
-                  <xsd:sequence>
-                        <xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
-                        <xsd:element ref="my:CustomProperties" minOccurs="0"  maxOccurs="1"/>
-                        <xsd:element ref="my:Options" minOccurs="0"  maxOccurs="1"/>
-                        <xsd:element ref="my:Buttons" minOccurs="0"  maxOccurs="1"/>
-                        <xsd:element ref="my:Properties" minOccurs="0"  maxOccurs="1"/>
-                        <xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
-                  </xsd:sequence>
-                  <xsd:attribute ref="my:Name"/>
-                  <xsd:attribute ref="my:TypeName"/>
-                  <xsd:attribute ref="my:Caption"/>
-                  <xsd:attribute ref="my:Enabled"/>
-                  <xsd:attribute ref="my:Visible"/>
-                  <xsd:attribute ref="my:Description"/>
-                  <xsd:attribute ref="my:ExpandArea"/>
-                  <xsd:attribute ref="my:Hint"/>
-                  <xsd:attribute ref="my:AutoPostback"/>
-                  <xsd:attribute ref="my:RightsLevel"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="CustomProperties">
-            <xsd:complexType mixed="true">
-                  <xsd:sequence>
-                        <xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##targetNamespace" processContents="lax"/>
-                  </xsd:sequence>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Options">
-            <xsd:complexType>
-                  <xsd:sequence>
-                  <xsd:element ref="my:Option" minOccurs="0" maxOccurs="unbounded"/>
-                  </xsd:sequence>
-                  <xsd:attribute ref="my:ValueType"/>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Option">
-            <xsd:complexType>
-                  <xsd:simpleContent>
-                        <xsd:extension base="xsd:string">
-                              <xsd:attribute ref="my:Value"/>
-                              <xsd:attribute ref="my:Caption"/>
-                              <xsd:attribute ref="my:Hint"/>
-                        </xsd:extension>
-                  </xsd:simpleContent>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Buttons">
-            <xsd:complexType>
-                  <xsd:sequence>
-                        <xsd:element ref="my:Button" minOccurs="1" maxOccurs="8"/>
-                  </xsd:sequence>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Button">
-            <xsd:complexType>
-                  <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                              <xsd:attribute ref="my:Name"/>
-                              <xsd:attribute ref="my:Caption"/>
-                              <xsd:attribute ref="my:Hint"/>
-                              <xsd:attribute ref="my:ImageUrl"/>
-                              <xsd:attribute ref="my:ClickBehavior"/>
-                              <xsd:attribute ref="my:RedirectUrl"/>
-                              <xsd:attribute ref="my:Enabled"/>
-                              <xsd:attribute ref="my:Visible"/>
-                              <xsd:attribute ref="my:EnableMode"/>
-                        </xsd:extension>
-                  </xsd:simpleContent>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Properties">
-            <xsd:complexType>
-                  <xsd:sequence>
-                        <xsd:element ref="my:Property" minOccurs="1" maxOccurs="32"/>
-                  </xsd:sequence>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Property">
-            <xsd:complexType>
-                  <xsd:simpleContent>
-                        <xsd:extension base="xsd:string">
-                              <xsd:attribute ref="my:Name"/>
-                              <xsd:attribute ref="my:Value"/>
-                        </xsd:extension>
-                  </xsd:simpleContent>
-            </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="Events">
-            <xsd:complexType>
-                  <xsd:sequence>
-                        <xsd:element ref="my:Event" minOccurs="1" maxOccurs="16"/>
-                  </xsd:sequence>
-            </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Event">
-            <xsd:complexType>
-                  <xsd:simpleContent>
-                        <xsd:extension base="xsd:string">
-                              <xsd:attribute ref="my:Name"/>
-                              <xsd:attribute ref="my:Handler"/>
-                        </xsd:extension>
-                  </xsd:simpleContent>
-            </xsd:complexType>
-   </xsd:element>
-   <xsd:simpleType name="requiredString">
-            <xsd:restriction base="xsd:string">
-                  <xsd:minLength value="1"/>
-            </xsd:restriction>
-   </xsd:simpleType>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Panel">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Grouping" minOccurs="1" maxOccurs="16"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:Name"/>
+			<xsd:attribute ref="my:DisplayAsWizard"/>
+			<xsd:attribute ref="my:Caption"/>
+			<xsd:attribute ref="my:AutoValidate"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Grouping">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
+				<xsd:element ref="my:Control" minOccurs="1" maxOccurs="256"/>
+				<xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:Name"/>
+			<xsd:attribute ref="my:Caption"/>
+			<xsd:attribute ref="my:Description"/>
+			<xsd:attribute ref="my:Enabled"/>
+			<xsd:attribute ref="my:Visible"/>
+			<xsd:attribute ref="my:IsHeader"/>
+			<xsd:attribute ref="my:IsSummary"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Help">
+		<xsd:complexType>
+			<xsd:sequence/>
+			<xsd:attribute ref="my:HelpText"/>
+			<xsd:attribute ref="my:Link"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Control">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
+				<xsd:element ref="my:CustomProperties" minOccurs="0"  maxOccurs="1"/>
+				<xsd:element ref="my:Options" minOccurs="0"  maxOccurs="1"/>
+				<xsd:element ref="my:Buttons" minOccurs="0"  maxOccurs="1"/>
+				<xsd:element ref="my:Properties" minOccurs="0"  maxOccurs="1"/>
+				<xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:Name"/>
+			<xsd:attribute ref="my:TypeName"/>
+			<xsd:attribute ref="my:Caption"/>
+			<xsd:attribute ref="my:Enabled"/>
+			<xsd:attribute ref="my:Visible"/>
+			<xsd:attribute ref="my:Description"/>
+			<xsd:attribute ref="my:ExpandArea"/>
+			<xsd:attribute ref="my:Hint"/>
+			<xsd:attribute ref="my:AutoPostback"/>
+			<xsd:attribute ref="my:RightsLevel"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CustomProperties">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##targetNamespace" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Options">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Option" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:ValueType"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Option">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="my:Value"/>
+					<xsd:attribute ref="my:Caption"/>
+					<xsd:attribute ref="my:Hint"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Buttons">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Button" minOccurs="1" maxOccurs="8"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Button">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="my:Name"/>
+					<xsd:attribute ref="my:Caption"/>
+					<xsd:attribute ref="my:Hint"/>
+					<xsd:attribute ref="my:ImageUrl"/>
+					<xsd:attribute ref="my:ClickBehavior"/>
+					<xsd:attribute ref="my:RedirectUrl"/>
+					<xsd:attribute ref="my:Enabled"/>
+					<xsd:attribute ref="my:Visible"/>
+					<xsd:attribute ref="my:EnableMode"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Properties">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Property" minOccurs="1" maxOccurs="32"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Property">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="my:Name"/>
+					<xsd:attribute ref="my:Value"/>
+					<xsd:attribute ref="my:Condition"/>					
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Events">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Event" minOccurs="1" maxOccurs="16"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Event">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="my:Name"/>
+					<xsd:attribute ref="my:Handler"/>
+          <xsd:attribute ref="my:Parameters"/>
+        </xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="requiredString">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
   <xsd:simpleType name="requiredAlphanumericString">
     <xsd:restriction base="xsd:string">
       <xsd:pattern value="[A-Za-z0-9_]{1,128}"/>
     </xsd:restriction>
   </xsd:simpleType>
-   <xsd:simpleType name="requiredAnyURI">
-            <xsd:restriction base="xsd:anyURI">
-                  <xsd:minLength value="1"/>
-            </xsd:restriction>
-   </xsd:simpleType>
-   <xsd:simpleType name="requiredBase64Binary">
-            <xsd:restriction base="xsd:base64Binary">
-                  <xsd:minLength value="1"/>
-            </xsd:restriction>
-      </xsd:simpleType>
+	<xsd:simpleType name="requiredAnyURI">
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="requiredBase64Binary">
+		<xsd:restriction base="xsd:base64Binary">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>
 ```
 
@@ -2518,7 +2518,7 @@ with MIM 2016:
 
 ## Appendix B: Default Summary XSL
 
-The following is the complete Summary XSL that is provided with MIM 2016:
+The following is the complete Summary XSL that is provided with Microsoft Identity Manager 2016 SP1:
 ```XML
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
   <xsl:template name="output-attribute-value">
