@@ -4,10 +4,10 @@
 title: Planning a bastion environment | Microsoft Docs
 description:
 keywords:
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/16/2016
+ms.date: 03/16/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
