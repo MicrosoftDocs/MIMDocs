@@ -112,3 +112,5 @@
 #### [Get Pending PAM Requests](/microsoft-identity-manager/reference/privileged-access-management-get-pending-requests)
 #### [Approve or Reject a Pending PAM Request](/microsoft-identity-manager/reference/privileged-access-management-approve-reject-pending-request)
 #### [Get PAM Session Info](/microsoft-identity-manager/reference/privileged-access-management-get-session-info)
+## [Technical Reference]
+### [Resource Control Display Configuration XML Reference](/microsoft-identity-manager/reference/rcd-configuration-xml-reference)

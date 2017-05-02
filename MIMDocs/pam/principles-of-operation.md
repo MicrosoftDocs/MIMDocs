@@ -4,10 +4,10 @@
 title: Understand the PAM components | Microsoft Docs
 description: Privileged Access Management shares some components with MIM, and has a few of its own. Learn how these work together.
 keywords:
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
