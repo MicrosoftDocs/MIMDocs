@@ -4,10 +4,10 @@
 title: Set up a domain for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Create an Active Directory domain controller before installing MIM 2016
 keywords:
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
