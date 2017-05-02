@@ -4,10 +4,10 @@
 title: Deploy PAM Step 1 - CORP domain | Microsoft Docs
 description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager
 keywords:
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
