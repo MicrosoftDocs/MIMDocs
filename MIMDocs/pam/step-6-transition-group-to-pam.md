@@ -4,10 +4,10 @@
 title: Deploy PAM step 6 – Move group | Microsoft Docs
 description: Migrate a group to the PRIV forest so that they can be managed with Privilege Access Management.
 keywords:
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services

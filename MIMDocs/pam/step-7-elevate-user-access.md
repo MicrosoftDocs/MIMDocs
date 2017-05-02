@@ -4,10 +4,10 @@
 title: Deploy PAM step 7 – user access | Microsoft Docs
 description: As the final step, grant a privileged user temporary access to demonstrate that your Privileged Access Management deployment was successful.
 keywords:
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
