@@ -4,10 +4,10 @@
 title: Supported connectors | Microsoft Docs
 description: Use connectors to manage data transfer between MIM and your directories.
 keywords:
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 08/11/2016
+ms.date: 03/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
