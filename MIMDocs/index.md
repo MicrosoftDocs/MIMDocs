@@ -12,7 +12,7 @@ LOB applications and SaaS solutions.
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016-sp1-release-notes">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -30,7 +30,7 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -47,7 +47,7 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-deploy">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -69,7 +69,7 @@ LOB applications and SaaS solutions.
 ---
 <br>
 >[!Warning]
-Forefront Identity Manager (FIM) mainstream support is ending 10/10/2017. Please [upgrade](DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) to Microsoft Identity Manager 2016. More information: </br>  - The FIM lifecycle information is provided  [here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) </br> - For information on public releases of identity products review the post titled [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
+Forefront Identity Manager (FIM) mainstream support is ending 10/10/2017. Please [upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) to Microsoft Identity Manager 2016. More information: </br>  - The FIM lifecycle information is provided  [here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) </br> - For information on public releases of identity products review the post titled [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 
 <h2>Reference</h2>
 <ul class="panelContent cardsFTitle">
