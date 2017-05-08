@@ -12,7 +12,7 @@ LOB applications and SaaS solutions.
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016-sp1-release-notes">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -30,7 +30,7 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -47,7 +47,7 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
+        <a href="/microsoft-identity-manager/microsoft-identity-manager-deploy">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
