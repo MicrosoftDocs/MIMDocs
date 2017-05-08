@@ -62,7 +62,7 @@ We want to hear from you as well! If you have any feedback, comments, or concern
 
 
 ## Platform Support
-Updated platform support information may be found in the document called [Supported platforms for MIM 2016](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms).  New platforms supported in this service pack include SQL Server 2016, SharePoint 2016
+Updated platform support information may be found in the document called [Supported platforms for MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  New platforms supported in this service pack include SQL Server 2016, SharePoint 2016
 
 ## Issues fixed in this release from MIM 2016 General Availability
 

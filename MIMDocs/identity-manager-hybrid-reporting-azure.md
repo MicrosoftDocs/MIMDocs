@@ -49,5 +49,5 @@ The process of hybrid reporting follows these steps:
 5. The Azure portal retrieves the audit reporting data and renders this as the audit within the Azure Audit Reporing Blade.
 
 ## See also
-- Get more details about [Working with Identity Manager Hybrid Reporting](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting)
+- Get more details about [Working with Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
 - Get more details about [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
