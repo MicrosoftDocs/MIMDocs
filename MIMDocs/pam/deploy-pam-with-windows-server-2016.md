@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -37,9 +37,9 @@ A minimum of two VMs are required for the lab environment:
 If you do not already have a “CORP” domain in your lab environment, an additional domain controller for that domain is required. The “CORP” domain controller can run either Windows Server 2016 or Windows Server 2012 R2.
 
 
-Perform the install as described in the [Getting started guide](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md), **except as indicated below**:
+Perform the install as described in the [Getting started guide](privileged-identity-management-for-active-directory-domain-services.md), **except as indicated below**:
 
--   If you are creating a new CORP domain, when following the instructions in [Step 1 - Prepare the CORP domain controller](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md), you can choose to optionally configure the CORP domain to be at the Windows Server 2016 functional level. **If you choose this option, make the following adjustments**:
+-   If you are creating a new CORP domain, when following the instructions in [Step 1 - Prepare the CORP domain controller](step-1-prepare-corp-domain.md), you can choose to optionally configure the CORP domain to be at the Windows Server 2016 functional level. **If you choose this option, make the following adjustments**:
 
     -   If you are using Windows Server 2016 media, the installation option will be called Windows Server 2016 (Server with Desktop Experience).
 
@@ -53,7 +53,7 @@ Perform the install as described in the [Getting started guide](/microsoft-ident
 
 -   If you choose to use Windows Server 2012 R2 as the operating system for CORPDC, you must install hotfixes 2919442, 2919355, [and update 3155495](http://support.microsoft.com/kb/3156418) on CORPDC.
 
--   Follow the instructions in [Step 2 - Prepare PRIV domain controller](/microsoft-identity-manager/pam/step-2-prepare-priv-domain-controller.md), except for these adjustments:
+-   Follow the instructions in [Step 2 - Prepare PRIV domain controller](step-2-prepare-priv-domain-controller.md), except for these adjustments:
 
     -   Install using Windows Server 2016 media. The installation option will be called Windows Server 2016 (Server with Desktop Experience).
 
@@ -112,19 +112,19 @@ Perform the install as described in the [Getting started guide](/microsoft-ident
     ```
 
 
--   Follow the instructions in [Step 3 - Prepare a PAM server](/microsoft-identity-manager/pam/step-3-prepare-pam-server.md), with these adjustments.
+-   Follow the instructions in [Step 3 - Prepare a PAM server](step-3-prepare-pam-server.md), with these adjustments.
 
     -   If installing on Windows Server 2016, note that the “ApplicationServer” role is not available.
 
     -   If installing MIM on Windows Server 2016, **it is not possible to install SharePoint 2013**.
 
--   Follow the instructions in [Step 4 – Install MIM components on PAM server and workstation](/microsoft-identity-manager/pam/step-4-install-mim-components-on-pam-server.md), with these adjustments.
+-   Follow the instructions in [Step 4 – Install MIM components on PAM server and workstation](step-4-install-mim-components-on-pam-server.md), with these adjustments.
 
     -   The user installing the MIM Service and PAM components **must have write access to the PRIV domain in AD**, as the MIM installation creates a new AD OU “PAM objects”.
 
     -   If SharePoint is not installed, do not install the MIM Portal.
 
--   Follow the instructions in [Step 5 - Establish trust](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md) with these adjustments:
+-   Follow the instructions in [Step 5 - Establish trust](step-5-establish-trust-between-priv-corp-forests.md) with these adjustments:
 
     -   When establishing one way trust, only perform the first two PowerShell commands (get-credential and New-PAMTrust), **do not perform the New-PAMDomainConfiguration command**.
 
@@ -144,6 +144,6 @@ Perform the install as described in the [Getting started guide](/microsoft-ident
 
 ## More information
 
-- [Privileged Access Management for Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-- [Configure the MIM environment for Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-- [Configure PAM using scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
+- [Privileged Access Management for Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md)
+- [Configure the MIM environment for Privileged Access Management](configuring-mim-environment-for-pam.md)
+- [Configure PAM using scripts](sp1-pam-configure-using-scripts.md)
