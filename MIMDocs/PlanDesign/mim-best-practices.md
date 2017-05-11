@@ -235,7 +235,8 @@ When using Full recovery mode, you need to manage the disk usage through backups
 which includes frequent backups of the transaction log to prevent high disk
 space usage.
 
->[!IMPORTANT]   Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
+>[!IMPORTANT]
+Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
 
 ### Step 2: Apply the minimum necessary MIM configuration during the load process
 
