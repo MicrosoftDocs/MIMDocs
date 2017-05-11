@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Function Reference for Microsoft Identity Manager 2016 | Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 05/11/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
