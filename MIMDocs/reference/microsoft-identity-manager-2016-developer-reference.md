@@ -7,7 +7,7 @@ keywords:
 author: msmbaldwin
 ms.author: mbaldwin
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -32,3 +32,4 @@ ms.suite: ems
 
 - [Certificate Management (CM) REST API Reference](certificate-management-rest-api-reference.md)
 - [Privileged Access Management (PAM) REST API Reference](privileged-access-management-rest-api-reference.md)
+- [Microsoft Identity Manager CmdLets Reference](https://docs.microsoft.com/powershell/identitymanager/)
