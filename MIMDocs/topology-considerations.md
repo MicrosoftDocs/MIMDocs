@@ -31,7 +31,6 @@ You can deploy Microsoft Identity Manager (MIM) components on the same server or
 
 
 >[!NOTE]
-
 These options are applicable to deployments using solely MIM Sync, MIM Service and MIM Portal for identity management.  Deployments using MIM CM, MIM BHOLD Suite, or for privileged access management have different deployment options.
 
 
