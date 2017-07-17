@@ -1,0 +1,124 @@
+{
+    "redirections": [
+        {
+            "source_path": "MIMDocs/PlanDesign/capacity-planning-guide.md",
+            "redirect_url": "/microsoft-identity-manager/capacity-planning-guide",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md",
+            "redirect_url": "/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/PlanDesign/supported-management-agents.md",
+            "redirect_url": "/microsoft-identity-manager/supported-management-agents",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/PlanDesign/topology-considerations.md",
+            "redirect_url": "/microsoft-identity-manager/topology-considerations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md",
+            "redirect_url": "/microsoft-identity-manager/identity-manager-hybrid-reporting-azure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/Understand/Microsoft-identity-manager-2016-sp1-release-notes.md",
+            "redirect_url": "/microsoft-identity-manager/Microsoft-identity-manager-2016-sp1-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/Understand/microsoft-identity-manager-2016.md",
+            "redirect_url": "/microsoft-identity-manager/microsoft-identity-manager-2016",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/Understand/sp1-deployment-scripts.md",
+            "redirect_url": "/microsoft-identity-manager/sp1-deployment-scripts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/certificate-manager-for-non-administrators.md",
+            "redirect_url": "/microsoft-identity-manager/certificate-manager-for-non-administrators",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/certificate-manager-for-software-certificates.md",
+            "redirect_url": "/microsoft-identity-manager/certificate-manager-for-software-certificates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md",
+            "redirect_url": "/microsoft-identity-manager/deploying-mim-password-change-notification-service-on-domain-controller",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/install-mim-service-portal.md",
+            "redirect_url": "/microsoft-identity-manager/install-mim-service-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/install-mim-sync.md",
+            "redirect_url": "/microsoft-identity-manager/install-mim-sync",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/install-mim-sync-ad-service.md",
+            "redirect_url": "/microsoft-identity-manager/install-mim-sync-ad-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md",
+            "redirect_url": "/microsoft-identity-manager/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/microsoft-identity-manager-deploy.md",
+            "redirect_url": "/microsoft-identity-manager/microsoft-identity-manager-deploy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/prepare-server-exchange.md",
+            "redirect_url": "/microsoft-identity-manager/prepare-server-exchange",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/prepare-server-sharepoint.md",
+            "redirect_url": "/microsoft-identity-manager/prepare-server-sharepoint",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/prepare-server-sql2014.md",
+            "redirect_url": "/microsoft-identity-manager/prepare-server-sql2014",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/prepare-server-ws2012r2.md",
+            "redirect_url": "/microsoft-identity-manager/prepare-server-ws2012r2",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/preparing-domain.md",
+            "redirect_url": "/microsoft-identity-manager/preparing-domain",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md",
+            "redirect_url": "/microsoft-identity-manager/working-with-identity-manager-hybrid-reporting",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/working-with-mim-certificate-manager.md",
+            "redirect_url": "/microsoft-identity-manager/working-with-mim-certificate-manager",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/working-with-self-service-password-reset.md",
+            "redirect_url": "/microsoft-identity-manager/working-with-self-service-password-reset",
+            "redirect_document_id": false
+        }
+    ]
+}
