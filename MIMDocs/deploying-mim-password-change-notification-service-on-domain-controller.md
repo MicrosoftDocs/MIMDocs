@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Deploy the password change notification service | Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security

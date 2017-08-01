@@ -66,7 +66,7 @@
 ### [Backup and restore](https://technet.microsoft.com/library/dd883245)
 ## Self service password Reset
 ### [Programmatic user registration](https://technet.microsoft.com/library/jj134294)
-### [Customizations](https://technet.microsoft.com/library/jj134312)
+### [Portal Customizations](./reference/mim-portal-customizations.md)
 ## Service and Portal
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
 ### [Dynamic logging](./infrastructure/mim-service-dynamic-logging.md)
@@ -114,3 +114,6 @@
 #### [Get PAM Session Info](./reference/privileged-access-management-get-session-info.md)
 ## [Technical Reference]
 ### [Resource Control Display Configuration XML Reference](./reference/rcd-configuration-xml-reference.md)
+### [Management Agent Run error codes](./reference/maerrorcodes.md)
+### [Function Reference for Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
+### [Microsoft Identity Manager 2016 Password Management reference](./DeployUse/mim2016-password-management.md)
