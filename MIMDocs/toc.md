@@ -116,4 +116,4 @@
 ### [Resource Control Display Configuration XML Reference](./reference/rcd-configuration-xml-reference.md)
 ### [Management Agent Run error codes](./reference/maerrorcodes.md)
 ### [Function Reference for Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
-### [Microsoft Identity Manager 2016 Password Management reference](./DeployUse/mim2016-password-management.md)
+### [Microsoft Identity Manager 2016 Password Management reference](./Deploy/mim2016-password-management.md)
