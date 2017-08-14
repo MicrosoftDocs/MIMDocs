@@ -18,21 +18,21 @@ ms.assetid:
 
 # Version release history
 
-The Microsoft Identity Manager team reguluarly releases updates. This article is designed to help you keep track of the versions that have been released, and to understand whether you need to update to the newest version or not.
+The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then decide whether you need to update to the newest version or not.
 
 ## 4.4.1609.0
 
-Status: July 23 2017
+Status: July 23, 2017
 
 ### Fixed issue
 
-#### Syncronization Service
+#### Synchronization Service
 
 - Password reset routine fails when Synchronization server domain doesn't have trust relationship with target domain.
-- Declared import filter (checking distinguished name) doesn't work correctly when object has been moved from organization unit where it should be filtered to another one where it shouldn't because of using old name of a phantom object.
+- Declared import filter (checking distinguished name) doesn't work correctly when an object is moved from an organizational unit where it should be filtered to another where it shouldn't be because of using old name of a phantom object.
 - Management Agent  Designer hangs on “Configure Partitions and Hierarchies” page
 - Precedence doesn't transfer to the next object when the previous one with precedence is disconnected.
-- Sun One Management Agent Searching of a child containers on ldap server using paging causes error if server doesn't support paging.
+- Sun One Management Agent Searching for child containers on the ldap server using paging causes an error if the server doesn't support paging.
 - Metaverse object type is changed dynamically causing crash.
 
 #### MIM Service
@@ -42,7 +42,7 @@ Status: July 23 2017
 - AuthZ Workflow denies request with error message 'workflow not found in state persistence store'.
 - The workflow runs an enumerate resource activity to query MIM and it is failing intermittently.
 
-#### Privledge Access Management
+#### Privilege Access Management
 
 - Get-PAMRequestToApprove commandlet does not return candidates if the approver not in the role to approve.
 - Related MPRs and PAM Navigation Bar node are enabled even when PAM is not installed.
@@ -50,12 +50,12 @@ Status: July 23 2017
 
 #### Microsoft Identity Portal
 
-- When using the filter-builder in the MIM Portal from Firefox, the inner controls (drop-down boxes, text boxes, etc.) cannot be selected without first right-mouse button click (i.e. clicking to display the context menu) first.
+- When using Firefox to access the filter builder on the MIM portal you are unable to use the inner controls (drop-down boxes, text boxes, etc.). They cannot be selected until you first right click (i.e. clicking to display the context menu).
 - Portal Search renders incorrectly on some screen resolutions. 
 - Calendar Control in Advanced Search is Truncated.
-- filterbuilder UI was broken – in edit mode (misplaced elements).
+- The filter builder UI was broken – in edit mode (misplaced elements).
 - Popup had fixed size and edit controls was not proper sized.
-- Stringcuts for Norway and some other languages in main menu.
+- String cuts for Norway and some other languages in main menu.
 - Copied URL from popup not working.
 
 #### Certificate Management
@@ -72,15 +72,13 @@ Status: July 23 2017
 
 ### New features and improvements
 
-#### Syncronization Service
-
 #### MIM Service
 
-- Added retry in the longest request processing operations (Validation stage). It is not guarantee that request processing completed but it make request more stable. The fix is disabled by default.To enable the fix it is necessary to add alwaysOnRetryRequestProcessingTransaction="true" in resourceManagementService section of FIMService config file
+- Added retry in the longest request processing operations (Validation stage). It is not guarantee that request processing completed but it make request more stable. The fix is disabled by default. To enable the fix you add alwaysOnRetryRequestProcessingTransaction="true" in resourceManagementService section of FIMService config file
 
 #### Certificate Management
 
-- Newer versions of CM Server will be able to work with older BulkClient (but not older then 4.4.xxxx.0). 
+- Newer versions of CM Server are able to work with older BulkClient (but not older than 4.4.xxxx.0). 
 
 #### MIM Self Service Password Portals 
 
