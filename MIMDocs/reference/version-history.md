@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft 2017 Identity Manager version history | Microsoft Docs
+title: Identity Manager version history | Microsoft Docs
 description: This article documents the various changes made as part of updates to MIM 2016
 keywords:
 author: barclayn
@@ -16,11 +16,12 @@ ms.assetid:
 
 ---
 
-# Microsoft Identity Manager 2016 (MIM 2016): Version release history
+# Version release history
 
-The Microsoft Identity Manager team reguluarly updates MIM 2016. This article is designed to help you keep track of the versions that have been released, and to understand whether you need to update to the newest version or not.
+The Microsoft Identity Manager team reguluarly releases updates. This article is designed to help you keep track of the versions that have been released, and to understand whether you need to update to the newest version or not.
 
 ## 4.4.1609.0
+
 Status: July 23 2017
 
 ### Fixed issue

@@ -117,4 +117,4 @@
 ### [Management Agent Run error codes](./reference/maerrorcodes.md)
 ### [Function Reference for Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
 ### [Microsoft Identity Manager 2016 Password Management reference](./infrastructure/mim2016-password-management.md)
-## [MIM 2016 version history](./reference/mim-version-history.md)
+## [Version history](./reference/version-history.md)
