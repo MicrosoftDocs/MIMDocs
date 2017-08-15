@@ -30,45 +30,28 @@ The installation of MIM CM requires that you take several steps. To simplify thi
 
 Windows 2016 Datacenter Servers used in this setup:
 
-1.  CORPDC – Domain Controller
-
-2.  CORPCM – MIM CM Server
-
-3.  CORPCA – Certificate Authority
-
-4.  CORPCMR – MIM CM Rest API Web – CM Portal For Rest API – Used for later
-
-5.  CORPSQL1 – SQL 2016 SP1
-
-6.  CORPWK1 – Windows 10 Domain Joined
+1. CORPDC – Domain Controller
+2. CORPCM – MIM CM Server
+3. CORPCA – Certificate Authority
+4. CORPCMR – MIM CM Rest API Web – CM Portal For Rest API – Used for later
+5. CORPSQL1 – SQL 2016 SP1
+6. CORPWK1 – Windows 10 Domain Joined
 
 ## Deployment overview
 
-
--   Base operating system installation
-
-    -   The lab consists of windows 2016 Datacenter servers.
-
-       >[!NOTE] For more details on the supported platforms for MIM 2016 take a look at the article titled [Supported platforms for MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
-
--   Pre-deployment steps
-
-    - [Extending the schema](https://msdn.microsoft.com/library/ms676929(v=vs.85).aspx)
-
-    - Creating service accounts
-
-    - [Creating certificate templates](https://technet.microsoft.com/library/cc753370(v=ws.11).aspx)
-
-    - IIS
-
-    - Configuring Kerberos
-
-    - Database-related steps
-
-      - SQL configuration requirements
-
-      - Database permissions
-
+- Base operating system installation
+  - The lab consists of windows 2016 Datacenter servers.
+       >[!NOTE]
+  For more details on the supported platforms for MIM 2016 take a look at the article titled [Supported platforms for MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
+  - Pre-deployment steps
+  - [Extending the schema](https://msdn.microsoft.com/library/ms676929(v=vs.85).aspx)
+  - Creating service accounts
+  - [Creating certificate templates](https://technet.microsoft.com/library/cc753370(v=ws.11).aspx)
+  - IIS
+  - Configuring Kerberos
+  - Database-related steps
+    - SQL configuration requirements
+    - Database permissions
 - Deployment
 
 ## Pre-deployment steps
@@ -440,7 +423,7 @@ exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'securityadmin';
 
 8. On the Custom Setup page, make sure the **MIM CM Portal** and **MIM CM Update Service components** are set to be installed, and then **click Next**.
 
-9. On the Virtual Web Folder page, ensure that the Virtual folder name is **CertificateManagement** , and then **click Next**.
+9. On the Virtual Web Folder page, ensure that the Virtual folder name is **CertificateManagement, and then **click Next**.
 
 10. On the Install Microsoft Identity Manager Certificate Management page, **click Install**.
 
@@ -450,19 +433,15 @@ exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'securityadmin';
 
 ### Configuration Wizard of Microsoft Identity Manager 2016 Certificate Management
 
-Before logging into CORPCM please add MIMINSTALL to **domain Admins, Schema Admins and local administrators** group for configuration wizard . This can
+Before logging in to CORPCM please add MIMINSTALL to **domain Admins, Schema Admins and local administrators** group for configuration wizard . This can
 be removed later once configuration is complete.      
     
 ![Error message](media/mim-cm-deploy/image028.png)
 
-1.   From the **Start** menu, click **Certificate Management Config Wizard**. And Run as **Administrator**
-
-2.   On the **Welcome to the Configuration Wizard** page, click **Next**.
-
-3.   On the **CA Configuration** page, ensure that the selected CA is **Contoso-CORPCA-CA**, ensure that the selected server is     **CORPCA.CONTOSO.COM**, and then click **Next**.
-
-4.  On the **Set up the Microsoft® SQL Server® Database** page, in the **Name of SQL Server** box, type **CORPSQL1** , enable the **Use my credentials to create the database** check box, and then click **Next**.
-
+1. From the **Start** menu, click **Certificate Management Config Wizard**. And Run as **Administrator**
+2. On the **Welcome to the Configuration Wizard** page, click **Next**.
+3. On the **CA Configuration** page, ensure that the selected CA is **Contoso-CORPCA-CA**, ensure that the selected server is     **CORPCA.CONTOSO.COM**, and then click **Next**.
+4. On the **Set up the Microsoft® SQL Server® Database** page, in the **Name of SQL Server** box, type **CORPSQL1** , enable the **Use my credentials to create the database** check box, and then click **Next**.
 5. On the **Database Settings** page, accept the default database name of **FIMCertificateManagement**, ensure that **SQL integrated authentication**
     is selected, and then click **Next**.
 
@@ -473,7 +452,6 @@ be removed later once configuration is complete.
 8. On the **Agents – FIM CM** page, clear the **Use the FIM CM default settings** check box, and then click **Custom Accounts**.
 
 9. In the **Agents – FIM CM** multi-tabbed dialog box, on each tab, type the following information:
-
    - User name: **Update** 
    - Password: **Pass\@word1**
    - Confirm Password: **Pass\@word1**
@@ -488,32 +466,22 @@ We created these accounts earlier. Make sure that the procedures in step 8 are r
 11. On the **Agents – MIM CM** page, click **Next**.
 
 12. On the **Set up server certificates** page, enable the following certificate templates:
-
     - Certificate template to be used for the recovery agent Key Recovery Agent certificate: **MIMCMKeyRecoveryAgent**.
-
     - Certificate template to be used for the FIM CM Agent certificate:
         **MIMCMSigning**.
-
     - Certificate template to be used for the enrollment agent certificate:
         **FIMCMEnrollmentAgent**.
-
 13. On the **Set-up server certificates** page, click **Next**.
-
 14. On the **Setup E-mail Server, Document Printing** page, in the **Specify the
     name of the SMTP server you want to use to e-mail registration
     notifications** box and then click **Next.**
-
 15. On the **Ready to configure** page, click **Configure**.
-
-16. In the **Configuration Wizard – Microsoft Forefront Identity Manager 2010
-    R2** warning dialog box, click **OK** to acknowledge that SSL is not enabled
-    on the IIS virtual directory.
+16. In the **Configuration Wizard – Microsoft Forefront Identity Manager 2010 R2** warning dialog box, click **OK** to acknowledge that SSL is not enabled on the IIS virtual directory.
 
     ![media/image17.png](media/mim-cm-deploy/image032.png)
 
     >[!NOTE] 
     Do not click the Finish button until the execution of the configuration wizard is complete. Logging for wizard can be found here :**%programfiles%\\Microsoft Forefront Identity Management\\2010\\Certificate Management\\config.log**
-
 17. Click **Finish**.
 
 ![MIM CM wizard completed](media/mim-cm-deploy/image033.png)
