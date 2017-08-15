@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Microsoft Identity Manager 2016 Password Management| Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 08/01/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
