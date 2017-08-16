@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/16/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Install MIM 2016: MIM Service and Portal
 
 >[!div class="step-by-step"]
@@ -69,13 +68,13 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 10. Note that a warning may appear that the Service Account is not secure in its current configuration.
 
-11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMsync*.
+11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMMA*.
 
     ![Configure the MIM Service and Portal image](media/MIM-Install13.png)
 
 12. Specify *CORPIDM* (this computer's name) as MIM Service server address for the MIM Portal.
 
-13. Specify *http://CorpIDM.contoso.local:82* as the SharePoint site collection URL.
+13. Specify *http://CorpIDM.contoso.local* as the SharePoint site collection URL.
 
 14. Specify *http://CorpIDM.contoso.local:8080* as the Password Registration URL.
 
@@ -113,7 +112,7 @@ When all pre-installation definitions are ready, click **Install** to begin inst
 
 After installation completes, verify that the MIM Portal is active.
 
-1. Launch Internet Explorer and connect to the MIM Portal on  *http://corpidm.contoso.local:82/identitymanagement*. Note that there may be a short delay on the first visit to this page.
+1. Launch Internet Explorer and connect to the MIM Portal on  *http://corpidm.contoso.local/identitymanagement*. Note that there may be a short delay on the first visit to this page.
 
     - If necessary, authenticate as *contoso\Administrator* to Internet Explorer.
 
