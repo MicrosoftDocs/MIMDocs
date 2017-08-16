@@ -17,7 +17,7 @@ ms.assetid:
 ---
 # Deploying Microsoft Identity Manager Certificate Manager 2016 (MIM CM)
 
-The installation of Microsoft Identity Manager Certificate Manager 2016 (MIM CM) involves a number of steps. As a way to simplify the process we are breaking things down. There are preliminary steps that must be taken prior to any actual MIM CM steps are taken. Without the preliminary work the installation is likely to fail. 
+The installation of Microsoft Identity Manager Certificate Manager 2016 (MIM CM) involves a number of steps. As a way to simplify the process we are breaking things down. There are preliminary steps that must be taken prior to any actual MIM CM steps. Without the preliminary work the installation is likely to fail. 
 
 1. Deployment Overview
 2. Pre-deployment steps
