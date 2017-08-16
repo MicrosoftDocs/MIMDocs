@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/15/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -224,8 +224,7 @@ All three of the above accounts will have elevated rights within your organizati
 
 7. On the **Request Handling** tab, ensure that the **Allow private key to be exported** check box is selected, and then click **Cryptography tab**.
 
-8. In the **Cryptography Selection** dialog box, disable **Microsoft Enhanced Cryptographic Provider v1.0**, enable **Microsoft Enhanced RSA and AES
-Cryptographic Provider**, and then click **OK**.
+8. In the **Cryptography Selection** dialog box, disable **Microsoft Enhanced Cryptographic Provider v1.0**, enable **Microsoft Enhanced RSA and AES Cryptographic Provider**, and then click **OK**.
 
 On the **Subject Name** tab, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
 
@@ -287,8 +286,7 @@ Leave the **Certificate Templates Console** open.
 
 3. In the **Properties of New Template** dialog box, on the **General** tab, in the **Template display name** box, type **MIM CM Key Recovery Agent**. Ensure that the **Validity Period** is **2 years** On the **Cryptography Tab.**
 
-4. In the **Providers Selection** dialog box, disable **Microsoft Enhanced Cryptographic Provider v1.0**, enable **Microsoft Enhanced RSA and AES
-Cryptographic Provider**, and then click **OK**.
+4. In the **Providers Selection** dialog box, disable **Microsoft Enhanced Cryptographic Provider v1.0**, enable **Microsoft Enhanced RSA and AES Cryptographic Provider**, and then click **OK**.
 
 5. On the **Issuance Requirements** tab, ensure that **CA certificate manager approval** is **disabled**.
 
@@ -315,10 +313,8 @@ Cryptographic Provider**, and then click **OK**.
 2. In the **Certification Authority** console, in the console tree, right-click **Certificate Templates**, point to **New**, and then click **Certificate Template to Issue**.
 3. In the **Enable Certificate Templates** dialog box, select **MIM CM Enrollment Agent**, **MIM CM Key Recovery Agent**, and **MIM CM Signing**. Click **OK**.
 4. In the console tree, click **Certificate Templates**.
-5.  Verify that the three new templates appear in the **details** pane, and then close **Certification Authority**.
-
+5. Verify that the three new templates appear in the **details** pane, and then close **Certification Authority**.
     ![MIM CM Signing](media/mim-cm-deploy/image016.png)
-
 6. Close all open windows and log off.
 
 ### IIS configuration 
@@ -472,9 +468,7 @@ We created these accounts earlier. Make sure that the procedures in step 8 are r
     - Certificate template to be used for the enrollment agent certificate:
         **FIMCMEnrollmentAgent**.
 13. On the **Set-up server certificates** page, click **Next**.
-14. On the **Setup E-mail Server, Document Printing** page, in the **Specify the
-    name of the SMTP server you want to use to e-mail registration
-    notifications** box and then click **Next.**
+14. On the **Setup E-mail Server, Document Printing** page, in the **Specify the name of the SMTP server you want to use to e-mail registration notifications** box and then click **Next.**
 15. On the **Ready to configure** page, click **Configure**.
 16. In the **Configuration Wizard – Microsoft Forefront Identity Manager 2010 R2** warning dialog box, click **OK** to acknowledge that SSL is not enabled on the IIS virtual directory.
 
@@ -587,8 +581,7 @@ In this step, we will install and configure the FIM CM CA modules on the certifi
 3. On the **Exit Module** tab, select **FIM CM Exit Module**, and then click
     **Properties**.
 
-4. In the **Specify the CM database connection string** box, type **Connect Timeout=15;Persist Security Info=True; Integrated Security=sspi;Initial
-    Catalog=FIMCertificateManagement;Data Source=CORPSQL01**. Leave the  **Encrypt the Connection String** check box enabled, and then click **OK**.
+4. In the **Specify the CM database connection string** box, type **Connect Timeout=15;Persist Security Info=True; Integrated Security=sspi;Initial Catalog=FIMCertificateManagement;Data Source=CORPSQL01**. Leave the  **Encrypt the Connection String** check box enabled, and then click **OK**.
 5. In the **Microsoft FIM Certificate Management** message box, click **OK**.
 
 6. In the **contoso-CORPCA-CA Properties** dialog box, click **OK**.
@@ -653,20 +646,12 @@ In this step, we will install and configure the FIM CM CA modules on the certifi
 
 3.  In the **contoso-CORPCA-CA Properties** dialog box, on the **Policy Module** tab, click **Properties**.
 
-- On the **General** tab, ensure that **Pass non-FIM CM requests to the
-    default policy module for processing** is selected.
-
+- On the **General** tab, ensure that **Pass non-FIM CM requests to the default policy module for processing** is selected.
 - On the **Signing Certificates** tab, click **Add**.
-
-- In the Certificate dialog box, right-click the **Please specify hex-encoded
-    certificate hash** box, and then click **Paste**.
-
+- In the Certificate dialog box, right-click the **Please specify hex-encoded certificate hash** box, and then click **Paste**.
 - In the **Certificate** dialog box, click **OK**.
-
-    **Note:** If the **OK** button is not enabled, you accidentally included a
-    hidden character in the thumbprint string when you copied the thumbprint from
-    the clmAgent certificate. Repeat all steps starting from **Task 4: Copy the
-    MIMCMAgent Certificate’s Thumbprint to Windows Clipboard** in this exercise.
+    >[!Note]
+    If the **OK** button is not enabled, you accidentally included a hidden character in the thumbprint string when you copied the thumbprint from the clmAgent certificate. Repeat all steps starting from **Task 4: Copy the MIMCMAgent Certificate’s Thumbprint to Windows Clipboard** in this exercise.
 
 - In the **Configuration Properties** dialog box, ensure that the thumbprint
     appears in the **Valid Signing Certificates** list, and then click **OK**.
