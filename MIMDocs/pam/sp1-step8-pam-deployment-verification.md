@@ -1,11 +1,11 @@
----
+﻿---
 title: Step 8 PAM deployment verification
 description: The scripted deployment of PAM includes verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
 keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services

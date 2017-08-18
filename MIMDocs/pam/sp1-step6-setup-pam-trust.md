@@ -1,11 +1,11 @@
----
+﻿---
 title: Step 6 Setup the PAM trust
 description: Step 6 of configuring PAM using scripts. This section covers setting up the necessary trust between the corp and priv domains
 keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
