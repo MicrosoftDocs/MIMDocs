@@ -32,7 +32,7 @@ In addition to existing identity management functionality included in [FIM](http
 
 - Privileged Identity Management
 - New functionality in certificate management
-  - [REST API access](..reference/certificate-management-rest-api-service-details.md)
+  - [REST API access](../reference/certificate-management-rest-api-service-details.md)
   - Support for multi-forest topologies.
   - A Windows app for virtual smartcard
   - Updated events and troubleshooting capabilities. 
