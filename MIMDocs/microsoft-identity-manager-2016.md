@@ -28,7 +28,7 @@ ms.suite: ems
 
 Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of [FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx). Like its predecessor, MIM helps you manage the users, credentials, policies, and access within your organization.  Additionally, MIM 2016 adds a hybrid experience, privileged access management capabilities, and support for new platforms.
 
-In addition to existing identity management functionality included in [FIM](https://technet.microsoft.com/library/jj133868(v=ws.10). MIM 2016 provides new features and enhancements such as:
+In addition to existing identity management functionality included in [FIM](https://technet.microsoft.com/library/jj133868). MIM 2016 provides new features and enhancements such as:
 
 - Privileged Identity Management
 - New functionality in certificate management
