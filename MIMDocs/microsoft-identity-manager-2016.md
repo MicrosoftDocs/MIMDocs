@@ -32,10 +32,9 @@ In addition to existing identity management functionality included in [FIM](http
 
 - Privileged Identity Management
 - New functionality in certificate management
-  - REST API access
+  - [REST API access](..reference/certificate-management-rest-api-service-details.md)
   - Support for multi-forest topologies.
   - A Windows app for virtual smartcard
-  - Certificate lifecycle management
   - Updated events and troubleshooting capabilities. 
 - Self-service scenarios now include Account Unlock and Azure MFA (multifactor authentication) gate for Password Reset.
 
