@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Identity Manager version history | Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/14/2017
+ms.date: 08/29/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -20,9 +20,9 @@ ms.assetid:
 
 The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then decide whether you need to update to the newest version or not.
 
-## 4.4.1609.0
+## 4.4.1642.0
 
-Status: July 23, 2017
+Status: August 29, 2017
 
 ### Fixed issue
 
