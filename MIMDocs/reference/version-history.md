@@ -24,6 +24,8 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 
 Status: August 29, 2017
 
+[Download](https://www.microsoft.com/download/details.aspx?id=55794)
+
 ### Fixed issue
 
 #### Synchronization Service
