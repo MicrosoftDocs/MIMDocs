@@ -4,10 +4,10 @@
 title: Use Azure MFA to activate PAM | Microsoft Docs
 description: Set up Azure MFA as a second layer of security when your users activate roles in Privileged Access Management.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/30/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,20 +24,20 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Using Azure MFA for activation
+
 When configuring a PAM role, you can choose how to authorize users that request to activate the role. The choices that the PAM authorization activity implements are:
 
 - Role owner approval
-- Azure Multi-Factor Authentication (MFA)
+- [Azure Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 
 If neither check is enabled, candidate users are automatically activated for their role.
 
-Microsoft Azure Multi-Factor Authentication (MFA) is an authentication service that requires users to verify their sign-in attempts by using a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-premises enterprise applications. For the PAM scenario, Azure MFA provides an additional authentication mechanism that can be used at authorization, regardless of how a candidate user previously authenticated to the Windows PRIV domain.
+Microsoft Azure Multi-Factor Authentication (MFA) is an authentication service that requires users to verify their sign-in attempts by using a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-premises enterprise applications. For the PAM scenario, Azure MFA provides an additional authentication mechanism. Azure MFA can be used for authorization, regardless of how a user authenticated to the Windows PRIV domain.
 
 ## Prerequisites
 
-In order to use Azure MFA with MIM, you will need:
+In order to use Azure MFA with MIM, you need:
 
 - Internet access from each MIM Service providing PAM, to contact the Azure MFA service
 - An Azure subscription
@@ -46,7 +46,7 @@ In order to use Azure MFA with MIM, you will need:
 
 ## Creating an Azure MFA Provider
 
-In this section, you will set up your Azure MFA provider in Microsoft Azure Active Directory.  If you are already using Azure MFA, either standalone or configured with Azure Active Directory Premium, skip to the next section.
+In this section, you set up your Azure MFA provider in Microsoft Azure Active Directory.  If you are already using Azure MFA, either standalone or configured with Azure Active Directory Premium, skip to the next section.
 
 1.  Open a web browser and connect to the [Azure classic portal](https://manage.windowsazure.com) as an Azure subscription administrator.
 
@@ -83,27 +83,27 @@ Next, you’ll generate a file that includes the authentication material for PAM
 
 1.  On the computer where the MIM Service is installed, sign in as an administrator or as the user who installed MIM.
 
-2.  Create a new directory folder under the directory where the MIM Service was installed, such as `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service\\MfaCerts`.
+2.  Create a new directory folder under the directory where the MIM Service was installed, such as ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Using Windows Explorer, navigate into the **pf\\certs** folder of the ZIP file downloaded in the previous section, and copy the file **cert\_key.p12** to the new directory.
+3.  Using Windows Explorer, navigate into the ```pf\certs``` folder of the ZIP file downloaded in the previous section. Copy the file ```cert\_key.p12``` to the new directory.
 
-4.  Using Windows Explorer, navigate into the **pf** folder of the ZIP, and open the file **pf\_auth.cs** in a text editor like Wordpad.
+4.  Using Windows Explorer, navigate into the ```pf``` folder of the ZIP, and open the file ```pf\_auth.cs``` in a text editor like Wordpad.
 
-5.  Find these three parameters: **LICENSE\_KEY**, **GROUP\_KEY**, **CERT\_PASSWORD**.
+5. Find these three parameters: ```LICENSE\_KEY```, ```GROUP\_KEY```, ```CERT\_PASSWORD```.
 
 ![Copy values from pf\_auth.cs file - screenshot](media/PAM-Azure-MFA-Activation-Image-2.png)
 
-6.  Using Notepad, open **MfaSettings.xml** located in `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`.
+6. Using Notepad, open **MfaSettings.xml** located in ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service```.
 
-7.  Copy the values from the LICENSE\_KEY, GROUP\_KEY, and CERT\_PASSWORD parameters in the pf\_auth.cs file into their respective xml elements in the MfaSettings.xml file.
+7. Copy the values from the LICENSE\_KEY, GROUP\_KEY, and CERT\_PASSWORD parameters in the pf\_auth.cs file into their respective xml elements in the MfaSettings.xml file.
 
-8.  In the **<CertFilePath>** XML element, specify the full path name of the cert\_key.p12 file extracted earlier.
+8. In the **<CertFilePath>** XML element, specify the full path name of the cert\_key.p12 file extracted earlier.
 
-9.  In the **<username>** element enter any username.
+9. In the **<username>** element enter any username.
 
-10.  In the **<DefaultCountryCode>** element enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
+10. In the **<DefaultCountryCode>** element enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
 
-11.  Save and overwrite the **MfaSettings.xml** file in the MIM Service folder `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`. 
+11. Save and overwrite the **MfaSettings.xml** file in the MIM Service folder ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 
 > [!NOTE]
 > At the end of the process, ensure that the file **MfaSettings.xml**, or any copies of it or the ZIP file are not publically readable.
@@ -116,16 +116,15 @@ First, the `New-PAMUser` command copies a phone number attribute from the user's
 
 Second, the `Set-PAMUser` command updates the phone number attribute in the MIM Service database. For example, the following replaces an existing PAM user's phone number in the MIM Service. Their directory entry is unchanged.
 
-```
+```PowerShell
 Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 ```
-
 
 ## Configure PAM roles for Azure MFA
 
 Once all of the candidate users for a PAM role have their telephone numbers stored in the MIM Service database, the role can be configured to require Azure MFA. This is done using the `New-PAMRole` or `Set-PAMRole` commands. For example,
 
-```
+```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 ```
 
@@ -154,3 +153,8 @@ To find out more information about failing telephone calls (event 101), you can 
 5.  Select the time range, and check the box by the **Name** in the additional report column. Click **Export to CSV**.
 
 6.  When the report has been generated, you can view it in the portal or, if the MFA report is extensive, download it to a CSV file. **SDK** values in the **AUTH TYPE** column indicate rows that are relevant as PAM activation requests: these are events originating from MIM or other on-premises software. The **USERNAME** field is the GUID of the user object in the MIM service database. If a call was unsuccessful, the value in the **AUTHD** column will be **No** and the value of the **CALL RESULT** column will contain the details of the failure reason.
+
+## Next Steps
+
+[What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+[Create your free  Azure account today](https://azure.microsoft.com/free/)
