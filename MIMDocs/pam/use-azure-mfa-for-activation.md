@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -156,5 +156,5 @@ To find out more information about failing telephone calls (event 101), you can 
 
 ## Next Steps
 
-[What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
-[Create your free  Azure account today](https://azure.microsoft.com/free/)
+- [What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Create your free  Azure account today](https://azure.microsoft.com/free/)
