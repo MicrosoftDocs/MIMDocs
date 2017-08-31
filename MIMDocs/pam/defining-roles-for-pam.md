@@ -215,4 +215,3 @@ Roles for non-administrative user and computer management might include:
 
 - [Securing Privileged Access Reference Material](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
 - [Using Azure MFA for activation](use-azure-mfa-for-activation.md)
-- [Securing Privileged Access Reference Material](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
