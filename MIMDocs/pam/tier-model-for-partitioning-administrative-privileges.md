@@ -66,4 +66,4 @@ Logon restrictions can be enforced with:
 ## Next steps
 
 - The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
-- [Priviledged Access workstations](https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/privileged-access-workstations) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
+- [Priviledged Access workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
