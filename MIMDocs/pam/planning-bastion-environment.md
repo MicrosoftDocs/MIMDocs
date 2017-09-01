@@ -202,7 +202,7 @@ The group policy settings on the domain controller for auditing must include bot
 7. Close the Group Policy Management Editor window and the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:
 
     ```
-    gpupdate /force /target:computere
+    gpupdate /force /target:computer
     ```
 
 The message “Computer Policy update has completed successfully.” should appear after a few minutes.
