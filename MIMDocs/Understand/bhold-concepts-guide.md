@@ -75,7 +75,7 @@ In addition to representing organizational structure, organizational units can a
 
 ![](media/bhold-concepts-guide/org-chart-02.png)
 
-In this example, each sales associate would belong to two organizational units: one representing the associate's place in the organization's management structure, and one representing the associate�s customer base (retail or corporate). Each organizational unit can be assigned different roles which, in turn, can be assigned different permissions for accessing the organization�s IT resources. In addition, roles can be inherited from parent organizational units, simplifying the process of propagating roles to users. On the other hand, specific roles can be prevented from being inherited, ensuring that a specific role is associated only with the appropriate organizational units.
+In this example, each sales associate would belong to two organizational units: one representing the associate's place in the organization's management structure, and one representing the associate�s customer base (retail or corporate). Each organizational unit can be assigned different roles which, in turn, can be assigned different permissions for accessing the organization's IT resources. In addition, roles can be inherited from parent organizational units, simplifying the process of propagating roles to users. On the other hand, specific roles can be prevented from being inherited, ensuring that a specific role is associated only with the appropriate organizational units.
 
 OrgUnits can be created in BHOLD Suite by using the BHOLD Core web portal or by using the BHOLD Model Generator.
 
@@ -83,7 +83,7 @@ OrgUnits can be created in BHOLD Suite by using the BHOLD Core web portal or by 
 
 As noted above, every user must belong to at least one organizational unit (OrgUnit). Because organizational units are the principal mechanism for associating a user with roles, in the majority of organizations a given user belongs to multiple OrgUnits to make it easier to associate roles with that user. In some cases, however, it may be necessary to associate a role with a user apart from any OrgUnits that the user belongs to. Consequently, a user can be assigned directly to a role as well as obtaining roles from the OrgUnits that the user belongs to.
 
-When a user is not active within the organization (while away for medical leave, for example), the user can be suspended, which revokes all the user�s permissions without removing the user from the role model. Upon returning to duty, the user can be reactivated, which restores all the permissions granted by the user's roles.
+When a user is not active within the organization (while away for medical leave, for example), the user can be suspended, which revokes all the user's permissions without removing the user from the role model. Upon returning to duty, the user can be reactivated, which restores all the permissions granted by the user's roles.
 
 Objects for users can be created individually in BHOLD through the BHOLD Core web portal, or they can be imported in bulk by using BHOLD Model Generator, or by using the Access Management Connector with the FIM Synchronization Service to import user information from such sources as Active Directory Domain Services or human resources applications.
 
@@ -102,7 +102,7 @@ In BHOLD, you can assign a role to a user primarily through two mechanisms:
 - By assigning a role to an organizational unit (organizational unit) of which the user is a member
 - By assigning a role directly to a user
 
-A role assigned to a parent organizational unit optionally can be inherited by its member organizational units. When a role is assigned to or inherited by an organizational unit, it can be designated as an effective or proposed role. If it is an effective role, all users in the organizational unit are assigned the role. If it is a proposed role, it must be activated for each user or member organizational unit to become effective for that user or organizational unit's members. This makes it possible to assign users a subset of the roles associated with an organizational unit, rather than automatically assigning all of the organizational unit�s roles to all members. In addition, roles can be given start and end dates, and limits can be placed on the percentage of users within an organizational unit for which a role can be effective.
+A role assigned to a parent organizational unit optionally can be inherited by its member organizational units. When a role is assigned to or inherited by an organizational unit, it can be designated as an effective or proposed role. If it is an effective role, all users in the organizational unit are assigned the role. If it is a proposed role, it must be activated for each user or member organizational unit to become effective for that user or organizational unit's members. This makes it possible to assign users a subset of the roles associated with an organizational unit, rather than automatically assigning all of the organizational unit's roles to all members. In addition, roles can be given start and end dates, and limits can be placed on the percentage of users within an organizational unit for which a role can be effective.
 
 The following diagram illustrates how an individual user can be assigned a role in BHOLD:
 
@@ -139,8 +139,7 @@ The first step in using the BHOLD Model Generator is to import these files to lo
 >[!Important]
 When uploading files, select the **Retain Existing Model** check box only in test environments. In production environments, you must use Model Generator to create the initial role model. You cannot use it to modify an existing role model in the BHOLD database.
 
-After Model Generator creates these roles in the role model, you can then export the role model to the BHOLD database in the
-form of an XML file.
+After Model Generator creates these roles in the role model, you can then export the role model to the BHOLD database in the form of an XML file.
 
 ### Advanced BHOLD features
 
@@ -178,7 +177,7 @@ You can configure a user to limit the following:
 
 #### Separation of duties
 
-Separation of duties (SoD) is a business principle that seeks to prevent individuals from gaining the capability to perform actions that should not be available to a single person. For example, an employee should not able to request a payment and to authorize the payment. The principle of SoD enables organizations to implement a system of �checks and balances� to minimize their exposure to risk from employee error or misconduct.
+Separation of duties (SoD) is a business principle that seeks to prevent individuals from gaining the capability to perform actions that should not be available to a single person. For example, an employee should not able to request a payment and to authorize the payment. The principle of SoD enables organizations to implement a system of checks and balances to minimize their exposure to risk from employee error or misconduct.
 
 BHOLD implements SoD by letting you define incompatible permissions. When these permissions are defined, BHOLD enforces SoD by preventing the creation of roles that are linked to incompatible permissions, whether they are linked directly or through inheritance, and by preventing users from being assigned multiple roles that, when combined, would grant incompatible permissions, again by direct assignment or through inheritance. Optionally, conflicts can be overridden.
 
