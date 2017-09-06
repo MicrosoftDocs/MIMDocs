@@ -142,7 +142,7 @@ After Model Generator creates these roles in the role model, you can then export
 
 ### Advanced BHOLD features
 
-Previous sections described the basic features of role-based access control (RBAC) in BHOLD. This section outlines additional features in BHOLD that can provide enhanced security and flexibility to your organization�s implementation of RBAC. This section provides overviews of the following BHOLD features:
+Previous sections described the basic features of role-based access control (RBAC) in BHOLD. This section outlines additional features in BHOLD that can provide enhanced security and flexibility to your organization's implementation of RBAC. This section provides overviews of the following BHOLD features:
 
 - Cardinality
 - Separation of duties
@@ -179,13 +179,13 @@ BHOLD implements SoD by letting you define incompatible permissions. When these 
 
 #### Context-adaptable permissions
 
-By creating permissions that can be automatically modified based on an object attribute, you can reduce the total number of permissions you have to manage. Context-adaptable permissions (CAPs) let you define a formula as a permission attribute that modifies how the permission is applied by the application associated with the permission. For example, you can create a formula that changes the access permission to a file folder (through a security group associated with the folder�s access control list) based on whether a user belongs to an organizational unit (organizational unit) containing full-time or contract employees. If the user is moved from one organizational unit to another, the new permission is automatically applied and the old permission is deactivated. 
+By creating permissions that can be automatically modified based on an object attribute, you can reduce the total number of permissions you have to manage. Context-adaptable permissions (CAPs) let you define a formula as a permission attribute that modifies how the permission is applied by the application associated with the permission. For example, you can create a formula that changes the access permission to a file folder (through a security group associated with the folder's access control list) based on whether a user belongs to an organizational unit (organizational unit) containing full-time or contract employees. If the user is moved from one organizational unit to another, the new permission is automatically applied and the old permission is deactivated. 
 
 The CAP formula can query the values of attributes that have been applied to applications, permissions, organizational units, and users.
 
 #### Attribute-based authorization
 
-One way to control whether a role that is linked to an organizational unit (organizational unit) is activated for a particular user in the organizational unit is to use attribute-based authorization (ABA). By using ABA, you can automatically activate a role only when certain rules based on a user's attributes are met. For example, you can link a role to an organizational unit that becomes active for a user only if the user's job title matches the job title in the ABA rule. This eliminates the need to manually activate a proposed role for a user. Instead, a role can be activated for all users in an organizational unit who have an attribute value that satisfies the role�s ABA rule. Rules can be combined, so that a role is activated only when a user's attributes satisfy all the ABA rules specified for the role.
+One way to control whether a role that is linked to an organizational unit (organizational unit) is activated for a particular user in the organizational unit is to use attribute-based authorization (ABA). By using ABA, you can automatically activate a role only when certain rules based on a user's attributes are met. For example, you can link a role to an organizational unit that becomes active for a user only if the user's job title matches the job title in the ABA rule. This eliminates the need to manually activate a proposed role for a user. Instead, a role can be activated for all users in an organizational unit who have an attribute value that satisfies the role's ABA rule. Rules can be combined, so that a role is activated only when a user's attributes satisfy all the ABA rules specified for the role.
 
 It is important to note that the results of ABA rule tests are limited by cardinality settings. For example, if the cardinality setting of a rule specifies that no more than two users can be assigned a role, and if an ABA rule would otherwise activate a role for four users, the role will be activated only for the first two users that pass the ABA test.
 
