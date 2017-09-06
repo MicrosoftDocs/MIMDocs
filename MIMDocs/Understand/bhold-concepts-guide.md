@@ -75,7 +75,7 @@ In addition to representing organizational structure, organizational units can a
 
 ![](media/bhold-concepts-guide/org-chart-02.png)
 
-In this example, each sales associate would belong to two organizational units: one representing the associate's place in the organization's management structure, and one representing the associate�s customer base (retail or corporate). Each organizational unit can be assigned different roles which, in turn, can be assigned different permissions for accessing the organization's IT resources. In addition, roles can be inherited from parent organizational units, simplifying the process of propagating roles to users. On the other hand, specific roles can be prevented from being inherited, ensuring that a specific role is associated only with the appropriate organizational units.
+In this example, each sales associate would belong to two organizational units: one representing the associate's place in the organization's management structure, and one representing the associate's customer base (retail or corporate). Each organizational unit can be assigned different roles which, in turn, can be assigned different permissions for accessing the organization's IT resources. In addition, roles can be inherited from parent organizational units, simplifying the process of propagating roles to users. On the other hand, specific roles can be prevented from being inherited, ensuring that a specific role is associated only with the appropriate organizational units.
 
 OrgUnits can be created in BHOLD Suite by using the BHOLD Core web portal or by using the BHOLD Model Generator.
 
@@ -92,8 +92,7 @@ to use the BHOLD self-service features.
 
 #### Roles
 
-As previously noted, under the role-based access control (RBAC) model, permissions are associated with roles rather than individual users. This makes it possible to give each user the permissions required to perform the user�s duties by changing the user's roles rather than separately granting or denying the user permissions. As a consequence, the assignment of permissions
-no longer requires IT department participation, but instead can be performed as part of managing the business. A role can aggregate permissions for accessing different systems, either directly or through the use of subroles, further reducing the need for IT involvement in managing user permissions.
+As previously noted, under the role-based access control (RBAC) model, permissions are associated with roles rather than individual users. This makes it possible to give each user the permissions required to perform the user's duties by changing the user's roles rather than separately granting or denying the user permissions. As a consequence, the assignment of permissions no longer requires IT department participation, but instead can be performed as part of managing the business. A role can aggregate permissions for accessing different systems, either directly or through the use of subroles, further reducing the need for IT involvement in managing user permissions.
 
 It is important to note that roles are a feature of the RBAC model itself; typically roles are not provisioned to target applications. This enables RBAC to be used alongside existing applications which are not designed to use roles or to change the role definitions be meet the needs of changing business models without having to modify the applications themselves. If a target application is designed to use roles, then you can associated roles in the BHOLD role model with corresponding application roles by treating the application-specific roles as permissions.
 
@@ -108,9 +107,9 @@ The following diagram illustrates how an individual user can be assigned a role 
 
 ![](media/bhold-concepts-guide/org-chart-flow.png)
 
-In this diagram, role A is assigned to an organizational unit as an inheritable role, and so is inherited by its member organizational units and all users within those organizational units. Role B is assigned as a proposed role for an organizational unit. It must be activated before a user in the organizational unit can be authorized with the role�s permissions. Role C is an effective role, so its permissions apply immediately to all users in the organizational unit. Role D is linked directly to the user and so its permissions apply immediately to that user.
+In this diagram, role A is assigned to an organizational unit as an inheritable role, and so is inherited by its member organizational units and all users within those organizational units. Role B is assigned as a proposed role for an organizational unit. It must be activated before a user in the organizational unit can be authorized with the role's permissions. Role C is an effective role, so its permissions apply immediately to all users in the organizational unit. Role D is linked directly to the user and so its permissions apply immediately to that user.
 
-In addition, a role can be activated for a user based on a user�s attributes. For more information, see Attribute-based authorization.
+In addition, a role can be activated for a user based on a user's attributes. For more information, see Attribute-based authorization.
 
 #### Permissions
 
@@ -143,9 +142,7 @@ After Model Generator creates these roles in the role model, you can then export
 
 ### Advanced BHOLD features
 
-Previous sections described the basic features of role-based access control (RBAC) in BHOLD. This section outlines additional
-features in BHOLD that can provide enhanced security and flexibility to your organization�s implementation of RBAC. This section
-provides overviews of the following BHOLD features:
+Previous sections described the basic features of role-based access control (RBAC) in BHOLD. This section outlines additional features in BHOLD that can provide enhanced security and flexibility to your organization�s implementation of RBAC. This section provides overviews of the following BHOLD features:
 
 - Cardinality
 - Separation of duties
@@ -156,8 +153,7 @@ provides overviews of the following BHOLD features:
 
 #### Cardinality
 
-*Cardinality* refers to the implementation of business rules that are designed to limit the number of times two entities can be
-related to each other. In the case of BHOLD, cardinality rules can be established for roles, permissions, and users.
+*Cardinality* refers to the implementation of business rules that are designed to limit the number of times two entities can be related to each other. In the case of BHOLD, cardinality rules can be established for roles, permissions, and users.
 
 You can configure a role to limit the following:
 
@@ -201,10 +197,7 @@ The system of attributes in BHOLD is highly extensible. You can define new attri
 
 The BHOLD Suite provides tools that you can use to verify that individual users have been given appropriate permissions to accomplish their business tasks. The administrator can use the portal provided by the BHOLD Attestation module to design an manage the attestation process.
 
-The attestation process is conducted by means of campaigns in which campaign stewards are given the opportunity and means to verify that the users for which they are responsible have appropriate access to BHOLD-managed applications and correct
-
-
-permissions within those applications. A campaign owner is designated to oversee the campaign and to ensure that the campaign is being carried out properly. A campaign can be created to occur once or on a recurring basis.
+The attestation process is conducted by means of campaigns in which campaign stewards are given the opportunity and means to verify that the users for which they are responsible have appropriate access to BHOLD-managed applications and correct permissions within those applications. A campaign owner is designated to oversee the campaign and to ensure that the campaign is being carried out properly. A campaign can be created to occur once or on a recurring basis.
 
 Typically, the steward for a campaign will be a manager who will attest the access rights of users belonging to one or more organizational units for which the manager is responsible. Stewards can be automatically selected for the users being attested in a campaign based on user attributes, or the stewards for a campaign can be defined by listing them in a file that maps every user being attested in the campaign to a steward.
 
