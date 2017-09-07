@@ -35,13 +35,16 @@ Status: Sept 7, 2017
 - User can't assign Role to OrgUnit when Role has few permissions with cardinality
 -Permission cardinality does not work for Max. users numbers
 #### Access Management Connector
+
 #### BHOLD Integration Module
 - Installer updated for x86 to x64
 - LAYOUT folder incorrect location
 #### BHOLD Model Generator
 - Model roles from parent departments are not inherited
 #### BHOLD Analytics
+
 #### BHOLD Attestation
+
 #### BHOLD Reporting
 - Custom attribute 'employeeID' not available
 - Unable to properly load large data using 3-file set
