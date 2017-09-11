@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,11 +15,9 @@ ms.assetid:
 
 
 ---
-
 # BHOLD FIM/MIM Integration Installation
 
-The BHOLD FIM Integration module adds self-service role management to Microsof Identity Manager, making it possible for users to request additional roles and enforcing who can take on those roles. The BHOLD FIM Integration module extends the FIM Portal to make it easy to manage users’ roles as part of overall FIM administration.
-This topic describes how you must configure your network infrastructure to enable you to install and use the BHOLD FIM Integration module. It also covers how to install the BHOLD FIM Integration module and configuration that is required after you install the BHOLD FIM Integration module.
+The BHOLD FIM Integration module adds self-service role management to Microsof Identity Manager, making it possible for users to request additional roles and enforcing who can take on those roles. The BHOLD FIM Integration module extends the FIM Portal to make it easy to manage users’ roles as part of overall FIM administration. This topic describes how you must configure your network infrastructure to enable you to install and use the BHOLD FIM Integration module. It also covers how to install the BHOLD FIM Integration module and configuration that is required after you install the BHOLD FIM Integration module.
 
 ## BHOLD FIM Integration installation requirements
 
@@ -42,7 +40,7 @@ Before you begin to install the BHOLD FIM Integration module, you must create a 
 
 In addition, you need to be prepared to provide the information that the BHOLD FIM Integration Setup wizard requires to complete the installation. The following worksheet will help you record that information so you will be ready to supply it when it is needed.
 
-**BHOLDFim Account settings**
+### BHOLDFim Account settings
 
 | **Item**                            | **Description**                                                                                                                                                                                                               | **Value**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,10 +49,7 @@ In addition, you need to be prepared to provide the information that the BHOLD F
 | **Username**                        | Specifies the logon name of the BHOLD Core service user account.                                                                                                                                                              | Write the user account name here:                                                                                                                                                                                                                                                                                    |
 | **Password**                        | Specifies the password of the service user account.                                                                                                                                                                           | Write the password here: **Important:** Be sure to keep this password in a hidden, secure location.                                                                                                                                                                                                                  |
 
- 
-
-**FIM Service settings**  
- 
+### FIM Service settings
 
 | **Item**            | **Description**                                                                                                                                                                                                                               | **Value**                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
@@ -63,9 +58,7 @@ In addition, you need to be prepared to provide the information that the BHOLD F
 | **FIM Database**    | Specifies the name of the FIM Service database.                                                                                                                                                                                               | FIMService                                                                                          |
 | **Website IP/Port** | Specifies the name or IP address of the FIM Portal server and the website port.                                                                                                                                                               | Write the server name or address and port here:                                                     |
 
- 
-
-**BHOLD Core connection**
+### BHOLD Core connection
 
 | **Item**               | **Description**                                                                                                                                                                                                                                                                                                                                                                               | **Value**                                                                                           |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
@@ -83,20 +76,17 @@ To install the BHOLD FIM Integration module, log on as a member of the Domain Ad
 
 Replace *\<Version\>* with the version number of the BHOLD FIM Integration release that you are installing.
 
-To run the program file as an administrator, right-click the file and then click
-**Run as administrator**.
+To run the program file as an administrator, right-click the file and then click **Run as administrator**.
 
 ![running msi](media/bhold-integration-installation/cmd.png)
 
 ## Post installation tasks
 
-After installing BHOLD FIM Integration, you must configure Microsoft SharePoint to give the BHOLD service account site-owner permissions. Also, if the FIM Portal is configured to use Secure Sockets Layer (SSL) security, you must modify files that contain references to the addresses of BHOLD p
-ages added to the FIM Portal.
+After installing BHOLD FIM Integration, you must configure Microsoft SharePoint to give the BHOLD service account site-owner permissions. Also, if the FIM Portal is configured to use Secure Sockets Layer (SSL) security, you must modify files that contain references to the addresses of BHOLD pages added to the FIM Portal.
 
 ### Configuring SharePoint
 
-To function properly, BHOLD FIM Integration requires the BHOLD service account
-to have site-member permissions in Microsoft SharePoint.
+To function properly, BHOLD FIM Integration requires the BHOLD service account to have site-member permissions in Microsoft SharePoint.
 
 ### To grant site-member permissions to the BHOLD service account
 
@@ -118,12 +108,9 @@ to have site-member permissions in Microsoft SharePoint.
 
 ![running msi](media/bhold-integration-installation/sharepoint.png)
 
-**Configuring BHOLD to support SSL**
+### Configuring BHOLD to support SSL
 
-If the FIM Portal is configured to use SSL security, you must modify files on
-the FIM server so that links to BHOLD pages will open. The files are located in
-the following folder: C:\\Program Files\\Common Files\\Microsoft Shared\\Web
-Server Extensions\\12\\TEMPLATE\\LAYOUTS\\BHOLD.
+If the FIM Portal is configured to use SSL security, you must modify files on the FIM server so that links to BHOLD pages will open. The files are located in the following folder: ```C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\LAYOUTS\BHOLD```.
 
 The following table lists the files and the original and changed versions of the
 strings to be edited.
@@ -138,72 +125,35 @@ strings to be edited.
 
 Where:
 
--   *\<BHOLD_Server\>* specifies the name of the BHOLD server as found in the
-    original version of the file
+-   *\<BHOLD_Server\>* specifies the name of the BHOLD server as found in the original version of the file
 
--   *\<MIM_Server\>* specifies the name of the FIM server as found in the
-    original version of the file
+-   *\<MIM_Server\>* specifies the name of the FIM server as found in the original version of the file
 
--   *\<BHOLD_Server_FQDN\>* specifies the fully qualified domain name (FQDN) of
-    the BHOLD server
+-   *\<BHOLD_Server_FQDN\>* specifies the fully qualified domain name (FQDN) of the BHOLD server
 
--   *\<MIM_Port\>* specifies the port number of the FIM server as found in the
-    original version of the file
+-   *\<MIM_Port\>* specifies the port number of the FIM server as found in the original version of the file
 
 -   *\<MIM_Server_FQDN\>* specifies the FQDN of the FIM server
 
--   *\<MIM_SSL_Port\>* specifies a different port for use with SSL on the FIM
-    server
+-   *\<MIM_SSL_Port\>* specifies a different port for use with SSL on the FIM server
 
-**Enable approval workflows in BHOLD Core**
+### Enable approval workflows in BHOLD Core
 
-When FIM and BHOLD are integrated for self-service, the workflows for approvals
-are run in the FIM Service. This is similar to the workflow model for requests
-that originate in the FIM Portal, such as when a user submits a request to join
-a distribution list. There are key differences between BHOLD role workflows and
-other workflows hosted in the FIM Service, however. In the case of BHOLD,
-workflow parameters that specify which users must approve a role request
-originate in BHOLD, rather than being stored in the workflow definitions in the
-FIM Service database. These parameters are provided to the FIM Service by BHOLD
-when the first request is made, and an action workflow communicates the results
-back to BHOLD Core.
+When FIM and BHOLD are integrated for self-service, the workflows for approvals are run in the FIM Service. This is similar to the workflow model for requests that originate in the FIM Portal, such as when a user submits a request to join a distribution list. There are key differences between BHOLD role workflows and other workflows hosted in the FIM Service, however. In the case of BHOLD, workflow parameters that specify which users must approve a role request originate in BHOLD, rather than being stored in the workflow definitions in the FIM Service database. These parameters are provided to the FIM Service by BHOLD when the first request is made, and an action workflow communicates the results back to BHOLD Core.
 
 BHOLD selects an approver for a self-service request in one of three ways:
 
--   **Line manager as approver: role-based selection for an organizational unit
-    (orgunit)**  
-    If a role has an attribute named roletype that is set to Approver or
-    Escalator, and if that role is linked to one or more users in the context of
-    an orgunit, requests from users within that orgunit must be approved by one
-    of the users that is linked to the role with the Approver or Escalator
-    roletype.
+-   **Line manager as approver: role-based selection for an organizational unit (OrgUnit)** If a role has an attribute named roletype that is set to Approver or Escalator, and if that role is linked to one or more users in the context of an OrgUnit, requests from users within that OrgUnit must be approved by one  of the users that is linked to the role with the Approver or Escalator roletype.
 
--   **Line manager as approver: attribute-based selection for an orgunit**  
-    Each orgunit can have one or more attributes that specify the aliases of
-    users who can approve role assignments for other users in the orgunit. These
-    attributes are named approver1, approver2, and so on. When a user in the
-    orgunit requests a role assignment, BHOLD routes the request (through FIM)
-    to the users specified by the orgunit approver attributes. If an orgunit
-    does not have any of these attributes set, BHOLD checks parent orgunits up
-    to the root orgunit.
+-   **Line manager as approver: attribute-based selection for an OrgUnit**
+    Each OrgUnit can have one or more attributes that specify the aliases of users who can approve role assignments for other users in the OrgUnit. These attributes are named approver1, approver2, and so on. When a user in the OrgUnit requests a role assignment, BHOLD routes the request (through FIM) to the users specified by the OrgUnit approver attributes. If an OrgUnit does not have any of these attributes set, BHOLD checks parent OrgUnits up to the root OrgUnit.
 
--   **Role manager as approver: attribute-based selection for a role**  
-    A role can have one or more attributes (also named approver1, and so on)
-    that specify the aliases of users who can approve the assignment of the
-    role. When a user requests to be assigned a role that has these approver
-    attributes set, BHOLD routes the request to the users specified by the
-    attributes.
+-   **Role manager as approver: attribute-based selection for a role**
+    A role can have one or more attributes (also named approver1, and so on) that specify the aliases of users who can approve the assignment of the role. When a user requests to be assigned a role that has these approver attributes set, BHOLD routes the request to the users specified by the attributes.
 
-If an approver for a self-service role request is not specified by one of these
-methods, by default BHOLD automatically assigns the role without requiring
-approval. For this reason, immediately after installing BHOLD FIM Integration,
-you should configure the root orgunit with the alias of an approver, such as the
-root account. This will prevent a user from unintentionally being granted a role
-before a more comprehensive approval policy can be implemented.
+If an approver for a self-service role request is not specified by one of these methods, by default BHOLD automatically assigns the role without requiring approval. For this reason, immediately after installing BHOLD FIM Integration, you should configure the root OrgUnit with the alias of an approver, such as the root account. This will prevent a user from unintentionally being granted a role before a more comprehensive approval policy can be implemented.
 
- 
-
-**To configure an approver for the root orgunit**
+#### To configure an approver for the root OrgUnit
 
 1.  Log on to the BHOLD Core server as an administrator.
 
@@ -223,9 +173,9 @@ before a more comprehensive approval policy can be implemented.
 
 8.  On the **Attribute type sets** page, click **Add**.
 
-9.  On the **Add attribute type set** page, in **Description**, type Orgunit Attributes, and then click **OK**.
+9.  On the **Add attribute type set** page, in **Description**, type OrgUnit Attributes, and then click **OK**.
 
-10. On the **Orgunit Attributes** page, expand **Attribute types**, and then click **Modify**.
+10. On the **OrgUnit Attributes** page, expand **Attribute types**, and then click **Modify**.
 
 11. In the **Attribute type** list, click **approver1**, click **Add**, and then click **Done**.
 
@@ -235,7 +185,7 @@ before a more comprehensive approval policy can be implemented.
 
 14. On the **Object type/OrgUnit** page, expand **Attribute type sets**, and then click **Modify**.
 
-15. On the **Link attribute type set/OrgUnit** page, in **Order**, type 10, in the **Attribute type set** list, click **Orgunit Attributes**, click **Add**, and then click **Done**.
+15. On the **Link attribute type set/OrgUnit** page, in **Order**, type 10, in the **Attribute type set** list, click **OrgUnit Attributes**, click **Add**, and then click **Done**.
 
 16. In the left pane, under **Model**, click **Organizational units**.
 
@@ -249,10 +199,9 @@ before a more comprehensive approval policy can be implemented.
 >[!IMPORTANT]
 The domain and user name must match the default alias of a user in the BHOLD Core database.
 
-As an alternative to specifying an approver for organizational units, you can specify an approver for proposed roles in the BHOLD Core database. To do so,
-create the approver1 attribute, add it to an attribute typeset associated with the Role object type, and then modify each proposed role to specify the approver.
+As an alternative to specifying an approver for organizational units, you can specify an approver for proposed roles in the BHOLD Core database. To do so, create the approver1 attribute, add it to an attribute typeset associated with the Role object type, and then modify each proposed role to specify the approver.
 
-To provide better workflow security, in addition to approvers, you should designate additional approval modes and users by creating and populating the following attributes for orgunits and roles:
+To provide better workflow security, in addition to approvers, you should designate additional approval modes and users by creating and populating the following attributes for OrgUnits and roles:
 
 - escalator*\<n\>*
 
@@ -269,9 +218,7 @@ where *\<n\>* indicates an optional numerical suffix to provide multiple attribu
 BHOLD FIM Integration installation creates sets, workflow definitions, and Management Policy Rules (MPRs) to the FIM Service. If you had customized your FIM deployment to change the sets of administrators or the sets of users who can make requests, you should ensure that the MPRs reference the correct user sets.
 
 >[!NOTE]
-Before users of the FIM Portal can use the self-service features provided by BHOLD, the users’ accounts must be synchronized into the BHOLD database from the
-FIM Synchronization Service. In particular, there must be a user record in the BHOLD Core database and in the FIM Service database for each user who can make a
-self-service request or is specified as an approver or escalator for self-service requests.
+Before users of the FIM Portal can use the self-service features provided by BHOLD, the users’ accounts must be synchronized into the BHOLD database from the FIM Synchronization Service. In particular, there must be a user record in the BHOLD Core database and in the FIM Service database for each user who can make a self-service request or is specified as an approver or escalator for self-service requests.
 
 ## Next steps
 

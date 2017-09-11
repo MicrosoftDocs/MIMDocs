@@ -15,8 +15,6 @@ ms.assetid:
 
 
 ---
-
-
 # BHOLD Core installation
 
 The BHOLD Core module provides the key features of BHOLD Suite within your environment. The BHOLD Core module must be installed and configured on a server in your local area network before you can install other BHOLD Suite modules.
@@ -66,35 +64,25 @@ When you install BHOLD Core, you can use an existing SQL Server database as the 
 The BHOLD Core module must be able to log on to the domain with a user account that is dedicated to that purpose and which is a member of two specific security groups, including one that is created specifically for the BHOLD Core module. Membership in the Domain Admins group is required to perform this procedure.
 **To create and configure the BHOLD Core user and security group**
 
-1.  On a domain controller, click **Start**, point to **Administrative Tools**,
-    and then click **Active Directory Users and Computers**.
+1.  On a domain controller, click **Start**, point to **Administrative Tools**,  and then click **Active Directory Users and Computers**.
 
-2.  In the console tree, expand the domain where the account is to be created,
-    right-click **Users**, point to **New**, and then click **Group**.
+2.  In the console tree, expand the domain where the account is to be created, right-click **Users**, point to **New**, and then click **Group**.
 
-3.  In the **New Object – Group** dialog box, in **Group name**, type the name
-    of the group (BHOLD default: BHOLDApplicationGroup), and then click **OK**.
+3.  In the **New Object – Group** dialog box, in **Group name**, type the name of the group (BHOLD default: BHOLDApplicationGroup), and then click **OK**.
 
 4.  Right-click **Users**, point to **New**, and then click **User**.
 
-5.  In **Full name**, type a name that will help you identify the account, for
-    example, BHOLD Core Service Account.
+5.  In **Full name**, type a name that will help you identify the account, for example, BHOLD Core Service Account.
 
-6.  In **User logon name**, type the user name of the BHOLD Core service account
-    (BHOLD default: b1user), and then click **Next**.
+6.  In **User logon name**, type the user name of the BHOLD Core service account (BHOLD default: b1user), and then click **Next**.
 
-7.  In **Password** and **Confirm password**, type the password for the service
-    account.
+7.  In **Password** and **Confirm password**, type the password for the service     account.
 
-8.  Clear **User must change password at next logon**, select **User cannot
-    change password** and **Password never expires**, click **Next**, and then
-    click **Finish**.
+8.  Clear **User must change password at next logon**, select **User cannot change password** and **Password never expires**, click **Next**, and then click **Finish**.
 
-9.  In the console results pane, right-click the user account, and then click
-    **Add to a group**.
+9.  In the console results pane, right-click the user account, and then click **Add to a group**.
 
-10. In the **Select Groups** dialog box, type the display name of the group that
-    you created earlier, type a semicolon (;), and then type IIS_IUSRS.
+10. In the **Select Groups** dialog box, type the display name of the group that you created earlier, type a semicolon (;), and then type IIS_IUSRS.
 
 11. Click **Check Names**, and then click **OK**.  
 
@@ -102,8 +90,7 @@ The following procedure must be performed on the computer where the BHOLD Core m
 
 ## BHOLD Core installation worksheet
 
-Before you begin to install the BHOLD Core module, you need to be prepared to provide the information that the BHOLD Core Setup wizard requires to complete the installation. The following worksheet will help you record that information so you will be ready to supply it when it is needed. Each section corresponds to
-a page in the BHOLD Core setup wizard.
+Before you begin to install the BHOLD Core module, you need to be prepared to provide the information that the BHOLD Core Setup wizard requires to complete the installation. The following worksheet will help you record that information so you will be ready to supply it when it is needed. Each section corresponds to a page in the BHOLD Core setup wizard.
 
 ### Account settings
 
@@ -129,20 +116,17 @@ a page in the BHOLD Core setup wizard.
 
 ## BHOLD Core Setup
 
-To install the BHOLD Core module, log on as a member of the Domain Admins group, download the following file and run it as administrator on the server that you
-intend to install the BHOLD Core module on: 
+To install the BHOLD Core module, log on as a member of the Domain Admins group, download the following file and run it as administrator on the server that you intend to install the BHOLD Core module on: 
 
 - BholdCore *\<Version\>*\_Release.msi
 
-Replace *\<Version\>* with the version number of the BHOLD Core release that you
-are installing.
+Replace *\<Version\>* with the version number of the BHOLD Core release that you are installing.
 
 To run the program file as an administrator, right-click the file and then click **Run as administrator**.
 
 ### Postinstallation settings
 
-After BHOLD Core Setup completes, you must configure the Windows Firewall and change advanced settings in the BHOLD Core application pool in Internet
-Information Services to complete the BHOLD Core configuration. If necessary, you should also change BHOLD system attributes to meet your requirements.
+After BHOLD Core Setup completes, you must configure the Windows Firewall and change advanced settings in the BHOLD Core application pool in Internet Information Services to complete the BHOLD Core configuration. If necessary, you should also change BHOLD system attributes to meet your requirements.
 
 #### Configuring Windows Firewall
 
@@ -182,15 +166,12 @@ To allow IIS to work properly with the BHOLD Core module, you must configure the
 
 #### Establishing the service principal name for the BHOLD website
 
-If the network name that is used to contact the BHOLD website is not the same as the server host name, you must establish a service principal name (SPN) for
-HTTP. For example, if you use a CNAME resource record in DNS to specify an alias for the server, or if you use network load balancing, you must register these
-additional network addresses in Active Directory. If you fail to do so, Internet Explorer cannot use the Kerberos protocol when contacting the BHOLD website.
+If the network name that is used to contact the BHOLD website is not the same as the server host name, you must establish a service principal name (SPN) for HTTP. For example, if you use a CNAME resource record in DNS to specify an alias for the server, or if you use network load balancing, you must register these additional network addresses in Active Directory. If you fail to do so, Internet Explorer cannot use the Kerberos protocol when contacting the BHOLD website.
 
 >[!IMPORTANT]
 If the BHOLD Core module is installed on the same computer as the FIM Portal, you must create DNS resource records (CNAME or A) with different host names for the servers running BHOLD Core and the server running the FIM Portal. Only one SPN can be established for a particular service-type/server-alias pair, and so BHOLD Core and the FIM Portal require separate SPNs because they typically run under different accounts. The setspn command reports an error if an SPN has already been established under another account.
 
-Membership in **Domain Admins**, or equivalent, is the minimum required to
-complete this procedure.
+Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
 #### To establish the SPN of the BHOLD website
 
@@ -200,18 +181,15 @@ complete this procedure.
     setspn –S HTTP/ *\<networkalias\> \<domain\>* \\ *\<accountname\>*
     where:
 
-    -   *\<networkalias\>* is the address that clients use to contact the BHOLD
-        website
+    -   *\<networkalias\>* is the address that clients use to contact the BHOLD website
 
-    -   *\<domain\>*\\*\<accountname\>* is the domain and user name of the BHOLD
-        Core service account that you created when you installed BHOLD Core.
+    -   *\<domain\>*\\*\<accountname\>* is the domain and user name of the BHOLD Core service account that you created when you installed BHOLD Core.
 
 3.  Repeat the previous step for all other names that clients use to contact the BHOLD website, for example, CNAME aliases, names that include a fully qualified domain name, or names that include a NetBIOS (short) domain name.
 
 #### Setting BHOLD system attributes
 
-In order to validate that the installation of the BHOLD Core module was successful, open the BHOLD Core portal and view the system attributes. In addition, to ensure that the BHOLD Core module functions properly in your environment, you can modify the following BHOLD system attributes, as
-appropriate:
+In order to validate that the installation of the BHOLD Core module was successful, open the BHOLD Core portal and view the system attributes. In addition, to ensure that the BHOLD Core module functions properly in your environment, you can modify the following BHOLD system attributes, as appropriate:
 
 | **Attribute**                | **Description**                                                                                                                                                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -237,9 +215,8 @@ You must be logged in as a member of the Domain Admins group to perform this pro
 
 ## Next steps
 
-After you have installed BHOLD Core and validated that the installation was successful, you can install additional modules. At this point, the BHOLD
-database will be essentially empty, containing only one user account, the root account, and one organizational unit (orgunit), the root orgunit. To add more
-users to the BHOLD database, you can either install the Access Management Connector module or the BHOLD Model Generator module, depending on your needs. You can use the Access Management Connector module to import user data from the FIM Synchronization Service, or you can use the BHOLD Model Generator to import user data from a set of structured files. For more information about using the Access Management Connector module, see [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+After you have installed BHOLD Core and validated that the installation was successful, you can install additional modules. At this point, the BHOLD database will be essentially empty, containing only one user account, the root account, and one organizational unit (orgunit), the root orgunit. To add more users to the BHOLD database, you can either install the Access Management Connector module or the BHOLD Model Generator module, depending on your needs. You can use the Access Management Connector module to import user data from the FIM Synchronization Service, or you can use the BHOLD Model Generator to import user data from a set of structured files. For more information about using the Access Management Connector module, see [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+
 For more information about using the BHOLD Model Generator module, see:
 
 - [Microsoft BHOLD Suite Concepts Guide](https://technet.microsoft.com/en-us/library/jj134102(v=ws.10).aspx)

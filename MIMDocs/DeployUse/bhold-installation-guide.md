@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,7 +15,6 @@ ms.assetid:
 
 
 ---
-
 # Microsoft BHOLD Suite SP1 (6.0) Installation Guide
 
 Microsoft® BHOLD Suite Service Pack 1 (SP1) is a collection of applications that, when used with Microsoft Identity Manager 2016 SP1 (MIM), adds effective role management, analytics, and attestation to MIM. Microsoft BHOLD Suite SP1 consists of the following modules:
@@ -38,7 +37,7 @@ This document explains how to plan your BHOLD deployment to meet your business n
 
 ## Pre-requisite knowledge
 
-This document assumes that you have a basic understanding of how to install software on server computers. It also assumes that you have basic knowledge of Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM), and Microsoft SQL Server 2008 database software. A description of how to set up and configure dependent technologies such as AD DS and FIM is out of the scope of this documentation. For information about the functions that the Microsoft BHOLD modules perform, see [the Microsoft BHOLD suite concepts guide](../understand/bhold-concepts-guide.md).
+This document assumes that you have a basic understanding of how to install software on server computers. It also assumes that you have basic knowledge of Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM), and Microsoft SQL Server 2008 database software. A description of how to set up and configure dependent technologies such as AD DS and FIM is out of the scope of this documentation. For information about the functions that the Microsoft BHOLD modules perform, see [the Microsoft BHOLD suite concepts guide](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## Audience
 
