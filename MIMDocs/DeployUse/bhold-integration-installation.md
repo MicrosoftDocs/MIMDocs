@@ -148,8 +148,7 @@ BHOLD selects an approver for a self-service request in one of three ways:
 -   **Line manager as approver: attribute-based selection for an OrgUnit**
     Each OrgUnit can have one or more attributes that specify the aliases of users who can approve role assignments for other users in the OrgUnit. These attributes are named approver1, approver2, and so on. When a user in the OrgUnit requests a role assignment, BHOLD routes the request (through FIM) to the users specified by the OrgUnit approver attributes. If an OrgUnit does not have any of these attributes set, BHOLD checks parent OrgUnits up to the root OrgUnit.
 
--   **Role manager as approver: attribute-based selection for a role**
-    A role can have one or more attributes (also named approver1, and so on) that specify the aliases of users who can approve the assignment of the role. When a user requests to be assigned a role that has these approver attributes set, BHOLD routes the request to the users specified by the attributes.
+-   **Role manager as approver: attribute-based selection for a role** A role can have one or more attributes (also named approver1, and so on) that specify the aliases of users who can approve the assignment of the role. When a user requests to be assigned a role that has these approver attributes set, BHOLD routes the request to the users specified by the attributes.
 
 If an approver for a self-service role request is not specified by one of these methods, by default BHOLD automatically assigns the role without requiring approval. For this reason, immediately after installing BHOLD FIM Integration, you should configure the root OrgUnit with the alias of an approver, such as the root account. This will prevent a user from unintentionally being granted a role before a more comprehensive approval policy can be implemented.
 
@@ -162,8 +161,7 @@ If an approver for a self-service role request is not specified by one of these 
 3.  In the Internet Explorer address bar, type
     <http://localhost:5151/bhold/core>, and then press the Enter key.
 
-4.  On the BHOLD Core home page, under **Attribute def**, click **Attribute
-    types**.
+4.  On the BHOLD Core home page, under **Attribute def**, click **Attribute types**.
 
 5.  On the **Attribute type** page, click **Add**.
 
