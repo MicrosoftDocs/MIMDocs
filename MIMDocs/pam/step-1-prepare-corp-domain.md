@@ -4,10 +4,10 @@
 title: Deploy PAM Step 1 - CORP domain | Microsoft Docs
 description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,12 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Step 1 - Prepare the host and the CORP domain
 
 >[!div class="step-by-step"]
 [Step 2 »](step-2-prepare-priv-domain-controller.md)
-
 
 In this step, you will prepare to host the bastion environment. If necessary, you'll also create a domain controller and a member workstation in a new domain and forest (the *CORP* forest) with identities to be managed by the bastion environment. This CORP forest simulates an existing forest that has resources to be managed. This document includes an example resource to be protected, a file share.
 
@@ -64,7 +62,7 @@ In this section, you will add the Active Directory Domain Services (AD DS), DNS 
 
 2. Type the following commands.
 
-  ```
+  ```PowoerShell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -88,7 +86,7 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 2. Type the following commands, but replace "CONTOSO" with the NetBIOS name of your domain.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -109,7 +107,7 @@ We're going to create a security group named *CorpAdmins* and a user named *Jen*
 
 2. Type the following commands. Replace the password 'Pass@word1' with a different password string.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -147,7 +145,7 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 8. Apply the audit settings by launching a PowerShell window and typing:
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -161,7 +159,7 @@ In this section you will configure the registry settings that are needed for sID
 
 2. Type the following commands to configure the source domain to permit remote procedure call (RPC) access to the security accounts manager (SAM) database.
 
-  ```
+  ```PowerShell
   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
   Restart-Computer
@@ -200,7 +198,7 @@ You will need a resource for demonstrating the security group-based access contr
 
 4. Type the following commands.
 
-  ```
+  ```PowerShell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins

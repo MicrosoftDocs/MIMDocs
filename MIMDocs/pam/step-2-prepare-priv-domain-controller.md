@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Step 2 - Prepare the first PRIV domain controller
 
 >[!div class="step-by-step"]
@@ -38,6 +37,7 @@ In this step you will create a new domain that will provide the bastion environm
 In this section you will set up a virtual machine to act as a domain controller for a new forest
 
 ### Install Windows Server 2012 R2
+
 On another new virtual machine with no software installed, install Windows Server 2012 R2 to make a computer “PRIVDC”.
 
 1. Select to perform a custom (not upgrade) install of Windows Server. When installing, specify **Windows Server 2012 R2 Standard (Server with a GUI) x64**; _do not select_ **Data Center or Server Core**.
@@ -51,6 +51,7 @@ On another new virtual machine with no software installed, install Windows Serve
 5. After the server has restarted, sign in as the administrator. Using Control Panel, configure the computer to check for updates, and install any updates needed. This may require a server restart.
 
 ### Add roles
+
 Add the Active Directory Domain Services (AD DS) and DNS Server roles.
 
 1. Launch PowerShell as an administrator.
@@ -67,7 +68,7 @@ Add the Active Directory Domain Services (AD DS) and DNS Server roles.
 
 Launch PowerShell and type the following command to configure the source domain to permit remote procedure call (RPC) access to the security accounts manager (SAM) database.
 
-```
+```PowerShell
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
@@ -94,13 +95,14 @@ In this document, the name priv.contoso.local is used as the domain name of the 
 After the forest creation is complete, the server will restart automatically.
 
 ### Create user and service accounts
+
 Create the user and service accounts for MIM Service and Portal setup. These accounts will go in the Users container of the priv.contoso.local domain.
 
 1. After the server restarts, sign in to PRIVDC as the domain administrator (PRIV\\Administrator).
 
 2. Launch PowerShell and type the following commands. The password 'Pass@word1' is just an example and you should use a different password for the accounts.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
@@ -206,7 +208,7 @@ You need to set up auditing in order for the PAM configuration to be established
 
 19. Launch a PowerShell window as administrator and type the following command to update the DC from the group policy settings.
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -223,7 +225,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
 
   If you created one domain contoso.local in the previous step, then specify *10.1.1.31* for the CORPDC computer’s virtual network IP address.
 
-  ```
+  ```PowerShell
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
@@ -234,7 +236,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
 
 1. Using PowerShell, add SPNs so that SharePoint, PAM REST API, and the MIM Service can use Kerberos authentication.
 
-  ```
+  ```cmd
   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
   setspn -S http/pamsrv PRIV\SharePoint
   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
@@ -281,7 +283,7 @@ Perform the following steps on PRIVDC as a domain administrator.
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
 19.	Update the access control list as needed to ensure that MIM service and MIM component service can update memberships of groups protected by this ACL.  Type the command:  
-  ```
+  ```cmd
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
   ```

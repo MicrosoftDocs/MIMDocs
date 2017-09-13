@@ -4,10 +4,10 @@
 title: Deploy PAM step 3 – PAM server | Microsoft Docs
 description: Prepare a PAM server that will host both SQL and SharePoint for your Privileged Access Management deployment.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Step 3 – Prepare a PAM server
 
 >[!div class="step-by-step"]
@@ -32,6 +31,7 @@ ms.suite: ems
 [Step 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## Install Windows Server 2012 R2
+
 On a third virtual machine, install Windows Server 2012 R2, specifically Windows Server 2012 R2 Standard (Server with a GUI) x64, to make *PAMSRV*. Since SQL Server and SharePoint 2013 will be installed on this computer, it requires at least 8GB of RAM.
 
 1. Select **Windows Server 2012 R2 Standard (Server with a GUI) x64**.
@@ -52,13 +52,14 @@ On a third virtual machine, install Windows Server 2012 R2, specifically Windows
 
 
 ### Add the web server (IIS) and application server roles
+
 Add the Web Server (IIS) and Application Server roles, the .NET Framework 3.5 Features, the Active Directory module for Windows PowerShell, and other features required by SharePoint
 
 1.  Sign in as a PRIV domain administrator (PRIV\Administrator) and launch PowerShell.
 
 2.  Type the following commands. Note that it may be necessary to specify a different location for the source files for .NET Framework 3.5 features. These features are typically not present when Windows Server installs, but are available in the side-by-side (SxS) folder on the OS install disk sources folder, e.g., d:\Sources\SxS\.
 
-    ```
+    ```PowerShell
     import-module ServerManager
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,
     rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,
@@ -67,6 +68,7 @@ Add the Web Server (IIS) and Application Server roles, the .NET Framework 3.5 Fe
     ```
 
 ### Configure the server security policy
+
 Configure the server security policy to allow the newly-created accounts to run as services.
 
 1.  Launch the **Local Security Policy** program.   
@@ -91,12 +93,13 @@ Configure the server security policy to allow the newly-created accounts to run 
 17. Close Control Panel.  
 
 ### Change the IIS configuration
+
 There are two ways to change the IIS configuration to allow applications to use Windows Authentication mode. Make sure you are signed in as MIMAdmin and then follow one of these options.
 
 If you want to use PowerShell:
 1.  Right click on PowerShell and select **Run as administrator**.  
 2.  Stop IIS and unlock the application host settings using these commands  
-    ```
+    ```CMD
     iisreset /STOP
     C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
     iisreset /START
@@ -109,6 +112,7 @@ If you want to use a text editor such as Notepad:
 4. Save the file, and restart IIS with the PowerShell command `iisreset /START`
 
 ## Install SQL Server
+
 If SQL Server is not in the bastion environment already, install either SQL Server 2012 (Service Pack 1 or later) or SQL Server 2014. The following steps assume SQL 2014.
 
 1. Make sure you are signed in as MIMAdmin.
@@ -139,6 +143,7 @@ After the SharePoint prerequisites are installed, install SharePoint Foundation 
 5.  After the install completes, select to run the wizard.  
 
 ### Configure SharePoint
+
 Run the SharePoint Products Configuration Wizard to configure SharePoint.
 
 1.  On the Connect to a Server Farm tab, change to **Create a new server farm**.  
@@ -152,13 +157,14 @@ Run the SharePoint Products Configuration Wizard to configure SharePoint.
 9. Once the Creating a Site Collection Window appears, click **Skip** then **Finish**.  
 
 ## Create a SharePoint Foundation 2013 web application
+
 After the wizards complete, use PowerShell to create a SharePoint Foundation 2013 Web Application to host the MIM Portal. Since this walkthrough is for demonstration purposes, SSL will not be enabled.
 
 1.  Right click on SharePoint 2013 Management Shell, select **Run as administrator**, and run the following PowerShell script:
 
-    ```
+    ```PowerShell
     $dbManagedAccount = Get-SPManagedAccount -Identity PRIV\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"            -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
     ```
 
 2. A warning message will appear that Windows Classic authentication method is being used, and it may take several minutes for the final command to return.  When completed, the output will give the URL of the new portal.
@@ -167,11 +173,12 @@ After the wizards complete, use PowerShell to create a SharePoint Foundation 201
 > Keep the SharePoint 2013 Management Shell window open to use it in the next step.
 
 ## Create a SharePoint site collection
+
 Next, create a SharePoint Site Collection associated with that web application to host the MIM Portal.
 
 1.  Launch  **SharePoint 2013 Management Shell**, if not already open, and run the following PowerShell script
 
-    ```
+    ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
     $w = Get-SPWebApplication http://pamsrv.priv.contoso.local:82
     New-SPSite -Url $w.Url -Template $t -OwnerAlias PRIV\MIMAdmin                -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias PRIV\BackupAdmin
@@ -184,7 +191,7 @@ Next, create a SharePoint Site Collection associated with that web application t
 
 2.  Run the following PowerShell commands in the **SharePoint 2013 Management Shell**. This will isable SharePoint server-side viewstate, and the SharePoint task **Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)**.
 
-    ```
+    ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
     $contentService.ViewStateOnServer = $false;
     $contentService.Update();
