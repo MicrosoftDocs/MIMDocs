@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: binbin
-ms.date: 09/07/2017
+ms.date: 09/14/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -59,5 +59,9 @@ Status: Sept 7, 2017
 
 ## Next steps
 
-- [MIM Version release history](version-history.md) includes public release versions history of the Microsoft Identity Manager 2016 SP1.
 - [Support team blog build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) includes public release versions of the Identity products, including service packs, updates, rollups and hotfixes of MIM 2016, AAD Connect, FIM 2010 R2, and older build types.
+- [BHOLD concepts guide](./understand-explore/bhold-concepts-guide.md)
+- [BHOLD installation guide](./deploy-use/bhold-installation-guide.md)
+- [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md)
+- [MIM version history](./reference/version-history.md)
+
