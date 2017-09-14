@@ -26,7 +26,7 @@
 ### [BHOLD core installation](./deploy-use/bhold-core-installation.md)
 ### [BHOLD integration installation](./deploy-use/bhold-integration-installation.md)
 ### [BHOLD attestation installation](./deploy-use/behold-attestation-installation.md)
-### [BHOLD access management connector[(./deploy-use/bhold-access-mangement-connector-install.md)
+### [BHOLD access management connector](./deploy-use/bhold-access-mangement-connector-install.md)
 ### [BHOLD model generator installation](./deploy-use/bhold-model-generator-installation.md)
 ### [BHOLD reporting installation](./deploy-use/bhold-reporting-installation.md)
 ### [BHOLD analytics installation](./deploy-use/bhold-analytics-installation.md)
