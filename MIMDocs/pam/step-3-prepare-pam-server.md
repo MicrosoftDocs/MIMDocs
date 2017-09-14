@@ -76,37 +76,39 @@ Configure the server security policy to allow the newly-created accounts to run 
 3.  On the details pane, right click on **Log on as a service**, and select **Properties**.  
 4.  Click **Add User or Group**, and in the User and group names, type *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer*. Click **Check Names**, and click **OK**.  
 
-5.  Click **OK** to close the Properties window.  
+5.  Click **OK** to close the Properties window.
 6.  On the details pane, right click on **Deny access to this computer from the network**, and select **Properties**.  
 7.  Click **Add User or Group**, and in the User and group names, type *priv\mimmonitor; priv\MIMService; priv\mimcomponent* and click **OK**.  
-8.  Click **OK** to close the properties window.  
+8.  Click **OK** to close the properties window.
 
 9. On the details pane, right click on **Deny log on locally**, and select **Properties**.  
 10. Click **Add User or Group**, and in the User and group names, type *priv\mimmonitor; priv\MIMService; priv\mimcomponent* and click **OK**.  
 11. Click **OK** to close the properties window.  
 12. Close the Local Security Policy window.  
 
-13. Open Control Panel and switch to **User Accounts**.  
-14. Click **Give others access to this computer**.  
+13. Open Control Panel and switch to **User Accounts**.
+14. Click **Give others access to this computer**.
 15. Click **Add**, enter the user *MIMADMIN* in the domain *PRIV*, and on the next screen in the wizard, click **Add this user as an Administrator**.  
 16. Click **Add**, enter the user *SharePoint* in the domain *PRIV*, and on the next screen in the wizard, click **Add this user as an Administrator**.  
-17. Close Control Panel.  
+17. Close Control Panel.
 
 ### Change the IIS configuration
 
 There are two ways to change the IIS configuration to allow applications to use Windows Authentication mode. Make sure you are signed in as MIMAdmin and then follow one of these options.
 
 If you want to use PowerShell:
-1.  Right click on PowerShell and select **Run as administrator**.  
-2.  Stop IIS and unlock the application host settings using these commands  
+
+1.  Right click on PowerShell and select **Run as administrator**.
+2.  Stop IIS and unlock the application host settings using these commands
     ```CMD
     iisreset /STOP
     C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
     iisreset /START
     ```
 
-If you want to use a text editor such as Notepad:   
-1. Open the file **C:\Windows\System32\inetsrv\config\applicationHost.config**   
+If you want to use a text editor such as Notepad:
+
+1. Open the file **C:\Windows\System32\inetsrv\config\applicationHost.config**
 2. Scroll down to line 82 of that file. The tag value of **overrideModeDefault** should be **<section name="windowsAuthentication" overrideModeDefault="Deny" />**  
 3. Change the value of **overrideModeDefault** to *Allow*  
 4. Save the file, and restart IIS with the PowerShell command `iisreset /START`
@@ -116,7 +118,7 @@ If you want to use a text editor such as Notepad:
 If SQL Server is not in the bastion environment already, install either SQL Server 2012 (Service Pack 1 or later) or SQL Server 2014. The following steps assume SQL 2014.
 
 1. Make sure you are signed in as MIMAdmin.
-2. Right click on PowerShell and select **Run as administrator**.   
+2. Right click on PowerShell and select **Run as administrator**.
 3. Navigate to the directory where the SQL Server setup program is located.  
 4. Type the following command.  
     ```
