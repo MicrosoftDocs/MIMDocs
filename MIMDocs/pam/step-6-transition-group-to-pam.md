@@ -4,10 +4,10 @@
 title: Deploy PAM step 6 – Move group | Microsoft Docs
 description: Migrate a group to the PRIV forest so that they can be managed with Privilege Access Management.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Step 6 – Transition a group to Privileged Access Management
 
 >[!div class="step-by-step"]
@@ -44,38 +43,38 @@ The cmdlets need to be run once for each group, and once for each member of a gr
 
 2.  Launch PowerShell, and type the following commands.
 
-    ```
-    Import-Module MIMPAM
-    Import-Module ActiveDirectory
-    ```
+```PowerShell
+   Import-Module MIMPAM
+   Import-Module ActiveDirectory
+```
 
 3.  Create a corresponding user account in PRIV for a user account in an existing forest, for demonstration purposes.
 
     Type the following commands into PowerShell.  If you did not use the name *Jen* to create the user in contoso.local earlier, then change the parameters of the command as appropriate. The password 'Pass@word1' is just an example and should be changed to a unique password value.
 
-    ```
-    $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-    $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-    Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-    Set-ADUser –identity priv.Jen –Enabled 1
-    ```
+ ```PowerShell
+        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+        Set-ADUser –identity priv.Jen –Enabled 1
+  ```
 
 4. Copy a group and its member, Jen, from CONTOSO to PRIV domain, for demonstration purposes.
 
     Run the following commands, specifying the CORP domain admin (CONTOSO\Administrator) password where prompted:
 
-        ```
+ ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
-        ```
+ ```
 
     For reference, the **New-PAMGroup** command takes the following parameters:
 
-        -   The CORP forest domain name in NetBIOS form  
-        -   The name of the group to copy from that domain  
-        -   The CORP forest Domain Controller NetBIOS name  
-        -   The credentials of an domain admin user in the CORP forest  
+     -   The CORP forest domain name in NetBIOS form  
+     -   The name of the group to copy from that domain  
+     -   The CORP forest Domain Controller NetBIOS name  
+     -   The credentials of an domain admin user in the CORP forest  
 
 5.  (Optional) On CORPDC, remove Jen’s account from the **CONTOSO CorpAdmins** group, if it is still present.  This is only needed for demonstration purposes, to illustrate how permissions can be associated with accounts created in the PRIV forest.
 
@@ -83,7 +82,7 @@ The cmdlets need to be run once for each group, and once for each member of a gr
 
     2.  Launch PowerShell, run the following command and confirm the change.
 
-        ```
+        ```PowerShell
         Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
         ```
 
