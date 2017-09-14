@@ -84,7 +84,8 @@
 ### [Reporting custom reports and extensibility](https://technet.microsoft.com/library/jj133861)
 ## [Microsoft identity software: Public release build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Reference](./reference/microsoft-identity-manager-2016-developer-reference.md)
-## [Microsoft Identity Manager 2016 Developer Reference](./reference/microsoft-identity-manager-2016-developer-reference.md)
+## Developer Reference
+### [MIM 2016 developer reference](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ### [Certificate Management REST API Reference](./reference/certificate-management-rest-api-reference.md)
 #### [CM REST API Service Details](./reference/certificate-management-rest-api-service-details.md)
 #### [Sample Enrollment Walkthrough](./reference/sample-enrollment-walkthrough.md)
@@ -126,4 +127,9 @@
 ### [Management Agent Run error codes](./reference/maerrorcodes.md)
 ### [Function Reference for Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
 ### [Microsoft Identity Manager 2016 Password Management reference](./infrastructure/mim2016-password-management.md)
-## [Version history](./reference/version-history.md)
+### BHOLD
+#### [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md) 
+#### [BHOLD concepts guide](./understand-explore/bhold-concepts-guide.md)
+## Version history
+### [MIM version history](./reference/version-history.md)
+### [BHOLD version history](./reference/version-bhold-history.md)
