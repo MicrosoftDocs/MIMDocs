@@ -351,6 +351,6 @@ It is important to note that the BHOLD extensions to the MIM Portal support self
 
 ## Next steps
 
-- [BHOLD installation guide](./deploy-use/bhold-installation-guide.md)
-- [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md)
-- [BHOLD version history](./reference/version-bhold-history.md)
+- [BHOLD installation guide](bhold-installation-guide.md)
+- [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD version history](../reference/version-bhold-history.md)

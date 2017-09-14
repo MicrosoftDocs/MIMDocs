@@ -221,6 +221,6 @@ Before users of the FIM Portal can use the self-service features provided by BHO
 ## Next steps
 
 - For information about installing FIM Portal and other FIM features, see [Planning and Architecture](https://technet.microsoft.com/library/ee808044.aspx) in the Microsoft Forefront Technical Library.
-- [BHOLD installation guide](./deploy-use/bhold-installation-guide.md)
-- [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md)
-- [BHOLD version history](./reference/version-bhold-history.md)
+- [BHOLD installation guide](bhold-installation-guide.md)
+- [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD version history](../reference/version-bhold-history.md)
