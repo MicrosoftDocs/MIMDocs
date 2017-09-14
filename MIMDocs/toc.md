@@ -21,6 +21,8 @@
 ### [Install MIM: Service and Portal](install-mim-service-portal.md)
 ### [Install MIM: Sync databases](install-mim-sync-ad-service.md)
 ## [Upgrade from Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+## [Install MIM certificate management](./deploy-use/mim-cm-deploy.md)
+## [BHOLD installation topics](./deploy-use/bhold-installation-guide.md)
 ## [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ## [Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
 ## [Self-Service Password Reset](working-with-self-service-password-reset.md)
