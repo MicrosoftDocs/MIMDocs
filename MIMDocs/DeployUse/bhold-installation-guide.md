@@ -113,6 +113,6 @@ You cannot upgrade an existing BHOLD Suite installation. Instead, you must unins
 
 ## Next steps
 
-- [BHOLD installation guide](./deploy-use/bhold-installation-guide.md)
+- [BHOLD installation guide](bhold-installation-guide.md)
 - [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md)
 - [BHOLD version history](./reference/version-bhold-history.md)
