@@ -4,10 +4,10 @@
 title: Understand the PAM components | Microsoft Docs
 description: Privileged Access Management shares some components with MIM, and has a few of its own. Learn how these work together.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Understand the components of PAM
 
 Privileged Access Management keeps administrative access separate from day-to-day user accounts. This solution relies on parallel forests:
@@ -34,7 +33,7 @@ Privileged Access Management keeps administrative access separate from day-to-da
 
 The MIM solution as configured for PAM includes the following components:  
 
-- **MIM Service**: implements business logic for performing identity and access management operations, including privileged account management and elevation request handling.   
+- **MIM Service**: implements business logic for performing identity and access management operations, including privileged account management and elevation request handling.
 - **MIM Portal**: a SharePoint-based portal, hosted by SharePoint 2013, which provides an administrator management and configuration UI.
 - **MIM Service Database**: stored in SQL Server 2012 or 2014, and holds identity data and meta-data required for MIM Service.
 - **PAM Monitoring Service** and **PAM Component Service**: two services that manage the lifecycle of privileged accounts and assists the PRIV AD in group membership lifecycle.
