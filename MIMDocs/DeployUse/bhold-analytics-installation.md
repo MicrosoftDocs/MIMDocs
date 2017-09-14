@@ -48,5 +48,5 @@ To run the program file as an administrator, right-click the file and then click
 # Next steps
 
 - [BHOLD Core Installation](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx)
-- [BHOLD installation guide](./deploy-use/bhold-installation-guide.md)
-- [BHOLD version history](./reference/version-bhold-history.md)
+- [BHOLD installation guide](bhold-installation-guide.md)
+- [BHOLD version history](../reference/version-bhold-history.md)

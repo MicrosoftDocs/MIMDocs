@@ -38,6 +38,6 @@ To run the program file as an administrator, right-click the file and then click
 ## Next steps
 
 - [BHOLD FIM integration installation](https://technet.microsoft.com/library/jj134093(v=ws.10).aspx) To enable end-user self-service of roles, you can install the BHOLD FIM Integration module
-- [BHOLD installation guide](./deploy-use/bhold-installation-guide.md)
-- [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md)
-- [BHOLD version history](./reference/version-bhold-history.md)
+- [BHOLD installation guide](bhold-installation-guide.md)
+- [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD version history](../reference/version-bhold-history.md)
