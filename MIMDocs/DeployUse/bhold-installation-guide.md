@@ -113,5 +113,5 @@ You cannot upgrade an existing BHOLD Suite installation. Instead, you must unins
 
 ## Next steps
 
-- [Microsoft BHOLD Suite technical reference](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
-- [BHOLD Microsoft Suite concepts guide](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx)
+- [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD version history](../reference/version-bhold-history.md)
