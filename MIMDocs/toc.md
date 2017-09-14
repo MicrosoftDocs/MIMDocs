@@ -21,6 +21,15 @@
 ### [Install MIM: Service and Portal](install-mim-service-portal.md)
 ### [Install MIM: Sync databases](install-mim-sync-ad-service.md)
 ## [Upgrade from Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+## [Install MIM certificate management](./deploy-use/mim-cm-deploy.md)
+## [BHOLD installation topics](./deploy-use/bhold-installation-guide.md)
+### [BHOLD core installation](./deploy-use/bhold-core-installation.md)
+### [BHOLD integration installation](./deploy-use/bhold-integration-installation.md)
+### [BHOLD attestation installation](./deploy-use/bhold-attestation-installation.md)
+### [BHOLD model generator installation](./deploy-use/bhold-model-generator-installation.md)
+### [BHOLD reporting installation](./deploy-use/bhold-reporting-installation.md)
+### [BHOLD analytics installation](./deploy-use/bhold-analytics-installation.md)
+### [BHOLD access management connector installation](./deploy-use/bhold-access-management-connector-install.md)
 ## [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ## [Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
 ## [Self-Service Password Reset](working-with-self-service-password-reset.md)
@@ -75,7 +84,10 @@
 ### [Reporting custom reports and extensibility](https://technet.microsoft.com/library/jj133861)
 ## [Microsoft identity software: Public release build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Reference](./reference/microsoft-identity-manager-2016-developer-reference.md)
-## [Microsoft Identity Manager 2016 Developer Reference](./reference/microsoft-identity-manager-2016-developer-reference.md)
+## Developer Reference
+### [MIM 2016 developer reference](./reference/microsoft-identity-manager-2016-developer-reference.md)
+### BHOLD
+#### [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md) 
 ### [Certificate Management REST API Reference](./reference/certificate-management-rest-api-reference.md)
 #### [CM REST API Service Details](./reference/certificate-management-rest-api-service-details.md)
 #### [Sample Enrollment Walkthrough](./reference/sample-enrollment-walkthrough.md)
@@ -117,4 +129,8 @@
 ### [Management Agent Run error codes](./reference/maerrorcodes.md)
 ### [Function Reference for Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
 ### [Microsoft Identity Manager 2016 Password Management reference](./infrastructure/mim2016-password-management.md)
-## [Version history](./reference/version-history.md)
+### BHOLD
+#### [BHOLD concepts guide](./understand-explore/bhold-concepts-guide.md)
+## Version history
+### [MIM version history](./reference/version-history.md)
+### [BHOLD version history](./reference/version-bhold-history.md)
