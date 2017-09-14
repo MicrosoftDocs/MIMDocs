@@ -167,7 +167,7 @@ Create the user and service accounts for MIM Service and Portal setup. These acc
 
 ### Configure auditing and logon rights
 
-You need to set up auditing in order for the PAM configuration to be established across forests.  
+You need to set up auditing in order for the PAM configuration to be established across forests.
 
 1. Make sure you are signed in as the domain administrator (PRIV\\Administrator).
 
@@ -249,24 +249,24 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
 
 Perform the following steps on PRIVDC as a domain administrator.
 
-1. Launch **Active Directory Users and Computers**.  
-2. Right-click on the domain **priv.contoso.local** and select **Delegate Control**.  
-3. On the Selected Users and Groups tab, click **Add**.  
-4. On the Select Users, Computers, or Groups window, type *mimcomponent; mimmonitor; mimservice* and click **Check Names**. After the names are underlined, click **OK** then **Next**.  
+1. Launch **Active Directory Users and Computers**.
+2. Right-click on the domain **priv.contoso.local** and select **Delegate Control**.
+3. On the Selected Users and Groups tab, click **Add**.
+4. On the Select Users, Computers, or Groups window, type *mimcomponent; mimmonitor; mimservice* and click **Check Names**. After the names are underlined, click **OK** then **Next**.
 5. In the list of common tasks, select **Create, delete, and manage user accounts** and **Modify the membership of a group**, then click **Next** and **Finish**.
 
-6. Again, right click on domain **priv.contoso.local** and select **Delegate Control**.  
+6. Again, right click on domain **priv.contoso.local** and select **Delegate Control**.
 7. On the Selected Users and Groups tab, click **Add**.  
-8. On the Select Users, Computers, or Groups window, enter *MIMAdmin* and click **Check Names**. After the names are underlined, click **OK** then **Next**.  
-9. Select **custom task**, apply to **This folder**, with **General permissions**.    
-10. In the permissions list, select the following:  
-  - **Read**  
-  - **Write**  
-  - **Create all Child Objects**  
-  - **Delete all Child Objects**  
-  - **Read All Properties**  
-  - **Write All Properties**  
-  - **Migrate SID History**  
+8. On the Select Users, Computers, or Groups window, enter *MIMAdmin* and click **Check Names**. After the names are underlined, click **OK** then **Next**.
+9. Select **custom task**, apply to **This folder**, with **General permissions**.
+10. In the permissions list, select the following:
+  - **Read**
+  - **Write**
+  - **Create all Child Objects**
+  - **Delete all Child Objects**
+  - **Read All Properties**
+  - **Write All Properties**
+  - **Migrate SID History**
   Click **Next** then **Finish**.
 
 11. Once more, right-click on the domain **priv.contoso.local** and select **Delegate Control**.  
@@ -282,10 +282,12 @@ Perform the following steps on PRIVDC as a domain administrator.
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
 19.	Update the access control list as needed to ensure that MIM service and MIM component service can update memberships of groups protected by this ACL.  Type the command:
-  ```cmd
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
-  ```
+
+```cmd
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+```
+
 20. Restart the PRIVDC server so that these changes take effect.
 
 ## Prepare a PRIV workstation
