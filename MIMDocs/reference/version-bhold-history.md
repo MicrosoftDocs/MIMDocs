@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: binbin
-ms.date: 09/07/2017
+ms.date: 09/14/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -24,7 +24,11 @@ The Microsoft Identity Manager team regularly releases updates listed [here](ver
 
 Status: Sept 7, 2017
 
-[Download (Pending Release)]()
+[Download](https://www.microsoft.com/en-us/download/details.aspx?id=55950)
+
+### Enhancements 
+
+- Platform Update x86 to x64 
 
 ### Fixed issue
 
@@ -34,7 +38,7 @@ Status: Sept 7, 2017
 - Web interface does not show all the permissions
 - Fixes to the B1Common library
 - User can't assign Role to OrgUnit when Role has few permissions with cardinality
--Permission cardinality does not work for Max. users numbers
+- Permission cardinality does not work for Max. users numbers
 
 #### Access Management Connector
 
@@ -59,5 +63,9 @@ Status: Sept 7, 2017
 
 ## Next steps
 
-- [MIM Version release history](version-history.md) includes public release versions history of the Microsoft Identity Manager 2016 SP1.
 - [Support team blog build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) includes public release versions of the Identity products, including service packs, updates, rollups and hotfixes of MIM 2016, AAD Connect, FIM 2010 R2, and older build types.
+- [BHOLD concepts guide](../understand-explore/bhold-concepts-guide.md)
+- [BHOLD installation guide](../deploy-use/bhold-installation-guide.md)
+- [BHOLD developer reference](mim2016-bhold-developer-reference.md)
+- [MIM version history](version-history.md)
+

@@ -47,3 +47,9 @@ To install the BHOLD Attestation module, log on as a member of the Domain Admins
 Replace *\<Version\>* with the version number of the BHOLD Attestation release that you are installing.
 
 To run the program file as an administrator, right-click the file and then click **Run as administrator**.
+
+## Next steps
+
+- [BHOLD installation guide](bhold-installation-guide.md)
+- [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD version history](../reference/version-bhold-history.md)

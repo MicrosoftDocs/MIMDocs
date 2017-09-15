@@ -8,7 +8,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: mbaldwin
-ms.date: 09/006/2017
+ms.date: 09/14/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -765,3 +765,7 @@ This input script does not contain any commands for BHOLD. This is because this 
   <function name="roledeleteuser" roleid="" userid="" /> 
   </functions>
 ```
+
+## Next steps
+- [BHOLD concepts guide](../understand-explore/bhold-concepts-guide.md)
+- [BHOLD version history](version-bhold-history.md)

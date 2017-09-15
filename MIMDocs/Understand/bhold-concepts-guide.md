@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/06/2017
+ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
@@ -350,3 +350,7 @@ An important and powerful feature of Forefront Identity Manager 2010 and Forefro
 It is important to note that the BHOLD extensions to the MIM Portal support self-service role and workflow management, and reporting. Other BHOLD administration functions, as well as attestation, are provided by the web portals of the BHOLD modules, which are hosted separately from the MIM Portal.
 
 ## Next steps
+
+- [BHOLD installation guide](../deploy-use/bhold-installation-guide.md)
+- [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD version history](../reference/version-bhold-history.md)
