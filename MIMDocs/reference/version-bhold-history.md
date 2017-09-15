@@ -24,7 +24,11 @@ The Microsoft Identity Manager team regularly releases updates listed [here](ver
 
 Status: Sept 7, 2017
 
-[Download (Pending Release)]()
+[Download](https://www.microsoft.com/en-us/download/details.aspx?id=55950)
+
+### Enhancements 
+
+- Platform Update x86 to x64 
 
 ### Fixed issue
 
@@ -34,7 +38,7 @@ Status: Sept 7, 2017
 - Web interface does not show all the permissions
 - Fixes to the B1Common library
 - User can't assign Role to OrgUnit when Role has few permissions with cardinality
--Permission cardinality does not work for Max. users numbers
+- Permission cardinality does not work for Max. users numbers
 
 #### Access Management Connector
 
