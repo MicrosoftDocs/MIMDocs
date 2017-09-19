@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -53,8 +53,7 @@ For more details on the supported platforms for MIM 2016 take a look at the arti
 
 ## Pre-deployment steps
 
-The MIM CM configuration wizard requires information to be provided along the way in order for it to complete successfully. The pre-deployment steps will (INCOMPLETE THOUGHT HERE)
-
+The MIM CM configuration wizard requires information to be provided along the way in order for it to complete successfully. 
 ![](media/mim-cm-deploy/image003.png)
 
 ### Extending the schema
