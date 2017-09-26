@@ -5,7 +5,7 @@ title: Request Operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/26/2017
 ms.topic: reference
