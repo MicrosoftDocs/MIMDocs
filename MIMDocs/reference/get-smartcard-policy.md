@@ -5,9 +5,9 @@ title: Get Smartcard Policy | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
