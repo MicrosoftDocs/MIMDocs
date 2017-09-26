@@ -5,9 +5,9 @@ title: Microsoft Identity Manager 2016 Developer Reference | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
-ms.date: 07/07/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
