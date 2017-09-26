@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Resource Control Display Configuration XML Reference | Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: mbaldwin
-ms.date: 05/1/2017
+ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
