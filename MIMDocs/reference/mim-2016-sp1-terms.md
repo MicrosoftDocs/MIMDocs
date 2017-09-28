@@ -4,8 +4,8 @@
 title: Microsoft Identity Manger 2016 SP1 Terminology | Microsoft Docs
 description: Comprehensive list of terms referenced in Microsoft Identity
 Manager 2016 SP1.
-keywords: MIM , Terminology
-author: ingallsdesigns, fimguy
+keywords: MIM;Terminology
+author: ingallsdesigns;fimguy
 ms.author: fimguy
 manager: bhu
 ms.date: 08/28/2017
