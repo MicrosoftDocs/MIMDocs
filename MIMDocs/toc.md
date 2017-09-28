@@ -125,7 +125,6 @@
 #### [Approve or Reject a Pending PAM Request](./reference/privileged-access-management-approve-reject-pending-request.md)
 #### [Get PAM Session Info](./reference/privileged-access-management-get-session-info.md)
 ## Technical Reference
-### [Microsoft Identity Manger 2016 SP1 Terminology](./reference/mim-2016-sp1-terms.md)
 ### [Resource Control Display Configuration XML Reference](./reference/rcd-configuration-xml-reference.md)
 ### [Management Agent Run error codes](./reference/maerrorcodes.md)
 ### [Function Reference for Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
