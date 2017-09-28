@@ -6,8 +6,8 @@ description: Hybrid Audit Activity reports in Azure Active Directory lets you vi
 keywords:
 author: fimguy
 ms.author: fimguy
-manager: femila
-ms.date: 04/28/2017
+manager: bhu
+ms.date: 09/28/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -18,7 +18,7 @@ ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mwahl
+ms.reviewer: fimguy
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -48,6 +48,9 @@ The process of hybrid reporting follows these steps:
 4. The activity data is stored in Azure for one month.
 5. The Azure portal retrieves the audit reporting data and renders this as the audit within the Azure Audit Reporing Blade.
 
-## See also
+## Next Steps
 - Get more details about [Working with Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
 - Get more details about [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Get more details [report retention policies](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
+- Get more details [Microsoft Azure log integration (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
+- Get more details [Azure Active Directory reporting API](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
