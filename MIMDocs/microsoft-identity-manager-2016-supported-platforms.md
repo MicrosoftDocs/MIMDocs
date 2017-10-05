@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: femila
-ms.date: 08/11/2017
+ms.date: 10/5/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -38,10 +38,11 @@ This table describes the supported platforms and version for each component of M
 | | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
 | | Development environment (optional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017* |
 | | Additional connected system (optional) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 or later<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Other third-party products |
-| **MIM Service and Portal** | Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory for bastion environment PAM forest | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory for PAM scenario existing forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
-| | MIM Service database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| **MIM Service and Portal** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| |PAM Scenario:  Windows Server | Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| |PAM Scenario: Active Directory for bastion environment PAM forest | Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| |PAM Scenario: Active Directory for PAM scenario existing (CORP) forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | MIM Service database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
 | | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Notification Only) |
 | | Browser | All major browsers * (Mobile Devices Limited)|
