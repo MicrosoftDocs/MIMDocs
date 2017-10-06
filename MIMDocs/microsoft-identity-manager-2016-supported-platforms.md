@@ -46,7 +46,7 @@ This table describes the supported platforms and version for each component of M
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
 | | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Notification Only) |
 | | Browser | All major browsers * (Mobile Devices Limited)|
-| **MIM Service Reporting** | Windows Server | Windows Server 2012 <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| **MIM Service Reporting** | Windows Server |  Windows Server 2008 R2 SP1<br/>Windows Server 2012 <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Data warehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (With 4.4.1459)<br/> [SQL Server Version Compatibility for System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |
 | **MIM Password Reset and Registration Portals** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
