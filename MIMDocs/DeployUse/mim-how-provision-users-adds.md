@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager 2016 | Microsoft Docs
@@ -364,7 +364,7 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 
 
  >[!NOTE]
- Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
+Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
 
 ### Step 7: Create the workflow
 
