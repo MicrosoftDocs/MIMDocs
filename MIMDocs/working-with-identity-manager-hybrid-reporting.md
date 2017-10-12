@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Working with Hybrid reporting in Azure using MIM 2016  | Microsoft Docs
 description: Learn how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 keywords:
 author: fimguy
-ms.author: billmath
-manager: femila
-ms.date: 04/28/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
