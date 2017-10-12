@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Configure Windows Server 2012 R2 for MIM 2016 | Microsoft Docs
 description: Get the steps and minimum requirements to prepare Windows Server 2012 RS to work with MIM 2016.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security

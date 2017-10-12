@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Request certificates in Certificate Manager using templates | Microsoft Docs
 description: Learn how to use Certificate Manager to create and renew software certificates with profile templates.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
