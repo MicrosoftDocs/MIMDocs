@@ -5,9 +5,9 @@ title: Steps required to deploy Microsoft Identity Manager 2016 | Microsoft Docs
 description: Get the full list of steps involved in deploying Microsoft Identity Manager 2016, from preparing the environment to configuring the portals.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/27/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
