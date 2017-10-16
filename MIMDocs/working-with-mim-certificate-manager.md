@@ -260,8 +260,17 @@ A value must be specified for the ADFS URL. If no value is specified the Modern 
 
     - The serverFQDN, is the MIMCM server full computer name only.
 
-    - For help with the **ConfigureMIimCMClientAndRelyingParty.ps1** script, run `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    - For help with the **ConfigureMIimCMClientAndRelyingParty.ps1** script, run: </br> 
+    ```Powershell
+     get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
+    ```
 
 ## Deploy the app
 
 When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), or [Intune](https://technet.microsoft.com/library/dn613839.aspx) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.
+
+## Next steps
+
+- [Microsoft Identity Manager](microsoft-identity-manager/microsoft-identity-manager-2016.md)
+- [Configuring Profile Templates](https://technet.microsoft.com/library/cc708656)
+- [Managing Smart Card Applications](https://technet.microsoft.com/library/cc708681)
