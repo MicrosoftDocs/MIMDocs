@@ -271,6 +271,5 @@ When you set up the CM app, in the Download Center, download the file MIMDMModer
 
 ## Next steps
 
-- [Microsoft Identity Manager](microsoft-identity-manager/microsoft-identity-manager-2016.md)
 - [Configuring Profile Templates](https://technet.microsoft.com/library/cc708656)
 - [Managing Smart Card Applications](https://technet.microsoft.com/library/cc708681)
