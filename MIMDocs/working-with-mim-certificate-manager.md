@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -24,36 +24,39 @@ ms.suite: ems
 #ms.custom:
 
 ---
+# MIM Certificate Manager Windows store application deployment
 
-# Working with the MIM Certificate Manager
-After you have MIM 2016 and Certificate Manager up and running, you can deploy the MIM Certificate Manager Windows store application so that your users can easily manage their physical smart cards, virtual smart cards and software certificates. The steps to deploy MIM CM  app are as follows:
+After you have MIM 2016 and Certificate Manager up and running, you can deploy the MIM Certificate Manager Windows store application. The windows store application allows your users to manage their physical smart cards, virtual smart cards, and software certificates. The steps to deploy MIM CM  app are as follows:
 
-1.  Create a certificate template.
+1. Create a certificate template.
 
-2.  Create a profile template.
+2. Create a profile template.
 
-3.  Prepare the app.
+3. Prepare the app.
 
-4.  Deploy the app via SCCM or Intune.
+4. Deploy the app via SCCM or Intune.
 
 ## Create a certificate template
+
 You create a certificate template for the CM  app the same way you ordinarily would, except that you have to make sure that the certificate template is version 3 and up.
 
-1.  Log into the server running AD CS (the certificate server).
+1. Log in to the server running AD CS (the certificate server).
 
-2.  Open the MMC.
+2. Open the MMC.
 
-3.  Click **File &gt; Add/Remove Snap-in**.;
+3. Click **File &gt; Add/Remove Snap-in**.
 
-4.  In the Available snap-ins list, click **Certificate Templates** and then click **Add**.
+4. In the Available snap-ins list, click **Certificate Templates** and then click **Add**.
 
-5.  You will now see **Certificate Templates** under **Console Root** in the MMC. Double click it to view all the available certificate templates.
+5. You will now see **Certificate Templates** under **Console Root** in the MMC. Double click it to view all the available certificate templates.
 
-6.  Right-click the **Smartcard Logon** template and click **Duplicate Template**.
+6. Right-click the **Smartcard Logon** template and click **Duplicate Template**.
 
-7.  On the Compatibility tab, under Certification Authority select Windows Server 2008 and under Certificate Recipient select Windows 8.1/Windows Server 2012 R2.
-    This step is crucial because it makes sure that you have a version 3 (or higher) certificate template, and only version 3 works with the certificate manager app. Because the version is set the first time you create and save the certificate template, if you didn’t create the certificate template in this way there is no way to modify it to the correct version and you should create a new one before proceeding.
+7. On the Compatibility tab, under Certification Authority select Windows Server 2008. Under Certificate Recipient select Windows 8.1/Windows Server 2012 R2. The version template version is set the first time you create and save the certificate template. If you didn’t create the certificate template this way there is no way to modify it to the correct version.
 
+    >[!NOTE]
+    This step is crucial because it makes sure that you have a version 3 (or higher) certificate template. Only version 3 templates work with the certificate manager app.
+    
 8.  On the **General** tab, in the **Display Name** field, type the name you want to appear in the app's UI, such as **Virtual Smart Card Logon**.
 
 9. On the **Request Handling** tab, set the **Purpose** to **Signature and encryption** and under **Do the following…** select **Prompt the user during enrollment**.
@@ -76,11 +79,12 @@ You create a certificate template for the CM  app the same way you ordinarily wo
 16. From the list select the new template you created and click **OK**.
 
 ## Create a profile template
+
 Make sure when you create a profile template to set it to create/destroy the vSC and to remove the data collection. The CM app cannot handle collected data, so it’s important to disable it, as follows.
 
 1.  Log into the CM portal as a user with administrative privileges.
 
-2.  Go to Administration &gt; Manage Profile templates and make sure that the box is checked next to MIM CM Sample Smart Card Logon Profile Template and then click on Copy a selected profile template.
+2.  Go to Administration &gt; Manage Profile templates. Make sure that the box is checked next to **MIM CM Sample Smart Card Log on Profile Template** and then click on Copy a selected profile template.
 
 3.  Type the name of the profile template and click **OK**.
 
@@ -98,32 +102,33 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 
 10. In the left pane, click **Renew Policy &gt; Change general settings**. Select **Reuse card on renew** and click **OK**.
 
-11. You have to disable data collection items for each and every policy by clicking on the policy in the left pane, and then checking the box next to **Sample data item** and then click **Delete data collection items**. Then click **OK**.
+11. You have to disable data collection items for every policy by clicking on the policy in the left pane. You then need to check the box next to **Sample data item** click **Delete data collection items** and then click **OK**.
 
 ## Prepare the CM app for deployment
 
-1.  In the command prompt, run the following command to unpack the app and extract the content into a new subfolder named appx and create a copy so that you don’t modify the original file.
+1. In the command prompt, run the following command to unpack the app. The command will extract the content into a new subfolder named appx and create a copy so that you don’t modify the original file.
 
-    ```
+    ```cmd
     makeappx unpack /l /p <app package name>.appx /d ./appx
     ren <app package name>.appx <app package name>.appx.original
     cd appx
     ```
 
-2.  In the appx folder, change the name of the file called CustomDataExample.xml to Custom.data
+2. In the appx folder, change the name of the file called CustomDataExample.xml to Custom.data
 
-3.  Open the Custom,data file and modify the parameters as necessary.
+3. Open the Custom,data file and modify the parameters as necessary.
 
     |||
     |-|-|
     |MIMCM URL|The FQDN of the portal you used to configure CM. For example, https://mimcmServerAddress/certificatemanagement|
-    |ADFS URL|If you will be using AD FS, insert your AD FS URL. For example, https://adfsServerSame/adfs|
+    |ADFS URL|If you will be using AD FS, insert your AD FS URL. For example, https://adfsServerSame/adfs </br> If ADFS isn’t used, configure this setting with an empty string.  For example,  ```<ADFS URL=""/>``` |
     |PrivacyUrl|You can include an URL to a web page explaining what you do with the user details collected for certificate enrollment.|
     |SupportMail|You can include an email address for support issues.|
     |LobComplianceEnable|You can set this to true or false. By default it's set to true.|
     |MinimumPinLength|By default it's set to 6.|
     |NonAdmin|You can set this to true or false. By default it's set to false. Only modify this if you want users who are not admins on their computers to be able enroll and renew certificates.|
-
+>[!IMPORTANT]
+A value must be specified for the ADFS URL. If no value is specified the Modern App will error out on first usage.
 4.  Save the file and exit the editor.
 
 5.  Signing the package creates a signing file, so you have to delete the original signing file named AppxSignature.p7x.
@@ -138,13 +143,13 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 
 10. In the command prompt, run the following command to repack and sign the .appx file.
 
-    ```
+    ```cmd
     cd ..
     makeappx pack /l /d .\appx /p <app package name>.appx
     ```
     where app package name is the same name you used when you created the copy.
 
-    ```
+    ```cmd
     signtool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.ap
     px
     ```
@@ -152,13 +157,13 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 
 11. To work with AD FS Authentication:
 
-    -   Open the Virtual Smart Card application. This makes it easier for you to find the values needed for the next step.
+    -  Open the Virtual Smart Card application. This makes it easier for you to find the values needed for the next step.
 
-    -   To add the application as a client onto the AD FS server and configure CM on the server, on the AD FS server, open Windows PowerShell and run the command `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -  To add the application as a client onto the AD FS server and configure CM on the server, on the AD FS server, open Windows PowerShell and run the command `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
 
         The following is the ConfigureMimCMClientAndRelyingParty.ps1 script:
 
-        ```
+       ```PowerShell
         # HELP
 
         <#
@@ -249,13 +254,22 @@ Make sure when you create a profile template to set it to create/destroy the vSC
         Write-Host "RP Trust for MIM CM Service has been created"
         ```
 
-    -   Update the values of redirectUri and serverFQDN.
+    - Update the values of redirectUri and serverFQDN.
 
-    -   To find the redirectUri, in the Virtual Smart Card application, open the application settings panel, click **Settings**, and the redirect URI should be listed under the AD FS server address bar. The URI will only appear if an ADFS server address is configured.
+    - To find the redirectUri, in the Virtual Smart Card application, open the application settings panel, click **Settings**, and the redirect URI should be listed under the AD FS server address bar. The URI will only appear if an ADFS server address is configured.
 
-    -   The serverFQDN, is the MIMCM server full computer name only.
+    - The serverFQDN, is the MIMCM server full computer name only.
 
-    -   For help with the **ConfigureMIimCMClientAndRelyingParty.ps1** script, run `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    - For help with the **ConfigureMIimCMClientAndRelyingParty.ps1** script, run: </br> 
+    ```Powershell
+     get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
+    ```
 
 ## Deploy the app
+
 When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), or [Intune](https://technet.microsoft.com/library/dn613839.aspx) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.
+
+## Next steps
+
+- [Configuring Profile Templates](https://technet.microsoft.com/library/cc708656)
+- [Managing Smart Card Applications](https://technet.microsoft.com/library/cc708681)
