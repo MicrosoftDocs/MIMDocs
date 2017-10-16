@@ -128,7 +128,7 @@ Make sure when you create a profile template to set it to create/destroy the vSC
     |MinimumPinLength|By default it's set to 6.|
     |NonAdmin|You can set this to true or false. By default it's set to false. Only modify this if you want users who are not admins on their computers to be able enroll and renew certificates.|
 >[!IMPORTANT]
-A value must be specified for the ADFS URL. If not value is specified the Modern App will error out on first usage.
+A value must be specified for the ADFS URL. If no value is specified the Modern App will error out on first usage.
 4.  Save the file and exit the editor.
 
 5.  Signing the package creates a signing file, so you have to delete the original signing file named AppxSignature.p7x.
