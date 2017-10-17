@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -34,9 +34,9 @@ In addition to existing identity management functionality included in [FIM](http
 - New functionality in certificate management
   - [Certificate Management REST API Reference](./reference/certificate-management-rest-api-reference.md)
   - Support for multi-forest topologies.
-  - A Windows app for virtual smartcard
+  - [A Windows app for virtual smartcard](working-with-mim-certificate-manager.md)
   - Updated events and troubleshooting capabilities. 
-- Self-service scenarios now include Account Unlock and Azure MFA (multifactor authentication) gate for Password Reset.
+- [Self-service scenarios](working-with-self-service-password-reset.md) now include Account Unlock and Azure MFA (multifactor authentication) gate for Password Reset.
 
 ## Hybrid experience
 
