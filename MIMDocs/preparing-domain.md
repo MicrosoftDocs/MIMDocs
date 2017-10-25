@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 10/25/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -92,7 +92,8 @@ All the components of your MIM deployment need their own identities in the domai
     setspn -S http/mimservername.contoso.local Contoso\SharePoint
     setspn -S http/mimservername Contoso\SharePoint
     setspn -S FIMService/mimservername.contoso.local Contoso\MIMService
-    setspn -S FIMSynchronizationService/mimservername.contoso.local Contoso\MIMSync
+
+       
     ```
 
 >[!div class="step-by-step"]
