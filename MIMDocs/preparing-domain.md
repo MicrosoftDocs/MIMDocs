@@ -88,7 +88,7 @@ All the components of your MIM deployment need their own identities in the domai
 
 4.  Add SPNs to enable Kerberos authentication for service accounts
 
-    ```PowerShell
+    ```CMD
     setspn -S http/mimservername.contoso.local Contoso\SharePoint
     setspn -S http/mimservername Contoso\SharePoint
     setspn -S FIMService/mimservername.contoso.local Contoso\MIMService    
