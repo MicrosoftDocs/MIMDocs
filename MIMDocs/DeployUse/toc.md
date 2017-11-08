@@ -89,7 +89,7 @@
 ### BHOLD
 #### [BHOLD developer reference](/microsoft-identity-manager/reference/mim2016-bhold-developer-reference) 
 ### [Certificate Management REST API Reference](/microsoft-identity-manager/reference/certificate-management-rest-api-reference)
-#### [CM REST API Service Details](./reference/certificate-management-rest-api-service-details.md)
+#### [CM REST API Service Details](/microsoft-identity-manager/reference/certificate-management-rest-api-service-details.md)
 #### [Sample Enrollment Walkthrough](/microsoft-identity-manager/reference/sample-enrollment-walkthrough)
 #### [Get Profile Templates](/microsoft-identity-manager/reference/get-profile-templates)
 #### [Policy Operations](/microsoft-identity-manager/reference/policy-operations)
