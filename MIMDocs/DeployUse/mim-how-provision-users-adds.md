@@ -364,7 +364,7 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 
 
  >[!NOTE]
-Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
+ Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
 
 ### Step 7: Create the workflow
 
@@ -551,15 +551,7 @@ To accomplish these tasks, you run the following run profiles.
 | Fabrikam FIMMA   | 1. Export <br/> 2. Delta Import       |
 
 
-After the import from the FIM Service database, Britta Simon and the
-ExpectedRuleEntry object that links Britta to the
-
-AD User Outbound Synchronization Rule are staged in the Fabrikam FIMMA connector
-space. When you review
-
-Britta’s properties in the connector space, next to the attribute values that
-you have configured in the FIM Portal, you also find a valid reference to the
-Expected Rule Entry object. The following screen shot shows an example of this.
+After the import from the FIM Service database, Britta Simon and the ExpectedRuleEntry object that links Britta to the AD User Outbound Synchronization Rule are staged in the Fabrikam FIMMA connector space. When you review Britta’s properties in the connector space, next to the attribute values that you have configured in the FIM Portal, you also find a valid reference to the Expected Rule Entry object. The following screen shot shows an example of this.
 
 ![Connector space object properties](media/how-provision-users-adds/image025.jpg)
 
