@@ -64,8 +64,8 @@ Status: Sept 7, 2017
 ## Next steps
 
 - [Support team blog build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) includes public release versions of the Identity products, including service packs, updates, rollups and hotfixes of MIM 2016, AAD Connect, FIM 2010 R2, and older build types.
-- [BHOLD concepts guide](../understand-explore/bhold-concepts-guide.md)
-- [BHOLD installation guide](../deploy-use/bhold-installation-guide.md)
+- [BHOLD concepts guide](../bhold/bhold-concepts-guide.md)
+- [BHOLD installation guide](../bhold/bhold-installation-guide.md)
 - [BHOLD developer reference](mim2016-bhold-developer-reference.md)
 - [MIM version history](version-history.md)
 
