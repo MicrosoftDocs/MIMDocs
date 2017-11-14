@@ -767,5 +767,5 @@ This input script does not contain any commands for BHOLD. This is because this 
 ```
 
 ## Next steps
-- [BHOLD concepts guide](../understand-explore/bhold-concepts-guide.md)
+- [BHOLD concepts guide](../bhold/bhold-concepts-guide.md)
 - [BHOLD version history](version-bhold-history.md)
