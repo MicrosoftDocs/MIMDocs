@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 11/15/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -174,7 +174,7 @@ This section lists a series of steps to increase the performance of the initial 
 For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
 
 >[!IMPORTANT]
-Ensure that you have applied the best practices covered in the SQL setup section of this guide.                                                                                                                                                      |
+Ensure that you have applied the best practices covered in the SQL setup section of this guide. 
 
 ### Step 1: Configure the SQL server for initial data load
 The initial load of data can be a lengthy process. When you plan to initially load a lot of data, you can shorten the time it takes to populate the database by temporarily turning off full-text search and turning it on again after the export on the MIM 2016 management agent (FIM MA) has completed.
@@ -321,7 +321,7 @@ To implement SSL:
 
 7.  Save the file to any location. You will need to access this location in subsequent steps.
 
-8.  In Windows Internet Explorer®, browse to https://servername/certsrv. Replace servername with the name of the server issuing certificates.
+8.  Browse to https://servername/certsrv. Replace servername with the name of the server issuing certificates.
 
 9.  Click Request a new Certificate.
 
@@ -637,7 +637,9 @@ Avoid using activities that modify the MIM resources, such as the Function Evalu
 
 ### Understanding FIM Service Partitions
 
-The objective of MIM is to process requests that can be initiated by various MIM clients such as the FIM synchronization service and the self-service components according to your configured business policies. By design, each FIM service instance belongs to a logical group that consists of one or more FIM service instances, which is also known as FIM service partition. If you have only one FIM service instance deployed to handle the all requests, it is possible that you experience processing latencies. Some operations can even exceed the default timeout values that are appropriate for self-service operations. FIM service partitions can help you to address this issue. For additional information see Understanding FIM Service Partitions.
+The objective of MIM is to process requests that can be initiated by various MIM clients such as the FIM synchronization service and the self-service components according to your configured business policies. By design, each FIM service instance belongs to a logical group that consists of one or more FIM service instances, which is also known as FIM service partition. If you have only one FIM service instance deployed to handle the all requests, it is possible that you experience processing latencies. Some operations can even exceed the default timeout values that are appropriate for self-service operations. FIM service partitions can help you to address this issue.
+
+For additional information see [Understanding FIM Service Partitions](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx).
 
 ## Next steps
 - [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)
