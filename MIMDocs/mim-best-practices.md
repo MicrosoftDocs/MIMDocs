@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 11/15/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -90,7 +90,7 @@ Depending on how much memory you have on your SQL server and if you share the SQ
   WITH OVERRIDE
   ```
 
-  This example reconfigures the SQL server to use no more than 12 gigabyte (GB) of memory.
+  This example reconfigures the SQL server to use no more than 12 gigabytes (GB) of memory.
 
 4.  Verify the setting by using the following query:
 
@@ -108,13 +108,16 @@ Depending on how much memory you have on your SQL server and if you share the SQ
 
 ### Backup and recovery configuration
 
-In general, you should perform database backups according to your organization’s backup policy. If incremental log backups are not planned, the database should be set to the Simple recovery mode. Ensure that you understand the implications of the different recovery models before implementing your backup strategy as well as the disk space requirements for these models. Full recovery model requires frequent log backups to avoid high disk space usage. For more information, see [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370) and [FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864).
+In general, you should work with your database administrator to design a backup and recovery strategy. Some recommendations include:
+- Perform database backups according to your organization’s backup policy. 
+- If incremental log backups are not planned, the database should be set to the Simple recovery mode. 
+- Ensure that you understand the implications of the different recovery models before implementing your backup strategy. Learn the disk space requirements for these models. Full recovery model requires frequent log backups to avoid high disk space usage. 
 
-## Create a Backup Administrator account for the FIMService after installation
+For more information, see [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370) and [FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864).
 
+## Create a Backup Administrator account for the FIM Service after installation
 
->[!IMPORTANT]
-Members of the FIMService Administrators set have unique permissions critical to the operation of your FIM deployment. If you are unable to logon as part of the Administrators set, the only resolution is to roll back to a previous backup of the system. To mitigate this situation, we recommend that you add other users to the FIM Administrative set as part of your post-installation configuration.
+Members of the FIMService Administrators set have unique permissions critical to the operation of your MIM deployment. If you are unable to log on as part of the Administrators set, the only resolution is to roll back to a previous backup of the system. To mitigate this situation, we recommend that you add other users to the FIM Administrative set as part of your post-installation configuration.
 
 ## FIM Service
 
@@ -144,7 +147,7 @@ For further information, see [Configure Message Delivery Restrictions](http://go
 
 ### Disable SharePoint indexing
 
-We recommend that you disable Microsoft Office SharePoint® indexing. There are no documents that need to be indexed, and indexing causes many error log entries and potential performance problems with FIM 2010. To disable SharePoint indexing
+We recommend that you disable Microsoft Office SharePoint® indexing. There are no documents that need to be indexed. Indexing causes many error log entries and potential performance problems in MIM. To disable SharePoint indexing perform the steps below:
 
 1.  On the server that hosts the MIM 2016 Portal, click Start.
 
@@ -165,16 +168,16 @@ We recommend that you disable Microsoft Office SharePoint® indexing. There are 
 
 ## MIM 2016 Initial Data Load
 
-This section lists a series of steps to increase the performance of the initial data load from external system to FIM 2010. It is important to understand that a number of these steps are temporary during the initial population of the system and should be reset upon its completion. This is a one-time operation and is not a continuous synchronization.
+This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It is important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. This is a one-time operation and is not a continuous synchronization.
 
 >[!NOTE]
-For more information about synchronizing users between FIM 2010 and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
+For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
 
 >[!IMPORTANT]
-Ensure that you have applied the best practices covered in the SQL setup section of this guide.                                                                                                                                                      |
+Ensure that you have applied the best practices covered in the SQL setup section of this guide. 
 
 ### Step 1: Configure the SQL server for initial data load
-When you plan to initially load a lot of data, you can shorten the time it takes to populate the database by temporarily turning off the full-text search and turning it on again after the export on the MIM 2016 management agent (FIM MA) has completed.
+The initial load of data can be a lengthy process. When you plan to initially load a lot of data, you can shorten the time it takes to populate the database by temporarily turning off full-text search and turning it on again after the export on the MIM 2016 management agent (FIM MA) has completed.
 
 To temporarily turn off full-text search:
 
@@ -185,12 +188,9 @@ To temporarily turn off full-text search:
 3.  Run the following SQL statements:
 
 ```SQL
-ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING =
-MANUAL
+ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
-
-It is important that you understand the disk requirements for your SQL server’s recovery model. Depending on your backup schedule, you may consider using the Simple recovery mode during the initial system load to limit the disk space usage, but you need to understand the implications from a data loss perspective. When using Full recovery mode, you need to manage the disk usage through backups which includes frequent backups of the transaction log to prevent high disk space usage.
 
 >[!IMPORTANT]
 Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
@@ -201,16 +201,11 @@ During the initial load process, you should only apply the minimum configuration
 
 ### Step 3: Configure and populate the FIM Service with external identity data
 
-At this point you should follow the procedures described in the How Do I Synchronize Users from Active Directory
-
-Domain Services to FIM guide to configure and synchronize your system with users from Active Directory. If you need to synchronize Group information, the procedures for that process are described in the How Do I Synchronize Groups from Active Directory Domain Services to FIM guide.
+At this point you should follow the procedures described in the How Do I Synchronize Users from Active Directory Domain Services to FIM guide to configure and synchronize your system with users from Active Directory. If you need to synchronize Group information, the procedures for that process are described in the [How Do I Synchronize Groups from Active Directory Domain Services to FIM](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx) guide.
 
 #### Synchronization and export sequences
 
-To optimize performance, run an export after a synchronization run that results in a large number of pending export operations in a connector space.
-
-Then, run a confirming import run on the management agent that is associated with the affected connector space. For example, when you need to run synchronization run profiles on several management agents as part of an initial data load, you should run an export followed by a delta import after each individual synchronization run.
-
+To optimize performance, run an export after a synchronization run that results in a large number of pending export operations in a connector space. Then, run a confirming import run on the management agent that is associated with the affected connector space. For example, when you need to run synchronization run profiles on several management agents as part of an initial data load, you should run an export followed by a delta import after each individual synchronization run.
 For each source management agent that is part of your initialization cycle, perform the following steps:
 
 1.  Full import on a source management agent.
@@ -326,7 +321,7 @@ To implement SSL:
 
 7.  Save the file to any location. You will need to access this location in subsequent steps.
 
-8.  In Windows Internet Explorer®, browse to https://servername/certsrv. Replace servername with the name of the server issuing certificates.
+8.  Browse to https://servername/certsrv. Replace servername with the name of the server issuing certificates.
 
 9.  Click Request a new Certificate.
 
@@ -380,7 +375,7 @@ For optimal performance configuration:
 
 -   Apply the SQL setup best practices as described in the SQL setup section in this document.
 
--   Turn off SharePoint Indexing on the FIM 2010 R2 Portal site. For more information, see the Disable SharePoint indexing section in this document.
+-   Turn off SharePoint Indexing on the MIM Portal site. For more information, see the Disable SharePoint indexing section in this document.
 
 ## Feature Specific Best Practices  (I want to remove this and collapse this section and just have the specific features at header 2 level versus 3)
 
@@ -398,7 +393,7 @@ MIM provides two types of MPRs, Request and Set Transition:
 -  Request MPR (RMPR)
 
   - Used to define the access control policy (authentication, authorization, and action) for Create, Read, Update, or Delete (CRUD) operations against resources.
-  - Applied when a CRUD operation is issued against a target resource in FIM.
+  - Applied when a CRUD operation is issued against a target resource in MIM.
   - Scoped by the matching criteria defined in the rule, that is, to which CRUD requests the rule applies.
 
 - Set Transition MPR (TMPR)
@@ -411,7 +406,7 @@ For additional details, see [Designing Business Policy Rules](http://go.microsof
 
 #### Only enable MPRs as necessary
 
-Use the principle of least privilege when applying your configuration. MPRs control the access policy to your FIM deployment. Enable only those features used by most of your users. For example, not all users use FIM for group management, so associated group management MPRs should be disabled. By default, FIM ships with most non-administrator permissions disabled.
+Use the principle of least privilege when applying your configuration. MPRs control the access policy to your MIM deployment. Enable only those features used by most of your users. For example, not all users use MIM for group management, so associated group management MPRs should be disabled. By default, MIM ships with most non-administrator permissions disabled.
 
 #### Duplicate built-in MPRs instead of directly modifying
 When needing to modify the built-in MPRs, you should create a new MPR with the required configuration and turn off the built-in MPR. This ensures that any future changes to the built-in MPRs that are introduced through the upgrade process do not negatively impact your system configuration.
@@ -438,7 +433,7 @@ For attributes with the same access requirements that are not expected to change
 
 #### Avoid giving unrestricted access even to selected principal groups
 
-In FIM, permissions are defined as a positive assertion. Because FIM does not support Deny permissions, giving unrestricted access to a resource complicates providing any exclusions in the permissions. As a best practice, grant only the permissions necessary.
+In MIM, permissions are defined as a positive assertion. Because MIM does not support Deny permissions, giving unrestricted access to a resource complicates providing any exclusions in the permissions. As a best practice, grant only the permissions necessary.
 
 #### Use TMPRs to define custom entitlements
 
@@ -477,7 +472,7 @@ To remove an entitlement from the system (and revoke it from all members current
 
 3.  Disable the T-Out MPR.
 
-To remove an entitlement but leave the current members alone (for example, stop using FIM to manage the entitlement):
+To remove an entitlement but leave the current members alone (for example, stop using MIM to manage the entitlement):
 
 1.  Disable the T-In MPR. This avoids new grants.
 
@@ -512,11 +507,11 @@ The use of conditions based on multivalued reference attributes should be minimi
 
 #### Kiosk-like computers that are used for password reset should set local security to clear the virtual memory pagefile
 
-When deploying FIM 2010 password reset on a workstation intended to be a kiosk, we recommend that the Shutdown: Clear virtual memory pagefile local security policy setting be turned on to ensure that sensitive information from the process memory is not available to unauthorized users.
+When deploying the MIM password reset on a workstation intended to be a kiosk, we recommend that the Shutdown: Clear virtual memory pagefile local security policy setting be turned on to ensure that sensitive information from the process memory is not available to unauthorized users.
 
 #### Users should always register for a password reset on a computer that they are logged on to
 
-When a user attempts to register for password reset through a Web portal, FIM 2010 always initiates registration on behalf of the logged-on user, regardless of who is logged onto the Web site. Users should always register for a password reset on a computer that they are logged on to.
+When a user attempts to register for password reset through a Web portal, MIM always initiates registration on behalf of the logged-on user, regardless of who is logged onto the Web site. Users should always register for a password reset on a computer that they are logged on to.
 
 #### Do not set the AvoidPdcOnWan registry key to true
 
@@ -588,7 +583,7 @@ You should not delete your schema resources while you still have auditing requir
 
 #### Making regular expressions case insensitive
 
-In FIM, it can be helpful to make some regular expressions case insensitive. You can ignore case within a group by using ?!:. For example, for Employee Type, use
+In MIM, it can be helpful to make some regular expressions case insensitive. You can ignore case within a group by using ?!:. For example, for Employee Type, use
 
 `\^(?!:contractor\|full time employee)%.`
 
@@ -598,17 +593,17 @@ The Member attribute exposed to the synchronization engine is actually mapped to
 
 #### Leading and trailing spaces in strings are ignored
 
-In FIM, you can enter strings with leading and trailing spaces, but the FIM system ignores those spaces. If you submit a string with a leading and trailing space, the synchronization engine and Web services ignores those spaces.
+In MIM, you can enter strings with leading and trailing spaces, but the MIM system ignores those spaces. If you submit a string with a leading and trailing space, the synchronization engine and Web services ignores those spaces.
 
 #### Empty strings do not equal null
 
-Empty strings are not equal to null in this release of FIM. Empty string input is regarded as a valid value. Not present is regarded as a null.
+Empty strings are not equal to null in this release of MIM. Empty string input is regarded as a valid value. Not present is regarded as a null.
 
 ### Workflow and Request Processing
 
 #### Do not delete default workflows that are shipped with MIM 2016
 
-The following workflows are shipped with FIM 2010 and should not be deleted:
+The following workflows are shipped with MIM and should not be deleted:
 
 -   Expiration Workflow
 
@@ -642,4 +637,11 @@ Avoid using activities that modify the MIM resources, such as the Function Evalu
 
 ### Understanding FIM Service Partitions
 
-The objective of FIM is to process requests that can be initiated by various FIM clients such as the FIM synchronization service and the self-service components according to your configured business policies. By design, each FIM service instance belongs to a logical group that consists of one or more FIM service instances, which is also known as FIM service partition. If you have only one FIM service instance deployed to handle the all requests, it is possible that you experience processing latencies. Some operations can even exceed the default timeout values that are appropriate for self-service operations. FIM service partitions can help you to address this issue. For additional information see Understanding FIM Service Partitions.
+The objective of MIM is to process requests that can be initiated by various MIM clients such as the FIM synchronization service and the self-service components according to your configured business policies. By design, each FIM service instance belongs to a logical group that consists of one or more FIM service instances, which is also known as FIM service partition. If you have only one FIM service instance deployed to handle the all requests, it is possible that you experience processing latencies. Some operations can even exceed the default timeout values that are appropriate for self-service operations. FIM service partitions can help you to address this issue.
+
+For additional information see [Understanding FIM Service Partitions](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx).
+
+## Next steps
+- [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)
+- [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) 
+- [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370).
