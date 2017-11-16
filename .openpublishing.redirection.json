@@ -116,6 +116,66 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "MIMDocs/DeployUse/bhold-access-management-connector-install.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-access-management-connector-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/bhold-installation-guide.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-installation-guide",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/bhold-integration-installation.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-integration-installation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/bhold-model-generator-installation.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-model-generator-installation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/bhold-reporting-installation.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-reporting-installation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/mim-cm-deploy.md",
+            "redirect_url": "/microsoft-identity-manager/mim-cm-deploy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/mim-how-provision-users-adds.md",
+            "redirect_url": "/microsoft-identity-manager/mim-how-provision-users-adds",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/bhold-analytics-installation.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-analytics-installation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/bhold-attestation-installation.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-attestation-installation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/DeployUse/bhold-core-installation.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-core-installation.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/PlanDesign/mim-best-practices.md",
+            "redirect_url": "/microsoft-identity-manager/mim-best-practices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/Understand/bhold-concepts-guide.md",
+            "redirect_url": "/microsoft-identity-manager/bhold/bhold-concepts-guide",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "MIMDocs/DeployUse/working-with-self-service-password-reset.md",
             "redirect_url": "/microsoft-identity-manager/working-with-self-service-password-reset",
             "redirect_document_id": false
