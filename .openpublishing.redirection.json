@@ -156,7 +156,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "MIMDocs/DeployUse/bhold-attestation-installation",
+            "source_path": "MIMDocs/DeployUse/bhold-attestation-installation.md",
             "redirect_url": "/microsoft-identity-manager/bhold/bhold-attestation-installation",
             "redirect_document_id": false
         },
