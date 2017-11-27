@@ -202,7 +202,7 @@ Anchor values and object names would be varied as per the exposed web service. T
 
 5.  Drag **CreateValueChangeActivity** within **CreateAttributeChange** activity and set attribute value as per below screen.
 
-![](media/microsoft-identity-manager-2016-ma-ws-soap/attriibute-change.png)
+![](media/microsoft-identity-manager-2016-ma-ws-soap/attribute-change.png)
 
 **Note**: To use this activity you only need to pick and assign the respective field from drop down and then assign some value. For multivalued attributes, you can drop multiple *CreateValueChangeActivity* inside *CreateAttributeChangeActivity* activity.
 
