@@ -183,11 +183,11 @@ You should not change neither argument name nor direction nor argument type. If 
 
 1.  Add a **ForEach** activity just below **WebServiceCallActivity.** This activity will be used to iterate over all attributes (both anchors and non-anchors) of object type. While dragging this activity into your workflow designer surface it will automatically enumerate all attribute names of your object. Set required values as per below screen.
 
-![](media/microsoft-identity-manager-2016-ma-ws-soap/34a4340679ff0a120f49f4803b59ecf1.png)
+![](media/microsoft-identity-manager-2016-ma-ws-soap/webservicecallactivity.png)
 
 2.  Drag a **CreateCSEntryChangeScope** activity within **foreach** body. This activity is used to create an instance of CSEntryChange object in workflow domain for each respective record while retrieving data from target data source. Dragging this activity provides below screen. **CreateAnchorAttribute** activities are automatically inherited.
 
-![](media/microsoft-identity-manager-2016-ma-ws-soap/9715329e78890750fc8d951542527dcd.png)
+![](media/microsoft-identity-manager-2016-ma-ws-soap/createcsentrychangescope.png)
 
 3.  Set DN expression as **‘string.Concat ("Employee",item.EmployeeID)’**, AnchorValue for EmployeeID: **‘Convert.tostring(item.EmployeeID)’** and for ObjectTypeName as **Employee** Screen after modification looks like below:
 
