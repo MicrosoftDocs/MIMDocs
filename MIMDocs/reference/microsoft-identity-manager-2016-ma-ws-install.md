@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: MIM Installation steps for web config tool | Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/26/2017
+ms.date: 11/27/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security

@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/01/2017
+ms.date: 11/27/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security

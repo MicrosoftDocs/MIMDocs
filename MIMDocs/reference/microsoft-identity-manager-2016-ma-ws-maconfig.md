@@ -1,20 +1,20 @@
 ﻿---
 # required metadata
 
-title: MIM Installation steps for web config tool | Microsoft Docs
+title: Web Service Connector configuration options | Microsoft Docs
 description: This article covers the steps required to install the web service configuration tool
 keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/07/2017
+ms.date: 11/27/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ---
 
-# Web Service Connector Workflow Guide for SOAP
+# Web Service Connector configuration options
 This article describes the steps to configure a new Web Service Connector or to make changes in an existing Web Service Connector through Microsoft Identity Manager Synchronization Service UI. 
 >[!IMPORTANT]
 You will need to download and install the [web services connector](https://www.microsoft.com/download/details.aspx?id=51495) before attempting the steps in this article.
