@@ -32,32 +32,32 @@ This deployment guide will assist you deploying the sample REST JSON server to A
 1. Once downloaded, open the solution file using [Visual Studio 2017](https://www.visualstudio.com/downloads/)
 2. Deploy the solution by selecting the project right click and then publish
 
-  ![publish](media/microsoft-identity-manager-2016-ma-ws-restsample/d9bb29b7f937852b8997da5b2ba66299.png)
+  ![publish](media/microsoft-identity-manager-2016-ma-ws-restsample/publish-project.png)
 
 3. Select App Service
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/7d48023c2240618e3d1ef4029b183e75.png)
+![](media/microsoft-identity-manager-2016-ma-ws-restsample/app-service.png)
 
 4. Select or Create New Resource Group
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/ff5e41b022d48285d7909f1408ad99db.png)
+![](media/microsoft-identity-manager-2016-ma-ws-restsample/resource-group.png)
 
 5.   We will make all names the same and Select Create
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/48401a731ee0103016fbec14e21c838e.png)
+![](media/microsoft-identity-manager-2016-ma-ws-restsample/create.png)
 
 6. Now your App Service is created you can Publish , Click Publish
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/e6cc92d8f098bff9e3e0ccb95261edd5.png)
+![](media/microsoft-identity-manager-2016-ma-ws-restsample/publish.png)
 
 7. Once fully published you will see the sample REST API and site launched in your default browser
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/4be93466416be3b99b24efb677ddd01b.png)
+![](media/microsoft-identity-manager-2016-ma-ws-restsample/sample-rest-api.png)
 
 >[!NOTE]
 To update the JSON data and rest update the db.JSON file and update the deployment
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/67e81f23fda745064897ce2a2f68ef5f.png)
+![](media/microsoft-identity-manager-2016-ma-ws-restsample/db-json.png)
 
 Now we can continue to configure the REST Based Deployment guide
 
