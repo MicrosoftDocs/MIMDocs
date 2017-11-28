@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/27/2017
+ms.date: 11/28/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -36,28 +36,28 @@ This deployment guide will assist you deploying the sample REST JSON server to A
 
 3. Select App Service
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/app-service.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-restsample/app-service.png)
 
 4. Select or Create New Resource Group
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/resource-group.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-restsample/resource-group.png)
 
 5.   We will make all names the same and Select Create
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/create.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-restsample/create.png)
 
 6. Now your App Service is created you can Publish , Click Publish
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/publish.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-restsample/publish.png)
 
 7. Once fully published you will see the sample REST API and site launched in your default browser
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/sample-rest-api.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-restsample/sample-rest-api.png)
 
 >[!NOTE]
 To update the JSON data and rest update the db.JSON file and update the deployment
 
-![](media/microsoft-identity-manager-2016-ma-ws-restsample/db-json.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-restsample/db-json.png)
 
 Now we can continue to configure the REST Based Deployment guide
 
