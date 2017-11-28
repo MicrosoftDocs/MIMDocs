@@ -1,4 +1,4 @@
-﻿---
+56271﻿---
 # required metadata
 
 title: Identity Manager version history | Microsoft Docs
@@ -24,7 +24,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 
 Status: November 30, 2017
 
-[Download](https://www.microsoft.com/download/details.aspx?id=)
+[Download](https://www.microsoft.com/download/details.aspx?id=56271)
 
 ### Fixed issue
 
