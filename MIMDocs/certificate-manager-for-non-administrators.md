@@ -70,7 +70,7 @@ If a user isn’t a local administrator on their computer, they won’t be able 
 
     `makeappx pack /l /d .\appx /p <app package name>.appx`
 
-    s`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
+    `signtool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
 
 4.  Duplicate the profile template and adding the initial admin key to configure the MIM server:
 
