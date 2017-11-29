@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Deploy the password change notification service | Microsoft Docs
 description: Get the steps to install and configure the MIM Password Change Notification Service on your domain controller.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security

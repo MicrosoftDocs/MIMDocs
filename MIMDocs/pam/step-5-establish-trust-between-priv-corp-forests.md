@@ -4,10 +4,10 @@
 title: Deploy PAM step 5 – Forest link | Microsoft Docs
 description: Establish trust between the PRIV and CORP forests so that privileged users in PRIV can still access resources in CORP.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 11/29/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,13 +24,11 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Step 5 – Establish trust between PRIV and CORP forests
 
 >[!div class="step-by-step"]
 [« Step 4](step-4-install-mim-components-on-pam-server.md)
 [Step 6 »](step-6-transition-group-to-pam.md)
-
 
 For each CORP domain such as contoso.local, the PRIV and CONTOSO domain controllers need to be bound by a trust. This lets users in the PRIV domain to access resources on the CORP domain.
 
@@ -43,7 +41,7 @@ Before establishing trust, each domain controller must be configured for DNS nam
 
 2.  Verify that each existing CORP domain controller is able to route names to the PRIV forest. On each domain controller outside of the PRIV forest, such as CORPDC, launch PowerShell, and type the following command:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Check that the output indicates a nameserver record for the PRIV domain with the correct IP address.
@@ -62,14 +60,14 @@ On PAMSRV, establish one-way trust with each domain such as CORPDC so that the C
 
 3.  Type the following PowerShell commands for each existing forest. Enter the credential for the CORP domain administrator (CONTOSO\Administrator) when prompted.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  Type the following PowerShell commands for each domain in the existing forests. Enter the credential for the CORP domain administrator (CONTOSO\Administrator) when prompted.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -87,10 +85,10 @@ For each existing forest, enable read access to AD by PRIV administrators and th
 7.  In the list of common tasks, select **Read all user information**, then click **Next** and **Finish**.  
 8.  Close Active Directory Users and Computers.
 
-9.  Open a PowerShell window.  
-10.  Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:  
-    ```
-    netdom trust contoso.local /quarantine /domain priv.contoso.local
+9.  Open a PowerShell window.
+10.  Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:
+    ```cmd
+    netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
     The output should say either **Enabling SID history for this trust** or **SID history is already enabled for this trust**.
@@ -105,7 +103,7 @@ For each existing forest, enable read access to AD by PRIV administrators and th
 
 3.  Type the following PowerShell commands.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```

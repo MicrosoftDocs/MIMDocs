@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Set up a domain for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Create an Active Directory domain controller before installing MIM 2016
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/26/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -48,7 +48,7 @@ All the components of your MIM deployment need their own identities in the domai
 
 2. Create the following user accounts for MIM services. Start PowerShell and type the following PowerShell script to update the domain.
 
-    ```
+    ```PowerShell
     import-module activedirectory
     $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
     New-ADUser –SamAccountName MIMMA –name MIMMA
@@ -76,7 +76,7 @@ All the components of your MIM deployment need their own identities in the domai
 
 3.  Create security groups to all the groups.
 
-    ```
+    ```PowerShell
     New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncAdmins
     New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncOperators
     New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
@@ -88,11 +88,10 @@ All the components of your MIM deployment need their own identities in the domai
 
 4.  Add SPNs to enable Kerberos authentication for service accounts
 
-    ```
+    ```CMD
     setspn -S http/mimservername.contoso.local Contoso\SharePoint
     setspn -S http/mimservername Contoso\SharePoint
-    setspn -S FIMService/mimservername.contoso.local Contoso\MIMService
-    setspn -S FIMSynchronizationService/mimservername.contoso.local Contoso\MIMSync
+    setspn -S FIMService/mimservername.contoso.local Contoso\MIMService    
     ```
 
 >[!div class="step-by-step"]

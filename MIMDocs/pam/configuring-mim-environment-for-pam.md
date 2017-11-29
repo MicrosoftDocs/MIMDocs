@@ -4,10 +4,10 @@
 title: Configure MIM 2016 for Privileged Access Management | Microsoft Docs
 description: The roadmap for installing and MIM and configuring it for Privileged Access Management.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,15 +24,15 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Configure the MIM environment for Privileged Access Management
+
 There are seven steps to complete when setting up the environment for cross-forest access, installing and configuring Active Directory and Microsoft Identity Manager, and demonstrating a just-in-time access request.
 
 These steps are laid out so that you can start from scratch and build a test environment. If you're applying PAM to an existing environment, you can use your own domain controllers or user accounts instead of creating new ones to match the examples.
 
-1.  Prepare *CORPDC* server as a domain controller and *CORPWKSTN* as a member workstation.
+1. Prepare *CORPDC* server as a domain controller and *CORPWKSTN* as a member workstation.
 
-2.  Prepare *PRIVDC* server as a domain controller.
+2. Prepare *PRIVDC* server as a domain controller.
 
 3.  Prepare *PAMSRV* server in the *PRIV* forest.
 

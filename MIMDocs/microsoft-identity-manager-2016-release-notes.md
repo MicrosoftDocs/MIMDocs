@@ -5,9 +5,9 @@ title: Release Notes for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Find information about the recent MIM releases.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/21/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager

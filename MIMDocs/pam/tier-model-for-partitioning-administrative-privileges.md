@@ -4,10 +4,10 @@
 title: PAM environment tier model | Microsoft Docs
 description: Learn about the tier model that segregates your system based on vulnerability to risk.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/30/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,14 +24,13 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Tier model for partitioning administrative privileges
 
-In today’s threat environment, it's not a question of if an attacker will gain access to your systems, but when. That means that internal security is just as important as a strong perimeter defense. This article describes a security model intended to protect against elevation of privilege by segregating high-privilege activities from high-risk zones. This model provides a good user experience while still adhering to best practices and security principles.
+This article describes a security model intended to protect against elevation of privilege by segregating high-privilege activities from high-risk zones. This model provides a good user experience while still adhering to best practices and security principles.
 
 ## Elevation of Privilege in Active Directory forests
 
-Users, services, or applications accounts that are granted permanent administrative privileges to Windows Server Active Directory (AD) forests introduce a significant amount of risk to the organization’s mission and business. These accounts are often targeted by attackers because if they are compromised, the attacker then has privilege to connect to other servers or applications in the domain.
+Users, services, or applications accounts that are granted permanent administrative privileges to Windows Server Active Directory (AD) forests introduce a significant amount of risk to the organization’s mission and business. These accounts are often targeted by attackers because if they are compromised, the attacker has rights to connect to other servers or applications in the domain.
 
 The tier model creates divisions between administrators based on what resources they manage. Admins with control over user workstations are separated from those that control applications, or manage enterprise identities. Learn about this model in the [Securing privileged access reference material](http://aka.ms/tiermodel).
 
@@ -55,13 +54,16 @@ Logon restrictions should be enforced to ensure that highly privileged accounts 
 
 Logon restrictions can be enforced with:
 
-- Group Policy Logon Rights Restrictions, including:  
-    - Deny access to this computer from the network  
-    - Deny logon as a batch job  
-    - Deny logon as a service  
-    - Deny logon locally  
+- Group Policy Logon Rights Restrictions, including:
+    - Deny access to this computer from the network
+    - Deny logon as a batch job
+    - Deny logon as a service
+    - Deny logon locally
     - Deny logon through Remote Desktop settings  
 - Authentication policies and silos, if using Windows Server 2012 or later
 - Selective authentication, if the account is in a dedicated admin forest
 
-The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
+## Next steps
+
+- The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
+- [Priviledged Access workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
