@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -88,7 +88,7 @@ For each existing forest, enable read access to AD by PRIV administrators and th
 9.  Open a PowerShell window.
 10.  Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:
     ```cmd
-    netdom trust contoso.local /quarantine /domain priv.contoso.local
+    netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
     The output should say either **Enabling SID history for this trust** or **SID history is already enabled for this trust**.
