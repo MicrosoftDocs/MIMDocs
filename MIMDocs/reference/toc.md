@@ -89,8 +89,8 @@
 ### Web services connector
 #### [Overview of Generic web services connector](../reference/microsoft-identity-manager-2016-ma-ws.md)
 #### [Installation steps for web config tool](../reference/microsoft-identity-manager-2016-ma-ws-install.md)
-#### [Web Service Connector Workflow Guide for SOAP](../reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
-#### [Web Service Connector Workflow Guide for Sample Rest](../reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [Web Service Connector Workflow Guide for SOAP](../reference/microsoft-identity-manager-2016-ma-ws-soap.md)
+#### [Web Service Connector Workflow Guide for Sample Rest](../reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
 #### [Web Service Connector Rest Sample App Service](../reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
 #### [Web Service Connector configuration options](../reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
 ### BHOLD
