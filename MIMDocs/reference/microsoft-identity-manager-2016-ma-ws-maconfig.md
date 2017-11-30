@@ -102,12 +102,11 @@ You can create a new Web Service Connector using Management Agent designer. Afte
 
 After performing the above steps, you get a configured Connector.
 
-
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/sync-manager.png)
+ ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/sync-manager.png)
 
 Once, the Connector is configured, the next step is to configure the Run Profiles by clicking action **Configure Run Profiles**.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/extensions.png)
+ ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/extensions.png)
 
 ## Next steps
 
