@@ -142,8 +142,7 @@ This is only a sample to create workflow so modification as per API’s custom l
  
   ![imported name spaces](media/microsoft-identity-manager-2016-ma-ws-soap/imports.png)
 
-    After the reconfiguration of the calls we need to change the names of the attributes that change, add or change the namespace to variables that refer to the return structure of the API and object types that refers to the old namespace. The toolbox in right pane holds all the custom workflow specific activities that you require for configuration. Assign the values to the variables that you are going to use for your logic. Go to the bottom section of central workflow designer and declare the variables. In next step variables will be declared.
-
+ After the reconfiguration of the calls we need to change the names of the attributes that change, add or change the namespace to variables that refer to the return structure of the API and object types that refers to the old namespace. The toolbox in right pane holds all the custom workflow specific activities that you require for configuration. Assign the values to the variables that you are going to use for your logic. Go to the bottom section of central workflow designer and declare the variables. In next step variables will be declared.
 2.  Add a Sequence activity: drag the **Sequence** activity designer from the **Toolbox** and drop it on to the Windows Workflow Designer surface. Refer to the screens below.
 
     The [Sequence](https://msdn.microsoft.com/library/system.activities.statements.sequence.aspx) *activity contains an ordered collection of child activities that it executes in order.*
