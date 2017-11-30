@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/28/2017
+ms.date: 11/30/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -386,7 +386,7 @@ Save this project at the location: `%FIM_INSTALL_FOLDER%\Synchronization Service
 
 **Debug related activities**: Following custom activities are applicable when end user want to debug the workflow template.
 
-| **Activity Name** | *LogActivity* |
+| **Activity Name**   | *LogActivity* |
 |-------------------|---------------|---|
 | **Description**  | This activity is used to write text messages to the log file. For more information see, [Logging](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Generally, it is very helpful to do debugging in the production environment where you cannot debug your workflow easily.                                                       |   |
 | **GUI**          |                |   |
