@@ -1,4 +1,4 @@
-56271﻿---
+---
 # required metadata
 
 title: Identity Manager version history | Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/28/2017
+ms.date: 11/30/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
