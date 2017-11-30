@@ -139,16 +139,15 @@ This is only a sample to create workflow so modification as per API’s custom l
 1.  Click on the Full Import workflow to configure. **Arguments and Imports are already defined and are specific to the activities.** See the screens below for reference.
 
   ![Full import workflow arguments](media/microsoft-identity-manager-2016-ma-ws-soap/arguments.png)
-
-    
+ 
   ![imported name spaces](media/microsoft-identity-manager-2016-ma-ws-soap/imports.png)
 
     After the reconfiguration of the calls we need to change the names of the attributes that change, add or change the namespace to variables that refer to the return structure of the API and object types that refers to the old namespace. The toolbox in right pane holds all the custom workflow specific activities that you require for configuration. Assign the values to the variables that you are going to use for your logic. Go to the bottom section of central workflow designer and declare the variables. In next step variables will be declared.
 
 2.  Add a Sequence activity: drag the **Sequence** activity designer from the **Toolbox** and drop it on to the Windows Workflow Designer surface. Refer to the screens below.
 
-    *The* [Sequence](https://msdn.microsoft.com/en-us/library/system.activities.statements.sequence.aspx) *activity contains an ordered collection of child activities that it executes in order.*
-  ![sequence](media/microsoft-identity-manager-2016-ma-ws-soap/full-import-sequence.png)
+    The [Sequence](https://msdn.microsoft.com/library/system.activities.statements.sequence.aspx) *activity contains an ordered collection of child activities that it executes in order.*
+   ![sequence](media/microsoft-identity-manager-2016-ma-ws-soap/full-import-sequence.png)
 
 3.  To add a variable locate ‘Create Variable’. Type ‘wsResponse’ for *Name*, lick on *Variable type* dropdown and select ‘Browse for Types’. Clicking  this will open a popup. Select generated--\>default--\>Response. Keep ‘Scope’ and ‘Default’ values unselected. Alternatively we can set these values at Properties box from right hand side pane.
 
@@ -192,9 +191,8 @@ You should not change neither argument name nor direction nor argument type. If 
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/get-employeebyid.png)
 
-    [!NOTE]
-    Anchor values and object names would be varied as per the exposed web service. This is an example.
-
+   [!NOTE]
+   Anchor values and object names would be varied as per the exposed web service. This is an example.
 4.  Drag a **CreateAttributeChange** activities below the **CreateAnchorAttribute** activity. Number of activities to be dragged would be equal to the number of non-anchor attributes. See below for reference.
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/create-anchor.png)
@@ -202,8 +200,7 @@ You should not change neither argument name nor direction nor argument type. If 
 5.  Drag **CreateValueChangeActivity** within **CreateAttributeChange** activity and set attribute value as per below screen.
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/attribute-change.png)
-
-    [!NOTE] To use this activity you only need to pick and assign the respective field from drop down and then assign some value. For multivalued attributes, you can drop multiple *CreateValueChangeActivity* inside *CreateAttributeChangeActivity* activity.
+   [!NOTE] To use this activity you only need to pick and assign the respective field from drop down and then assign some value. For multivalued attributes, you can drop multiple *CreateValueChangeActivity* inside *CreateAttributeChangeActivity* activity.
 
 6.  If we want to add some condition against an attribute then **If** activity could be added. Refer below screen for example.
 
