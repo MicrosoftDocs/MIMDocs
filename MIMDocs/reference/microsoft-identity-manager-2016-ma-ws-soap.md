@@ -164,19 +164,19 @@ This is only a sample to create workflow so modification as per API’s custom l
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/service-name-operation.png)
 
-To use this activity you must provide/set following properties:-
+  To use this activity you must provide/set following properties:-
 
--  **Service Name**: - Pick a Web service name which you would like to call.
+  -  **Service Name**: - Pick a Web service name which you would like to call.
 
--  **Endpoint Name**: - Pick an end point name of selected service.
+  -  **Endpoint Name**: - Pick an end point name of selected service.
 
--  **Operation Name**: - Pick the respective operation of service.
+  -  **Operation Name**: - Pick the respective operation of service.
 
--  **Argument**: - On clicking () it will open arguments dialog from there you can assign argument values. Example screen shot –
+  -  **Argument**: - On clicking () it will open arguments dialog from there you can assign argument values. Example screen shot –
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/get-employeebyid.png)
 
-You should not change neither argument name nor direction nor argument type. If you accidentally changed any of them, the activity would become invalid. Only the *Value* column needs to set here. Like here ‘*wsResponse’* which is a variable of type *Response* is being set here.
+  You should not change neither argument name nor direction nor argument type. If you accidentally changed any of them, the activity would become invalid. Only the *Value* column needs to set here. Like here ‘*wsResponse’* which is a variable of type *Response* is being set here.
 
 1.  Add a **ForEach** activity just below **WebServiceCallActivity.** This activity will be used to iterate over all attributes (both anchors and non-anchors) of object type. While dragging this activity into your workflow designer surface it will automatically enumerate all attribute names of your object. Set required values as per below screen.
 
@@ -199,6 +199,7 @@ You should not change neither argument name nor direction nor argument type. If 
 5.  Drag **CreateValueChangeActivity** within **CreateAttributeChange** activity and set attribute value as per below screen.
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/attribute-change.png)
+
    [!NOTE] To use this activity you only need to pick and assign the respective field from drop down and then assign some value. For multivalued attributes, you can drop multiple *CreateValueChangeActivity* inside *CreateAttributeChangeActivity* activity.
 
 6.  If we want to add some condition against an attribute then **If** activity could be added. Refer below screen for example.
@@ -236,8 +237,8 @@ The user running the Web Service Configuration tool will require the following p
 
 2.  Add a Sequence activity: drag the **Sequence** activity designer from the **Toolbox** and drop it on to the Windows Workflow Designer surface. The [Sequence](https://msdn.microsoft.com/en-us/library/system.activities.statements.sequence.aspx) activity contains an ordered collection of child activities that it executes in order.* Click on *Create Variable* link and Assign the values to the variables that you are going to use for your logic.
 
->[!NOTE]
-How to add a variable is already described in detail above in Full Import workflow creation.
+  >[!NOTE]
+  How to add a variable is already described in detail above in Full Import workflow creation.
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/export-add.png)
 
@@ -295,7 +296,7 @@ How to add a variable is already described in detail above in Full Import workfl
 
   ![](media/microsoft-identity-manager-2016-ma-ws-soap/add-employee-attribute.png)
 
-Do not change the argument name or direction nor the argument type. If you accidentally changed any of them, the activity will become invalid. Only the *Value* column needs to set here. Like here **wsResponse** which is a variable of type **Response** is being set here and `employee` of type `Employee`.
+  Do not change the argument name or direction nor the argument type. If you accidentally changed any of them, the activity will become invalid. Only the *Value* column needs to set here. Like here **wsResponse** which is a variable of type **Response** is being set here and `employee` of type `Employee`.
 
 17.  Finally add an **If** activity to check response return from web service operation. This is the end of Export-Add workflow creation. Refer below.
 
