@@ -143,13 +143,12 @@ This is only a sample to create workflow so modification as per API’s custom l
     
   ![imported name spaces](media/microsoft-identity-manager-2016-ma-ws-soap/imports.png)
 
-After the reconfiguration of the calls we need to change the names of the attributes that change, add or change the namespace to variables that refer to the return structure of the API and object types that refers to the old namespace. The toolbox in right pane holds all the custom workflow specific activities that you require for configuration. Assign the values to the variables that you are going to use for your logic. Go to the bottom section of central workflow designer and declare the variables. In next step variables will be declared.
+    After the reconfiguration of the calls we need to change the names of the attributes that change, add or change the namespace to variables that refer to the return structure of the API and object types that refers to the old namespace. The toolbox in right pane holds all the custom workflow specific activities that you require for configuration. Assign the values to the variables that you are going to use for your logic. Go to the bottom section of central workflow designer and declare the variables. In next step variables will be declared.
 
 2.  Add a Sequence activity: drag the **Sequence** activity designer from the **Toolbox** and drop it on to the Windows Workflow Designer surface. Refer to the screens below.
 
-*The* [Sequence](https://msdn.microsoft.com/en-us/library/system.activities.statements.sequence.aspx) *activity contains an ordered collection of child activities that it executes in order.*
-
-   ![sequence](media/microsoft-identity-manager-2016-ma-ws-soap/full-import-sequence.png)
+    *The* [Sequence](https://msdn.microsoft.com/en-us/library/system.activities.statements.sequence.aspx) *activity contains an ordered collection of child activities that it executes in order.*
+  ![sequence](media/microsoft-identity-manager-2016-ma-ws-soap/full-import-sequence.png)
 
 3.  To add a variable locate ‘Create Variable’. Type ‘wsResponse’ for *Name*, lick on *Variable type* dropdown and select ‘Browse for Types’. Clicking  this will open a popup. Select generated--\>default--\>Response. Keep ‘Scope’ and ‘Default’ values unselected. Alternatively we can set these values at Properties box from right hand side pane.
 
@@ -193,8 +192,8 @@ You should not change neither argument name nor direction nor argument type. If 
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/get-employeebyid.png)
 
->[!NOTE]
-Anchor values and object names would be varied as per the exposed web service. This is an example.
+    [!NOTE]
+    Anchor values and object names would be varied as per the exposed web service. This is an example.
 
 4.  Drag a **CreateAttributeChange** activities below the **CreateAnchorAttribute** activity. Number of activities to be dragged would be equal to the number of non-anchor attributes. See below for reference.
 
@@ -204,7 +203,7 @@ Anchor values and object names would be varied as per the exposed web service. T
 
     ![](media/microsoft-identity-manager-2016-ma-ws-soap/attribute-change.png)
 
-**Note**: To use this activity you only need to pick and assign the respective field from drop down and then assign some value. For multivalued attributes, you can drop multiple *CreateValueChangeActivity* inside *CreateAttributeChangeActivity* activity.
+    [!NOTE] To use this activity you only need to pick and assign the respective field from drop down and then assign some value. For multivalued attributes, you can drop multiple *CreateValueChangeActivity* inside *CreateAttributeChangeActivity* activity.
 
 6.  If we want to add some condition against an attribute then **If** activity could be added. Refer below screen for example.
 
@@ -222,7 +221,7 @@ Default projects should be downloaded and saved at the following location on the
 
 While running the executable file, it prompts to specify the location for installation; you must specify the above location.
 
->[!IMPORTAT]
+[!IMPORTAT]
 Project file can be saved and opened from any location (with the appropriate access privileges of its executor); however, only project files that are saved to `Synchronization Service\Extension` folder will be able to get selected in the Web Service connector wizard accessed through MIM Sync UI.
 
 The user running the Web Service Configuration tool will require the following privileges:
@@ -250,61 +249,61 @@ How to add a variable is already described in detail above in Full Import workfl
 
 4.  Click on **properties** and set *Values* field as per below screen. Here **objectToExport** is argument.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-sequence.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-sequence.png)
 
 5.  Set **DisplayName** as **ForEach\<AnchorAttribute\>**
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/add-sequence.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/add-sequence.png)
 
 6.  Set `TypeArgument` as `Microsoft.MetadirectoryServices.AnchorAttribute`.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-anchor.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-anchor.png)
 
 7.  Add a **switch** activity within **ForEach** body of AnchorAttribute.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-types.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-types.png)
 
 8.  Add an expression as per below screen.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch.png)
 
 9.  Click on ‘**Add a new case’** and type ‘**EmployeeId’** field. Drag a `Sequence` activity and within it add an `Assign` activity.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-employeeid.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-employeeid.png)
 
 10.  Assign ‘**To’** and ‘**Value’** properties for **Assign** activity.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/anchor-attribute-name.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/anchor-attribute-name.png)
 
 11.  Above forEach activity is used for anchor values. Add another `ForEach` activity to assign values for non-anchor values. Here `AttributeChange` is being used.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-change.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-change.png)
 
 12.  Add a **switch** activity within `ForEach` body of `AttributeChange`.   
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/attribute-name-wrapper.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/attribute-name-wrapper.png)
 
 13.  Add an expression as per below screen.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-expression.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-expression.png)
 
 14.  Click on ‘**Add a new case’** and type ‘**FirstName** field. Drag a `Sequence` activity and within it add an `Assign` activity. Assign `To` and `Value` properties for `Assign` activity.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/switch-firstname.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/switch-firstname.png)
 
 15.  Similarly add all require attributes like LastName, Email etc. 
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch-anchor.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-switch-anchor.png)
 
 16.  Drag a **WebServiceCallActivity** and set **Values** for its **Arguments.**
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/add-employee-attribute.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/add-employee-attribute.png)
 
 Do not change the argument name or direction nor the argument type. If you accidentally changed any of them, the activity will become invalid. Only the *Value* column needs to set here. Like here **wsResponse** which is a variable of type **Response** is being set here and `employee` of type `Employee`.
 
 17.  Finally add an **If** activity to check response return from web service operation. This is the end of Export-Add workflow creation. Refer below.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-soap/create-csentry-change.png)
+  ![](media/microsoft-identity-manager-2016-ma-ws-soap/create-csentry-change.png)
 
 Save this project at the location: `%FIM_INSTALL_FOLDER%\Synchronization Service\Extensions`.
 
@@ -352,7 +351,7 @@ Save this project at the location: `%FIM_INSTALL_FOLDER%\Synchronization Service
 
   ![](media/microsoft-identity-manager-2016-ma-ws-soap/delete-employee.png)
 
-You should not change neither argument name nor direction nor argument type.If you accidentally changed any of them, the activity would become invalid. Only the `Value` column needs to set here. Like here `employeeID` which is a variable of type *string* is being set here.
+    You should not change neither argument name nor direction nor argument type.If you accidentally changed any of them, the activity would become invalid. Only the `Value` column needs to set here. Like here `employeeID` which is a variable of type *string* is being set here.
 
 12.  Finally add an **If** activity to check response return from web service operation. This is the end of Export-Add workflow creation. Refer below.
 
@@ -380,7 +379,7 @@ Save this project at the location: `%FIM_INSTALL_FOLDER%\Synchronization Service
 
   ![](media/microsoft-identity-manager-2016-ma-ws-soap/wsresponse.png)
 
-You should not change neither argument name nor direction nor argument type.If you accidentally changed any of them, the activity would become invalid. Only the *Value* column needs to set here. Like here ‘*wsResponse’* which is a variable of type *Response* is being set here and `employee` of type `Employee`.
+    You should not change neither argument name nor direction nor argument type.If you accidentally changed any of them, the activity would become invalid. Only the *Value* column needs to set here. Like here ‘*wsResponse’* which is a variable of type *Response* is being set here and `employee` of type `Employee`.
 
 7.  Finally add an `If` activity to check response return from web service operation. This is the end of Export-Add workflow creation.
 
