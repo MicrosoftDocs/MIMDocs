@@ -87,12 +87,12 @@
 ## Developer Reference
 ### [MIM 2016 developer reference](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ### Web services connector
-#### [Overview of Generic web services connector](../reference/microsoft-identity-manager-2016-ma-ws.md)
-#### [Installation steps for web config tool](../reference/microsoft-identity-manager-2016-ma-ws-install.md)
-#### [Web Service Connector Workflow Guide for SOAP](../reference/microsoft-identity-manager-2016-ma-ws-soap.md)
-#### [Web Service Connector Workflow Guide for Sample Rest](../reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
-#### [Web Service Connector Rest Sample App Service](../reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
-#### [Web Service Connector configuration options](../reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [Overview of Generic web services connector](./reference/microsoft-identity-manager-2016-ma-ws.md)
+#### [Installation steps for web config tool](./reference/microsoft-identity-manager-2016-ma-ws-install.md)
+#### [Web Service Connector Workflow Guide for SOAP](./reference/microsoft-identity-manager-2016-ma-ws-soap.md)
+#### [Web Service Connector Workflow Guide for Sample Rest](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
+#### [Web Service Connector Rest Sample App Service](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
+#### [Web Service Connector configuration options](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
 ### BHOLD
 #### [BHOLD developer reference](./reference/mim2016-bhold-developer-reference.md) 
 ### [Certificate Management REST API Reference](./reference/certificate-management-rest-api-reference.md)
