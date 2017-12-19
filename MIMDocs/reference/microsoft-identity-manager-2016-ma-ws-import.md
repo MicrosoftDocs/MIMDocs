@@ -1,11 +1,11 @@
 ﻿---
 # required metadata
 
-title: Importing Web Services Connector | Microsoft Docs
-description: Importing Web Services Connector with multiple ws configurations
+title: Microsoft Identity Manager Importing Web Services Connector | Microsoft Docs
+description: Microsoft Identity Manager Importing Web Services Connector with multiple ws configurations
 keywords:
 author: fimguy
-ms.author: fimguy
+ms.author: davidste
 manager: bhu
 ms.date: 12/19/2017
 ms.topic: get-started-article
@@ -20,8 +20,7 @@ In case when the “Import server configuration” operation which contains “W
 
 It happens because of limitation in "Synchronization Service", which cannot import server configuration with "Web Service management agent" and shows an error "Unable to retrieve configuration parameters from the extension". The configuration of "Web Service management agent" in some cases can contain invalid setting which it is necessary to fix. 
 
-
-How to fix this issue: 
+# How to fix this issue
 
 Copy server configuration files into the destination server. 
 
