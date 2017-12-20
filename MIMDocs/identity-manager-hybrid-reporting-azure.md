@@ -39,7 +39,7 @@ Hybrid audit reporting helps IT professionals address common identity management
 
 ## How does it work?
 
-To collect the on-premises data, you first install a reporting agent on your Identity Manager 2016 server. The reporting agent is downloaded from the Microsoft Download Page [here](https://www.microsoft.com/en-us/download/details.aspx?id=55112).
+To collect the on-premises data, you first install a reporting agent on your Identity Manager 2016 server. The reporting agent is downloaded from the Microsoft Download Page [here](https://www.microsoft.com/download/details.aspx?id=55112).
 
 The process of hybrid reporting follows these steps:
 1. After the reporting agent is installed, the Identity Manager activity data is sent to the Windows Event Log.
@@ -50,7 +50,7 @@ The process of hybrid reporting follows these steps:
 
 ## Next Steps
 - Get more details about [Working with Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
-- Get more details about [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- Get more details [report retention policies](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
-- Get more details [Microsoft Azure log integration (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
-- Get more details [Azure Active Directory reporting API](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
+- Get more details about [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Get more details [report retention policies](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- Get more details [Microsoft Azure log integration (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- Get more details [Azure Active Directory reporting API](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
