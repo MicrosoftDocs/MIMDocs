@@ -2,7 +2,8 @@
 # required metadata
 
 title: Web Service Connector configuration options | Microsoft Docs
-description: This article covers the steps required to install the web service configuration tool
+titleSuffix: 'Microsoft Identity Manager'
+description: This article covers the steps required to install the Web Service Configuration Tool.
 keywords:
 author: barclayn
 ms.author: barclayn
@@ -15,106 +16,81 @@ ms.assetid:
 ---
 
 # Web Service Connector configuration options
-This article describes the steps to configure a new Web Service Connector or to make changes in an existing Web Service Connector through Microsoft Identity Manager Synchronization Service UI. 
->[!IMPORTANT]
-You will need to download and install the [web services connector](https://www.microsoft.com/download/details.aspx?id=51495) before attempting the steps in this article.
+This article describes the steps to configure a new Web Service Connector or to make changes in an existing Web Service Connector through Microsoft Identity Manager (MIM) Synchronization Service UI.
 
-## Configuration of the Web Service Connector in the MIM Sync UI
+>[!IMPORTANT]
+>Download and install the [Web Service Connector](https://www.microsoft.com/download/details.aspx?id=51495) before attempting the steps in this article.
+
+## Configure the Web Service Connector in the Synchronization Service
 
 You can create a new Web Service Connector using Management Agent designer. After creating the Connector, you can define multiple Run Profiles to perform different tasks. While configuring an existing Connector, you can change a task by clicking the appropriate page in Management Agent Designer. Follow the below steps to configure a new Web Service Connector.
 
-1.  Open Microsoft® Identity Manager 2016 Synchronization Service. On the **Tools** menu, click **Management Agents**.
+1. Open Microsoft Identity Manager 2016 Synchronization Service. On the **Tools** menu, select **Management Agents**.
 
-2.  On the **Actions** menu, click **Create**. This will open the Management Agent Designer.
+2. On the **Actions** menu, select **Create**. The Management Agent Designer opens.
 
-3.  In **Management Agent Designer**, in **Management Agent for**, select **Web Service (Microsoft).**
+3. In **Management Agent Designer**, under **Management Agent for**, select **Web Service (Microsoft)**. Then, select **Next**.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma.png)
+    ![Create a management agent](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma.png)
 
-4. Click **Next**.
+4. On the **Connectivity** screen, select the default **Web Service Connector project**. Provide values for the **Host** and **Port**. Then, select **Next**.
 
-5.  On the **Connectivity** screen, select the default **Web Service Connector project**. Provide the **Host** and **Port**.
+    ![Create connectivity for the management agent](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma-connectivity.png)
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma-connectivity.png)
+5. Define the **Global Parameters**. Use the login credential procured from the Web Service Admin for connecting to the Host. Then, select **Next**.
 
-6. Click **Next**.
+    ![Set global parameters for the management agent](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma-global-parameters.png)
 
-7.  Define the **Global Parameters.** Use the login credential procured from Web Service Admin for connecting to the Host. 
+    - If the location of the data source observes Daylight Saving and the data source is configured to automatically adjust to daylight saving settings, check the **Data Source is configured to automatically adjust clock for Daylight Saving Time** option.
+    - If you want to trigger the test connection workflow from this connector, check the **Test Connection** option.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma-global-parameters.png)
+6. On next screen select **default** for **Select directory partitions**. Then, select **Next**.
 
-    -   If the location of data source  observes Daylight Saving and the data source is configured to automatically adjust to daylight saving settings then you must check the box for **Data Source is configured to automatically adjust clock for Daylight Saving Time**.
+    ![Create partitions for the management agent](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma-partitions.png)
 
-    -   If you want to trigger the test connection workflow from this connector then you must check the check box for **Test Connection**.
+7. On the **Select Object Types** screen, select the object type that you want to work with. By default, Web Service Connector supports two object types: **Employee** and **User**. Then, select **Next**.
 
-8. Click **Next.**.
+    ![Select the object type](media/microsoft-identity-manager-2016-ma-ws-maconfig/select-object-types.png)
 
-9.  On next screen select **default** for **Select directory partitions.**
+8. On the **Select Attributes** page, select all of the mandatory attributes for the selected objects and attributes that you need to work with. Then, select **Next**.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma-partitions.png)
+    ![Select the attributes for the objects](media/microsoft-identity-manager-2016-ma-ws-maconfig/select-attributes.png)
 
-10. Click **Next.**.
+9. On the **Configure Anchors** page, specify the anchor attributes. Then, select **Next**.
 
-11.  On **Select Object Types** screen, select the object type you want to work with. By default Web Service Connector supports two object types:
-    **Employee** and **User.**
+    ![Configure the anchors](media/microsoft-identity-manager-2016-ma-ws-maconfig/configure-anchors.png)
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/select-object-types.png)
+10. On **Configure Connector Filter** page, specify the **Connector Filter**. Then, select **Next**.
 
-12.   Click **Next**.
+    ![Specify the Connector filter](media/microsoft-identity-manager-2016-ma-ws-maconfig/configure-connector-filter.png)
 
-13.  On **Select Attributes** page, check all the mandatory attributes for the selected objects and the attributes you need to work with.
+11. On **Configure Join and Projection Rules** page, specify the join and projection rules. You can create a new join rule and projection rule by selecting **New Join Rule** and **New Projection Rule**, respectively. Then, select **Next**.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/select-attributes.png)
+    ![Specify the join and projection rules](media/microsoft-identity-manager-2016-ma-ws-maconfig/join-projection.png)
 
-14.   Click **Next**.
+12. On the next page, configure the attribute flow. You must specify the **Mapping Type** and **Flow Direction** for the attributes for the selected object types. Then, select **Next**.
 
-15.  On the next displayed **Configure Anchors** page, specify the anchor attributes.
+    ![Configure the attribute flow](media/microsoft-identity-manager-2016-ma-ws-maconfig/attribute-flow.png)
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/configure-anchors.png)
+13. Specify the type of deprovisioning to apply to the objects. Then, select **Next**.
 
-16.  Specify the **Connector Filter** on **Configure Connector Filter** page.
+    ![Specify the type of deprovisioning](media/microsoft-identity-manager-2016-ma-ws-maconfig/deprovisioning.png)
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/configure-connector-filter.png)
+14. In the case of an Import flow, the **Configure Extensions** page is disabled. You can configure extensiones for Export flows by first selecting the **Advanced** mapping type on the **Configure Attribute Flow** page.
 
-17.   Click **Next**.
+    ![Configure extensions](media/microsoft-identity-manager-2016-ma-ws-maconfig/extensions.png)
 
-18.  Specify the join and projection rules on **Configure Join and Projection Rules** page. You can create a new join rule and projection rule by clicking **New Join Rule** and **New Projection Rule** respectively**.**
+15. Click **Finish**.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/join-projection.png)
+Your Connector is now configured:
 
-19. Click **Next**.
+![Connector configuration complete](media/microsoft-identity-manager-2016-ma-ws-maconfig/sync-manager.png)
 
-20.  Configure attribute flow on the next page. You must specify the **Mapping Type** and the **Flow Direction** for the attributes for selected object types.
+After a Connector is configured, you can configure the Run Profiles by selecting **Configure Run Profiles**.
 
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/attribute-flow.png)
+## Next steps 
 
-21. Click **Next**.
-
-22.  Specify the type of de-provisioning that should be applicable for the objects.
-
-    ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/deprovisioning.png)
-
-23.   Click **Next**.
-
-24.  The **Configure Extensions** page is disabled in case of Import flow. You can configure it for Export flows by first selecting the **Advanced** mapping type on **Configure Attribute Flow** page.
-
-25. Click **Finish**.
-
-After performing the above steps, you get a configured Connector.
-
- ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/sync-manager.png)
-
-Once, the Connector is configured, the next step is to configure the Run Profiles by clicking action **Configure Run Profiles**.
-
- ![](media/microsoft-identity-manager-2016-ma-ws-maconfig/extensions.png)
-
-## Next steps
-
--  [Install the Web Service Config Tool](microsoft-identity-manager-2016-ma-ws-install.md)
-
--  [Soap Based deployment guide](microsoft-identity-manager-2016-ma-ws-soap.md)
-
--  [Rest Based deployment guide](microsoft-identity-manager-2016-ma-ws-restgeneric.md)
-
--  [Web Service MA Configuration](microsoft-identity-manager-2016-ma-ws-restgeneric.md)
-
+- [Install the Web Service Configuration Tool](microsoft-identity-manager-2016-ma-ws-install.md)
+- [SOAP deployment guide](microsoft-identity-manager-2016-ma-ws-soap.md)
+- [REST deployment guide](microsoft-identity-manager-2016-ma-ws-restgeneric.md)
+- [Web Service MA configuration](microsoft-identity-manager-2016-ma-ws-maconfig.md)

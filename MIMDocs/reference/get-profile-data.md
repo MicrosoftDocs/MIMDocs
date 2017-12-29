@@ -1,7 +1,8 @@
 ﻿---
 # required metadata
 
-title: Get Profile Data | Microsoft Docs
+title: Get profile data | Microsoft Docs
+titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin
@@ -26,36 +27,45 @@ ms.suite: ems
 
 ---
 
-# Get Profile Data
-Gets a list of a user’s software certificate profiles with a list of possible operations that can be performed by the current user. A request can then be initiated for any of the specified operations.
+# Get profile data
+Gets a list of software certificate profiles for a user. The list includes the possible operations that can be performed by the current user. A request can then be initiated for any of the specified operations.
 
-**Note**: The server will set the PIN only if the profile template policy indicates that it should be done. Otherwise, the user should supply it.
+>[!IMPORTANT]
+>The server sets the PIN only if the profile template policy indicates that it should be done. Otherwise, the user should supply the PIN.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/profiles<br/>/CertificateManagement/api/v1.0/profiles/{id} <br/>/CertificateManagement/api/v1.0/requests/{requestid}/profiles
 
-###URL Parameters
+### URL parameters
+
 Parameter | Description
 ---------|------------
 id | The identifier (GUID) of the profile to return.
 requestId | The identifier of the request to return the profiles for.
 
-###Query Parameters
+### Query parameters
+
 Parameter | Description
 ---------|------------
-status | Optional. Indicates the status of the profiles to retrieve data for. Possible status types are: "Active", "Approved", "Canceled", "Completed", "Denied", "Executing", "Failed", "None", and "Pending". <br/>If no status is specified, all profiles, regardless of status will be returned.
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-none
+status | Optional. Indicates the status of the profiles for which to retrieve data. The possible status types are "Active," "Approved," "Canceled," "Completed," "Denied," "Executing," "Failed," "None," and "Pending." <br/>If no status is specified, all profiles, regardless of status are returned.
 
-##Response
-###Response Codes
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK
@@ -63,9 +73,10 @@ Code  |Description
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
 On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Profiles.Profile](https://msdn.microsoft.com/library/microsoft.clm.shared.profiles.profile.aspx) objects with the following properties:
 
 Property | Description
@@ -82,13 +93,17 @@ Status | The status of the profile.
 Uuid | The profile's identifier.
 
 
-##Example
+## Example
+This section provides an example to get the profile data for a user.
 
-###Request
+### Example: Request
+
 ```
 GET /certificatemanagement/api/v1.0/profiles?status=Active HTTP/1.1
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 
@@ -141,7 +156,8 @@ HTTP/1.1 200 OK
         ]
     }
 ]
-```       
-##See Also
+```
 
-- [Microsoft.Clm.Shared.Profiles.Profile Class](https://msdn.microsoft.com/library/microsoft.clm.shared.profiles.profile.aspx)
+## See also
+
+- [Microsoft.Clm.Shared.Profiles.Profile class](https://msdn.microsoft.com/library/microsoft.clm.shared.profiles.profile.aspx)

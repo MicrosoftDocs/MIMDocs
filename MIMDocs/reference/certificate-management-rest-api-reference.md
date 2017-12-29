@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: Certificate Management REST API Reference | Microsoft Docs
+title: Certificate Management REST API reference | Microsoft Docs
+titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin
@@ -26,18 +27,15 @@ ms.suite: ems
 
 ---
 
-# Certificate Management REST API Reference
-The Certificate Management (CM) REST API is consumed by clients to complete both software and smartcard based certificate enrollment. Smartcard management operations are also supported through this API.
+# Certificate Management REST API reference
+The Certificate Management (CM) REST API is consumed by clients to complete both smart card and software-based certificate enrollment. Smart card management operations are also supported through this API. The API is described in the following sections:
 
-##In This Section
-
-- [CM REST API Service Details](certificate-management-rest-api-service-details.md)
-- [Sample Enrollment Walkthrough](sample-enrollment-walkthrough.md)
-- [Get Profile Templates](get-profile-templates.md)
-- [Policy Operations](policy-operations.md)
-- [Request Operations](request-operations.md)
-- [Certificate Request Operations](certificate-request-operations.md)
-- [Smartcard Operations](smartcard-operations.md)
-- [Certificate Request Operations](certificate-request-operations.md)
-- [Profile Operations](profile-operations.md)
-- [Certificate Operations](certificate-operations.md)
+- [CM REST API service details](certificate-management-rest-api-service-details.md)
+- [Sample enrollment walkthrough](sample-enrollment-walkthrough.md)
+- [Get profile templates](get-profile-templates.md)
+- [Policy operations](policy-operations.md)
+- [Request operations](request-operations.md)
+- [Certificate request operations](certificate-request-operations.md)
+- [Smartcard operations](smartcard-operations.md)
+- [Profile operations](profile-operations.md)
+- [Certificate operations](certificate-operations.md)

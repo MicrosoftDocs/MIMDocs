@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: Get Smartcard Proposed PIN | Microsoft Docs
+title: Get smart card proposed PIN | Microsoft Docs
+titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin
@@ -26,56 +27,70 @@ ms.suite: ems
 
 ---
 
-# Get Smartcard Proposed PIN
+# Get smart card proposed PIN
 Gets the server-generated user PIN.
 
-**Note**: The server will set the PIN only if the profile template policy indicates that it should be done. Otherwise, the user should supply it.
+>[!IMPORTANT]
+>The server only sets the PIN if the profile template policy indicates that it should be done. Otherwise, the user should supply the PIN.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/smartcards/{id}/serverproposedpin
 
-###URL Parameters
+### URL parameters
+
 Parameter | Description
 ---------|------------
-id | The smartcard identifier (MIM CM specific). Obtained from the Microsft.Clm.Shared.Smartcard object.
-###Query Parameters
+id | The smart card ID that's specific to Microsoft Identity Manager (MIM) Certificate Management (CM). The ID is obtained from the Microsft.Clm.Shared.Smartcard object.
+
+### Query parameters
+
 Parameter | Description
 ---------|------------
-atr | The card atr.
-cardid | The card id.
-challenge | A base-64 encoded string representing the challenge issued by the smartcard.
+atr | The smart card answer-to-reset (ATR) string.
+cardid | The smart card ID.
+challenge | A base-64 encoded string representing the challenge that's issued by the smart card.
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-none
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
-200     | OK
+200 | OK
 204 | No content
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
-On success, returns a string that represents the PIN proposed by the server.
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
-##Example
+### Response body
+On success, returns a string that represents the PIN that's proposed by the server.
 
-###Request
+## Example
+This section provides an example to get the server-generated user PIN.
+
+### Example: Request
+
 ```
 GET GET /CertificateManagement/api/v1.0/smartcards/C6BAD97C-F97F-4920-8947-BE980C98C6B5/serverproposedpin HTTP/1.1
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 

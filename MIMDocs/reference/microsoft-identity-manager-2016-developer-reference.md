@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Identity Manager 2016 Developer Reference | Microsoft Docs
+title: Microsoft Identity Manager 2016 developer reference | Microsoft Docs
+titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin
@@ -26,10 +27,9 @@ ms.suite: ems
 
 ---
 
-# Microsoft Identity Manager 2016 Developer Reference
+# Microsoft Identity Manager 2016 developer reference
+The developer documentation for Microsoft Identity Manager 2016 includes the following references:
 
-##In This Section
-
-- [Certificate Management (CM) REST API Reference](certificate-management-rest-api-reference.md)
-- [Privileged Access Management (PAM) REST API Reference](privileged-access-management-rest-api-reference.md)
-- [Microsoft Identity Manager CmdLets Reference](https://docs.microsoft.com/powershell/identitymanager/)
+- [Certificate Management (CM) REST API reference](certificate-management-rest-api-reference.md)
+- [Privileged Access Management (PAM) REST API reference](privileged-access-management-rest-api-reference.md)
+- [Microsoft Identity Manager (MIM) cmdlets reference](https://docs.microsoft.com/powershell/identitymanager/)
