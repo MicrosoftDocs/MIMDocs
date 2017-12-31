@@ -2,7 +2,6 @@
 # required metadata
 
 title: Web Service Connector REST API App Service sample | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description: Guide helping you implement a sample REST JSON server in Azure
 keywords:
 author: barclayn

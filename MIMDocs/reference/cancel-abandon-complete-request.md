@@ -2,13 +2,12 @@
 # required metadata
 
 title: Cancel, abandon, or complete a request | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/26/2017
+ms.date: 09/26/2016
 ms.topic: reference
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager

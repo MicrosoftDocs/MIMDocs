@@ -2,7 +2,6 @@
 # required metadata
 
 title: Get smart card profiles | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin

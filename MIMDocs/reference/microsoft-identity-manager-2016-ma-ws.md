@@ -2,7 +2,6 @@
 # required metadata
 
 title: Overview of the generic Web Service connector | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description: Overview of the configuration and requirements for the generic Web Service connector.
 keywords:
 author: barclayn

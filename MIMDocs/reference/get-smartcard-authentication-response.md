@@ -2,7 +2,6 @@
 # required metadata
 
 title: Get smart card authentication response | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin

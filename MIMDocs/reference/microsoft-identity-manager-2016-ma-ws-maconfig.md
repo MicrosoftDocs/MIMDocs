@@ -2,7 +2,6 @@
 # required metadata
 
 title: Web Service Connector configuration options | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description: This article covers the steps required to install the Web Service Configuration Tool.
 keywords:
 author: barclayn

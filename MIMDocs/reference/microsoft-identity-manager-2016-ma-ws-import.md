@@ -2,7 +2,6 @@
 # required metadata
 
 title: Import Web Services Connector | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description: Import Web Services Connector with multiple Web Service configurations in Microsoft Identity Manager.
 keywords:
 author: fimguy

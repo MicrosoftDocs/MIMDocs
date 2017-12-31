@@ -2,7 +2,6 @@
 # required metadata
 
 title: Get user certificates | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin

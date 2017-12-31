@@ -2,7 +2,6 @@
 # required metadata
 
 title: Web Service Connector workflow guide for SOAP | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description: This article describes how to create a new project for your SOAP data source by using the Web Service Configuration Tool.
 keywords:
 author: barclayn

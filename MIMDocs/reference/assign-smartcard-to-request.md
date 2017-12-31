@@ -2,7 +2,6 @@
 # required metadata
 
 title: Assign a smart card to a request | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin

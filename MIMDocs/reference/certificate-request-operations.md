@@ -2,7 +2,6 @@
 # required metadata
 
 title: Certificate request operations | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin

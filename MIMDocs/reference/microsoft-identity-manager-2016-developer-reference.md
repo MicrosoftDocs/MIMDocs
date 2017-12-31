@@ -2,7 +2,6 @@
 # required metadata
 
 title: Microsoft Identity Manager 2016 developer reference | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin

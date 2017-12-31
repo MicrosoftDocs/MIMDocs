@@ -2,7 +2,6 @@
 # required metadata
 
 title: Web Service Connector workflow guide for the REST API | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description: This article covers how to deploy a REST API sample.
 keywords:
 author: barclayn

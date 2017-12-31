@@ -2,7 +2,6 @@
 # required metadata
 
 title: MIM Install the Web Service Cofiguration Tool | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description: This article covers the steps to install the Web Service Configuration Tool.
 keywords:
 author: barclayn

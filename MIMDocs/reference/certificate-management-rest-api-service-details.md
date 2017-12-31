@@ -2,7 +2,6 @@
 # required metadata
 
 title: Certificate Management REST API service details | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin

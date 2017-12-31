@@ -2,7 +2,6 @@
 # required metadata
 
 title: Get smart card diversified admin key | Microsoft Docs
-titleSuffix: 'Microsoft Identity Manager'
 description:
 keywords:
 author: msmbaldwin
