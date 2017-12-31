@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Update Smartcard Status | Microsoft Docs
+title: Update smart card status | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
@@ -26,35 +26,40 @@ ms.suite: ems
 
 ---
 
-# Update Smartcard Status
-Updates the status of a smartcard.
+# Update smart card status
+Updates the status of a smart card.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
+
 ## Request
-
 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}
 
-### URL Parameters
+### URL parameters
+
 Parameter | Description
 ---------|------------
-reqid | Required. The Request identifier (MIM CM specific).
-scid | Required. The smartcard identifier (MIM CM specific). This is the "uuid" property in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
+reqid | Required. The request identifier that's specific to Microsoft Identity Manager (MIM) Certificate Management (CM).
+scid | Required. The smart card identifier that's specific to MIM CM. The value corresponds to the "uuid" field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
-### Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-### Request Body
-The request body contains the following properties.
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Request body
+The request body contains the following properties:
 
 Property | Description
 ---------|-----------
-status | The status to set the request to. For example, "Retired".
-
+status | The status to set the request to, such as "Retired."
 
 ## Response
-### Response Codes
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200     | OK
@@ -62,9 +67,10 @@ Code  |Description
 403 | Forbidden
 500 | Internal Error
 
-### Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-### Response Body
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
 On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object with the following properties:
 
 Name | Description
@@ -84,13 +90,17 @@ Status | The status of the smart card.
 Uuid | The smart card profile's identifier.
 
 ## Example
+This section provides an example to update the status of a smart card.
 
-### Request
+### Example: Request
+
 ```
 PUT /certificatemanagement/api/v1.0/requests/b105403d-d021-41ea-9f11-be3d677d229e/smartcards/17cf063d-e337-4aa9-a822-346554ddd3c9 HTTP/1.1
 
 ```
-### Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 
@@ -110,6 +120,7 @@ HTTP/1.1 200 OK
     "Atr":"3b8d0180fba000000397425446590301c8"
 }
 ```       
-## See Also
 
-- [Microsoft.Clm.Shared.Smartcards.Smartcard Class](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx))
+## See also
+
+- [Microsoft.Clm.Shared.Smartcards.Smartcard class](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)

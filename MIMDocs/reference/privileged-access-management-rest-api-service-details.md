@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: PAM REST API Service Details | Microsoft Docs
+title: PAM REST API service details | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
@@ -26,25 +26,27 @@ ms.suite: ems
 
 ---
 
-# PAM REST API Service Details
+# PAM REST API service details
 The following sections discuss details of the Microsoft Identity Manager (MIM) Privileged Access Management (PAM) REST API.
 
-## HTTP Request and Response Headers
+## HTTP request headers
 
-HTTP Requests sent to the API should include the following headers (this list is not exhaustive):
+HTTP requests that are sent to the API should include the following headers (this list is not exhaustive):
 
 Header | Description
 -------|------------
-Authorization | Required. The contents will depend on the authentication method, which is configurable and can be based on WIA (Windows Integrated Authentication) or ADFS.
-Content-Type | Required if the request has a body. Must be "application/json".
+Authorization | Required. The content depends on the authentication method, which is configurable and can be based on WIA (Windows Integrated Authentication) or ADFS.
+Content-Type | Required if the request has a body. Must be set to `application/json`.
 Content-Length | Required if the request has a body. 
 Cookie | The session cookie. May be required depending on authentication method.
-<br/>
-HTTP Responses will include the following headers (this list is  not exhaustive):
+
+## HTTP response headers
+
+HTTP responses should include the following headers (this list is  not exhaustive):
 
 Header | Description
 -------|------------
-Content-Type | The API always returns "application/json".
+Content-Type | The API always returns `application/json`.
 Content-Length | The length of the request body, if present, in bytes.
 
 ## Versioning 
@@ -58,11 +60,12 @@ Access to the API requires Integrated Windows Authentication (IWA). This should 
 HTTPS (TLS) is supported, but should be configured manually in IIS. For information, see: **Implement Secure Sockets Layer (SSL) for the FIM Portal** in [Step 9: Perform FIM 2010 R2 Post-Installation Tasks](https://technet.microsoft.com/library/hh322875(v=ws.10%29.aspx) in the Installing FIM 2010 R2 Test Lab Guide. 
 
 You can generate a new SSL server certificate by running the following command at the Visual Studio Command Prompt:
+
 ```
 Makecert -r -pe -n CN="test.cwap.com" -b 05/10/2014 -e 12/22/2048 -eku 1.3.6.1.5.5.7.3.1 -ss my -sr localmachine -sky exchange -sp "Microsoft RSA SChannel Cryptographic Provider" -sy 12
 ```
  
-This command creates a self-signed certificate that can be used to test a web application that uses SSL on a web server whose URL is test.cwap.com. The OID defined by the -eku option identifies the certificate as an SSL server certificate. The certificate is stored in the my store and is available at the machine level, so you can export it from the Certificates snap-in in mmc.exe
+The command creates a self-signed certificate that can be used to test a web application that uses SSL on a web server where the URL is `test.cwap.com`. The OID defined by the `-eku` option identifies the certificate as an SSL server certificate. The certificate is stored in **my** store and is available at the machine level. You can export the certificate from the Certificates snap-in in mmc.exe.
 
 ## Cross Domain Access (CORS) 
 CORS is supported, but should be configured manually in IIS. Add the following elements to the deployed API web.config file to configure the API to allow cross domain calls: 
@@ -78,19 +81,17 @@ CORS is supported, but should be configured manually in IIS. Add the following e
     </httpProtocol> 
 </system.webServer> 
 ```
-<br/>
 
-## Error Handling 
-The API returns HTTP error responses to indicate error conditions. Errors are OData compliant. The following table shows the error codes that may be returned to a client.
+## Error handling 
+The API returns HTTP error responses to indicate error conditions. Errors are OData compliant. The following table shows the error codes that may be returned to a client:
 
-HTTP Status Code | Description
+HTTP status code | Description
 -----------------|------------
 401 | Unauthorized 
 403 | Forbidden 
 408 | Request Timeout   
 500 | Internal Server Error 
 503 | Service Unavailable 
-<br/>
 
 ## Filtering 
 PAM REST API requests can include filters to specify the properties that should be included in the response. Filter syntax is based on OData expressions.
