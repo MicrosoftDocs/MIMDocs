@@ -2,7 +2,7 @@
 # required metadata
 
 title: Import Web Services Connector | Microsoft Docs
-description: Import Web Services Connector with multiple Web Service configurations in Microsoft Identity Manager.
+description: Import Web Services Connector with multiple Web Services configurations in Microsoft Identity Manager.
 keywords:
 author: fimguy
 ms.author: davidste
@@ -16,15 +16,15 @@ ms.assetid:
 
 # Import Web Services Connector
 
-When the “Import server configuration” operation that contains the “Web Service management agent” finishs with the error “Unable to retrieve configuration parameters from the extension,” the exported configuration files need to be checked.
+When the Import server configuration operation that contains the Web Services management agent (MA) finishes with the error "Unable to retrieve configuration parameters from the extension," the exported configuration files need to be checked.
 
-The error is due to a limitation in the "Synchronization Service." The service can't import the server configuration with the "Web Service management agent" and returns the error "Unable to retrieve configuration parameters from the extension." In some cases, the "Web Service management agent" might contain invalid settings that need to be fixed. 
+The error is due to a limitation in the Synchronization Service. The service can't import the server configuration with the Web Services MA and returns the error "Unable to retrieve configuration parameters from the extension." In some cases, the Web Services MA can contain invalid settings that need to be fixed. 
 
 ## How to fix the issue
 
 1. Copy the server configuration files into the destination server. 
 
-2. On the destination server, copy the <a href="#web-service-powershell-script">WebServiceMA_apply_before_import_server_configuration.ps1</a> PowerShell script into the folder that contains the exported files for the "Server configuration."
+2. On the destination server, copy the <a href="#web-service-powershell-script">WebServiceMA_apply_before_import_server_configuration.ps1</a> PowerShell script into the folder that contains the exported files for the server configuration.
 
 3. Run the WebServiceMA_apply_before_import_server_configuration.ps1 PowerShell script.
 
@@ -47,7 +47,6 @@ The error is due to a limitation in the "Synchronization Service." The service c
 function Get-MIMInstallationPath { 
 
 <# 
-
   .SYNOPSIS 
 
   Get the installation path of MIM from the Windows registry.
@@ -64,7 +63,6 @@ function Get-MIMInstallationPath {
   .EXAMPLE 
 
   $path = Get-MIMInstallationPath 
-
 #>   
 
   try 
@@ -85,7 +83,6 @@ function Get-MIMInstallationPath {
 function Get-WsconfigFilesNamesFromExtensionsFolder([string] $path) { 
 
 <# 
-
   .SYNOPSIS 
 
   Get the comma-separated list of *.wsconfig files from Extensions folder. 
@@ -101,9 +98,7 @@ function Get-WsconfigFilesNamesFromExtensionsFolder([string] $path) {
   .EXAMPLE 
 
   $wsconfigFiles = Get-WsconfigFilesNamesFromExtensionsFolder("./") 
-
 #>  
-
 
  if( [string]::IsNullOrEmpty($path) ) 
 
@@ -214,9 +209,7 @@ function Set-AvailableWebServiceProjects([string] $path) {
 } 
 
 ########################################## 
-
 ####              Main                #### 
-
 ########################################## 
 
 cls 

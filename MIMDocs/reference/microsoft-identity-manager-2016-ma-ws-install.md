@@ -32,7 +32,7 @@ Service installed. This allows configuration on a separate computer.
 
 Additional default projects are shipped with the Web Services Connector. These are available as self-extract EXE files. You may download web service Connector project as appropriate to your requirement.
 
-After the installation is complete the different components with their binaries are installed at below folder location on your system.
+After the installation is complete, the different components with their binaries are installed at below folder location on your system.
 
 | Contents | Location |
 |---|---|
@@ -40,12 +40,12 @@ After the installation is complete the different components with their binaries 
 | Web Service Connector Project           | %Program Files%\\Microsoft Forefront Identity Management\\2010\\Synchronization&nbsp;Service\\Extensions |
 | Packaged Connector                      | %Program Files%\\Microsoft Forefront Identity Management\\2010\\Synchronization&nbsp;Service\\UIShell\\XMLs\\PackagedMAs |
 | Web Service Configuration tool          | %Program Files%\\Microsoft Forefront Identity Management\\2010\\Synchronization&nbsp;Service\\UIShell\\Web&nbsp;Service&nbsp;Configuration <br/>**Note**: This is the default install location. You can change this location during the installation. |
-| Web Service Project file                | User can select any target folder to extract this file into, but the extracted project file **.WsConfig** is visible to the FIM Sync UI only when the project file is extracted to the FIM **Extensions** folder. The extracted project file is visible to the Web Service Configuration tool in any location. |
+| Web Service Project file                | User can select any target folder to extract this file into, but the extracted project file (.WsConfig) is visible to the FIM Sync UI only when the project file is extracted to the FIM **Extensions** folder. The extracted project file is visible to the Web Service Configuration tool in any location. |
 
 
 ## Additional permissions
 
-Project file can be saved and opened from any location (with the appropriate access privileges of its executor); however, only project files that are saved to  synchronization Service\\Extension folder will be able to get selected in the Web Service connector wizard accessed through FIM Sync UI.
+Project file can be saved and opened from any location (with the appropriate access privileges of its executor); however, only project files that are saved to the `Synchronization Service\Extension` folder are able to be selected in the Web Service connector wizard accessed through FIM Sync UI.
 
 The user running the Web Service Configuration Tool requires the following privileges:
 
