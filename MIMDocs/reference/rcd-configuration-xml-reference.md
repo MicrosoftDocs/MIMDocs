@@ -52,13 +52,13 @@ The following is the XSD schema for the **ObjectControlConfiguration** element:
 
 The **ObjectControlConfiguration** element contains the following elements:
 
-1. **ObjectDataSource**: This element specifies the TypeName of a data source class that the Resource Control (RC) uses. For a description and the schema definition, see the following Data sources section in this document. An **ObjectControlConfiguration** element can contain up to 32 nodes of the **ObjectDataSource** element.
+- **ObjectDataSource**: This element specifies the TypeName of a data source class that the Resource Control (RC) uses. For a description and the schema definition, see the following Data sources section in this document. An **ObjectControlConfiguration** element can contain up to 32 nodes of the **ObjectDataSource** element.
 
-2. **XmlDataSource**: This is a simple data source that is most commonly used to specify the design of a summary page. For a description and the schema definition, see the following Data sources section in this document. An **ObjectControlConfiguration**: element can contain up to 32 nodes of the **XmlDataSource** element.
+- **XmlDataSource**: This is a simple data source that is most commonly used to specify the design of a summary page. For a description and the schema definition, see the following Data sources section in this document. An **ObjectControlConfiguration**: element can contain up to 32 nodes of the **XmlDataSource** element.
 
-3. **Panel**: Administrator can customize the layout of the RCDC page by modifying elements inside the Panel elements. For more information, see the Panel section later in this document. An **ObjectControlConfiguration** element must have only one Panel element.
+- **Panel**: Administrator can customize the layout of the RCDC page by modifying elements inside the Panel elements. For more information, see the Panel section later in this document. An **ObjectControlConfiguration** element must have only one Panel element.
 
-4. **Events**: Administrators cannot provide customized code behind, this feature is limited. This is the Event that a panel or a control can emit, based on a state change. For more information, see the Events section later in this document. An **ObjectControlConfiguration** element can contain optionally one **Event** element. In general, the use of custom **Events** is not supported unless specifically developed in later enhancements.
+- **Events**: Administrators cannot provide customized code behind, this feature is limited. This is the Event that a panel or a control can emit, based on a state change. For more information, see the Events section later in this document. An **ObjectControlConfiguration** element can contain optionally one **Event** element. In general, the use of custom **Events** is not supported unless specifically developed in later enhancements.
 
 ## Data sources
 
@@ -200,11 +200,11 @@ The following is the XSD schema for the Event element:
      </xsd:element>
 ```
 
-An **Event** is an empty element, and it has two attributes:
+An **Event** is an empty element, and it has the following attributes:
 
-1. **Name**: This is the unique name of an event. The only supported event in the **ObjectControlConfiguration** is the Load event. This event is triggered when the page is first loaded.
+- **Name**: This is the unique name of an event. The only supported event in the **ObjectControlConfiguration** is the Load event. This event is triggered when the page is first loaded.
 
-2. **Handler**: This is the unique name of a handler. When the event is triggered, usually a program method is called to handle the change of the state of the control. The following cases are not supported:
+- **Handler**: This is the unique name of a handler. When the event is triggered, usually a program method is called to handle the change of the state of the control. The following cases are not supported:
 
    - Removing an existing handler from an existing control.
    - Creating a new handler.
@@ -237,15 +237,15 @@ The **Panel** element is the core element in an RCDC layout. The following is th
 
 The **Panel** element contains a recurring element, **Grouping**. For more information, see the Grouping section in this document.
 
-The Panel element contains four attributes:
+The Panel element has the following attributes:
 
-1. **Name**: The name of the Panel. This is a required, string-type attribute.
+- **Name**: The name of the Panel. This is a required, string-type attribute.
 
-2. **DisplayAsWizard**: This attribute is currently deprecated. The corresponding VerbContext attribute on the RCDC governs if the resource layout is in Wizard mode or Tab mode. If it is set to 0 (Create mode), it is also in Wizard mode. Otherwise, it is in Tab mode. For more information, see Introduction to Configuring and Customizing the FIM Portal in the documentation.
+- **DisplayAsWizard**: This attribute is currently deprecated. The corresponding VerbContext attribute on the RCDC governs if the resource layout is in Wizard mode or Tab mode. If it is set to 0 (Create mode), it is also in Wizard mode. Otherwise, it is in Tab mode. For more information, see Introduction to Configuring and Customizing the FIM Portal in the documentation.
 
-3. **Caption**: This attribute is currently deprecated. The user can specify captions for a page by including a Group that contains only header information. For more information, see the Grouping section in this document.
+- **Caption**: This attribute is currently deprecated. The user can specify captions for a page by including a Group that contains only header information. For more information, see the Grouping section in this document.
 
-4. **AutoValidate**: This is an optional Boolean attribute. When it is set to true validation is triggered against each control on the current tab. By default, if the attribute is missing, it is set to true. It can be used in combination with the RegularExpression property. For more information, see “RegularExpression” in a later section of this document.
+- **AutoValidate**: This is an optional Boolean attribute. When it is set to true validation is triggered against each control on the current tab. By default, if the attribute is missing, it is set to true. It can be used in combination with the RegularExpression property. For more information, see “RegularExpression” in a later section of this document.
 
 ## Grouping element
 The **Grouping** element defines the overall layout of a Panel. It acts as a container that groups together individual controls into different sections and tabs. The following is the XSD schema for the Grouping element:
@@ -271,50 +271,50 @@ The **Grouping** element defines the overall layout of a Panel. It acts as a con
 
 There are three types of **Grouping** element:
 
-1. **Header Grouping**: A Header Grouping is optional. There can only be one Header Grouping in a **Panel**. A Header Grouping appears on top of a panel as caption. Only one UocCaptionControl can be used in this grouping. For an example of a Header Grouping, see the Sample section.
+- **Header Grouping**: A Header Grouping is optional. There can only be one Header Grouping in a **Panel**. A Header Grouping appears on top of a panel as caption. Only one UocCaptionControl can be used in this grouping. For an example of a Header Grouping, see the Sample section.
 
-2. **Content Grouping**: At least one Content Grouping is required. There can be multiple Content Groupings in a Panel. A Content Grouping appears as the main content of an RCDC page. Each Content Grouping appears as a tab in the same Panel and can hold from 1 to 256 controls. See the Examples section for an example of a **Content Grouping**.
+- **Content Grouping**: At least one Content Grouping is required. There can be multiple Content Groupings in a Panel. A Content Grouping appears as the main content of an RCDC page. Each Content Grouping appears as a tab in the same Panel and can hold from 1 to 256 controls. See the Examples section for an example of a **Content Grouping**.
 
-3. **Summary Grouping**: A Summary Grouping is optional. There can only be one Summary Grouping in a Panel. A Summary Grouping appears as the last tab of a Panel. Only one **UocHtmlSummary** control can be used in a Summary Grouping to display the changes that the user has made before submitting a request. See the Examples section for an example of a Summary Grouping.
+- **Summary Grouping**: A Summary Grouping is optional. There can only be one Summary Grouping in a Panel. A Summary Grouping appears as the last tab of a Panel. Only one **UocHtmlSummary** control can be used in a Summary Grouping to display the changes that the user has made before submitting a request. See the Examples section for an example of a Summary Grouping.
 
 Each Grouping type contains the following elements:
 
-1. **Help**: This element provides Help text in a tab. You can also use it to add a link to a Help file for the tab.
+- **Help**: This element provides Help text in a tab. You can also use it to add a link to a Help file for the tab.
 
-2. **Controls**: For information about this element, see the Control section in this document. Each grouping must have 1 to 256 controls inclusively, depending on the type of the grouping.
+- **Controls**: For information about this element, see the Control section in this document. Each grouping must have 1 to 256 controls inclusively, depending on the type of the grouping.
 
-3. **Events**: For information about this element, see the Events section in this document. Each grouping can, as an option, have one Event. The Events that are supported in a Grouping element are as follows:
+- **Events**: For information about this element, see the Events section in this document. Each grouping can, as an option, have one Event. The Events that are supported in a Grouping element are as follows:
 
     - **BeforeLeave**: This Event is triggered when the user is ready to leave a tab in a content grouping.
     - **AfterEnter**: This Event is triggered when the user is ready to enter a tab in a content grouping.
 
-A Grouping can contain seven attributes:
+A Grouping can contain the following seven attributes:
 
-1. **Name**: This is the required name of the Grouping. The **Name** must be unique within the **Panel**.
+- **Name**: This is the required name of the Grouping. The **Name** must be unique within the **Panel**.
 
-2. **Caption**: The **Caption** appears as the header caption in a Header Grouping. It appears as the tab caption of a Content or Summary grouping.
+- **Caption**: The **Caption** appears as the header caption in a Header Grouping. It appears as the tab caption of a Content or Summary grouping.
 
-3. **Description**: An optional string attribute, **Description** is functional only when it is used in a Content Grouping. Use this element to give the end user some detail about the information within the same tab.
+- **Description**: An optional string attribute, **Description** is functional only when it is used in a Content Grouping. Use this element to give the end user some detail about the information within the same tab.
 
     >[!NOTE]
     >If this attribute is used in a Summary Grouping, the XML is considered to be
     invalid. If this attribute is used in a Header Grouping, the XML is considered to be valid but ignored.
     >
 
-4. **Enabled**: An optional Boolean attribute, Enabled is set to true when it is missing. If Enabled is set to false, the end user sees a Disabled tab. This attribute is functional only in a Content grouping.
+- **Enabled**: An optional Boolean attribute, Enabled is set to true when it is missing. If Enabled is set to false, the end user sees a Disabled tab. This attribute is functional only in a Content grouping.
     
     >[!NOTE]
     >If this attribute is used in a Summary Grouping, the XML is considered to be invalid. If this attribute is used in a Header Grouping, the XML is considered to be valid but ignored.
     >
 
-5. **Visible**: You can hide an RCDC page tab or its heading by setting this attribute to false. By default, this optional, Boolean-type attribute is set to true. This attribute is functional only on a Content Grouping.
+- **Visible**: You can hide an RCDC page tab or its heading by setting this attribute to false. By default, this optional, Boolean-type attribute is set to true. This attribute is functional only on a Content Grouping.
     
     >[!NOTE]
     >When there is only one Content Grouping in a Panel, this feature does not work. When there is more than one Content Grouping in a Panel, it behaves as previously described.
 
-6. **IsHeader**: This attribute is an optional, Boolean attribute that defines whether the Grouping is a Header Grouping. If this attribute is not specified, it is set to false.
+- **IsHeader**: This attribute is an optional, Boolean attribute that defines whether the Grouping is a Header Grouping. If this attribute is not specified, it is set to false.
 
-7. **IsSummary**: This is an optional, Boolean attribute that defines whether the Grouping is a Summary grouping. If this attribute is not specified, it is set to false.
+- **IsSummary**: This is an optional, Boolean attribute that defines whether the Grouping is a Summary grouping. If this attribute is not specified, it is set to false.
 
 ### Examples for types of Grouping elements
 This section contains examples for the Groupings element.
@@ -430,25 +430,25 @@ A Grouping element contains one or more **Control** elements. Controls are the m
 
 A Control element contains the following elements:
 
-1. **Help**: This element is ignored. It functions only in Grouping.
+- **Help**: This element is ignored. It functions only in Grouping.
 
-2. **CustomProperties**: This element is not supported.
+- **CustomProperties**: This element is not supported.
 
-3. **Options**: This element is used only in combination with the **UocDropDownList** or **UocRadioButtonList** Controls. It is not functional with any other Controls. See the Options section in this document for the structure of this element. See the Individual controls section of this document to see how Options are used by a control.
+- **Options**: This element is used only in combination with the **UocDropDownList** or **UocRadioButtonList** Controls. It is not functional with any other Controls. See the Options section in this document for the structure of this element. See the Individual controls section of this document to see how Options are used by a control.
 
-4. **Buttons**: This element is used only in combination with the **UocListView** Control. It is not functional for any other controls. For more information, see the UocListView section in this document.
+- **Buttons**: This element is used only in combination with the **UocListView** Control. It is not functional for any other controls. For more information, see the UocListView section in this document.
 
-5. **Properties**: This element is used in all Controls to specify additional behaviors of a Control. For information about this element, see the Properties section in this document.
+- **Properties**: This element is used in all Controls to specify additional behaviors of a Control. For information about this element, see the Properties section in this document.
 
-6. **Events**: For the structure of this element, see the Events section earlier in this document. See the Individual controls section of this document to see which events are used in a control.
+- **Events**: For the structure of this element, see the Events section earlier in this document. See the Individual controls section of this document to see which events are used in a control.
 
-A Control element can contain 10 attributes:
+A Control element can contain the following 10 attributes:
 
-1. **Name**: This is the Name of the control. The name of a Control must be unique within each panel. This is a required, string-type attribute.
+- **Name**: This is the Name of the control. The name of a Control must be unique within each panel. This is a required, string-type attribute.
 
-2. **TypeName**: This attribute specifies what type of Control it is. This is a required, string-type attribute. See the Individual Controls section in this document for each control name.
+- **TypeName**: This attribute specifies what type of Control it is. This is a required, string-type attribute. See the Individual Controls section in this document for each control name.
 
-3. **Caption**: You can use this attribute to include a caption for the control. The caption is usually the display name of the data that the control is displaying or inputting. You can explicitly specify a value for the caption or bind it with schema attribute display name information. The caption appears on the leftmost side of a normal-sized control. If a control is spanning the full screen, the caption appears over the control. This is an optional, string-type attribute. For information about how to bind a data source with an attribute or a property value, see the Properties section.
+- **Caption**: You can use this attribute to include a caption for the control. The caption is usually the display name of the data that the control is displaying or inputting. You can explicitly specify a value for the caption or bind it with schema attribute display name information. The caption appears on the leftmost side of a normal-sized control. If a control is spanning the full screen, the caption appears over the control. This is an optional, string-type attribute. For information about how to bind a data source with an attribute or a property value, see the Properties section.
 
     The following example shows how a caption can be used explicitly:
     
@@ -462,11 +462,11 @@ A Control element can contain 10 attributes:
     <my:Control my:Name="DynamicAlias" my:TypeName="UocTextBox" my:Caption="{Binding Source=schema, Path=Alias.DisplayName, Mode=OneWay}">…<my:Control/>
     ```
 
-4. **Enabled**: This is an optional, Boolean-type attribute. By setting this attribute value to false, the user can disable a Control. The default value is set to true.
+- **Enabled**: This is an optional, Boolean-type attribute. By setting this attribute value to false, the user can disable a Control. The default value is set to true.
 
-5. **Visible**: This is an optional, Boolean-type attribute. You can use this attribute to hide the whole control. The default value is set to true.
+- **Visible**: This is an optional, Boolean-type attribute. You can use this attribute to hide the whole control. The default value is set to true.
 
-6. **Description**: Use this optional, string-type attribute to include a description to help the end user understand what they should put in the control or what the control does. You can explicitly specify a value for the description or bind it with the schema attribute description information.
+- **Description**: Use this optional, string-type attribute to include a description to help the end user understand what they should put in the control or what the control does. You can explicitly specify a value for the description or bind it with the schema attribute description information.
 
     The Description appears on the leftmost side of a normal-sized control underneath the caption. If a control is spanning the full screen, the description appears on the top of the control underneath the caption. For information about how to bind a data source with an attribute or a property value, see the Properties section in this document.
     
@@ -482,17 +482,17 @@ A Control element can contain 10 attributes:
     <my:Control my:Name="DynamicAlias" my:TypeName="UocTextBox" my:Caption="{Binding Source=schema, Path=Alias.DisplayName, Mode=OneWay}" my:Description="{Binding Source=schema, Path=Alias.Description, Mode=OneWay}">…<my:Control/>
     ```
 
-7. **ExpandArea**: This attribute indicates whether the control spans the full screen. This is an optional, Boolean-type attribute. The default value is set to false.
+- **ExpandArea**: This attribute indicates whether the control spans the full screen. This is an optional, Boolean-type attribute. The default value is set to false.
 
     >[!NOTE]
     >The Caption and Description attributes are disabled when this attribute is set to true. Use the UocLabel control to provide a caption for an expanded control.
     >
 
-8. **Hint**: This is an optional, string-type attribute. The text in the Hint attribute helps the end user decide what is a valid input for the control. The Hint appears underneath the control.
+- **Hint**: This is an optional, string-type attribute. The text in the Hint attribute helps the end user decide what is a valid input for the control. The Hint appears underneath the control.
 
-9. **AutoPostback**: This is an optional, Boolean-type attribute. The default value is false. If set to false, refreshing the page may not refresh the control. For information about AutoPostback, look for the Microsoft ASP.NET UI control property of the same name.
+- **AutoPostback**: This is an optional, Boolean-type attribute. The default value is false. If set to false, refreshing the page may not refresh the control. For information about AutoPostback, look for the Microsoft ASP.NET UI control property of the same name.
 
-10. **RightsLevel**: This is an optional, string-type attribute. You can bind this attribute only with inline rights with a data source. The control is dynamically turned on or disabled, based on the user’s rights. For information about how to bind data sources with an attribute or a property value, see the Properties section in this document.
+- **RightsLevel**: This is an optional, string-type attribute. You can bind this attribute only with inline rights with a data source. The control is dynamically turned on or disabled, based on the user’s rights. For information about how to bind data sources with an attribute or a property value, see the Properties section in this document.
 
     This example shows how a **RightsLevel** attribute can be used with a data source. If you have used the template for a data source shown earlier in this document, your data source is **rights**. Use the attribute name as the Path.
     <!--- no example provided -->
@@ -520,11 +520,11 @@ You can use a **Property** element to further customize the behavior of each con
 </xsd:element>
 ```
 
-Every Property has two required attributes:
+Every Property has the following two required attributes:
 
-1. **Name**: This string-type attribute is the unique name of the Property. Different controls have different properties. There are some common properties that can be used by all controls. For more information about what names are available for a given control, see the Common properties and Individual controls sections of this document.
+- **Name**: This string-type attribute is the unique name of the Property. Different controls have different properties. There are some common properties that can be used by all controls. For more information about what names are available for a given control, see the Common properties and Individual controls sections of this document.
 
-2. **Value**: This is the value of the Property. The data type of the value dependents on which property it is assigned to. See the following section for the allowed value format for specific properties.
+- **Value**: This is the value of the Property. The data type of the value dependents on which property it is assigned to. See the following section for the allowed value format for specific properties.
 
 
 #### Bind Property with data source content
@@ -563,7 +563,7 @@ The following XML shows how to bind a data source to a **Property** element:
 
 All RCDC controls that are specified in this document can have the common properties that are described in this section. You can use these Properties along with other Properties that are specific to different controls.
 
-1. **Required**: This property indicates that the field is either a required field or an optional field. A required field must be filled with a value. An empty value is not supported for string input. An optional field can be left empty. If this field is a required field with no value filled in, an error message appears on top of the input control. You can explicitly specify whether a field is required or optional. You can also bind the field with the schema information of a given binding between an attribute and a resource type. By default, if this property is missing, it means that the control is an optional input control.
+- **Required**: This property indicates that the field is either a required field or an optional field. A required field must be filled with a value. An empty value is not supported for string input. An optional field can be left empty. If this field is a required field with no value filled in, an error message appears on top of the input control. You can explicitly specify whether a field is required or optional. You can also bind the field with the schema information of a given binding between an attribute and a resource type. By default, if this property is missing, it means that the control is an optional input control.
 
     The following example uses an explicit value for this property:
    
@@ -577,9 +577,9 @@ All RCDC controls that are specified in this document can have the common proper
     <my:Property my:Name="Required" my:Value="{Binding Source=schema, Path=DisplayName.Required}"/>
     ```
 
-2. **ReadOnly**: By setting this property to true, the end user experiences the control in a read-only mode. This is an optional, Boolean-type attribute. The default value is set to false. However, sometimes the behavior of this property is overwritten by the type of rights a person has on the data bind with the control. For example, if a user does not have rights to update a field and the field is bound with inline rights, the user sees the data in a read-only mode even this property is set to false.
+- **ReadOnly**: By setting this property to true, the end user experiences the control in a read-only mode. This is an optional, Boolean-type attribute. The default value is set to false. However, sometimes the behavior of this property is overwritten by the type of rights a person has on the data bind with the control. For example, if a user does not have rights to update a field and the field is bound with inline rights, the user sees the data in a read-only mode even this property is set to false.
 
-3. **RegularExpression**: This property specifies restrictions that are imposed on the value in the control. The formats of this property value are the formats that are supported in the .NET StringRegex standard. For more information, see [.NET Framework Regular Expressions](http://go.microsoft.com/fwlink/?LinkId=165361). If the control is used to input a value, the value is checked against the restriction that is specified in this property when the user attempts to leave the current page. The error message appears on top of the control that has invalid input. The user can explicitly specify a string regular expression. The user can also bind it with schema information of a given attribute. By default, if this property is missing, it means that the control does not check for any restrictions on input strings.
+- **RegularExpression**: This property specifies restrictions that are imposed on the value in the control. The formats of this property value are the formats that are supported in the .NET StringRegex standard. For more information, see [.NET Framework Regular Expressions](http://go.microsoft.com/fwlink/?LinkId=165361). If the control is used to input a value, the value is checked against the restriction that is specified in this property when the user attempts to leave the current page. The error message appears on top of the control that has invalid input. The user can explicitly specify a string regular expression. The user can also bind it with schema information of a given attribute. By default, if this property is missing, it means that the control does not check for any restrictions on input strings.
 
     The following example uses an explicit value for this property:
 
@@ -593,7 +593,7 @@ All RCDC controls that are specified in this document can have the common proper
     <my:Property my:Name="RegularExpression" my:Value="{Binding Source=schema, Path=Alias.StringRegex, Mode=OneWay}"/>
     ```
 
-4. **Visible**: This is an optional, Boolean-type attribute. You can use this attribute to hide the whole control. The default value is set to true.
+- **Visible**: This is an optional, Boolean-type attribute. You can use this attribute to hide the whole control. The default value is set to true.
 
 
 <h3 id="options-element">Options element</h3>
@@ -1191,7 +1191,7 @@ The following code segment generates an upload control:
 
 - All common properties: For information about these properties, see <a href="#common-properties">Common properties</a>.
 
-- **PermittedObjectTypes**: This defines a list of resource types to be shown in the select statement of a filter builder. For information about how to use the filter builder, see the filter builder Help. The string is in the format of ResourceTypeA, ResourceTypeB, where each resource type is separated by a comma (,).
+- **PermittedObjectTypes**: This defines a list of resource types to be shown in the select statement of a filter builder. For information about how to use the filter builder, see the filter builder Help. The string is in the format of ResourceTypeA, ResourceTypeB, where each resource type is separated by a comma ','.
 
 - **Value**: This is the value with which the filter builder is rendered. Only a binding with string-type data that contains an XPath expression is supported. The Filter attribute is a recommended attribute for binding this control.
 
@@ -1338,7 +1338,7 @@ The following code segment generates a hyperlink that references a resource. The
 
 - All common properties: For information about these properties, see <a href="#common-properties">Common properties</a>.
 
-- **UsageKeywords**: This is an optional string property. You can define a list of search scopes to be used in the Resource Picker by providing a list of the usage keywords that are supported by the SearchScopeConfiguration structure, where each keyword is separated by a (‘).
+- **UsageKeywords**: This is an optional string property. You can define a list of search scopes to be used in the Resource Picker by providing a list of the usage keywords that are supported by the SearchScopeConfiguration structure, where each keyword is separated by an apostrophe (').
 
 - **Filter**: This is an optional string property. The user provides an XPath expression to scope the resource picker to display only the items that fit within a defined scope. This property is mutually exclusive with the UsageKeywords property. When the search scope is applied, this property has no effect.
 
@@ -1352,11 +1352,11 @@ The following code segment generates a hyperlink that references a resource. The
 
 - **Mode**: This is an optional string property. You use this property to define whether one value can be selected by the Identity Picker or multiple identities can be selected. SingleResult and MultipleResult are the allowed values. By default, it is set to SingleResult.
 
-- **ObjectTypes**: This is an optional, string-type property. You can define a list of resource types that the end user can resolve entries against in the Identity Picker Resolve box. The list consists of a list of resource-type names separated by a comma (,).
+- **ObjectTypes**: This is an optional, string-type property. You can define a list of resource types that the end user can resolve entries against in the Identity Picker Resolve box. The list consists of a list of resource-type names separated by a comma ','.
 
-- **AttributesToSearch**: This is an optional, string-type property. You can define a list of attributes to be used to resolve the item in the Identity Picker, where the list is a list of schema attributes, separated by a comma (,). For example, if AttributesToSearch is set to `DisplayName, Alias`, the user can search the items with `DisplayName = \<search value\>` or `Alias=\<search value\>`. Attribute names that are entered here should be valid attributes on target resource types of the data source that's specified in the Value property. The target resource types can be found in the ObjectTypes field. All of the attributes must be valid on any given resource types that are cited in the ObjectTypes field.
+- **AttributesToSearch**: This is an optional, string-type property. You can define a list of attributes to be used to resolve the item in the Identity Picker, where the list is a list of schema attributes, separated by a comma ','. For example, if AttributesToSearch is set to `DisplayName, Alias`, the user can search the items with `DisplayName = \<search value\>` or `Alias=\<search value\>`. Attribute names that are entered here should be valid attributes on target resource types of the data source that's specified in the Value property. The target resource types can be found in the ObjectTypes field. All of the attributes must be valid on any given resource types that are cited in the ObjectTypes field.
 
-- **ColumnsToDisplay**: This is an optional, string-type property. The user provides a list of schema attribute names, separated by a comma (,). The attributes that are defined here make up the column of the list view in the Identity Picker.
+- **ColumnsToDisplay**: This is an optional, string-type property. The user provides a list of schema attribute names, separated by a comma ','. The attributes that are defined here make up the column of the list view in the Identity Picker.
 
 - **Rows**: This is an optional, integer property. It works only when the Mode is set to MultipleResult. Use this property to set the height of the Resolve text box to a given size in character units.
 
@@ -1501,7 +1501,7 @@ For a sample of the UocLabel control, see simple control in the Simple control s
 
 - **ResultObjectType**: This is an optional, string-type property. Use this property to specify the expected object type of the search results. The default value of this property is Resource. If the search result contains multiple resource types, this value should be specified as Resource.
 
-- **ColumnsToDisplay**: This is an optional property. Use this property to specify which attributes you want the list view to display as columns. The default value of this property is DisplayName, ResourceType. Each column is represented by the system name of an attribute. Each column is separated by a comma (,). You do not have to specify a value for this property when the list view is used in selection mode. In selection mode, the column setting comes from the SearchScopeColumn attribute of the search scope that is currently selected.
+- **ColumnsToDisplay**: This is an optional property. Use this property to specify which attributes you want the list view to display as columns. The default value of this property is DisplayName, ResourceType. Each column is represented by the system name of an attribute. Each column is separated by a comma ','. You do not have to specify a value for this property when the list view is used in selection mode. In selection mode, the column setting comes from the SearchScopeColumn attribute of the search scope that is currently selected.
 
 - **ListFilter**: This is an optional, string-type property. This is the xpath that is used to render the list view, and is only in effect when ShowSearchControl property is set to false. When this value is specified, the list view uses this property value for queries and the list view is not in selection mode. The filter can either be bound to a string attribute of the resource:
 

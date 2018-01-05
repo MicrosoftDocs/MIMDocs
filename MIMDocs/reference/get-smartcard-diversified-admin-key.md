@@ -29,7 +29,7 @@ ms.suite: ems
 # Get smart card diversified admin key
 Gets the diversified admin key for the specified smart card.
 
->[!IMPORANT]
+>[!IMPORTANT]
 >The admin key should be diversified only when the profile template policy indicates that it should be.
 
 >[!NOTE]

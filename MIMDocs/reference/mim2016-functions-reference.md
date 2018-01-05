@@ -111,11 +111,7 @@ Data manipulation functions are used to perform a variety of manipulation operat
 | Function&nbsp;signature | `String RightPad(string, length, padCharacter)` |
 | Inputs                  | <ul><li>**string**: The string to pad.</li><li>**length**: An integer representing the desired length of the string.</li><li>**padCharacter**: A string that consists of a single character to be used as a pad character.</li></ul> |
 | Operations              | If the length of **string** is less than **length**, then the **padCharacter** is repeatedly appended to the end of **string** until the **string** length is equal to **length**. For example:<ul><li>`RightPad("User", 10, "0")` results in `"User000000"`.</li><li>`RightPad(RandomNum(1,10), 5, "0")` might result in `"9000"`.</li></ul> |
-| Output                  | If **string** has a length greater than or equal to **length**, a string identical to **string** is returned. If the length of **string** is less than **length**, a new string of the desired length is returned. The new string contains **string** padded with a **padCharacter**. If **string** is null, the function returns an empty string. |
-
->[!NOTE]
->**padCharacter** can be a space character, but it cannot be a null value. If the length of **string** is equal to or greater than **length**, **string** is returned unchanged.
-
+| Output                  | If **string** has a length greater than or equal to **length**, a string identical to **string** is returned. If the length of **string** is less than **length**, a new string of the desired length is returned. The new string contains **string** padded with a **padCharacter**. If **string** is null, the function returns an empty string. <br/><br/>**Note**: **padCharacter** can be a space character, but it cannot be a null value. If the length of **string** is equal to or greater than **length**, **string** is returned unchanged. |
 <br/>
 
 | LeftPad                 |   |
@@ -149,13 +145,9 @@ Data manipulation functions are used to perform a variety of manipulation operat
 |---|---|
 | Description             | The DateTimeFormat function is used to format a DateTime in string form to a specified format. |
 | Function&nbsp;signature | `String DateTimeFormat(dateTime, format)` |
-| Inputs                  | <ul><li>**dateTime**: A string representing the DateTime to format.</li><li>**format**: A string representing the format to convert to.</li></ul> |
+| Inputs                  | <ul><li>**dateTime**: A string representing the DateTime to format.</li><li>**format**: A string representing the format to convert to.</li></ul> <br/>**Note**: For the characters that are accepted to create user-defined formats, see [User-defined Date/Time formats](http://go.microsoft.com/fwlink/?LinkId=195182). |
 | Operations              | The format string specified in **format** is applied to the DateTime in the **dateTime** string. The string specified in **format** must be a valid DateTime format. If it is not, an error is returned indicating that the format is not a valid DateTime format. For example: `DateTime("12/25/2007", "yyyy-MM-dd")` results in `"2007-12-25"`. |
 | Output                  | A string resulting from applying **format** to **dateTime**. |
-
->[!NOTE]
->For the characters that are accepted to create user-defined formats, see [User-defined Date/Time formats](http://go.microsoft.com/fwlink/?LinkId=195182).
-
 <br/>
 
 | ConvertSidToString      |   |

@@ -28,7 +28,7 @@ The error is due to a limitation in the Synchronization Service. The service can
 
 3. Run the WebServiceMA_apply_before_import_server_configuration.ps1 PowerShell script.
 
-<h3 id=web-service-powershell-script>PowerShell script</h3>
+<h3 id="web-service-powershell-script">PowerShell script</h3>
 
 ```
 # --------------------------------------------------------------------- 

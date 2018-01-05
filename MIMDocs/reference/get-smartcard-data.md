@@ -153,4 +153,4 @@ HTTP/1.1 200 OK
 
 ## See also
 
--[Microsoft.Clm.Shared.Smartcards.Smartcard class](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)
+- [Microsoft.Clm.Shared.Smartcards.Smartcard class](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)
