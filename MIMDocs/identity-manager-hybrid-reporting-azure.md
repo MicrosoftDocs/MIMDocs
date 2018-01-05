@@ -35,15 +35,15 @@ Hybrid audit reporting helps IT professionals address common identity-management
 
 * **Exporting reporting data and creating custom reports**. In addition to viewing your reports in the Azure portal, you can export the data to generate your own custom views.
 
-* **Reducing reporting system infrastructure cost**. Hybrid reporting in the cloud means you can eliminate on-premises reporting data-warehouse infrastructure.
+* **Reducing reporting system infrastructure cost**. Hybrid reporting in the cloud means you can help eliminate the costs that are associated with your on-premises, data-warehouse infrastructure.
 
 ## How does it work?
 
 To collect the on-premises data, you first install a reporting agent on your Identity Manager 2016 server. [Download the Microsoft Identity Manager Hybrid Reporting Agent](https://www.microsoft.com/download/details.aspx?id=55112).
 
 Hybrid reporting undergoes the following process:
-1. After the reporting agent is installed, the Identity Manager activity data is sent to Windows Event Log.
-2. The reporting agent processes the delta events every 10 minutes or on service restart in Windows Event Log. The agent then uploads the events to the Azure portal.
+1. After you install the reporting agent, the Identity Manager activity data is sent to Windows Event Log.
+2. The reporting agent processes the delta events every 10 minutes or when the Windows Event Log service restarts. The agent then uploads the events to the Azure portal.
 3. The Azure portal processes the received data within one hour of receiving it.
 4. The activity data is stored in Azure for one month.
 5. The Azure portal retrieves the audit reporting data and displays it in the Azure Audit Reporting window.
