@@ -29,7 +29,7 @@ ms.suite: ems
 # PAM REST API service details
 The following sections discuss details of the Microsoft Identity Manager (MIM) Privileged Access Management (PAM) REST API.
 
-## HTTP request headers
+<h2 id="http-request-and-response-headers">HTTP request headers</h2>
 
 HTTP requests that are sent to the API should include the following headers (this list is not exhaustive):
 
