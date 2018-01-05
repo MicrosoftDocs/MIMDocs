@@ -5,6 +5,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "MIMDocs",
+      "build_source_folder": "MIMDocs",
       "build_output_subfolder": "MIMDocs",
       "locale": "en-us",
       "version": 0,
@@ -15,7 +16,8 @@
     },
     {
       "docset_name": "MIMUnderstand",
-      "build_output_subfolder": "MIMDocs/Understand",
+      "build_source_folder": "MIMDocs/Understand",
+      "build_output_subfolder": "MIMDocs-Understand",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": true,
@@ -25,7 +27,8 @@
     },
     {
       "docset_name": "MIMPlanDesign",
-      "build_output_subfolder": "MIMDocs/PlanDesign",
+      "build_source_folder": "MIMDocs/PlanDesign",
+      "build_output_subfolder": "MIMDocs-PlanDesign",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": true,
@@ -35,7 +38,8 @@
     },
     {
       "docset_name": "MIMGetStarted",
-      "build_output_subfolder": "MIMDocs/GetStarted",
+      "build_source_folder": "MIMDocs/GetStarted",
+      "build_output_subfolder": "MIMDocs-GetStarted",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": true,
@@ -45,7 +49,8 @@
     },
     {
       "docset_name": "MIMDeployUse",
-      "build_output_subfolder": "MIMDocs/DeployUse",
+      "build_source_folder": "MIMDocs/DeployUse",
+      "build_output_subfolder": "MIMDocs-DeployUse",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": true,
@@ -55,7 +60,8 @@
     },
     {
       "docset_name": "MIMTroubleshoot",
-      "build_output_subfolder": "MIMDocs/Troubleshoot",
+      "build_source_folder": "MIMDocs/Troubleshoot",
+      "build_output_subfolder": "MIMDocs-Troubleshoot",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": true,
