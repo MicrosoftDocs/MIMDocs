@@ -3,26 +3,14 @@
 
 title: Deploy PAM step 7 – user access | Microsoft Docs
 description: As the final step, grant a privileged user temporary access to demonstrate that your Privileged Access Management deployment was successful.
-keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: mwahl
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 # Step 7 – Elevate a user’s access
 
@@ -44,7 +32,12 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
 
 ## Request privileged access from MIM.
 
-1. On CORPWKSTN, still as CONTOSO\Jen, type the following command.
+>[NOTE!]
+>It is recommended that the workstation be a privileged workstation(PAW).  For more information see [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+
+1. On PRIVWKSTN, logon as PRIV\priv.jen.
+2. Click **Start**, **Run**, and enter **PowerShell.exe**.
+3. Type the following command.
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
