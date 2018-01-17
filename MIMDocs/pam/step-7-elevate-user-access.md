@@ -32,8 +32,8 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
 
 ## Request privileged access from MIM.
 
->[NOTE!]
->It is recommended that the workstation be a privileged workstation(PAW).  For more information see [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+> [!NOTE]
+> It is recommended that the workstation be a privileged workstation(PAW).  For more information see [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
 
 1. On PRIVWKSTN, logon as PRIV\priv.jen.
 2. Click **Start**, **Run**, and enter **PowerShell.exe**.
