@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Certificate Request Operations | Microsoft Docs
+title: Certificate request operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
@@ -26,9 +26,8 @@ ms.suite: ems
 
 ---
 
-# Certificate Request Operations
+# Certificate request operations
+The following sections describe the certificate request operations in the Microsoft Identity Manager (MIM) Certificate Management (CM) REST API:
 
-##In This Section
-
-- [Get Certificate Request Generation Options](get-certificate-request-generation-options.md)
-- [Get Certficate Responses](get-certificate-responses.md)
+- [Get certificate request generation options](get-certificate-request-generation-options.md)
+- [Get certificate responses](get-certificate-responses.md)
