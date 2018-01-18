@@ -1,8 +1,8 @@
 ﻿---
 # required metadata
 
-title: Microsoft Identity Manager Importing Web Services Connector | Microsoft Docs
-description: Microsoft Identity Manager Importing Web Services Connector with multiple ws configurations
+title: Import Web Services Connector | Microsoft Docs
+description: Import Web Services Connector with multiple Web Services configurations in Microsoft Identity Manager.
 keywords:
 author: fimguy
 ms.author: davidste
@@ -14,80 +14,67 @@ ms.technology: security
 ms.assetid: 
 ---
 
-# Importing Web Services Connector
+# Import Web Services Connector
 
-In case when the “Import server configuration” operation which contains “Web Service management agent” has finished with an error “Unable to retrieve configuration parameters from the extension”, it is necessary to check the exported configuration files.
+When the Import server configuration operation that contains the Web Services management agent (MA) finishes with the error "Unable to retrieve configuration parameters from the extension," the exported configuration files need to be checked.
 
-It happens because of limitation in "Synchronization Service", which cannot import server configuration with "Web Service management agent" and shows an error "Unable to retrieve configuration parameters from the extension". The configuration of "Web Service management agent" in some cases can contain invalid setting which it is necessary to fix. 
+The error is due to a limitation in the Synchronization Service. The service can't import the server configuration with the Web Services MA and returns the error "Unable to retrieve configuration parameters from the extension." In some cases, the Web Services MA can contain invalid settings that need to be fixed. 
 
-## How to fix this issue
+## How to fix the issue
 
-Copy server configuration files into the destination server. 
+1. Copy the server configuration files into the destination server. 
 
-On the destination server copy "WebServiceMA_apply_before_import_server_configuration.ps1" PowerShell script (is placed in Appendix A) into the folder which contains exported files of "Server configuration". 
- 
-Run "WebServiceMA_apply_before_import_server_configuration.ps1" PowerShell script. 
+2. On the destination server, copy the <a href="#web-service-powershell-script">WebServiceMA_apply_before_import_server_configuration.ps1</a> PowerShell script into the folder that contains the exported files for the server configuration.
+
+3. Run the WebServiceMA_apply_before_import_server_configuration.ps1 PowerShell script.
+
+<h3 id="web-service-powershell-script">PowerShell script</h3>
 
 ```
-# ------------------------------------------------------------------------------------------------- 
+# --------------------------------------------------------------------- 
 # <copyright file="WebServiceMA_apply_before_import_server_configuration.ps1" company="Microsoft"> 
-# Copyright (c) . All rights reserved. 
+# Copyright (c). All rights reserved. 
 # </copyright> 
 
-# ------------------------------------------------------------------------------------------------- 
-# If the script does not work, it is necessary to check the ExecutionPolicy with the help of 
-# the following commands: 
+# --------------------------------------------------------------------- 
+# If the script doesn't work, check the ExecutionPolicy
+# by using the following commands: 
 # 
-#    * Get-ExecutionPolicy 
-#    * Set-ExecutionPolicy RemoteSigned 
+#    - Get-ExecutionPolicy 
+#    - Set-ExecutionPolicy RemoteSigned 
+#
 
 function Get-MIMInstallationPath { 
 
 <# 
-
   .SYNOPSIS 
 
-  Get instalation path of MIM from the Windows registry. 
-
-   
+  Get the installation path of MIM from the Windows registry.
 
   .DESCRIPTION 
 
-  Get instalation path of MIM from the Windows registry 
+  Get the installation path of MIM from the Windows registry: 
 
-  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Synchronization Service\ 
+       HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\
+       Forefront Identity Manager\2010\Synchronization Service\ 
 
-  the paramter Location. 
-
-   
+  and the paramter Location. 
 
   .EXAMPLE 
 
   $path = Get-MIMInstallationPath 
-
 #>   
 
-   
-
   try 
-
   { 
-
     $MIMpath = Get-ItemProperty -Path "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Synchronization Service\" 
-
   } 
 
   catch 
-
   { 
-
     $ErrorMessage = $_.Exception.Message 
-
     throw "Get-MIMInstallationPath exception: $ErrorMessage" 
-
   } 
-
-     
 
   Write-Output "$($MIMpath.Location)Synchronization Service\Extensions\" 
 
@@ -96,68 +83,43 @@ function Get-MIMInstallationPath {
 function Get-WsconfigFilesNamesFromExtensionsFolder([string] $path) { 
 
 <# 
-
   .SYNOPSIS 
 
-  Get the comma-separated list of  *.wsconfig files from Extensions folder. 
-
-   
+  Get the comma-separated list of *.wsconfig files from Extensions folder. 
 
   .DESCRIPTION 
 
-  Get the comma-separated list of  *.wsconfig files from Extensions folder. 
-
-   
+  Get the comma-separated list of *.wsconfig files from Extensions folder. 
 
   .PARAMETER path 
 
-  The path to the Extensions folder which is contained *.wsconfig files. 
-
-   
+  The path to the Extensions folder that contains the *.wsconfig files. 
 
   .EXAMPLE 
 
   $wsconfigFiles = Get-WsconfigFilesNamesFromExtensionsFolder("./") 
-
 #>  
-
- 
 
  if( [string]::IsNullOrEmpty($path) ) 
 
   { 
-
     throw "Get-WsconfigFilesNamesFromExtensionsFolder error: the input variable Path cannot be empty." 
-
   } 
 
-     
-
   try 
-
   { 
+    $files = Get-ChildItem $path -filter "*.wsconfig" -name | ForEach-Object {$_ -replace ".wsconfig", ""} 
 
-   $files = Get-ChildItem $path -filter "*.wsconfig" -name | ForEach-Object {$_ -replace ".wsconfig", ""} 
-
-       
-
-   $wsconfigFiles=$files -join "," 
-
+    $wsconfigFiles=$files -join "," 
   } 
 
   catch 
-
   { 
+    $ErrorMessage = $_.Exception.Message 
 
-   $ErrorMessage = $_.Exception.Message 
-
-   Write-Host "Get-WsconfigFilesNamesFromExtensionsFolder exception: $ErrorMessage" 
-
-   Write-Output "" 
-
+    Write-Host "Get-WsconfigFilesNamesFromExtensionsFolder exception: $ErrorMessage" 
+    Write-Output "" 
   } 
-
-      
 
   Write-Output $wsconfigFiles 
 
@@ -171,21 +133,14 @@ function Set-AvailableWebServiceProjects([string] $path) {
 
   Patch exported wsconfig files for Web Service project management agent. 
 
-   
 
   .DESCRIPTION 
 
-  The script tries to found the config files of Web Service management agents 
-
-  and tries to fix Web Service project configuration parameter. 
-
-   
+  The script tries to find the config files of Web Service management agents and tries to fix Web Service project configuration parameter. 
 
   .PARAMETER path 
 
-  The path to the folder which is contained exported config files of management agents. 
-
-   
+  The path to the folder that contains the exported config files of management agents.
 
   .EXAMPLE 
 
@@ -193,84 +148,58 @@ function Set-AvailableWebServiceProjects([string] $path) {
 
 #>   
 
-   
-
   if( [string]::IsNullOrEmpty($path) ) 
 
   { 
-
     throw "Set-AvailableWebServiceProjects: path variable is empty" 
-
   } 
 
-     
-
   try 
-
   { 
+    $countPatchedFiles=0 
 
-   
+    $files = Get-ChildItem $path -filter "MA-{*}.xml" -name 
 
-   $countPatchedFiles=0 
+    foreach ($file in $files)  
+    { 
+      [xml]$xmlConfig = Get-Content $file 
 
- 
+      $connectorName = $xmlConfig."saved-ma-configuration"."ma-data"."ma-listname" 
 
-   $files = Get-ChildItem $path -filter "MA-{*}.xml" -name 
+      if($connectorName -ne "Web Service (Microsoft)" ) 
+      { 
+        continue 
+      } 
 
- 
-
-   foreach ($file in $files)  
-
-   { 
-
-     [xml]$xmlConfig = Get-Content $file 
-
-    
-
-     $connectorName = $xmlConfig."saved-ma-configuration"."ma-data"."ma-listname" 
-
-    
-
-     if($connectorName -ne "Web Service (Microsoft)" ) 
-
-     { 
-
-       continue 
-
-     } 
-
-     $parameters = $xmlConfig."saved-ma-configuration"."ma-data"."private-configuration"."MAConfig"."parameter-definitions" 
+      $parameters = $xmlConfig."saved-ma-configuration"."ma-data"."private-configuration"."MAConfig"."parameter-definitions" 
      $target = ($parameters."parameter"|where {$_.name -eq "Web Service project" -and $_.use -eq "connectivity" -and $_.type -eq "drop-down"})          
-     if($target -eq $null) 
+     
+      if($target -eq $null) 
+      { 
+        continue 
 
+      } 
+
+     $extensionsFolderPath = Get-MIMInstallationPath 
+     $wsconfigFiles = Get-WsconfigFilesNamesFromExtensionsFolder($extensionsFolderPath)
+    
+     if($wsconfigFiles -eq '') 
      { 
-
        continue 
-
      } 
 
-    $extensionsFolderPath = Get-MIMInstallationPath 
-    $wsconfigFiles = Get-WsconfigFilesNamesFromExtensionsFolder($extensionsFolderPath)
-    if($wsconfigFiles -eq '') 
-
-     { 
-
-       continue 
-
-     } 
-    $target.validation = [string]$wsconfigFiles   
-    $defaultConfig = $wsconfigFiles.Split("{,}") 
-    $target."default-value" = $defaultConfig[0] 
-    $fileFullPath = "$path$file" 
-    Set-ItemProperty $fileFullPath -name IsReadOnly -value $false 
-    $xmlConfig.Save($fileFullPath) 
-    Set-ItemProperty $fileFullPath -name IsReadOnly -value $true 
-    $countPatchedFiles++ 
+     $target.validation = [string]$wsconfigFiles   
+     $defaultConfig = $wsconfigFiles.Split("{,}") 
+     $target."default-value" = $defaultConfig[0] 
+     $fileFullPath = "$path$file" 
+     Set-ItemProperty $fileFullPath -name IsReadOnly -value $false 
+     $xmlConfig.Save($fileFullPath) 
+     Set-ItemProperty $fileFullPath -name IsReadOnly -value $true 
+     $countPatchedFiles++ 
    } 
   } 
 
   catch 
-
   { 
    $ErrorMessage = $_.Exception.Message 
 
@@ -279,23 +208,19 @@ function Set-AvailableWebServiceProjects([string] $path) {
   Write-Output $countPatchedFiles 
 } 
 
-     ################## 
-
- ####      Main      #### 
-
-   ################## 
+########################################## 
+####              Main                #### 
+########################################## 
 
 cls 
 
 try 
 { 
-
   $currentFolder = (Get-Location).path + "\" 
 
   $countPatchedFiles = Set-AvailableWebServiceProjects($currentFolder) 
 
   Write-Host "Count of patched Web Service config files:" $countPatchedFiles 
-
 } 
 catch 
 { 
@@ -307,14 +232,9 @@ catch
 
 ```
 
+## Next steps
 
-
-## Next Steps 
-
--   [Install the Web Service Config Tool](microsoft-identity-manager-2016-ma-ws-install.md)
-
--   [Soap Based deployment guide](microsoft-identity-manager-2016-ma-ws-soap.md)
-
--   [Rest Based deployment guide](microsoft-identity-manager-2016-ma-ws-restgeneric.md)
-
--   [Web Service MA Configuration](microsoft-identity-manager-2016-ma-ws-maconfig.md)
+- [Install the Web Service Configuration Tool](microsoft-identity-manager-2016-ma-ws-install.md)
+- [SOAP deployment guide](microsoft-identity-manager-2016-ma-ws-soap.md)
+- [REST deployment guide](microsoft-identity-manager-2016-ma-ws-restgeneric.md)
+- [Web Service MA configuration](microsoft-identity-manager-2016-ma-ws-maconfig.md)

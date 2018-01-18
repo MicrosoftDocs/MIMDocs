@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: Get PAM Roles | Microsoft Docs
+title: Get PAM roles | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
@@ -26,29 +26,36 @@ ms.suite: ems
 
 ---
 
-# Get PAM Roles
+# Get PAM roles
 Used by a privileged account to list the PAM roles for which the account is a candidate.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `http://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/api/pamresources/pamroles
 
-###Query Parameters
+### Query parameters
+
 Parameter | Description
 ----------|--------------
-$filter | Optional. Specify any of the PAM Role properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#filtering)
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Request Body
-none
+$filter | Optional. Specify any of the PAM role properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API service details](privileged-access-management-rest-api-service-details.md#filtering).
+v | Optional. The API version. If not included, the current (most recently released) version of the API is used. For more information, see [Versioning in PAM REST API service details](privileged-access-management-rest-api-service-details.md#versioning).
 
-##Response
-###Response Codes
+### Request headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
+
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK
@@ -58,10 +65,11 @@ Code  |Description
 500 | Internal Server Error
 503 | Service Unavailable
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Response Body
-A successful response contains a collection of one or more PAM roles, each of which has the following properties.
+### Response headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
+
+### Response body
+A successful response contains a collection of one or more PAM roles, each of which has the following properties:
 
 Property | Description
 --------|-------------
@@ -69,19 +77,23 @@ RoleID | The unique identifier (GUID) of the PAM role.
 DisplayName | THe PAM role’s display name in the MIM service.
 Description | The PAM role’s description in the MIM service.
 TTL | The role’s access rights maximum expiration timeout in seconds.
-AvailableFrom | The earliest time of day that a requst will be activated.
-AvailableTo | The latest time of day that a request will be activated.
+AvailableFrom | The earliest time of day when a request is activated.
+AvailableTo | The latest time of day when a request is activated.
 MFAEnabled | A Boolean value that indicates whether activation requests for this role require an MFA challenge.
 ApprovalEnabled | A Boolean value that indicates whether activation requests for this role require approval by a role owner.
-AvailibitlyWindowEnabled | A Boolean value that indicates whether the role can only be activated during a specified time interval.
+AvailabilityWindowEnabled | A Boolean value that indicates whether the role can only be activated during a specified time interval.
 
-##Example
+## Example
+This section provides an example to get the PAM roles.
 
-###Request
+### Example: Request
+
 ```
 GET /api/pamresources/pamroles HTTP/1.1
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 
