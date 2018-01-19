@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Work with hybrid reporting in Azure with MIM 2016  | Microsoft Docs
+title: Work with hybrid reporting in Azure with Identity Manager 2016  | Microsoft Docs
 description: Learn how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 keywords:
 author: fimguy
@@ -25,12 +25,12 @@ ms.suite: ems
 
 ---
 
-# Work with Identity Manager hybrid reporting - Public Preview refresh
+# Work with hybrid reporting in Identity Manager Public Preview refresh
 
 This article discusses how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 
 ## Available hybrid reports
-The first three Microsoft Identity Manager (MIM) reports available in Azure Active Directory (Azure AD) are as follows:
+The first three Microsoft Identity Manager reports available in Azure Active Directory (Azure AD) are as follows:
 
 - **Password reset activity**: Displays each instance when a user performed password reset using self-service password reset (SSPR) and provides the gates or methods used for authentication.
 
@@ -49,7 +49,7 @@ The first three Microsoft Identity Manager (MIM) reports available in Azure Acti
 
 ## Prerequisites
 
-* Microsoft Identity Manager 2016 RTM or SP1 MIM service.
+* Microsoft Identity Manager 2016 RTM or the SP1 Identity Manager service.
 
 * An Azure AD Premium tenant with a licensed administrator in your directory.
 
@@ -62,7 +62,7 @@ The requirements for using Microsoft Identity Manager hybrid reporting are liste
 | --- | --- |
 | Azure AD Premium | Hybrid reporting is an Azure AD Premium feature and requires Azure AD Premium. </br>For more information, see [Getting started with Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium). </br>Get a [free 30-day trial of Azure AD Premium](https://azure.microsoft.com/trial/get-started-active-directory/). |
 | You must be a global administrator of your Azure AD |By default, only global administrators can install and configure the agents to get started, access the portal, and perform any operations within Azure. </br>**Important**: The account that you use when you install the agents must be a work or school account. It cannot be a Microsoft account. For more information, see [Sign up for Azure as an organization](https://docs.microsoft.com/azure/active-directory/sign-up-organization). |
-| Microsoft Identity Manager Hybrid Agent is installed on each targeted MIM Service server | To receive the data and provide monitoring and analytics capabilities, hybrid reporting requires the agents to be installed and configured on targeted servers.  </br>|
+| Microsoft Identity Manager Hybrid Agent is installed on each targeted Identity Manager Service server | To receive the data and provide monitoring and analytics capabilities, hybrid reporting requires the agents to be installed and configured on targeted servers.  </br>|
 | Outbound connectivity to the Azure service endpoints | During installation and runtime, the agent requires connectivity to Azure service endpoints. If outbound connectivity is blocked by firewalls, ensure that the following endpoints are added to the allowed list:<ul><li>\*.blob.core.windows.net </li><li>\*.servicebus.windows.net - Port: 5671 </li><li>\*.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li></ul> |
 |Outbound connectivity based on IP addresses | For IP addresses based filtering on firewalls, refer to the [Azure IP Ranges](https://www.microsoft.com/download/details.aspx?id=41653).|
 | SSL inspection for outbound traffic is filtered or disabled | The agent registration step or data upload operations might fail if there is SSL inspection or termination for outbound traffic at the network layer. |
@@ -71,33 +71,33 @@ The requirements for using Microsoft Identity Manager hybrid reporting are liste
 </BR>
 
 ## Install Microsoft Identity Manager Reporting Agent in Azure AD
-After the reporting agent is installed, the data from Microsoft Identity Manager activity is exported from MIM to Windows Event Log. The MIM reporting agent processes the events and then uploads them to Azure. In Azure, the events are parsed, decrypted, and filtered for the required reports.
+After Reporting Agent is installed, the data from Identity Manager activity is exported from Identity Manager to Windows Event Log. Identity Manager Reporting Agent processes the events and then uploads them to Azure. In Azure, the events are parsed, decrypted, and filtered for the required reports.
 
-1.  Install Microsoft Identity Manager 2016.
+1.  Install Identity Manager 2016.
 
-2.  Download the Microsoft Identity Manager reporting agents, and then do the following:
+2.  Download Identity Manager Reporting Agent, and then do the following:
 
     a. Sign in to the Azure AD management portal, and then select **Active Directory**.
 
     b. Double-click the directory for which you are a global administrator and have an Azure AD Premium subscription.
 
-    c. Select **Configuration**, and then download the reporting agent.
+    c. Select **Configuration**, and then download Reporting Agent.
 
-3.  Install the Microsoft Identity Manager reporting agent by doing the following:
+3.  Install Reporting Agent by doing the following:
 
-    a.  Download the [MIMHReportingAgentSetup.exe file](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) for the Microsoft Identity Manager Service server.
+    a.  Download the [MIMHReportingAgentSetup.exe file](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) for the Identity Manager Service server.
 
     b.  Run `MIMHReportingAgentSetup.exe`. 
 
     c.  Run the agent installer.
 
-    d.  Make sure that the MIM reporting agent service is running.
+    d.  Make sure that the Identity Manager Reporting Agent service is running.
 
-    e.  Restart the MIM service.
+    e.  Restart the Identity Manager service.
 
-4.  Verify that Microsoft Identity Manager Reporting is working in Azure.
+4.  Verify that Identity Manager Reporting Agent is working in Azure.
 
-    You can create report data by using the Microsoft Identity Manager self-service password reset portal to reset a user’s password. Make sure that the password reset was completed successfully, and then check to ensure that the data is displayed in the Azure AD management portal.
+    You can create report data by using the Identity Manager self-service password reset portal to reset a user’s password. Make sure that the password reset was completed successfully, and then check to ensure that the data is displayed in the Azure AD management portal.
 
 ## View hybrid reports in the Azure portal
 
@@ -112,15 +112,15 @@ After the reporting agent is installed, the data from Microsoft Identity Manager
 5.  In the **Category** drop-down list, make sure that **MIM Service** is selected.
 
 > [!IMPORTANT]
-> It can take some time for Microsoft Identity Manager audit data to appear in the Azure portal.
+> It can take some time for Identity Manager audit data to appear in the Azure portal.
 
 ## Stop creating hybrid reports
-If you want to stop uploading reporting audit data from Microsoft Identity Manager to Azure Active Directory, uninstall the hybrid reporting agent. Use the Windows Add or Remove Programs tool to uninstall Microsoft Identity Manager hybrid reporting.
+If you want to stop uploading reporting audit data from Identity Manager to Azure AD, uninstall the hybrid reporting agent. Use the Windows Add or Remove Programs tool to uninstall Identity Manager hybrid reporting.
 
 ## Windows events used for hybrid reporting
 Events that are generated by Microsoft Identity Manager are stored in Windows Event Log. You can view the events in the **Event Viewer** by selecting **Application and Services logs** > **Identity Manager Request Log**. Each MIM request is exported as an event in Windows Event Log in JSON structure. You can export the result to your security information and event management (SIEM) system.
 
 |Event type|ID|Event details|
 |--------------|------|-----------------|
-|Information|4121|The MIM event data that includes all the request data.|
-|Information|4137|The MIM event 4121 extension, if there is too much data for a single event. The header in this event is displayed in the following format: `"Request: <GUID> , message <xxx> out of <xxx>`.|
+|Information|4121|The Identity Manager event data that includes all the request data.|
+|Information|4137|The Identity Manager event 4121 extension, if there is too much data for a single event. The header in this event is displayed in the following format: `"Request: <GUID> , message <xxx> out of <xxx>`.|
