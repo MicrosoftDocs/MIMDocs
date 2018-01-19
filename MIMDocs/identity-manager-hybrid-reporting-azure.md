@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Hybrid identity management audit reporting in Azure Active Directory - Public Preview refresh
+# Hybrid identity management audit reporting in Azure Active Directory Public Preview refresh
 With Azure Active Directory (Azure AD) audit activity reporting, you can monitor identity management activity either on-premises or in the cloud. By managing all your identity and access data in a single report, you can save time and reduce overall costs.
 
 ## What is Azure Active Directory hybrid reporting?
