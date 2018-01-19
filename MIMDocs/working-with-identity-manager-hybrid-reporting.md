@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Work with hybrid reporting in Azure with Identity Manager 2016  | Microsoft Docs
+title: Work with hybrid reporting in Azure by using Identity Manager 2016  | Microsoft Docs
 description: Learn how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 keywords:
 author: fimguy
@@ -36,7 +36,7 @@ The first three Microsoft Identity Manager reports available in Azure Active Dir
 
 - **Password reset registration**: Displays each time that a user registers for SSPR and the methods used to authenticate. Examples of methods might be a mobile phone number or questions and answers.
    > [!NOTE]
-   > For *Password reset registration* reports, no differentiation is made between SMS gate and MFA gate. Both are considered mobile phone methods.
+   > For *Password reset registration* reports, no differentiation is made between the SMS gate and MFA gate. Both are considered mobile phone methods.
 
 - **Self-service groups activity**: Displays each attempt made by someone to add or delete him or herself from a group and group creation.
 
@@ -67,7 +67,7 @@ The requirements for using Identity Manager hybrid reporting are listed in the f
 |Outbound connectivity based on IP addresses | For IP addresses based filtering on firewalls, refer to the [Azure IP Ranges](https://www.microsoft.com/download/details.aspx?id=41653).|
 | SSL inspection for outbound traffic is filtered or disabled | The agent registration step or data upload operations might fail if there is SSL inspection or termination for outbound traffic at the network layer. |
 | Firewall ports on the server that runs the agent | To communicate with the Azure service endpoints, the agent requires the following firewall ports to be open:<ul><li>TCP port 443</li><li>TCP port 5671</li></ul> |
-| Allow certain websites if Internet Explorer enhanced security is enabled |If IE enhanced security is enabled, the following websites must be allowed on the server that has the agent installed:<ul><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>The federation server for your organization trusted by Azure Active Directory (for example, https://sts.contoso.com).</li></ul> |
+| Allow certain websites if Internet Explorer enhanced security is enabled |If Internet Explorer enhanced security is enabled, the following websites must be allowed on the server that has the agent installed:<ul><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>The federation server for your organization trusted by Azure Active Directory (for example, https://sts.contoso.com).</li></ul> |
 </BR>
 
 ## Install Identity Manager Reporting Agent in Azure AD
