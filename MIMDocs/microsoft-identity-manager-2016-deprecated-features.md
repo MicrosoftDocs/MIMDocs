@@ -18,21 +18,21 @@ ms.assetid:
 
 # Deprecated Features
 
-This article describes the deprecated features of Microsoft Identity Manager 2016 SP1. While some of these features are still present, still supported. These features are not recommended for new deployments as they may be removed in a future release. We recommend not using deprecated features in new applications or solutions.
+This article describes the deprecated features of Microsoft Identity Manager 2016 SP1. Where the feature is still present in Microsoft Identity Manager, it is still supported. Features are not recommended for new deployments, as they may be removed in a feature release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
 
 >[!NOTE]
-Features and functionalities removed in the latest MIM 2016 release are identified with ** . <br>
+Features and functionalities removed in the Microsoft Identity Manager SP1 are identified with **. <br>
 For more information on the support [lifecycle for Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 
 ## BHOLD 
 
-Microsoft does not recommend new customers not already using BHOLD to deploy the Microsoft BHOLD Suite components. New features of Azure AD to provide access reviews. More information will be provided in future.
+Microsoft does not recommend new customers not already using BHOLD to deploy the Microsoft BHOLD Suite components.  New features in Azure AD to provide access reviews are in preview, and more information on other capabilities will be provided in future.
 
 ## Certificate Management 
 | **Category**                | **Deprecated Feature**              | **Replacement and Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
-| Management Agents | **FIM Certificate Management | FIM Certificate Management Agent has been removed in MIM 2016.  Limited functionality can be replaced by using the generic SQL MA and View )                                                              |
+| Management Agents | **FIM Certificate Management | FIM Certificate Management Agent has been removed in MIM 2016.                                                             |
 
 ## Service and Portal
 
