@@ -20,7 +20,7 @@ ms.assetid:
 
 This article describes the deprecated features of Microsoft Identity Manager 2016 SP1. While some of these features are still present, still supported. These features are not recommended for new deployments as they may be removed in a future release. You recommend not using deprecated features in new applications or solutions.
 
-### Note: Features and functionalities removed in the latest MIM 2016 release are identified with **. For more information on the support lifecycle for Microsoft Identity Manager, To review this information on the support lifecycle site: [here](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+>!Note: Features and functionalities removed in the latest MIM 2016 release are identified with **. For more information on the support lifecycle for Microsoft Identity Manager, To review this information on the support lifecycle site: [here](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 
 ## BHOLD 
