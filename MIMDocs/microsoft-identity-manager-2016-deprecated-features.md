@@ -18,7 +18,7 @@ ms.assetid:
 
 # Deprecated Features
 
-This article describes the deprecated features of Microsoft Identity Manager 2016 SP1. While some of these features are still present, still supported. These features are not recommended for new deployments as they may be removed in a future release. You recommend not using deprecated features in new applications or solutions.
+This article describes the deprecated features of Microsoft Identity Manager 2016 SP1. While some of these features are still present, still supported. These features are not recommended for new deployments as they may be removed in a future release. We recommend not using deprecated features in new applications or solutions.
 
 >[!NOTE]
 Features and functionalities removed in the latest MIM 2016 release are identified with ** . <br>
