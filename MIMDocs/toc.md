@@ -11,6 +11,7 @@
 ## [Deployment topology](topology-considerations.md)
 ## [Plan your PAM deployment](./pam/environment-overview.md)
 # [Deploy and Use](microsoft-identity-manager-deploy.md)
+## [Deprecated features](microsoft-identity-manager-2016-deprecated-features.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
 ### [Server setup: Windows Server](prepare-server-ws2012r2.md)
