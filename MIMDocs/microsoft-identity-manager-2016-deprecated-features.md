@@ -27,7 +27,7 @@ For more information on the support [lifecycle for Microsoft Identity Manager](h
 
 ## BHOLD 
 
-Microsoft does not recommend new customers not already using BHOLD to deploy the Microsoft BHOLD Suite components.  New features in Azure AD to provide access reviews are in preview, and more information on other capabilities will be provided in future.
+Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD will continue to be supported. Azure AD now provides [access reviews](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) which replace some of the BHOLD attestation campaign features.
 
 ## Certificate Management 
 | **Category**                | **Deprecated Feature**              | **Replacement and Comment**           |
