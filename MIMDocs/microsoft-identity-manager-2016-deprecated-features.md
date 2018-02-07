@@ -66,3 +66,10 @@ You should keep combined run profiles only in environments where the performance
 | Rules Extension      | Transaction properties                                | This feature will not be replaced. You should avoid passing data between inbound, provisioning, and outbound synchronization using this utility class.  |
 | Rules Extension      | ExchangeUtils: Create55\* methods                     | The methods to create objects for Exchange 5.5 servers will be removed.        |
 | Interface            | Mms_Metaverse                                        | All ClmUtils class members will be removed in a next version.   |
+
+## Next steps
+Learn more about:
+
+- Microsoft Identity Manager is still closely related to its predecessor, Forefront Identity Manager. If you still use FIM, or want to refer to additional documentation, take a look at the [FIM 2010 R2 Documentation Roadmap](https://technet.microsoft.com/library/jj133885.aspx).
+- [Topology considerations for deploying MIM](topology-considerations.md) This article introduces multiple deployment topologies that you may consider implementing.
+- [Capacity planning guide](capacity-planning-guide.md) You can use this guide, along with test environments, to understand the appropriate scope for your deployment.
