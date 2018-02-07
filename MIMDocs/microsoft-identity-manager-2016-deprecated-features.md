@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Deprecated Features And Planning For The Future | Microsoft Docs
-description: This article documents deprecated features of the MIM Synchronization service still available.
+title: MIM Deprecated Features And Planning For The Future | Microsoft Docs
+description: This article documents deprecated features of the MIM Identity Manager 2016 SP1.
 keywords:
 author: barclayn
 ms.author: davidste
