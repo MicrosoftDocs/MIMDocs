@@ -9,10 +9,8 @@ Azure AD business-to-business (B2B) collaboration with Microsoft Identity Manage
 Summary
 =======
 
-The initial scenario in preview for the Microsoft Identity Manager management
-agent for Microsoft Graph (preview) is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their
-Azure AD directory, and wish to give those guests access to on-premises Windows
+The initial scenario in preview for is external user AD account lifecycle
+management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
 Integrated Authentication or Kerberos-based applications, via the [Azure AD
 application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
 proxy or other gateway mechanisms. The Azure AD application proxy requires each
@@ -20,10 +18,7 @@ user to have their own AD DS account, for identification and delegation purposes
 
 ## Scenario Specific Supported Guidance
 
-The initial scenario in preview for the Microsoft Identity Manager management
-agent for Microsoft Graph (preview) is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their
-Azure AD directory, and wish to give those guests access to on-premises Windows
+In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
 Integrated Authentication or Kerberos-based applications, via the [Azure AD
 application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
 proxy or other gateway mechanisms. The Azure AD application proxy requires each
@@ -43,11 +38,10 @@ Application Proxy
 
 -   You have already set up Application Proxy connectors and connector groups
 
--   Published one or more applications which rely on Windows Integrated
+-   Published one or more applications, which rely on Windows Integrated
     Authentication or individual AD accounts via Azure AD App Proxy
 
--   You have invited or you will invite one or more guests, which will be new
-    users created in Azure AD
+-   You have invited or you invite one or more guests, that are created in Azure AD
     <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-b2b-self-service-portal>
 
 -   Microsoft Identity Manager is installed and basic configuration of Service
@@ -59,23 +53,22 @@ Application Proxy
 Scenario
 
 Contoso Pharmaceuticals works Trey Research Inc. as part of their R&D
-Department. Trey Research employees will need to access the research reporting
+Department. Trey Research employees need to access the research reporting
 application provided by Contoso Pharmaceuticals.
 
--   Contoso Pharmaceuticals will be in an independent tenant, where we have
-    configured a custom domain scontoso.com.
+-   Contoso Pharmaceuticals are in an independent tenant, to have
+    configured a custom domain.
 
--   We have invited an external user:  to the Contoso Pharmaceuticals tenant.
-    This user has accepted the invitation and can access resources that will be
+-   Invited an external user:  to the Contoso Pharmaceuticals tenant.
+    This user has accepted the invitation and can access resources that are
     shared.
 
--   We have published some App Proxy applications, and in this scenario, we will
-    use SQL Reporting Services app, which is a reporting component for System
-    Center Service Manager.
+-   Published of an application via App Proxy, and in this scenario, as an example to
+    use MIM Service and Portal for guest user to participate in MIM Process, Example Helpdesk scenarios.
 
 ## Create the Graph Management Agent
 
-Note: Before creating connector make sure you have reviewed the [Graph
+Note: Before creating connector make sure, you have reviewed the [Graph
 Management Agent](microsoft-identity-manager-2016-connector-graph.md).
 
 In the Synchronization Service Manager UI, select **Connectors** and **Create**.
@@ -109,7 +102,7 @@ provided by the LDAP server.
 ### Configure Provisioning Hierarchy
 
 This page is used to map the DN component, for example OU, to the object type
-that should be provisioned, for example organizationalUnit. leve this default click next
+that should be provisioned, for example organizationalUnit. leave this default click next
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/80016dc45b50a0b1b08ea51ad8b37977.png)
 
@@ -129,7 +122,7 @@ plan to import and export.
 
 #### Select Attributes
 
-On the Select Attributes screen we will only select needed attributes to manage B2B Users. The Attribute "id" is required
+On the Select Attributes screen, select needed attributes to manage B2B Users. The Attribute "id" is required
 
 -   id
 
@@ -149,48 +142,47 @@ On the Select Attributes screen we will only select needed attributes to manage 
 
 #### Configure Anchors
 
-On the Configure Anchor 
-Configure the anchor is a required step. by defauilt we use the id attribute for mapping.
+With the Configure Anchor, Configure the anchor is a required step. by default use the id attribute for mapping.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
 #### Configure Connector Filter
 
-On the onfigure Connector Filter page, Allows you to filter out objects based on attribute filter. In this scenario for B2B we only want to bring in Users with the userType that equals Guest and not member.
+On the configure Connector Filter page, Allows you to filter out objects based on attribute filter. In this scenario for B2B, the goal is only to bring in Users with the userType that equals Guest and not member.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
 #### Configure Join and Projection Rules
 
-Configuring Join and Projection rules will be handled by sync rule thus we do not have to identify a join and projection on the connector itself. Leave default and click ok.
+Configuring Join and Projection rules are handled by sync rule, it is not needed have to identify a join and projection on the connector itself. Leave default and click ok.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/34896440ae6ad404e824eb35d8629986.png)
 
 #### Configure Attribute Flow
 
-Like the join and projection we will not need to define the attribute flow here as it will be handle by the sync rule we create. Leave default and click ok.
+Like the join and projection, is not needed to define the attribute flow, as it is handle by the sync rule that is to be create later. Leave default and click ok.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/b7cd0d294d4f361f0551bf2cb774d5f5.png)
 
 #### Configure Deprovision
 
-Configure deprovision allow you to delete the object if metaverse object is deleted. In this test we will make them disconnectors as we want to leave them in Azure also we are not exporting anything to azure as it is Import only.
+Configure deprovision allow you to delete the object if metaverse object is deleted. In this test, we make them disconnectors as the goal is to leave them in Azure also we are not exporting anything to azure as it is Import only.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/2394ad4d11546c6a5c69a6dad56fe6ca.png)
 
 #### Configure Extensions
 
-Configure Extentions on this managment agent is an option but not required as we are using a syncronization rule. If we decided to to a advance rule in the attribute flow earlier then this would be an option to define.
+Configure Extensions on this management agent is an option but not required as we are using a synchronization rule. If we decided to an advance rule in the attribute flow earlier, then this would be an option to define.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/74513d95b10f6ce47b7ac75fe7ab9889.png)
 
-## Creating MIM Service Syncronization Rules
+## Creating MIM Service Synchronization Rules
 
-in the steps below we will begin the mapping of B2B guest account and the attribute flow. Some asumptions are made here that you already have the Active Directory Mangement Agent Configured and the FIM MA configured to talk to the MIM Service and portal.
+in the steps below we begin the mapping of B2B guest account and the attribute flow. Some assumptions are made here that you already have the Active Directory Management Agent Configured and the FIM MA configured to talk to the MIM Service and portal.
 
 Before creating the sync rule, we need to create an attribute called userPrincipalName tied to the person object using the MV Designer.
 
-In the Synchronization client select Metaverse Designer
+In the Synchronization client, select Metaverse Designer
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/db3c1d353168a09aaa68678d39ea4f09.png)
 
@@ -216,7 +208,7 @@ Indexed = **True**
 
 The next steps will require the configuration minimal configuration of the FIM
 Service Management Agent and The Active Directory Domain Services Management
-Agent .
+Agent.
 
 More details can be found here for the configuration
 <https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx> - How Do I
@@ -234,7 +226,7 @@ Provision Users to AD DS
 
 ### Synchronization Rule: Create Guest User shadow account to Active Directory 
 
-This synchronization rule will create the user in active directory
+This synchronization rule creates the user in active directory
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/3463e11aeb9fb566685e775d4e1b825c.png)
 
@@ -257,7 +249,7 @@ Flow Rules:
 
 ### Synchronization Rule: Import Shadow User SID to allow for login to MIM 
 
-This synchronization rule will create the user in active directory
+This synchronization rule creates the user in active directory
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/263df23fd588c4229b958aee240071f3.png)
 
@@ -267,7 +259,7 @@ This synchronization rule will create the user in active directory
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/80fb9d563ec088925477a645f19b0373.png)
 
-Lastly, we will invite the user and then run the management in the following
+Lastly, we invite the user and then run the management in the following
 order:
 
 -   Full Import and Synchronization on the MIMMA Management Agent
@@ -276,20 +268,19 @@ order:
 
 -   Full Import and Synchronization on the B2B Graph Management Agent
 
--   Export, Delta Import and Synchronization on the ADMA_SCONTOSO_B2B Management
+-   Export, Delta Import, and Synchronization on the ADMA_SCONTOSO_B2B Management
     Agent
 
--   Export, Delta Import and Synchronization on the MIMMA Management Agent
+-   Export, Delta Import, and Synchronization on the MIMMA Management Agent
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
 ## Testing: Application Proxy with B2B Guest and Logging into MIM
 
-Now that we have created the synchronization rules in MIM. In App Proxy
-configuration we are using the cloud principle to allow for KCD on app proxy.
-Also, we added the user manually to the manage users and groups. We do have
+Now that we have created the synchronization rules in MIM. In the App Proxy configuration, define use the cloud principle to allow for KCD on app proxy.
+Also, next added the user manually to the manage users and groups. The
 options not to show the user until creation has occurred in MIM to add the guest
-to an office group once provisioned this requires a bit more configuration not
+to an office group once provisioned requires a bit more configuration not
 covered in this document.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d0f0b253dbbc5edaf22b22f30f94dd3b.png)

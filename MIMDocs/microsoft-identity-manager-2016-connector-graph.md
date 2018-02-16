@@ -9,16 +9,14 @@ Summary
 =======
 
 The Microsoft Identity Manager management agent for Microsoft Graph (preview)
-enables additional integration scenarios for Azure AD Premium customers that are
-also using Microsoft Identity Manager 2016 SP1 (MIM).
+enables additional integration scenarios for Azure AD Premium customers.
 
 [Azure AD
 Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) integrates
 on-premises directories with Azure AD and ensures users have a common identity
 and consistent authentication across AD DS, Office 365, Azure, and SaaS
 applications integrated with Azure AD, by synchronizing users and groups from
-on-premises directories to Azure AD.   This management agent can be deployed in
-MIM Sync, for customers who are using MIM Sync and MIM Service for specialized
+on-premises directories to Azure AD.   This management agent can be deployed for specialized
 identity and access management operations beyond user and group synchronization
 to Azure AD.  This management agent surfaces in the MIM sync metaverse
 additional objects obtained from the [Microsoft Graph
@@ -32,8 +30,7 @@ B2B account lifecycle management
 
 The initial scenario in preview for the Microsoft Identity Manager management
 agent for Microsoft Graph (preview) is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their
-Azure AD directory, and wish to give those guests access to on-premises Windows
+management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
 Integrated Authentication or Kerberos-based applications, via the [Azure AD
 application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
 proxy or other gateway mechanisms. The Azure AD application proxy requires each
@@ -66,15 +63,15 @@ Picture 1. New application registration
 Picture 2. Application ID
 
 2.  Generate new Client Secret by opening All settings -\> Keys. Set some Key
-    description and select needful Duration. Save changes. Note that a secret
-    value will not be available after living the page.
+    description and select needful Duration. Save changes. A secret
+    value will not be available after leaving the page.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
 
 Picture 3. New Client Secret
 
 3.  Add “Microsoft Graph API” to the application by opening “Required
-    permissions”.
+    permissions.”
 
 ![](media/microsoft-identity-manager-2016-ma-graph/908788fbf8c3c75101f7b663a8d78a4b.png)
 
@@ -88,14 +85,11 @@ The following permission should be added to “Microsoft Graph API”:
 | Import User           | User.Read.All or User.ReadWrite.All or Directory.Read.All or Directory.ReadWrite.All | Application     |
 
 More details about required permissions could be found
-[here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
-
-Permissions in this list are based on documentation and were not tested in our
-environment (we had all permission enabled)
+[here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference)
 
 1.  Create connector with the Application ID and generated Client Secret.
 
-Please note that each management agent should have its own application in
+Each management agent should have its own application in
 AzureAD to avoid running import in parallel for the same application.
 
 Graph connector supports the following list of object types:
@@ -127,11 +121,11 @@ The list of attribute types that are supported:
 -   microsoft.graph.contact
 
 Multivalued attributes (Collection) are also supported for any of a type form
-the list above.
+the list earlier.
 
 Graph connector uses ‘id’ attribute for anchor and DN for all objects.
 
-Rename is not supported, because GraphAPI does not allow to change ‘id’
+Rename is not supported, because GraphAPI does not allow to object change to ‘id’
 attribute for existed object.
 
 Access token lifetime
@@ -139,7 +133,7 @@ Access token lifetime
 
 Graph application requires access token for accessing GraphAPI. Connector
 request new access token for each import iteration (import iteration depends on
-page size). For example, let consider the following:
+page size). For example:
 
 -   AzureAD contains 10 000 objects
 
@@ -170,8 +164,8 @@ Connectivity page:
 
 Picture 5. Connectivity page
 
-Connectivity page (Picture 1) contains the Graph API version that will be used
-and tenant name. Client Id and Client Secret represents the Aplication ID and
+Connectivity page (Picture 1) contains the Graph API version that is used
+and tenant name. Client Id and Client Secret represent the Application ID and
 Key value of the WebAPI application that must be created in AzureAD.
 
 Global Parameters page:
@@ -182,16 +176,16 @@ Picture 6. Global Parameters page
 
 Global parameters page contains the following settings:
 
-DateTime format – format that will be used for any attribute with
-Edm.DateTimeOffset type. All dates will be converted to string by using that
-format during the import. Set format will be applied for any attribute which
+DateTime format – format that is used for any attribute with
+Edm.DateTimeOffset type. All dates are converted to string by using that
+format during the import. Set format is applied for any attribute, which
 saves date.
 
 HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP
 call to WebAPI application.
 
 Force change password for created user at next sign – this option is used for
-new user that will be created during the export. If option is enabled then
+new user that will be created during the export. If option is enabled, then
 [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile)
 property will be set to true, otherwise it will be false.
 
@@ -215,7 +209,7 @@ system.diagnostics/sources section):
 >   type="System.Diagnostics.EventLogTraceListener, System, Version=4.0.0.0,
 >   Culture=neutral, PublicKeyToken=b77a5c561934e089"
 >   name="ConnectorsLogListener" traceOutputOptions="LogicalOperationStack,
->   DateTime, Timestamp, Callstack" /\>
+>   DateTime, Timestamp, Call stack" /\>
 
 \<remove name="Default" /\>
 
@@ -243,7 +237,7 @@ article](https://docs.microsoft.com/en-us/azure/active-directory/active-director
 Example of this using [Azure AD PowerShell Module Public Preview
 release](https://www.powershellgallery.com/packages/AzureADPreview)
 
-![cid:image005.png\@01D36F50.A373ABD0](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
+![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
 New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 **"AccessTokenLifetime":"5:00:00"**}}') -DisplayName
