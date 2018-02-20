@@ -5,9 +5,9 @@ title: Work with hybrid reporting in Azure by using Identity Manager 2016  | Mic
 description: Learn how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 keywords:
 author: fimguy
-ms.author: barclayn
+ms.author: davidste
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 2/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -18,14 +18,13 @@ ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mwahl
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# Work with hybrid reporting in Identity Manager Public Preview refresh
+# Work with hybrid reporting in Identity Manager
 
 This article discusses how to combine on-premises and cloud data into hybrid reports in Azure, and how to manage and view these reports.
 
@@ -49,7 +48,7 @@ The first three Microsoft Identity Manager reports available in Azure Active Dir
 
 ## Prerequisites
 
-* Identity Manager 2016 RTM or the SP1 Identity Manager service.
+* Identity Manager 2016 SP1 Identity Manager service, Recommended build [4.4.1749.0](https://support.microsoft.com/en-us/help/4050936/hotfix-rollup-package-build-4-4-1749-0-for-microsoft-identity-manager) .
 
 * An Azure AD Premium tenant with a licensed administrator in your directory.
 
