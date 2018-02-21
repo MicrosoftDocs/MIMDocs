@@ -2,10 +2,9 @@
 title: "The Microsoft Identity Manager management agent for Microsoft Graph | Microsoft Docs"
 author: fimguy
 ---
-
 The Microsoft Identity Manager management agent for Microsoft Graph (Public Preview)
-
-Summary
+---
+Summary 
 =======
 
 The Microsoft Identity Manager management agent for Microsoft Graph (preview)
