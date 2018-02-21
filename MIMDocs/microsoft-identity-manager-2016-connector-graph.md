@@ -10,8 +10,7 @@ Summary
 The Microsoft Identity Manager management agent for Microsoft Graph (preview)
 enables additional integration scenarios for Azure AD Premium customers.
 
-[Azure AD
-Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) integrates
+[Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) integrates
 on-premises directories with Azure AD and ensures users have a common identity
 and consistent authentication across AD DS, Office 365, Azure, and SaaS
 applications integrated with Azure AD, by synchronizing users and groups from
@@ -30,13 +29,11 @@ B2B account lifecycle management
 The initial scenario in preview for the Microsoft Identity Manager management
 agent for Microsoft Graph (preview) is external user AD account lifecycle
 management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD
-application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
+Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
 proxy or other gateway mechanisms. The Azure AD application proxy requires each
 user to have their own AD DS account, for identification and delegation purposes
 
-Additional scenarios may be added in the future and [Documented
-here](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
+Additional scenarios may be added in the future and [Documented here](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
 
 Determining your deployment topology
 ====================================
@@ -69,8 +66,7 @@ Picture 2. Application ID
 
 Picture 3. New Client Secret
 
-3.  Add “Microsoft Graph API” to the application by opening “Required
-    permissions.”
+3.  Add “Microsoft Graph API” to the application by opening “Required permissions.”
 
 ![](media/microsoft-identity-manager-2016-ma-graph/908788fbf8c3c75101f7b663a8d78a4b.png)
 
@@ -250,4 +246,4 @@ Next Steps
 
 Scenario Specific Supported Guides
 ----------------------------------
-[B2B End to End Deployment](microsoft-identity-manager-2016-graph-b2b-scenario.md)
+[MIM B2B End to End Deployment](microsoft-identity-manager-2016-graph-b2b-scenario)
