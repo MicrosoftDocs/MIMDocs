@@ -36,7 +36,7 @@ Application Proxy
     -   Office Groups controlling application access using [Azure AD
         Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
 
--   You have already set up Application Proxy connectors and connector groups
+-   You have already set up Application Proxy connectors and connector groups, if not you can visit [here](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) to install and configure
 
 -   Published one or more applications, which rely on Windows Integrated
     Authentication or individual AD accounts via Azure AD App Proxy
@@ -275,7 +275,7 @@ order:
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
-## Testing: Application Proxy with B2B Guest and Logging into MIM
+## Finally: Application Proxy with B2B Guest and Logging into MIM
 
 Now that we have created the synchronization rules in MIM. In the App Proxy configuration, define use the cloud principle to allow for KCD on app proxy.
 Also, next added the user manually to the manage users and groups. The
