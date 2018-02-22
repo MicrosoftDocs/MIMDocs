@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Deploying Microsoft Identity Manager Certificate Manager | Microsoft Docs
@@ -809,7 +809,7 @@ $adace.GetEnumerator() | **Foreach-Object** {
 $acl = **Get-Acl** *-Path* $_.Value
 $sid=(**Get-ADGroup** "MIMCM-Managers").SID
 $p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
-##https://msdn.microsoft.com/en-us/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
+##https://msdn.microsoft.com/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
 $ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule
 ($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow,
 [DirectoryServices.ActiveDirectorySecurityInheritance]::All)
