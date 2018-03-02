@@ -126,8 +126,8 @@ attribute for existed object.
 Access token lifetime
 =====================
 
-Graph application requires access token for accessing GraphAPI. Connector
-request new access token for each import iteration (import iteration depends on
+A Graph application requires an access token for accessing the GraphAPI. A connector
+will request a new access token for each import iteration (import iteration depends on
 page size). For example:
 
 -   AzureAD contains 10 000 objects
@@ -135,9 +135,9 @@ page size). For example:
 -   Page size configured in connector is 5 000
 
 In this case there will be two iterations during the import, each of them will
-return 5 000 objects to Sync. So, new access token will be request twice.
+return 5 000 objects to Sync. So, a new access token will be request twice.
 
-Note that during the export new access token will be requested for each object
+Note that during the export a new access token will be requested for each object
 that must be added/updated/deleted.
 
 Installing the connector
@@ -159,8 +159,8 @@ Connectivity page:
 
 Picture 5. Connectivity page
 
-Connectivity page (Picture 1) contains the Graph API version that is used
-and tenant name. Client Id and Client Secret represent the Application ID and
+The connectivity page (Picture 1) contains the Graph API version that is used
+and tenant name. The Client Id and Client Secret represent the Application ID and
 Key value of the WebAPI application that must be created in AzureAD.
 
 Global Parameters page:
@@ -190,7 +190,7 @@ Troubleshooting
 **Enable logs**
 
 If there are any issues in Graph, then logs could be used to localize the
-problem. Graph connector uses the same source as in all Generic connectors. So,
+problem. The Graph connector uses the same source as in all Generic connectors. So,
 traces could be enabled in [the same way like for Generic
 connectors](https://microsoft.sharepoint.com/teams/adiamteam/_layouts/15/doc.aspx?sourcedoc=%7B5057233e-00ac-4a7a-a77c-74a7f46404ff%7D&action=edit&uid=%7B5057233E-00AC-4A7A-A77C-74A7F46404FF%7D&ListItemId=146&ListId=%7BA828DF40-8EB4-4FC2-95BD-9E5421DD2CE7%7D&env=prodbubble).
 Or just by adding the following to miiserver.exe.config (inside
@@ -225,7 +225,7 @@ expired.”:
 Picture 7. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, access token expires after 1 hour. To increase
+Azure side. By default, the access token expires after 1 hour. To increase
 expiration time, please see [this
 article](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-configurable-token-lifetimes).
 
