@@ -1,5 +1,6 @@
 ---
 layout: LandingPage
+ms.topic: landing-page
 title: Microsoft Identity Manager Documentation | Microsoft Docs
 description: Learn how to use Microsoft Identity Manager.
 ---
