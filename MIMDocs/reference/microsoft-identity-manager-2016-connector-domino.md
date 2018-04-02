@@ -97,22 +97,22 @@ The following operations are not supported by the current release of the Lotus D
 Lotus Notes must be installed on the server **before** the Connector is installed.
 
 When you install, make sure you do a **Single User Install**. The default **Multi-User Install** does not work.  
-![Notes1](./media/active-directory-aadconnectsync-connector-domino/notes1.png)
+![Notes1](./media/microsoft-identity-manager-2016-connector-domino/notes1.png)
 
 On the features page, install only the required Lotus Notes features and **Client Single Logon**. Single Logon is required for the connector to be able to log on to the Domino server.  
-![Notes2](./media/active-directory-aadconnectsync-connector-domino/notes2.png)
+![Notes2](./media/microsoft-identity-manager-2016-connector-domino/notes2.png)
 
 **Note:** Start Lotus Notes once with a user that is located on the same server as the account you use as the connector’s service account. Also make sure to close the Lotus Notes client on the server. It cannot be running at the same time the Connector tries to connect to the Domino server.
 
 ### Create Connector
 To Create a Lotus Domino connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Lotus Domino (Microsoft)** Connector.  
-![CreateConnector](./media/active-directory-aadconnectsync-connector-domino/createconnector.png)
+![CreateConnector](./media/microsoft-identity-manager-2016-connector-domino/createconnector.png)
 
 If your version of synchronization service offers the ability to configure **Architecture**, make sure the connector is set to its default value to run in **Process**.
 
 ### Connectivity
 On the Connectivity page, you must specify the Lotus Domino server name and enter the logon credentials.  
-![Connectivity](./media/active-directory-aadconnectsync-connector-domino/connectivity.png)
+![Connectivity](./media/microsoft-identity-manager-2016-connector-domino/connectivity.png)
 
 The Domino Server property supports two formats for the server name:
 
@@ -147,7 +147,7 @@ This configuration option is required to support **delta import** operations bec
 >[!Note]
 Starting in the March 2017 update the Global parameters screen includes the option to delete the user's mail database during the user's deletion.
 
-![Delete user's mailbox](./media/active-directory-aadconnectsync-connector-domino/AdminP.png)
+![Delete user's mailbox](./media/microsoft-identity-manager-2016-connector-domino/AdminP.png)
 
 #### Import settings, method
 The **Perform Full Import By** has these options:
@@ -256,7 +256,7 @@ If you only import, then you do not have to specify any certifiers.
 
 ### Configure Provisioning Hierarchy
 When you configure the Lotus Domino connector, skip this dialog page. The Lotus Domino connector does not support hierarchy provisioning.  
-![Provisioning hierarchy](./media/active-directory-aadconnectsync-connector-domino/provisioninghierarchy.png)
+![Provisioning hierarchy](./media/microsoft-identity-manager-2016-connector-domino/provisioninghierarchy.png)
 
 ### Configure Partitions and Hierarchies
 When you configure partitions and hierarchies, you must select the primary address book called NAB=names.nsf. In addition to the primary address book, you can select secondary address books if they exist.  
@@ -265,7 +265,7 @@ When you configure partitions and hierarchies, you must select the primary addre
 ### Select Attributes
 When you configure your attributes, you must select all attributes that are prefixed with **\_MMS\_**. These attributes are required when you provision new objects to Lotus Domino
 
-![Attributes](./media/active-directory-aadconnectsync-connector-domino/attributes.png)
+![Attributes](./media/microsoft-identity-manager-2016-connector-domino/attributes.png)
 
 ## Object Lifecycle Management
 This section provides an overview of the different objects in Domino.
@@ -348,7 +348,7 @@ For a registered Lotus Domino user, there are two types of passwords:
 The Lotus Domino connector supports only operations with HTTP password.
 
 To perform password management, you should enable password management for the connector in the Management Agent Designer. To enable password management, select **Enable password management** on the **Configure Extensions** dialog page.  
-![Configure Extensions](./media/active-directory-aadconnectsync-connector-domino/configureextensions.png)
+![Configure Extensions](./media/microsoft-identity-manager-2016-connector-domino/configureextensions.png)
 
 The Lotus Domino connector support following operations on Internet password:
 
