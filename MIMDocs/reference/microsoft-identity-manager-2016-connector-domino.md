@@ -260,7 +260,7 @@ When you configure the Lotus Domino connector, skip this dialog page. The Lotus 
 
 ### Configure Partitions and Hierarchies
 When you configure partitions and hierarchies, you must select the primary address book called NAB=names.nsf. In addition to the primary address book, you can select secondary address books if they exist.  
-![Partitions](./media/active-directory-aadconnectsync-connector-domino/partitions.png)
+![Partitions](./media/microsoft-identity-manager-2016-connector-domino/partitions.png)
 
 ### Select Attributes
 When you configure your attributes, you must select all attributes that are prefixed with **\_MMS\_**. These attributes are required when you provision new objects to Lotus Domino
