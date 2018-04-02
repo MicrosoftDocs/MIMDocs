@@ -32,7 +32,7 @@ The Generic SQL Connector is using ODBC to connect to the remote server. First w
 1. Start the ODBC management utility on your server:  
    ![ODBC](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc.png)
 2. Select the tab **File DSN**. Click **Add...**.  
-   ![ODBC1](./media/microsoft-identity-manager-2016-genericsql-step-by-step/odbc1.png)
+   ![ODBC1](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc1.png)
 3. The out-of-box driver works fine, so select it and click **Next>**.  
    ![ODBC2](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc2.png)
 4. Give the file a name, such as **GenericSQL**.  
