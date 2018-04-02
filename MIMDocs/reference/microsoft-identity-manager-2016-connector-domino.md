@@ -138,7 +138,7 @@ When you click Next, the UserID and password configuration parameters are verifi
 
 ### Global Parameters
 On the Global Parameters page, you configure the time zone and the import and export operation option.  
-![Global Parameters](./media/active-directory-aadconnectsync-connector-domino/globalparameters.png)
+![Global Parameters](./media/microsoft-identity-manager-2016-connector-domino/globalparameters.png)
 
 The **Domino Server Time Zone** parameter defines the location of your Domino Server.
 
