@@ -123,7 +123,7 @@ Related links:
 
 * Generic SQL:
   * **Scenario: redesigned Implemented:** "*" feature
-  * **Solution description:** Changed approach for [multi-valued reference attributes handling](active-directory-aadconnectsync-connector-genericsql.md).
+  * **Solution description:** Changed approach for [multi-valued reference attributes handling](microsoft-identity-manager-2016-connector-genericsql.md).
 
 
 ### Fixed issues:
@@ -203,7 +203,7 @@ LDAP MA. They showed only objects from RootDSE partition.
 Released: 2016 March
 
 **New Connector**  
-Initial release of the [Generic SQL Connector](active-directory-aadconnectsync-connector-genericsql.md).
+Initial release of the [Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md).
 
 **New features:**
 
@@ -273,6 +273,9 @@ To refresh the definition:
 
 
 ## Next steps
-Learn more about the [Azure AD Connect sync](active-directory-aadconnectsync-whatis.md) configuration.
 
-Learn more about [Integrating your on-premises identities with Azure Active Directory](active-directory-aadconnect.md).
+Learn more about the [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation
+Learn more about the[Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation
+Learn more about the [Web Services Connector](microsoft-identity-manager-2016-ma-ws.md) reference documentation
+Learn more about the [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
+Learn more about the [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
