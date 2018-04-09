@@ -120,7 +120,7 @@ the list earlier.
 
 Graph connector uses ‘id’ attribute for anchor and DN for all objects.
 
-Rename is not supported, because GraphAPI does not allow to object change to ‘id’
+Rename is not supported at this time, because GraphAPI does not allow to object change to ‘id’
 attribute for existed object.
 
 Access token lifetime
