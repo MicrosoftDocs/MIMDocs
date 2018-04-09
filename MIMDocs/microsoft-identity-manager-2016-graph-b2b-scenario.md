@@ -224,7 +224,7 @@ Provision Users to AD DS
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
 
-### Synchronization Rule: Create Guest User shadow account to Active Directory 
+### Synchronization Rule: Create Guest User account to Active Directory 
 
 This synchronization rule creates the user in active directory
 
@@ -247,7 +247,7 @@ Flow Rules:
 | **Y**                 |                           | [RandomNum(0,999)+userPrincipalName⇒unicodePwd](javascript:void(0);)  |
 | **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
-### Synchronization Rule: Import Shadow User SID to allow for login to MIM 
+### Synchronization Rule: Import B2B Guest User Objects SID to allow for login to MIM 
 
 This synchronization rule creates the user in active directory
 
