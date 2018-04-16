@@ -10,15 +10,7 @@ Summary
 The Microsoft Identity Manager management agent for Microsoft Graph (preview)
 enables additional integration scenarios for Azure AD Premium customers.
 
-[Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) integrates
-on-premises directories with Azure AD and ensures users have a common identity
-and consistent authentication across AD DS, Office 365, Azure, and SaaS
-applications integrated with Azure AD, by synchronizing users and groups from
-on-premises directories to Azure AD.   This management agent can be deployed for specialized
-identity and access management operations beyond user and group synchronization
-to Azure AD.  This management agent surfaces in the MIM sync metaverse
-additional objects obtained from the [Microsoft Graph
-API](https://developer.microsoft.com/en-us/graph/) v1 and beta. 
+[Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) integrates on-premises directories with Azure AD and ensures users have a common identity and consistent authentication across AD DS, Office 365, Azure, and SaaS applications integrated with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.   This management agent can be deployed for specialized identity and access management operations beyond user and group synchronization to Azure AD.  This management agent surfaces in the MIM sync metaverse additional objects obtained from the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta. 
 
 Scenarios Covered
 =================
@@ -29,9 +21,8 @@ B2B account lifecycle management
 The initial scenario in preview for the Microsoft Identity Manager management
 agent for Microsoft Graph (preview) is external user AD account lifecycle
 management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
-proxy or other gateway mechanisms. The Azure AD application proxy requires each
-user to have their own AD DS account, for identification and delegation purposes
+Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
+proxy or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes
 
 Additional scenarios may be added in the future and [Documented here](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
 
@@ -44,8 +35,7 @@ Preparing to use the Management Agent(MA) for Microsoft Graph
 Authorizing the MA to manage your Azure AD directory
 ----------------------------------------------------
 
-1.  Graph management agent requires Web app / API application to be created in
-    AzureAD.
+1.  Graph management agent requires Web app / API application to be created in AzureAD.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/724d3fc33b4c405ab7eb9126e7fe831f.png)
 
