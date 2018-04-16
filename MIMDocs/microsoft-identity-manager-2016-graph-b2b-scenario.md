@@ -10,42 +10,29 @@ Summary
 =======
 
 The initial scenario in preview for is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD
-application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
-proxy or other gateway mechanisms. The Azure AD application proxy requires each
-user to have their own AD DS account, for identification and delegation purposes
+management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) proxy or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes
 
 ## Scenario Specific Supported Guidance
 
-In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD
-application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
-proxy or other gateway mechanisms. The Azure AD application proxy requires each
-user to have their own AD DS account, for identification and delegation purposes
+In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows. Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) proxy or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes
 
 A few assumptions made in the configuration of B2B with MIM and Azure
 Application Proxy
 
--   You have already installed the [Graph Management
-    Agent](microsoft-identity-manager-2016-connector-graph.md).
+-   You have already installed the [Graph Management Agent](microsoft-identity-manager-2016-connector-graph.md).
 
--   You have an on-premises AD and Azure AD Connect set up for synchronizing
-    users and groups to Azure AD.
+-   You have an on-premises AD and Azure AD Connect set up for synchronizing users and groups to Azure AD.
 
-    -   Office Groups controlling application access using [Azure AD
-        Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
+    -   Office Groups controlling application access using [Azure AD Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
 
 -   You have already set up Application Proxy connectors and connector groups, if not you can visit [here](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) to install and configure
 
--   Published one or more applications, which rely on Windows Integrated
-    Authentication or individual AD accounts via Azure AD App Proxy
+-   Published one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Azure AD App Proxy
 
 -   You have invited or you invite one or more guests, that are created in Azure AD
     <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-b2b-self-service-portal>
 
--   Microsoft Identity Manager is installed and basic configuration of Service
-    and Portal and Active Directory Management Agent.
+-   Microsoft Identity Manager is installed and basic configuration of Service and Portal and Active Directory Management Agent.
     <https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
 ## B2B End to End Deployment
@@ -68,8 +55,7 @@ application provided by Contoso Pharmaceuticals.
 
 ## Create the Graph Management Agent
 
-Note: Before creating connector make sure, you have reviewed the [Graph
-Management Agent](microsoft-identity-manager-2016-connector-graph.md).
+Note: Before creating connector make sure, you have reviewed the [Graph Management Agent](microsoft-identity-manager-2016-connector-graph.md).
 
 In the Synchronization Service Manager UI, select **Connectors** and **Create**.
 Select **Graph (Microsoft)** and give it a descriptive name
@@ -211,8 +197,7 @@ Service Management Agent and The Active Directory Domain Services Management
 Agent.
 
 More details can be found here for the configuration
-<https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx> - How Do I
-Provision Users to AD DS
+<https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx> - How Do I Provision Users to AD DS
 
 ### Synchronization Rule: Import Guest User to MV to Synchronization Service Metaverse from Azure Active Directory<br>
 
