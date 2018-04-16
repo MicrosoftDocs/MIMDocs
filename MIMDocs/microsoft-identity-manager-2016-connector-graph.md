@@ -18,9 +18,8 @@ Scenarios Covered
 B2B account lifecycle management
 --------------------------------
 
-The initial scenario in preview for the Microsoft Identity Manager management
-agent for Microsoft Graph (preview) is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
+The initial scenario in preview for the Microsoft Identity Manager management agent for Microsoft Graph (preview) is external user AD account lifecycle
+management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
 Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
 proxy or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes
 
@@ -42,15 +41,13 @@ Authorizing the MA to manage your Azure AD directory
 
 Picture 1. New application registration
 
-1.  Open the created application and use Application ID like Client Id on the
-    MA’s connectivity page:
+2.  Open the created application and use Application ID like Client Id on the MA’s connectivity page:
 
 ![](media/microsoft-identity-manager-2016-ma-graph/ecfcb97674790290aa9ca2dcaccdafbc.png)
 
 Picture 2. Application ID
 
-2.  Generate new Client Secret by opening All settings -\> Keys. Set some Key
-    description and select needful Duration. Save changes. A secret
+2.  Generate new Client Secret by opening All settings -\> Keys. Set some Key description and select needful Duration. Save changes. A secret
     value will not be available after leaving the page.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
@@ -70,15 +67,9 @@ The following permission should be added to “Microsoft Graph API”:
 | Import Group          | Group.Read.All or Group.ReadWrite.All                                                | Application     |
 | Import User           | User.Read.All or User.ReadWrite.All or Directory.Read.All or Directory.ReadWrite.All | Application     |
 
-More details about required permissions could be found
-[here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference)
+More details about required permissions could be found [here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference)
 
-1.  Create connector with the Application ID and generated Client Secret.
-
-Each management agent should have its own application in
-AzureAD to avoid running import in parallel for the same application.
-
-Graph connector supports the following list of object types:
+1.  Create connector with the Application ID and generated Client Secret.Each management agent should have its own application in AzureAD to avoid running import in parallel for the same application. Graph connector supports the following list of object types:
 
 -   User
 
@@ -106,13 +97,11 @@ The list of attribute types that are supported:
 
 -   microsoft.graph.contact
 
-Multivalued attributes (Collection) are also supported for any of a type form
-the list earlier.
+Multivalued attributes (Collection) are also supported for any of a type form the list earlier.
 
 Graph connector uses ‘id’ attribute for anchor and DN for all objects.
 
-Rename is not supported at this time, because GraphAPI does not allow to object change to ‘id’
-attribute for existed object.
+Rename is not supported at this time, because GraphAPI does not allow to object change to ‘id’ attribute for existed object.
 
 Access token lifetime
 =====================
@@ -121,15 +110,13 @@ A Graph application requires an access token for accessing the GraphAPI. A conne
 will request a new access token for each import iteration (import iteration depends on
 page size). For example:
 
--   AzureAD contains 10 000 objects
+-   AzureAD contains 10000 objects
 
--   Page size configured in connector is 5 000
+-   Page size configured in connector is 5000
 
-In this case there will be two iterations during the import, each of them will
-return 5 000 objects to Sync. So, a new access token will be request twice.
+In this case there will be two iterations during the import, each of them will return 5 000 objects to Sync. So, a new access token will be request twice.
 
-Note that during the export a new access token will be requested for each object
-that must be added/updated/deleted.
+Note that during the export a new access token will be requested for each object that must be added/updated/deleted.
 
 Installing the connector
 ========================
@@ -162,18 +149,12 @@ Picture 6. Global Parameters page
 
 Global parameters page contains the following settings:
 
-DateTime format – format that is used for any attribute with
-Edm.DateTimeOffset type. All dates are converted to string by using that
-format during the import. Set format is applied for any attribute, which
+DateTime format – format that is used for any attribute with Edm.DateTimeOffset type. All dates are converted to string by using that format during the import. Set format is applied for any attribute, which
 saves date.
 
-HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP
-call to WebAPI application.
+HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP call to WebAPI application.
 
-Force change password for created user at next sign – this option is used for
-new user that will be created during the export. If option is enabled, then
-[forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile)
-property will be set to true, otherwise it will be false.
+Force change password for created user at next sign – this option is used for new user that will be created during the export. If option is enabled, then [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) property will be set to true, otherwise it will be false.
 
 Troubleshooting
 ===============
@@ -211,12 +192,9 @@ expired.”:
 Picture 7. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, the access token expires after 1 hour. To increase
-expiration time, please see [this
-article](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-configurable-token-lifetimes).
+Azure side. By default, the access token expires after 1 hour. To increase expiration time, please see [this article](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-configurable-token-lifetimes).
 
-Example of this using [Azure AD PowerShell Module Public Preview
-release](https://www.powershellgallery.com/packages/AzureADPreview)
+Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 
 ![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
@@ -232,4 +210,4 @@ Next Steps
 
 Scenario Specific Supported Guides
 ----------------------------------
-[MIM B2B End to End Deployment](microsoft-identity-manager-2016-graph-b2b-scenario)
+[MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
