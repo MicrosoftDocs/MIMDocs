@@ -201,13 +201,29 @@ More details can be found here for the configuration
 
 ### Synchronization Rule: Import Guest User to MV to Synchronization Service Metaverse from Azure Active Directory<br>
 
+Navigate to the MIM Service and Portal and Select Sycronization Rules and click new.
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/ba39855f54268aa824cd8d484bae83cf.png)
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/de059b93474c39763f0b27874b716e15.png)
-
+Select "Create resource in FIM"
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9bc4a92136be1557d3596fa2eaa63e61.png)
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
+
+Flow Rules:
+
+| **Initial Flow Only** | **Use as Existence Test** | **Flow (FIM Value ⇒ Destination Attribute)**                          |
+|-----------------------|---------------------------|-----------------------------------------------------------------------|
+|                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
+|                       |                           | [Left(id,20)⇒accountName](javascript:void(0);)                        |
+|                       |                           | [id⇒uid](javascript:void(0);)                                         |
+|                       |                           | [userType⇒employeeType](javascript:void(0);)                          |
+|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
+|                       |                           | [surname⇒sn](javascript:void(0);)                                     |
+|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
+|                       |                           | [id⇒cn](javascript:void(0);)                                          |
+|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
+|                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
 
 ### Synchronization Rule: Create Guest User account to Active Directory 
 
@@ -273,6 +289,12 @@ covered in this document.
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/a284e69bb14ca19217954881ba860cf2.png)
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0c2361d137f3efcad9139069c0abcb4d.png)
+
+| **Initial Flow Only** | **Use as Existence Test** | **Flow (FIM Value ⇒ Destination Attribute)**                          |
+|-----------------------|---------------------------|-----------------------------------------------------------------------|
+|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
+|                       |                           | ["CONTOSO"⇒domain](javascript:void(0);)                            |
+|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
 
 Once All configure
 
