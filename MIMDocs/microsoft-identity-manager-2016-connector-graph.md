@@ -29,6 +29,7 @@ Additional scenarios may be added in the future and [Documented here](./microsof
 Determining your deployment topology
 ====================================
 
+
 Preparing to use the Management Agent(MA) for Microsoft Graph
 =============================================================
 
@@ -179,12 +180,7 @@ Troubleshooting
 
 **Enable logs**
 
-If there are any issues in Graph, then logs could be used to localize the
-problem. The Graph connector uses the same source as in all Generic connectors. So,
-traces could be enabled in [the same way like for Generic
-connectors](https://microsoft.sharepoint.com/teams/adiamteam/_layouts/15/doc.aspx?sourcedoc=%7B5057233e-00ac-4a7a-a77c-74a7f46404ff%7D&action=edit&uid=%7B5057233E-00AC-4A7A-A77C-74A7F46404FF%7D&ListItemId=146&ListId=%7BA828DF40-8EB4-4FC2-95BD-9E5421DD2CE7%7D&env=prodbubble).
-Or just by adding the following to miiserver.exe.config (inside
-system.diagnostics/sources section):
+If there are any issues in Graph, then logs could be used to localize the problem. The Graph connector uses the same source as in all Generic connectors. So, traces could be enabled in [the same way like for Generic connectors](https://microsoft.sharepoint.com/teams/adiamteam/_layouts/15/doc.aspx?sourcedoc=%7B5057233e-00ac-4a7a-a77c-74a7f46404ff%7D&action=edit&uid=%7B5057233E-00AC-4A7A-A77C-74A7F46404FF%7D&ListItemId=146&ListId=%7BA828DF40-8EB4-4FC2-95BD-9E5421DD2CE7%7D&env=prodbubble). Or just by adding the following to miiserver.exe.config (inside system.diagnostics/sources section):
 
 \<source name="ConnectorsLog" switchValue="Verbose"\>
 
