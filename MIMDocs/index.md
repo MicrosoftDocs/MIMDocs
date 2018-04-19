@@ -13,7 +13,7 @@ LOB applications and SaaS solutions.
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016-sp1-release-notes">
+        <a href="/reference/version-history">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -23,7 +23,7 @@ LOB applications and SaaS solutions.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>What's new for Microsoft Identity Manager 2016 Service Pack 1</h3>
+                        <h3>New Updates with Microsoft Identity Manager 2016 Service Pack 1</h3>
                     </div>
                 </div>
             </div>
