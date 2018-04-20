@@ -22,7 +22,6 @@ ms.reviewer: mwahl
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
-
 ---
 
 # Capacity planning guide
