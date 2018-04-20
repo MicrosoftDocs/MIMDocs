@@ -31,4 +31,4 @@ ms.suite: ems
 ##In This Section
 
 - [Get Certificate Request Generation Options](get-certificate-request-generation-options.md)
-- [Get Certficate Responses](get-certificate-responses.md)
+- [Get Certificate Responses](get-certificate-responses.md)
