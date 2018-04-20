@@ -11,6 +11,7 @@
 ## [Deployment topology](topology-considerations.md)
 ## [Plan your PAM deployment](./pam/environment-overview.md)
 # [Deploy and Use](microsoft-identity-manager-deploy.md)
+## [Deprecated features](microsoft-identity-manager-2016-deprecated-features.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
 ### [Server setup: Windows Server](prepare-server-ws2012r2.md)
@@ -143,3 +144,11 @@
 ## Version history
 ### [MIM version history](./reference/version-history.md)
 ### [BHOLD version history](./reference/version-bhold-history.md)
+### [Connector Version Release History](./reference/microsoft-identity-manager-2016-connector-version-history.md)
+## Connectors
+### [Graph](microsoft-identity-manager-2016-connector-graph.md)
+### [Generic LDAP](./reference/microsoft-identity-manager-2016-connector-genericldap.md)
+### [Generic SQL](./reference/microsoft-identity-manager-2016-connector-genericsql.md)
+### [Web Services](./reference/microsoft-identity-manager-2016-ma-ws.md)
+### [PowerShell](./reference/microsoft-identity-manager-2016-connector-powershell.md)
+### [Connector Version Release History](./reference/microsoft-identity-manager-2016-connector-version-history.md)

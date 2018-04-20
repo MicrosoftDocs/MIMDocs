@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Smart card Operations | Microsoft Docs
+title: Smart card operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
@@ -26,12 +26,12 @@ ms.suite: ems
 
 ---
 
-# Smart card Operations
-##In This Section
+# Smart card operations
+The following sections describe the smart card operations in the Microsoft Identity Manager (MIM) Certificate Management (CM) REST API:
 
-- [Assign Smart card to a Request](assign-smartcard-to-request.md)
-- [Get Smart card Data](get-smartcard-data.md)
-- [Get Smart card Authentication Response](get-smartcard-authentication-response.md)
-- [Get Smart card Diversified Admin Key](get-smartcard-diversified-admin-key.md)
-- [Get Smart card Proposed PIN](get-smartcard-proposed-pin.md)
-- [Update Smart card Status](update-smartcard-status.md)
+- [Assign a smart card to a request](assign-smartcard-to-request.md)
+- [Get smart card data](get-smartcard-data.md)
+- [Get smart card authentication response](get-smartcard-authentication-response.md)
+- [Get smart card diversified admin key](get-smartcard-diversified-admin-key.md)
+- [Get smart card proposed PIN](get-smartcard-proposed-pin.md)
+- [Update smart card status](update-smartcard-status.md)

@@ -142,3 +142,11 @@
 ## Version history
 ### [MIM version history](version-history.md)
 ### [BHOLD version history](version-bhold-history.md)
+### [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md)
+## Connectors
+### [Graph](../microsoft-identity-manager-2016-connector-graph.md)
+### [Generic LDAP](microsoft-identity-manager-2016-connector-genericldap.md)
+### [Generic SQL](microsoft-identity-manager-2016-connector-genericsql.md)
+### [Web Services](microsoft-identity-manager-2016-ma-ws.md)
+### [PowerShell](microsoft-identity-manager-2016-connector-powershell.md)
+### [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md)

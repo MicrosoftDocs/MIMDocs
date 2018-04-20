@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: bhu
-ms.date: 09/26/2017
+ms.date: 1/24/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -36,13 +36,13 @@ This article covers the connectors that are included & supported in MIM, but the
 
 ## Supported connectors in MIM 2016 SP1
 
-| Name | Supported versions of the connected data source |
+| Name | Supported versions of the connected data source & Technical links |
 | ---- | ----------------------------------------------- |
 | Active Directory Domain Services | Active Directory 2012, 2016 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Active Directory Global Address List (GAL) | Active Directory Global Address List (GAL) – Exchange 2013 , 2016 |
 | Extensible Connectivity 2.0 | Any call-based or file-based data source |
-| FIM Service | FIM Service Management Agent (Sycronization Service) must be at the same version of the "Forefront Identity Manager Service" installed |
+| FIM Service | FIM Service Management Agent (Synchronization Service) must be at the same version of the "Forefront Identity Manager Service" installed |
 | IBM DB2 Universal Database | IBM DB2 version 9.5 or 9.7; IBM DB2 OLEDB v9.5 FP5 or v9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Novell eDirectory version 8.7.3, 8.8.5 and 8.8.6 |
@@ -51,10 +51,11 @@ This article covers the connectors that are included & supported in MIM, but the
 | Oracle (previously Sun and Netscape) Directory Servers | Sun Directory Server 6.x, 7.x and Oracle 11 |
 | [Windows PowerShell Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn640417.aspx) | Windows PowerShell 2.0 or better |
 | [Microsoft Azure Active Directory Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn511001.aspx) | Microsoft Azure Active Directory |
-| [Generic LDAP Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | LDAP v3 server (RFC 4510 compliant) |
+| [Generic LDAP Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [LDAP v3 server (RFC 4510 compliant)](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
+| [Generic SQL Connector for FIM 2010 R2 / MIM](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [The Connector is supported with all 64-bit ODBC drivers](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
 | [Connector for Lotus Domino](https://msdn.microsoft.com/en-us/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
 | [SharePoint Services Connector UPA](https://msdn.microsoft.com/en-us/library/dn511003.aspx) | SharePoint server 2013 or 2016 with User Profile service application (UPA) |
-| [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | SAP ECC 5.0 or 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 |
+| [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 or 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [Attribute-Value Pair text file](https://technet.microsoft.com/en-us/library/cc708644(v=ws.10).aspx) | Attribute-value pair text files |
 | [Delimited text file](https://technet.microsoft.com/en-us/library/cc720612(v=ws.10).aspx) | Delimited text files |
 | [Directory Services Mark-up Language (DSML)](https://technet.microsoft.com/en-us/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |

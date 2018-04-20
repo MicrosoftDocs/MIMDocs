@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Deploying Microsoft Identity Manager Certificate Manager | Microsoft Docs
@@ -677,23 +677,23 @@ In this step, we will install and configure the FIM CM CA modules on the certifi
 
   - Configure permissions on the service connection point (SCP). **\<no script\>**
 
-        -   Ensure that you are connected to the **CORPDC** virtual server.
+     -   Ensure that you are connected to the **CORPDC** virtual server.
 
-        -   Log on as **contoso\\corpadmin**
+     -   Log on as **contoso\\corpadmin**
 
-        -   From **Administrative Tools**, open **Active Directory Users and
+     -   From **Administrative Tools**, open **Active Directory Users and
             Computers**.
 
-        -   In **Active Directory Users and Computers**, on the **View** menu,
+     -   In **Active Directory Users and Computers**, on the **View** menu,
             ensure that **Advanced Features** is enabled.
 
-        -   In the console tree, expand **Contoso.com** \| **System** \|
+     -   In the console tree, expand **Contoso.com** \| **System** \|
             **Microsoft** \| **Certificate Lifecycle Manager**, and then click
             **CORPCM**.
 
-        -   Right-click **CORPCM**, and then click **Properties**.
+     -   Right-click **CORPCM**, and then click **Properties**.
 
-        -   In the **CORPCM Properties** dialog box, on the **Security** tab,
+     -   In the **CORPCM Properties** dialog box, on the **Security** tab,
             add the following groups with the corresponding permissions:
 
     | Group          | Permissions                                                                                                                                                         |
@@ -797,7 +797,8 @@ In this step, we will install and configure the FIM CM CA modules on the certifi
 
 ![](media/mim-cm-deploy/image021.png)
 
-```import-module activedirectory
+```
+import-module activedirectory
 $adace = @{
 "OID" = "AD:\\CN=OID,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com";
 "CT" = "AD:\\CN=Certificate Templates,CN=Public Key
@@ -818,9 +819,9 @@ $acl.AddAccessRule($ace)
 }
 ```
 
-**Scripts: Delegating permissions on the existing certificate templates.**
+**Scripts: Delegating permissions on the existing certificate templates.**  
 
-![](media/mim-cm-deploy/image039.png)
+![](media/mim-cm-deploy/image039.png)  
 
 dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key
 Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G

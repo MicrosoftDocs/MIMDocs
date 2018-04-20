@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/15/2017
+ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -377,7 +377,7 @@ For optimal performance configuration:
 
 -   Turn off SharePoint Indexing on the MIM Portal site. For more information, see the Disable SharePoint indexing section in this document.
 
-## Feature Specific Best Practices  (I want to remove this and collapse this section and just have the specific features at header 2 level versus 3)
+## Feature Specific Best Practices 
 
 
 ### Request Management

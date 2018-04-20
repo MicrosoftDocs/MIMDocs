@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create PAM Request | Microsoft Docs
+title: Create PAM request | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
@@ -26,35 +26,42 @@ ms.suite: ems
 
 ---
 
-# Create PAM Request
+# Create PAM request
 Used by a privileged account to elevate to a PAM role.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `http://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 POST     |/api/pamresources/pamrequests
 
-###Query Parameters
+### Query parameters
+
 Parameter | Description
 --------|-------------
 Justification | Optional. The user-supplied reason for the elevation request.
-RoleId| Required. The unique identifier (GUID) of the PAM role to elevate to.
-RequestedTTL| Required. The requested expiration time, in seconds.
-RequestedTime | Optoinal. The time to elevate privileges.  
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
+RoleId | Required. The unique identifier (GUID) of the PAM role to elevate to.
+RequestedTTL | Required. The requested expiration time, in seconds.
+RequestedTime | Optional. The time to elevate privileges.  
+v | Optional. The API version. If not included, the current (most recently released) version of the API is used. For more information, see [Versioning in PAM REST API service details](privileged-access-management-rest-api-service-details.md#versioning).
 
-**Note**: You can specify the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* parameters as properties in the request body, rather than as query parameters. The *v* parameteer can only be specified as a query parameter.
+>[!NOTE]
+>You can specify the **Justification**, **RoleId**, **RequestedTTL**, and **RequestedTime** parameters as properties in the request body, rather than as query parameters. The **v** parameter can only be specified as a query parameter.
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Request Body
-Optional. As noted above, the *Justification*, *RoleId*, *RequestedTTL*, and *RequestedTime* paramters can be specified as properties of a request body instead of specifying them in the URL query string.
+### Request headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+Optional. The **Justification**, **RoleId**, **RequestedTTL**, and **RequestedTime** parameters can be specified as properties of a request body instead of specifying them in the URL query string.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK
@@ -64,10 +71,11 @@ Code  |Description
 500 | Internal Server Error
 503 | Service Unavailable
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Response Body
-A successful response contains a PAM request object with the following properties.
+### Response headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
+
+### Response body
+A successful response contains a PAM request object with the following properties:
 
 Property | Description
 --------|-------------
@@ -80,15 +88,19 @@ ExpirationTime | The expiration time of the request.
 RoleID| The unique identifier (GUID) of the PAM role.
 RequestedTTL | The requested expiration timeout in seconds.
 RequestedTime | The requested time for elevation.
-RequestStatus | The status of the request. Possible values are: "Processing", "Active", "Closed", "Closing", "Expired", "PendingApproval", "PendingMFA" and "Rejected".
+RequestStatus | The status of the request. The possible values are "Processing," "Active," "Closed," "Closing," "Expired," "PendingApproval," "PendingMFA," and "Rejected."
 
-##Example
+## Example
+This section provides examples to create a PAM request.
 
-###Request 1
+### Example: Request 1
+
 ```
 POST /api/pamresources/pamrequests?Justification=Sample+Reason&RoleId=c28eab4a-95cf-4c08-a153-d5e8a9e660cd&RequestedTTL=7200&RequestedTime=2015%2F07%2F11+23%3A40 HTTP/1.1
 ```
-###Response 1
+
+### Example: Response 1
+
 ```
 HTTP/1.1 201 Created
 
@@ -107,11 +119,14 @@ HTTP/1.1 201 Created
 }
 ```       
 
-###Request 2
+### Example: Request 2
+
 ```
 POST /api/pamresources/pamrequests?Justification=&RoleId=c28eab4a-95cf-4c08-a153-d5e8a9e660cd&RequestedTTL=3600&RequestedTime= HTTP/1.1
 ```
-###Response 2
+
+### Example: Response 2
+
 ```
 HTTP/1.1 201 Created
 

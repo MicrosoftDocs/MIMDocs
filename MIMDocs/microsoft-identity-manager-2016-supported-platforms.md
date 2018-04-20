@@ -5,9 +5,9 @@ title: Supported software platforms | Microsoft Docs
 description: Find the products and versions that are compatible with each of the MIM 2016 components
 keywords:
 author: fimguy
-ms.author: fimguy
-manager: femila
-ms.date: 10/5/2017
+ms.author: davidste
+manager: davidste
+ms.date: 04/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -18,7 +18,7 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mwahl
+ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: mim
@@ -27,12 +27,13 @@ ms.custom: mim
 
 # Supported platforms for MIM 2016
 
-This table describes the supported platforms and version for each component of Microsoft Identity Manager 2016. The versions marked with a * are only supported in MIM 2016 service pack 1.
+This table describes the supported platforms and version for each component of Microsoft Identity Manager 2016. The versions marked with a * are only supported in MIM 2016 service pack 1 with the latest hotfix.
 
 
 | **MIM component** | **Platform** | **Version** |
-|-------------------|--------------|-------------|
+|-------------------|--------------|--------------|
 | **MIM Sync** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
+| | Active Directory functional level for user provisioning, PCNS and GAL Sync | Windows 2000 <br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
 | | MIM Sync database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | Active Directory for user provisioning, PCNS, and GAL Sync (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
@@ -44,13 +45,13 @@ This table describes the supported platforms and version for each component of M
 | |PAM Scenario: Active Directory for PAM scenario existing (CORP) forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
 | | MIM Service database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Notification Only) |
-| | Browser | All major browsers * (Mobile Devices Limited)|
+| | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Notification Only before build [4.4.1749.0](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/version-history#version-4417490) |
+| | Browser | All major supported browsers * (Mobile Devices Limited)|
 | **MIM Service Reporting** | Windows Server |  Windows Server 2008 R2 SP1<br/>Windows Server 2012 <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Data warehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (With 4.4.1459)<br/> [SQL Server Version Compatibility for System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |
 | **MIM Password Reset and Registration Portals** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Web browser | All major browsers |
+| | Web browser | All major supported browsers |
 | **MIM Add-ins and Extensions** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | | Outlook integration (optional) | Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (on Windows 10) * |
 | | PAM PowerShell requestor cmdlets (optional) | Windows 8.1<br/>Windows 10 |
@@ -63,4 +64,4 @@ This table describes the supported platforms and version for each component of M
 | **MIM BHOLD Suite** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | BHOLD database | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
 | | Mail server (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
-| | Web browser | Internet Explorer 7, 8, 9, 10 or 11 with Silverlight |
+| | Web browser | Internet Explorer supported browsers with Silverlight |
