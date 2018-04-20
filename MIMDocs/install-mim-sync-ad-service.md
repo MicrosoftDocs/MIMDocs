@@ -50,7 +50,7 @@ When you configure a MIM management agent, you need to specify a user account. T
 
 1.  Open the Synchronization Service Manager.
 
-2.  To open the Create Management Agent wizard, change to the **Managment Actions** page, then, on the **Actions** menu, click **Create**.
+2.  To open the Create Management Agent wizard, change to the **Management Agents** page, then, on the **Actions** menu, click **Create**.
 
 3.  On the **Create Management Agent** page, provide the following settings, and then click **Next**.
 
@@ -232,7 +232,7 @@ The Active Directory management agent is a connector for AD Domain Services. To 
 
 ## Create Run Profiles
 
-Create run profiles for the  ADMA and MIMMA Connectors.
+Create run profiles for the ADMA and MIMMA Connectors.
 
 ### Create run profiles for the ADMA connector
 
@@ -428,7 +428,7 @@ Follow these steps to run each of the three run profiles.
 
 2. Select **MIMMA** in the **Management Agents** list.
 
-3. Click **Run**  on the **Actions** menu to open the Run Management Agent dialog box.
+3. Click **Run** on the **Actions** menu to open the Run Management Agent dialog box.
 
 4. For each run profile listed above, complete the following steps:
 
