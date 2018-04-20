@@ -102,6 +102,6 @@ The API supports the following operators in filter expressions: *And*, *Equal*, 
 
 The following sample requests include filters:
 
-- This request returns all the PAM Requests between specific dates: `http://localhost:8086/api/pamresources/pamrequests?$filter=ExpirationTime gt datetime"2015-01-09T08:26:49.721Z" and ExpirationTime lt datetime"2015-02-10T08:26:49.722Z" `
+- This request returns all the PAM Requests between specific dates: `http://localhost:8086/api/pamresources/pamrequests?$filter=ExpirationTime gt datetime'2015-01-09T08:26:49.721Z' and ExpirationTime lt datetime'2015-02-10T08:26:49.722Z' `
  
-- This request returns the Pam Role with the display name "SQL File Access": `http://localhost:8086/api/pamresources/pamroles?$filter=DisplayName eq "SQL File Access" `
+- This request returns the Pam Role with the display name "SQL File Access": `http://localhost:8086/api/pamresources/pamroles?$filter=DisplayName eq 'SQL File Access' `
