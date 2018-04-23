@@ -69,35 +69,11 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 ### Register your multi-factor authentication provider in Azure
 
-1.  Go to the [Azure classic portal](http://manage.windowsazure.com) and sign in as an Azure subscription administrator.
+1.  Create an [MFA provider](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
-2.  In the bottom left hand corner, click **New**.
+2. Open a support case and request the direct SDK for ASP.net 2.0 C#. The SDK will only be provided to current users of MIM with MFA because the direct SDK has been deprecated. New customers should adopt the next version of MIM that will integrate with MFA server.
 
-3.  Click **App Services &gt; Active Directory &gt; Multi-Factor Auth Provider &gt; Quick Create**.
-
-![Azure Portal quick create MFA image](media/MIM-SSPR-Azureportal.png)
-
-4.  In the **Name** field enter **SSPRMFA**, then click **Create**.
-
-![Azure Portal MFA image](media/MIM-SSPR-Azureportal-2.png)
-
-5.  Click **Active Directory** in the Azure classic portal menu, and then click the **Multi-Factor Auth Providers** tab.
-
-6.  Click on **SSPRMFA** and then click **Manage** at the bottom of the screen.
-
-    ![Azure portal Manage icon](media/MIM-SSPR-ManageButton.png)
-
-7.  In the new window, on the left panel under **Configure**, click on **Settings**.
-
-8.  Under **Fraud Alert**, uncheck **Block user when fraud is reported** . This is done in order to prevent blocking the entire service.
-
-9. In the **Azure Multi-Factor Authentication** window that opens, click **SDK** under **Downloads** in the menu at the left.
-
-10. Click the **Download** link in the ZIP column for the file with language **SDK for ASP.net 2.0 C#**.
-
-    ![Azure MFA download zip file image](media/MIM-SSPR-Azure-MFA.png)
-
-11. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
+3. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
 
 ### Update the configuration file
 
