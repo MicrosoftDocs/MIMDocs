@@ -7,7 +7,7 @@ The Microsoft Identity Manager management agent for Microsoft Graph (Public Prev
 Summary 
 =======
 
-The Microsoft Identity Manager management agent for Microsoft Graph (preview)
+The [Microsoft Identity Manager management agent for Microsoft Graph (preview)](http://go.microsoft.com/fwlink/?LinkId=717495)
 enables additional integration scenarios for Azure AD Premium customers.
 
 [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) integrates on-premises directories with Azure AD and ensures users have a common identity and consistent authentication across AD DS, Office 365, Azure, and SaaS applications integrated with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.   This management agent can be deployed for specialized identity and access management operations beyond user and group synchronization to Azure AD.  This management agent surfaces in the MIM sync metaverse additional objects obtained from the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta. 
