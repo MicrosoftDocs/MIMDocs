@@ -254,6 +254,7 @@ This synchronization rule creates the user in active directory
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/263df23fd588c4229b958aee240071f3.png)
 
+
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/047ebc3084999246bdd44b1f05ca02b3.png)
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/acc0a871c0bf6f45ee928bed5abd9861.png)
@@ -312,3 +313,5 @@ Next Steps
 [Functions Reference for FIM 2010](https://technet.microsoft.com/en-us/library/ff800820(v=ws.10).aspx)
 
 [How to provide secure remote access to on-premises applications](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)
+
+[Download Microsoft Identity Manager management agent for Microsoft Graph (preview)](http://go.microsoft.com/fwlink/?LinkId=717495)
