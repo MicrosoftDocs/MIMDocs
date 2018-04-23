@@ -71,9 +71,9 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 ### Register your multi-factor authentication provider in Azure
 
-1.  Go to the [Azure classic portal](http://manage.windowsazure.com) and sign in as an Azure subscription administrator.
+1.  Create an [MFA provider](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
-2.  In the bottom left hand corner, click **New**.
+2. Open a support case and request the direct SDK for ASP.net 2.0 C#. The SDK will only be provided to current users of MIM with MFA because the direct SDK has been deprecated. New customers should adopt the next version of MIM that will integrate with MFA server.
 
 3.  Click **App Services &gt; Active Directory &gt; Multi-Factor Auth Provider &gt; Quick Create**.
 
