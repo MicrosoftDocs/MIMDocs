@@ -206,7 +206,8 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 Next Steps
 ----------
 
-[Versioning, support, and breaking change policies for Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
+- [Versioning, support, and breaking change policies for Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
+- [Download Microsoft Identity Manager management agent for Microsoft Graph (preview)](http://go.microsoft.com/fwlink/?LinkId=717495)
 
 Scenario Specific Supported Guides
 ----------------------------------
