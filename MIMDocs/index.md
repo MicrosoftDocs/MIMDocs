@@ -19,7 +19,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/index/i_whats-new.svg" alt="" />
+                            <img src="/media/index/i_whats-new.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
