@@ -37,7 +37,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/index/i_learn-about.svg" alt="" />
+                            <img src="/media/index/i_learn-about.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -54,7 +54,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/index/i_deploy.svg" alt="" />
+                            <img src="/media/index/i_deploy.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -81,7 +81,7 @@ Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please [up
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/index/i_reference.svg" alt="" />
+                            <img src="/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -99,7 +99,7 @@ Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please [up
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/index/i_reference.svg" alt="" />
+                            <img src="/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -117,7 +117,7 @@ Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please [up
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/index/i_blog.svg" alt="" />
+                            <img src="/media/index/i_blog.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
