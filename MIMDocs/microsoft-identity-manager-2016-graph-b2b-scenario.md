@@ -1,13 +1,22 @@
 ---
 title: "The Microsoft Identity Manager management agent for Microsoft Graph | Microsoft Docs"
 author: fimguy
+
+description: Microsoft Graph (preview) is external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications
+keywords:
+author: fimguy
+ms.author: davidste
+manager: bhu
+ms.date: 04/25/2018
+ms.topic: article
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
+
 ---
 
 Azure AD business-to-business (B2B) collaboration with Microsoft Identity Manager(MIM) 2016 SP1 with Azure Application Proxy (Public Preview)
 ============================================================================================================================
-
-Summary
-=======
 
 The initial scenario in preview for is external user AD account lifecycle
 management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) proxy or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes
