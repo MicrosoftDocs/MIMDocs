@@ -42,7 +42,7 @@ MIM works with Active Directory (AD), so follow these steps to configure your AD
 ## Next: Prepare an identity management servers
 Once your domain is in place and configured, prepare your corporate identity management server. This includes setting up:
 - [Windows Server 2012 R2](prepare-server-ws2016.md)
-- [SQL Server 2016](prepare-server-sql2014.md)
+- [SQL Server 2016](prepare-server-sql2016.md)
 - [SharePoint 2016](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optional)
 
