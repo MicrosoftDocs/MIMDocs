@@ -126,7 +126,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 4. On your identity management server, open a new web browser tab, navigate to http://mim.contoso.com/ and login as *contoso\miminstall*.  An empty SharePoint site named *MIM Portal* will be shown.
 
-    ![MIM Portal at http://mim.contoso.com/ image](media/MIM-DeploySP1new.png)
+    ![MIM Portal at http://mim.contoso.com/ image](media/MIM-DeploySP1.png)
 
 5. Copy the URL, then in Internet Explorer, open **Internet Options**, change to the **Security tab**, select **Local intranet**, and click **Sites**.
 
@@ -137,5 +137,5 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 7. Open the **Administrative Tools** program, navigate to **Services**, locate the SharePoint Administration service, and start it if it is not already running.
 
 >[!div class="step-by-step"]  
-[« SQL Server 2014](prepare-server-sql2014.md)
+[« SQL Server 2016](prepare-server-sql2016.md)
 [Exchange Server »](prepare-server-exchange.md)
