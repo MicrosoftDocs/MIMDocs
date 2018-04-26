@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -33,17 +33,20 @@ ms.suite: ems
 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
-> - Domain controller name - **mimservername**
+> - Domain controller name - **corpdc**
 > - Domain name - **contoso**
+> - MIM Service Server name - **corpservice**
+> - MIM Sync Server name - **corpsync**
+> - SQL Server name - **corpsql**
 > - Password - **Pass@word1**
 
 To install Microsoft Identity Manager 2016 components, first set up the installation package.
 
-1. Sign in as *contoso\Administrator* to the server you are using for identity management.
+1. Sign in as *contoso\miminstall* to the server you are using for identity management syncronization server **corpsync**.
 
 2. Unpack the MIM installation package or mount the MIM image DVD.
 
-## Install MIM 2016 Synchronization Service
+## Install MIM 2016 SP1 Synchronization Service
 
 1. In the unpacked MIM installation folder, navigate to the **Synchronization Service** folder.
 
