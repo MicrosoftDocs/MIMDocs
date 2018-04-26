@@ -75,7 +75,8 @@ Start with a Windows Server 2016 machine, with a minimum of 8-12GB of RAM. When 
 ## Configure the server security policy
 
 Set up the server security policy to allow the newly-created accounts to run as services.
-> [!NOTE] Depending on configuration single server(all-in-one) or distributed server you only need to add based on role of the member machine like synchronization server. 
+> [!NOTE] 
+> Depending on configuration single server(all-in-one) or distributed server you only need to add based on role of the member machine like synchronization server. 
 
 1. Launch the Local Security Policy program
 
