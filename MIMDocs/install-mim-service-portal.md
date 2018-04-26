@@ -56,7 +56,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
     ![Configure the MIM database connection image](media/MIM-Install10.png)
 
-7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server**. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
+7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server** or you can use O365 Mailbox. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
 
     ![Configure mail server connection image](media/MIM-Install11.png)
 
@@ -74,11 +74,11 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 12. Specify *CORPIDM* (this computer's name) as MIM Service server address for the MIM Portal.
 
-13. Specify *http://CorpIDM.contoso.local* as the SharePoint site collection URL.
+13. Specify *http://mim.contoso.com* as the SharePoint site collection URL.
 
-14. Specify *http://CorpIDM.contoso.local:8080* as the Password Registration URL.
+14. Specify *http://passwordregistration.contoso.com* as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
 
-15. Specify *http://CorpIDM.contoso.local:8088* as the Password Reset URL.
+15. Specify *http://passwordreset.contoso.com* as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
 
 16. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to MIM Portal.
 
@@ -86,25 +86,25 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 1.  Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to *Pass@word1*.
 
-2.  Specify  *CORPIDM* as the Host Name for MIM Password Registration, and set the port to **8080**. Enable the **Open port in firewall** option.
+2.  Specify  *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
 
     ![Enter configuration information used by IIS image](media/MIM-Install14.png)
 
 3.  A warning will appear – read it and click **Next**.
 
-4. In the next MIM Password Registration Portal configuration screen, specify  *http://CorpIDM.contoso.local* as the MIM Service Server Address for the Password Registration Portal.
+4. In the next MIM Password Registration Portal configuration screen, specify  *mim.contoso.com* as the MIM Service Server Address for the Password Registration Portal.
 
 ## Configure MIM Password Reset Portal
 
-1.  Set the service account name for SSPR Registration to *Contoso\MIMSSPRService* and its password to *Pass@word1*.
+1.  Set the service account name for SSPR Registration to *Contoso\MIMSSPR* and its password to *Pass@word1*.
 
-2.  Specify  *CORPIDM* as the Host Name for MIM Password Reset Portal, and set the port to **8088**. Enable the **Open port in firewall** option.
+2.  Specify  *passwordreset.contoso.com* as the Host Name for MIM Password Reset Portal, and set the port to **80**. Enable the **Open port in firewall** option.
 
     ![Enter configuration information used by IIS image](media/MIM-Install15.png)
 
 3.  A warning will appear – read it and click **Next**.
 
-4. In the next MIM Password Registration Portal configuration screen, specify *CorpIDname  http://CorpIDname.domain.local* as the MIM Service Server Address for the Password Reset Portal.
+4. In the next MIM Password Registration Portal configuration screen, specify *mim.contoso.com* as the MIM Service Server Address for the Password Reset Portal.
 
 ## Install MIM Service and Portal
 
@@ -112,9 +112,9 @@ When all pre-installation definitions are ready, click **Install** to begin inst
 
 After installation completes, verify that the MIM Portal is active.
 
-1. Launch Internet Explorer and connect to the MIM Portal on  *http://corpidm.contoso.local/identitymanagement*. Note that there may be a short delay on the first visit to this page.
+1. Launch Internet Explorer and connect to the MIM Portal on  *http://mim.contoso.com/identitymanagement*. Note that there may be a short delay on the first visit to this page.
 
-    - If necessary, authenticate as *contoso\Administrator* to Internet Explorer.
+    - If necessary, authenticate as *contoso\miminstall* to Internet Explorer.
 
 2. In Internet Explorer, open the **Internet Options**, change to the **security** tab, and add the site to the **Local intranet** zone if it is not already there.  Close the **Internet Options** dialog.
 
