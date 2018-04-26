@@ -28,7 +28,7 @@ ms.suite: ems
 # Set up an identity management server: SQL Server 2016
 
 >[!div class="step-by-step"]
-[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
+[« Windows Server 2016](prepare-server-ws2016.md)
 [SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
