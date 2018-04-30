@@ -56,7 +56,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
     ![Configure the MIM database connection image](media/install-mim-service-portal/MIM_Install10.png)
 
-7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server** or you can use O365 Mailbox. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
+7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server** or you can use **O365 Mailbox**. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
 
     ![Configure mail server connection image](media/install-mim-service-portal/MIM_Install11.png)
 
