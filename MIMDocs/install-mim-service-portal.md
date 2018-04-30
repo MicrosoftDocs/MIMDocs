@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
-ms.date: 10/12/2017
+ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -54,23 +54,23 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 6. On the **Configure the MIM database connection** page, choose **Create a new database**.
 
-    ![Configure the MIM database connection image](media/MIM-Install10.png)
+    ![Configure the MIM database connection image](media/install-mim-service-portal/MIM_Install10.png)
 
-7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server** or you can use O365 Mailbox. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
+7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server** or you can use **O365 Mailbox**. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
 
-    ![Configure mail server connection image](media/MIM-Install11.png)
+    ![Configure mail server connection image](media/install-mim-service-portal/MIM_Install11.png)
 
 8. Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
 
 9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example *Pass@word1*, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
 
-    ![Configure the MIM service account image](media/MIM-Install12.png)
+    ![Configure the MIM service account image](media/install-mim-service-portal/MIM_Install12.png)
 
 10. Note that a warning may appear that the Service Account is not secure in its current configuration.
 
 11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMMA*.
 
-    ![Configure the MIM Service and Portal image](media/MIM-Install13.png)
+    ![Configure the MIM Service and Portal image](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Specify *CORPIDM* (this computer's name) as MIM Service server address for the MIM Portal.
 
@@ -88,7 +88,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 2.  Specify  *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
 
-    ![Enter configuration information used by IIS image](media/MIM-Install14.png)
+    ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install14.png)
 
 3.  A warning will appear – read it and click **Next**.
 
@@ -100,7 +100,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 2.  Specify  *passwordreset.contoso.com* as the Host Name for MIM Password Reset Portal, and set the port to **80**. Enable the **Open port in firewall** option.
 
-    ![Enter configuration information used by IIS image](media/MIM-Install15.png)
+    ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install15.png)
 
 3.  A warning will appear – read it and click **Next**.
 
