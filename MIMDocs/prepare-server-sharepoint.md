@@ -75,14 +75,15 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 1. On the **Connect to a server farm** tab, change to create a new server farm.
 
 2. Specify this server as the database server like **corpsql** for the configuration database, and *Contoso\SharePoint* as the database access account for SharePoint to use.
-    a. In the configuration Wizard we recomend selecting [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) type of **Front-end**
 3. Create a password for the farm security passphrase.
 
-4. When the configuration wizard completes configuration task 10 of 10, click Finish and a web browser will open.
+4. In the configuration Wizard we recomend selecting [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) type of **Front-end**
 
-5. In the Internet Explorer popup, authenticate as *Contoso\miminstall* (or the equivalent administrator account) to proceed.
+5. When the configuration wizard completes configuration task 10 of 10, click Finish and a web browser will open..
 
-6. In the web wizard (within the web app) click **Cancel/Skip**.
+6. If prompted the Internet Explorer popup, authenticate as *Contoso\miminstall* (or the equivalent administrator account) to proceed.
+
+7. In the web wizard (within the web app) click **Cancel/Skip**.
 
 
 ## Prepare SharePoint to host the MIM Portal
@@ -108,7 +109,6 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -126,7 +126,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 4. On your identity management server, open a new web browser tab, navigate to http://mim.contoso.com/ and login as *contoso\miminstall*.  An empty SharePoint site named *MIM Portal* will be shown.
 
-    ![MIM Portal at http://mim.contoso.com/ image](media/MIM-DeploySP1.png)
+    ![MIM Portal at http://mim.contoso.com/ image](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Copy the URL, then in Internet Explorer, open **Internet Options**, change to the **Security tab**, select **Local intranet**, and click **Sites**.
 
