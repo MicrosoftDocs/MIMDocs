@@ -1,6 +1,14 @@
 ---
 title: "Conversion of MIM Specific Services to gMSA | Microsoft Docs"
+description: Topic describing the basic steps to configure gMSA for supported
+services.
 author: fimguy
+ms.author: billmath
+manager: mtillman
+ms.date: 05/02/2018
+ms.topic: article
+ms.service: microsoft-identity-manager
+ms.technology: security
 ---
 
 Conversion of MIM Specific Services to gMSA
@@ -30,8 +38,7 @@ Not Supported:
 
 -   MIM Portal is not supported as this is part of the sharepoint enviroment and
     you would need to deploy in farm mode and [Configure automatic password
-    change in SharePoint
-    Server](https://docs.microsoft.com/en-us/sharepoint/administration/configure-automatic-password-change)
+    change in SharePointServer](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
 
 -   All Management Agents
 
@@ -44,8 +51,7 @@ General Information
 
 Reading needed to complete setup and understand
 
--   [Group Managed Service Accounts
-    Overview](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
+-   [Group Managed Service Accounts Overview](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
 -   <https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps>
 
@@ -168,7 +174,8 @@ the synchronization service database
 MIM Service
 -----------
 
-*Important: The following process must be used when first converting the MIM
+>[!IMPORTANT]
+>The following process must be used when first converting the MIM
 Service related accounts to be gMSA accounts. The PowerShell cmdlets noted in
 the Appendix can only be used to change the account information once the initial
 configuration has been done.*
