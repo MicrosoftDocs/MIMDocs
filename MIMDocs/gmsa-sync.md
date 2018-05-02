@@ -1,7 +1,6 @@
 ---
 title: "Conversion of MIM Specific Services to gMSA | Microsoft Docs"
-description: Topic describing the basic steps to configure gMSA for supported
-services.
+description: Topic describing the basic steps to configure gMSA.
 author: fimguy
 ms.author: billmath
 manager: mtillman
@@ -36,9 +35,7 @@ Supported:
 
 Not Supported:
 
--   MIM Portal is not supported as this is part of the sharepoint enviroment and
-    you would need to deploy in farm mode and [Configure automatic password
-    change in SharePointServer](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
+-   MIM Portal is not supported as this is part of the sharepoint enviroment and you would need to deploy in farm mode and [Configure automatic password change in SharePointServer](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
 
 -   All Management Agents
 
