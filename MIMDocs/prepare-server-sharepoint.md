@@ -102,7 +102,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
     > [!NOTE]
     > A warning message will appear saying that Windows Classic authentication method is being used, and it may take several minutes for the final command to return. When completed, the output will indicate the URL of the new portal. Keep the **SharePoint 2016 Management Shell** window open to reference later.
 
-2. Launch  SharePoint 2013 Management Shell and run the following PowerShell script to create a **SharePoint Site Collection** associated with that web application.
+2. Launch  SharePoint 2016 Management Shell and run the following PowerShell script to create a **SharePoint Site Collection** associated with that web application.
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
