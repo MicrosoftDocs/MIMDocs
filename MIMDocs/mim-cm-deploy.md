@@ -19,12 +19,6 @@ ms.assetid:
 
 The installation of Microsoft Identity Manager Certificate Manager 2016 (MIM CM) involves a number of steps. As a way to simplify the process we are breaking things down. There are preliminary steps that must be taken prior to any actual MIM CM steps. Without the preliminary work the installation is likely to fail.
 
-1. Deployment Overview
-
-2. Pre-deployment steps
-
-3. What else?
-
 The diagram below shows an example of the type of environment that may be used. The systems with numbers are included in the list below the diagram and are required to successfully complete the steps covered in this article. Finally, Windows 2016 Datacenter Servers are used:
 
 ![Environment diagram](media/mim-cm-deploy/image001.png)
