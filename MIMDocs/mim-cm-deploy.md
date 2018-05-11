@@ -330,12 +330,12 @@ In order to host the website for CM, install and configure IIS.
 
 #### Install and configure IIS
 
-1. Login to **CORLog in as **MIMINSTALL** account
+1. Login to **CORLog in** as **MIMINSTALL** account
 
     >[!IMPORTANT]
     >The MIM installation account should be a local administrator
 
-2. Open powershell and run the following command
+2. Open PowerShell and run the following command
 
     `Install-WindowsFeature â€“ConfigurationFilePath`
 
@@ -357,7 +357,7 @@ Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo
 
 ```
 
-**Updating IIS on **CORPCM**
+**Updating IIS on CORPCM**
 
 ![diagram](media/mim-cm-deploy/image022.png)
 
@@ -424,7 +424,7 @@ It is highly recommended that you require SSL on the MIM CM portal. If you donâ€
 
 8. On the Custom Setup page, make sure the **MIM CM Portal** and **MIM CM Update Service components** are set to be installed, and then **click Next**.
 
-9. On the Virtual Web Folder page, ensure that the Virtual folder name is **CertificateManagement, and then **click Next**.
+9. On the Virtual Web Folder page, ensure that the Virtual folder name is **CertificateManagement**, and then **click Next**.
 
 10. On the Install Microsoft Identity Manager Certificate Management page, **click Install**.
 
