@@ -723,9 +723,10 @@ First Steps: **Configuring Service Connection Point and Target Group Permissions
 10. In the **CORPCM Properties** dialog box, on the **Security** tab, add the following groups with the corresponding permissions:
 
     | Group          | Permissions      |
-    |================|==================|
+    |----------------|------------------|
     | mimcm-Managers | Read </br> FIM CM Audit</br> FIM CM Enrollment Agent</br> FIM CM Request Enroll</br> FIM CM Request Recover</br> FIM CM Request Renew</br> FIM CM Request Revoke </br> FIM CM Request Unblock Smart Card |
-    | mimcm-HelpDesk | Read</br> FIM CM Enrollment Agent</br> FIM CM Request Revoke</br> FIM CM Request Unblock Smart Card                                                                                |
+    | mimcm-HelpDesk | Read</br> FIM CM Enrollment Agent</br> FIM CM Request Revoke</br> FIM CM Request Unblock Smart Card |
+
 11. In the **CORPDC Properties** dialog box, click **OK**.
 
 12. Leave **Active Directory Users and Computers** open.
