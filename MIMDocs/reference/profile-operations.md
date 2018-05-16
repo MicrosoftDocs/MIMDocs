@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Profile Operations | Microsoft Docs
+title: Profile operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -26,9 +26,8 @@ ms.suite: ems
 
 ---
 
-# Profile Operations
+# Profile operations
+The following sections describe the profile operations in the Microsoft Identity Manager (MIM) Certificate Management (CM) REST API:
 
-##In This Section
-
-- [Get Profile Data](get-profile-data.md)
-- [Get Profile State Operations](get-profile-state-operations.md)
+- [Get profile data](get-profile-data.md)
+- [Get profile state operations](get-profile-state-operations.md)

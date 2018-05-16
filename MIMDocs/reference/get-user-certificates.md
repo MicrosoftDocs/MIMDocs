@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Get User Certificates | Microsoft Docs
+title: Get user certificates | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -26,27 +26,31 @@ ms.suite: ems
 
 ---
 
-# Get User Certificates
-Gets the list of certificates associated with the specified user (retired certificates are filtered).
+# Get user certificates
+Gets the list of certificates that are associated with a specified user. Retired certificates are filtered from the list.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/certificates
 
-###URL Parameters
-none
+### URL parameters
+None.
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-none
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
 Code  |Description  
 ---------|---------
 200 | OK
@@ -54,9 +58,10 @@ Code  |Description
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
 On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Certificates.X509ClmCertificate](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.x509clmcertificate(v=vs.100).aspx) objects with the following properties:
 
 Name | Description
@@ -65,22 +70,25 @@ ArchivedOnCa | A Boolean value that indicates if the certificate is archived on 
 CertificateType | The type of the certificate.
 IsKeyHistory | A Boolean value that indicates if the certificate is a key history certificate.
 Issuer | The issuer.
-NotAfter | The date and time after which the certificate is no longer valid
-NotBefore | The date and time at which the certificate becomes valid
+NotAfter | The date and time after which the certificate is no longer valid.
+NotBefore | The date and time at which the certificate becomes valid.
 RequesterName | The account that requested the certificate.
 SerialNumber | The certificate's serial number.
 Status | The status of the certificate.
 TemplateCommonName | The certificate template common name for the certificate.
 Thumbprint | The certificate's thumbprint.
 
+## Example
+This section provides an example to get the certificates that are associated with a user.
 
-##Example
+### Example: Request
 
-###Request
 ```
 GET /certificatemanagement/api/v1.0/certificates HTTP/1.1
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 

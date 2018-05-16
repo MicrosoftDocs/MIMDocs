@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Configure Exchange for MIM to email and create mailboxes | Microsoft Docs
 description: As an optional step, deploy Exchange Server to enable MIM 2016 to send mail and create mailboxes.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 11/30/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -36,13 +36,13 @@ If you would like to configure MIM to send and receive email or provision mailbo
 
 1. Download and install Microsoft Office 2010 Filter Packs - Version 2.0 + Microsoft Office 2010 Filter Packs - Version 2.0 SP1
 
-    - [MS Office10 FP2.0](http://www.microsoft.com/en-us/download/details.aspx?id=17062)
+    - [MS Office10 FP2.0](http://www.microsoft.com/download/details.aspx?id=17062)
 
-    - [MS Office10 FP2.0 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=26604)
+    - [MS Office10 FP2.0 SP1](http://www.microsoft.com/download/details.aspx?id=26604)
 
-2. Download and install [Microsoft Unified Communications Managed API 4.0, Core Runtime 64-bit](http://www.microsoft.com/en-us/download/details.aspx?id=34992)
+2. Download and install [Microsoft Unified Communications Managed API 4.0, Core Runtime 64-bit](http://www.microsoft.com/download/details.aspx?id=34992)
 
-3. Download and install [MS Exchange Server 2013 180-day Trial version](http://www.microsoft.com/en-us/evalcenter/evaluate-exchange-server-2013)
+3. Download and install [MS Exchange Server 2013 180-day Trial version](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
 
 >[!div class="step-by-step"]  
 [« SharePoint](prepare-server-sharepoint.md)

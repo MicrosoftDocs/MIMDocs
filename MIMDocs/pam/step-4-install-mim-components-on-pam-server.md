@@ -4,10 +4,10 @@
 title: Deploy PAM step 4 – Install MIM | Microsoft Docs
 description: Install and configure MIM Service and Portal on your Privileged Access Management server and workstations.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: barclayn
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,13 +24,11 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Step 4 – Install MIM components on PAM server and workstation
 
 >[!div class="step-by-step"]
 [« Step 3](step-3-prepare-pam-server.md)
 [Step 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-
 
 On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service and Portal and the sample portal web application.
 
@@ -39,7 +37,7 @@ On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service and P
 
 If you have downloaded MIM, unpack the MIM installation archive to a new folder.
 
-##  Run the Service and Portal install program.  
+## Run the Service and Portal install program.
 
 Follow the guidelines of the installer and complete the installation.
 
@@ -146,13 +144,13 @@ In this section you will install and configure the sample web application for th
 
 3.  Create new web site in IIS with a site name of MIM Privileged Access Management Example Portal, physical path C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal, and port 8090.  This can be done using the following PowerShell command:
 
-  ```
+  ```PowerShell
   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
   ```
 
 4.  Set up the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. In the **<system.webServer>** section, add the following lines:
 
-  ```
+  ```XML
   <httpProtocol>
     <customHeaders>
       <add name="Access-Control-Allow-Credentials" value="true"  />
@@ -166,7 +164,7 @@ In this section you will install and configure the sample web application for th
 
 6.  Restart IIS with the following command for these changes to take effect.
 
-  ```
+  ```cmd
   iisreset
   ```
 

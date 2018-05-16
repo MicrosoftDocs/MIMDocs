@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Get Smartcard or Profile Certificates | Microsoft Docs
+title: Get smart card or profile certificates | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -26,39 +26,46 @@ ms.suite: ems
 
 ---
 
-# Get Smartcard or Profile Certificates
-Gets a list of certificates associated with the particular smartcard or software profile.
+# Get smart card or profile certificates
+Gets a list of certificates that are associated with a particular smart card or software profile.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/profiles/{id}/certificates <br/>/CertificateManagement/api/v1.0/smartcards/{id}/certificates
 
-###URL Parameters
+### URL parameters
+
 Parameter | Description
 ---------|------------
-id | The identifier (GUID) of the profile or smartcard.
+id | The identifier (GUID) of the profile or smart card.
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-none
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
-200     | OK
+200 | OK
 204 | No content
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
 On success, returns a list of JSON-serialized [Microsoft.Clm.Shared.Certificates.X509ClmCertificate](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.x509clmcertificate.aspx) objects with the following properties:
 
 Name | Description
@@ -70,13 +77,17 @@ SerialNumber | The certificate's serial number.
 TemplateCommonName | The certificate template common name for the certificate.
 Thumbprint | The certificate's thumbprint.
 
-##Example
+## Example
+This section provides an example to get the certificates that are associated with a smart card or software profile.
 
-###Request
+### Example: Request
+
 ```
 GET /certificatemanagement/api/v1.0/smartcards/5badfea3-de31-4837-99f9-8249515a5473/certificates HTTP/1.1
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 
@@ -115,7 +126,8 @@ HTTP/1.1 200 OK
     }
 ]
 ```       
-##See Also
 
-- [Microsoft.Clm.Provision.FindOperations.FindCertificates Method](https://msdn.microsoft.com/library/microsoft.clm.provision.findoperations.findcertificates.aspx)
-- [Microsoft.Clm.Shared.Certificates.X509ClmCertificate Class](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.x509clmcertificate.aspx)
+## See also
+
+- [Microsoft.Clm.Provision.FindOperations.FindCertificates method](https://msdn.microsoft.com/library/microsoft.clm.provision.findoperations.findcertificates.aspx)
+- [Microsoft.Clm.Shared.Certificates.X509ClmCertificate class](https://msdn.microsoft.com/library/microsoft.clm.shared.certificates.x509clmcertificate.aspx)

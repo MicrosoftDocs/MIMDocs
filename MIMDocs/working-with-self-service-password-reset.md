@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Working with the Self-Service Password Reset portal | Microsoft Docs
 description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -24,6 +24,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
+>[!IMPORTANT]
+Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will be unable to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on planning changes to the MFA by integrating with MFA Server SDK.This will be included in upcoming hotfix in early 2018.
 
 # Working with Self-Service Password Reset
 Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
@@ -73,7 +75,31 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 2. Open a support case and request the direct SDK for ASP.net 2.0 C#. The SDK will only be provided to current users of MIM with MFA because the direct SDK has been deprecated. New customers should adopt the next version of MIM that will integrate with MFA server.
 
-3. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
+3.  Click **App Services &gt; Active Directory &gt; Multi-Factor Auth Provider &gt; Quick Create**.
+
+![Azure Portals quick create MFA image](media/MIM-SSPR-Azureportal.png)
+
+4.  In the **Name** field enter **SSPRMFA**, then click **Create**.
+
+![Azure Portal MFA image](media/MIM-SSPR-Azureportal-2.png)
+
+5.  Click **Active Directory** in the Azure classic portal menu, and then click the **Multi-Factor Auth Providers** tab.
+
+6.  Click on **SSPRMFA** and then click **Manage** at the bottom of the screen.
+
+    ![Azure portal Manage icon](media/MIM-SSPR-ManageButton.png)
+
+7.  In the new window, on the left panel under **Configure**, click on **Settings**.
+
+8.  Under **Fraud Alert**, uncheck **Block user when fraud is reported. This is done in order to prevent blocking the entire service.
+
+9. In the **Azure Multi-Factor Authentication** window that opens, click **SDK** under **Downloads** in the menu at the left.
+
+10. Click the **Download** link in the ZIP column for the file with language **SDK for ASP.net 2.0 C#**.
+
+    ![Azure MFA download zip file image](media/MIM-SSPR-Azure-MFA.png)
+
+11. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
 
 ### Update the configuration file
 
@@ -119,7 +145,7 @@ Users in your organization can now register for password reset.  During this pro
 
 #### Register users for password reset
 
-1.  A user will launch a web browser a navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
+1.  A user will launch a web browser and navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
 
     They need to enter the Password Registration Portal and authenticate using their username and password.
 
@@ -148,7 +174,7 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 2.  The user will be directed to authenticate. If MFA was configured, the user will receive a phone call.
 
-3.  In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when he signed up for the service.
+3.  In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when they signed up for the service.
 
 4.  When a user answers the phone, they will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
 
@@ -165,7 +191,7 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 1.  Users can open a web browser, navigate to the **Password Reset Portal** and enter their username and click **Next**.
 
-    If MFA was configured, the user will receive a phone call. In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when he signed up for the service.
+    If MFA was configured, the user will receive a phone call. In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when they signed up for the service.
 
     When a user answers the phone, he will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
 

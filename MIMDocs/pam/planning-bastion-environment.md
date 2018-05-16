@@ -4,10 +4,10 @@
 title: Planning a bastion environment | Microsoft Docs
 description:
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Planning a bastion environment
 
 Adding a bastion environment with a dedicated administrative forest to an Active Directory enables organizations to easily manage administrative accounts, workstations, and groups in an environment that has stronger security controls than their existing production environment.
@@ -173,7 +172,7 @@ There are seven requirements for enabling management for an existing domain.
 
 There must be a group in the existing domain, whose name is the NetBIOS domain name followed by three dollar signs, e.g., *CONTOSO$$$*. The group scope must be *domain local* and the group type must be *Security*. This is needed for groups to be created in the dedicated administrative forest with the same Security identifier as groups in this domain. Create this group with the following PowerShell command, performed by an administrator of the existing domain and run on an workstation joined to the existing domain:
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -201,8 +200,8 @@ The group policy settings on the domain controller for auditing must include bot
 
 7. Close the Group Policy Management Editor window and the Group Policy Management window. Then apply the audit settings by launching a PowerShell window and typing:
 
-    ```
-    gpupdate /force /target:computere
+    ```cmd
+    gpupdate /force /target:computer
     ```
 
 The message “Computer Policy update has completed successfully.” should appear after a few minutes.
@@ -211,7 +210,7 @@ The message “Computer Policy update has completed successfully.” should appe
 
 The domain controllers must allow RPC over TCP/IP connections for Local Security Authority (LSA) from the bastion environment. On older versions of Windows Server, TCP/IP support in LSA must be enabled in the registry:
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -219,7 +218,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 The `New-PAMDomainConfiguration` cmdlet must be run on the MIM Service computer in the administrative domain. The parameters to this command are the domain name of the existing domain, and credential of an administrator of that domain.
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 

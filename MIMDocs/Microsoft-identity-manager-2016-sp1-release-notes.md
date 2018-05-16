@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 01/10/2017
+ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security

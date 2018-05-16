@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
-title: Get Smartcard Data | Microsoft Docs
+title: Get smart card profiles | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -26,46 +26,53 @@ ms.suite: ems
 
 ---
 
-# Get Smartcard Data
-Gets a list of a user’s smartcard profiles with a list of possible operations that can be performed by the current user. A request can then be initiated for any of the specified operations.
+# Get smart card profiles
+Gets a list of smart card profiles for a user. The list includes the possible operations that can be performed by the current user. A request can then be initiated for any of the specified operations.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/smartcards <br/> /CertificateManagement/api/v1.0/smartcards/{smartcarduuid}
 
 
-###URL Parameters
+### URL parameters
+
 Property| Description
 ---------|--------
-smartcarduuid | Optional. The smartcard UUID as denoted by MIM CM. This is the “uuid” field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
+smartcarduuid | Optional. The smart card UUID as denoted by Microsoft Identity Manager (MIM) Certificate Management (CM). The value corresponds to the "uuid" field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
-###Query Parameters
+### Query parameters
+
 Property| Description
 ---------|--------
-cardid | Optional. The smartcard UUID as denoted by MIM CM. This is the “uuid” field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
+cardid | Optional. The smart card UUID as denoted by MIM CM. The value corresponds to the "uuid" field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-none
+### Request body
+None.
 
-##Response
-###Response Codes
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
-200     | OK
+200 | OK
 204 | No content
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
 On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object with the following properties:
 
 Name | Description
@@ -85,13 +92,17 @@ Status | The status of the smart card.
 Uuid | The smart card profile's identifier.
 
 ##Example
+This section provides an example to get smart card profiles for a user.
 
-###Request 1
+### Example: Request 1
+
 ```
 GET /certificatemanagement/api/v1.0/smartcards?cardid=d1ef6869-5517-42a0-8f05-16ca1a0b834d HTTP/1.1
 
 ```
-###Response 1
+
+### Example: Response 1
+
 ```
 HTTP/1.1 200 OK
 
@@ -111,11 +122,15 @@ HTTP/1.1 200 OK
     "Atr":"3b8d0180fba000000397425446590301c8"
 }
 ```       
-###Request 2
+
+### Example: Request 2
+
 ```
 GET /certificatemanagement/api/v1.0/smartcards/17cf063d-e337-4aa9-a822-346554ddd3c9 HTTP/1.1
 ```
-###Response 2
+
+### Example: Response 2
+
 ```
 HTTP/1.1 200 OK
 
@@ -134,7 +149,8 @@ HTTP/1.1 200 OK
     "Middleware":"MSBaseCSP",
     "Atr":"3b8d0180fba000000397425446590301c8"
 }
-```       
-##See Also
+```     
 
--[Microsoft.Clm.Shared.Smartcards.Smartcard Class](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)
+## See also
+
+- [Microsoft.Clm.Shared.Smartcards.Smartcard class](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)

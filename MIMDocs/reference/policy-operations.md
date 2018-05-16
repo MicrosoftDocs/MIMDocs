@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Policy Operations | Microsoft Docs
+title: Policy operations | Microsoft Docs
 description:
 keywords:
 author: msmbaldwin
-ms.author: mbaldwin
+ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -26,9 +26,8 @@ ms.suite: ems
 
 ---
 
-# Policy Operations
+# Policy operations
+The following sections describe the policy operations in the Microsoft Identity Manager (MIM) Certificate Management (CM) REST API:
 
-##In This Section
-
-- [Get Workflow Policy](get-workflow-policy.md)
-- [Get Smartcard Policy](get-smartcard-policy.md)
+- [Get workflow policy](get-workflow-policy.md)
+- [Get smart card policy](get-smartcard-policy.md)

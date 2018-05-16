@@ -3,28 +3,15 @@
 
 title: Deploy PAM step 7 – user access | Microsoft Docs
 description: As the final step, grant a privileged user temporary access to demonstrate that your Privileged Access Management deployment was successful.
-keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: mwahl
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
-
 # Step 7 – Elevate a user’s access
 
 >[!div class="step-by-step"]
@@ -34,6 +21,7 @@ ms.suite: ems
 This step demonstrates that a user can request access to a role via MIM.
 
 ## Verify that Jen cannot access the privileged resource
+
 Without elevated privileges, Jen cannot access the privileged resource in the CORP forest.
 
 1. Sign out of CORPWKSTN to remove any cached open connections.
@@ -43,9 +31,15 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
 5. Leave the command prompt window open.
 
 ## Request privileged access from MIM.
-1. On CORPWKSTN, still as CONTOSO\Jen, type the following command.
 
-    ```
+> [!NOTE]
+> It is recommended that the workstation be a privileged workstation(PAW).  For more information see [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+
+1. On PRIVWKSTN, logon as PRIV\priv.jen.
+2. Click **Start**, **Run**, and enter **PowerShell.exe**.
+3. Type the following command.
+
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -55,7 +49,7 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
     > [!NOTE]
     > After you run these commands, all the following steps are time-sensitive.
 
-    ```
+    ```PowerShell
     Import-module MIMPAM
     $r = Get-PAMRoleForRequest | ? { $_.DisplayName –eq "CorpAdmins" }
     New-PAMRequest –role $r
@@ -65,7 +59,7 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
 4. After that completes, close the PowerShell window.
 5. In the DOS command window, type the following command
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -74,7 +68,7 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
 ## Validate the elevated access.
 In the newly opened window, type the following commands.
 
-```
+```cmd
 whoami /groups
 dir \\corpwkstn\corpfs
 ```
@@ -82,12 +76,13 @@ dir \\corpwkstn\corpfs
 If the dir command fails with the error message **Access is denied**, re-check the trust relationship.
 
 ## Activate the privileged role
+
 Activate by requesting privileged access via the PAM sample portal.
 
 1. On CORPWKSTN, make sure that you are signed in as CORP\Jen.
 2. Type the following command in a DOS command window.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local "c:\program files\Internet Explorer\iexplore.exe"
     ```
 
@@ -102,6 +97,7 @@ Activate by requesting privileged access via the PAM sample portal.
 > In this environment, you can also learn how to develop applications which use the PAM REST API, described in the [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
 ## Summary
+
 Once you have completed the steps in this walkthrough, you will have demonstrated a Privileged Access Management scenario, in which user privileges are elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. The decision of which security groups represent privileged roles is coordinated by the PAM administrator. Once access rights are migrated to the Privileged Access Management system, access that was previously possible with the original user account is now made possible only by signing in with a special privileged account, and made available upon request. As a result, group memberships for highly privileged groups are effective for a limited amount of time.
 
 >[!div class="step-by-step"]

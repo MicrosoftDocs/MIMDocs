@@ -1,13 +1,13 @@
----
+﻿---
 # required metadata
 
 title: Install the Microsoft Identity Manager Sync Service | Microsoft Docs
 description: Get started with the MIM 2016 components by installing and configuring the Synchronization Service.
 keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+author: fimguy
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -33,17 +33,20 @@ ms.suite: ems
 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
-> - Domain controller name - **mimservername**
+> - Domain controller name - **corpdc**
 > - Domain name - **contoso**
+> - MIM Service Server name - **corpservice**
+> - MIM Sync Server name - **corpsync**
+> - SQL Server name - **corpsql**
 > - Password - **Pass@word1**
 
 To install Microsoft Identity Manager 2016 components, first set up the installation package.
 
-1. Sign in as *contoso\Administrator* to the server you are using for identity management.
+1. Sign in as *contoso\miminstall* to the server you are using for identity management syncronization server **corpsync**.
 
 2. Unpack the MIM installation package or mount the MIM image DVD.
 
-## Install MIM 2016 Synchronization Service
+## Install MIM 2016 SP1 Synchronization Service
 
 1. In the unpacked MIM installation folder, navigate to the **Synchronization Service** folder.
 
@@ -51,21 +54,21 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 3. In the welcome screen – click **Next**.
 
-    ![MIM installer wizard welcome image](media/MIM-Install1.png)
+    ![MIM installer wizard welcome image](media/install-mim-sync/MIM_Install1.png)
 
 4. Review the license terms and click **Next** to accept them.
 
 5. On the **Custom Setup** screen click **Next**.
 
-    ![Custom Setup image](media/MIM-Install2.png)
+    ![Custom Setup image](media/install-mim-sync/MIM_Install2.png)
 
 6.  In the Sync Service database configuration screen, select:
 
-    1.  The SQL Server is located on: **This computer**.
+    1.  The SQL Server is located on: **A Remote machine** called **corpsql.contoso.com**.
 
-    2.  The SQL Server instance is: **The default instance**.
+    2.  The SQL Server instance is: **The default instance**
 
-    ![Database connection image](media/MIM-Install3.png)
+    ![Database connection image](media/install-mim-sync/MIM_Install3.png)
 
 7.  Configure the Sync Service Account according to the account you created earlier:
 
@@ -75,7 +78,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     3.  Service Account Domain or local computer name: *contoso*
 
-    ![Service account image](media/MIM-Install4.png)
+    ![Service account image](media/install-mim-sync/MIM_Install4.png)
 
 8.  Provide MIM Sync Service installer with the relevant security groups:
 
@@ -89,7 +92,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     5. WMI Password Management= *contoso\MIMSyncPasswordReset*
 
-    ![Security groups image](media/MIM-Install5.png)
+    ![Security groups image](media/install-mim-sync/MIM_Install5.png)
 
 9. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
 

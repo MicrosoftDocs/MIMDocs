@@ -5,9 +5,9 @@ title: Topology guide for deployment | Microsoft Docs
 description: Understand the MIM 2016 components, and get suggestions for how to deploy them in your environment.
 keywords:
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/21/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -28,6 +28,11 @@ ms.suite: ems
 
 # Topology considerations
 You can deploy Microsoft Identity Manager (MIM) components on the same server or among multiple servers in multiple configurations. The topology that you select for your deployment affects the performance that you can achieve from MIM. This article introduces multiple deployment topologies that you may consider implementing.
+
+
+>[!NOTE]
+These options are applicable to deployments using solely MIM Sync, MIM Service and MIM Portal for identity management.  Deployments using MIM CM, MIM BHOLD Suite, or for privileged access management have different deployment options.
+
 
 ## MIM components
 When designing your deployment topology, it's important to know what each component does and how they all interact.
