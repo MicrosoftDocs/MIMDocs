@@ -25,6 +25,9 @@ ms.suite: ems
 ---
 # Microsoft Identity Manager compliance, trust, data security, and privacy
 
+>[!Note] 
+> This article provides steps for how to delete personal data from the device or service and can be used to support your obligations under the GDPR. If you’re looking for general info about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
 The GDPR obligations include discovering what personal data you hold and where it resides, controlling how your users access and use data. The capabilities available today in Microsoft Identity Manager can help you on your journey to searching and reducing risks to achieving compliance with the GDPR. A key requirement of the GDPR is protecting personal data.
 
 ## Searching for and identifying personal data
@@ -100,4 +103,4 @@ HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
 
 ## Next Steps 
 
-- [Service Trust Portal](https://servicetrust.microsoft.com)
+- [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
