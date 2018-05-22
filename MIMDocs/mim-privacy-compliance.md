@@ -91,11 +91,11 @@ Certificate management service search is built into the UI. The administrator wi
 Because the data related to entities in MIM is derived from multiple sources, most data is stored in the Synchronization Service database. For this reason, you should export object-related data from MIM Sync or you can determine the owner of this data.
 
 ### Synchronization Service
-Synchronization services for exporting data simply select the data from the search UI and copy and paste into a csv or preferred format. Another way to export this data is to create a File-based MA to drop current data needed about a flagged user of interest. An exmaple of using file-based MA can be found [here].(https://blogs.msdn.microsoft.com/connector_space/2016/11/17/management-agent-configuration-part-4-delimited-text-file-management-agent/).
+Synchronization services for exporting data simply select the data from the search UI and copy and paste into a csv or preferred format. Another way to export this data is to create a File-based MA to drop current data needed about a flagged user of interest. An exmaple of using file-based MA can be found [here](https://blogs.msdn.microsoft.com/connector_space/2016/11/17/management-agent-configuration-part-4-delimited-text-file-management-agent/).
 
 
 ### Service and Portal / PAM
-Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here].(https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) and pipe it to [csv].(https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6)
+Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) and pipe it to [csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6).
 
 PAM can use the same syntax above or you can use the [MIMPAM Module](https://docs.microsoft.com/en-us/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
 
