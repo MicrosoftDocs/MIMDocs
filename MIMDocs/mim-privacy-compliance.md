@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: davidste
 manager: mbaldiwn
-ms.date: 05/21/2018
+ms.date: 05/22/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
