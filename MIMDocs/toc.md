@@ -12,6 +12,7 @@
 ## [Plan your PAM deployment](./pam/environment-overview.md)
 # [Deploy and Use](microsoft-identity-manager-deploy.md)
 ## [Deprecated features](microsoft-identity-manager-2016-deprecated-features.md)
+## [Data handling](mim-privacy-compliance.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
 ### [Server setup: Windows Server](prepare-server-ws2016.md)
