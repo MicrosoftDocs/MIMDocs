@@ -82,4 +82,4 @@ For PRIVDC:
 For PAMSRV:
 
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
-- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) or [SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms143506(v=sql.120).aspx)
+- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) or [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

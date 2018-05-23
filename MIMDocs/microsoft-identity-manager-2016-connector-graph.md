@@ -31,7 +31,7 @@ B2B account lifecycle management
 
 The initial scenario in preview for the Microsoft Identity Manager management agent for Microsoft Graph (preview) is external user AD account lifecycle
 management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
+Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 proxy or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes
 
 Additional scenarios may be added in the future and [Documented here](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
@@ -203,7 +203,7 @@ expired.”:
 Picture 7. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, the access token expires after 1 hour. To increase expiration time, please see [this article](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-configurable-token-lifetimes).
+Azure side. By default, the access token expires after 1 hour. To increase expiration time, please see [this article](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 

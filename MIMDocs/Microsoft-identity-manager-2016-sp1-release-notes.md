@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
