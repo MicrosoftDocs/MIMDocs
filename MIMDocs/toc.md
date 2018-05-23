@@ -6,6 +6,7 @@
 ## [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)
 # [Plan and Design](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Supported platforms](microsoft-identity-manager-2016-supported-platforms.md)
+## [Supported Languages](microsoft-identity-manager-2016-language-support.md)
 ## [Connect to directories](supported-management-agents.md)
 ## [Capacity planning](capacity-planning-guide.md)
 ## [Deployment topology](topology-considerations.md)
