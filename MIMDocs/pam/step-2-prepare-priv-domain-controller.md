@@ -306,7 +306,7 @@ On another new virtual machine with no software installed, install Windows 8.1 E
 
 4. Using the Control Panel, domain join the PRIVWKSTN computer to the priv.contoso.local domain. This will require providing the PRIV domain administrator credentials. When this completes, restart the computer PRIVWKSTN.
 
-If you want more details, see [securing privileged access workstations](https://technet.microsoft.com/en-us/library/mt634654.aspx).
+If you want more details, see [securing privileged access workstations](https://technet.microsoft.com/library/mt634654.aspx).
 
 In the next step, you will prepare a PAM server.
 

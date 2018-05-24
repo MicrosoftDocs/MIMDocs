@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: BHOLD SP1 Installation | Microsoft Docs
@@ -108,7 +108,7 @@ After editing and saving the file, run the iisreset command to reset the IIS ser
 
 ## Upgrading BHOLD Suite
 
-You cannot upgrade an existing BHOLD Suite installation. Instead, you must uninstall an existing BHOLD Suite installation before you can update BHOLD modules. If you have an existing BHOLD role model, you can upgrade the BHOLD database and use it when you install the updated BHOLD Core module. For more information, see [Replacing BHOLD Suite with BHOLD Suite SP1](https://technet.microsoft.com/en-us/library/jj874043(v=ws.10).aspx).
+You cannot upgrade an existing BHOLD Suite installation. Instead, you must uninstall an existing BHOLD Suite installation before you can update BHOLD modules. If you have an existing BHOLD role model, you can upgrade the BHOLD database and use it when you install the updated BHOLD Core module. For more information, see [Replacing BHOLD Suite with BHOLD Suite SP1](https://technet.microsoft.com/library/jj874043(v=ws.10).aspx).
 
 
 ## Next steps
