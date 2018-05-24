@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Working with the Self-Service Password Reset portal | Microsoft Docs
@@ -71,7 +71,7 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 ### Register your multi-factor authentication provider in Azure
 
-1.  Create an [MFA provider](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Create an [MFA provider](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Open a support case and request the direct SDK for ASP.net 2.0 C#. The SDK will only be provided to current users of MIM with MFA because the direct SDK has been deprecated. New customers should adopt the next version of MIM that will integrate with MFA server.
 
