@@ -604,9 +604,9 @@ In this step, we will install and configure the FIM CM CA modules on the certifi
 
 6. In the **contoso-CORPCA-CA Properties** dialog box, click **OK**.
 
-7. Right-click **contoso-CORPCA-CA***,* point to **All Tasks**, and then click **Stop Service**. Wait until Active Directory Certificate Services stops.
+7. Right-click **contoso-CORPCA-CA** *,* point to **All Tasks**, and then click **Stop Service**. Wait until Active Directory Certificate Services stops.
 
-8. Right-click **contoso-CORPCA-CA***,* point to **All Tasks**, and then click **Start Service**.
+8. Right-click **contoso-CORPCA-CA** *,* point to **All Tasks**, and then click **Start Service**.
 
 9. Minimize the **Certification Authority** console.
 
@@ -682,11 +682,11 @@ In this step, we will install and configure the FIM CM CA modules on the certifi
 
 6. In the **contoso-CORPCA-CA Properties** dialog box, click **OK**.
 
-7. Right-click **contoso-CORPCA-CA***,* point to **All Tasks**, and then click **Stop Service**.
+7. Right-click **contoso-CORPCA-CA** *,* point to **All Tasks**, and then click **Stop Service**.
 
 8. Wait until Active Directory Certificate Services stops.
 
-9. Right-click **contoso-CORPCA-CA***,* point to **All Tasks**, and then click **Start Service**.
+9. Right-click **contoso-CORPCA-CA** *,* point to **All Tasks**, and then click **Start Service**.
 
 10. Close the **Certification Authority** console.
 
