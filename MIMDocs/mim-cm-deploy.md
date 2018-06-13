@@ -79,13 +79,13 @@ The process of extending the schema is straightforward but must be approached wi
     ![diagram](media/mim-cm-deploy/image005.png)
 
 3. Run the script resourceForestModifySchema.vbs single Forest scenario. For the Resource forest scenario run the scripts:
-    - DomainA – Users located (userForestModifySchema.vbs)
-    - ResourceForestB – Location of CM installation (resourceForestModifySchema.vbs).
+   - DomainA – Users located (userForestModifySchema.vbs)
+   - ResourceForestB – Location of CM installation (resourceForestModifySchema.vbs).
 
-    >[!NOTE]
-    >Schema changes are a one way operation and require a forest recovery to roll back so make sure you have necessary backups. For details on the changes made to the schema by performing this operation review the article [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
+     >[!NOTE]
+     >Schema changes are a one way operation and require a forest recovery to roll back so make sure you have necessary backups. For details on the changes made to the schema by performing this operation review the article [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
 
-    ![diagram](media/mim-cm-deploy/image007.png)
+     ![diagram](media/mim-cm-deploy/image007.png)
 
 4. Run the script and you should receive a success message once that the script completes.
 
@@ -354,7 +354,6 @@ The MIMCMWebAgent account will be running the MIM CM portal. By default in IIS a
 SETSPN -S http/cm.contoso.com contoso\MIMCMWebAgent
 #Delegation for certificate authority
 Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo"="rpcss/CORPCA","rpcss/CORPCA.contoso.com"}
-
 ```
 
 **Updating IIS on CORPCM**
@@ -367,7 +366,6 @@ add-pssnapin WebAdministration
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name enabled -Value $true
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useKernelMode -Value $false
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useAppPoolCredentials -Value $true
-
 ```
 
 >[!NOTE]
@@ -464,10 +462,10 @@ Before logging in to CORPCM please add MIMINSTALL to **domain Admins, Schema Adm
 
    - Use an existing user: **Enabled**
 
-    >[!NOTE]
-    >We created these accounts earlier. Make sure that the procedures in step 8 are repeated for all six agent account tabs.
+     >[!NOTE]
+     >We created these accounts earlier. Make sure that the procedures in step 8 are repeated for all six agent account tabs.
 
-    ![MIM CM accounts](media/mim-cm-deploy/image030.png)
+     ![MIM CM accounts](media/mim-cm-deploy/image030.png)
 
 10. When all agent account information is complete, click **OK**.
 
@@ -672,7 +670,7 @@ In this step, we will install and configure the FIM CM CA modules on the certifi
     - In the Certificate dialog box, right-click the **Please specify hex-encoded certificate hash** box, and then click **Paste**.
 
     - In the **Certificate** dialog box, click **OK**.
-    
+
         >[!Note]
         >If the **OK** button is not enabled, you accidentally included a hidden character in the thumbprint string when you copied the thumbprint from the clmAgent certificate. Repeat all steps starting from **Task 4: Copy the MIMCMAgent Certificate’s Thumbprint to Windows Clipboard** in this exercise.
 
@@ -740,7 +738,7 @@ First Steps: **Configuring Service Connection Point and Target Group Permissions
 6. In the **Permission Entry for Contoso** dialog box, in the **Apply to** list, select **Descendant User objects** and then enable the **Allow** check box for the following **Permissions**:
 
     - **Read all properties**
-    
+
     - **Read permissions**
 
     - **FIM CM Audit**

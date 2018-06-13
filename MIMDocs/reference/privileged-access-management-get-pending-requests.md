@@ -39,6 +39,7 @@ Method  |Request URL
 GET     |/api/pamresources/pamrequeststoapprove
 
 ### Query parameters
+
 Parameter | Description
 ----------|--------------
 $filter | Optional. Specify any of the pending PAM request properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API service details](privileged-access-management-rest-api-service-details.md#filtering).

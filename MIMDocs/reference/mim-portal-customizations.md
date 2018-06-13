@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager 2016 portal customizations | Microsoft Docs

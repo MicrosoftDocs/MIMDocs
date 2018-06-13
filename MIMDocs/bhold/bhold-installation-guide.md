@@ -28,8 +28,8 @@ Microsoft® BHOLD Suite Service Pack 1 (SP1) is a collection of applications tha
 - BHOLD Attestation
 
 
->[!NOTE]
-**Applies To**: Microsoft Identity Manager 2016 SP1
+> [!NOTE]
+> **Applies To**: Microsoft Identity Manager 2016 SP1
 
 ## What this document covers
 
@@ -69,8 +69,8 @@ Installing BHOLD Core and FIM on separate servers provides greater performance a
 
 ![Dual server architecture](media/bhold-installation-guide/dual.png)
 
->[!IMPORTANT]
-The reporting feature of the BHOLD FIM Integration module requires the BHOLD and FIM databases to be installed on the same SQL Server instance, and the BHOLD service account must have access rights to the FIM Service database.
+> [!IMPORTANT]
+> The reporting feature of the BHOLD FIM Integration module requires the BHOLD and FIM databases to be installed on the same SQL Server instance, and the BHOLD service account must have access rights to the FIM Service database.
 
 ### Two-tier architecture
 

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Capacity planning guide | Microsoft Docs

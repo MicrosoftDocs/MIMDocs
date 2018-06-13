@@ -26,8 +26,8 @@ ms.suite: ems
 ---
 # Step 1 - Prepare the host and the CORP domain
 
->[!div class="step-by-step"]
-[Step 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Step 2 »](step-2-prepare-priv-domain-controller.md)
 
 In this step, you will prepare to host the bastion environment. If necessary, you'll also create a domain controller and a member workstation in a new domain and forest (the *CORP* forest) with identities to be managed by the bastion environment. This CORP forest simulates an existing forest that has resources to be managed. This document includes an example resource to be protected, a file share.
 
@@ -62,15 +62,15 @@ In this section, you will add the Active Directory Domain Services (AD DS), DNS 
 
 2. Type the following commands.
 
-  ```PowoerShell
-  import-module ServerManager
+   ```PowoerShell
+   import-module ServerManager
 
-  Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
+   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
 
-  Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
-  ```
+   Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
+   ```
 
-  This will prompt for a Safe Mode Administrator Password to use. Note that warning messages for DNS delegation and cryptography settings will appear. These are normal.
+   This will prompt for a Safe Mode Administrator Password to use. Note that warning messages for DNS delegation and cryptography settings will appear. These are normal.
 
 3. After the forest creation is complete, sign out. The server will restart automatically.
 
@@ -86,11 +86,11 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 2. Type the following commands, but replace "CONTOSO" with the NetBIOS name of your domain.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
-  ```
+   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
+   ```
 
 In some cases the group may already exist - this is normal if the domain was also used in AD migration scenarios.
 
@@ -107,21 +107,21 @@ We're going to create a security group named *CorpAdmins* and a user named *Jen*
 
 2. Type the following commands. Replace the password 'Pass@word1' with a different password string.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
+   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
 
-  New-ADUser –SamAccountName Jen –name Jen
+   New-ADUser –SamAccountName Jen –name Jen
 
-  Add-ADGroupMember –identity CorpAdmins –Members Jen
+   Add-ADGroupMember –identity CorpAdmins –Members Jen
 
-  $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  Set-ADAccountPassword –identity Jen –NewPassword $jp
+   Set-ADAccountPassword –identity Jen –NewPassword $jp
 
-  Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
-  ```
+   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
+   ```
 
 ### Configure auditing
 
@@ -145,9 +145,9 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 8. Apply the audit settings by launching a PowerShell window and typing:
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+   ```cmd
+   gpupdate /force /target:computer
+   ```
 
 The message **Computer Policy update has completed successfully** should appear after a few minutes.
 
@@ -159,11 +159,11 @@ In this section you will configure the registry settings that are needed for sID
 
 2. Type the following commands to configure the source domain to permit remote procedure call (RPC) access to the security accounts manager (SAM) database.
 
-  ```PowerShell
-  New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
+   ```PowerShell
+   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
-  Restart-Computer
-  ```
+   Restart-Computer
+   ```
 
 This will restart the domain controller, CORPDC. For further information on this registry setting, see [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](http://support.microsoft.com/kb/322970).
 
@@ -198,21 +198,21 @@ You will need a resource for demonstrating the security group-based access contr
 
 4. Type the following commands.
 
-  ```PowerShell
-  mkdir c:\corpfs
+   ```PowerShell
+   mkdir c:\corpfs
 
-  New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
+   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
 
-  $acl = Get-Acl c:\corpfs
+   $acl = Get-Acl c:\corpfs
 
-  $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
+   $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
 
-  $acl.SetAccessRule($car)
+   $acl.SetAccessRule($car)
 
-  Set-Acl c:\corpfs $acl
-  ```
+   Set-Acl c:\corpfs $acl
+   ```
 
 In the next step, you will prepare the PRIV domain controller.
 
->[!div class="step-by-step"]
-[Step 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Step 2 »](step-2-prepare-priv-domain-controller.md)

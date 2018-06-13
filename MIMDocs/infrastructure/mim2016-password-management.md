@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager 2016 Password Management| Microsoft Docs
@@ -87,8 +87,8 @@ domain controller. When the password change request is received and
 authenticated, it is processed by MIM and propagated to the appropriate
 management agents.
 
->[!IMPORTANT]
-Bi-directional password synchronization is not supported by MIM. Configuring bi-directional password synchronization can create a loop, which will consume server resources and have a potentially negative effect on both Active Directory and MIM.
+> [!IMPORTANT]
+> Bi-directional password synchronization is not supported by MIM. Configuring bi-directional password synchronization can create a loop, which will consume server resources and have a potentially negative effect on both Active Directory and MIM.
 
 The PCNS runs on each Active Directory domain controller. The systems that
 receive the password notifications are known as targets. Your MIM server must be

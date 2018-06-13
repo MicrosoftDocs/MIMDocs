@@ -39,7 +39,7 @@ Before you begin to install the BHOLD Analytics module, you need to be prepared 
 
 To install the BHOLD Analytics module, log on as a member of the Domain Admins group, download the following file and run it as administrator on the server that you intend to install the BHOLD Analytics module on:
 
-- BholdAnalytics*\<Version\>*\_Release.msi
+- BholdAnalytics<em>\<Version\></em>\_Release.msi
 
 Replace *\<Version\>* with the version number of the BHOLD Analytics release that you are installing.
 

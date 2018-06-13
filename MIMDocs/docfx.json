@@ -11,20 +11,20 @@
           "GetStarted/**",
           "DeployUse/**",
           "PlanDesign/**",
-          "Troubleshoot/**" 
+          "Troubleshoot/**"
         ]
       }
     ],
     "resource": [
-        {
-          "files": [
-          "**/images/**", 
+      {
+        "files": [
+          "**/images/**",
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
           "**/*.bmp",
           "**/*.html"
-          ],
+        ],
         "exclude": [
           "**/obj/**",
           "_themes/**",
@@ -32,7 +32,7 @@
           "GetStarted/**",
           "DeployUse/**",
           "PlanDesign/**",
-          "Troubleshoot/**" 
+          "Troubleshoot/**"
         ]
       }
     ],
@@ -41,6 +41,7 @@
     "globalMetadata": {
       "layout": "Conceptual",
       "breadcrumb_path": "/enterprise-mobility/toc.json"
-    }
+    },
+    "markdownEngineName": "markdig"
   }
 }

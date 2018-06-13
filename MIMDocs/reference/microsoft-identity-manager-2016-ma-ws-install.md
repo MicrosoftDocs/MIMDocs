@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: MIM Install the Web Service Cofiguration Tool | Microsoft Docs

@@ -73,5 +73,5 @@ Before you proceed update teh PAMDeploymentConfig.xml and place the updated copy
 |  CORPClient | <PRIV>\PRIV.pamRequestor user and in the case of PRIVOnly : <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
 
 
->[!div class="step-by-step"]
-[Start »](sp1-step1-configuring-priv-domain.md)
+> [!div class="step-by-step"]
+> [Start »](sp1-step1-configuring-priv-domain.md)

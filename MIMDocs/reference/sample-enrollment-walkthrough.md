@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Sample enrollment walkthrough | Microsoft Docs

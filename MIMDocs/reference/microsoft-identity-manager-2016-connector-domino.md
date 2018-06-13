@@ -144,8 +144,8 @@ The **Domino Server Time Zone** parameter defines the location of your Domino Se
 
 This configuration option is required to support **delta import** operations because it enables the synchronization service determine changes between the last two imports.
 
->[!Note]
-Starting in the March 2017 update the Global parameters screen includes the option to delete the user's mail database during the user's deletion.
+> [!Note]
+> Starting in the March 2017 update the Global parameters screen includes the option to delete the user's mail database during the user's deletion.
 
 ![Delete user's mailbox](./media/microsoft-identity-manager-2016-connector-domino/AdminP.png)
 
@@ -187,7 +187,7 @@ In a large Domino implementation, it is possible that multiple objects have the 
 If the option **Use AdminP for updating references** is unselected, then export of reference attributes, such as member, is a direct call and does not use the AdminP process. Only use this option when AdminP has not been configured to maintain referential integrity.
 
 #### Routing Information
-In Domino, it is possible that a reference attribute has routing information embedded as a suffix to the DN. For example, the member attribute in a group could contain **CN=example/organization@ABC**. The suffix @ABC is the routing information. The routing information is used by Domino to send emails to the correct Domino system, which could be a system in a different organization. In the Routing Information field, you can specify the routing suffixes used within the organization in scope of the Connector. If one of these values is found as a suffix in a reference attribute, the routing information is removed from the reference. If the routing suffix on a reference value cannot be matched to one of those values specified, a \_Contact object is created. These \_Contact objects are created with **RO=@<RoutingSuffix>** inserted into the DN. For these \_Contact objects the following attributes are also added to allow joining to a real object if necessary: \_routingName, \_contactName, \_displayName, and UniversalID.
+In Domino, it is possible that a reference attribute has routing information embedded as a suffix to the DN. For example, the member attribute in a group could contain <strong>CN=example/organization@ABC</strong>. The suffix @ABC is the routing information. The routing information is used by Domino to send emails to the correct Domino system, which could be a system in a different organization. In the Routing Information field, you can specify the routing suffixes used within the organization in scope of the Connector. If one of these values is found as a suffix in a reference attribute, the routing information is removed from the reference. If the routing suffix on a reference value cannot be matched to one of those values specified, a \_Contact object is created. These \_Contact objects are created with **RO=@<RoutingSuffix>** inserted into the DN. For these \_Contact objects the following attributes are also added to allow joining to a real object if necessary: \_routingName, \_contactName, \_displayName, and UniversalID.
 
 #### Additional address books
 If you do not have **directory assistance** installed, which provides the name of secondary address books, then you can manually enter these address books.

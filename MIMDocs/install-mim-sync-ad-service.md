@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Use Microsoft Identity Manager Synchronize with AD | Microsoft Docs
@@ -27,14 +27,14 @@ ms.suite: ems
 
 # Install MIM 2016: Synchronize Active Directory and MIM Service
 
->[!div class="step-by-step"]
-[« MIM Service and Portal](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« MIM Service and Portal](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **mimservername**
 > - Domain name - **contoso**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 
 By default, MIM Synchronization Service (Sync) does not have any connectors configured.  A typical first step is to use MIM Sync to populate the MIM Service database with existing Active Directory accounts. For this, you will use the MIM Sync Service application.
 
@@ -46,7 +46,7 @@ When you configure a MIM management agent, you need to specify a user account. T
 > [!NOTE]
 > The account you use for your MIM management agent must be the same account as the one you have specified during the installation of MIM Service.
 
-###To create the MIM MA
+### To create the MIM MA
 
 1.  Open the Synchronization Service Manager.
 
@@ -436,5 +436,5 @@ Follow these steps to run each of the three run profiles.
     - Select the run profile you want to run from the **Run profiles** list.
     - Click **OK** to start the run profile.
 
->[!div class="step-by-step"]
-[« MIM Service and Portal](install-mim-service-portal.md)
+> [!div class="step-by-step"]
+> [« MIM Service and Portal](install-mim-service-portal.md)

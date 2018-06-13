@@ -1,4 +1,4 @@
-﻿---
+---
 title: Step 8 PAM deployment verification
 description: The scripted deployment of PAM includes verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
 keywords:
@@ -25,9 +25,9 @@ ms.suite: ems
 
 # Step 8 Pam deployment verification
 
->[!div class="step-by-step"]
-[« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Addendum »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Addendum »](sp1-pam-deployment-addendum.md)
 
 The Deployment package comes with verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
 To use the Deployment Verification, modify the PAMDeploymentConfig.xml section called <PamValidation/> .
@@ -82,6 +82,6 @@ From the PowerShell window, type:
   Initially the user will not have access to the resource. After the user is Just-In-Time added to the role, the user is granted access. Once the request duration expires, the user again will not have access.
   The script uses the default (11 minutes) for the request to expire.
 
->[!div class="step-by-step"]
-[« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Addendum »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Addendum »](sp1-pam-deployment-addendum.md)

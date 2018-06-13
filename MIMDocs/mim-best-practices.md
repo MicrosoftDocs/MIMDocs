@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager 2016 Best Practices| Microsoft Docs
@@ -22,8 +22,8 @@ ms.assetid:
 This topic describes the best practices for deploying and operating Microsoft Identity Manager 2016 (MIM)
 
 ## SQL setup
->[!NOTE]
-The following recommendations for setting up a server running SQL presume a SQL instance dedicated to the FIMService and a SQL instance dedicated to the FIMSynchronizationService database. If you are running the FIMService in a consolidated environment, you will have to make adjustments appropriate for your configuration.
+> [!NOTE]
+> The following recommendations for setting up a server running SQL presume a SQL instance dedicated to the FIMService and a SQL instance dedicated to the FIMSynchronizationService database. If you are running the FIMService in a consolidated environment, you will have to make adjustments appropriate for your configuration.
 
 Configuration of the Structured Query Language (SQL) server is critical to optimal system performance. Achieving optimum MIM performance in large-scale implementations depends on the application of best practices for a server running SQL. For more information, see the following topics about SQL best practices:
 
@@ -71,40 +71,40 @@ It is important to understand your recovery model’s disk requirements. Simple 
 
 Depending on how much memory you have on your SQL server and if you share the SQL server with other services (that is, MIM 2016 Service and MIM 2016 Synchronization Service), you might want to restrict the memory consumption of SQL. You can do this through the following steps.
 
-1.  Start SQL Server Enterprise Manager.
+1. Start SQL Server Enterprise Manager.
 
-2.  Select New Query.
+2. Select New Query.
 
-3.  Run the following query:
+3. Run the following query:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'show advanced options', 1
+   EXEC sp_configure 'show advanced options', 1
 
-  RECONFIGURE WITH OVERRIDE
+   RECONFIGURE WITH OVERRIDE
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
-  WITH OVERRIDE
-  ```
+   EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
+   WITH OVERRIDE
+   ```
 
-  This example reconfigures the SQL server to use no more than 12 gigabytes (GB) of memory.
+   This example reconfigures the SQL server to use no more than 12 gigabytes (GB) of memory.
 
-4.  Verify the setting by using the following query:
+4. Verify the setting by using the following query:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)'--- verify the setting
+   EXEC sp_configure 'max server memory (MB)'--- verify the setting
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'show advanced options', 0
+   EXEC sp_configure 'show advanced options', 0
 
-  RECONFIGURE WITH OVERRIDE
-  ```
+   RECONFIGURE WITH OVERRIDE
+   ```
 
 ### Backup and recovery configuration
 
@@ -170,11 +170,11 @@ We recommend that you disable Microsoft Office SharePoint® indexing. There are 
 
 This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It is important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. This is a one-time operation and is not a continuous synchronization.
 
->[!NOTE]
-For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
-
->[!IMPORTANT]
-Ensure that you have applied the best practices covered in the SQL setup section of this guide. 
+> [!NOTE]
+> For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
+> 
+> [!IMPORTANT]
+> Ensure that you have applied the best practices covered in the SQL setup section of this guide. 
 
 ### Step 1: Configure the SQL server for initial data load
 The initial load of data can be a lengthy process. When you plan to initially load a lot of data, you can shorten the time it takes to populate the database by temporarily turning off full-text search and turning it on again after the export on the MIM 2016 management agent (FIM MA) has completed.
@@ -192,8 +192,8 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
->[!IMPORTANT]
-Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
+> [!IMPORTANT]
+> Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
 
 ### Step 2: Apply the minimum necessary MIM configuration during the load process
 
@@ -294,8 +294,8 @@ The service accounts should not be a member of the local administrators group.
 
 The FIM Synchronization Service service account should not be a member of the security groups used to control access to FIM Synchronization Service (groups starting with FIMSync, for example, FIMSyncAdmins, and so on).
 
->[!IMPORTANT]
- If you select the options to use the same account for both service accounts and you separate the FIM Service and the FIM Synchronization Service, then you cannot set Deny access to this computer from the network on the mms Synchronization Service server. If access is denied that would prohibit the FIM Service from contacting the FIM Synchronization Service to change configuration and manage passwords.
+> [!IMPORTANT]
+>  If you select the options to use the same account for both service accounts and you separate the FIM Service and the FIM Synchronization Service, then you cannot set Deny access to this computer from the network on the mms Synchronization Service server. If access is denied that would prohibit the FIM Service from contacting the FIM Synchronization Service to change configuration and manage passwords.
 
 ### Password reset deployed to kiosk-like computers should set local security to clear virtual memory pagefile
 
@@ -390,7 +390,7 @@ By default MIM 2016 purges expired system objects, which includes completed requ
 
 MIM provides two types of MPRs, Request and Set Transition:
 
--  Request MPR (RMPR)
+- Request MPR (RMPR)
 
   - Used to define the access control policy (authentication, authorization, and action) for Create, Read, Update, or Delete (CRUD) operations against resources.
   - Applied when a CRUD operation is issued against a target resource in MIM.
@@ -439,8 +439,8 @@ In MIM, permissions are defined as a positive assertion. Because MIM does not su
 
 Use Set Transition MPRs (TMPRs) instead of RMPRs to define custom entitlements. TMPRs provide a state-based model to assign or remove entitlements based on the membership in the defined Transition Sets, or roles, and the accompanying workflow activities. TMPRs should always be defined in pairs, one for resources transitioning in, and one for resources transitioning out. In addition, each transition MPR should contain separate workflows for provisioning and deprovisioning activities.
 
->[!NOTE]
-Any deprovisioning workflow should ensure that the Run On Policy Update attribute is set to true.
+> [!NOTE]
+> Any deprovisioning workflow should ensure that the Run On Policy Update attribute is set to true.
 
 #### Enable the Set Transition In MPR last
 

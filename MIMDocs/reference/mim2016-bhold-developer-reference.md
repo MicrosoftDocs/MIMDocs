@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 # Moved from https://msdn.microsoft.com/en-us/library/jj853041(v=vs.100).aspx
 
@@ -108,7 +108,7 @@ namespace bhold_console
                     }
                 }
             }
-            
+
             System.Console.WriteLine("The Organizational Unit Name is: " + orgname);
 
         }
@@ -189,7 +189,7 @@ namespace Sample
             }
             System.Console.WriteLine( "Add user #3 to role #44, result: {0}", bholdService.ExecuteXml(roleAddUser("44", "3")) );
             System.Console.WriteLine("Add user D1 to role 'MR-OU2 No Users', result: {0}", bholdService.ExecuteXml(roleAddUser("MR-OU2 No Users", "D1")));
-            
+
         }
 
         private static System.Xml.XmlNode roleAddUser(string roleId, string userId)
@@ -265,20 +265,21 @@ A new function in the menu presents all the custom functions that can be execute
 ## Command script
 The command script contains a list of functions that are executed by the BHOLD system. The list is written in an XML document that conforms to the following definitions:
 
-| Command script     | `<functions>functions</functions>` |
-|---|---|
-| functions          | function {function} |
-| function           | <function name="functionName" functionParameters [return] (/> | > parameterList </ function>) |
-| functionName       | A valid function name as described in the following sections. |
-| functionParameters | { functionParameter } |
-| functionParameter  | parameterName = "parameterValue" |
-| parameterName      | A valid parameter name. |
-| parameterValue     | @variable@ \| value |
-| value              | A valid parameter value. |
-| parameterList      | <parameters> {parameterItem}  </parameters> |
-| parameterItem      | <parameter name="parameterName"> parameterValue </parameter> |
-| return             | return="@variable@" |
-| variable           | A custom variable name. |
+
+|   Command script   |              `<functions>functions</functions>`               |
+|--------------------|---------------------------------------------------------------|
+|     functions      |                      function {function}                      |
+|      function      | <function name="functionName" functionParameters [return] (/> |
+|    functionName    | A valid function name as described in the following sections. |
+| functionParameters |                     { functionParameter }                     |
+| functionParameter  |               parameterName = "parameterValue"                |
+|   parameterName    |                    A valid parameter name.                    |
+|   parameterValue   |                      @variable@ \| value                      |
+|       value        |                   A valid parameter value.                    |
+|   parameterList    |          <parameters> {parameterItem}  </parameters>          |
+|   parameterItem    | <parameter name="parameterName"> parameterValue </parameter>  |
+|       return       |                      return="@variable@"                      |
+|      variable      |                    A custom variable name.                    |
 
 XML has the following translations of special characters:
 
@@ -298,7 +299,7 @@ The following code shows an example of a valid command document with three funct
 <functions>
 
    <functionname="OrgUnitAdd" parentID="34" description="Acme Inc." orgtypeID="5" return="@UnitID@" />
-   
+
    <function name="UserAdd" description="John Doe" alias="jdoe" languageID="1" OrgUnitID="@UnitID@" />
 
    <function name="TaskAddFile" taskID="93" path="/customers/purchase">
@@ -322,12 +323,13 @@ The specified attribute rule can be linked to all possible attribute types.
 
 The RuleType cannot be changed with the "ABAattributeruletypeupdate" command. Requires that the description of the attribute by unique.
 
-| Arguments | Type |
-|---|---|
-| Description | Text |
-| RuleType | Specify the kind of attribute rule. Depending on the kind of the attribute rule type other arguments must be included. The following rule type values are valid:<ul><li>0: Regular expression (add argument "value").</li><li>1: Value (add arguments "operator" and "value").</li><li>2: List of values.</li><li>3: Range (add arguments "rangemin" and "rangemax").</li><li>4: Age (add arguments "operator" and "value").</li></ul> |
-| InvertResult | ```["0"|"1"|"N"|"Y"]``` |
-| AttributeTypeID | Text |
+
+|    Arguments    |                                                                                                                                                                                                                  Type                                                                                                                                                                                                                  |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   Description   |                                                                                                                                                                                                                  Text                                                                                                                                                                                                                  |
+|    RuleType     | Specify the kind of attribute rule. Depending on the kind of the attribute rule type other arguments must be included. The following rule type values are valid:<ul><li>0: Regular expression (add argument "value").</li><li>1: Value (add arguments "operator" and "value").</li><li>2: List of values.</li><li>3: Range (add arguments "rangemin" and "rangemax").</li><li>4: Age (add arguments "operator" and "value").</li></ul> |
+|  InvertResult   |                                                                                                                                                                                                               \`\`\`["0"                                                                                                                                                                                                               |
+| AttributeTypeID |                                                                                                                                                                                                                  Text                                                                                                                                                                                                                  |
 
 | Optional arguments | Type |
 |---|---|
@@ -368,15 +370,16 @@ Sets the value of an attribute type connected to object type. Requires that the 
 ### AttributeTypeAdd
 Inserts a new attribute type / property type.
 
-| Arguments | Type |
-|---|---|
-| DataTypeID       | Text |
-| Description (=Identity)| Text <br>**Note**: Reserved words cannot be used, including 'a', 'frm', 'id', 'usr', and 'bhold'. |
-| MaxLength        | Number in [1,..,255] |
-| ListOfValues (boolean) | ```["0"|"1"|"N"|"Y"]``` |
-| DefaultValue    | Text |
-| Return type     | Type |
-| AttributeTypeID | Text |
+
+|        Arguments        |                                               Type                                                |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+|       DataTypeID        |                                               Text                                                |
+| Description (=Identity) | Text <br>**Note**: Reserved words cannot be used, including 'a', 'frm', 'id', 'usr', and 'bhold'. |
+|        MaxLength        |                                       Number in [1,..,255]                                        |
+| ListOfValues (boolean)  |                                            \`\`\`["0"                                             |
+|      DefaultValue       |                                               Text                                                |
+|       Return type       |                                               Type                                                |
+|     AttributeTypeID     |                                               Text                                                |
 
 ### AttributeTypeSetAdd
 Inserts a new attribute type set. Requires that the description of an attribute type set is unique.
@@ -389,15 +392,16 @@ Inserts a new attribute type set. Requires that the description of an attribute 
 
 ### AttributeTypeSetAddAttributeType
 Inserts a new attribute type in an existing attribute type set. Requires that the descriptions of the attribute type set and attribute type are unique.
- 
-| Arguments | Type |
-|---|---|
-| AttributeTypeSetID | Text | 
-| AttributeTypeID | Text | 
-| Order | Number | 
-| LocationID | Text <br>**Note**: The location is either "group" or "single." | 
-| Mandatory | ```["0"|"1"|"N"|"Y"]``` | 
-| Return type | Type | 
+
+
+|     Arguments      |                              Type                              |
+|--------------------|----------------------------------------------------------------|
+| AttributeTypeSetID |                              Text                              |
+|  AttributeTypeID   |                              Text                              |
+|       Order        |                             Number                             |
+|     LocationID     | Text <br>**Note**: The location is either "group" or "single." |
+|     Mandatory      |                           \`\`\`["0"                           |
+|    Return type     |                              Type                              |
 
 ### ObjectTypeAddAttributeTypeSet
 Adds an attribute type set to an object type. Requires that the description of the object type and the attribute type set are unique. The object types are: System, OrgUnit, User, Task.
@@ -471,10 +475,11 @@ Creates a new role.
 ### roleaddOrgUnit
 Assigns a role to an organizational unit.
 
-| Arguments | Type |
-|---|---|
-| OrgUnitID | roleID | <!-- Confirm roleID is a Type rather than another argument -->
-| inheritThisRole | ‘true’ or ‘false’, indicates whether the role is proposed to underlying units. | 
+
+|    Arguments    |                                      Type                                      |
+|-----------------|--------------------------------------------------------------------------------|
+|    OrgUnitID    |                                     roleID                                     |
+| inheritThisRole | ‘true’ or ‘false’, indicates whether the role is proposed to underlying units. |
 
 ### roleaddrole
 Assigns a role as a subrole of another role.
@@ -794,7 +799,7 @@ This input script does not contain any commands for BHOLD. This is because this 
 ```
 <?xml version="1.0" encoding="utf-8" ?> 
 - <functions xmlns="http://tempuri.org/BscriptFunctions.xsd">
-  
+
   <function name="roleadduser" roleid="" userid="" /> 
   <function name="roledeleteuser" roleid="" userid="" /> 
   </functions>
