@@ -342,7 +342,7 @@ The following XML generates a sample Header Grouping. In the XML, the Header Gro
 #### Example: Content Grouping
 The following figure shows a sample Content Grouping:
 
-![Content Grouping](media\rcd-configuration-xml-reference/image007.jpg)
+![Content Grouping](media/rcd-configuration-xml-reference/image007.jpg)
 
 The following XML generates a sample Content Grouping. In the XML, the Content Grouping is the area with the caption text "Sample Content Grouping."
 
