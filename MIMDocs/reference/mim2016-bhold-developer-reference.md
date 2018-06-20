@@ -328,7 +328,7 @@ The RuleType cannot be changed with the "ABAattributeruletypeupdate" command. Re
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   Description   |                                                                                                                                                                                                                  Text                                                                                                                                                                                                                  |
 |    RuleType     | Specify the kind of attribute rule. Depending on the kind of the attribute rule type other arguments must be included. The following rule type values are valid:<ul><li>0: Regular expression (add argument "value").</li><li>1: Value (add arguments "operator" and "value").</li><li>2: List of values.</li><li>3: Range (add arguments "rangemin" and "rangemax").</li><li>4: Age (add arguments "operator" and "value").</li></ul> |
-|  InvertResult   | ```["0"\|"1"\|"N"\|"Y"]``` |
+|  InvertResult   | ```["0"|"1"|"N"|"Y"]``` |
 | AttributeTypeID |                                                                                                                                                                                                                  Text                                                                                                                                                                                                                  |
 
 | Optional arguments | Type |
@@ -376,7 +376,7 @@ Inserts a new attribute type / property type.
 |       DataTypeID        |                                               Text                                                |
 | Description (=Identity) | Text <br>**Note**: Reserved words cannot be used, including 'a', 'frm', 'id', 'usr', and 'bhold'. |
 |        MaxLength        |                                       Number in [1,..,255]                                        |
-| ListOfValues (boolean)  |                                          ```["0"\|"1"\|"N"\|"Y"]```                               |
+| ListOfValues (boolean)  |                                          ```["0"|"1"|"N"|"Y"]```                               |
 |      DefaultValue       |                                               Text                                                |
 |       Return type       |                                               Type                                                |
 |     AttributeTypeID     |                                               Text                                                |
@@ -400,7 +400,7 @@ Inserts a new attribute type in an existing attribute type set. Requires that th
 |  AttributeTypeID   |                              Text                              |
 |       Order        |                             Number                             |
 |     LocationID     | Text <br>**Note**: The location is either "group" or "single." |
-|     Mandatory      |                    ```["0"\|"1"\|"N"\|"Y"]```                  |
+|     Mandatory      |                    ```["0"|"1"|"N"|"Y"]```                  |
 |    Return type     |                              Type                              |
 
 ### ObjectTypeAddAttributeTypeSet
