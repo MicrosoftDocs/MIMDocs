@@ -24,8 +24,8 @@ The BHOLD Attestation module lets you designate reviewers and perform recurring 
 
 Before installing the BHOLD Attestation module, you must install the BHOLD Core module on the server on which you plan to install the BHOLD Attestation module. For information about installing the BHOLD Core module, see [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). Because the BHOLD Attestation module contacts sends email messages to users, your environment must have a Simple Mail Transfer Protocol (SMTP) email server, such as Microsoft Exchange Server.
 
->[!IMPORTANT]
-If you are installing both BHOLD Reporting and BHOLD Attestation, you must install BHOLD Reporting before installing BHOLD Attestation.
+> [!IMPORTANT]
+> If you are installing both BHOLD Reporting and BHOLD Attestation, you must install BHOLD Reporting before installing BHOLD Attestation.
 
 ## Before you begin
 
@@ -42,7 +42,7 @@ Before you begin to install the BHOLD Attestation module, you need to be prepare
 
 To install the BHOLD Attestation module, log on as a member of the Domain Admins group, download the following file and run it as administrator on the server that you intend to install the BHOLD Attestation module on:
 
-- BholdAttestation*\<Version\>*\_Release.msi
+- BholdAttestation<em>\<Version\></em>\_Release.msi
 
 Replace *\<Version\>* with the version number of the BHOLD Attestation release that you are installing.
 

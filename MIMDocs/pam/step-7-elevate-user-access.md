@@ -14,8 +14,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ---
 # Step 7 – Elevate a user’s access
 
->[!div class="step-by-step"]
-[« Step 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Step 6 ](step-6-transition-group-to-pam.md)
 
 
 This step demonstrates that a user can request access to a role via MIM.
@@ -100,5 +100,5 @@ Activate by requesting privileged access via the PAM sample portal.
 
 Once you have completed the steps in this walkthrough, you will have demonstrated a Privileged Access Management scenario, in which user privileges are elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. The decision of which security groups represent privileged roles is coordinated by the PAM administrator. Once access rights are migrated to the Privileged Access Management system, access that was previously possible with the original user account is now made possible only by signing in with a special privileged account, and made available upon request. As a result, group memberships for highly privileged groups are effective for a limited amount of time.
 
->[!div class="step-by-step"]
-[« Step 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Step 6 ](step-6-transition-group-to-pam.md)

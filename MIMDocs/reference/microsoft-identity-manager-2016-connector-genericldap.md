@@ -136,7 +136,7 @@ The connector tries to detect the options present on the server. If the options 
 ### Delta import
 Delta import is only available when a support directory has been detected. The following methods are currently used:
 
-* LDAP Accesslog. See [http://www.openldap.org/doc/admin24/overlays.html#Access Logging](http://www.openldap.org/doc/admin24/overlays.html#Access Logging)
+* LDAP Accesslog. See [http://www.openldap.org/doc/admin24/overlays.html#Access Logging](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
 * LDAP Changelog. See [http://tools.ietf.org/html/draft-good-ldap-changelog-04](http://tools.ietf.org/html/draft-good-ldap-changelog-04)
 * TimeStamp. For Novell/NetIQ eDirectory, the Connector uses last date/time to get created and updated objects. Novell/NetIQ eDirectory does not provide an equivalent means to retrieve deleted objects. This option can also be used if no other delta import method is active on the LDAP server. This option is not able to import deleted objects.
 * USNChanged. See: [https://msdn.microsoft.com/library/ms677627.aspx](https://msdn.microsoft.com/library/ms677627.aspx)
@@ -229,8 +229,8 @@ It is also possible to select which containers and OUs the Connector should impo
 
 When performing a search this is done across all containers in the partition. In cases where there are large numbers of containers this behavior leads to performance degradation.
 
->[!NOTE]
-Starting in the March 2017 update to the Generic LDAP connector searches can be limited in scope to only the selected containers. This can be done by selecting the checkbox 'Search only in selected containers' as shown in the image below.
+> [!NOTE]
+> Starting in the March 2017 update to the Generic LDAP connector searches can be limited in scope to only the selected containers. This can be done by selecting the checkbox 'Search only in selected containers' as shown in the image below.
 
 ![Search only selected containers](./media/microsoft-identity-manager-2016-connector-genericldap/partitions-only-selected-containers.png)
 

@@ -28,8 +28,8 @@ ms.suite: ems
 
 Privileged Access Management has no hardware requirements beyond those of the underlying software platforms. Just make sure you have sufficient memory or disk space, and network connectivity.
 
->[!IMPORTANT]
-This article provides the minimum requirements for a basic deployment. It is not intended to demonstrate performance, scalability, or high availability. It does not represent a recommended deployment topology for large enterprises or production environments.
+> [!IMPORTANT]
+> This article provides the minimum requirements for a basic deployment. It is not intended to demonstrate performance, scalability, or high availability. It does not represent a recommended deployment topology for large enterprises or production environments.
 
 ## Installing from software packages
 

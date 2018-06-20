@@ -85,7 +85,6 @@ POST /CertificateManagement/api/v1.0/smartcards HTTP/1.1
     "cardid":"bc88f13f-83ba-4037-8262-46eba1291c6e",
     "atr":"3b8d0180fba000000397425446590301c8"
 }
-
 ```
 
 ### Example: Response

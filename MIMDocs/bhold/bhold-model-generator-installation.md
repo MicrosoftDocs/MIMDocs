@@ -29,8 +29,8 @@ following:
 
 2. The Microsoft OLE DB Provider for Microsoft Jet must be installed. For more information see [this article](http://support.microsoft.com/kb/271908).
 
->[!WARNING]
-Do not install BHOLD Model Generator in your production network. BHOLD Model Generator is intended to be used offline in a staging environment to create a normalized role model that you can import into your enterprise role model. Running BHOLD Model Generator in your production network can result in loss of your existing role model.
+> [!WARNING]
+> Do not install BHOLD Model Generator in your production network. BHOLD Model Generator is intended to be used offline in a staging environment to create a normalized role model that you can import into your enterprise role model. Running BHOLD Model Generator in your production network can result in loss of your existing role model.
 
 ## Before you begin
 

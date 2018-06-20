@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Set up a domain for Microsoft Identity Manager 2016 | Microsoft Docs
@@ -27,8 +27,8 @@ ms.suite: ems
 
 # Set up a domain
 
->[!div class="step-by-step"]
-[Windows Server 2016 »](prepare-server-ws2016.md)
+> [!div class="step-by-step"]
+> [Windows Server 2016 »](prepare-server-ws2016.md)
 
 Microsoft Identity Manger (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.
 
@@ -45,7 +45,7 @@ All the components of your MIM deployment need their own identities in the domai
 > - MIM Service Server name - **corpservice**
 > - MIM Sync Server name - **corpsync**
 > - SQL Server name - **corpsql**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 
 1. Sign in to the domain controller as the domain administrator (*e. g. Contoso\Administrator*).
 
@@ -112,5 +112,5 @@ All the components of your MIM deployment need their own identities in the domai
 - passwordreset.contoso.com Point to corpservice physical ip address
 - passwordregistration.contoso.com Point to corpservice physical ip address
 
->[!div class="step-by-step"]
-[Windows Server 2016 »](prepare-server-ws2016.md)
+> [!div class="step-by-step"]
+> [Windows Server 2016 »](prepare-server-ws2016.md)

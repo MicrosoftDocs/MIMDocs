@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Deploy the password change notification service | Microsoft Docs

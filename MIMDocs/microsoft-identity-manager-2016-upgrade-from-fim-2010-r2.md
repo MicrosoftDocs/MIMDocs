@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Upgrade from FIM 2010 R2 to Microsoft Identity Manager 2016 | Microsoft Docs

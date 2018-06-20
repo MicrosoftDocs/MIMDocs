@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Overview of the generic Web Service connector | Microsoft Docs

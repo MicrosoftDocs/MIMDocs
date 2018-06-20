@@ -25,41 +25,41 @@ The Microsoft MIM Service and Portal Language Pack support the following languag
 > [!IMPORTANT]
 > The text in the SSPR add-in and portal will be localized, but the questions will not without additional work. You will need to create AuthN workflows (and accompanying sets and MPRs to target them) to target questions in each language to the target location.
 
-|Language|FIM(4.3.x.x)/MIM(4.4.xx)|MIM(4.5.x.x)
-|-----|-----|-----|
-|Bulgarian|bg-BG|bg|
-|Chinese (Simplified)|zh-CN|zh-hans|
-|Chinese (Taiwan)|zh-TW|zh-hant|
-|Croatian|hr-HR|hr|
-|Czech|cs-CZ|cs|
-|Danish|da-DK|da|
-|Dutch|nl-NL|nl|
-|Estonian|et-EE|et|
-|French|fr-FR|fr|
-|Finnish|fi-FI|fi|
-|German|de-DE|de|
-|Greek|el-GR|el|
-|Hindi|hi-IN|hi|
-|Hungarian|hu-HU|hu|
-|Italian|it-IT|it|
-|Japanese|ja-JP|ja|
-|Korean|ko-KR|ko|
-|Lithuanian|lt-LT|lt|
-|Latvian|lv-LV|lv|
-|Norwegian|nb-NO|nb-NO|
-|Polish|pl-PL|pl|
-|Portuguese (Portugal)|pt-PT|pt|
-|Portuguese (Brazil)|pt-BR|pt-BR|
-|Russian|ru-RU|ru||sv|
-|Romanian|ro-RO|ro|
-|Spanish|es-ES|es|
-|Slovak|sk-SK|sk|
-|Swedish|sv-SE|sv|
-|Slovenian|sl-SI|sl|
-|Serbian - Serbia |sr-latn-CS(Depricated)|sr-Latn-RS|
-|Thai|th-TH|th|
-|Turkish|tr-TR|tr|
-|Ukrainian|uk-UA|uk|
+|       Language        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
+|-----------------------|--------------------------|--------------|
+|       Bulgarian       |          bg-BG           |      bg      |
+| Chinese (Simplified)  |          zh-CN           |   zh-hans    |
+|   Chinese (Taiwan)    |          zh-TW           |   zh-hant    |
+|       Croatian        |          hr-HR           |      hr      |
+|         Czech         |          cs-CZ           |      cs      |
+|        Danish         |          da-DK           |      da      |
+|         Dutch         |          nl-NL           |      nl      |
+|       Estonian        |          et-EE           |      et      |
+|        French         |          fr-FR           |      fr      |
+|        Finnish        |          fi-FI           |      fi      |
+|        German         |          de-DE           |      de      |
+|         Greek         |          el-GR           |      el      |
+|         Hindi         |          hi-IN           |      hi      |
+|       Hungarian       |          hu-HU           |      hu      |
+|        Italian        |          it-IT           |      it      |
+|       Japanese        |          ja-JP           |      ja      |
+|        Korean         |          ko-KR           |      ko      |
+|      Lithuanian       |          lt-LT           |      lt      |
+|        Latvian        |          lv-LV           |      lv      |
+|       Norwegian       |          nb-NO           |    nb-NO     |
+|        Polish         |          pl-PL           |      pl      |
+| Portuguese (Portugal) |          pt-PT           |      pt      |
+|  Portuguese (Brazil)  |          pt-BR           |    pt-BR     |
+|        Russian        |          ru-RU           |      ru      |
+|       Romanian        |          ro-RO           |      ro      |
+|        Spanish        |          es-ES           |      es      |
+|        Slovak         |          sk-SK           |      sk      |
+|        Swedish        |          sv-SE           |      sv      |
+|       Slovenian       |          sl-SI           |      sl      |
+|   Serbian - Serbia    |  sr-latn-CS(Depricated)  |  sr-Latn-RS  |
+|         Thai          |          th-TH           |      th      |
+|        Turkish        |          tr-TR           |      tr      |
+|       Ukrainian       |          uk-UA           |      uk      |
 
 ## Certificate Management 
 The Microsoft Certificate Management  supports the following 9 languages. 

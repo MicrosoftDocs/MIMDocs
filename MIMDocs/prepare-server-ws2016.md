@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Configure Windows Server 2016 for MIM 2016 SP1 | Microsoft Docs
@@ -27,10 +27,10 @@ ms.suite: ems
 
 # Set up an identity management servers: Windows Server 2016
 
->[!div class="step-by-step"]
-[« Preparing a domain](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
-
+> [!div class="step-by-step"]
+> [« Preparing a domain](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)
+> 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -38,7 +38,7 @@ ms.suite: ems
 > - MIM Service Server name - **corpservice**
 > - MIM Sync Server name - **corpsync**
 > - SQL Server name - **corpsql**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 
 ## Join Windows Server 2016 to your domain
 
@@ -119,6 +119,6 @@ Set up the server security policy to allow the newly-created accounts to run as 
     iisreset /START
     ```
 
->[!div class="step-by-step"]  
-[« Preparing a domain](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
+> [!div class="step-by-step"]  
+> [« Preparing a domain](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Cancel, abandon, or complete a request | Microsoft Docs

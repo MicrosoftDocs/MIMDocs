@@ -20,9 +20,9 @@ ms.assetid:
 
 This article describes the deprecated features of Microsoft Identity Manager 2016 SP1. Where the feature is still present in Microsoft Identity Manager, it is still supported. Features are not recommended for new deployments, as they may be removed in a feature release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
 
->[!NOTE]
-Features and functionalities removed in the Microsoft Identity Manager SP1 are identified with **. <br>
-For more information on the support [lifecycle for Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+> [!NOTE]
+> Features and functionalities removed in the Microsoft Identity Manager SP1 are identified with **. <br>
+> For more information on the support [lifecycle for Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 
 ## BHOLD 
@@ -30,6 +30,7 @@ For more information on the support [lifecycle for Microsoft Identity Manager](h
 Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD will continue to be supported. Azure AD now provides [access reviews](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) which replace some of the BHOLD attestation campaign features.
 
 ## Certificate Management 
+
 | **Category**                | **Deprecated Feature**              | **Replacement and Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Management Agents | **FIM Certificate Management | FIM Certificate Management Agent has been removed in MIM 2016.                                                             |
@@ -52,8 +53,8 @@ Microsoft does not recommend customers start new deployments of the Microsoft BH
 | Management Agents           | Configure partition display name    | This feature will not be replaced. This option was only used to provide an alternative name for a partition in the WMI interfaces.                                                                                                                                                                       |
 | Run profiles                | Combined profiles                   | The combined profiles delta import/sync, full import/delta sync, and full import/sync will be removed. You should use run profiles with two steps instead. 
 
->[!NOTE]
-You should keep combined run profiles only in environments where the performance would be impacted by a large number of existing disconnectors.
+> [!NOTE]
+> You should keep combined run profiles only in environments where the performance would be impacted by a large number of existing disconnectors.
 
 
 | **Category**                | **Deprecated Feature**              | **Replacement and Comment**           |
