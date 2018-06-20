@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Configure SQL Server for Microsoft Identity Manager 2016 SP1 | Microsoft Docs
@@ -27,10 +27,10 @@ ms.suite: ems
 
 # Set up an identity management server: SQL Server 2016
 
->[!div class="step-by-step"]
-[« Windows Server 2016](prepare-server-ws2016.md)
-[SharePoint »](prepare-server-sharepoint.md)
-
+> [!div class="step-by-step"]
+> [« Windows Server 2016](prepare-server-ws2016.md)
+> [SharePoint »](prepare-server-sharepoint.md)
+> 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -38,7 +38,7 @@ ms.suite: ems
 > - MIM Service Server name - **corpservice**
 > - MIM Sync Server name - **corpsync**
 > - SQL Server name - **corpsql**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 
 ## Install **SQL Server 2016 Standard/Enterprise Edition**
 
@@ -54,7 +54,7 @@ ms.suite: ems
 More info SQL deployment accounts and services can be found [here](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017)
 > [!NOTE]
 > SSMS is no longer included in SQL 2016 downlaod details can be found [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)    ```
-
->[!div class="step-by-step"]  
-[« Windows Server 2016](prepare-server-ws2016.md)
-[SharePoint »](prepare-server-sharepoint.md)
+> 
+> [!div class="step-by-step"]  
+> [« Windows Server 2016](prepare-server-ws2016.md)
+> [SharePoint »](prepare-server-sharepoint.md)

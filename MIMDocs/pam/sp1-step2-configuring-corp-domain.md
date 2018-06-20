@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Step 2 Configuring the CORP domain
@@ -27,9 +27,9 @@ ms.suite: ems
 
 # Step 2 Configuring the CORP domain
 
->[!div class="step-by-step"]
-[« Step 1](sp1-step1-configuring-priv-domain.md)
-[Step 3 »](sp1-step3-installing-configuring-sql.md)
+> [!div class="step-by-step"]
+> [« Step 1](sp1-step1-configuring-priv-domain.md)
+> [Step 3 »](sp1-step3-installing-configuring-sql.md)
 
 Once the SIDs.txt is copied to the CORPDC **not required for PRIVOnly deployments**
 
@@ -39,6 +39,6 @@ Once the SIDs.txt is copied to the CORPDC **not required for PRIVOnly deployment
 4. .\PAMDeployment.ps1
 5. select Menu Option 2 (CORP Forest Configuration)
 
->[!div class="step-by-step"]
-[« Step 1](sp1-step1-configuring-priv-domain.md)
-[Step 3 »](sp1-step3-installing-configuring-sql.md)
+> [!div class="step-by-step"]
+> [« Step 1](sp1-step1-configuring-priv-domain.md)
+> [Step 3 »](sp1-step3-installing-configuring-sql.md)

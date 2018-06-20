@@ -39,6 +39,7 @@ Method  |Request URL
 GET     |/CertificateManagement/api/v1.0/profiletemplates/{id}/policy/workflow/{type}
 
 ### URL parameters
+
 Parameter| Description
 --------|-------------
 id| Required. The GUID corresponding to the profile template that the policy is to be extracted from.

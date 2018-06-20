@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Identity Manager BHOLD version history | Microsoft Docs

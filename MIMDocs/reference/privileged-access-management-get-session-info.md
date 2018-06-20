@@ -54,6 +54,7 @@ None.
 This section describes the response.
 
 ### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK

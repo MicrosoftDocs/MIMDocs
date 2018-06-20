@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: PAM REST API service details | Microsoft Docs
@@ -57,7 +57,7 @@ If the version is not specified in the request, the request is executed against 
 ## Security 
 Access to the API requires Integrated Windows Authentication (IWA). This should be configured manually in IIS before Microsoft Identity Manager (MIM) installation.
 
-HTTPS (TLS) is supported, but should be configured manually in IIS. For information, see: **Implement Secure Sockets Layer (SSL) for the FIM Portal** in [Step 9: Perform FIM 2010 R2 Post-Installation Tasks](https://technet.microsoft.com/library/hh322875(v=ws.10%29.aspx) in the Installing FIM 2010 R2 Test Lab Guide. 
+HTTPS (TLS) is supported, but should be configured manually in IIS. For information, see: **Implement Secure Sockets Layer (SSL) for the FIM Portal** in [Step 9: Perform FIM 2010 R2 Post-Installation Tasks](https://technet.microsoft.com/library/hh322875.aspx) in the Installing FIM 2010 R2 Test Lab Guide. 
 
 You can generate a new SSL server certificate by running the following command at the Visual Studio Command Prompt:
 

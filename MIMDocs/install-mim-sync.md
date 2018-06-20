@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Install the Microsoft Identity Manager Sync Service | Microsoft Docs
@@ -27,10 +27,10 @@ ms.suite: ems
 
 # Install MIM 2016: MIM Synchronization Service
 
->[!div class="step-by-step"]
-[« Exchange Server](prepare-server-exchange.md)
-[MIM Service and Portal »](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« Exchange Server](prepare-server-exchange.md)
+> [MIM Service and Portal »](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -38,7 +38,7 @@ ms.suite: ems
 > - MIM Service Server name - **corpservice**
 > - MIM Sync Server name - **corpsync**
 > - SQL Server name - **corpsql**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 
 To install Microsoft Identity Manager 2016 components, first set up the installation package.
 
@@ -62,37 +62,37 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![Custom Setup image](media/install-mim-sync/MIM_Install2.png)
 
-6.  In the Sync Service database configuration screen, select:
+6. In the Sync Service database configuration screen, select:
 
-    1.  The SQL Server is located on: **A Remote machine** called **corpsql.contoso.com**.
+   1.  The SQL Server is located on: **A Remote machine** called **corpsql.contoso.com**.
 
-    2.  The SQL Server instance is: **The default instance**
+   2.  The SQL Server instance is: **The default instance**
 
-    ![Database connection image](media/install-mim-sync/MIM_Install3.png)
+   ![Database connection image](media/install-mim-sync/MIM_Install3.png)
 
-7.  Configure the Sync Service Account according to the account you created earlier:
+7. Configure the Sync Service Account according to the account you created earlier:
 
-    1.  Service account: *MIMSync*
+   1. Service account: *MIMSync*
 
-    2.  Password: *Pass@word1*
+   2. Password: <em>Pass@word1</em>
 
-    3.  Service Account Domain or local computer name: *contoso*
+   3. Service Account Domain or local computer name: *contoso*
 
-    ![Service account image](media/install-mim-sync/MIM_Install4.png)
+   ![Service account image](media/install-mim-sync/MIM_Install4.png)
 
-8.  Provide MIM Sync Service installer with the relevant security groups:
+8. Provide MIM Sync Service installer with the relevant security groups:
 
-    1. Administrator = *contoso\MIMSyncAdmins*
+   1. Administrator = *contoso\MIMSyncAdmins*
 
-    2. Operator= *contoso\MIMSyncOperators*
+   2. Operator= *contoso\MIMSyncOperators*
 
-    3. Joiner = *contoso\MIMSyncJoiners*
+   3. Joiner = *contoso\MIMSyncJoiners*
 
-    4. Connector Browse = *contoso\MIMSyncBrowse*
+   4. Connector Browse = *contoso\MIMSyncBrowse*
 
-    5. WMI Password Management= *contoso\MIMSyncPasswordReset*
+   5. WMI Password Management= *contoso\MIMSyncPasswordReset*
 
-    ![Security groups image](media/install-mim-sync/MIM_Install5.png)
+   ![Security groups image](media/install-mim-sync/MIM_Install5.png)
 
 9. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
 
@@ -110,6 +110,6 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     5. You need to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
 
->[!div class="step-by-step"]  
-[« Exchange Server](prepare-server-exchange.md)
-[MIM Service and Portal »](install-mim-service-portal.md)
+> [!div class="step-by-step"]  
+> [« Exchange Server](prepare-server-exchange.md)
+> [MIM Service and Portal »](install-mim-service-portal.md)

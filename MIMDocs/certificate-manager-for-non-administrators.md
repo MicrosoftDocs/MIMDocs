@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager Self-service smart card renewal without Administrator access | Microsoft Docs

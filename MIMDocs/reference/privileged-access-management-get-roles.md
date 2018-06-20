@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Get PAM roles | Microsoft Docs

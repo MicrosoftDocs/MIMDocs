@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Resource control display configuration XML reference | Microsoft Docs
@@ -302,13 +302,13 @@ A Grouping can contain the following seven attributes:
     >
 
 - **Enabled**: An optional Boolean attribute, Enabled is set to true when it is missing. If Enabled is set to false, the end user sees a Disabled tab. This attribute is functional only in a Content grouping.
-    
+
     >[!NOTE]
     >If this attribute is used in a Summary Grouping, the XML is considered to be invalid. If this attribute is used in a Header Grouping, the XML is considered to be valid but ignored.
     >
 
 - **Visible**: You can hide an RCDC page tab or its heading by setting this attribute to false. By default, this optional, Boolean-type attribute is set to true. This attribute is functional only on a Content Grouping.
-    
+
     >[!NOTE]
     >When there is only one Content Grouping in a Panel, this feature does not work. When there is more than one Content Grouping in a Panel, it behaves as previously described.
 
@@ -342,7 +342,7 @@ The following XML generates a sample Header Grouping. In the XML, the Header Gro
 #### Example: Content Grouping
 The following figure shows a sample Content Grouping:
 
-![Content Grouping](media\rcd-configuration-xml-reference/image007.jpg)
+![Content Grouping](media/rcd-configuration-xml-reference/image007.jpg)
 
 The following XML generates a sample Content Grouping. In the XML, the Content Grouping is the area with the caption text "Sample Content Grouping."
 
@@ -451,11 +451,11 @@ A Control element can contain the following 10 attributes:
 - **Caption**: You can use this attribute to include a caption for the control. The caption is usually the display name of the data that the control is displaying or inputting. You can explicitly specify a value for the caption or bind it with schema attribute display name information. The caption appears on the leftmost side of a normal-sized control. If a control is spanning the full screen, the caption appears over the control. This is an optional, string-type attribute. For information about how to bind a data source with an attribute or a property value, see the Properties section.
 
     The following example shows how a caption can be used explicitly:
-    
+
     ```XML
       <my:Control my:Name="ExplicitAlias" my:TypeName="UocTextBox" my:Caption="Explicit Alias">…<my:Control/>
     ```
-    
+
     The following example show how a caption can be used with a data source. If you have used the template for a data source shown earlier in this document, your data source is schema. We recommend that you bind the attribute’s DisplayName with a Caption attribute.
 
     ```XML
@@ -469,15 +469,15 @@ A Control element can contain the following 10 attributes:
 - **Description**: Use this optional, string-type attribute to include a description to help the end user understand what they should put in the control or what the control does. You can explicitly specify a value for the description or bind it with the schema attribute description information.
 
     The Description appears on the leftmost side of a normal-sized control underneath the caption. If a control is spanning the full screen, the description appears on the top of the control underneath the caption. For information about how to bind a data source with an attribute or a property value, see the Properties section in this document.
-    
+
     The following example shows how a Description can be used explicitly:
-    
+
     ```XML
     <my:Control my:Name="ExplicitAlias" my:TypeName="UocTextBox" my:Caption="Explicit Alias" my:Description="This is explicit description.">…<my:Control/>
     ```
-    
+
     This example shows how a Description can be used with a data source. If you have used the template for a data source shown earlier in this document, your data source is **schema**. We recommend that you bind the attribute’s **Description** with a Description attribute.
-    
+
     ```XML
     <my:Control my:Name="DynamicAlias" my:TypeName="UocTextBox" my:Caption="{Binding Source=schema, Path=Alias.DisplayName, Mode=OneWay}" my:Description="{Binding Source=schema, Path=Alias.Description, Mode=OneWay}">…<my:Control/>
     ```
@@ -555,7 +555,6 @@ The following XML shows how to bind a data source to a **Property** element:
 ```XML
 <my:Property my:Name="Text" my:Value="{Binding Source=object, Path=DisplayName, Mode=TwoWay}"/>
 <my:Property my:Name="Required" my:Value="{Binding Source=schema, Path=DisplayName.Required}"/>
-
 ```
 
 
@@ -566,11 +565,11 @@ All RCDC controls that are specified in this document can have the common proper
 - **Required**: This property indicates that the field is either a required field or an optional field. A required field must be filled with a value. An empty value is not supported for string input. An optional field can be left empty. If this field is a required field with no value filled in, an error message appears on top of the input control. You can explicitly specify whether a field is required or optional. You can also bind the field with the schema information of a given binding between an attribute and a resource type. By default, if this property is missing, it means that the control is an optional input control.
 
     The following example uses an explicit value for this property:
-   
+
     ```XML
     <my:Property my:Name="Required" my:Value="True"/>
     ```
-   
+
     This is an example that uses a dynamic data source for this property. If you have used the template for a data source shown in the previous section of this document, your data source is schema. Use `<attribute name>.Required` as the Path.
 
     ```XML
@@ -588,7 +587,7 @@ All RCDC controls that are specified in this document can have the common proper
     ```
 
     This is an example that uses a dynamic data source for this property. If you have used the template for a data source shown previously in this document, your data source is schema. Use the `<attribute name>.StringRegex` as the Path.
-    
+
     ```XML
     <my:Property my:Name="RegularExpression" my:Value="{Binding Source=schema, Path=Alias.StringRegex, Mode=OneWay}"/>
     ```
@@ -683,9 +682,9 @@ To add descriptive content for a new attribute within an existing Grouping eleme
 3. Locate where you want to add the content. Typically, this is in an additional paragraph, for example:
 
     `<p xmlns="">A new paragraph with customized information.</p>`
-    
+
     It may also be an item inserted into an existing list, for example:
-    
+
     ```
     <li class="unordered"><b>First Name</b> – The first name of the User.<br>
     <li class="unordered"><b>Last Name</b> - The last name of the User.<br>
@@ -724,7 +723,6 @@ The following code segment creates the first text-box control, which uses explic
      </my:Properties>
 </my:Control>
 <!-- End of Sample for a simple control to use explicit information.-->
-
 ```
 
 The following code segment creates the second text-box control, which uses dynamic binding technique to link the control with a different data source:
@@ -848,7 +846,6 @@ The following code segment generates a **Header Caption**:
      </my:Properties>
 </my:Control>
 <!--End of sample header caption control-->
-
 ```
 
 The following code segment generates an **Explicit Content Caption**:
@@ -972,9 +969,9 @@ The following code segment generates a **UocCommonMultiValueControl** control:
 
 - **DateTimeFormat**: This is an optional, string-type attribute. The supported formats are **DateTime** and **DateOnly**. The default value is set to the **DateTime** format.
 
-    - **DateTime**: The attribute is formatted as mm/dd/yyyy hh:mm:ss AM.
-    - **DateOnly**: The attribute is formatted as mm/dd/yyyy.
-    
+  - **DateTime**: The attribute is formatted as mm/dd/yyyy hh:mm:ss AM.
+  - **DateOnly**: The attribute is formatted as mm/dd/yyyy.
+
     >[!NOTE]
     >Both **DateTime** and **DateOnly** formats are supported, regardless of the user that is specifying the difference.
     >
@@ -1311,7 +1308,6 @@ The following code segment generates a redirecting hyperlink:
      </my:Properties>
 </my:Control>
 <!--End of Sample for a hyperlink that redirect page-->
-
 ```
 
 The following code segment generates a hyperlink that references a resource. The explicit reference can be replaced by the expression {Binding Source=object, Path=Creator} to bind this with a data source. This can be valid only when the resource’s manager exists and it is of reference-type value.
@@ -1486,7 +1482,7 @@ For a sample of the UocLabel control, see simple control in the Simple control s
 - **SingleSelection**: This is an optional, Boolean-type property. If the selection mode is turned on for the list view, setting this value to true limits the end user to selecting only one item from the list. By default, the value of this property is set to false. This means that, by default, the end user can select multiple items from the list.
 
 - **RedirectUrl**: This is an optional, string-type property. Use this property to specify a page to redirect to when a hyperlinked item is clicked in the list. This URL can contain placeholders that are replaced with the actual value during runtime. The placeholders are as follows:
-    
+
     - {0} objectType
     - {1} objectID
     - {2} displayName
@@ -1506,17 +1502,17 @@ For a sample of the UocLabel control, see simple control in the Simple control s
 - **ListFilter**: This is an optional, string-type property. This is the xpath that is used to render the list view, and is only in effect when ShowSearchControl property is set to false. When this value is specified, the list view uses this property value for queries and the list view is not in selection mode. The filter can either be bound to a string attribute of the resource:
 
     `<my:Property my:Name="ListFilter" my:Value="{Binding Source=object, Path=Filter}"/>`
-    
+
     or be a string that contains some predefined environment variable:
-    
+
     `<my:Property my:Name="ListFilter" my:Value="/Approval[Request=''%ObjectID%'']"/>`
 
 - **TargetAttribute**: This is an obsolete property. Its value should be the system name of a multivalued referenced attribute. We recommend that this property not be used any more. For example, in group management, instead of using:
 
     `<my:Property my:Name="TargetAttribute" my:Value="ExplicitMember"/>`
-    
+
     Use:
-    
+
     `<my:Property my:Name=”ListFilter” my:Value=”/Group[ObjectID=’%ObjectID%’]/ExplicitMember”/>`
 
 - **ItemClickBehavior**: This is an optional, string-type property. Use this property to specify whether you want the click a list view item to trigger a server postback or to display a detail view of the item. Two option values are supported: ModelessDialog and Server. The default value is ModelessDialog.
@@ -1575,7 +1571,6 @@ For examples of how to use list view along with the UocFilterBuilder control as 
      </my:Properties>
 </my:Control>
 <!--End of sample for an explicit Numeric Box.-->
-
 ```
 
 The following sample code generates the second numeric box.
@@ -1804,222 +1799,222 @@ This section shows the complete XSD schema for all default RCDCs that are provid
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema targetNamespace="http://schemas.microsoft.com/2006/11/ResourceManagement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/2006/11/ResourceManagement" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:attribute name="TypeName" type="my:requiredString"/>
-	<xsd:attribute name="Name" type="my:requiredAlphanumericString"/>
-	<xsd:attribute name="Parameters" type="xsd:string"/>
-	<xsd:attribute name="DisplayAsWizard" type="xsd:boolean"/>
-	<xsd:attribute name="Caption" type="xsd:string"/>
-	<xsd:attribute name="AutoValidate" type="xsd:boolean"/>
-	<xsd:attribute name="Enabled" type="xsd:string"/>
-	<xsd:attribute name="Visible" type="xsd:string"/>
-	<xsd:attribute name="IsSummary" type="xsd:boolean"/>
-	<xsd:attribute name="IsHeader" type="xsd:boolean"/>
-	<xsd:attribute name="HelpText" type="xsd:string"/>
-	<xsd:attribute name="Link" type="xsd:string"/>
-	<xsd:attribute name="Description" type="xsd:string"/>
-	<xsd:attribute name="ExpandArea" type="xsd:boolean"/>
-	<xsd:attribute name="Hint" type="xsd:string"/>
-	<xsd:attribute name="AutoPostback" type="xsd:string"/>
-	<xsd:attribute name="RightsLevel" type="my:requiredString"/>
-	<xsd:attribute name="Value" type="xsd:string"/>
-	<xsd:attribute name="Handler" type="my:requiredString"/>
-	<xsd:attribute name="ImageUrl" type="xsd:string"/>
-	<xsd:attribute name="RedirectUrl" type="xsd:string"/>
-	<xsd:attribute name="ClickBehavior" type="xsd:string"/>
-	<xsd:attribute name="EnableMode" type="xsd:string"/>
-	<xsd:attribute name="ValueType" type="xsd:string"/>
-	<xsd:attribute name="Condition" type="xsd:string"/>
-	<xsd:element name="ObjectControlConfiguration">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:ObjectDataSource" minOccurs="0" maxOccurs="32"/>
-				<xsd:element ref="my:XmlDataSource" minOccurs="0" maxOccurs="32"/>
-				<xsd:element ref="my:Panel"/>
-				<xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
-			</xsd:sequence>
-			<xsd:attribute ref="my:TypeName"/>
-			<xsd:anyAttribute processContents="lax" namespace="http://www.w3.org/XML/1998/namespace"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="ObjectDataSource">
-		<xsd:complexType>
-			<xsd:sequence/>
-			<xsd:attribute ref="my:TypeName"/>
-			<xsd:attribute ref="my:Name"/>
-			<xsd:attribute ref="my:Parameters"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="XmlDataSource">
-		<xsd:complexType  mixed="true">
+    <xsd:attribute name="TypeName" type="my:requiredString"/>
+    <xsd:attribute name="Name" type="my:requiredAlphanumericString"/>
+    <xsd:attribute name="Parameters" type="xsd:string"/>
+    <xsd:attribute name="DisplayAsWizard" type="xsd:boolean"/>
+    <xsd:attribute name="Caption" type="xsd:string"/>
+    <xsd:attribute name="AutoValidate" type="xsd:boolean"/>
+    <xsd:attribute name="Enabled" type="xsd:string"/>
+    <xsd:attribute name="Visible" type="xsd:string"/>
+    <xsd:attribute name="IsSummary" type="xsd:boolean"/>
+    <xsd:attribute name="IsHeader" type="xsd:boolean"/>
+    <xsd:attribute name="HelpText" type="xsd:string"/>
+    <xsd:attribute name="Link" type="xsd:string"/>
+    <xsd:attribute name="Description" type="xsd:string"/>
+    <xsd:attribute name="ExpandArea" type="xsd:boolean"/>
+    <xsd:attribute name="Hint" type="xsd:string"/>
+    <xsd:attribute name="AutoPostback" type="xsd:string"/>
+    <xsd:attribute name="RightsLevel" type="my:requiredString"/>
+    <xsd:attribute name="Value" type="xsd:string"/>
+    <xsd:attribute name="Handler" type="my:requiredString"/>
+    <xsd:attribute name="ImageUrl" type="xsd:string"/>
+    <xsd:attribute name="RedirectUrl" type="xsd:string"/>
+    <xsd:attribute name="ClickBehavior" type="xsd:string"/>
+    <xsd:attribute name="EnableMode" type="xsd:string"/>
+    <xsd:attribute name="ValueType" type="xsd:string"/>
+    <xsd:attribute name="Condition" type="xsd:string"/>
+    <xsd:element name="ObjectControlConfiguration">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:ObjectDataSource" minOccurs="0" maxOccurs="32"/>
+                <xsd:element ref="my:XmlDataSource" minOccurs="0" maxOccurs="32"/>
+                <xsd:element ref="my:Panel"/>
+                <xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute ref="my:TypeName"/>
+            <xsd:anyAttribute processContents="lax" namespace="http://www.w3.org/XML/1998/namespace"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ObjectDataSource">
+        <xsd:complexType>
+            <xsd:sequence/>
+            <xsd:attribute ref="my:TypeName"/>
+            <xsd:attribute ref="my:Name"/>
+            <xsd:attribute ref="my:Parameters"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="XmlDataSource">
+        <xsd:complexType  mixed="true">
       <xsd:sequence>
         <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
       </xsd:sequence>
       <xsd:attribute ref="my:Name"/>
       <xsd:attribute ref="my:Parameters"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Panel">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:Grouping" minOccurs="1" maxOccurs="16"/>
-			</xsd:sequence>
-			<xsd:attribute ref="my:Name"/>
-			<xsd:attribute ref="my:DisplayAsWizard"/>
-			<xsd:attribute ref="my:Caption"/>
-			<xsd:attribute ref="my:AutoValidate"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Grouping">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
-				<xsd:element ref="my:Control" minOccurs="1" maxOccurs="256"/>
-				<xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
-			</xsd:sequence>
-			<xsd:attribute ref="my:Name"/>
-			<xsd:attribute ref="my:Caption"/>
-			<xsd:attribute ref="my:Description"/>
-			<xsd:attribute ref="my:Enabled"/>
-			<xsd:attribute ref="my:Visible"/>
-			<xsd:attribute ref="my:IsHeader"/>
-			<xsd:attribute ref="my:IsSummary"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Help">
-		<xsd:complexType>
-			<xsd:sequence/>
-			<xsd:attribute ref="my:HelpText"/>
-			<xsd:attribute ref="my:Link"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Control">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
-				<xsd:element ref="my:CustomProperties" minOccurs="0"  maxOccurs="1"/>
-				<xsd:element ref="my:Options" minOccurs="0"  maxOccurs="1"/>
-				<xsd:element ref="my:Buttons" minOccurs="0"  maxOccurs="1"/>
-				<xsd:element ref="my:Properties" minOccurs="0"  maxOccurs="1"/>
-				<xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
-			</xsd:sequence>
-			<xsd:attribute ref="my:Name"/>
-			<xsd:attribute ref="my:TypeName"/>
-			<xsd:attribute ref="my:Caption"/>
-			<xsd:attribute ref="my:Enabled"/>
-			<xsd:attribute ref="my:Visible"/>
-			<xsd:attribute ref="my:Description"/>
-			<xsd:attribute ref="my:ExpandArea"/>
-			<xsd:attribute ref="my:Hint"/>
-			<xsd:attribute ref="my:AutoPostback"/>
-			<xsd:attribute ref="my:RightsLevel"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="CustomProperties">
-		<xsd:complexType mixed="true">
-			<xsd:sequence>
-				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##targetNamespace" processContents="lax"/>
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Options">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:Option" minOccurs="0" maxOccurs="unbounded"/>
-			</xsd:sequence>
-			<xsd:attribute ref="my:ValueType"/>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Option">
-		<xsd:complexType>
-			<xsd:simpleContent>
-				<xsd:extension base="xsd:string">
-					<xsd:attribute ref="my:Value"/>
-					<xsd:attribute ref="my:Caption"/>
-					<xsd:attribute ref="my:Hint"/>
-				</xsd:extension>
-			</xsd:simpleContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Buttons">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:Button" minOccurs="1" maxOccurs="8"/>
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Button">
-		<xsd:complexType>
-			<xsd:simpleContent>
-				<xsd:extension base="xsd:string">
-					<xsd:attribute ref="my:Name"/>
-					<xsd:attribute ref="my:Caption"/>
-					<xsd:attribute ref="my:Hint"/>
-					<xsd:attribute ref="my:ImageUrl"/>
-					<xsd:attribute ref="my:ClickBehavior"/>
-					<xsd:attribute ref="my:RedirectUrl"/>
-					<xsd:attribute ref="my:Enabled"/>
-					<xsd:attribute ref="my:Visible"/>
-					<xsd:attribute ref="my:EnableMode"/>
-				</xsd:extension>
-			</xsd:simpleContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Properties">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:Property" minOccurs="1" maxOccurs="32"/>
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Property">
-		<xsd:complexType>
-			<xsd:simpleContent>
-				<xsd:extension base="xsd:string">
-					<xsd:attribute ref="my:Name"/>
-					<xsd:attribute ref="my:Value"/>
-					<xsd:attribute ref="my:Condition"/>					
-				</xsd:extension>
-			</xsd:simpleContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Events">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="my:Event" minOccurs="1" maxOccurs="16"/>
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:element name="Event">
-		<xsd:complexType>
-			<xsd:simpleContent>
-				<xsd:extension base="xsd:string">
-					<xsd:attribute ref="my:Name"/>
-					<xsd:attribute ref="my:Handler"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Panel">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:Grouping" minOccurs="1" maxOccurs="16"/>
+            </xsd:sequence>
+            <xsd:attribute ref="my:Name"/>
+            <xsd:attribute ref="my:DisplayAsWizard"/>
+            <xsd:attribute ref="my:Caption"/>
+            <xsd:attribute ref="my:AutoValidate"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Grouping">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
+                <xsd:element ref="my:Control" minOccurs="1" maxOccurs="256"/>
+                <xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute ref="my:Name"/>
+            <xsd:attribute ref="my:Caption"/>
+            <xsd:attribute ref="my:Description"/>
+            <xsd:attribute ref="my:Enabled"/>
+            <xsd:attribute ref="my:Visible"/>
+            <xsd:attribute ref="my:IsHeader"/>
+            <xsd:attribute ref="my:IsSummary"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Help">
+        <xsd:complexType>
+            <xsd:sequence/>
+            <xsd:attribute ref="my:HelpText"/>
+            <xsd:attribute ref="my:Link"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Control">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:Help" minOccurs="0"  maxOccurs="1"/>
+                <xsd:element ref="my:CustomProperties" minOccurs="0"  maxOccurs="1"/>
+                <xsd:element ref="my:Options" minOccurs="0"  maxOccurs="1"/>
+                <xsd:element ref="my:Buttons" minOccurs="0"  maxOccurs="1"/>
+                <xsd:element ref="my:Properties" minOccurs="0"  maxOccurs="1"/>
+                <xsd:element ref="my:Events" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute ref="my:Name"/>
+            <xsd:attribute ref="my:TypeName"/>
+            <xsd:attribute ref="my:Caption"/>
+            <xsd:attribute ref="my:Enabled"/>
+            <xsd:attribute ref="my:Visible"/>
+            <xsd:attribute ref="my:Description"/>
+            <xsd:attribute ref="my:ExpandArea"/>
+            <xsd:attribute ref="my:Hint"/>
+            <xsd:attribute ref="my:AutoPostback"/>
+            <xsd:attribute ref="my:RightsLevel"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="CustomProperties">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##targetNamespace" processContents="lax"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Options">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:Option" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+            <xsd:attribute ref="my:ValueType"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Option">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute ref="my:Value"/>
+                    <xsd:attribute ref="my:Caption"/>
+                    <xsd:attribute ref="my:Hint"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Buttons">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:Button" minOccurs="1" maxOccurs="8"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Button">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute ref="my:Name"/>
+                    <xsd:attribute ref="my:Caption"/>
+                    <xsd:attribute ref="my:Hint"/>
+                    <xsd:attribute ref="my:ImageUrl"/>
+                    <xsd:attribute ref="my:ClickBehavior"/>
+                    <xsd:attribute ref="my:RedirectUrl"/>
+                    <xsd:attribute ref="my:Enabled"/>
+                    <xsd:attribute ref="my:Visible"/>
+                    <xsd:attribute ref="my:EnableMode"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Properties">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:Property" minOccurs="1" maxOccurs="32"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Property">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute ref="my:Name"/>
+                    <xsd:attribute ref="my:Value"/>
+                    <xsd:attribute ref="my:Condition"/>                 
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Events">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="my:Event" minOccurs="1" maxOccurs="16"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Event">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute ref="my:Name"/>
+                    <xsd:attribute ref="my:Handler"/>
           <xsd:attribute ref="my:Parameters"/>
         </xsd:extension>
-			</xsd:simpleContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:simpleType name="requiredString">
-		<xsd:restriction base="xsd:string">
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:simpleType name="requiredString">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
   <xsd:simpleType name="requiredAlphanumericString">
     <xsd:restriction base="xsd:string">
       <xsd:pattern value="[A-Za-z0-9_]{1,128}"/>
     </xsd:restriction>
   </xsd:simpleType>
-	<xsd:simpleType name="requiredAnyURI">
-		<xsd:restriction base="xsd:anyURI">
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="requiredBase64Binary">
-		<xsd:restriction base="xsd:base64Binary">
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
+    <xsd:simpleType name="requiredAnyURI">
+        <xsd:restriction base="xsd:anyURI">
+            <xsd:minLength value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="requiredBase64Binary">
+        <xsd:restriction base="xsd:base64Binary">
+            <xsd:minLength value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
 </xsd:schema>
 ```
 

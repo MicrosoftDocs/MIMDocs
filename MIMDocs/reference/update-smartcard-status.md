@@ -96,7 +96,6 @@ This section provides an example to update the status of a smart card.
 
 ```
 PUT /certificatemanagement/api/v1.0/requests/b105403d-d021-41ea-9f11-be3d677d229e/smartcards/17cf063d-e337-4aa9-a822-346554ddd3c9 HTTP/1.1
-
 ```
 
 ### Example: Response

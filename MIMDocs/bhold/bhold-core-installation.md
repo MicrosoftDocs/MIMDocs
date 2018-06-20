@@ -168,8 +168,8 @@ To allow IIS to work properly with the BHOLD Core module, you must configure the
 
 If the network name that is used to contact the BHOLD website is not the same as the server host name, you must establish a service principal name (SPN) for HTTP. For example, if you use a CNAME resource record in DNS to specify an alias for the server, or if you use network load balancing, you must register these additional network addresses in Active Directory. If you fail to do so, Internet Explorer cannot use the Kerberos protocol when contacting the BHOLD website.
 
->[!IMPORTANT]
-If the BHOLD Core module is installed on the same computer as the FIM Portal, you must create DNS resource records (CNAME or A) with different host names for the servers running BHOLD Core and the server running the FIM Portal. Only one SPN can be established for a particular service-type/server-alias pair, and so BHOLD Core and the FIM Portal require separate SPNs because they typically run under different accounts. The setspn command reports an error if an SPN has already been established under another account.
+> [!IMPORTANT]
+> If the BHOLD Core module is installed on the same computer as the FIM Portal, you must create DNS resource records (CNAME or A) with different host names for the servers running BHOLD Core and the server running the FIM Portal. Only one SPN can be established for a particular service-type/server-alias pair, and so BHOLD Core and the FIM Portal require separate SPNs because they typically run under different accounts. The setspn command reports an error if an SPN has already been established under another account.
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 

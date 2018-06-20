@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Configure SharePoint for Microsoft Identity Manager 2016 | Microsoft Docs
@@ -27,10 +27,10 @@ ms.suite: ems
 
 # Set up an identity management server: SharePoint
 
->[!div class="step-by-step"]
-[« SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server »](prepare-server-exchange.md)
-
+> [!div class="step-by-step"]
+> [« SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server »](prepare-server-exchange.md)
+> 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -38,7 +38,7 @@ ms.suite: ems
 > - MIM Service Server name - **corpservice**
 > - MIM Sync Server name - **corpsync**
 > - SQL Server name - **corpsql**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 
 
 ## Install **SharePoint 2016**
@@ -104,25 +104,25 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 2. Launch  SharePoint 2016 Management Shell and run the following PowerShell script to create a **SharePoint Site Collection** associated with that web application.
 
-  ```
+   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-  ```
+   ```
 
-  > [!NOTE]
-  > Verify that the result of the *CompatibilityLevel* variable is “15”. If the result is other than “15”, then the site collection was not created the correct experience version; delete the site collection and recreate it.
+   > [!NOTE]
+   > Verify that the result of the *CompatibilityLevel* variable is “15”. If the result is other than “15”, then the site collection was not created the correct experience version; delete the site collection and recreate it.
 
 3. Disable **SharePoint Server-Side Viewstate** and the SharePoint task "Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)" by running the following PowerShell commands in the **SharePoint 2016 Management Shell**:
 
-  ```
-  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-  $contentService.ViewStateOnServer = $false;
-  $contentService.Update();
-  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-  ```
+   ```
+   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+   $contentService.ViewStateOnServer = $false;
+   $contentService.Update();
+   Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+   ```
 
 4. On your identity management server, open a new web browser tab, navigate to http://mim.contoso.com/ and login as *contoso\miminstall*.  An empty SharePoint site named *MIM Portal* will be shown.
 
@@ -136,6 +136,6 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 7. Open the **Administrative Tools** program, navigate to **Services**, locate the SharePoint Administration service, and start it if it is not already running.
 
->[!div class="step-by-step"]  
-[« SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server »](prepare-server-exchange.md)
+> [!div class="step-by-step"]  
+> [« SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server »](prepare-server-exchange.md)

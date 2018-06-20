@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Import Web Services Connector | Microsoft Docs
@@ -173,7 +173,7 @@ function Set-AvailableWebServiceProjects([string] $path) {
 
       $parameters = $xmlConfig."saved-ma-configuration"."ma-data"."private-configuration"."MAConfig"."parameter-definitions" 
      $target = ($parameters."parameter"|where {$_.name -eq "Web Service project" -and $_.use -eq "connectivity" -and $_.type -eq "drop-down"})          
-     
+
       if($target -eq $null) 
       { 
         continue 
@@ -182,7 +182,7 @@ function Set-AvailableWebServiceProjects([string] $path) {
 
      $extensionsFolderPath = Get-MIMInstallationPath 
      $wsconfigFiles = Get-WsconfigFilesNamesFromExtensionsFolder($extensionsFolderPath)
-    
+
      if($wsconfigFiles -eq '') 
      { 
        continue 
@@ -229,7 +229,6 @@ catch
 } 
 
 [void](Read-Host 'Press Enter to exit…') 
-
 ```
 
 ## Next steps

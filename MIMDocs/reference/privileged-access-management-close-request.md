@@ -83,12 +83,10 @@ This section provides an example to close a request.
 
 ```
 POST /api/pamresources/pamrequests(guid'5ec10e61-cdd1-404e-a18e-740467d87dbf')/Close HTTP/1.1
-
 ```
 
 ### Example: Response
 
 ```
 HTTP/1.1 200 OK
-
 ```       
