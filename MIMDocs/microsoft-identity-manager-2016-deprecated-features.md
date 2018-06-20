@@ -7,7 +7,7 @@ keywords:
 author: barclayn
 ms.author: davidste
 manager: mbaldwin
-ms.date: 1/31/2017
+ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager

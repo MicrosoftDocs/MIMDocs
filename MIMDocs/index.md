@@ -1,5 +1,6 @@
 ---
 layout: LandingPage
+ms.topic: landing-page
 title: Microsoft Identity Manager Documentation | Microsoft Docs
 description: Learn how to use Microsoft Identity Manager.
 ---
@@ -12,17 +13,17 @@ LOB applications and SaaS solutions.
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016-sp1-release-notes">
+        <a href="/microsoft-identity-manager/reference/version-history">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_whats-new.svg" alt="" />
+                            <img src="/media/index/i_whats-new.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>What's new for Microsoft Identity Manager 2016 Service Pack 1</h3>
+                        <h3>New Updates with Microsoft Identity Manager 2016 Service Pack 1</h3>
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="" />
+                            <img src="/media/index/i_learn-about.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -53,7 +54,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/deploy.svg" alt="" />
+                            <img src="/media/index/i_deploy.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -80,7 +81,7 @@ Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please [up
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_reference.svg" alt="" />
+                            <img src="/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -98,7 +99,7 @@ Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please [up
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_reference.svg" alt="" />
+                            <img src="/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -116,7 +117,7 @@ Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please [up
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_blog.svg" alt="" />
+                            <img src="/media/index/i_blog.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">

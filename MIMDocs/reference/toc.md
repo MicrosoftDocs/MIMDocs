@@ -13,8 +13,8 @@
 # [Deploy and Use](../microsoft-identity-manager-deploy.md)
 ## [First time deployment](../microsoft-identity-manager-deploy.md)
 ### [Domain setup](../preparing-domain.md)
-### [Server setup: Windows Server](../prepare-server-ws2012r2.md)
-### [Server setup: SQL](../prepare-server-sql2014.md)
+### [Server setup: Windows Server](../prepare-server-ws2016.md)
+### [Server setup: SQL](../prepare-server-sql2016.md)
 ### [Server setup: SharePoint](../prepare-server-sharepoint.md)
 ### [Server setup: Exchange](../prepare-server-exchange.md)
 ### [Install MIM: Synchronization](../install-mim-sync.md)
@@ -142,3 +142,11 @@
 ## Version history
 ### [MIM version history](version-history.md)
 ### [BHOLD version history](version-bhold-history.md)
+### [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md)
+## Connectors
+### [Graph](../microsoft-identity-manager-2016-connector-graph.md)
+### [Generic LDAP](microsoft-identity-manager-2016-connector-genericldap.md)
+### [Generic SQL](microsoft-identity-manager-2016-connector-genericsql.md)
+### [Web Services](microsoft-identity-manager-2016-ma-ws.md)
+### [PowerShell](microsoft-identity-manager-2016-connector-powershell.md)
+### [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md)

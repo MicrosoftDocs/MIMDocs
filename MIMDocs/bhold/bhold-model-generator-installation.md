@@ -79,7 +79,7 @@ To run the program file as an administrator, right-click the file and then click
 
 ## Next steps
 
-- For information on how to create input files [Microsoft BHOLD Suite Technical Reference](https://technet.microsoft.com/en-us/library/jj134935(v=ws.10).aspx)
+- For information on how to create input files [Microsoft BHOLD Suite Technical Reference](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
 - [BHOLD installation guide](bhold-installation-guide.md)
 - [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
 - [BHOLD version history](../reference/version-bhold-history.md)
