@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Working with the Self-Service Password Reset portal | Microsoft Docs
@@ -24,8 +24,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
->[!IMPORTANT]
-Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will be unable to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on planning changes to the MFA by integrating with MFA Server SDK.This will be included in upcoming hotfix in early 2018.
+> [!IMPORTANT]
+> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will be unable to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on planning changes to the MFA by integrating with MFA Server SDK.This will be included in upcoming hotfix in early 2018.
 
 # Working with Self-Service Password Reset
 Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
@@ -71,7 +71,7 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 ### Register your multi-factor authentication provider in Azure
 
-1.  Create an [MFA provider](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Create an [MFA provider](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Open a support case and request the direct SDK for ASP.net 2.0 C#. The SDK will only be provided to current users of MIM with MFA because the direct SDK has been deprecated. New customers should adopt the next version of MIM that will integrate with MFA server.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: BHOLD model generator installation | Microsoft Docs
@@ -25,12 +25,12 @@ By using the BHOLD Model Generator module, you can structure data from authorita
 Before installing the BHOLD Model Generator module, you must install the
 following:
 
-1. BHOLD Core module on the server on which you plan to install the BHOLD Model Generator module. For information about installing the BHOLD Core module, see [BHOLD Core Installation](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx).
+1. BHOLD Core module on the server on which you plan to install the BHOLD Model Generator module. For information about installing the BHOLD Core module, see [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
 2. The Microsoft OLE DB Provider for Microsoft Jet must be installed. For more information see [this article](http://support.microsoft.com/kb/271908).
 
->[!WARNING]
-Do not install BHOLD Model Generator in your production network. BHOLD Model Generator is intended to be used offline in a staging environment to create a normalized role model that you can import into your enterprise role model. Running BHOLD Model Generator in your production network can result in loss of your existing role model.
+> [!WARNING]
+> Do not install BHOLD Model Generator in your production network. BHOLD Model Generator is intended to be used offline in a staging environment to create a normalized role model that you can import into your enterprise role model. Running BHOLD Model Generator in your production network can result in loss of your existing role model.
 
 ## Before you begin
 
@@ -55,7 +55,7 @@ Microsoft Access Database Engine 2010 Redistributable
 | **Item**                                    | **Description**                                                                                                                                                                                                           | **Value**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Use Security Provider on Domain/Machine** | When selected, specifies that Active Directory Domain Services security will control access to BHOLD Core.                                                                                                                | Select the check box. **Important:** The installation will fail if this check box is not selected.                                                                                                                                                                                                                   |
-| **Domain**                                  | Specifies the domain containing the service account that you created when installing BHOLD Core. For more information, see [BHOLD Core Installation](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | The domain name is supplied automatically by the wizard. Change the name only if it is incorrect. **Important:** Specify the domain name by using the NetBIOS (short) name, not the fully qualified domain name (FQDN). For example, if the FQDN of the domain is fabrikam.com, specify the domain name as FABRIKAM. |
+| **Domain**                                  | Specifies the domain containing the service account that you created when installing BHOLD Core. For more information, see [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | The domain name is supplied automatically by the wizard. Change the name only if it is incorrect. **Important:** Specify the domain name by using the NetBIOS (short) name, not the fully qualified domain name (FQDN). For example, if the FQDN of the domain is fabrikam.com, specify the domain name as FABRIKAM. |
 | **User**                                    | Specifies the logon name of the BHOLD Core service user account.                                                                                                                                                          | Write the user account name here:                                                                                                                                                                                                                                                                                    |
 | **Password**                                | Specifies the password of the service user account.                                                                                                                                                                       | Write the password here: **Important:** Be sure to keep this password in a hidden, secure location.                                                                                                                                                                                                                  |
 
@@ -79,7 +79,7 @@ To run the program file as an administrator, right-click the file and then click
 
 ## Next steps
 
-- For information on how to create input files [Microsoft BHOLD Suite Technical Reference](https://technet.microsoft.com/en-us/library/jj134935(v=ws.10).aspx)
+- For information on how to create input files [Microsoft BHOLD Suite Technical Reference](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
 - [BHOLD installation guide](bhold-installation-guide.md)
 - [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
 - [BHOLD version history](../reference/version-bhold-history.md)

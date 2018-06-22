@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: BHOLD SP1 Installation | Microsoft Docs
@@ -28,8 +28,8 @@ Microsoft® BHOLD Suite Service Pack 1 (SP1) is a collection of applications tha
 - BHOLD Attestation
 
 
->[!NOTE]
-**Applies To**: Microsoft Identity Manager 2016 SP1
+> [!NOTE]
+> **Applies To**: Microsoft Identity Manager 2016 SP1
 
 ## What this document covers
 
@@ -69,8 +69,8 @@ Installing BHOLD Core and FIM on separate servers provides greater performance a
 
 ![Dual server architecture](media/bhold-installation-guide/dual.png)
 
->[!IMPORTANT]
-The reporting feature of the BHOLD FIM Integration module requires the BHOLD and FIM databases to be installed on the same SQL Server instance, and the BHOLD service account must have access rights to the FIM Service database.
+> [!IMPORTANT]
+> The reporting feature of the BHOLD FIM Integration module requires the BHOLD and FIM databases to be installed on the same SQL Server instance, and the BHOLD service account must have access rights to the FIM Service database.
 
 ### Two-tier architecture
 
@@ -108,7 +108,7 @@ After editing and saving the file, run the iisreset command to reset the IIS ser
 
 ## Upgrading BHOLD Suite
 
-You cannot upgrade an existing BHOLD Suite installation. Instead, you must uninstall an existing BHOLD Suite installation before you can update BHOLD modules. If you have an existing BHOLD role model, you can upgrade the BHOLD database and use it when you install the updated BHOLD Core module. For more information, see [Replacing BHOLD Suite with BHOLD Suite SP1](https://technet.microsoft.com/en-us/library/jj874043(v=ws.10).aspx).
+You cannot upgrade an existing BHOLD Suite installation. Instead, you must uninstall an existing BHOLD Suite installation before you can update BHOLD modules. If you have an existing BHOLD role model, you can upgrade the BHOLD database and use it when you install the updated BHOLD Core module. For more information, see [Replacing BHOLD Suite with BHOLD Suite SP1](https://technet.microsoft.com/library/jj874043(v=ws.10).aspx).
 
 
 ## Next steps

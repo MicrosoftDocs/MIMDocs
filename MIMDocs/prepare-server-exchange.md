@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Configure Exchange for MIM to email and create mailboxes | Microsoft Docs
@@ -27,9 +27,9 @@ ms.suite: ems
 
 # Set up an identity management server: Exchange
 
->[!div class="step-by-step"]
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM Synchronization Service »](install-mim-sync.md)
+> [!div class="step-by-step"]
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM Synchronization Service »](install-mim-sync.md)
 
 ## Deploy Microsoft Exchange Server
 If you would like to configure MIM to send and receive email or provision mailboxes, then it is necessary to have Exchange present in the environment. If you do not have Exchange already deployed, then you can install a trial version for evaluation purposes:
@@ -44,6 +44,6 @@ If you would like to configure MIM to send and receive email or provision mailbo
 
 3. Download and install [MS Exchange Server 2013 180-day Trial version](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
 
->[!div class="step-by-step"]  
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM Synchronization Service »](install-mim-sync.md)
+> [!div class="step-by-step"]  
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM Synchronization Service »](install-mim-sync.md)

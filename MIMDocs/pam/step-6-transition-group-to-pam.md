@@ -26,9 +26,9 @@ ms.suite: ems
 ---
 # Step 6 – Transition a group to Privileged Access Management
 
->[!div class="step-by-step"]
-[« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Step 7 »](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [Step 7 »](step-7-elevate-user-access.md)
 
 Privileged account creation in the PRIV forest is done using PowerShell cmdlets. These cmdlets perform the following functions:
 
@@ -48,26 +48,26 @@ The cmdlets need to be run once for each group, and once for each member of a gr
    Import-Module ActiveDirectory
 ```
 
-3.  Create a corresponding user account in PRIV for a user account in an existing forest, for demonstration purposes.
+3. Create a corresponding user account in PRIV for a user account in an existing forest, for demonstration purposes.
 
-    Type the following commands into PowerShell.  If you did not use the name *Jen* to create the user in contoso.local earlier, then change the parameters of the command as appropriate. The password 'Pass@word1' is just an example and should be changed to a unique password value.
+   Type the following commands into PowerShell.  If you did not use the name *Jen* to create the user in contoso.local earlier, then change the parameters of the command as appropriate. The password 'Pass@word1' is just an example and should be changed to a unique password value.
 
- ```PowerShell
-        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-        Set-ADUser –identity priv.Jen –Enabled 1
-  ```
+   ```PowerShell
+       $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+       $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+       Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+       Set-ADUser –identity priv.Jen –Enabled 1
+   ```
 
 4. Copy a group and its member, Jen, from CONTOSO to PRIV domain, for demonstration purposes.
 
     Run the following commands, specifying the CORP domain admin (CONTOSO\Administrator) password where prompted:
 
- ```PowerShell
+   ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
- ```
+   ```
 
     For reference, the **New-PAMGroup** command takes the following parameters:
 
@@ -76,19 +76,19 @@ The cmdlets need to be run once for each group, and once for each member of a gr
      -   The CORP forest Domain Controller NetBIOS name  
      -   The credentials of an domain admin user in the CORP forest  
 
-5.  (Optional) On CORPDC, remove Jen’s account from the **CONTOSO CorpAdmins** group, if it is still present.  This is only needed for demonstration purposes, to illustrate how permissions can be associated with accounts created in the PRIV forest.
+5. (Optional) On CORPDC, remove Jen’s account from the **CONTOSO CorpAdmins** group, if it is still present.  This is only needed for demonstration purposes, to illustrate how permissions can be associated with accounts created in the PRIV forest.
 
-    1.  Sign in to CORPDC as *CONTOSO\Administrator*.
+   1.  Sign in to CORPDC as *CONTOSO\Administrator*.
 
-    2.  Launch PowerShell, run the following command and confirm the change.
+   2.  Launch PowerShell, run the following command and confirm the change.
 
-        ```PowerShell
-        Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
-        ```
+       ```PowerShell
+       Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
+       ```
 
 
 If you want to demonstrate that cross-forest access rights are effective for the user's administrator account, continue to the next step.
 
->[!div class="step-by-step"]
-[« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Step 7 »](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [« Step 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [Step 7 »](step-7-elevate-user-access.md)

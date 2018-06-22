@@ -116,8 +116,8 @@ The following illustration outlines the required environment.
 
 You can run all components on one computer.
 
->[!NOTE]
-For more information about setting up MIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+> [!NOTE]
+> For more information about setting up MIM, see the [FIM Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## Scenario Components List
 
@@ -210,8 +210,8 @@ this attribute is typically part of an export to AD DS. To enable a user to log
 on to AD DS, you also need to include a password created by using the unicodePwd
 attribute in your export logic.
 
->[!Note]                                
-Ensure that the value you specify as unicodePwd complies with the password policies of your target AD DS.
+> [!Note]
+> Ensure that the value you specify as unicodePwd complies with the password policies of your target AD DS.
 
 When you set a password for AD DS accounts, you also need to create an account
 as an enabled account. You accomplish this by setting the userAccountControl
@@ -234,8 +234,8 @@ For more information, see the following topics in Help:
 - Using the Management Agent for Active Directory
 - Configure Directory Partitions
 
->[!Note]
-Ensure that you have an import attribute flow rule configured for the ExpectedRulesList attribute.
+> [!Note]
+> Ensure that you have an import attribute flow rule configured for the ExpectedRulesList attribute.
 
 ### Step 4: Create the Fabrikam FIMMA management agent
 
@@ -272,8 +272,8 @@ For more information, see the following topics in the help:
 
 -   Configure Directory Partitions
 
->[!NOTE]
- Ensure that you have an import attribute flow rule configured for the ExpectedRulesList attribute.
+> [!NOTE]
+>  Ensure that you have an import attribute flow rule configured for the ExpectedRulesList attribute.
 
 ### Step 5: Create the run profiles
 
@@ -288,12 +288,12 @@ in this guide.
 Create run profiles for each management agent according to the previous table.
 
 
->[!Note]
-For more information, see the Create a Management Agent Run Profile in MIM Help.                                                                                                                  
-
-
->[!Important]
- Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+> [!Note]
+> For more information, see the Create a Management Agent Run Profile in MIM Help.                                                                                                                  
+> 
+> 
+> [!Important]
+>  Verify that provisioning is enabled in your environment. You can do this by running the script, Using Windows PowerShell to Enable Provisioning (http://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## Configuring the FIM Service
@@ -363,8 +363,8 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 
 
 
- >[!NOTE]
- Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
+> [!NOTE]
+>  Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
 
 ### Step 7: Create the workflow
 
@@ -440,8 +440,8 @@ phase.  Run the run profiles according to the table below.
 
 
 
->[!NOTE]
-You should verify that your outbound synchronization rule has been successfully projected into the metaverse.
+> [!NOTE]
+> You should verify that your outbound synchronization rule has been successfully projected into the metaverse.
 
 ## Testing the Configuration
 
@@ -602,8 +602,8 @@ successive synchronization runs.
 
 Run the run profiles according to the instructions in this section.
 
->[!IMPORTANT]
-Each run profile run must succeed without an error.
+> [!IMPORTANT]
+> Each run profile run must succeed without an error.
 
 ### Step 14: Verify the provisioned user in AD DS
 

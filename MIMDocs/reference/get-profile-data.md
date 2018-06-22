@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Get profile data | Microsoft Docs

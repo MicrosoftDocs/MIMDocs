@@ -26,9 +26,9 @@ ms.suite: ems
 ---
 # Step 3 – Prepare a PAM server
 
->[!div class="step-by-step"]
-[« Step 2](step-2-prepare-priv-domain-controller.md)
-[Step 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Step 2](step-2-prepare-priv-domain-controller.md)
+> [Step 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## Install Windows Server 2012 R2
 
@@ -98,13 +98,13 @@ There are two ways to change the IIS configuration to allow applications to use 
 
 If you want to use PowerShell:
 
-1.  Right click on PowerShell and select **Run as administrator**.
-2.  Stop IIS and unlock the application host settings using these commands
-    ```CMD
-    iisreset /STOP
-    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-    iisreset /START
-    ```
+1. Right click on PowerShell and select **Run as administrator**.
+2. Stop IIS and unlock the application host settings using these commands
+   ```CMD
+   iisreset /STOP
+   C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+   iisreset /START
+   ```
 
 If you want to use a text editor such as Notepad:
 
@@ -220,6 +220,6 @@ Using **Services** (located in Administrative Tools), start the **SharePoint Adm
 
 In Step 4, you will start installing the MIM components onto the PAM server.
 
->[!div class="step-by-step"]
-[« Step 2](step-2-prepare-priv-domain-controller.md)
-[Step 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Step 2](step-2-prepare-priv-domain-controller.md)
+> [Step 4 »](step-4-install-mim-components-on-pam-server.md)

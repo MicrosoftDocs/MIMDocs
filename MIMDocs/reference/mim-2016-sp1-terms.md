@@ -212,18 +212,18 @@ This document is a comprehensive list of terms that are referenced in Microsoft 
    
    There are two types of MPRs:
    
-   - Request MPRs: Grant permissions and run workflows (invoked before a requested operation has been performed).
-   - Set Transition MPRs: Run workflows only (reaction to an applied state change).
+- Request MPRs: Grant permissions and run workflows (invoked before a requested operation has been performed).
+- Set Transition MPRs: Run workflows only (reaction to an applied state change).
    
-   The main design objects for MPRs are:
+  The main design objects for MPRs are:
    
-   - Modeling permissions
-   - Modeling workflows mappings
-   - Modeling transitions
-   - Modeling reflexive definitions
-   - Modeling unauthenticated user access
-   - Modeling temporal policies
-   - Modeling filter permissions
+- Modeling permissions
+- Modeling workflows mappings
+- Modeling transitions
+- Modeling reflexive definitions
+- Modeling unauthenticated user access
+- Modeling temporal policies
+- Modeling filter permissions
 
 **manually-managed member**: The membership of the group or set that consists of a manually selected list of users, groups, or other resources.
 
@@ -310,84 +310,84 @@ This document is a comprehensive list of terms that are referenced in Microsoft 
 
    The MIM architecture defines six different operations that an RMPR can be defined for:
    
-   - Create a resource.
-   - Delete a resource.
-   - Read a resource.
-   - Add a value to a multivalued attribute.
-   - Remove a value from a multivalued attribute.
-   - Modify a single-valued attribute.
+- Create a resource.
+- Delete a resource.
+- Read a resource.
+- Add a value to a multivalued attribute.
+- Remove a value from a multivalued attribute.
+- Modify a single-valued attribute.
    
-   When you define an RMPR, you must select at least one of these six operations. The operations are always defined in the context of the requester. Each condition requires the definition of a target. An operation that is applied to a target can result in a state transition of the target resource. An RMPR is always invoked before a requested operation has been performed. To effectively characterize the target of your condition, you need to configure two different states:
+  When you define an RMPR, you must select at least one of these six operations. The operations are always defined in the context of the requester. Each condition requires the definition of a target. An operation that is applied to a target can result in a state transition of the target resource. An RMPR is always invoked before a requested operation has been performed. To effectively characterize the target of your condition, you need to configure two different states:
    
-   - Target Resource Definition Before Request: The state of the target before the request is applied.
-   - Target Resource Definition After Request: The state of the target after the request is applied.
+- Target Resource Definition Before Request: The state of the target before the request is applied.
+- Target Resource Definition After Request: The state of the target after the request is applied.
    
-   Whether you need to define both states depend on the operations your RMPR is defined to do. In a Create operation, the requested resource has no initial state. Therefore you only need to configure Target Resource Definition After Request" for a Create operation.
+  Whether you need to define both states depend on the operations your RMPR is defined to do. In a Create operation, the requested resource has no initial state. Therefore you only need to configure Target Resource Definition After Request" for a Create operation.
    
-   A Read or Delete operation does not cause a state transition. For these two types of operations, you are only required to specify Target Resource Definition Before Request.
+  A Read or Delete operation does not cause a state transition. For these two types of operations, you are only required to specify Target Resource Definition Before Request.
    
-   For a Modify operation or all other combinations of operations, you need to configure both states, which may have the same values if no state transition takes place.
+  For a Modify operation or all other combinations of operations, you need to configure both states, which may have the same values if no state transition takes place.
    
-   You can express the related resources relative to the requester (such as the requester’s own user object, a target user's manager, or a target group's owner).
+  You can express the related resources relative to the requester (such as the requester’s own user object, a target user's manager, or a target group's owner).
    
-   The simplest form of a response to a condition is to grant permissions to perform the requested operation. In addition to granting permissions, you can also define other operations as a response to a condition in an RMPR. In the MIM architecture, these operations are defined in the form of workflows. At the time, when a given RMPR is processed, the system might not have enough information to grant permission. In this case, you can define additional authentication and authorization steps in your RMPR that apply to the person performing a given request. For example, to grant permission to perform the requested operation, you might require manual interaction of a user to approve the operation.
+  The simplest form of a response to a condition is to grant permissions to perform the requested operation. In addition to granting permissions, you can also define other operations as a response to a condition in an RMPR. In the MIM architecture, these operations are defined in the form of workflows. At the time, when a given RMPR is processed, the system might not have enough information to grant permission. In this case, you can define additional authentication and authorization steps in your RMPR that apply to the person performing a given request. For example, to grant permission to perform the requested operation, you might require manual interaction of a user to approve the operation.
    
-   The following figure outlines the complete architecture of an RMPR:
+  The following figure outlines the complete architecture of an RMPR:
    
-   ![RMPR architecture](media/mim-2016-sp1-terms/8f5054080d3f8bd9c73d93a5e3ed51f9.gif)
+  ![RMPR architecture](media/mim-2016-sp1-terms/8f5054080d3f8bd9c73d93a5e3ed51f9.gif)
    
-   When a new request object is created in MIM, the system queries the configured RMPRs for matching objects by comparing the request conditions with the configured conditions in your management RMPRs. If matching RMPRs are located, they are applied to the queued request object. The following figure outlines this process:
+  When a new request object is created in MIM, the system queries the configured RMPRs for matching objects by comparing the request conditions with the configured conditions in your management RMPRs. If matching RMPRs are located, they are applied to the queued request object. The following figure outlines this process:
    
-   ![Matching RMPRs are located and applied to the queued request object](media/mim-2016-sp1-terms/65bdb65aaffa55a90707ff6f7b13632d.gif)
+  ![Matching RMPRs are located and applied to the queued request object](media/mim-2016-sp1-terms/65bdb65aaffa55a90707ff6f7b13632d.gif)
    
-   In MIM Portal, permissions for operations must be explicitly granted. In other words, unless granted by an RMPR, all operations on resources are denied. Each request object requires at least one RMPR that grants permission to perform the requested operation on a target.
+  In MIM Portal, permissions for operations must be explicitly granted. In other words, unless granted by an RMPR, all operations on resources are denied. Each request object requires at least one RMPR that grants permission to perform the requested operation on a target.
 
 **request object**: When a user performs a task in the MIM Portal or the MIM Add-in for Outlook, it's represented as a request object. Request objects represent a convenient reporting mechanism for activities in your system.
 
    Each request object has these components:
    
-   - Requester: A resource that asks to perform an operation.
-   - Operation: The action that the requester wants to perform.
-   - Target: The resource that is the target of the requested operation.
+- Requester: A resource that asks to perform an operation.
+- Operation: The action that the requester wants to perform.
+- Target: The resource that is the target of the requested operation.
    
-   Logically, a request object is an implementation of the following statement:
+  Logically, a request object is an implementation of the following statement:
    
-   `The requester attempts to perform the following operation on this target...`
+  `The requester attempts to perform the following operation on this target...`
       
-   The following figure outlines the general architecture of a request object:
+  The following figure outlines the general architecture of a request object:
    
-   ![Request object architecture](media/mim-2016-sp1-terms/788e9b3a4fcddb78ff4a05dcb5e61192.gif)
+  ![Request object architecture](media/mim-2016-sp1-terms/788e9b3a4fcddb78ff4a05dcb5e61192.gif)
    
-   Each request object has a status property to indicate the processing state. Processing requests may require manual interaction to complete a request. For example, the owner of a group might be required to manually approve the request of another user to join a group. In addition to a manual interaction, you can also configure MIM to automatically process a specific request without the need of human interaction.
+  Each request object has a status property to indicate the processing state. Processing requests may require manual interaction to complete a request. For example, the owner of a group might be required to manually approve the request of another user to join a group. In addition to a manual interaction, you can also configure MIM to automatically process a specific request without the need of human interaction.
    
 **request processing model**: The request processing model in MIM is composed of three main phases:
 
-   - Phase 1: Authentication
-   - Phase 2: Authorization
-   - Phase 3: Action
+- Phase 1: Authentication
+- Phase 2: Authorization
+- Phase 3: Action
    
-   Workflows, each of which contain one or more activities, can be attached to each of these phases and run in the context of executing a single request. A request can initiate from a single user call to one of the Web Service endpoints or through a user creating a request in the MIM Portal.
+  Workflows, each of which contain one or more activities, can be attached to each of these phases and run in the context of executing a single request. A request can initiate from a single user call to one of the Web Service endpoints or through a user creating a request in the MIM Portal.
    
-   The following figure shows the relationship of the request processing components:
+  The following figure shows the relationship of the request processing components:
    
-   ![Relationship of request processing components](media/mim-2016-sp1-terms/0e57445d8b9a3216c31add80eb26493f.gif)
+  ![Relationship of request processing components](media/mim-2016-sp1-terms/0e57445d8b9a3216c31add80eb26493f.gif)
    
-   Requests are processed in the following order:
+  Requests are processed in the following order:
    
-   1. Request Object Creation: MIM 2016 creates a request object in response to a call to one of the Web Service endpoints or because of a request initiated through the MIM Portal.
+- Request Object Creation: MIM 2016 creates a request object in response to a call to one of the Web Service endpoints or because of a request initiated through the MIM Portal.
    
-   2. MPR evaluation: The requester’s rights to request the action are validated and the computation of the applicable workflows is performed. The request is checked against mappings to any MPR objects. To map to an MPR, all the applicable fields of the MPR for the requested operation need to match. This includes the requester, operation, target resource, and attributes. If all of these conditions including the attributes being affected are true for an incoming request, then the appropriate MPR is matched to the request. A request must map to at least one MPR that grants the permission as part of its definition. If this is true, the request passes through the permissions check stage of request processing. If this is not true, the request fails. The system also determines the set transitions that are part of the request and locates all related set transition-based MPRs.
+- MPR evaluation: The requester’s rights to request the action are validated and the computation of the applicable workflows is performed. The request is checked against mappings to any MPR objects. To map to an MPR, all the applicable fields of the MPR for the requested operation need to match. This includes the requester, operation, target resource, and attributes. If all of these conditions including the attributes being affected are true for an incoming request, then the appropriate MPR is matched to the request. A request must map to at least one MPR that grants the permission as part of its definition. If this is true, the request passes through the permissions check stage of request processing. If this is not true, the request fails. The system also determines the set transitions that are part of the request and locates all related set transition-based MPRs.
    
-   3. Authentication: MIM 2016 runs authentication workflows one at a time in a non-deterministic order to confirm the requester’s identity.
+- Authentication: MIM 2016 runs authentication workflows one at a time in a non-deterministic order to confirm the requester’s identity.
    
-   4. Authorization: MIM 2016 confirms the requester’s permission to perform the requested operation on the resource specified in the request. All dependent authorization workflows are run in parallel, but a request is not committed to the MIM Object Store unless all the workflows have been completed and all have succeeded.
+- Authorization: MIM 2016 confirms the requester’s permission to perform the requested operation on the resource specified in the request. All dependent authorization workflows are run in parallel, but a request is not committed to the MIM Object Store unless all the workflows have been completed and all have succeeded.
    
-   5. Processing: MIM 2016 performs the requested operation on the MIM Application Store.
+- Processing: MIM 2016 performs the requested operation on the MIM Application Store.
    
-   6. Action: MIM 2016 executes any processes that are to occur because of the requested operation. All action workflows are run in parallel. Read operations do not have any workflows applied to their processing. This includes the configured workflows in the RMPR as well as the workflows in the set transition-based MPRs.
+- Action: MIM 2016 executes any processes that are to occur because of the requested operation. All action workflows are run in parallel. Read operations do not have any workflows applied to their processing. This includes the configured workflows in the RMPR as well as the workflows in the set transition-based MPRs.
    
-   >[!NOTE]
-   >Requests that are initiated by the Synchronization Account bypass all authentication and authorization workflows that would be applicable to them. Any applicable action workflows are applied.
+  >[!NOTE]
+  >Requests that are initiated by the Synchronization Account bypass all authentication and authorization workflows that would be applicable to them. Any applicable action workflows are applied.
 
 **requestor**: The identity of the user or service that has submitted a request to MIM 2016.
 
@@ -442,23 +442,23 @@ This document is a comprehensive list of terms that are referenced in Microsoft 
 
    There are two types of TMPRs:
    
-   - Transition in: A resource becomes a member of the transition set.
-   - Transition out: A resource leaves the transition set.
+- Transition in: A resource becomes a member of the transition set.
+- Transition out: A resource leaves the transition set.
    
-      >[!NOTE]
-      >When a transition set is deleted, the system treats the deletion as a transition out event for the affected objects.
+   >[!NOTE]
+   >When a transition set is deleted, the system treats the deletion as a transition out event for the affected objects.
       
-   The response is a reaction to an applied state change. When the related MPR is invoked, the condition has already been applied. This means that the affected resources have already transitioned into or out of a transition set. For TMPRs, the objective of the response is not to define the reaction to a requested operation but to define the response to an applied operation. In other words, for a set transition-based MPR, it is irrelevant how a state was reached. What is relevant are the consequences of a state change.
+  The response is a reaction to an applied state change. When the related MPR is invoked, the condition has already been applied. This means that the affected resources have already transitioned into or out of a transition set. For TMPRs, the objective of the response is not to define the reaction to a requested operation but to define the response to an applied operation. In other words, for a set transition-based MPR, it is irrelevant how a state was reached. What is relevant are the consequences of a state change.
    
-   When you configure a set transition-based MPR in MIM, you need to specify the following three settings:
+  When you configure a set transition-based MPR in MIM, you need to specify the following three settings:
    
-   - Transition set
-   - Transition type
-   - Policy workflows
+- Transition set
+- Transition type
+- Policy workflows
    
-   The policy workflows are definitions of the processes that need to be invoked in response to the state change. The most common use cases for state-based MPRs are the granting or revoking of entitlements and provisioning and deprovisioning in external data sources.
+  The policy workflows are definitions of the processes that need to be invoked in response to the state change. The most common use cases for state-based MPRs are the granting or revoking of entitlements and provisioning and deprovisioning in external data sources.
    
-   The following figure outlines the complete architecture of a set transition-based MPR:
+  The following figure outlines the complete architecture of a set transition-based MPR:
 
   ![Set TMPR architecture](media/mim-2016-sp1-terms/e12154d35b48cec676f160930ff33662.gif)
   
@@ -476,14 +476,14 @@ This document is a comprehensive list of terms that are referenced in Microsoft 
 
    The synchronization run profile step has two subtypes:
    
-   - Delta synchronization
-   - Full synchronization
+- Delta synchronization
+- Full synchronization
    
-   During delta synchronization, MIM processes only imported objects, which are those staging objects that are flagged as pending import. This run profile step is useful for processing only those objects that have pending changes, but were not processed during a previous synchronization run.
+  During delta synchronization, MIM processes only imported objects, which are those staging objects that are flagged as pending import. This run profile step is useful for processing only those objects that have pending changes, but were not processed during a previous synchronization run.
    
-   Delta synchronization is used in two predefined run profiles, and behaves slightly differently in each one. The first run profile is Delta Synchronization, where no import from any connected source is performed, but all objects in the connector space are evaluated, and any objects with pending changes are processed. The second run profile is Delta Import and Delta Synchronization combined. This run profile imports only those objects and attributes from the connected data source whose values have changed since the last time the management agent was run. Management agent rules are then reapplied only to objects that have pending changes from the delta import. Objects without pending changes from that delta import are not evaluated.
+  Delta synchronization is used in two predefined run profiles, and behaves slightly differently in each one. The first run profile is Delta Synchronization, where no import from any connected source is performed, but all objects in the connector space are evaluated, and any objects with pending changes are processed. The second run profile is Delta Import and Delta Synchronization combined. This run profile imports only those objects and attributes from the connected data source whose values have changed since the last time the management agent was run. Management agent rules are then reapplied only to objects that have pending changes from the delta import. Objects without pending changes from that delta import are not evaluated.
    
-   During full synchronization, MIM evaluates and applies synchronization rules to all the staging objects in a connector space. Full synchronization should be initiated whenever changes have been applied to the rules of a given environment. Depending on the number of objects in your connector space, this can be a time and resource-intensive operation, so frequent changes to synchronization rules in your production environment should be avoided.
+  During full synchronization, MIM evaluates and applies synchronization rules to all the staging objects in a connector space. Full synchronization should be initiated whenever changes have been applied to the rules of a given environment. Depending on the number of objects in your connector space, this can be a time and resource-intensive operation, so frequent changes to synchronization rules in your production environment should be avoided.
 
 **synchronization filter**: A filter to prevent resources in the metaverse from being transferred to the MIM 2016 database.
 
@@ -524,18 +524,18 @@ This document is a comprehensive list of terms that are referenced in Microsoft 
 
    Examples for workflow activities are:
 
-   - Sending an automated e-mail message to request approval.
-   - Restricting the attributes that a user can see during a custom search.
-   - Validating a new group against AD DS or MIM guidelines.
-   - Adding or removing the object from the scope of a synchronization rule.
+- Sending an automated e-mail message to request approval.
+- Restricting the attributes that a user can see during a custom search.
+- Validating a new group against AD DS or MIM guidelines.
+- Adding or removing the object from the scope of a synchronization rule.
    
-   To address all processing requirements in your environment, the MIM architecture defines three types of workflows:
+  To address all processing requirements in your environment, the MIM architecture defines three types of workflows:
    
-   - Authentication: Performs additional user identity validation before continuing with the request
-   - Authorization: Validates a request through a sequence of activities such as obtaining necessary outside approval before processing a request.
-   - Action: Processes any further activities after the original request has been completed successfully.
+- Authentication: Performs additional user identity validation before continuing with the request
+- Authorization: Validates a request through a sequence of activities such as obtaining necessary outside approval before processing a request.
+- Action: Processes any further activities after the original request has been completed successfully.
    
-   These three workflows make up part of the request processing model.
+  These three workflows make up part of the request processing model.
 
 **workflow definition**: The workflow definition is stored in the XOML format defined by the Windows Workflow Foundation (WF). This defines the activities, the parameters for the activities, and the order in which they should run.
 

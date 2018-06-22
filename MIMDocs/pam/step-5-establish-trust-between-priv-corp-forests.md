@@ -26,9 +26,9 @@ ms.suite: ems
 ---
 # Step 5 – Establish trust between PRIV and CORP forests
 
->[!div class="step-by-step"]
-[« Step 4](step-4-install-mim-components-on-pam-server.md)
-[Step 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Step 4](step-4-install-mim-components-on-pam-server.md)
+> [Step 6 »](step-6-transition-group-to-pam.md)
 
 For each CORP domain such as contoso.local, the PRIV and CONTOSO domain controllers need to be bound by a trust. This lets users in the PRIV domain to access resources on the CORP domain.
 
@@ -76,17 +76,17 @@ On PAMSRV, establish one-way trust with each domain such as CORPDC so that the C
 
 For each existing forest, enable read access to AD by PRIV administrators and the monitoring service.
 
-1.  Sign in to the existing CORP forest domain controller, (CORPDC), as a domain administrator for the top-level domain in that forest (Contoso\Administrator).  
-2.  Launch **Active Directory Users and Computers**.  
-3.  Right click on the domain **contoso.local** and select **Delegate Control**.  
-4.  On the Selected Users and Groups tab, click **Add**.  
-5.  On the Select Users, Computers, or Groups window, click **Locations** and change the location to *priv.contoso.local*.  On the object name, type *Domain Admins* and click **Check Names**. When a popup appears, enter the username *priv\administrator* and its password.  
-6.  After Domain Admins, add "*; MIMMonitor*". Once the names **Domain Admins** and **MIMMonitor** are underlined, click **OK**, then click **Next**.  
-7.  In the list of common tasks, select **Read all user information**, then click **Next** and **Finish**.  
-8.  Close Active Directory Users and Computers.
+1. Sign in to the existing CORP forest domain controller, (CORPDC), as a domain administrator for the top-level domain in that forest (Contoso\Administrator).  
+2. Launch **Active Directory Users and Computers**.  
+3. Right click on the domain **contoso.local** and select **Delegate Control**.  
+4. On the Selected Users and Groups tab, click **Add**.  
+5. On the Select Users, Computers, or Groups window, click **Locations** and change the location to *priv.contoso.local*.  On the object name, type *Domain Admins* and click **Check Names**. When a popup appears, enter the username *priv\administrator* and its password.  
+6. After Domain Admins, add "*; MIMMonitor*". Once the names **Domain Admins** and **MIMMonitor** are underlined, click **OK**, then click **Next**.  
+7. In the list of common tasks, select **Read all user information**, then click **Next** and **Finish**.  
+8. Close Active Directory Users and Computers.
 
-9.  Open a PowerShell window.
-10.  Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:
+9. Open a PowerShell window.
+10. Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -110,6 +110,6 @@ For each existing forest, enable read access to AD by PRIV administrators and th
 
 In the next step, you will move a group to PAM.
 
->[!div class="step-by-step"]
-[« Step 4](step-4-install-mim-components-on-pam-server.md)
-[Step 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Step 4](step-4-install-mim-components-on-pam-server.md)
+> [Step 6 »](step-6-transition-group-to-pam.md)

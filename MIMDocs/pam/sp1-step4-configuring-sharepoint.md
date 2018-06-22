@@ -1,4 +1,4 @@
-﻿---
+---
 title: Step 4 Configuring SharePoint
 description: This is step 4 of configuring PAM with scripts. In this step you configure SharePoint so that it can be used as part of your PAM deployment.
 keywords:
@@ -25,9 +25,9 @@ ms.suite: ems
 
 # Step 4 Configuring SharePoint
 
->[!div class="step-by-step"]
-[« Step 3](sp1-step3-installing-configuring-sql.md)
-[Step 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Step 3](sp1-step3-installing-configuring-sql.md)
+> [Step 5 »](sp1-step5-configuring-pam.md)
 
 SharePoint must be SharePoint Foundation 2013 with SP1.
 
@@ -57,6 +57,6 @@ After installation, the SharePoint Configuration GUI will open, and walk through
 Details can be found in the **Configure SharePoint** section in [Step 3 - Prepare a PAM server](/microsoft-identity-manager/pam/step-3-prepare-pam-server)
 When it completes, run the “.\PAMDeployment.ps1” script again, selecting Option 4 (SharePoint setup) to complete this step.
 
->[!div class="step-by-step"]
-[« Step 3](sp1-step3-installing-configuring-sql.md)
-[Step 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Step 3](sp1-step3-installing-configuring-sql.md)
+> [Step 5 »](sp1-step5-configuring-pam.md)

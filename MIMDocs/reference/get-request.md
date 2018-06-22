@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Get request | Microsoft Docs
@@ -106,7 +106,6 @@ This section provides an example to get the specified MIM CM requests.
 
 ```
 GET /certificatemanagement/api/v1.0/requests/a9b4b42c-cc50-4c9b-89d1-bbc0bcd5a099 HTTP/1.1
-
 ```
 
 ### Example: Response 1

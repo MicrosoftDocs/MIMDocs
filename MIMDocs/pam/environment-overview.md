@@ -34,8 +34,8 @@ You need a minimum of three virtual machines.  If you don't already have an AD d
 
 The drives where the VM disk images will be stored need at least 120 GB of free disk space.  If you plan to deploy for high availability, make sure that the disk subsystem meets the requirements for SQL shared storage.  The shared storage can be in the form of Windows Server Failover Clustering cluster disks, disks on a Storage Area Network (SAN), or file shares on an SMB server.
 
->[!IMPORTANT]
-Storage must be dedicated to the bastion environment. Sharing storage with other workloads outside of the bastion environment is not recommended as it could jeopardize the integrity of the bastion environment.
+> [!IMPORTANT]
+> Storage must be dedicated to the bastion environment. Sharing storage with other workloads outside of the bastion environment is not recommended as it could jeopardize the integrity of the bastion environment.
 
 ## Next steps
 

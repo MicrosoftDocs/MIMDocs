@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Install Microsoft Identity Manager Service and Portal | Microsoft Docs
@@ -26,15 +26,15 @@ ms.suite: ems
 ---
 # Install MIM 2016: MIM Service and Portal
 
->[!div class="step-by-step"]
-[« MIM Synchronization Service](install-mim-sync.md)
-[Synchronize databases »](install-mim-sync-ad-service.md)
-
+> [!div class="step-by-step"]
+> [« MIM Synchronization Service](install-mim-sync.md)
+> [Synchronize databases »](install-mim-sync-ad-service.md)
+> 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **mimservername**
 > - Domain name - **contoso**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 > - Service account name - **MIMService**
 
 If you didn't set up the MIM installation package in the last step, go back and install the Microsoft Identity Manager 2016 components before continuing.
@@ -62,7 +62,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 8. Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
 
-9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example *Pass@word1*, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
+9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example <em>Pass@word1</em>, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
 
     ![Configure the MIM service account image](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -84,25 +84,25 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 ## Configure MIM Password Registration Portal
 
-1.  Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to *Pass@word1*.
+1. Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to <em>Pass@word1</em>.
 
-2.  Specify  *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
+2. Specify  *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
 
-    ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install14.png)
+   ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install14.png)
 
-3.  A warning will appear – read it and click **Next**.
+3. A warning will appear – read it and click **Next**.
 
 4. In the next MIM Password Registration Portal configuration screen, specify  *mim.contoso.com* as the MIM Service Server Address for the Password Registration Portal.
 
 ## Configure MIM Password Reset Portal
 
-1.  Set the service account name for SSPR Registration to *Contoso\MIMSSPR* and its password to *Pass@word1*.
+1. Set the service account name for SSPR Registration to *Contoso\MIMSSPR* and its password to <em>Pass@word1</em>.
 
-2.  Specify  *passwordreset.contoso.com* as the Host Name for MIM Password Reset Portal, and set the port to **80**. Enable the **Open port in firewall** option.
+2. Specify  *passwordreset.contoso.com* as the Host Name for MIM Password Reset Portal, and set the port to **80**. Enable the **Open port in firewall** option.
 
-    ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install15.png)
+   ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install15.png)
 
-3.  A warning will appear – read it and click **Next**.
+3. A warning will appear – read it and click **Next**.
 
 4. In the next MIM Password Registration Portal configuration screen, specify *mim.contoso.com* as the MIM Service Server Address for the Password Reset Portal.
 
@@ -150,7 +150,7 @@ After installation completes, verify that the MIM Portal is active.
 
 > [!NOTE]
 > Optional: At this point you can install MIM add-ins and extensions.
-
->[!div class="step-by-step"]  
-[« MIM Synchronization Service](install-mim-sync.md)
-[Synchronize databases »](install-mim-sync-ad-service.md)
+> 
+> [!div class="step-by-step"]  
+> [« MIM Synchronization Service](install-mim-sync.md)
+> [Synchronize databases »](install-mim-sync-ad-service.md)

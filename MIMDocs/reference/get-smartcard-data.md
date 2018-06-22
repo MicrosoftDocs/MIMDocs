@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Get smart card profiles | Microsoft Docs
@@ -91,14 +91,13 @@ SerialNumber | The smart card's serial number.
 Status | The status of the smart card.
 Uuid | The smart card profile's identifier.
 
-##Example
+## Example
 This section provides an example to get smart card profiles for a user.
 
 ### Example: Request 1
 
 ```
 GET /certificatemanagement/api/v1.0/smartcards?cardid=d1ef6869-5517-42a0-8f05-16ca1a0b834d HTTP/1.1
-
 ```
 
 ### Example: Response 1

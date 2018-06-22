@@ -26,9 +26,9 @@ ms.suite: ems
 ---
 # Step 2 - Prepare the first PRIV domain controller
 
->[!div class="step-by-step"]
-[« Step 1](step-1-prepare-corp-domain.md)
-[Step 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Step 1](step-1-prepare-corp-domain.md)
+> [Step 3 »](step-3-prepare-pam-server.md)
 
 In this step you will create a new domain that will provide the bastion environment for administrator authentication.  This forest will need at least one domain controller, and at least one member server. The member server will be configured in the next step.
 
@@ -58,11 +58,11 @@ Add the Active Directory Domain Services (AD DS) and DNS Server roles.
 
 2. Type the following commands to prepare for a Windows Server Active Directory installation.
 
-  ```PowerShell
-  import-module ServerManager
+   ```PowerShell
+   import-module ServerManager
 
-  Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
-  ```
+   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
+   ```
 
 ### Configure registry settings for SID History migration
 
@@ -82,10 +82,10 @@ In this document, the name priv.contoso.local is used as the domain name of the 
 
 1. In a PowerShell window, type the following commands to create the new domain.  This will also create a DNS delegation in a superior domain (contoso.local) which was created in a previous step.  If you intend to configure DNS later, then omit the `CreateDNSDelegation -DNSDelegationCredential $ca` parameters.
 
-  ```PowerShell
-  $ca= get-credential
-  Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
-  ```
+   ```PowerShell
+   $ca= get-credential
+   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
+   ```
 
 2. When the popup appears, provide the credentials for the CORP forest administrator (e.g., the username CONTOSO\\Administrator and the corresponding password from step 1).
 
@@ -101,69 +101,69 @@ Create the user and service accounts for MIM Service and Portal setup. These acc
 
 2. Launch PowerShell and type the following commands. The password 'Pass@word1' is just an example and you should use a different password for the accounts.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  New-ADUser –SamAccountName MIMMA –name MIMMA
+   New-ADUser –SamAccountName MIMMA –name MIMMA
 
-  Set-ADAccountPassword –identity MIMMA –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMA –NewPassword $sp
 
-  Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
+   New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
 
-  Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
 
-  Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
+   New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
 
-  Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
+   Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
 
-  Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMSync –name MIMSync
+   New-ADUser –SamAccountName MIMSync –name MIMSync
 
-  Set-ADAccountPassword –identity MIMSync –NewPassword $sp
+   Set-ADAccountPassword –identity MIMSync –NewPassword $sp
 
-  Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMService –name MIMService
+   New-ADUser –SamAccountName MIMService –name MIMService
 
-  Set-ADAccountPassword –identity MIMService –NewPassword $sp
+   Set-ADAccountPassword –identity MIMService –NewPassword $sp
 
-  Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SharePoint –name SharePoint
+   New-ADUser –SamAccountName SharePoint –name SharePoint
 
-  Set-ADAccountPassword –identity SharePoint –NewPassword $sp
+   Set-ADAccountPassword –identity SharePoint –NewPassword $sp
 
-  Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SqlServer –name SqlServer
+   New-ADUser –SamAccountName SqlServer –name SqlServer
 
-  Set-ADAccountPassword –identity SqlServer –NewPassword $sp
+   Set-ADAccountPassword –identity SqlServer –NewPassword $sp
 
-  Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
+   New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
 
-  Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
+   Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
 
-  Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
 
-  New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
+   New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
 
-  Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
+   Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
 
-  Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
 
-  Add-ADGroupMember "Domain Admins" SharePoint
+   Add-ADGroupMember "Domain Admins" SharePoint
 
-  Add-ADGroupMember "Domain Admins" MIMService
-  ```
+   Add-ADGroupMember "Domain Admins" MIMService
+   ```
 
 ### Configure auditing and logon rights
 
@@ -207,11 +207,11 @@ You need to set up auditing in order for the PAM configuration to be established
 
 19. Launch a PowerShell window as administrator and type the following command to update the DC from the group policy settings.
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+    ```cmd
+    gpupdate /force /target:computer
+    ```
 
-  After a minute, it will complete with the message “Computer Policy update has completed successfully.”
+    After a minute, it will complete with the message “Computer Policy update has completed successfully.”
 
 
 ### Configure DNS name forwarding on PRIVDC
@@ -222,11 +222,11 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
 
 2. For each domain at the top of each existing forest, type the following command, specifying the existing DNS domain (e.g., contoso.local), and the IP address of the master server of that domain.  
 
-  If you created one domain contoso.local in the previous step, then specify *10.1.1.31* for the CORPDC computer’s virtual network IP address.
+   If you created one domain contoso.local in the previous step, then specify *10.1.1.31* for the CORPDC computer’s virtual network IP address.
 
-  ```PowerShell
-  Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
-  ```
+   ```PowerShell
+   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
+   ```
 
 > [!NOTE]
 > The other forests must also be able to route DNS queries for the PRIV forest to this domain controller.  If you have multiple existing Active Directory forests, then you must also add a DNS conditional forwarder to each of those forests.
@@ -235,12 +235,12 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
 
 1. Using PowerShell, add SPNs so that SharePoint, PAM REST API, and the MIM Service can use Kerberos authentication.
 
-  ```cmd
-  setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
-  setspn -S http/pamsrv PRIV\SharePoint
-  setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
-  setspn -S FIMService/pamsrv PRIV\MIMService
-  ```
+   ```cmd
+   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
+   setspn -S http/pamsrv PRIV\SharePoint
+   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
+   setspn -S FIMService/pamsrv PRIV\MIMService
+   ```
 
 > [!NOTE]
 > The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
@@ -260,14 +260,14 @@ Perform the following steps on PRIVDC as a domain administrator.
 8. On the Select Users, Computers, or Groups window, enter *MIMAdmin* and click **Check Names**. After the names are underlined, click **OK** then **Next**.
 9. Select **custom task**, apply to **This folder**, with **General permissions**.
 10. In the permissions list, select the following:
-  - **Read**
-  - **Write**
-  - **Create all Child Objects**
-  - **Delete all Child Objects**
-  - **Read All Properties**
-  - **Write All Properties**
-  - **Migrate SID History**
-  Click **Next** then **Finish**.
+    - **Read**
+    - **Write**
+    - **Create all Child Objects**
+    - **Delete all Child Objects**
+    - **Read All Properties**
+    - **Write All Properties**
+    - **Migrate SID History**
+    Click **Next** then **Finish**.
 
 11. Once more, right-click on the domain **priv.contoso.local** and select **Delegate Control**.  
 12. On the Selected Users and Groups tab, click **Add**.  
@@ -278,9 +278,9 @@ Perform the following steps on PRIVDC as a domain administrator.
 
 17.	Open a command prompt.  
 18.	Review the access control list on the Admin SD Holder object in the PRIV domains. For example, if your domain was “priv.contoso.local”, type the command
-  ```cmd
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
-  ```
+    ```cmd
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
+    ```
 19.	Update the access control list as needed to ensure that MIM service and MIM component service can update memberships of groups protected by this ACL.  Type the command:
 
 ```cmd
@@ -306,10 +306,10 @@ On another new virtual machine with no software installed, install Windows 8.1 E
 
 4. Using the Control Panel, domain join the PRIVWKSTN computer to the priv.contoso.local domain. This will require providing the PRIV domain administrator credentials. When this completes, restart the computer PRIVWKSTN.
 
-If you want more details, see [securing privileged access workstations](https://technet.microsoft.com/en-us/library/mt634654.aspx).
+If you want more details, see [securing privileged access workstations](https://technet.microsoft.com/library/mt634654.aspx).
 
 In the next step, you will prepare a PAM server.
 
->[!div class="step-by-step"]
-[« Step 1](step-1-prepare-corp-domain.md)
-[Step 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Step 1](step-1-prepare-corp-domain.md)
+> [Step 3 »](step-3-prepare-pam-server.md)

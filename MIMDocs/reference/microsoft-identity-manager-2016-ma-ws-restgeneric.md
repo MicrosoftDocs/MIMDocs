@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Web Service Connector workflow guide for the REST API | Microsoft Docs
