@@ -51,7 +51,7 @@ To view the trace, you can use the [Service Trace viewer tool](https://msdn.micr
 
  ![Service trace viewer screenshot](media/mim-service-dynamic-logging/screen04.png)
 
-Updates: Build 4.6.x.x or greater
+# Updates: Build 4.6.x.x or greater
 
 In build 4.6.x.x We have revised the logging feature to specify the default logging level is **“Warning”**. The service writes messages in two files (“00” and “01” indexes are added before extension). The files are located in “C:\Program Files\Microsoft Forefront Identity Manager\2010\Service” directory. When file exceeds max size the service starts write in another file. If another file exists, it will be overwritten. Default max size of the file is 1 GB. To change default max size, it is necessary to add **“maxOutputFileSizeKB”** parameter with value of max file size in KB into listener (see example below) and restart MIM Service. When the service is started, it appends logs in more recent file (if limit of space is exceeded it overwrite the oldest file). 
 
