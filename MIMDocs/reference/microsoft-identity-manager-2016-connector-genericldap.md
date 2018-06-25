@@ -1,4 +1,4 @@
----
+
 title: Generic LDAP Connector | Microsoft Docs
 description: This article describes how to configure Microsoft's Generic LDAP Connector.
 services: active-directory
@@ -27,7 +27,7 @@ This article describes the Generic LDAP Connector. The article applies to the fo
 For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=717495).
 
 When referring to IETF RFCs, this document is using the format (RFC [RFC number]/[section in RFC document]), for example (RFC 4512/4.3).
-You can find more information at http://tools.ietf.org/html/rfc4500 (you need to replace 4500 with the correct RFC number).
+You can find more information at http://tools.ietf.org/. In the left panel, enter an RFC number in the **Doc fetch** dialog box and test it to make sure it is valid.
 
 ## Overview of the Generic LDAP Connector
 The Generic LDAP Connector enables you to integrate the synchronization service with an LDAP v3 server.
