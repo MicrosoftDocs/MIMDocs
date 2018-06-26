@@ -1,33 +1,23 @@
 ---
-# required metadata
-
 title: Working with the Self-Service Password Reset portal | Microsoft Docs
 description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication.
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/12/2017
+ms.author: billmath
+manager: mtillman
+ms.reviewer: davidste
+ms.date: 06/26/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: mwahl
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
-> [!IMPORTANT]
-> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will be unable to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on planning changes to the MFA by integrating with MFA Server SDK.This will be included in upcoming hotfix in early 2018.
 
 # Working with Self-Service Password Reset
+
+> [!IMPORTANT]
+> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will be unable to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on changes to MFA by integrating with MFA Server SDK.  This will be included in an upcoming hotfix please see [version history](/reference/version-history.md) for announcements.
+
 Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
 
 -   The Self-Service Password Reset portal and Windows Log In screen now let users unlock their accounts without changing their passwords or calling support administrators. Users can get locked out of their accounts for many legitimate reasons, like if they enter an old password, use bilingual computers and have the keyboard set to the wrong language, or attempt to log into a shared workstation already open to someone else's account.
