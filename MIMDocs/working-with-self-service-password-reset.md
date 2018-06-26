@@ -1,40 +1,30 @@
 ---
-# required metadata
-
 title: Working with the Self-Service Password Reset portal | Microsoft Docs
 description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication.
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/12/2017
+ms.author: billmath
+manager: mtillman
+ms.reviewer: davidste
+ms.date: 06/26/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: mwahl
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
-> [!IMPORTANT]
-> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will be unable to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on planning changes to the MFA by integrating with MFA Server SDK.This will be included in upcoming hotfix in early 2018.
 
 # Working with Self-Service Password Reset
+
+> [!IMPORTANT]
+> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will be unable to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on changes to MFA by integrating with MFA Server SDK.  This will be included in an upcoming hotfix please see [version history](/reference/version-history.md) for announcements.
+
 Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
 
--   The Self-Service Password Reset portal and Windows Log In screen now let users unlock their accounts without changing their passwords or calling support administrators. Users can get locked out of their accounts for many legitimate reasons, like if they enter an old password, use bilingual computers and have the keyboard set to the wrong language, or attempt to log into a shared workstation already open to someone else's account.
+-   The Self-Service Password Reset portal and Windows login screen now let users unlock their accounts without changing their passwords or calling support administrators. Users can get locked out of their accounts for many legitimate reasons, like if they enter an old password, use bilingual computers and have the keyboard set to the wrong language, or attempt to login to a shared workstation already open to someone else's account.
 
--   A new authentication gate,  Phone Gate, was added. This enables user authentication via telephone call.
+-   A new authentication gate,  Phone Gate, was added. This gate enables user authentication via a telephone call.
 
--   Support has been added for Microsoft Azure Multi-Factor Authentication (MFA) service. This can be used for either the existing SMS One-Time-Password Gate or the new Phone Gate.
+-   Support has been added for the Microsoft Azure Multi-Factor Authentication (MFA) service. This service can be used for either the existing SMS One-Time-Password Gate or the new Phone Gate.
 
 ## Azure for Multi-Factor Authentication
 Microsoft Azure Multi-Factor Authentication is an authentication service that requires users to verify their sign-in attempts with a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-prem enterprise applications.
@@ -62,12 +52,12 @@ This section assumes that you have downloaded and completed the deployment of th
 
     -   Configuring Synchronization Rules in the MIM Portal to allow user data synchronization and facilitate sync-based activities in the MIM Service.
 
--   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client is deployed on the server or on a separate client computer.
+-   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows login-integrated client is deployed on the server or on a separate client computer.
 
 ## Prepare MIM to work with multi-factor authentication
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
-In the next section, you will set up your Azure MFA provider in Microsoft Azure Active Directory. As part of this, you’ll generate a file that includes the authentication material which MFA requires to be able to contact Azure MFA.  In order to proceed, you will need an Azure subscription.
+In the next section, you will set up your Azure MFA provider in Microsoft Azure Active Directory. You will generate a file that includes the authentication material which MFA requires to be able to contact Azure MFA.  In order to proceed, you will need an Azure subscription.
 
 ### Register your multi-factor authentication provider in Azure
 
@@ -91,7 +81,7 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 7.  In the new window, on the left panel under **Configure**, click on **Settings**.
 
-8.  Under **Fraud Alert**, uncheck **Block user when fraud is reported. This is done in order to prevent blocking the entire service.
+8.  Under **Fraud Alert**, uncheck **Block user when fraud is reported. Unchecking the box is to prevent blocking the entire service.
 
 9. In the **Azure Multi-Factor Authentication** window that opens, click **SDK** under **Downloads** in the menu at the left.
 
@@ -123,13 +113,13 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 9. In the `<username>` element enter any username.
 
-10. In the `<DefaultCountryCode>` element enter your default country code. In case phone-numbers are registered for users without a country code, this is the country code they will get. In case a user has an international country code, it has to be included in the registered phone number.
+10. In the `<DefaultCountryCode>` element enter your default country code. In cases where phone-numbers are registered for users without a country code, users will get this code. In cases where a user has an international country code, it has to be included in the registered phone number.
 
 11. Save the MfaSettings.xml file with the same name in the same location.
 
 #### Configure the Phone gate or the One-Time Password SMS Gate
 
-1.  Launch Internet Explorer and navigate to the MIM Portal, authenticating as the MIM administrator, then click on  **Workflows** in the left hand navigation bar.
+1.  Launch Internet Explorer and navigate to the MIM Portal, authenticating as the MIM administrator, then click on  **Workflows** in the left-hand navigation bar.
 
     ![MIM Portal navigation image](media/MIM-SSPR-workflow.jpg)
 
@@ -162,7 +152,7 @@ There are two ways a user can use the password reset and account unlock function
 
 By installing the MIM Add-ins and Extensions on a domain joined computer connected over your organizational network to the MIM Service, users can recover from a forgotten password at the desktop login experience.  The following steps will walk you through the process.
 
-#### Windows desktop login integrated password reset
+#### Windows desktop login-integrated password reset
 
 1.  If your user enters the wrong password several times, in the sign-in screen, they will have the option to click **Problems logging in?** .
 
