@@ -1,6 +1,5 @@
 ---
 # required metadata
-
 title: MIM Service Dynamic Logging | Microsoft Docs
 description: Enable MIM service dynamic logging without having to restart the management service
 keywords:
