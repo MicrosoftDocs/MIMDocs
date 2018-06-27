@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/30/2017
+ms.date: 06/30/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -20,6 +20,89 @@ ms.assetid:
 
 The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then decide whether you need to update to the newest version or not.
 
+## Version 4.5.26.0
+- Status: June 30, 2018
+- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=)
+- [Release KB4073679](https://support.microsoft.com/en-us/help/4073679?preview)
+
+> [!IMPORTANT]
+>- .NET Framework 4.6 is also required for the installer <br>
+>- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://www.microsoft.com/en-us/download/confirmation.aspx?id=40784&6B49FDFB-8E5B-4B07-BC31-15695C5A2143=1) is required<br>
+>- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- *Denotes New Enhancement 
+
+#### Synchronization service
+- *Support for Group Managed Service Accounts
+- *Visual Studio Support (Visual Studio 2013,Visual Studio 2015,Visual Studio 2017)
+- Updates to MIISACTIVATE.EXE, gMSA Support added 
+    - non-gMSA: Miisactivate.exe c:\configBU\miiserver_01.bin “contoso\mimSyncService” *
+    - gMSA: Miisactivate.exe c:\configBU\miiserver_01.bin “contoso\mimSyncService”
+- Updates to MIISKMU.exe, gMSA Support added 
+    - non-gMSA:MIISKMU.exe /e c:\configBU\miiserver_02.bin” /u:”contoso\mimSyncService”
+    - gMSA:MIISKMU.exe /e c:\configBU\miiserver_02.bin” /u:”contoso\mimSyncService” *
+- Updated partition information is saved as expected when the Refresh then OK buttons are clicked
+- When indexing an Indexable String attribute is too long an Unexpected Error was returned, more descriptive error message is now returned
+- Creating a Text File management agent when the MIM Synchronization Service is installed on Windows Server 2016, some text encoding options, including Unicode were unavailable
+- MIM Service MA If an export error message contains an invalid character, this causes corruption in the run history entries. This build we removed from the error message before being saved to the connectorspace object and run history
+
+#### MIM service
+- *Support for Group Managed Service Accounts
+- *Improved Language support to new defined standard
+- *FIMAutomation Export-FIMConfig PowerShell cmdlet the “-PamConfig” argument is available to force the PAM configuration objects to be exported
+- *FIMAutomation Export-FIMConfig PowerShell cmdlet the “-request” parameter has been added
+- *Boolean attributes are always set to NULL upon binding creation , Previous Boolean before hotfix will not be updated
+    - Implemented initialization of new MIM Boolean attributes to false on creation new object
+    - Implemented initialization of new MIM Boolean attributes to false on adding new Boolean attribute binding to the resource
+- Customer Experience Improvement Program setting is maintained to false 
+- In hotfix cases the Office 365 setting would be cleared , The encrypted password for the MIM Service’s Exchange Online mailbox is not changed
+- *There was no limit to the MIM Service log file created, Updated logging default setting and implemented circular logging capability
+
+#### Privilege Access Management 
+- *Support for Group Managed Service Accounts
+- *Improved Language support to new defined standard
+- Objects that use unmanaged resources are not cleared on time.  these objects will be  properly cleaned up
+- *New-PAMRole PowerShell cmdlet the  “-disableAutoApproveIfOwner”  deny self-approval for the role
+- * Get-PamRequest PowerShell cmdlet the  “-CreatedFrom” allows for the filtering od PAM specific request
+- *PAM Module Additions
+    - Get-PAMSet
+    - Add-PAMSetMember
+    - Remove-PAMSetMember
+- The warning (Exception: System.ObjectDisposedException: Cannot access a disposed object) will no longer appear in the PAM event log
+- Set-PAMUser cmdlet is able to change the PrivAccountName without the delete
+- New-PamRole now validates that the “available to” date is greater than the “available from” date
+- The “Available From” and “Available To” values are returned by the Get-PAMRole PowerShell cmdlet
+- The Get-PamRequest cmdlet filter is now properly
+- *Set-PamGroup cmdlet is now able to update the Active Directory shadow principal group object
+- Remove-PamUser PowerShell cmdlet fails with an unclear error message, if the user is linked to a Role as a candidate. Now client-side validation was added to the cmdlet, and the exception returned was clarified
+- Change Mode PAM accounts are not exposed for configuration
+    - PAM Rest API account
+    - PAM Component service account
+    - PAM Monitoring service account
+
+#### Microsoft Identity Portal
+- *Support for Group Managed Service Accounts
+- *Improved Language support to new defined standard
+- Identity Picker control, the control seems to dynamically grow its width rather than wrapping the text
+- Portal, popup dialogs aren’t displayed properly when viewing in Internet Explorer (IE) 10
+- Cyrillic symbols in the title bar text is displayed correctly
+- Popup windows no longer have the extra scroll bar displaying, when viewed in Internet Explorer
+- Failed “Import Workflow Definition” properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition
+- <httpRuntime enableVersionHeader="false" /> added to default web.config
+- Special characters in the distinguishedName no longer prevents Self-Service Password Reset from resetting the user’s password in the Active Directory
+- Improvements in the sentences are properly localized in the display
+- MIM Add-in for Outlook includes a copy of the missing Outlook interop binaries
+
+#### Certificate Management
+- Renewing a virtual smart card through the MIM CM Modern App, user receives Forbidden exception
+- *Improved Language support to new defined standard
+- PIN Utility “CLM has encountered an error while trying to change Smart Card PIN.  Wrong number of Arguments or Invalid Property Assignment.”
+- Update to the MIM Certificate Authority Modules from 4.4.1302.0 to a build later than 4.4.1459, the setup fails
+- Modern App for Renew, Enroll, and Replace operations, the request history doesn’t contain all request status items as are recorded
+- Online Update doesn’t complete and returns the exception “Record has been updated or deleted by another user.”  
+- The “Download Certificate” link in the Certificate Management Portal, the certificate download (.cer file) was too large
+- MIM Certificate Management Bulk Client will work with both TLS 1.1 and TLS 1.2.  
+
+ 
 ## Version 4.4.1749.0
 
 - Status: November 30, 2017
