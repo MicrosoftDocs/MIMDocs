@@ -1,3 +1,23 @@
+---
+title: "Updating MIM Specific Services accounts for notification and approvals when gMSA is enabled | Microsoft Docs"
+description: Topic describing the basic steps to configure gMSA.
+author: fimguy
+ms.author: billmath
+manager: mtillman
+ms.date: 06/27/2018
+ms.topic: article
+ms.service: microsoft-identity-manager
+ms.technology: security
+---
+
+# Update of MIM Specific Service account for notifications to gMSA
+===========================================
+
+Update the password to stored accounts, below is the powershell so customers do not have to run change mode
+
+Powershell: Office365 Account Update:
+
+```powershell
 #O365update.ps1
 #author&contributers: David Steadman, Anthony Ho
 ###############################
@@ -116,3 +136,4 @@ else
     Write-Host ($encryptedData) -ForegroundColor DarkGreen
     Set-ItemProperty -Path HKLM:"\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service" -Name EncryptedExchangeOnlineAccountPassword -Value $encryptedData   
 }
+```

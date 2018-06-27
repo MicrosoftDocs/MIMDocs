@@ -256,8 +256,7 @@ Note:
 
 ![cid:image014.jpg\@01D36F53.303D5190](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
 
-- To update the password, we provided a script download here so customer will not have to
-    - run change mode
+- To update the password, we provided a script [download here](microsoft-identity-manager-2016-gmsascript.md) so customer will not have to run change mode
 
 - To encrypt Exchange password the installer creates additional service and
     - runs it under the managed account. Following messages will be added in
