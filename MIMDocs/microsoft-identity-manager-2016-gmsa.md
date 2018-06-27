@@ -11,7 +11,6 @@ ms.technology: security
 ---
 
 # Conversion of MIM Specific Services to gMSA
-===========================================
 
 This Guide will step through the basic steps to configure gMSA for supported
 services. The process to convert to gMSA is easy once you pre-configure your
