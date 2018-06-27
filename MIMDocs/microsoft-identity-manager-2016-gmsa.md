@@ -21,16 +21,16 @@ Hotfix Required: \<link to latest KB\>
 
 Supported:
 
--   MIM Syncronization service(FIMSynchronizationService)
+-   MIM Synchronization service(FIMSynchronizationService)
 -   MIM Service(FIMService)
 -   MIM Password Registration
 -   MIM Password Reset
 -   PAM Monitoring Service(PamMonitoringService)
--   PAM Component Service(PrivilegeManagementComponentService)
+-   PAM Component Service (PrivilegeManagementComponentService)
 
 Not Supported:
 
--   MIM Portal is not supported as this is part of the sharepoint enviroment and you would need to deploy in farm mode and [Configure automatic password change in SharePointServer](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
+-   MIM Portal is not supported it is part of the sharepoint environment and you would need to deploy in farm mode and [Configure automatic password change in SharePointServer](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
 -   All Management Agents
 -   Microsoft Certificate Management
 -   BHOLD
@@ -49,25 +49,25 @@ Reading needed to complete setup and understand
 Fist Step on your windows domain controller
 
 1.  Create the Key Distribution Services(KDS) Root Key (only once per domain) if
-    needed. This is used by the KDS service on DCs (along with other
+    needed. Root Key is used by the KDS service on DCs (along with other
     information) to generate passwords.
 
     -   Add-KDSRootKey –EffectiveImmediately
 
     -   "–EffectiveImmediately" means wait up to \~10 hours / need to replicate
-        to all DC. This was approximately 1 hour for 2 domain controllers.
+        to all DC. This was approximately 1 hour for two domain controllers.
 
 ![](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
 ## Synchronization Service
 -----------------------
 
-1.  Fist Step we create a group call “MIMSync_Servers” and add all
+1.  Fist Step creates a group call “MIMSync_Servers” and add all
     Synchronization servers to this group.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
-2.  From windows PowerShell, we then executed this command as domain admin with
+2.  From windows PowerShell, then execute below command as domain admin with
     computer account already joined to the domain
 
     -   New-ADServiceAccount -Name MIMSyncGMSAsvc -DNSHostName
@@ -85,8 +85,8 @@ Fist Step on your windows domain controller
     -   Set-ADServiceAccount -Identity MIMSyncGMSAsvc -ServicePrincipalNames
         \@{Add="PCNSCLNT/mimsync.contoso.com"}
 
-3. Next on the synchronization service we want to backup the encryption key as
-    this will be requested upon change mode install
+3. Next on the synchronization services be sure to backup the encryption key as
+    it will be requested upon change mode install
 
     -   On the Server that the Synchronization Service is installed on locate
         the Synchronization Service Key Management tool
@@ -107,21 +107,21 @@ Fist Step on your windows domain controller
 
         -   Domain - Domain that the Synchronization Service account is apart of
 
-    -   Once you entered the information click on **Next**
+    -   Click on **Next**
 
-    -   If you entered something incorrectly you will receive the following
+    -   If you entered something incorrectly, you will receive the following
         error
 
-    -   Once you have successfully entered the Account information you will be
+    -   Now you have successfully entered the Account information, you will be
         presented with an option to change the destination (export file
-        location) of the back up encryption key
+        location) of the backup encryption key
 
         -   By Default, the export file location
             is **C:\\Windows\\system32**\\miiskeys-1.bin.
 
 4. Install Microsoft Identity Manager SP1 Synchronization Service build
-    4.4.1302.0, This can be found on Volume
-    License Download Center or MSDN Download Site. At the end of the install make sure you save keyset
+    4.4.1302.0. you can be found on Volume
+    License Download Center or MSDN Download Site. Once you completed install make sure, you save keyset
     miiskeys.bin.
 
 ![](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
@@ -129,8 +129,8 @@ Fist Step on your windows domain controller
 
 5. Install latest [hotfix 4.5.x.x](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/version-history) or later.
 
-- Once Patched Stop FIM Syncronization service.
-- Control Panel Programs Programs and Features Microsoft Identity Manager
+- Once Patched Stop FIM Synchronization service.
+- Control Panel Programs and Features Microsoft Identity Manager
 - Synchronization service Change -\> Next -\> Configure -\> Next
 
 ![](media/dc98c011bec13a33b229a0e792b78404.png)
@@ -180,18 +180,18 @@ configuration has been done.*
 
 2.  Add account for MIM Service in Sync Groups. It is necessary for SSPR.
 
-![cid:image003.jpg\@01D36F53.303D5190](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
+![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-3.  **NOTE**. We found issue that services that use managed account hang after
+3.  **NOTE**.  Known issue that services that use managed account hang after
     restarting server due to  Microsoft Key Distribution Service is not started
-    after restarting the Windows. After that Service could not be started and
+    after restarting the Windows. Service could not be started and
     Windows could not be restarted too. The issue is reproducible at least on
     Windows Server 2012 R2. Workaround for this issue is run command 
 
 -   **sc triggerinfo kdssvc start/networkon**
 
     to start the Microsoft Key Distribution Service when the network is on
-    (typically very early in the boot cycle).
+    (typically early in the boot cycle).
 
     See discussion about similar issue:
     <https://social.technet.microsoft.com/Forums/en-US/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>
@@ -216,7 +216,7 @@ configuration has been done.*
 
 ![cid:image007.png\@01D36EB7.562E6CF0](media/d350bc13751b2d0a884620db072ed019.png)
 
-8.  On “Configure Privileged Access Management REST API” page type Application
+8.  On “Configure Privileged Access Management REST API” page,  type Application
     Pool Account Name with \$ symbol at the end and leave Password field empty.
 
 ![](media/88db2f6f291fff8bcdd0da5d538aafc6.png)
@@ -256,7 +256,7 @@ Note:
 
 ![cid:image014.jpg\@01D36F53.303D5190](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
 
-- To update the password, we provided a script [download here](Exchange.ps1.txt) so customers will not have to
+- To update the password, we provided a script download here so customer will not have to
     - run change mode
 
 - To encrypt Exchange password the installer creates additional service and
