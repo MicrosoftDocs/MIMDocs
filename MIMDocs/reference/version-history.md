@@ -27,7 +27,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
->- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://www.microsoft.com/en-us/download/confirmation.aspx?id=40784&6B49FDFB-8E5B-4B07-BC31-15695C5A2143=1) is required<br>
+>- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
 >- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
