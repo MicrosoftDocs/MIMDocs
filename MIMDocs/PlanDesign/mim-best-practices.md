@@ -245,7 +245,32 @@ set definitions. After the data load is completed, create the additional sets
 required for your deployment. Use the Run-On Policy update setting on the action
 workflows to apply those policies retroactively on the loaded data.
 
-### Step 3: Configure and populate the FIM Service with external identity data
+### Step 3: Reduce request and workflow instance retention period
+
+
+During the initial load process, a very large number of requests can arise 
+which are stored in the standard configuration for 30 days. However, this high number 
+can lead to performance problems, so make sure that the requests are removed from 
+the database shortly after the initial load.
+
+For this purpose, the retention period must be reduced from 30 days to a few days.
+
+1.  Open the MIM Portal.
+
+2.  Administration.
+
+3.  All Resources.
+
+4.  System Resource Retention Configuration.
+
+5.  Request and workflow instance retention period configuration.
+
+6.  Extended Attributes.
+
+Changes to the retention period only affect future requests, requests already stored
+in the database retain the retention period valid at the time of the request.
+
+### Step 4: Configure and populate the FIM Service with external identity data
 
 
 At this point you should follow the procedures described in the How Do I
@@ -280,7 +305,7 @@ perform the following steps:
 4.  Delta import on all affected target management agents with staged export
     operations.
 
-### Step 4: Apply your full MIM configuration
+### Step 5: Apply your full MIM configuration
 
 
 Once your initial data load is completed, you should apply the full MIM
@@ -291,7 +316,34 @@ MPRs, and workflows. For any policies that you need to apply retroactively to
 all existing objects in the system, use the run-on policy update setting on
 action workflows to apply those policies retroactively on the loaded data.
 
-### Step 5: Reconfigure SQL to previous settings
+### Step 6: Check "FIM_DeleteExpiredSystemObjectsJob" SQL Job and reconfigure request and workflow instance retention period
+
+
+The retention period should be set back to the standard, the 
+customization procedure is identical to that described above.
+
+Depending on the data volume of the initial load, it is possible that the SQL job 
+"FIM_DeleteExpiredSystemObjectsJob" requires a lot of transaction log memory, 
+even if the Recovery Model is set to Simple. On the SQL server it should be ensured
+that this job was successfully completed several times, the job can also be started 
+manually as it cleans up to 20,000 requests per run. If necessary, more memory space 
+for the Transaciton Log must be made available for a short time.
+
+The job can be checked at the following point:
+
+1.  Open the SQL Server Management Studio.
+
+2.  Connect to the MIM Portal SQL Instance ("FIMService" DB).
+
+3.  Expand the 'SQL Server Agent'
+
+4.  Expand 'Jobs'
+
+5.  Right-click „FIM_DeleteExpiredSystemObjectsJob“
+
+6.  View History
+
+### Step 7: Reconfigure SQL to previous settings
 
 
 Remember to change the SQL setting to its normal settings. This includes:
