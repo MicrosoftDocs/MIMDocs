@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 06/30/2018
+ms.date: 07/10/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -51,9 +51,12 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 - *FIMAutomation Export-FIMConfig PowerShell cmdlet the “-PamConfig” argument is available to force the PAM configuration objects to be exported
 - *FIMAutomation Export-FIMConfig PowerShell cmdlet the “-request” parameter has been added
 - *Boolean attributes are always set to NULL upon binding creation , Previous Boolean before hotfix will not be updated
+> [!IMPORTANT]
+>This can be a breaking change if preforming a configuration migration. Configuration should be evaluated and updated for new feature as configuration migration is considered a new 
     - Implemented initialization of new MIM Boolean attributes to false on creation new object
     - Implemented initialization of new MIM Boolean attributes to false on adding new Boolean attribute binding to the resource
 - Customer Experience Improvement Program setting is maintained to false 
+- MIM Service installation failed with Database Upgrade error: Cannot insert the value NULL into column 'Name' if not default database name is used
 - In hotfix cases the Office 365 setting would be cleared , The encrypted password for the MIM Service’s Exchange Online mailbox is not changed
 - *There was no limit to the MIM Service log file created, Updated logging default setting and implemented circular logging capability
 
