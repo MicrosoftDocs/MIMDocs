@@ -46,7 +46,7 @@ Reading needed to complete setup and understand
 -   <https://technet.microsoft.com/en-us/library/jj128430(v=ws.11).aspx>
 
 Fist Step on your windows domain controller
-
+<!-- "Fist step" appears twice in this document (Previous line and line 64). Should it be "First Step" or is good as is? -->
 1.  Create the Key Distribution Services(KDS) Root Key (only once per domain) if
     needed. Root Key is used by the KDS service on DCs (along with other
     information) to generate passwords.
