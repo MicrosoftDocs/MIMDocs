@@ -3,6 +3,7 @@ layout: LandingPage
 title: Microsoft Identity Manager Documentation | Microsoft Docs
 description: Learn how to use Microsoft Identity Manager.
 ---
+
 # Microsoft Identity Manager Documentation
 
 Microsoft Identity Manager 2016 binds Microsoft's identity and access management solutions together by
@@ -67,11 +68,14 @@ LOB applications and SaaS solutions.
 </ul>
 
 ---
-<br>
->[!Warning]
-Forefront Identity Manager (FIM) mainstream support is ending 10/10/2017. Please [upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) to Microsoft Identity Manager 2016. More information: </br>  - The FIM lifecycle information is provided  [here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010) </br> - For information on public releases of identity products review the post titled [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 
-<h2>Reference</h2>
+> [!WARNING]
+> Forefront Identity Manager (FIM) mainstream support is ending 10/10/2017. Please [upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) to Microsoft Identity Manager 2016. More information:
+> - The FIM lifecycle information is provided  [here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+> - For information on public releases of identity products review the post titled [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
+
+## Reference
+
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">
@@ -129,7 +133,8 @@ Forefront Identity Manager (FIM) mainstream support is ending 10/10/2017. Please
     </li>
 </ul>
 
-<h2>Solutions</h2>
+## Solutions
+
 <ul class="panelContent cardsW">
     <li>
         <div class="cardSize">
