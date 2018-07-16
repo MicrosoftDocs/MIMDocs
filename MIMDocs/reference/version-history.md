@@ -23,7 +23,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 ## Version 4.5.26.0
 - Status: June 30, 2018
 - [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=57078)
-- [Release KB4073679](https://support.microsoft.com/en-us/help/4073679)
+- [KB Release KB4073679](https://support.microsoft.com/en-us/help/4073679)
 
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
