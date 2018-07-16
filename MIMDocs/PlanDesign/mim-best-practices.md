@@ -257,17 +257,17 @@ For this purpose, the retention period must be reduced from 30 days to a few day
 
 1.  Open the MIM Portal.
 
-2.  Administration.
+2.  Select Administration.
 
-3.  All Resources.
+3.  Expand All Resources.
 
-4.  System Resource Retention Configuration.
+4.  Expand System Resource Retention Configuration.
 
-5.  Request and workflow instance retention period configuration.
+5.  Select "Request and workflow instance retention period configuration."
 
-6.  Extended Attributes.
+6.  View Extended Attributes.
 
-Changes to the retention period only affect future requests, requests already stored
+Changes to the retention period only affect future requests. Requests already stored
 in the database retain the retention period valid at the time of the request.
 
 ### Step 4: Configure and populate the FIM Service with external identity data
@@ -324,8 +324,8 @@ customization procedure is identical to that described above.
 
 Depending on the data volume of the initial load, it is possible that the SQL job 
 "FIM_DeleteExpiredSystemObjectsJob" requires a lot of transaction log memory, 
-even if the Recovery Model is set to Simple. On the SQL server it should be ensured
-that this job was successfully completed several times, the job can also be started 
+even if the Recovery Model is set to Simple. On the SQL Server, it should be ensured
+that this job was successfully completed several times. The job can also be started 
 manually as it cleans up to 20,000 requests per run. If necessary, more memory space 
 for the Transaciton Log must be made available for a short time.
 
@@ -335,13 +335,13 @@ The job can be checked at the following point:
 
 2.  Connect to the MIM Portal SQL Instance ("FIMService" DB).
 
-3.  Expand the 'SQL Server Agent'
+3.  Expand the SQL Server Agent.
 
-4.  Expand 'Jobs'
+4.  Expand Jobs.
 
-5.  Right-click „FIM_DeleteExpiredSystemObjectsJob“
+5.  Right-click "FIM_DeleteExpiredSystemObjectsJob."
 
-6.  View History
+6.  View History.
 
 ### Step 7: Reconfigure SQL to previous settings
 
