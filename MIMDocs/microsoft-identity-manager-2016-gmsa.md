@@ -45,8 +45,8 @@ Reading needed to complete setup and understand
 
 -   <https://technet.microsoft.com/en-us/library/jj128430(v=ws.11).aspx>
 
-Fist Step on your windows domain controller
-<!-- "Fist step" appears twice in this document (Previous line and line 64). Should it be "First Step" or is good as is? -->
+First Step on your windows domain controller
+
 1.  Create the Key Distribution Services(KDS) Root Key (only once per domain) if
     needed. Root Key is used by the KDS service on DCs (along with other
     information) to generate passwords.
@@ -61,7 +61,7 @@ Fist Step on your windows domain controller
 ## Synchronization Service
 -----------------------
 
-1.  Fist Step creates a group call “MIMSync_Servers” and add all
+1.  Create a group call “MIMSync_Servers” and add all
     Synchronization servers to this group.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
