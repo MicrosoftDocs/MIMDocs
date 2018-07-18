@@ -27,4 +27,4 @@ ms.suite: ems
 ---
 
 # Release Notes for MIM 2016
-No release notes at this time.
+The Microsoft Identity Manager team regularly releases updates. See the [MIM version release history](reference/version-history.md).
