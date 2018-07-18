@@ -61,7 +61,7 @@ First Step on your windows domain controller
 ## Synchronization Service
 -----------------------
 
-1.  Create a group call “MIMSync_Servers” and add all
+1.  Create a group called “MIMSync_Servers” and add all
     Synchronization servers to this group.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
