@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Request certificates in Certificate Manager using templates | Microsoft Docs

@@ -62,8 +62,8 @@ With BHOLD Suite, you can specify and organize roles within your organization, m
 
 Organizational units (OrgUnits) are the principal means by which users are organized in the BHOLD role model. Every user must belong to at least one OrgUnit. (In fact, when a user is removed from the last organizational unit in BHOLD, the user's data record is deleted from the BHOLD database.)
 
->[!Important]
-Organizational units in the BHOLD role model should not be confused with organizational units in Active Directory Domain Services (AD DS). Typically, the organizational unit structure in BHOLD is based on the organization and policies of your business, not the requirements of your network infrastructure.
+> [!Important]
+> Organizational units in the BHOLD role model should not be confused with organizational units in Active Directory Domain Services (AD DS). Typically, the organizational unit structure in BHOLD is based on the organization and policies of your business, not the requirements of your network infrastructure.
 
 Although it is not required, in most cases organizational units are structured in BHOLD to represent the hierarchical structure of the actual organization, similar to the one below:
 
@@ -135,8 +135,8 @@ The first step in using the BHOLD Model Generator is to import these files to lo
 - Proposed roles that are linked to an organizational unit but must be activated for specific users
 - Ownership roles that grant a user control over organizational units and roles for which an owner is not specified in the imported files
 
->[!Important]
-When uploading files, select the **Retain Existing Model** check box only in test environments. In production environments, you must use Model Generator to create the initial role model. You cannot use it to modify an existing role model in the BHOLD database.
+> [!Important]
+> When uploading files, select the **Retain Existing Model** check box only in test environments. In production environments, you must use Model Generator to create the initial role model. You cannot use it to modify an existing role model in the BHOLD database.
 
 After Model Generator creates these roles in the role model, you can then export the role model to the BHOLD database in the form of an XML file.
 
@@ -261,8 +261,8 @@ The rules filters can be of three types, and use operators specific to their typ
   - **Can only have any and Can only have all**
   - **Exclusively have any and Exclusively have all**
 
->[!Note]
-Restrictive filters can use the indicated operators to test a key against a set of multiple values.
+> [!Note]
+> Restrictive filters can use the indicated operators to test a key against a set of multiple values.
 
 For example, if you wanted to test the implementation of a segregation of duties (SoD) policy that states that no user who has Request Payment permission is also to have Approve Payment permission, you could construct a rule like the following:
 

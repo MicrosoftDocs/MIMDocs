@@ -34,9 +34,10 @@ Gets parameters for client-side certificate request generation.
 
 ## Request
 
-Method  |Request URL
----------|---------
-GET     |/CertificateManagement/api/v1.0/requests/{requestid}/certificaterequestgenerationoptions
+| Method |                                       Request URL                                        |
+|--------|------------------------------------------------------------------------------------------|
+|  GET   | /CertificateManagement/api/v1.0/requests/{requestid}/certificaterequestgenerationoptions |
+
 ### URL parameters
 
 Parameter | Description
@@ -90,7 +91,6 @@ This section provides an example to get the generation options for a certificate
 
 ```
 GET /certificatemanagement/api/v1.0/requests/a9b4b42c-cc50-4c9b-89d1-bbc0bcd5a099/certificaterequestgenerationoptions HTTP/1.1
-
 ```
 
 ### Example: Response

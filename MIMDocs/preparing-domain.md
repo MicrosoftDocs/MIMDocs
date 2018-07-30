@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Set up a domain for Microsoft Identity Manager 2016 | Microsoft Docs
@@ -27,8 +27,8 @@ ms.suite: ems
 
 # Set up a domain
 
->[!div class="step-by-step"]
-[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
+> [!div class="step-by-step"]
+> [Windows Server 2016 »](prepare-server-ws2016.md)
 
 Microsoft Identity Manger (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.
 
@@ -40,9 +40,12 @@ All the components of your MIM deployment need their own identities in the domai
 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
-> - Domain controller name - **mimservername**
+> - Domain controller name - **corpdc**
 > - Domain name - **contoso**
-> - Password - **Pass@word1**
+> - MIM Service Server name - **corpservice**
+> - MIM Sync Server name - **corpsync**
+> - SQL Server name - **corpsql**
+> - Password - <strong>Pass@word1</strong>
 
 1. Sign in to the domain controller as the domain administrator (*e. g. Contoso\Administrator*).
 
@@ -51,6 +54,9 @@ All the components of your MIM deployment need their own identities in the domai
     ```PowerShell
     import-module activedirectory
     $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+    New-ADUser –SamAccountName MIMINSTALL –name MIMMA
+    Set-ADAccountPassword –identity MIMINSTALL –NewPassword $sp
+    Set-ADUser –identity MIMINSTALL –Enabled 1 –PasswordNeverExpires 1
     New-ADUser –SamAccountName MIMMA –name MIMMA
     Set-ADAccountPassword –identity MIMMA –NewPassword $sp
     Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
@@ -72,6 +78,9 @@ All the components of your MIM deployment need their own identities in the domai
     New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
     Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
     Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+    New-ADUser –SamAccountName MIMpool –name BackupAdmin
+    Set-ADAccountPassword –identity MIMPool –NewPassword $sp
+    Set-ADUser –identity MIMPool –Enabled 1 -PasswordNeverExpires 1
     ```
 
 3.  Create security groups to all the groups.
@@ -84,15 +93,24 @@ All the components of your MIM deployment need their own identities in the domai
     New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
+    Add-ADGroupmember -identity MIMSyncAdmins -Members MIMInstall
     ```
 
 4.  Add SPNs to enable Kerberos authentication for service accounts
 
     ```CMD
-    setspn -S http/mimservername.contoso.local Contoso\SharePoint
-    setspn -S http/mimservername Contoso\SharePoint
-    setspn -S FIMService/mimservername.contoso.local Contoso\MIMService    
+    setspn -S http/mim.contoso.com Contoso\mimpool
+    setspn -S http/mim Contoso\mimpool
+    setspn -S http/passwordreset.contoso.com Contoso\mimsspr
+    setspn -S http/passwordregistration.contoso.com Contoso\mimsspr
+    setspn -S FIMService/mim.contoso.com Contoso\MIMService
+    setspn -S FIMService/corpservice.contoso.com Contoso\MIMService
     ```
+5.  During Setup we need to add the following DNS 'A' records for proper name resolution
 
->[!div class="step-by-step"]
-[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
+- mim.contoso.com Point to corpservice physical ip address
+- passwordreset.contoso.com Point to corpservice physical ip address
+- passwordregistration.contoso.com Point to corpservice physical ip address
+
+> [!div class="step-by-step"]
+> [Windows Server 2016 »](prepare-server-ws2016.md)

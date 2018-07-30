@@ -1,9 +1,20 @@
 ---
 title: "The Microsoft Identity Manager management agent for Microsoft Graph | Microsoft Docs"
 author: fimguy
+description: Microsoft Graph (preview) is external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications
+keywords:
+author: fimguy
+ms.author: davidste
+manager: bhu
+ms.date: 04/25/2018
+ms.topic: article
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ---
 The Microsoft Identity Manager management agent for Microsoft Graph (Public Preview)
----
+=======================================================================================
+
 Summary 
 =======
 
@@ -20,7 +31,7 @@ B2B account lifecycle management
 
 The initial scenario in preview for the Microsoft Identity Manager management agent for Microsoft Graph (preview) is external user AD account lifecycle
 management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish)
+Integrated Authentication or Kerberos-based applications, via the [Azure AD application](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 proxy or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes
 
 Additional scenarios may be added in the future and [Documented here](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
@@ -123,10 +134,10 @@ Installing the connector
 
 Before you use the Connector, make sure you have the following on the
 synchronization server: Microsoft .NET 4.5.2 Framework or later Microsoft
-Identity Manager 2016 SP1 Must use hotfix 4.4.3671.0 or later KB3092178.
+Identity Manager 2016 SP1 Must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
 
-For MIM2016 and FIM2010R2, the Connector is available as a download from the
-Microsoft Download Center.
+Connectors for Microsoft Identity Manager 2016 SP1, the Graph Connector is available as a download from the
+[Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=51495).
 
 Connector configuration
 =======================
@@ -161,7 +172,7 @@ Troubleshooting
 
 **Enable logs**
 
-If there are any issues in Graph, then logs could be used to localize the problem. The Graph connector uses the same source as in all Generic connectors. So, traces could be enabled in [the same way like for Generic connectors](https://microsoft.sharepoint.com/teams/adiamteam/_layouts/15/doc.aspx?sourcedoc=%7B5057233e-00ac-4a7a-a77c-74a7f46404ff%7D&action=edit&uid=%7B5057233E-00AC-4A7A-A77C-74A7F46404FF%7D&ListItemId=146&ListId=%7BA828DF40-8EB4-4FC2-95BD-9E5421DD2CE7%7D&env=prodbubble). Or just by adding the following to miiserver.exe.config (inside system.diagnostics/sources section):
+If there are any issues in Graph, then logs could be used to localize the problem. The Graph connector uses the same source as in all Generic connectors. So, traces could be enabled in [the same way like for Generic connectors see wiki](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Or just by adding the following to miiserver.exe.config (inside system.diagnostics/sources section):
 
 \<source name="ConnectorsLog" switchValue="Verbose"\>
 
@@ -192,7 +203,7 @@ expired.”:
 Picture 7. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, the access token expires after 1 hour. To increase expiration time, please see [this article](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-configurable-token-lifetimes).
+Azure side. By default, the access token expires after 1 hour. To increase expiration time, please see [this article](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 
@@ -205,7 +216,7 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 
 Next Steps
 ----------
-
+- [Graph Explorer(Great for troubleshooting HTTP call issues)]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Versioning, support, and breaking change policies for Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
 - [Download Microsoft Identity Manager management agent for Microsoft Graph (preview)](http://go.microsoft.com/fwlink/?LinkId=717495)
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Step 7 Setup SID history/SID filtering
 description: This is Step 7 of configuring Privileged Identity Manager using scripts. This step covers setting up SID history/SID filtering.
 keywords:
@@ -25,9 +25,9 @@ ms.suite: ems
 
 # Step 7 Set up SID history/SID filtering
 
->[!div class="step-by-step"]
-[« Step 6](sp1-step6-setup-pam-trust.md)
-[Step 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Step 6](sp1-step6-setup-pam-trust.md)
+> [Step 8 »](sp1-step8-pam-deployment-verification.md)
 
 **This is not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.
@@ -44,6 +44,6 @@ For SID filtering: <br/></br>
 For SID history: </br></br>
 “Enabling SID history for this trust” or “SID history is already enabled for this trust”.
 
->[!div class="step-by-step"]
-[« Step 6](sp1-step6-setup-pam-trust.md)
-[Step 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Step 6](sp1-step6-setup-pam-trust.md)
+> [Step 8 »](sp1-step8-pam-deployment-verification.md)

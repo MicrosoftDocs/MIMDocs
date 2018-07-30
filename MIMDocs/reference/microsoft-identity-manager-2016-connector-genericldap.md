@@ -6,17 +6,17 @@ documentationcenter: ''
 author: billmath
 manager: mtillman
 editor: ''
-
 ms.assetid: 984beeb0-4d91-4908-ad81-c19797c4891b
 ms.service: active-directory
+ms.reviewer: davidste
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 04/02/2018
-ms.author: davidste
-
+ms.date: 06/26/2018
+ms.author: billmath
 ---
+
 # Generic LDAP Connector technical reference
 This article describes the Generic LDAP Connector. The article applies to the following products:
 
@@ -27,18 +27,20 @@ This article describes the Generic LDAP Connector. The article applies to the fo
 For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=717495).
 
 When referring to IETF RFCs, this document is using the format (RFC [RFC number]/[section in RFC document]), for example (RFC 4512/4.3).
-You can find more information at http://tools.ietf.org/html/rfc4500 (you need to replace 4500 with the correct RFC number).
+You can find more information at [https://tools.ietf.org/](https://tools.ietf.org/). In the left panel, enter an RFC number in the **Doc fetch** dialog box and test it to make sure it is valid.
 
 ## Overview of the Generic LDAP Connector
 The Generic LDAP Connector enables you to integrate the synchronization service with an LDAP v3 server.
 
 Certain operations and schema elements, such as those needed to perform delta import, are not specified in the IETF RFCs. For these operations, only LDAP directories explicitly specified are supported.
 
+For connecting to the directories, we test using the root/admin account.  To use a different account to apply more granular permissions, you may need to review with your LDAP directory team.
+
 From a high-level perspective, the following features are supported by the current release of the connector:
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all LDAP v3 servers (RFC 4510 compliant). It has been tested with the following: <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Microsoft Active Directory Global Catalog (AD GC)</li><li>389 Directory Server</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (previously Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li>**Notable directories not supported:** <li>Microsoft Active Directory Domain Services (AD DS) [Use the built-in Active Directory Connector instead]</li><li>Oracle Internet Directory (OID)</li> |
+| Connected data source |The Connector is supported with all LDAP v3 servers (RFC 4510 compliant). It has been tested with the following: <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Microsoft Active Directory Global Catalog (AD GC)</li><li>389 Directory Server</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (previously Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>For most scenarios, you must use the built-in Active Directory Connector instead as some features may not work</li></ul>**Notable known directories or features not supported:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Password Change Notification Service(PCNS)</li><li>Exchange provisioning</li><li>Delete of Active Sync Devices</li><li>Support for nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Group Management</li><li>Password Management</li> |
 | Operations |The following operations are supported on all LDAP directories: <li>Full Import</li><li>Export</li>The following operations are only supported on specified directories:<li>Delta import</li><li>Set Password, Change Password</li> |
 | Schema |<li>Schema is detected from the LDAP schema (RFC3673 and RFC4512/4.2)</li><li>Supports structural classes, aux classes, and extensibleObject object class (RFC4512/4.3)</li> |
@@ -134,7 +136,7 @@ The connector tries to detect the options present on the server. If the options 
 ### Delta import
 Delta import is only available when a support directory has been detected. The following methods are currently used:
 
-* LDAP Accesslog. See [http://www.openldap.org/doc/admin24/overlays.html#Access Logging](http://www.openldap.org/doc/admin24/overlays.html#Access Logging)
+* LDAP Accesslog. See [http://www.openldap.org/doc/admin24/overlays.html#Access Logging](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
 * LDAP Changelog. See [http://tools.ietf.org/html/draft-good-ldap-changelog-04](http://tools.ietf.org/html/draft-good-ldap-changelog-04)
 * TimeStamp. For Novell/NetIQ eDirectory, the Connector uses last date/time to get created and updated objects. Novell/NetIQ eDirectory does not provide an equivalent means to retrieve deleted objects. This option can also be used if no other delta import method is active on the LDAP server. This option is not able to import deleted objects.
 * USNChanged. See: [https://msdn.microsoft.com/library/ms677627.aspx](https://msdn.microsoft.com/library/ms677627.aspx)
@@ -227,8 +229,8 @@ It is also possible to select which containers and OUs the Connector should impo
 
 When performing a search this is done across all containers in the partition. In cases where there are large numbers of containers this behavior leads to performance degradation.
 
->[!NOTE]
-Starting in the March 2017 update to the Generic LDAP connector searches can be limited in scope to only the selected containers. This can be done by selecting the checkbox 'Search only in selected containers' as shown in the image below.
+> [!NOTE]
+> Starting in the March 2017 update to the Generic LDAP connector searches can be limited in scope to only the selected containers. This can be done by selecting the checkbox 'Search only in selected containers' as shown in the image below.
 
 ![Search only selected containers](./media/microsoft-identity-manager-2016-connector-genericldap/partitions-only-selected-containers.png)
 

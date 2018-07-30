@@ -143,13 +143,13 @@ On this page, you configure for all reference attributes which partition (object
 
 If you use **DN is anchor**, then you must use the same object type as the one you are referring from. You cannot reference another object type.
 
->[!NOTE]
-Starting in the March 2017 update there is now an option for "*" When this option is chosen then all possible member types will be imported.
+> [!NOTE]
+> Starting in the March 2017 update there is now an option for "*" When this option is chosen then all possible member types will be imported.
 
 ![globalparameters3](./media/microsoft-identity-manager-2016-connector-genericsql/any-option.png)
 
->[!IMPORTANT]
- As of May 2017 the “\*” aka **any option** has been changed to support import and export flow. If you want to use this option your multi-valued table/view should have an attribute that contains the object type.
+> [!IMPORTANT]
+>  As of May 2017 the “\*” aka **any option** has been changed to support import and export flow. If you want to use this option your multi-valued table/view should have an attribute that contains the object type.
 
 ![](./media/microsoft-identity-manager-2016-connector-genericsql/any-02.png)
 
@@ -230,8 +230,8 @@ Generic SQL Connector support Full and Delta Import using these methods:
 **Table/View**  
 To import multi-valued attributes for an object, you have to provide the table/view name in **Name of Multi-Valued table/views** and respective join conditions in the **Join condition** with the parent table. If there are more than one multi-valued table in the data source, you can  use union to a single view.
 
->[!IMPORTANT]
-The Generic SQL management agent can work only with one multi-valued table. Do not put into Name of Multi-Valued table/views more than one name of table. It is the limitation of Generic SQL.
+> [!IMPORTANT]
+> The Generic SQL management agent can work only with one multi-valued table. Do not put into Name of Multi-Valued table/views more than one name of table. It is the limitation of Generic SQL.
 
 
 Example: You want to import the Employee object and all its multi-valued attributes. There are two tables, named Employee (main table) and Department (multi-valued).

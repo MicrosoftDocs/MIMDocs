@@ -39,11 +39,13 @@ Method  |Request URL
 POST     |/api/pamresources/pamrequeststoapprove({approvalId)/Approve <br/>/api/pamresources/pamrequeststoapprove({approvalId)/Reject
 
 ### URL parameters
+
 Parameter | Description
 ----------|-----------
 approvalId | The identifier (GUID) of the approval object in PAM, specified as `guid'xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`.
 
 ### Query parameters
+
 Parameter | Description
 ----------|--------------
 v | Optional. The API version. If not included, the current (most recently released) version of the API is used. For more information, see [Versioning in PAM REST API service details](privileged-access-management-rest-api-service-details.md#versioning).
@@ -82,12 +84,10 @@ This section provides an example to approve a request to elevate to a PAM role.
 
 ```
 POST /api/pamresources/pamrequeststoapprove(guid'5dbd9d0c-0a9d-4f75-8cbd-ff6ffdc00143')/Approve HTTP/1.1
-
 ```
 
 ### Example: Response
 
 ```
 HTTP/1.1 200 OK
-
 ```       

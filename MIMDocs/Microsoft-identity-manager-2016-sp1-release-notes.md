@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
@@ -48,8 +48,8 @@ We want to hear from you as well! If you have any feedback, comments, or concern
 
 - **PAM "PRIV" (bastion) forest support for Windows Server 2016 functional level:** The MIM PAM Service may be configured in an environment with domain controllers running at the Active Directory Domain Services forest functional level of Windows Server 2016. When configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activation.
 
-    >[!Note]
-    If you choose to maintain the forest functional level of Windows Server 2012 R2 in your CORP domain, it is recommended to install [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) and [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) on the CORP domain controller.
+  > [!Note]
+  >   If you choose to maintain the forest functional level of Windows Server 2012 R2 in your CORP domain, it is recommended to install [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) and [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) on the CORP domain controller.
 
 - **Privileged account elevation into groups exclusive to the “PRIV” (bastion) forest:** Now, administrators can inform the MIM Service of groups and users exclusive to the “PRIV” forest. Doing this allows these groups and users to be included in PAM roles.  They can then be activated for a role and assigned membership to groups in the “PRIV” forest.
 
@@ -57,8 +57,8 @@ We want to hear from you as well! If you have any feedback, comments, or concern
 
 - **PAM Cmdlets for Authentication Policy Silo configuration:** Service pack 1 introduces new Cmdlets to harden the security of your bastion forest. These Cmdlets automatically create an Authentication Policy Silo, bound to an Authentication Policy Template.
 
-    >[!Note]
-    These Cmdlets run automatically as part of the deployments scripts.
+  > [!Note]
+  >   These Cmdlets run automatically as part of the deployments scripts.
 
 
 ## Platform Support
@@ -83,8 +83,8 @@ Before you begin
 You need to upgrade the MIM Sync engine prior to upgrading the MIM service and portal.
 You need to backup the MIMService and MIM Sync databases.
 
-  1. Uninstall the Microsoft Identity Manager component you are upgrading
-  2. Once the uninstall completes, open the splash page located on your installation media “FIMSplash.htm”
-  3. Select the MIM component to upgrade
-  4. Proceed with the installation following the prompts
-    * MIM Service & Portal Installation: When choosing the Exchange Online as the mail account, enter the email address and credentials of the Exchange Online account on the next screen.
+1. Uninstall the Microsoft Identity Manager component you are upgrading
+2. Once the uninstall completes, open the splash page located on your installation media “FIMSplash.htm”
+3. Select the MIM component to upgrade
+4. Proceed with the installation following the prompts
+   * MIM Service & Portal Installation: When choosing the Exchange Online as the mail account, enter the email address and credentials of the Exchange Online account on the next screen.

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: BHOLD FIM/MIM integration installation | Microsoft Docs
@@ -29,10 +29,10 @@ The following are the software components that must be present on the computer b
 - Internet information Services and ASP.NET
 - Microsoft Silverlight Tools
 
-In addition, the BHOLD Core and Access Management Connector modules must already be deployed on a server in the environment, and FIM must be configured with one or more BHOLD management agents. For information about installing and configuring the BHOLD Core module, see [BHOLD Core Installation](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). For information about installing and using the Access Management Connector module, see [Access Management Connector Installation](https://technet.microsoft.com/en-us/library/jj874042(v=ws.10).aspx) and [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+In addition, the BHOLD Core and Access Management Connector modules must already be deployed on a server in the environment, and FIM must be configured with one or more BHOLD management agents. For information about installing and configuring the BHOLD Core module, see [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). For information about installing and using the Access Management Connector module, see [Access Management Connector Installation](https://technet.microsoft.com/library/jj874042(v=ws.10).aspx) and [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
->[!IMPORTANT]
-The name of the FIM service database must be FIMService. BHOLD FIM Integration setup will fail if FIM was not installed with the default FIM service database name.
+> [!IMPORTANT]
+> The name of the FIM service database must be FIMService. BHOLD FIM Integration setup will fail if FIM was not installed with the default FIM service database name.
 
 ## Before you begin
 
@@ -45,7 +45,7 @@ In addition, you need to be prepared to provide the information that the BHOLD F
 | **Item**                            | **Description**                                                                                                                                                                                                               | **Value**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Use Security Provider on Domain** | When selected, specifies that Active Directory Domain Services security will control access to BHOLD Core.                                                                                                                    | Select the check box. **Important:** The installation will fail if this check box is not selected.                                                                                                                                                                                                                   |
-| **Domain**                          | Specifies the domain containing the **service account** that you created when installing BHOLD Core. For more information, see [BHOLD Core Installation](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | The domain name is supplied automatically by the wizard. Change the name only if it is incorrect. **Important:** Specify the domain name by using the NetBIOS (short) name, not the fully qualified domain name (FQDN). For example, if the FQDN of the domain is fabrikam.com, specify the domain name as FABRIKAM. |
+| **Domain**                          | Specifies the domain containing the **service account** that you created when installing BHOLD Core. For more information, see [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | The domain name is supplied automatically by the wizard. Change the name only if it is incorrect. **Important:** Specify the domain name by using the NetBIOS (short) name, not the fully qualified domain name (FQDN). For example, if the FQDN of the domain is fabrikam.com, specify the domain name as FABRIKAM. |
 | **Username**                        | Specifies the logon name of the BHOLD Core service user account.                                                                                                                                                              | Write the user account name here:                                                                                                                                                                                                                                                                                    |
 | **Password**                        | Specifies the password of the service user account.                                                                                                                                                                           | Write the password here: **Important:** Be sure to keep this password in a hidden, secure location.                                                                                                                                                                                                                  |
 
@@ -72,7 +72,7 @@ In addition, you need to be prepared to provide the information that the BHOLD F
 
 To install the BHOLD FIM Integration module, log on as a member of the Domain Admins group, download the following file and run it as administrator on the server that you intend to install the BHOLD FIM Integration module on:
 
-- BholdFIMIntegration*\<Version\>*\_Release.msi
+- BholdFIMIntegration<em>\<Version\></em>\_Release.msi
 
 Replace *\<Version\>* with the version number of the BHOLD FIM Integration release that you are installing.
 
@@ -194,20 +194,20 @@ If an approver for a self-service role request is not specified by one of these 
 19. On the **Modify organizational unit attributes/root** page, in **Approver**, type the domain and user name of the user who will approve role-assignment     requests, in the format *\<domain\>*\\*\<user\>*, where *\<domain\>* is the NetBIOS (short) domain name and *\<user\>* is the user’s logon name.
 20. Click **OK**.
 
->[!IMPORTANT]
-The domain and user name must match the default alias of a user in the BHOLD Core database.
+> [!IMPORTANT]
+> The domain and user name must match the default alias of a user in the BHOLD Core database.
 
 As an alternative to specifying an approver for organizational units, you can specify an approver for proposed roles in the BHOLD Core database. To do so, create the approver1 attribute, add it to an attribute typeset associated with the Role object type, and then modify each proposed role to specify the approver.
 
 To provide better workflow security, in addition to approvers, you should designate additional approval modes and users by creating and populating the following attributes for OrgUnits and roles:
 
-- escalator*\<n\>*
+- escalator<em>\<n\></em>
 
-- owner*\<n\>*
+- owner<em>\<n\></em>
 
-- securityOfficer*\<n\>*
+- securityOfficer<em>\<n\></em>
 
-- notification*\<n\>*
+- notification<em>\<n\></em>
 
 where *\<n\>* indicates an optional numerical suffix to provide multiple attributes of the same type.
 
@@ -215,8 +215,8 @@ where *\<n\>* indicates an optional numerical suffix to provide multiple attribu
 
 BHOLD FIM Integration installation creates sets, workflow definitions, and Management Policy Rules (MPRs) to the FIM Service. If you had customized your FIM deployment to change the sets of administrators or the sets of users who can make requests, you should ensure that the MPRs reference the correct user sets.
 
->[!NOTE]
-Before users of the FIM Portal can use the self-service features provided by BHOLD, the users’ accounts must be synchronized into the BHOLD database from the FIM Synchronization Service. In particular, there must be a user record in the BHOLD Core database and in the FIM Service database for each user who can make a self-service request or is specified as an approver or escalator for self-service requests.
+> [!NOTE]
+> Before users of the FIM Portal can use the self-service features provided by BHOLD, the users’ accounts must be synchronized into the BHOLD database from the FIM Synchronization Service. In particular, there must be a user record in the BHOLD Core database and in the FIM Service database for each user who can make a self-service request or is specified as an approver or escalator for self-service requests.
 
 ## Next steps
 
