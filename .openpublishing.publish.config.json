@@ -1,87 +1,78 @@
 {
   "build_entry_point": "docs.ps1",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "MIMDocs",
       "build_source_folder": "MIMDocs",
       "build_output_subfolder": "MIMDocs",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
+      },
+      "version": 0
     },
     {
       "docset_name": "MIMUnderstand",
       "build_source_folder": "MIMDocs/Understand",
       "build_output_subfolder": "MIMDocs-Understand",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
+      },
+      "version": 0
     },
     {
       "docset_name": "MIMPlanDesign",
       "build_source_folder": "MIMDocs/PlanDesign",
       "build_output_subfolder": "MIMDocs-PlanDesign",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
+      },
+      "version": 0
     },
     {
       "docset_name": "MIMGetStarted",
       "build_source_folder": "MIMDocs/GetStarted",
       "build_output_subfolder": "MIMDocs-GetStarted",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
-    },
-    {
-      "docset_name": "MIMDeployUse",
-      "build_source_folder": "MIMDocs/DeployUse",
-      "build_output_subfolder": "MIMDocs-DeployUse",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      }
+      },
+      "version": 0
     },
     {
       "docset_name": "MIMTroubleshoot",
       "build_source_folder": "MIMDocs/Troubleshoot",
       "build_output_subfolder": "MIMDocs-Troubleshoot",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
+      },
+      "version": 0
     }
   ],
   "notification_subscribers": [
     "OPBuild@microsoft.com"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/MIMDocs",
-  "git_repository_branch_open_to_public_contributors" : "master",
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master"
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
-  "need_preview_pull_request": "true"
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false
 }
