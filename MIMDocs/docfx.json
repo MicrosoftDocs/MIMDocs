@@ -13,6 +13,16 @@
           "PlanDesign/**",
           "Troubleshoot/**"
         ]
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "DeployUse",
+        "dest": "deploy-use",
+        "exclude": [
+          "**/obj/**"
+        ]
       }
     ],
     "resource": [
