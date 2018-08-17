@@ -97,4 +97,4 @@ MIM policy configuration also includes decisions about provisioning in your envi
 
 ## See also
 - [Topology considerations for deploying MIM](topology-considerations.md)
-- The downloadable [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) goes into more detail about a test build and performance testing results.
+- The downloadable [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) goes into more detail about a test build and performance testing results. 
