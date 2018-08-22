@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 07/10/2018
+ms.date: 08/22/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -19,6 +19,29 @@ ms.assetid:
 # Identity Manager version release history
 
 The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then decide whether you need to update to the newest version or not.
+
+
+## Version 4.5.200.0
+- Status: August 31, 2018
+- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=XXXXX)
+- [KB Release KB](https://support.microsoft.com/en-us/help/XXXXX)
+
+> [!IMPORTANT]
+>- .NET Framework 4.6 is also required for the installer <br>
+>- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
+>- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- *Denotes New Enhancement 
+
+#### Synchronization service
+
+#### MIM service
+
+#### Privilege Access Management 
+
+#### Microsoft Identity Portal
+
+#### Certificate Management
+
 
 ## Version 4.5.26.0
 - Status: June 30, 2018
