@@ -124,7 +124,8 @@ namespace CustomPhoneGate
 1. Update or add the following lines to the following to MfaSettings.xml with your custom phone provider <br>
 `<CustomPhoneProvider>C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\CustomPhoneGate.dll</CustomPhoneProvider>`
 3. Restart MIM Service and test Functionality with Azure Multi-Factor Authentication Server.
->[!NOTE] To revert setting replace MfaSettings.xml with your backup file in step 2
+> [!NOTE] 
+> To revert setting replace MfaSettings.xml with your backup file in step 2
 
 
 ## Next Steps
