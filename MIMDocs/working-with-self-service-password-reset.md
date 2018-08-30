@@ -1,4 +1,4 @@
----
+﻿---
 
 title: Working with Self-Service Password Reset | Microsoft Docs
 description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication.
@@ -16,14 +16,14 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 # Self-Service Password Reset deployment options
 
-For new customers who are [licensed for Azure Active Directory Premium](../azure/active-directory/authentication/concept-sspr-licensing.md), we recommend using [Azure AD self-service password reset](../azure/active-directory/authentication/concept-sspr-howitworks.md) to provide the end-user experience.  Azure AD self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM, including alternate email and Q&A gates.  When deploying Azure AD self-service password reset, Azure AD Connect supports [writing back the new passwords to AD DS](../azure/active-directory/authentication/concept-sspr-writeback.md), and MIM [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md) can be used to forward the passwords to other systems, such as another vendor's directory server, as well.  Deploying MIM for [password management](infrastructure/mim2016-password-management.md) does not require the MIM Service or the MIM self-service password reset or registration portals to be deployed.  Instead, you can follow these steps:
+For new customers who are [licensed for Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), we recommend using [Azure AD self-service password reset](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md) to provide the end-user experience.  Azure AD self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM, including alternate email and Q&A gates.  When deploying Azure AD self-service password reset, Azure AD Connect supports [writing back the new passwords to AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md), and MIM [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md) can be used to forward the passwords to other systems, such as another vendor's directory server, as well.  Deploying MIM for [password management](infrastructure/mim2016-password-management.md) does not require the MIM Service or the MIM self-service password reset or registration portals to be deployed.  Instead, you can follow these steps:
 
 - First, if you need to send passwords to directories other than Azure AD and AD DS, deploy MIM Sync with connectors to Active Directory Domain Services and any additional target systems, configure MIM for [password management](infrastructure/mim2016-password-management.md) and deploy the [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md).
-- Then, if you need to send passwords to directories other than Azure AD, configure Azure AD Connect for [writing back the new passwords to AD DS](../azure/active-directory/authentication/concept-sspr-writeback.md).
-- Optionally, [pre-register users](../azure/active-directory/authentication/howto-sspr-authenticationdata.md).
-- Finally, [roll out Azure AD self-service password reset to your end users](../azure/active-directory/authentication/howto-sspr-deployment.md).
+- Then, if you need to send passwords to directories other than Azure AD, configure Azure AD Connect for [writing back the new passwords to AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md).
+- Optionally, [pre-register users](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
+- Finally, [roll out Azure AD self-service password reset to your end users](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
 
-For existing customers who had previously deployed Forefront Identity Manager (FIM) for self-service password reset and are licensed for Azure Active Directory Premium, we recommend planning to transition to Azure AD  self-service password reset.  You can transition end users to Azure AD self-service password reset without needing them to re-register, by [synchronizing or setting through PowerShell a user's alternate email address or mobile phone number](../azure/active-directory/authentication/howto-sspr-authenticationdata.md). After users are registered for Azure AD self-service password reset, the FIM password reset portal can be decommissioned.
+For existing customers who had previously deployed Forefront Identity Manager (FIM) for self-service password reset and are licensed for Azure Active Directory Premium, we recommend planning to transition to Azure AD  self-service password reset.  You can transition end users to Azure AD self-service password reset without needing them to re-register, by [synchronizing or setting through PowerShell a user's alternate email address or mobile phone number](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). After users are registered for Azure AD self-service password reset, the FIM password reset portal can be decommissioned.
 
 For customers, which have not yet deployed Azure AD self-service password reset for their users, MIM also provides self-service password reset portals.  Compared to FIM, MIM 2016 includes the following changes:
 
@@ -188,6 +188,7 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 4.  After successful authentication, the user will be given two options, either to keep his current password or to set a new password.
 
-5.  ![MIM account unlocked success image](media/MIM-SSPR-account-unlock.JPG)
+5.  ![MIM ac
+6.  count unlocked success image](media/MIM-SSPR-account-unlock.JPG)
 
 6.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
