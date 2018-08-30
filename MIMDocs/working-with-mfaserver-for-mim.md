@@ -6,7 +6,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 08/30/2018
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -33,7 +33,8 @@ In order to use Azure Multi-Factor Authentication Server with MIM, you need:
 - MIM hotfix 4.5. or greater see [version history](/reference/version-history.md) for announcements
 
 ## Azure Multi-Factor Authentication Server Configuration 
->[!NOTE] In the configuration you will need a valid SSL certificate installed for the SDK. 
+> [!NOTE] 
+> In the configuration you will need a valid SSL certificate installed for the SDK. 
 
 ### Step 1: Download Azure Multi-Factor Authentication Server from the azure portal 
 Sign-in to the [Azure portal](https://portal.azure.com/) and download the Azure MFA server.
@@ -53,7 +54,9 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/en-us/
 3. Open Multi-Factor Authentication Console and click on Web Service SDK
 ![working-with-mfaserver-for-mim_sdkinstall.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkinstall.PNG)
 4. Once wizards it click through config, Select "MIM MFASDK" and app pool
->[!NOTE] Wizard will require a admin group to be created. More information can be found on the Azure MFA Azure Multi-Factor Authentication Server documentation.
+
+> [!NOTE] 
+> Wizard will require a admin group to be created. More information can be found on the Azure MFA Azure Multi-Factor Authentication Server documentation.
 5. Next we need to import the MIM Service account open Multi-Factor Authentication Console select "Users"
     a. Click on "Import from Active Directory"
     b. Navigate to service account aka "contoso\mimservice"
@@ -85,7 +88,9 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/en-us/
 `<LOCMFASRV>https://CORPSERVICE.contoso.com:9999/MultiFactorAuthWebServiceSdk/PfWsSdk.asmx</LOCMFASRV>`
 
 3. Restart MIM Service and test Functionality with Azure Multi-Factor Authentication Server.
->[!NOTE] To revert setting replace MfaSettings.xml with your backup file in step 2
+
+> [!NOTE] 
+> To revert setting replace MfaSettings.xml with your backup file in step 2
 
 
 ## Next Steps
