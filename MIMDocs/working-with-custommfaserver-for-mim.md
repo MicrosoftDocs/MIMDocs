@@ -1,7 +1,7 @@
 ---
 
-title: Use Alternant Multi-Factor Authentication API to activate PAM or SSPR Scenarios | Microsoft Docs
-description: Set up Custom MFA API as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
+title: Use an alternate Multi-Factor Authentication provider via an API to activate PAM or in SSPR scenario | Microsoft Docs
+description: Set up Custom MFA API as a second layer of security when your users activate roles in Privileged Access Management and use Self Service Password Reset.
 keywords:
 author: billmath
 ms.author: billmath
@@ -15,27 +15,45 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 
 ---
 
-# Use Custom Multi-Factor Authentication API to activate PAM or SSPR
-> [!IMPORTANT]
-> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will not be able to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on changes to MFA by integrating with Azure Multi-Factor Authentication Server SDK.
+# Use a custom Multi-Factor Authentication provider via an API during PAM role activation or in SSPR
 
-The Article below will outline the alternant option to enable custom Multi-Factor Authentication Server SDK when released as this will be included in an upcoming hotfix please see [version history](/reference/version-history.md) for announcements. 
+Customers of Azure AD Premium or Azure MFA can integrate Azure MFA in two MIM scenarios - Privileged Access Management (PAM) role activation, and Self-Service Password Reset (SSPR).
+
+MIM customers have two additional options:
+
+ - use a custom one-time-password delivery provider, which is applicable only in the MIM SSPR scenario and documented in guide to [Configure Self-Service Password Reset with OTP SMS Gate](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
+ - use a custom multi-factor authentication telephony provider, which is applicable in both the MIM SSPR and PAM scenarios, described in this article
+
+This article outlines how to use MIM with a custom multi-factor authentication provider, via an API and an integration SDK developed by the customer.  
 
 ## Prerequisites
 
-In order to use custom Multi-Factor Authentication API with MIM, you need:
+In order to use a custom Multi-Factor Authentication provider API with MIM, you need:
 
 - Phone numbers for all candidate users
-- MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) 
- 
-) or greater see [version history](/reference/version-history.md) for announcements
+- MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278)  or later - see [version history](/reference/version-history.md) for announcements
+- MIM Service configured for SSPR or PAM
 
-## Sample Custom Authentication Server Code
+## Approach using custom multi-factor authentication code
 
-### Step 1: Patch Server to 4.5.202.0
-Download and install MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) or greater.
+### Step 1: Ensure MIM Service is at version 4.5.202.0 or later
 
-### Step 2: Sample Code
+Download and install MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) or a later version.
+
+### Step 2: Create a DLL which implements the IPhoneServiceProvider interface
+
+The DLL must include a class which implements three methods:
+
+- `InitiateCall`: the MIM Service will invoke this method, passing in as parameters the phone number and request ID.  The method must return a `PhoneCallStatus` value of `Pending`, `Success` or `Failed`.
+- `GetCallStatus`: if a previous invocation of `initiateCall` returned `Pending`, the MIM Service will invoke this method. This method also returns `PhoneCallStatus` value of `Pending`, `Success` or `Failed`.
+- `GetFailureMessage`: If a previous invocation of `InitiateCall` or `GetCallStatus` returned `Failed`, the MIM Service will invoke this method. This method returns a diagnostic message.
+
+The implementations of these methods must be thread safe, and furthermore the implementation of the `GetCallStatus` and `GetFailureMessage` must not assume that they will be called by the same thread as an earlier call to `InitiateCall`.
+
+Store the DLL in the `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` directory.
+
+Sample code, which can be compiled using Visual Studio 2010 or later.
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -116,20 +134,27 @@ namespace CustomPhoneGate
     }
 }
 ```
-### Step 3: Backup and Open the MfaSettings.xml located in the "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
+### Step 3: Backup the MfaSettings.xml located in the "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
 
-### Step 4: Update / clear the following lines
-1. Remove/Clear all configuration entries lines <br>
+### Step 4: Edit the MfaSettings.xml file
 
-1. Update or add the following lines to the following to MfaSettings.xml with your custom phone provider <br>
+Update or clear the following lines:
+
+- Remove/Clear all configuration entries lines 
+
+- Update or add the following lines to the following to MfaSettings.xml with your custom phone provider <br>
 `<CustomPhoneProvider>C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\CustomPhoneGate.dll</CustomPhoneProvider>`
-3. Restart MIM Service and test Functionality with Azure Multi-Factor Authentication Server.
+
+### Step 5: Restart MIM Service
+
+After the service has restarted, use SSPR and/or PAM to validate functionality with the custom identity provider.
+
 > [!NOTE] 
-> To revert setting replace MfaSettings.xml with your backup file in step 2
+> To revert setting replace MfaSettings.xml with your backup file in step 3
 
 
 ## Next Steps
 
--    [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [MIM version release history](./reference/version-history.md)
