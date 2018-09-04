@@ -20,9 +20,8 @@ ms.assetid:
 
 The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then decide whether you need to update to the newest version or not.
 
-
-## Version 4.5.200.0
-- Status: August 31, 2018
+## Version 4.5.202.0
+- Status: August 30, 2018
 - [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=57278)
 - [KB Release KB](https://support.microsoft.com/en-us/help/4346632)
 
