@@ -11,7 +11,7 @@ ms.date: 09/04/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
+
 
 ---
 
