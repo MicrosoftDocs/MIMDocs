@@ -36,16 +36,16 @@ In order to use a custom Multi-Factor Authentication provider API with MIM, you 
 
 ## Approach using custom multi-factor authentication code
 
-### Step 1: Verify that the MIM Service is at version 4.5.202.0 or later
+### Step 1: Ensure MIM Service is at version 4.5.202.0 or later
 
 Download and install MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) or a later version.
 
 ### Step 2: Create a DLL which implements the IPhoneServiceProvider interface
 
-The DLL must include a class which implements three methods:
+The DLL must include a class, which implements three methods:
 
-- `InitiateCall`: the MIM Service will invoke this method, passing in as parameters the phone number and request ID.  The method must return a `PhoneCallStatus` value of `Pending`, `Success` or `Failed`.
-- `GetCallStatus`: if a previous invocation of `initiateCall` returned `Pending`, the MIM Service will invoke this method. This method also returns `PhoneCallStatus` value of `Pending`, `Success` or `Failed`.
+- `InitiateCall`: The MIM Service will invoke this method. The service passes the phone number and request ID as parameters.  The method must return a `PhoneCallStatus` value of `Pending`, `Success` or `Failed`.
+- `GetCallStatus`: If an earlier call to `initiateCall` returned `Pending`, the MIM Service will invoke this method. This method also returns `PhoneCallStatus` value of `Pending`, `Success` or `Failed`.
 - `GetFailureMessage`: If a previous invocation of `InitiateCall` or `GetCallStatus` returned `Failed`, the MIM Service will invoke this method. This method returns a diagnostic message.
 
 The implementations of these methods must be thread safe, and furthermore the implementation of the `GetCallStatus` and `GetFailureMessage` must not assume that they will be called by the same thread as an earlier call to `InitiateCall`.
