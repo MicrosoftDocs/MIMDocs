@@ -23,8 +23,8 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 
 ## Version 4.5.200.0
 - Status: August 31, 2018
-- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=XXXXX)
-- [KB Release KB](https://support.microsoft.com/en-us/help/XXXXX)
+- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=57278)
+- [KB Release KB](https://support.microsoft.com/en-us/help/4346632)
 
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
@@ -32,16 +32,20 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
-#### Synchronization service
-
 #### MIM service
+- Azure MFA Server intergration
+    -Alternate Multi-Factor Authentication provider
 
 #### Privilege Access Management 
+- PAM REST API could not be started because it could not load file or assembly
 
 #### Microsoft Identity Portal
+- Portal are displayed with an incorrect table length
+- Advanced Search dialog of the Portal, the scrollbars don’t display properly
+- Language Pack Language Pack trong name signature verification failed
 
 #### Certificate Management
-
+- Binding redirect statement for REST API
 
 ## Version 4.5.26.0
 - Status: June 30, 2018
