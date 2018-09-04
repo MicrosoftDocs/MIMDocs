@@ -7,7 +7,7 @@ author: billmath
 ms.author: billmath
 ms.reviewer: fimguy
 manager: mtillman
-ms.date: 08/30/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -21,8 +21,8 @@ Customers of Azure AD Premium or Azure MFA can integrate Azure MFA in two MIM sc
 
 MIM customers have two additional options:
 
- - use a custom one-time-password delivery provider, which is applicable only in the MIM SSPR scenario and documented in guide to [Configure Self-Service Password Reset with OTP SMS Gate](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
- - use a custom multi-factor authentication telephony provider, which is applicable in both the MIM SSPR and PAM scenarios, described in this article
+ - Use a custom one-time-password delivery provider, which is applicable only in the MIM SSPR scenario and documented in guide to [Configure Self-Service Password Reset with OTP SMS Gate](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10))
+ - Use a custom multi-factor authentication telephony provider. This is applicable in both the MIM SSPR and PAM scenarios, described in this article
 
 This article outlines how to use MIM with a custom multi-factor authentication provider, via an API and an integration SDK developed by the customer.  
 
@@ -36,7 +36,7 @@ In order to use a custom Multi-Factor Authentication provider API with MIM, you 
 
 ## Approach using custom multi-factor authentication code
 
-### Step 1: Ensure MIM Service is at version 4.5.202.0 or later
+### Step 1: Verify that the MIM Service is at version 4.5.202.0 or later
 
 Download and install MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) or a later version.
 
