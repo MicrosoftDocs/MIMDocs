@@ -3,10 +3,10 @@
 title: Use Azure Multi-Factor Authentication Server SDK to activate PAM or SSPR Scenarios | Microsoft Docs
 description: Set up Azure Multi-Factor Authentication Server SDK as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
 keywords:
-author: billmath
+author: fimguy
 ms.author: billmath
 manager: mtillman
-ms.date: 08/31/2018
+ms.date: 09/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -56,7 +56,8 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/en-us/
 4. Once wizards it click through config, Select "MIM MFASDK" and app pool
 
 > [!NOTE] 
-> Wizard will require a admin group to be created. More information can be found on the Azure MFA Azure Multi-Factor Authentication Server documentation.
+> Wizard will require a admin group to be created. More information can be found on the Azure > > MFA Azure Multi-Factor Authentication Server documentation.
+
 5. Next we need to import the MIM Service account open Multi-Factor Authentication Console select "Users"
     a. Click on "Import from Active Directory"
     b. Navigate to service account aka "contoso\mimservice"
@@ -71,7 +72,7 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/en-us/
 
 ## Configuring the MIM Service for Azure Multi-Factor Authentication Server 
 
-### Step 1: Patch Server to 4.5.200.0
+### Step 1: Patch Server to 4.5.202.0
  
 ### Step 2: Backup and Open the MfaSettings.xml located in the "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
 
