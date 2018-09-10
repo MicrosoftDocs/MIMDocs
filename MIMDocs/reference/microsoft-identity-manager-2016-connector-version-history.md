@@ -3,7 +3,7 @@ title: Connector Version Release History | Microsoft Docs
 description: This topic lists all releases of the Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM)
 services: active-directory
 documentationcenter: ''
-author: fimguy
+author: billmath
 manager: mtillman
 editor: ''
 
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 09/06/2018
+ms.date: 03/22/2018
 ms.author: davidste
 
 ---
@@ -34,35 +34,6 @@ Related links:
 * [Web Services Connector](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) reference documentation
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
-
-## 1.1.861.0
-
-### Fixed issues:
-* Change titles for all connector setup from 'Forefront to Microsoft'
-
-* Lotus Notes: 
-    * Errors in COM with Lotus sometimes return no errors
-* Generic LDAP:
-    * Gldap Extra symbol for DI with PING directory server
-* Generic Web Services:
-    * Error on Exporting json parsing
-* Generic SQL:
-    * Export Binary Attribute
-    * Object types cannot be substrings of each other
-    * Changes in multi-valued table are not tracked in the operation of “Delta import”, if “Delta Strategy” is “Change Tracking”
-* Graph Connector(Public Preview)
-    * Error on Group Deletes
-    * Update User-Agent to http header
-    * Connector doesn't validate Client ID and Client Secret
-    * Tenant name filed should be trimmed
-
-### Enhancements:
-* Lotus Notes:
-    *Add the ability to increase timeout through UI
-* Graph Connector(Public Preview)
-    *Password attribute is filtered on Import to eliminate "Export-not-reimported".
-    *Add support of $filter query parameter -Limited to operations with all filters that work in delta query, will also work in the connector
-    *Updated to use nextLink directly instead of extracting skipToken for paging detail [here](https://developer.microsoft.com/en-us/graph/docs/concepts/paging)
 
 
 ## 1.1.830.0
@@ -93,6 +64,9 @@ Related links:
 * Generic SQL:
   * Fixed export into field which has varbinary(max) type.
   * When adding binary data from a data source to CSEntry object, The DataTypeConversion function failed on zero bytes. Fixed DataTypeConversion function of the CSEntryOperationBase class.
+
+
+
 
 ### Enhancements:
 
