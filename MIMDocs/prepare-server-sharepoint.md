@@ -77,7 +77,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 2. Specify this server as the database server like **corpsql** for the configuration database, and *Contoso\SharePoint* as the database access account for SharePoint to use.
 3. Create a password for the farm security passphrase.
 
-4. In the configuration Wizard we recomend selecting [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) type of **Front-end**
+4. In the configuration Wizard we recomend selecting [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) type of **Front-end**
 
 5. When the configuration wizard completes configuration task 10 of 10, click Finish and a web browser will open..
 
