@@ -41,9 +41,9 @@ Reading needed to complete setup and understand
 
 -   [Group Managed Service Accounts Overview](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
--   <https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps>
+-   <https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps>
 
--   <https://technet.microsoft.com/en-us/library/jj128430(v=ws.11).aspx>
+-   <https://technet.microsoft.com/library/jj128430(v=ws.11).aspx>
 
 First Step on your windows domain controller
 
@@ -126,7 +126,7 @@ First Step on your windows domain controller
 ![](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
 
-5. Install latest [hotfix 4.5.x.x](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/version-history) or later.
+5. Install latest [hotfix 4.5.x.x](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) or later.
 
 - Once Patched Stop FIM Synchronization service.
 - Control Panel Programs and Features Microsoft Identity Manager
@@ -193,7 +193,7 @@ configuration has been done.*
     (typically early in the boot cycle).
 
     See discussion about similar issue:
-    <https://social.technet.microsoft.com/Forums/en-US/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>
+    <https://social.technet.microsoft.com/Forums/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>
 
 4.  Run Elevated MSI of MIM Service and select change.
 
