@@ -20,7 +20,7 @@ This article outlines the supported languages and mapping of updates from Micros
 The Microsoft MIM Service and Portal Language Pack support the following languages 33 languages.  
 
 > [!NOTE]
-> In [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) a registry key was added called "OverrideDefaultUILocale" to MIM Add-ins and Extensions language pack will try to map all similar languages to the one that is supported. For example, if the Windows Display Language is ES-CL (Spanish Chile), or any ES-**, it will try to map this to ES-ES (Spanish Spain).
+> In [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) a registry key was added called "OverrideDefaultUILocale" to MIM Add-ins and Extensions language pack will try to map all similar languages to the one that is supported. For example, if the Windows Display Language is ES-CL (Spanish Chile), or any ES-\*, it will try to map this to ES-ES (Spanish Spain).
 
 > [!IMPORTANT]
 > The text in the SSPR add-in and portal will be localized, but the questions will not without additional work. You will need to create AuthN workflows (and accompanying sets and MPRs to target them) to target questions in each language to the target location.
