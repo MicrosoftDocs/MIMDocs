@@ -48,7 +48,7 @@ steps:
 
 ## Deployment worksheet
 
-Before you proceed update teh PAMDeploymentConfig.xml and place the updated copy on all machines.
+Before you proceed update the PAMDeploymentConfig.xml and place the updated copy on all machines.
 
 ### Setup
 
