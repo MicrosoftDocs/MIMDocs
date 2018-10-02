@@ -1,12 +1,12 @@
 ---
 title: "The Microsoft Identity Manager connector for Microsoft Graph | Microsoft Docs"
-author: fimguy
-description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications
+author: billmath
+description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
 author: fimguy
-ms.author: davidste
+ms.author: billmath
 manager: bhu
-ms.date: 04/25/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -28,7 +28,7 @@ B2B account lifecycle management
 --------------------------------
 
 The initial scenario for the Microsoft Identity Manager connector for Microsoft Graph is as a connector to help automate AD DS account lifecycle
-management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows
+management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows
 Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
@@ -37,7 +37,7 @@ To learn how to configure MIM sync to automatically create and maintain AD DS ac
 Other identity management scenarios
 ---------------
 
-The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Azure AD, beyond user and group synchronization to Azure AD. When evaluating potential scenarios please keep in mind: this connector cannot be operated in a scenario which would result in a data flow overlap, actual or potential synchronization conflict with an Azure AD Connect deployment.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.  Azure AD Connect has many more synchronization features and enables scenarios such as password and device writeback which are not possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it is excluded from Azure AD Connect attempting to match those objects back to the Azure AD directory.  Nor can this connector be used to make changes to Azure AD objects which were created by Azure AD Connect.
+The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Azure AD, beyond user and group synchronization to Azure AD. When evaluating potential scenarios, please keep in mind: this connector cannot be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with an Azure AD Connect deployment.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.  Azure AD Connect has many more synchronization features and enables scenarios such as password and device writeback, which are not possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it is excluded from Azure AD Connect attempting to match those objects back to the Azure AD directory.  Nor can this connector be used to make changes to Azure AD objects, which were created by Azure AD Connect.
 
 
 
@@ -53,7 +53,7 @@ Authorizing the connector to retrieve or manage objects in your Azure AD directo
 
 Picture 1. New application registration
 
-2.  In the Azure portal, open the created application, and save the Application ID, as a Client Id to use later on the MA’s connectivity page:
+2.  In the Azure portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
 
 ![](media/microsoft-identity-manager-2016-ma-graph/ecfcb97674790290aa9ca2dcaccdafbc.png)
 
@@ -115,7 +115,7 @@ Select **Graph (Microsoft)** , create a connector and give it a descriptive na
 Picture 5. Connectivity page
 
 The connectivity page (Picture 5) contains the Graph API version that is used
-and tenant name. The Client Id and Client Secret represent the Application ID and
+and tenant name. The Client ID and Client Secret represent the Application ID and
 Key value of the WebAPI application that must be created in Azure AD.
 
 11. Make any necessary changes on the Global Parameters page:
@@ -182,7 +182,7 @@ page size). For example:
 
 In this case there will be two iterations during the import, each of them will return 5000 objects to Sync. So, a new access token will be request twice.
 
-Note that during the export a new access token will be requested for each object that must be added/updated/deleted.
+During the export a new access token will be requested for each object that must be added/updated/deleted.
 
 Troubleshooting
 ===============
@@ -208,7 +208,8 @@ If there are any issues in Graph, then logs could be used to localize the proble
 
 \</source\>
 
-Please note: if ‘Run this management agent in a separate process’ enabled then
+>[!NOTE]
+>If ‘Run this management agent in a separate process’ is enabled, then
 `dllhost.exe.config` should be used instead of `miiserver.exe.config`.
 
 **Access token expired error**
@@ -238,6 +239,6 @@ Next steps
 - [Versioning, support, and breaking change policies for Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
 - [Download Microsoft Identity Manager connector for Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
 
-Scenario specific guides
+Scenario-specific guides
 ----------------------------------
 [MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
