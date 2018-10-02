@@ -2,12 +2,12 @@
 title: "Configuring the Microsoft Identity Manager connector for Microsoft Graph for B2B| Microsoft Docs"
 author: fimguy
 
-description: Microsoft Graph connector is external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications
+description: Microsoft Graph connector is external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
-author: fimguy
-ms.author: davidste
-manager: bhu
-ms.date: 04/25/2018
+author: billmath
+ms.author: billmath
+manager: mtillman
+ms.date: 10/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -19,9 +19,9 @@ Azure AD business-to-business (B2B) collaboration with Microsoft Identity Manage
 ============================================================================================================================
 
 The initial scenario is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
+management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
 
-## Scenario Specific Guidance
+## Scenario-Specific Guidance
 
 A few assumptions made in the configuration of B2B with MIM and Azure AD
 Application Proxy:
@@ -121,7 +121,7 @@ plan to import. You must select at least 'User'.
 
 #### Select Attributes
 
-On the Select Attributes screen, select attributes from Azure AD which will be needed to manage B2B users in AD. The Attribute "id" is required.  The attributes `userPrincipalName` and `userType` will be used later in this configuration.  Other attributes are optional, including
+On the Select Attributes screen, select attributes from Azure AD which will be needed to manage B2B users in AD. The Attribute "ID" is required.  The attributes `userPrincipalName` and `userType` will be used later in this configuration.  Other attributes are optional, including
 
 -   `displayName`
 
@@ -139,7 +139,7 @@ On the Select Attributes screen, select attributes from Azure AD which will be n
 
 #### Configure Anchors
 
-On the Configure Anchor screen, configuring the anchor attribute is a required step. by default, use the id attribute for user mapping.
+On the Configure Anchor screen, configuring the anchor attribute is a required step. by default, use the ID attribute for user mapping.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
@@ -157,19 +157,19 @@ This guide assumes you will be creating a sync rule.  As configuring Join and Pr
 
 #### Configure Attribute Flow
 
-This guide assumes you will be creating a sync rule.  As with join and projection, is not needed to define the attribute flow in MIM Sync, as it is handle by the sync rule that is to be created later. Leave default and click ok.
+This guide assumes you will be creating a sync rule.  Projection is not needed to define the attribute flow in MIM Sync, as it is handled by the sync rule that is created later. Leave default and click ok.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/b7cd0d294d4f361f0551bf2cb774d5f5.png)
 
 #### Configure Deprovision
 
-The setting to configure deprovision is to allow you to configure MIM sync to delete the object if the metaverse object is deleted. In this scenario, we make them disconnectors as the goal is to leave them in Azure AD. In this scenario, we are not exporting anything to Azure AD, and the connector is configured for Import only.
+The setting to configure deprovision allows you to configure MIM sync to delete the object, if the metaverse object is deleted. In this scenario, we make them disconnectors as the goal is to leave them in Azure AD. In this scenario, we are not exporting anything to Azure AD, and the connector is configured for Import only.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/2394ad4d11546c6a5c69a6dad56fe6ca.png)
 
 #### Configure Extensions
 
-Configure Extensions on this management agent is an option but not required as we are using a synchronization rule. If we decided to an advanced rule in the attribute flow earlier, then this would be an option to define the rules extension.
+Configure Extensions on this management agent is an option but not required because we are using a synchronization rule. If we decided to use an advanced rule in the attribute flow earlier, then there would be an option to define the rules extension.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/74513d95b10f6ce47b7ac75fe7ab9889.png)
 
