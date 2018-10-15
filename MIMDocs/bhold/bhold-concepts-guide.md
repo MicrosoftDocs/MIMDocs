@@ -10,6 +10,7 @@ manager: mbaldwin
 ms.date: 09/14/2017
 ms.technology: security
 ms.assetid: 
+ms.prod: microsoft-identity-manager
 
 # optional metadata
 
