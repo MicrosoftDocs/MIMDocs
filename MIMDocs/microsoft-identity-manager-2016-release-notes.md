@@ -10,7 +10,6 @@ manager: mbaldwin
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 297e25a5-668b-45a4-b2de-7767ebc59100
 

@@ -9,7 +9,7 @@ ms.author: davidste
 manager: bhu
 ms.date: 12/19/2017
 ms.topic: get-started-article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ---

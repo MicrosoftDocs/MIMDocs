@@ -9,7 +9,7 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 10/16/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 

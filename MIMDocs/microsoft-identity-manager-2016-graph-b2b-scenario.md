@@ -9,7 +9,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 10/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
