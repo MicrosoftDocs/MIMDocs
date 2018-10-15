@@ -9,7 +9,7 @@ ms.author: fimguy
 manager: bhu
 ms.date: 1/24/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 

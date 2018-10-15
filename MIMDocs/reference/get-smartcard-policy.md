@@ -10,7 +10,6 @@ manager: mbaldwin
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c015ffc7-5c94-427e-a3b3-870ec8ab92b6
 

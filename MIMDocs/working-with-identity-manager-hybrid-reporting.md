@@ -9,7 +9,7 @@ ms.author: davidste
 manager: mbaldwin
 ms.date: 2/20/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 

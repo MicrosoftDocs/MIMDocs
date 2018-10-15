@@ -8,11 +8,11 @@ manager: mtillman
 editor: ''
 
 ms.assetid: 6dba8e34-a874-4ff0-90bc-bd2b0a4199b5
-ms.service: active-directory
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
+ms.prod: microsoft-identity-manager
 ms.date: 04/02/2018
 ms.author: davidste
 

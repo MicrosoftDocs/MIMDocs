@@ -9,7 +9,7 @@ ms.reviewer: fimguy
 manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 
 
