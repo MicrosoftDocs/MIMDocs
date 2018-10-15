@@ -9,7 +9,7 @@ ms.author: davidste
 manager: bhu
 ms.date: 02/20/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 

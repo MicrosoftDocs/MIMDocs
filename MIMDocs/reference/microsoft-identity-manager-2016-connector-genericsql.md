@@ -8,11 +8,11 @@ manager: bhu
 editor: ''
 
 ms.assetid: fd8ccef3-6605-47ba-9219-e0c74ffc0ec9
-ms.service: active-directory
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
+ms.prod: microsoft-identity-manager
 ms.date: 04/02/2018
 ms.author: davidste
 

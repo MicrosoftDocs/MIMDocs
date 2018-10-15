@@ -8,7 +8,7 @@ ms.author: davidste
 manager: mbaldwin
 ms.date: 06/25/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid:
 

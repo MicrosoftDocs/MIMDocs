@@ -8,7 +8,6 @@ author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/14/2017
-ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 

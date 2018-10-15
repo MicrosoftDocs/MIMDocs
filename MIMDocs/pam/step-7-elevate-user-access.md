@@ -8,7 +8,7 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 01/17/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ---

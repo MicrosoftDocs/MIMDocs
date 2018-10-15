@@ -9,7 +9,7 @@ ms.author: davidste
 manager: davidste
 ms.date: 04/11/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 
