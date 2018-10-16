@@ -4,13 +4,13 @@
 title: Microsoft Identity Manager 2016 developer reference | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 2b5f612f-3119-401b-b1f8-462310c8510f
 
 # optional metadata

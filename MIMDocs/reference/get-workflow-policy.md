@@ -4,13 +4,13 @@
 title: Get workflow policy | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: be636205-c1f0-457c-982e-e17478cf0889
 
 # optional metadata

@@ -4,13 +4,13 @@
 title: Certificate operations | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 8935263a-4399-407f-8032-abeddbe6c5b0
 
 # optional metadata

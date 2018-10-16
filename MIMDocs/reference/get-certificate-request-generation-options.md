@@ -4,13 +4,13 @@
 title: Get certificate request generation options | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 36bd1fc9-3443-4028-90e7-a24fef0ec0ae
 
 # optional metadata

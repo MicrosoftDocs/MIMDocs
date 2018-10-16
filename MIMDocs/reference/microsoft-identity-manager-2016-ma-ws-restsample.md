@@ -4,13 +4,13 @@
 title: Web Service Connector REST API App Service sample | Microsoft Docs
 description: Guide helping you implement a sample REST JSON server in Azure
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 11/28/2017
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 
 ---
 

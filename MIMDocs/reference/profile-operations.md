@@ -4,13 +4,13 @@
 title: Profile operations | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: d9880f36-035c-4f09-b105-ea478ced71d0
 
 # optional metadata

@@ -4,13 +4,13 @@
 title: Microsoft Identity Manager 2016 SP1 terminology | Microsoft Docs
 description: Comprehensive list of terms that are referenced in Microsoft Identity Manager 2016 SP1.
 keywords: Terminology
-author: fimguy
-ms.author: fimguy
-manager: bhu
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/28/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 
 # optional metadata

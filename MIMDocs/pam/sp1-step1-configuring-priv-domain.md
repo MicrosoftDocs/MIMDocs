@@ -4,13 +4,13 @@
 title: Step 1 Configuring the Priv domain
 description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager using scripts
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata

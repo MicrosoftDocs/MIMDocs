@@ -4,13 +4,13 @@
 title: Cancel, abandon, or complete a request | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2016
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: e29e0068-7602-455e-8a3a-690da9ca8eb5
 
 # optional metadata

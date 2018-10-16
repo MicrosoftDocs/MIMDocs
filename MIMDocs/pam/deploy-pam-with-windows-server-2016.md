@@ -4,13 +4,13 @@
 title: Deploy MIM Privileged Access Management with Windows Server 2016 | Microsoft Docs
 description: Learn about deploying Privileged Access Management with server 2016
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid:
 
 ---

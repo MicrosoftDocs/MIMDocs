@@ -4,13 +4,13 @@
 title: Resource control display configuration XML reference | Microsoft Docs
 description:
 keywords:
-author: fimguy
-ms.author: fimguy
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 ---
 

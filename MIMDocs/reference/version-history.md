@@ -4,13 +4,13 @@
 title: Identity Manager version history | Microsoft Docs
 description: This article documents the various changes made as part of updates to MIM 2016
 keywords:
-author: fimguy
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/22/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 
 ---

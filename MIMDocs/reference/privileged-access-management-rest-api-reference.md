@@ -4,13 +4,13 @@
 title: Privileged Access Management REST API reference | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 541854b7-f285-4e8b-bbaf-3f15da69467f
 
 # optional metadata

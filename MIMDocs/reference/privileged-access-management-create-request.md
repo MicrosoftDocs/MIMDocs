@@ -4,13 +4,13 @@
 title: Create PAM request | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: fe8b3374-9d32-4cc3-9328-f1eafeadfe8e
 
 # optional metadata

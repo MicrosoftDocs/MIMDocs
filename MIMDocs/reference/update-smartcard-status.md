@@ -4,13 +4,13 @@
 title: Update smart card status | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 598dace3-c6f2-447a-9301-c0b63ee38276
 
 # optional metadata

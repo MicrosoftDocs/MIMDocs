@@ -4,13 +4,13 @@
 title: Certificate request operations | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: a664b275-3b86-4606-add6-66db49dd0ac1
 
 # optional metadata
