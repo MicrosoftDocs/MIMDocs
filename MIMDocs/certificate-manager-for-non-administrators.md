@@ -5,12 +5,12 @@ title: Microsoft Identity Manager Self-service smart card renewal without Admini
 description: Learn how to enroll smart cards for users without administrator access to their machines so they can use Certificate Manager.
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 
 # optional metadata

@@ -4,13 +4,13 @@
 title: Configure Windows Server 2016 for MIM 2016 SP1 | Microsoft Docs
 description: Get the steps and minimum requirements to prepare Windows Server 2016 to work with MIM 2016 SP1.
 keywords:
-author: fimguy
-ms.author: davidste
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 
 # optional metadata

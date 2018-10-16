@@ -1,6 +1,6 @@
 ---
 title: "Configuring the Microsoft Identity Manager connector for Microsoft Graph for B2B| Microsoft Docs"
-author: fimguy
+author: billmath
 
 description: Microsoft Graph connector is external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
@@ -10,7 +10,7 @@ manager: mtillman
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 ---

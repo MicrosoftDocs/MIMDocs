@@ -5,12 +5,12 @@ title: Release Notes for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Find information about the recent MIM releases.
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 297e25a5-668b-45a4-b2de-7767ebc59100
 
 # optional metadata

@@ -4,13 +4,13 @@
 title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
 description: Understand how MIM 2016 works to create a safer, more convenient identity management experience in the cloud and on-premises.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 
 # optional metadata

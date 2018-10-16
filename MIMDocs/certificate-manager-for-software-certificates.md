@@ -5,12 +5,12 @@ title: Request certificates in Certificate Manager using templates | Microsoft D
 description: Learn how to use Certificate Manager to create and renew software certificates with profile templates.
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 
 # optional metadata

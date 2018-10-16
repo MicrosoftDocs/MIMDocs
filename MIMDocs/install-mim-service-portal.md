@@ -5,12 +5,12 @@ title: Install Microsoft Identity Manager Service and Portal | Microsoft Docs
 description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldiwn
+ms.author: billmath
+manager: mtillman
 ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 
 # optional metadata
