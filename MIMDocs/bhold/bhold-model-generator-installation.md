@@ -4,13 +4,13 @@
 title: BHOLD model generator installation | Microsoft Docs
 description: BHOLD model allows you to structure data from various sources 
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 
 
