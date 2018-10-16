@@ -5,11 +5,11 @@ description: Microsoft Identity Manager connector for Microsoft Graph enables ex
 keywords:
 author: fimguy
 ms.author: billmath
-manager: bhu
+manager: mtillman
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ---
 Microsoft Identity Manager connector for Microsoft Graph

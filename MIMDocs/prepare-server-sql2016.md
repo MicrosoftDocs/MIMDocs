@@ -5,12 +5,12 @@ title: Configure SQL Server for Microsoft Identity Manager 2016 SP1 | Microsoft 
 description: Install SQL Server 2016 in preparation for your MIM 2016 installation.
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 
 # optional metadata

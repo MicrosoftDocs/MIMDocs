@@ -4,11 +4,11 @@
 title: Microsoft BHOLD Suite Concepts Guide | Microsoft Docs
 description: Get started with the MIM 2016 components by installing and configuring the Synchronization Service.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/14/2017
-ms.technology: security
+
 ms.assetid: 
 ms.prod: microsoft-identity-manager
 

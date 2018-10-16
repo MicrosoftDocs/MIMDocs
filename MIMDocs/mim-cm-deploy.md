@@ -4,13 +4,13 @@
 title: Deploying Microsoft Identity Manager Certificate Manager | Microsoft Docs
 description: Install Microsoft Identity Manager 2016 Certificate Manager
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 
 

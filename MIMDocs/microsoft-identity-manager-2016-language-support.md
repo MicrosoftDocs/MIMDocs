@@ -2,13 +2,13 @@
 title: Supported Languages of Microsoft Identity Manager 2016 SP1  | Microsoft Docs
 description: A list of languages that are supported by Microsoft Identity Manager 2016 SP1.
 keywords:
-author: fimguy
-ms.author: davidste
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 05/23/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ---
 # Supported languages

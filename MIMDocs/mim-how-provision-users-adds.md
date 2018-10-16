@@ -4,13 +4,13 @@
 title: Microsoft Identity Manager 2016 | Microsoft Docs
 description: Go over the process of creating users in ADDS using Microsoft Identity Manager 2016
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 
 

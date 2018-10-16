@@ -4,13 +4,13 @@
 title: BHOLD attestation installation | Microsoft Docs
 description: BHOLD attestation module lets you designate reviewers and perform reviews
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 
 

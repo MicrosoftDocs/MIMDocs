@@ -10,7 +10,7 @@ manager: mtillman
 ms.date: 05/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 
 # optional metadata

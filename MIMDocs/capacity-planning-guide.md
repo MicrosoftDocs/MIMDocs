@@ -5,12 +5,12 @@ title: Capacity planning guide | Microsoft Docs
 description: Use this guide to understand the variables that should be considered before deploying MIM 2016, including load levels and policy decisions.
 keywords:
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 
 # optional metadata
