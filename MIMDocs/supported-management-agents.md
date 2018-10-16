@@ -4,13 +4,13 @@
 title: Supported connectors | Microsoft Docs
 description: Use connectors to manage data transfer between MIM and your connected data sources.
 keywords:
-author: fimguy
-ms.author: fimguy
-manager: bhu
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 1/24/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 
 

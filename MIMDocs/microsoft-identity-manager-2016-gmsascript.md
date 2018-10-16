@@ -1,13 +1,13 @@
 ---
 title: "Updating MIM Specific Services accounts for notification and approvals when gMSA is enabled | Microsoft Docs"
 description: Topic describing the basic steps to configure gMSA.
-author: fimguy
+author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ---
 
 # Update of MIM Specific Service account for notifications to gMSA

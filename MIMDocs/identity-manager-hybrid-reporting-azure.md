@@ -4,13 +4,13 @@
 title: What is hybrid reporting in Azure AD? | Microsoft Docs
 description: Hybrid audit activity reports in Azure Active Directory lets you view audited events in both the cloud and on-premises.
 keywords:
-author: davidste   
-ms.author: davidste
-manager: bhu
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 
 # optional metadata

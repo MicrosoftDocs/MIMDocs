@@ -3,13 +3,13 @@
 title: Use Azure Multi-Factor Authentication Server SDK to activate PAM or SSPR Scenarios | Microsoft Docs
 description: Set up Azure Multi-Factor Authentication Server SDK as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
 keywords:
-author: fimguy
+author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 09/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 ---

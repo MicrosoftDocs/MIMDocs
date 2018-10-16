@@ -4,13 +4,13 @@
 title: MIM2016 SP1 PAM Deployment Scripts
 description: This is page is part of the series of articles about configuring Privileged Identity Manager using scripts. It includes a list of the assumptions about the environment.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 10/17/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata
