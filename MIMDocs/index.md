@@ -69,9 +69,11 @@ LOB applications and SaaS solutions.
 </ul>
 
 ---
-<br>
-&gt;[!Warning]
-Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">upgrade</a> to Microsoft Identity Manager 2016. More information: </br>  - The FIM lifecycle information is provided  <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">here</a> </br> - For information on public releases of identity products review the post titled <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Microsoft Identity Software: Public Release Build Versions</a>
+
+> [!WARNING]
+> Forefront Identity Manager (FIM) mainstream support ended 10/10/2017. Please <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">upgrade</a> to Microsoft Identity Manager 2016. More information: 
+> - The FIM lifecycle information is provided  <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">here</a> 
+> - For information on public releases of identity products review the post titled <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Microsoft Identity Software: Public Release Build Versions</a>
 
 <h2>Reference</h2>
 <ul class="panelContent cardsFTitle">
