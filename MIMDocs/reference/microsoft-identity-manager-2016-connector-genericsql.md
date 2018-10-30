@@ -4,7 +4,7 @@ description: This article describes how to configure Microsoft's Generic SQL Con
 services: active-directory
 documentationcenter: ''
 author: billmath
-manager: bhu
+manager: mtillman
 editor: ''
 
 ms.assetid: fd8ccef3-6605-47ba-9219-e0c74ffc0ec9
@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 04/02/2018
-ms.author: davidste
+ms.author: billmath
 
 ---
 # Generic SQL Connector technical reference

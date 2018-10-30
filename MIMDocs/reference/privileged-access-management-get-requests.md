@@ -4,13 +4,13 @@
 title: Get PAM requests | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 620eebd6-e4c3-473b-b824-ee6cfe83e509
 
 # optional metadata

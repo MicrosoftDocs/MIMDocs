@@ -4,13 +4,13 @@
 title: Get certificate responses | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: b0559e7b-eaff-499b-8bcf-c6cdf5a89545
 
 # optional metadata

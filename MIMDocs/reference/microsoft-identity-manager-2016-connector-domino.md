@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 04/05/2018
-ms.author: barclayn
+ms.author: billmath
 
 ---
 # Lotus Domino Connector technical reference

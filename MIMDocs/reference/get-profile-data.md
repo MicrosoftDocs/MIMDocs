@@ -4,13 +4,13 @@
 title: Get profile data | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 3eba062b-7adf-4766-9b94-cba1c7be2fd3
 
 # optional metadata

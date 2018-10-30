@@ -4,13 +4,13 @@
 title: Sample enrollment walkthrough | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 92b97803-9475-4b90-9a6c-430f107a167d
 
 # optional metadata

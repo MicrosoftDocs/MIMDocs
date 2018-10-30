@@ -4,13 +4,13 @@
 title: Assign a smart card to a request | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 20f0bf6e-9ae0-4d21-8117-ed63e29315e6
 
 # optional metadata

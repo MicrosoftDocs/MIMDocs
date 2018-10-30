@@ -4,13 +4,13 @@
 title: PAM environment tier model | Microsoft Docs
 description: Learn about the tier model that segregates your system based on vulnerability to risk.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/30/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 
 # optional metadata

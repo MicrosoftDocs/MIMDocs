@@ -4,13 +4,13 @@
 title: Get PAM session info | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: bc30e455-9a9c-413a-b8ca-9669286299cf
 
 # optional metadata

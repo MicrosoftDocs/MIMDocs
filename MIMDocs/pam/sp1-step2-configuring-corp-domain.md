@@ -4,13 +4,13 @@
 title: Step 2 Configuring the CORP domain
 description: This article describes the second step required to configure the corp domain which involves running a script after sids.txt is copied to the CORPDC
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata

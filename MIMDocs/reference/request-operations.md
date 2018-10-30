@@ -4,13 +4,13 @@
 title: Request operations | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 114c725e-8779-443b-bf1e-4fba8ee2be9d
 
 # optional metadata

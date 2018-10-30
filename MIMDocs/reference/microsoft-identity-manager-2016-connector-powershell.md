@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 04/02/2018
-ms.author: davidste
+ms.author: billmath
 
 ---
 # Windows PowerShell Connector technical reference

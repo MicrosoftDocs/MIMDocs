@@ -4,13 +4,13 @@
 title: Get profile templates | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: b7d8ed76-168b-4cb8-b87c-cdb0976c179a
 
 # optional metadata

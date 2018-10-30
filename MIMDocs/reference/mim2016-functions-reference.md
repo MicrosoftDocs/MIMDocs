@@ -4,13 +4,13 @@
 title: Functions reference for Microsoft Identity Manager 2016 | Microsoft Docs
 description:
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 
 ---
