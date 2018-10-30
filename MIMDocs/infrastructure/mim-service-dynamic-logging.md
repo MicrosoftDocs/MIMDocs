@@ -2,16 +2,19 @@
 
 title: MIM Service Dynamic Logging | Microsoft Docs
 description: Enable MIM service dynamic logging without having to restart the management service
-keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 06/25/2018
+ms.date: 10/29/2018
 ms.topic: article
-ms.prod: microsoft-identity-manager
 
 ---
+
+
+
+
 # MIM SP1 (4.4.1436.0)  Service Dynamic Logging
+
 In 4.4.1436.0 We have introduced a new logging capability. This enable administrator and support engineers to turn on logging without having to restart the management service.
 
 Once installed you will see the following new line in the Microsoft.ResourceManagement.Service.exe.config  called
@@ -49,9 +52,11 @@ To view the trace, you can use the [Service Trace viewer tool](https://msdn.micr
 
 In build 4.5.x.x We have revised the logging feature to specify the default logging level is **“Warning”**. The service writes messages in two files (“00” and “01” indexes are added before extension). The files are located in “C:\Program Files\Microsoft Forefront Identity Manager\2010\Service” directory. When file exceeds max size the service starts write in another file. If another file exists, it will be overwritten. Default max size of the file is 1 GB. To change default max size, it is necessary to add **“maxOutputFileSizeKB”** parameter with value of max file size in KB into listener (see example below) and restart MIM Service. When the service is started, it appends logs in more recent file (if limit of space is exceeded it overwrite the oldest file). 
 
-> [!NOTE] As the service check file size before the message is written, the size of file could be greater than max size for size of one message. by default the size of the logs can be approximately 6 GB (three >listeners with two file for one GB size).
+> [!NOTE] 
+> As the service check file size before the message is written, the size of file could be greater than max size for size of one message. by default the size of the logs can be approximately 6 GB (three >listeners with two file for one GB size).
 
-> [!NOTE] The service account should have permissions to write in >“C:\Program Files\Microsoft Forefront Identity Manager\2010\Service” >directory. In case the service account doesn’t have such rights, the >files will not be created.
+> [!NOTE] 
+> The service account should have permissions to write in >“C:\Program Files\Microsoft Forefront Identity Manager\2010\Service” >directory. In case the service account doesn’t have such rights, the >files will not be created.
 
 Example how to set max file size to 200 MB (200 * 1024 KB) for svclog files and 100 MB *(100 * 1024 KB) for txt files
 
