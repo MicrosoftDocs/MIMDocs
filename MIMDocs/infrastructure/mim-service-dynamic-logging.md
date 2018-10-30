@@ -1,5 +1,5 @@
 ---
-# required metadata
+
 title: MIM Service Dynamic Logging | Microsoft Docs
 description: Enable MIM service dynamic logging without having to restart the management service
 keywords:
@@ -10,9 +10,6 @@ ms.date: 06/25/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
-ms.assetid:
-
-# optional metadata
 ---
 # MIM SP1 (4.4.1436.0)  Service Dynamic Logging
 In 4.4.1436.0 We have introduced a new logging capability. This enable administrator and support engineers to turn on logging without having to restart the management service.
