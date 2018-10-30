@@ -4,13 +4,13 @@
 title: Get user certificates | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 1b51b742-4a36-44e4-ae58-a93737d0dc27
 
 # optional metadata

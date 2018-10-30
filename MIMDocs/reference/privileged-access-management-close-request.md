@@ -4,13 +4,13 @@
 title: Close PAM request | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: ca3a1a68-9a2b-47da-bfc1-eaa360cbe609
 
 # optional metadata

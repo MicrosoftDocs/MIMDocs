@@ -4,13 +4,13 @@
 title: Get smart card authentication response | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: e05ec898-06cd-4c17-a4f4-8f3545af0f14
 
 # optional metadata

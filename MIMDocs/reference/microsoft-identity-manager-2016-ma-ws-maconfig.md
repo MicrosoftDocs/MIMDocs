@@ -4,13 +4,13 @@
 title: Web Service Connector configuration options | Microsoft Docs
 description: This article covers the steps required to install the Web Service Configuration Tool.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 11/28/2017
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 
 ---
 

@@ -4,13 +4,13 @@
 title: Get smart card profiles | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 81f4b7cd-e4d9-4b11-b125-78cc9f183cf0
 
 # optional metadata

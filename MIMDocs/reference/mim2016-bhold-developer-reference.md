@@ -5,13 +5,13 @@
 title: BHOLD developer reference for Microsoft Identity Manager 2016 | Microsoft Docs
 description: BHOLD developer reference
 keywords:
-author: fimguy
-ms.author: fimguy
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/14/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid:
 
 ---

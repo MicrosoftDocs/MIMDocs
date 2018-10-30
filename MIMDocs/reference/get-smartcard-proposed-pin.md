@@ -4,13 +4,13 @@
 title: Get smart card proposed PIN | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: ced93932-9912-4b32-9586-ada69b38a796
 
 # optional metadata

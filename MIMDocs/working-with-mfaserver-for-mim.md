@@ -6,10 +6,9 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 09/02/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 ---
@@ -19,7 +18,7 @@ The following document describes how to setup the Azure MFA server as a second l
 > [!IMPORTANT]
 > Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will not be able to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on changes to MFA by integrating with Azure Multi-Factor Authentication Server SDK.
 
-The Article below will outline the configuration update and steps to enable for a simple switch from Azure MFA SDK to Azure Multi-Factor Authentication Server SDK when released as this will be included in an upcoming hotfix please see [version history](/reference/version-history.md) for announcements. 
+The Article below will outline the configuration update and steps to enable for a simple switch from Azure MFA SDK to Azure Multi-Factor Authentication Server SDK when released as this will be included in an upcoming hotfix please see [version history](./reference/version-history.md) for announcements. 
 
 ## Prerequisites
 
@@ -30,7 +29,7 @@ In order to use Azure Multi-Factor Authentication Server with MIM, you need:
 - Install is already using Azure MFA SDK
 - Azure Active Directory Premium licenses for candidate users, or an alternate means of licensing Azure MFA
 - Phone numbers for all candidate users
-- MIM hotfix 4.5. or greater see [version history](/reference/version-history.md) for announcements
+- MIM hotfix 4.5. or greater see [version history](./reference/version-history.md) for announcements
 
 ## Azure Multi-Factor Authentication Server Configuration 
 > [!NOTE] 

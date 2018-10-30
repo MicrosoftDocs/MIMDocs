@@ -4,13 +4,13 @@
 title: Create request | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 80fe0656-6fb2-400c-9ef8-5f62b61b2a1b
 
 # optional metadata

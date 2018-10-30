@@ -4,13 +4,13 @@
 title: Import Web Services Connector | Microsoft Docs
 description: Import Web Services Connector with multiple Web Services configurations in Microsoft Identity Manager.
 keywords:
-author: fimguy
-ms.author: davidste
-manager: bhu
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 12/19/2017
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 
 ---
 

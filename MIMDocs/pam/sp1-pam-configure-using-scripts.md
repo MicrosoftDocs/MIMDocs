@@ -4,13 +4,13 @@
 title: Configure PAM using Scripts
 description: This article is part of the series for configuring PAM using scripts. It covers the modification of the XML file that will be used by the PAM deployment scripts.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata

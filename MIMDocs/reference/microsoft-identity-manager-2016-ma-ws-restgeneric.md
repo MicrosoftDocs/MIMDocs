@@ -4,13 +4,13 @@
 title: Web Service Connector workflow guide for the REST API | Microsoft Docs
 description: This article covers how to deploy a REST API sample.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 11/27/2017
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 
 ---
 

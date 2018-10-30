@@ -4,13 +4,13 @@
 title: Planning a bastion environment | Microsoft Docs
 description:
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 
 # optional metadata

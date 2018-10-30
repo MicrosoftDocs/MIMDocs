@@ -4,13 +4,13 @@
 title: Certificate Management REST API service details | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 530047f1-e43b-4a69-9542-75bc1da57bf7
 
 # optional metadata

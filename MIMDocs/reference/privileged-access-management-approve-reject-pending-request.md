@@ -4,13 +4,13 @@
 title: Approve or reject a pending PAM request | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 0632656f-ecf4-4090-85a8-216d5638140a
 
 # optional metadata

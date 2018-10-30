@@ -4,13 +4,13 @@
 title: Get profile state operations | Microsoft Docs
 description:
 keywords:
-author: msmbaldwin
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/26/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: f62c827b-5229-4b13-ad37-4f62ad231d30
 
 # optional metadata
