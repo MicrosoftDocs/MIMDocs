@@ -90,7 +90,7 @@ First Step on your windows domain controller
     -   On the Server that the Synchronization Service is installed on locate
         the Synchronization Service Key Management tool
 
-    -   By Default, the** Export key set** is already selected
+    -   By Default, the **Export key set** is already selected
 
     -   Click on **Next**
 
