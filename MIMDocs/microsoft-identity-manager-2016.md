@@ -1,55 +1,46 @@
 ---
-# required metadata
 
-title: Microsoft Identity Manager 2016 | Microsoft Docs
+title: Microsoft Identity Manager | Microsoft Docs
 description: MIM includes the access management capabilities of FIM 2010 and helps you manage users, credentials, policies, and access within your organization.
 keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/02/2018
+ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-
-ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: mwahl
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.technology: security
 
 ---
-# Microsoft Identity Manager 2016
 
-Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of [FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx). Like its predecessor, MIM helps you manage the users, credentials, policies, and access within your organization.  Additionally, MIM 2016 adds a hybrid experience, privileged access management capabilities, and support for new platforms.
+# Microsoft Identity Manager 2016 news and updates
 
-In addition to existing identity management functionality included in [FIM](https://technet.microsoft.com/library/jj133868). MIM 2016 provides new features and enhancements such as:
+Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of Forefront Identity Manager. Like its predecessor, MIM helps you manage the users, credentials, policies, and access within your organization.  Additionally, MIM 2016 adds a hybrid experience, privileged access management capabilities, and support for new platforms.
 
-- Privileged Identity Management
-- New functionality in certificate management
-  - [Certificate Management REST API Reference](./reference/certificate-management-rest-api-reference.md)
-  - Support for multi-forest topologies.
-  - [A Windows app for virtual smartcard](working-with-mim-certificate-manager.md)
-  - Updated events and troubleshooting capabilities. 
-- [Self-service scenarios](working-with-self-service-password-reset.md) now include Account Unlock and Azure MFA (multifactor authentication) gate for Password Reset.
+The current release under mainstream support is MIM 2016 Service Pack 1 (SP1).  This release in August 2017 included updates to MIM Portal, PAM scenario and added support for new platforms.  Customers running FIM or MIM versions prior to MIM 2016 SP1 should upgrade to MIM 2016 SP1 or a later hotfix.  Read more about [Upgrading to MIM 2016 SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
 
-## Hybrid experience
+## Updates since MIM 2016 SP1
 
-Microsoft Identity Manager 2016 works alongside [Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) to give you control over your full environment. Hybrid reporting in Azure AD presents your cloud and on-premises data in one place. Also, the [Self Service Password Reset portal](working-with-self-service-password-reset.md) supports Azure multi-factor authentication (MFA).
+Microsoft regularly delivers updates to MIM, including enhancements for customer requests and bug fixes, on an ongoing release cycle.
 
-## Privileged Identity Management
+### Major new and updated scenarios
 
-Privileged Identity Management controls and manages administrative access by providing temporary, task-based access to sensitive resources. This means you can give users only as much permission as necessary, which lowers the chances of a cyber attacker gaining full administrative access. In addition, Privileged Identity Management extracts and isolates administrative accounts from existing Active Directory forests.
+- [Azure AD B2B collaboration with MIM and Azure Application proxy is in preview](microsoft-identity-manager-2016-graph-b2b-scenario.md), last updated April 2018
+- [Hybrid MIM reporting is GA](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), last updated February 2018
+- [MIM deprecated feature list revised](microsoft-identity-manager-2016-deprecated-features.md), last updated February 2018
 
-MIM supports an on-premises Privileged Identity Management solution for managing Active Directory. To get started, [Use Privileged Access Management](./pam/privileged-identity-management-for-active-directory-domain-services.md).
+### Recent software releases
+
+- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated March 2018
+- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated November 2017
+- [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated September 2017
+
+
+
 
 ## Related topics
 
-- Microsoft Identity Manager is still closely related to its predecessor, Forefront Identity Manager. If you still use FIM, or want to refer to additional documentation, take a look at the [FIM 2010 R2 Documentation Roadmap](https://technet.microsoft.com/library/jj133885.aspx).
-- [Topology considerations for deploying MIM](topology-considerations.md) This article introduces multiple deployment topologies that you may consider implementing.
-- [Capacity planning guide](capacity-planning-guide.md) You can use this guide, along with test environments, to understand the appropriate scope for your deployment.
+Learn more on scenarios added in MIM 2016 and earlier at [Microsoft Identity manager 2016](microsoft-identity-manager-2016.md).
+
+Read more documentation on deploying MIM and the latest version at the [MIM Documentation Roadmap](https://docs.microsoft.com/en-us/microsoft-identity-manager/).
+
