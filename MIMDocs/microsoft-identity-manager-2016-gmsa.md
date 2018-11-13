@@ -92,7 +92,7 @@ First Step on your windows domain controller
 
     -   By Default, the **Export key set** is already selected
 
-    -   Click on **Next**
+    -   Click on **Next**
 
     -   You will now be prompted to enter the existing synchronization account
         information
@@ -106,7 +106,7 @@ First Step on your windows domain controller
 
         -   Domain - Domain that the Synchronization Service account is apart of
 
-    -   Click on **Next**
+    -   Click on **Next**
 
     -   If you entered something incorrectly, you will receive the following
         error
