@@ -309,7 +309,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 
 ### Platform support 
 
-Updated platform support information may be found in the document called [Supported platforms for MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  New platforms supported in this service pack include SQL Server 2016, SharePoint 2016.
+Updated platform support information may be found in the document called [Supported platforms for MIM 2016](../microsoft-identity-manager-2016-supported-platforms.md).  New platforms supported in this service pack include SQL Server 2016, SharePoint 2016.
 
 
 ### Issues fixed in this release
@@ -323,7 +323,21 @@ Updated platform support information may be found in the document called [Suppor
 
 ### How to upgrade
 
-Customers upgrading to Microsoft Identity Manager 2016 Service Pack 1 should follow the guidance in [Microsoft Identity Manager 2016 Service Pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md) on all services applicable to their deployment.
+Customers upgrading to Microsoft Identity Manager 2016 Service Pack 1 should follow the below guidance on all services applicable to their deployment.
+
+>[!Note]
+>Customers running Forefront Identity Manager 2010 R2 SP1 or earlier must first upgrade their environment to Microsoft Identity Manager 2016 released in August of 2015, then follow the steps below.
+
+Before you begin
+
+You need to upgrade the MIM Sync engine prior to upgrading the MIM service and portal.
+You need to backup the MIMService and MIM Sync databases.
+
+1. Uninstall the Microsoft Identity Manager component you are upgrading
+2. Once the uninstall completes, open the splash page located on your installation media “FIMSplash.htm”
+3. Select the MIM component to upgrade
+4. Proceed with the installation following the prompts
+   * MIM Service & Portal Installation: When choosing the Exchange Online as the mail account, enter the email address and credentials of the Exchange Online account on the next screen.
 
 ## Version 4.3.2266.0
 
