@@ -17,7 +17,14 @@ ms.assetid:
 
 # Identity Manager version release history
 
-The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then decide whether you need to update to the newest version or not.
+The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then determine whether you are already on the latest service pack and hotfix update version, or if you need to upgrade. 
+
+>[!NOTE]
+>This article only describes releases of the MIM Sync, Service and Portal, client, CM and PAM components.  
+>
+>The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
+>
+>The version history for the Generic LDAP, Generic SQL, web services, PowerShell and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md)
 
 ## Version 4.5.202.0
 - Status: August 30, 2018
@@ -259,6 +266,87 @@ The following features and improvements have been added in MIM version 4.4.1642.
 - Add configurable property to allow enabling/disabling IME usage on SSPR Registration form 
 - SSPR masks the Password Registration Questions on Portal Client
 
+## Version 4.4.1549.0
+ 
+* Status: previous MIM 2016 SP1 Hotfix Update, of March 27, 2017
+* Corresponding BHOLD version number: 6.0.36.0
+* Read more at [https://support.microsoft.com/en-us/help/4012498](https://support.microsoft.com/en-us/help/4012498)
+
+
+## Version 4.4.1302.0
+
+* Status: MIM 2016 Service Pack 1 (SP1) of November 9, 2016
+* Corresponding BHOLD version number: 5.0.3355.0
+
+### Updates in this service pack
+
+
+#### MIM
+
+- **MIM Portal cross-browser compatibility for end-user self-service:** In this Service Pack we are introducing support for most major browsers. Users may now access and interact with the MIM Portal for self-service group and profile management from Edge, Chrome, and Safari.
+
+- **MIM Service support for Exchange Online:** The MIM Service has long supported sending and receiving emails for approvals and notifications. Prior to SP1 MIM only supported Exchange Server or SMTP. With service pack 1, the MIM Service can send and receive requests as well as email notifications using an Office365 Exchange online account.
+
+- **Image file format validation on upload:** MIM is now able to validate the file format of images when they are uploaded to the portal.
+
+#### Privileged Access Management(PAM)
+
+- **PAM "PRIV" (bastion) forest support for Windows Server 2016 functional level:** The MIM PAM Service may be configured in an environment with domain controllers running at the Active Directory Domain Services forest functional level of Windows Server 2016. When configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activation.
+
+    >[!Note]
+    If you choose to maintain the forest functional level of Windows Server 2012 R2 in your CORP domain, it is recommended to install [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) and [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) on the CORP domain controller.
+
+- **Privileged account elevation into groups exclusive to the “PRIV” (bastion) forest:** Now, administrators can inform the MIM Service of groups and users exclusive to the “PRIV” forest. Doing this allows these groups and users to be included in PAM roles.  They can then be activated for a role and assigned membership to groups in the “PRIV” forest.
+
+- **PAM Deployment Scripts:** PAM Deployment Scripts allow administrators to streamline the installation of the PAM environment.
+
+- **PAM Cmdlets for Authentication Policy Silo configuration:** Service pack 1 introduces new Cmdlets to harden the security of your bastion forest. These Cmdlets automatically create an Authentication Policy Silo, bound to an Authentication Policy Template.
+
+    >[!Note]
+    These Cmdlets run automatically as part of the deployments scripts.
+
+
+
+### Platform support 
+
+Updated platform support information may be found in the document called [Supported platforms for MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  New platforms supported in this service pack include SQL Server 2016, SharePoint 2016.
+
+
+### Issues fixed in this release
+
+
+#### PAM
+- New-PAMGroup did not create MIM objects for domain local groups in the PRIV forest
+- New-PAMDomainConfiguration would fail with a “netdom” error message
+- PAM Monitoring Service logged warnings for groups in the PRIV forest
+
+
+### How to upgrade
+
+Customers upgrading to Microsoft Identity Manager 2016 Service Pack 1 should follow the guidance in [Microsoft Identity Manager 2016 Service Pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md) on all services applicable to their deployment.
+
+## Version 4.3.2266.0
+
+
+* Status: MIM 2016 Hotfix of July 15, 2016; customers must upgrade to a more recent version to stay supported
+* Read more at [https://support.microsoft.com/en-us/kb/3171342](https://support.microsoft.com/en-us/kb/3171342)
+
+## Version 4.3.2195.0
+
+* Status: MIM 2016 Hotfix of March 20, 2016, customers must upgrade to a more recent version to stay supported
+* Corresponding BHOLD version number: 5.0.3355.0
+* Read more at [https://support.microsoft.com/kb/3134725](https://support.microsoft.com/kb/3134725)
+	
+## Version 4.3.2064.0
+
+* Status MIM 2016 Hotfix of December 11, 2015; customers must upgrade to a more recent version to stay supported
+* Correpsonding BHOLD version number: 5.0.3176.0
+* Read more at [https://support.microsoft.com/kb/3092179](https://support.microsoft.com/kb/3092179)
+
+## Version 4.3.1935.0
+
+* Status MIM 2016 GA of August 6, 2015; customers must upgrade to a more recent version to stay supported
+* Corresponding BHOLD version number: 5.0.3079.0
 ## Next steps
 
 - See the [Support team blog build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) for public release versions of the Identity products. The blog provides information about service packs, updates, rollups, and hotfixes of MIM 2016, Azure AD Connect, FIM 2010 R2, and older build types.
