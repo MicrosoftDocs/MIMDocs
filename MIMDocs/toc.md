@@ -1,6 +1,5 @@
 # [Overview](microsoft-identity-manager-2016.md)
 ## [What is MIM 2016?](microsoft-identity-manager-2016.md)
-## [What's new in service pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
 ### [MIM2016 SP1 PAM deployment scripts](sp1-deployment-scripts.md)
 ## [Learn about PAM](./pam/privileged-identity-management-for-active-directory-domain-services.md)
 ## [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)
