@@ -30,8 +30,6 @@ As part of the regular release cycle for servicing and updating Microsoft Identi
 
 If you encounter issues during a production deployment of MIM SP1, please contact Microsoft customer support.
 
-We want to hear from you as well! If you have any feedback, comments, or concerns for the product team, email us at [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
-
 
 
 ## Updates in this service pack #

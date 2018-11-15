@@ -46,9 +46,9 @@ Start with a Windows Server 2016 machine, with a minimum of 8-12GB of RAM. When 
 
 1. Log into the new computer as its administrator.
 
-2. Using the Control Panel, give the computer a static IP address on the network. Configure that network interface to send DNS queries to the IP address of the domain controller in the previous step, and set the computer name to **CORPSERVICE**.  This will require a server restart.
+2. Using the Control Panel, give the computer a static IP address on the network. Configure that network interface to send DNS queries to the IP address of the domain controller in the previous step, and set the computer name to **CORPSERVICE**.  This operation will require a server restart.
 
-3. Open the Control Panel and join the computer to the domain that you configured in the last step, *contoso.com*.  This includes providing the username and credentials of a domain administrator such as *Contoso\Administrator*.  After the welcome message appears, close the dialog box and restart this server again.
+3. Open the Control Panel and join the computer to the domain that you configured in the last step, *contoso.com*.  This operation includes providing the username and credentials of a domain administrator such as *Contoso\Administrator*.  After the welcome message appears, close the dialog box and restart this server again.
 
 4. Sign in to the computer *CORPSERVICE* as a domain account with local machine administrator such as *Contoso\MIMINSTALL*.
 
@@ -111,8 +111,7 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 1.  Open a PowerShell window.
 
-2.  Stop IIS with the com
-3.  mand *iisreset /STOP*
+2.  Stop IIS with the command *iisreset /STOP*
 
     ```
     iisreset /STOP
