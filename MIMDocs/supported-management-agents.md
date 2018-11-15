@@ -52,7 +52,7 @@ This article covers the connectors that are included & supported in MIM, but the
 | [Windows PowerShell Connector for FIM 2010 R2](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 or better |
 | [Microsoft Azure Active Directory Connector for FIM 2010 R2](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory |
 | [Generic LDAP Connector for FIM 2010 R2](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3 server (RFC 4510 compliant)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
-| [Generic SQL Connector for FIM 2010 R2 / MIM](https://msdn.microsoft.com/library/dn510997.aspx) | [The Connector is supported with all 64-bit ODBC drivers](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
+| [Generic SQL Connector for FIM 2010 R2 / MIM](./reference/microsoft-identity-manager-2016-connector-genericsql.md) | [The Connector is supported with all 64-bit ODBC drivers](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md) |
 | [Connector for Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
 | [SharePoint Services Connector UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint server 2013 or 2016 with User Profile service application (UPA) |
 | [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 or 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
