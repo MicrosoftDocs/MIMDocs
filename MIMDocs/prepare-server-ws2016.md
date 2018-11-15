@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Set up an identity management servers: Windows Server 2016
+# Set up an identity management server: Windows Server 2016
 
 > [!div class="step-by-step"]
 > [« Preparing a domain](preparing-domain.md)
@@ -46,9 +46,9 @@ Start with a Windows Server 2016 machine, with a minimum of 8-12GB of RAM. When 
 
 1. Log into the new computer as its administrator.
 
-2. Using the Control Panel, give the computer a static IP address on the network. Configure that network interface to send DNS queries to the IP address of the domain controller in the previous step, and set the computer name to **CORPSERVICE**.  This will require a server restart.
+2. Using the Control Panel, give the computer a static IP address on the network. Configure that network interface to send DNS queries to the IP address of the domain controller in the previous step, and set the computer name to **CORPSERVICE**.  This operation will require a server restart.
 
-3. Open the Control Panel and join the computer to the domain that you configured in the last step, *contoso.com*.  This includes providing the username and credentials of a domain administrator such as *Contoso\Administrator*.  After the welcome message appears, close the dialog box and restart this server again.
+3. Open the Control Panel and join the computer to the domain that you configured in the last step, *contoso.com*.  This operation includes providing the username and credentials of a domain administrator such as *Contoso\Administrator*.  After the welcome message appears, close the dialog box and restart this server again.
 
 4. Sign in to the computer *CORPSERVICE* as a domain account with local machine administrator such as *Contoso\MIMINSTALL*.
 
@@ -76,13 +76,13 @@ Start with a Windows Server 2016 machine, with a minimum of 8-12GB of RAM. When 
 
 Set up the server security policy to allow the newly-created accounts to run as services.
 > [!NOTE] 
-> Depending on configuration single server(all-in-one) or distributed server you only need to add based on role of the member machine like synchronization server. 
+> Depending on your configuration, single server(all-in-one) or distributed servers you only need to add, based on role of the member machine, like synchronization server. 
 
 1. Launch the Local Security Policy program
 
 2. Navigate to **Local Policies > User Rights Assignment**.
 
-3. On the details pane, right click on **Log on as a service**, and select **Properties**.
+3. On the details pane, right-click on **Log on as a service**, and select **Properties**.
 
     ![Local Security Policy image](media/MIM-DeployWS3.png)
 
@@ -90,15 +90,15 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 5. Click **OK** to close the **Log on as a service Properties** window.
 
-6.  On the details pane, right click on **Deny access to this computer from the network**, and select **Properties**.>
+6.  On the details pane, right-click on **Deny access to this computer from the network**, and select **Properties**.>
 
-[!NOTE] If seperate role servers this step will break some funtionality like SSPR feature.
+[!NOTE] Separating role servers will break some functionality like SSPR.
 
 7. Click **Add User or Group**, and in the text box type `contoso\MIMSync; contoso\MIMService` and click **OK**.
 
 8. Click **OK** to close the **Deny access to this computer from the network Properties** window.
 
-9. On the details pane, right click on **Deny log on locally**, and select **Properties**.
+9. On the details pane, right-click on **Deny log on locally**, and select **Properties**.
 
 10. Click **Add User or Group**, and in the text box type `contoso\MIMSync; contoso\MIMService` and click **OK**.
 

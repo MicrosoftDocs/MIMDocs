@@ -17,7 +17,7 @@ ms.technology: security
 
 Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of Forefront Identity Manager. Like its predecessor, MIM helps you manage the users, credentials, policies, and access within your organization.  Additionally, MIM 2016 adds a hybrid experience, privileged access management capabilities, and support for new platforms.
 
-The current release under mainstream support is MIM 2016 Service Pack 1 (SP1).  This release in August 2017 included updates to MIM Portal, PAM scenario and added support for new platforms.  Customers running FIM or MIM versions prior to MIM 2016 SP1 should upgrade to MIM 2016 SP1 or a later hotfix.  Read more about [Upgrading to MIM 2016 SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
+The current release under mainstream support is MIM 2016 Service Pack 1 (SP1).  This release in August 2017 included updates to MIM Portal, PAM scenario and added support for new platforms.  Customers running FIM or MIM versions prior to MIM 2016 SP1 should upgrade to MIM 2016 SP1 or a later hotfix.  Read more about [Upgrading to MIM 2016 SP1](./reference/version-history.md).
 
 ## Updates since MIM 2016 SP1
 
