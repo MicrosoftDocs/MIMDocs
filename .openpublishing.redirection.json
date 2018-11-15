@@ -15,6 +15,16 @@
             "redirect_url": "/microsoft-identity-manager/supported-management-agents",
             "redirect_document_id": false
         },
+		 {
+            "source_path": "MIMDocsMicrosoft-identity-manager-2016-sp1-release-notes.md",
+            "redirect_url": "/microsoft-identity-manager/reference/version-history.md",
+            "redirect_document_id": false
+        },
+		 {
+            "source_path": "MIMDocs/microsoft-identity-manager-2016-release-notes.md",
+            "redirect_url": "/microsoft-identity-manager/reference/version-history.md",
+            "redirect_document_id": false
+        },
         {
             "source_path": "MIMDocs/PlanDesign/topology-considerations.md",
             "redirect_url": "/microsoft-identity-manager/topology-considerations",
