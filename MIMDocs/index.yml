@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Hybrid identity documentation
+title: Microsoft Identity Manager Documentation
 metadata:
-  document_id: 44409b3f-ab8c-053d-cdf4-5d7e823a275e
-  title: Hybrid identity documentation
-  meta.description: Azure AD Connect will integrate your on-premises directories with Azure Active Directory. This allows you to provide a common identity for your users for Office 365, Azure, and SaaS applications integrated with Azure AD.
+  document_id: 
+  title: Microsoft Identity Manager Documentation
+  meta.description: Microsoft Identity Manager provides on-premises identity and access management.
   services: active-directory
   author: billmath
   manager: mtillman
@@ -15,7 +15,7 @@ metadata:
   ms.date: 05/18/2018
   ms.author: billmath
 abstract:
-  description: Microsoft’s identity solutions span on-premises and cloud-based capabilities, creating a single user identity for authentication and authorization to all resources, regardless of location. We call this hybrid identity.</br></br></br>Azure AD Connect will integrate your on-premises directories with Azure Active Directory. This allows you to provide a common identity for your users for Office 365, Azure, and SaaS applications integrated with Azure AD. This topic will guide you through the planning, deployment, and operation steps. It is a collection of links to the topics related to this area. 
+  description: Microsoft Identity Manager provides on-premises identity and access management.  It synchronize identities between multiple authentication stores, directories including Active Directory and other LDAP servers, databases such as Oracle, and applications such as SAP. This identity lifecycle management ensures identities are ready for synchronization with Azure Active Directory and provides consistent sign-on experiences across AD-integrated applications, other on-premises applications and SaaS solutions.  MIM also enhances Active Directory security with security group management, privileged access management and certificate management.  
   aside:
     image:
       alt: 
