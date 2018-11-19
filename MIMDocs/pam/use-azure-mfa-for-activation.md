@@ -106,7 +106,7 @@ Next, you’ll generate a file that includes the authentication material for PAM
 11.  Save and overwrite the **MfaSettings.xml** file in the MIM Service folder `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`. 
 
 > [!NOTE]
-> At the end of the process, ensure that the file **MfaSettings.xml**, or any copies of it or the ZIP file are not publically readable.
+> At the end of the process, ensure that the file **MfaSettings.xml**, or any copies of it or the ZIP file are not publicly readable.
 
 ## Configure PAM users for Azure MFA
 
