@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/22/2018
+ms.date: 12/02/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 
@@ -25,7 +25,9 @@ ms.suite: ems
 ---
 # Microsoft Identity Manager data handling 
 
-This article will provide guidance on how organization can through the search, delete, Update and report operations decisions your organization will need to practice or implement across many connected data sources. Before deciding on your approach of deleting or updating an understanding the current design and configuration of your identity manager system (MIM) is critical. Below are a few scenarios customers will need to consider and answer the following questions: 
+This article will provide guidance on how organizations can make decisions that can be applied across many connected data sources.  This can be achieved through the search, delete, update, and report operations.  Before deciding on your approach of deleting or updating, an understanding of the current design and configuration of your identity manager system (MIM) is critical. 
+
+Below are a few scenarios customers will need to consider and answer the following questions: 
 
 - What data do you need for you identity management to help with business process?
 - Where is current data going to be stored in MIM?
