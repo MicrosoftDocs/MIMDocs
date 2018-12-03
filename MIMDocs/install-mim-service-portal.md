@@ -74,11 +74,11 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 12. Specify *CORPIDM* (this computer's name) as MIM Service server address for the MIM Portal.
 
-13. Specify *http://mim.contoso.com* as the SharePoint site collection URL.
+13. Specify `*http://mim.contoso.com*` as the SharePoint site collection URL.
 
-14. Specify *http://passwordregistration.contoso.com* as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
+14. Specify `*http://passwordregistration.contoso.com*` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
 
-15. Specify *http://passwordreset.contoso.com* as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
+15. Specify `*http://passwordreset.contoso.com*` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
 
 16. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to MIM Portal.
 

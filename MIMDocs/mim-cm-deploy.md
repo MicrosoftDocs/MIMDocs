@@ -498,9 +498,9 @@ Before logging in to CORPCM please add MIMINSTALL to **domain Admins, Schema Adm
 
 18. Close all open windows.
 
-19. Add https://cm.contoso.com/certificatemanagement to local intranet zone in your browser.
+19. Add `https://cm.contoso.com/certificatemanagement` to local intranet zone in your browser.
 
-20. Visit site from server CORPCM https://cm.contoso.com/certificatemanagement  
+20. Visit site from server CORPCM `https://cm.contoso.com/certificatemanagement`  
 
     ![diagram](media/mim-cm-deploy/image035.png)
 
