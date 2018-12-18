@@ -13,7 +13,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 03/22/2018
+ms.date: 12/18/2018
 ms.author: billmath
 
 ---
@@ -35,6 +35,12 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 
+
+## 1.1.911.0
+
+>![!NOTE]  This connector build version is only for use within Azure AD Connect deployments, and is not provided for use in MIM deployments.
+
+Compared to the previous connector release, it contains no improvements or updates for MIM customers.
 
 ## 1.1.861.0
 
