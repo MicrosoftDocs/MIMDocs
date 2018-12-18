@@ -42,6 +42,8 @@ Related links:
 
 Compared to the previous connector release, it contains no improvements or updates for MIM customers.
 
+-  Updates the non-standard connectors (for example, Generic LDAP Connector and Generic SQL Connector) shipped with Azure AD Connect.  
+
 ## 1.1.861.0
 
 ### Fixed issues:
