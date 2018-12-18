@@ -38,7 +38,7 @@ Related links:
 
 ## 1.1.911.0
 
->![!NOTE]  This connector build version is only for use within Azure AD Connect deployments, and is not provided for use in MIM deployments.
+> [!NOTE]  This connector build version is only for use within Azure AD Connect deployments, and is not provided for use in MIM deployments.
 
 Compared to the previous connector release, it contains no improvements or updates for MIM customers.
 
