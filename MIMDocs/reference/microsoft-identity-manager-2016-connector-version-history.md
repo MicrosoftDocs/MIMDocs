@@ -13,7 +13,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 03/22/2018
+ms.date: 12/18/2018
 ms.author: billmath
 
 ---
@@ -21,7 +21,7 @@ ms.author: billmath
 The Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM) are updated frequently.
 
 > [!NOTE]
-> This topic is on FIM and MIM only. These Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on AADConnect when upgrading to specified Build.
+> This topic is on FIM and MIM only. These Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on Azure AD Connect when upgrading to specified Build.
 
 
 This topic list all versions of the Connectors that have been released.
@@ -35,6 +35,15 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 
+
+## 1.1.911.0
+
+> [!NOTE]  
+> This connector build version is only for use within Azure AD Connect deployments, and is not provided for use in MIM deployments.
+> 
+> Compared to the previous connector release, it contains no improvements or updates for MIM customers.
+
+-  Updates the non-standard connectors (for example, Generic LDAP Connector and Generic SQL Connector) shipped with Azure AD Connect.  
 
 ## 1.1.861.0
 
