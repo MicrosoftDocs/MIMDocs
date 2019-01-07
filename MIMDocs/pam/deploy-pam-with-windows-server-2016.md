@@ -94,21 +94,13 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
      a.  Launch an elevated **Command prompt** and type the following commands, substituting the name of your MIM administrator account for “mimadmin” in each of the four lines:
     ```
-       dsacls "CN=AuthN Policies,CN=AuthN Policy
-       Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
-       mimadmin:RPWPRCWD;;msDS-AuthNPolicy /i:s
+       dsacls "CN=AuthN Policies,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g "mimadmin:RPWPRCWD;;msDS-AuthNPolicy" /i:s
 
-       dsacls "CN=AuthN Policies,CN=AuthN Policy
-       Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
-       mimadmin:CCDC;msDS-AuthNPolicy
+       dsacls "CN=AuthN Policies,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g "mimadmin:CCDC;msDS-AuthNPolicy"
 
-       dsacls "CN=AuthN Silos,CN=AuthN Policy
-       Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
-       mimadmin:RPWPRCWD;;msDS-AuthNPolicySilo /i:s
+       dsacls "CN=AuthN Silos,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g "mimadmin:RPWPRCWD;;msDS-AuthNPolicySilo" /i:s
 
-       dsacls "CN=AuthN Silos,CN=AuthN Policy
-       Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
-       mimadmin:CCDC;msDS-AuthNPolicySilo
+       dsacls "CN=AuthN Silos,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g "mimadmin:CCDC;msDS-AuthNPolicySilo"
     ```
 
 
