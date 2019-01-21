@@ -13,7 +13,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 12/18/2018
+ms.date: 01/18/2019
 ms.author: billmath
 
 ---
@@ -35,6 +35,19 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 
+## 1.1.913.0
+
+### Fixed issues:
+
+* Generic SQL:
+    * Fixed a regression bug on the Generic SQL Connector where the it was only reading the first 5000 objects.
+* Graph Connector(Public Preview)
+    * Fixed an issue where the Graph API Connector failed to read/write from a tenant or create a new connector when the beta option is selected on connectivity.
+
+### Enhancements:
+
+* Graph Connector(Public Preview)
+    * Set the TLS 1.2 protocol as the default for the Graph connector.
 
 ## 1.1.911.0
 
