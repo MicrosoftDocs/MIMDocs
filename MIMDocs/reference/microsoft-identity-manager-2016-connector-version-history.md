@@ -41,12 +41,20 @@ Related links:
 
 * Generic SQL:
     * Fixed a regression bug on the Generic SQL Connector where the it was only reading the first 5000 objects.
+<<<<<<< HEAD
 * Graph Connector:
+=======
+* Graph Connector
+>>>>>>> b4eb3dbd939a23ce4bde9719a9d5b00349c1796e
     * Fixed an issue where the Graph API Connector failed to read/write from a tenant or create a new connector when the beta option is selected on connectivity.
 
 ### Enhancements:
 
+<<<<<<< HEAD
 * Graph Connector:
+=======
+* Graph Connector
+>>>>>>> b4eb3dbd939a23ce4bde9719a9d5b00349c1796e
     * Set the TLS 1.2 protocol as the default for the Graph connector.
 
 ## 1.1.911.0
