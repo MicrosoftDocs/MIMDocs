@@ -13,7 +13,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ms.author: billmath
 
 ---
@@ -41,12 +41,12 @@ Related links:
 
 * Generic SQL:
     * Fixed a regression bug on the Generic SQL Connector where the it was only reading the first 5000 objects.
-* Graph Connector
+* Graph Connector:
     * Fixed an issue where the Graph API Connector failed to read/write from a tenant or create a new connector when the beta option is selected on connectivity.
 
 ### Enhancements:
 
-* Graph Connector
+* Graph Connector:
     * Set the TLS 1.2 protocol as the default for the Graph connector.
 
 ## 1.1.911.0
