@@ -13,7 +13,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/22/2019
+ms.date: 01/23/2019
 ms.author: billmath
 
 ---
@@ -21,7 +21,7 @@ ms.author: billmath
 The Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM) are updated frequently.
 
 > [!NOTE]
-> This topic is on FIM and MIM only. These Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on Azure AD Connect when upgrading to specified Build.
+> This topic is primarily on FIM and MIM Connectors only. Unless explicitly called out below, these Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on Azure AD Connect when upgrading to specified Build.
 
 
 This topic list all versions of the Connectors that have been released.

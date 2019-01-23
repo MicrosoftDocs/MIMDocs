@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 08/22/2018
+ms.date: 11/19/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -25,6 +25,18 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md)
+
+## Version 4.5.286.0
+- Status: November 19, 2018
+- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=57596)
+- [KB article 4469694](https://support.microsoft.com/en-us/help/4469694/hotfixrolluppackagebuild452860isavailableformicrosoftidentitymanager20)
+
+> [!IMPORTANT]
+>- .NET Framework 4.6 is also required for the installer <br>
+>- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
+
+This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
+
 
 ## Version 4.5.202.0
 - Status: August 30, 2018
