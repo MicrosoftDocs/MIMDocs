@@ -49,7 +49,7 @@ Related links:
 * Graph Connector:
     * Set the TLS 1.2 protocol as the default for the Graph connector.
 * Generic SQL Connector:
-    * Generic SQL Connector has been testd with Oracle 12c and Oracle 18c.
+    * Generic SQL Connector has been tested with Oracle 12c and Oracle 18c.
 
 ## 1.1.911.0
 
