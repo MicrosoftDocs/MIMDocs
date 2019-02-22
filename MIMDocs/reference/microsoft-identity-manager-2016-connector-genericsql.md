@@ -35,7 +35,7 @@ From a high-level perspective, the following features are supported by the curre
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all 64-bit ODBC drivers. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>MySQL 5.x</li> |
+| Connected data source |The Connector is supported with all 64-bit ODBC drivers. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>Oracle 12c and 18c</li><li>MySQL 5.x</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Password Management</li> |
 | Operations |<li>Full Import and Delta Import, Export</li><li>For Export: Add, Delete, Update, and Replace</li><li>Set Password, Change Password</li> |
 | Schema |<li>Dynamic discovery of objects and attributes</li> |
@@ -45,6 +45,8 @@ Before you use the Connector, make sure you have the following on the synchroniz
 
 * Microsoft .NET 4.5.2 Framework or later
 * 64-bit ODBC client drivers
+* If you are using the connector to communicate with Oracle 12c, this requires Oracle Instant Client 12.2.0.1 or newer with the ODBC package.
+* If you are using the connector to communicate with Oracle 18c, this requires Oracle Instant Client 18.3.0.0 or newer with ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters.
 
 ### Permissions in connected data source
 To create or perform any of the supported tasks in Generic SQL connector, you must have:
