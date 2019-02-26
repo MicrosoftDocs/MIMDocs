@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 09/26/2017
+ms.date: 02/25/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -26,8 +26,30 @@ ms.suite: ems
 ---
 
 # Microsoft Identity Manager 2016 developer reference
-The developer documentation for Microsoft Identity Manager 2016 includes the following references:
 
-- [Certificate Management (CM) REST API reference](certificate-management-rest-api-reference.md)
+The developer documentation for Microsoft Identity Manager 2016 is organized by component: MIM Sync, MIM Service, MIM CM, and BHOLD.  The developer documentation includes the following references:
+
+## MIM Sync and connectors
+
+- [MIM sync developer reference](https://msdn.microsoft.com/en-us/library/windows/desktop/ms698364(v=vs.100).aspx)
+- [ECMA 2.2 reference](https://msdn.microsoft.com/en-us/library/windows/desktop/hh859557(v=vs.100).aspx)
+- [Web services connector](microsoft-identity-manager-2016-ma-ws.md)
+
+## MIM Service, MIM Portal, and PAM scenarios
+
+- [MIM service developer reference](https://msdn.microsoft.com/en-us/library/windows/desktop/ee652382(v=vs.100).aspx)
 - [Privileged Access Management (PAM) REST API reference](privileged-access-management-rest-api-reference.md)
+- [SSPR short message service](https://msdn.microsoft.com/en-us/library/windows/desktop/jj131737(v=vs.100).aspx)
+
+## MIM Certificate Management (CM)
+
+- [MIM CM developer reference](https://msdn.microsoft.com/en-us/library/windows/desktop/ee652335(v=vs.100).aspx)
+- [MIM CM REST API reference](certificate-management-rest-api-reference.md)
+ 
+## BHOLD Suite
+
+- [BHOLD developer reference](mim2016-bhold-developer-reference.md)
+ 
+# See also
+
 - [Microsoft Identity Manager (MIM) cmdlets reference](https://docs.microsoft.com/powershell/identitymanager/)
