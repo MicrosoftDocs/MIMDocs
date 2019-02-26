@@ -18,13 +18,16 @@ ms.author: billmath
 
 ---
 # Connector Version Release History
-The Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM) are updated frequently.
+
+
+Connectors link specific connected data sources to Microsoft Identity Manager (MIM) and Azure AD Connect.  (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation, and the installation package of Azure AD Connect.    In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
 
 > [!NOTE]
 > This topic is primarily on FIM and MIM Connectors only. Unless explicitly called out below, these Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on Azure AD Connect when upgrading to specified Build.
 
 
-This topic list all versions of the Connectors that have been released.
+This topic list all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP1](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
+
 
 Related links:
 
@@ -324,6 +327,21 @@ To refresh the definition:
   * If this Connector type has a Partitions tab, with a Refresh button, click the Refresh button while on that tab
 * After all property tabs have been accessed, click the OK button to save the changes.
 
+## Other connectors
+
+In addition to the connectors listed above, connectors for SharePoint, and a legacy connector for Windows Azure Active Directory, were also distributed separately from MIM.
+
+### SharePoint User Profile
+
+The Forefront Identity Manager Connector for SharePoint User Profile Store helps you synchronize identity information to the User Profile Store in SharePoint 2013 and SharePoint 2016.   Version 4.3.2430.0 of this connector, published 12/19/2016 can be downloaded from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=41164).
+
+More information on this connector can be found at the 
+[hotfix rollup](https://support.microsoft.com/en-us/help/3156030/hotfix-rollup-build-4-3-2201-0-is-available-for-forefront-identity-man)
+and instructions on how to [Use a sample MIM solution in SharePoint Server 2016](https://docs.microsoft.com/en-us/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server-2016).
+
+### Forefront Identity Manager Connector for Windows Azure Active Directory (legacy connector)
+
+The Azure AD Connector for FIM was an early technology for synchronizing identity information to Azure Active Directory. The Azure AD Connector for FIM, version 1.0.6635.0069 from February 19, 2014, is at feature freeze. [It](https://www.microsoft.com/en-us/download/details.aspx?id=41166) does not receive any updates but it is still supported. The solution of using FIM and the Azure AD Connector has been superseded by [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect). Microsoft recommends that you do not begin a new deployment using this Connector.
 
 ## Next steps
 
