@@ -20,7 +20,7 @@ ms.assetid:
 The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then determine whether you are already on the latest service pack and hotfix update version, or if you need to upgrade. 
 
 >[!NOTE]
->This article only describes releases of the MIM Sync, Service and Portal, client, CM and PAM components.  
+>This article only describes releases of the MIM Sync, Service and Portal, client, CM and PAM components.  Not sure what components you need?  See [Microsoft Identity Manager licensing and downloads](../microsoft-identity-manager-licensing.md).
 >
 >The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
 >

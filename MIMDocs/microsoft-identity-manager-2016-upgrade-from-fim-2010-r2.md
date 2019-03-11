@@ -48,7 +48,7 @@ This guide assumes that you have the following already set up:
 
 2.  On each server where FIM 2010 R2 components are installed – e.g. *CORPIDM* – log in as Contoso\Administrator. In this  deployment example, Administrative rights are needed to upgrade FIM 2010 R2 to **MIM**.
 
-3.  Download or unpack the MIM software.
+3.  Download or unpack the MIM software.  If you do not have this software, see [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md).
 
 ## Upgrade the Synchronization Service
 
