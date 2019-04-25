@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 11/19/2018
+ms.date: 4/25/2019
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -24,9 +24,16 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
 >
->The version history for the Generic LDAP, Generic SQL, web services, PowerShell and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md)
+>The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  The current version of the generic connectors is 1.1.913.0 of January 2019.
 
-## Version 4.5.286.0
+## MIM Hybrid Reporting Agent Version 3.1.41.0
+- Availability date: April 22, 2019
+- [Hybrid reporting agent download](https://www.microsoft.com/en-us/download/details.aspx?id=55112)
+
+MIM hybrid reporting agent version 3.1.41.0 includes updates for TLS 1.2 and a bug fix.  The hybrid reporting agent can be used with MIM 2016 SP1 versions 4.4.1302.0 or later and an Azure AD Premium subscription.
+
+
+## MIM Version 4.5.286.0
 - Status: November 19, 2018
 - [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=57596)
 - [KB article 4469694](https://support.microsoft.com/en-us/help/4469694/hotfixrolluppackagebuild452860isavailableformicrosoftidentitymanager20)
@@ -104,7 +111,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - In hotfix cases the Office 365 setting would be cleared , The encrypted password for the MIM Service’s Exchange Online mailbox is not changed
 - *There was no limit to the MIM Service log file created, Updated logging default setting and implemented circular logging capability
 
-#### Privilege Access Management 
+#### Privileged Access Management 
 - *Support for Group Managed Service Accounts
 - *Improved Language support to new defined standard
 - Objects that use unmanaged resources are not cleared on time.  these objects will be  properly cleaned up
