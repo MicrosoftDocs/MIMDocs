@@ -38,7 +38,7 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 
-## 1.1.913.0
+## 1.1.913.0 \(January 2019\)
 
 ### Fixed issues:
 
