@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 4/25/2019
+ms.date: 5/10/2019
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -26,6 +26,17 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  The current version of the generic connectors is 1.1.913.0 of January 2019.
 
+## MIM Version 4.5.412.0
+- Availabilty date: May 10, 2019
+- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
+- [KB article 4489646](https://support.microsoft.com/en-us/help/4489646/hotfix-rollup-4-5-412-0-available-for-mim-2016-sp1)
+
+This hotfix contains updates for MIM Sync, MIM Service, MIM Portal, MIM CM and PAM components.  It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.286.0.
+
+> [!IMPORTANT]
+>- .NET Framework 4.6 is also required for the installer <br>
+>- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
+
 ## MIM Hybrid Reporting Agent Version 3.1.41.0
 - Availability date: April 22, 2019
 - [Hybrid reporting agent download](https://www.microsoft.com/en-us/download/details.aspx?id=55112)
@@ -38,11 +49,8 @@ MIM hybrid reporting agent version 3.1.41.0 includes updates for TLS 1.2 and a b
 - [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=57596)
 - [KB article 4469694](https://support.microsoft.com/en-us/help/4469694/hotfixrolluppackagebuild452860isavailableformicrosoftidentitymanager20)
 
-> [!IMPORTANT]
->- .NET Framework 4.6 is also required for the installer <br>
->- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
 
-This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
+This hotfix contains updates for the MIM Service, MIM Portal and PAM components.  .NET Framework 4.6 is required for the installer.
 
 
 ## Version 4.5.202.0
