@@ -38,6 +38,34 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 
+## 1.1.953.0 (June 2019)
+
+### Fixed issues:
+- Generic LDAP Connector
+   - Delta import no longer fails if Changes field is empty in Oracle Internet Directory
+- Generic SQL Connector
+   - Fixed an issue with custom SQL query import strategy using StartIndex and EndIndex parameters resulting only first 5,000 objects be imported
+   - Fixed an issue with table/view import strategy when reading from MS SQL resulting only first 5,000 objects be imported
+- Graph Connector:
+   - Organizational contacts are now handled correctly, email is no longer missing
+   - Fixed an issue with manager attribute import and export operations. Connector no longer fails when manager is empty. Manager value is updated correctly in Azure AD
+   - Fixed an issue with delta import of empty values
+   - Fixed an issue with connector crashing on delta import when local cache file is corrupted
+   - Fixed several issues with incorrect export of empty values or when only attribute value case has changed
+   - Connector now handles delete/add operations for the same attribute during export run correctly
+   - Fixed several issues with long-running imports and exports when access tokens were expiring during connector run. Connector now renews access tokens when needed without failure
+   - Fixed an issue with last member of a group not being deleted
+### Enhancements:
+- Generic SQL Connector
+   - commandTimeout parameter of a data reader is set to be equal to import profile command timeout. If you have long-running queries taking more than 30 seconds to complete, you can increase this parameter in your import profile run step configuration
+- Graph Connector: 
+   - Added multi-threaded group membership full import strategy to improve import performance. Delta import remains single-threaded operation
+   - Added support for complex schema types resulting attributes like OnPremisesExtentionAttributes.* being available now
+   - Added support for export_password attribute to avoid export-change-not-reimported errors and do not show initial password in the connector space. Behavior is similar to other ECMA2 connectors
+   - Added a handler to support HTTP requests throttling. When Azure AD replica receives too many requests from a client it might respond with Retry-After instruction. Connector will pause and retry instead of failing
+   - Delta import profile will no longer start if query filters are defined. If you want to import only specific objects from Azure AD, e.g. users having last name that starts with A*, then delta import functionality will be blocked
+
+
 ## 1.1.913.0 \(January 2019\)
 
 ### Fixed issues:
