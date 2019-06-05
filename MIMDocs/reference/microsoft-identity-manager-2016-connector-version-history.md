@@ -45,7 +45,7 @@ Related links:
    - Delta import no longer fails if Changes field is empty in Oracle Internet Directory
 - Generic SQL Connector
    - Fixed an issue with custom SQL query import strategy using StartIndex and EndIndex parameters resulting only first 5,000 objects be imported
-   - Fixed an issue with table/view import strategy when reading from MS SQL resulting only first 5,000 objects be imported
+   - Fixed an issue with table/view import strategy when reading from MS SQL resulting in only the first page be imported.
 - Graph Connector:
    - Organizational contacts are now handled correctly, email is no longer missing
    - Fixed an issue with manager attribute import and export operations. Connector no longer fails when manager is empty. Manager value is updated correctly in Azure AD
