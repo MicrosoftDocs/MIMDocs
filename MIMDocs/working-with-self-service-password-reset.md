@@ -180,8 +180,8 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 4.  After successful authentication, the user will be given two options, either to keep his current password or to set a new password.
 
-5.  ![MIM account unlocked success image](media/MIM-SSPR-account-unlock.JPG)
+    ![MIM account unlocked success image](media/MIM-SSPR-account-unlock.JPG)
 
-6.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
+5.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
 
     ![MIM Login Assistant Password Reset image](media/MIM-SSPR-PR1.JPG)
