@@ -1229,31 +1229,36 @@ of string, integer, datetime, and Boolean are good candidates for this control.
 
 **Properties**:
 
-1.  **All Common Properties**: For more information, see the Common properties
+1. **All Common Properties**: For more information, see the Common properties
     section of this document.
 
-2.  **ValuePath**: The property to get the Value attribute from ItemSource. When
+2. **ValuePath**: The property to get the Value attribute from ItemSource. When
     ItemSource is specified as Custom, the value path is set to Value. It binds
     with the Value field from the Option element that is defined later in this
     document.
 
-3.  **CaptionPath**: The property to get the Value attribute from ItemSource. When
+3. **CaptionPath**: The property to get the Value attribute from ItemSource. When
     ItemSource is specified as Custom, the value path is set to Caption. It
     binds with the Caption field from the Option element that is defined later
     in this document.
 
-4.  **HintPath**: The property to get the Value attribute from ItemSource. When
+4. **HintPath**: The property to get the Value attribute from ItemSource. When
     ItemSource is specified as Custom, the value path is set to Hint. It binds
     with the Hint field from the Option element that is defined later in this
     document.
 
-5.  **ItemSource**: A collection of ListControlItems that defines the choices in the
+5. **ItemSource**: A collection of ListControlItems that defines the choices in the
     list. The user can explicitly set this to Custom and use the Option element
     to specify the string value.
 
-6.  **SelectedValue**: The value that is currently selected. This is a required,
+6. **SelectedValue**: The value that is currently selected. This is a required,
     string-type property. This property is bound with string data from the data
     source.
+    
+7. **DefaultValue**: This is an optional, string-type property. Use this property to define a default value for the drop-down box if it is used to create a new object.
+
+> [!IMPORTANT]
+> The DefaultValue property is only available in MIM update rollup 4.4.1459.0 and newer.
 
 Events:
 
@@ -2127,21 +2132,26 @@ options to choose from. Otherwise, UOCListView is recommended.
 
 Properties:
 
-1.  All Common Properties: For information about this property, see the Common
+1. All Common Properties: For information about this property, see the Common
     properties section of this document.
 
-2.  ValuePath: The value path is set to Value. It binds with the Value field
+2. ValuePath: The value path is set to Value. It binds with the Value field
     from the Option element that is defined in this document.
 
-3.  CaptionPath: The value path is set to Caption. It binds with the Caption
+3. CaptionPath: The value path is set to Caption. It binds with the Caption
     field from the Option element that is defined in this document.
 
-4.  HintPath: The value path is set to Hint. It binds with the Hint field from
+4. HintPath: The value path is set to Hint. It binds with the Hint field from
     the Option element that is defined in this document.
 
-5.  SelectedValue: The value that is currently selected. This is a required,
+5. SelectedValue: The value that is currently selected. This is a required,
     string-type property. This property binds with string data from the data
     source.
+
+6. DefaultValue: This is an optional, string-type property. Use this property to define a default value for the drop-down box if it is used to create a new object.
+
+> [!IMPORTANT]
+> The DefaultValue property is only available in MIM update rollup 4.4.1459.0 and newer.
 
 Events:
 
