@@ -49,9 +49,9 @@ For the full XSD schema, see Appendix A: Default XSD Schema later in this docume
 The following is the XSD schema for the ObjectControlConfiguration element:
 
 ```XML
-<xsd:element name="ObjectControlConfiguration"\>
-  <xsd:complexType\>
-    <xsd:sequence\>
+<xsd:element name="ObjectControlConfiguration">
+  <xsd:complexType>
+    <xsd:sequence>
       <xsd:element ref="my:ObjectDataSource" minOccurs="0" maxOccurs="32"/>
       <xsd:element ref="my:XmlDataSource" minOccurs="0" maxOccurs="32"/>
       <xsd:element ref="my:Panel"/>
