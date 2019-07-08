@@ -37,7 +37,7 @@ The diagram below shows an example of the type of environment that may be used. 
     The lab consists of windows 2016 Datacenter servers.
 
     >[!NOTE]
-    >For more details on the supported platforms for MIM 2016 take a look at the article titled [Supported platforms for MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
+    >For more details on the supported platforms for MIM 2016 take a look at the article titled [Supported platforms for MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).
 
 1. Pre-deployment steps
 
