@@ -107,4 +107,4 @@ The Microsoft Certificate Management Modern Application supports the following 3
 ## Next steps
 
 - [First time deployment](microsoft-identity-manager-deploy.md)
-- [Version History](/reference/version-history.md)
+- [Version History](reference/version-history.md)
