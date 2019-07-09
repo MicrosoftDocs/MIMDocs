@@ -34,7 +34,7 @@ This table describes the supported platforms and version for each component of M
 |-------------------|--------------|--------------|
 | **MIM Sync** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
 | | Active Directory functional level for user provisioning, PCNS and GAL Sync | Windows 2000 (NR)<br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
-| | MIM Sync database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| | MIM Sync database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 * |
 | | Active Directory for user provisioning, PCNS, and GAL Sync (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016 * |
 | | Development environment (optional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
@@ -43,9 +43,9 @@ This table describes the supported platforms and version for each component of M
 | |PAM Scenario:  Windows Server | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * |
 | |PAM Scenario: Active Directory for bastion environment PAM forest | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * |
 | |PAM Scenario: Active Directory for PAM scenario existing (CORP) forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
-| | MIM Service database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 |
-| | SharePoint | SharePoint Foundation 2010 (NR)<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Notification Only before build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490) |
+| | MIM Service database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 * |
+| | SharePoint | SharePoint Foundation 2010 (NR)<br/>SharePoint Foundation 2013 SP1 (NR) <br/> SharePoint 2016 * |
+| | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Notification Only before build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490) |
 | | Browser | All major supported browsers * (Mobile devices limited)|
 | **MIM Service Reporting** | Windows Server |  Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR) <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Data warehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager <br/> System Center 2016 Service Manager * (With 4.4.1459)<br/> [SQL Server Version Compatibility for System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016) |
@@ -56,11 +56,11 @@ This table describes the supported platforms and version for each component of M
 | | PAM PowerShell requestor cmdlets (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (Server and CA integration) | Windows server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Certificate authority | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | MIM CM database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| | MIM CM database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 * |
 | **MIM Certificate Management** (Application) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (Bulk Client) | Windows | Windows 7 |
 | **MIM Certificate Management** (Client ActiveX based smart card) | Windows | Windows 7 <br/> Windows 8 <br/> Windows 8.1 <br/> Windows 10 |
 | **MIM BHOLD Suite** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | BHOLD database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
-| | Mail server (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
+| | BHOLD database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4  <br/> SQL Server 2014 SP3 * <br/> SQL Server 2016 SP2 * |
+| | Mail server (optional) | Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
 | | Web browser | Internet Explorer supported browsers with Silverlight |
