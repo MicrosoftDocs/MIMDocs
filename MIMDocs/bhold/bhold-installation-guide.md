@@ -37,7 +37,7 @@ This document explains how to plan your BHOLD deployment to meet your business n
 
 ## Pre-requisite knowledge
 
-This document assumes that you have a basic understanding of how to install software on server computers. It also assumes that you have basic knowledge of Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM), and Microsoft SQL Server 2008 database software. A description of how to set up and configure dependent technologies such as AD DS and FIM is out of the scope of this documentation. For information about the functions that the Microsoft BHOLD modules perform, see [the Microsoft BHOLD suite concepts guide](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
+This document assumes that you have a basic understanding of how to install software on server computers. It also assumes that you have basic knowledge of Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM), and Microsoft SQL Server 2012 database software. A description of how to set up and configure dependent technologies such as AD DS and FIM is out of the scope of this documentation. For information about the functions that the Microsoft BHOLD modules perform, see [the Microsoft BHOLD suite concepts guide](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## Audience
 
@@ -86,7 +86,6 @@ If you are deploying BHOLD in a large organization, it is highly recommended tha
 - Isolate the log file from the data file at the physical disk level.
 - If you are using RAID to provide storage redundancy, use RAID level 10 (1+0). Do not use RAID level 5.
 - Be sure to configure the correct settings when using more than 2 GB of physical memory for the server running SQL Server.
-- For optimum BHOLD performance, use Microsoft SQL Server 2008 R2 or greater.
 
 For more information about SQL Server best practices, see [Storage Top 10 Best Practices](https://www.microsoft.com/technet/prodtechnol/sql/bestpractice/storage-top-10.mspx) in the Microsoft TechNet Library.
 
