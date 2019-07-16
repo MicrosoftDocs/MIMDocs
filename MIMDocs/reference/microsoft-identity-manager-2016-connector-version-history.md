@@ -63,7 +63,7 @@ Related links:
    - Fixed an issue with last member of a group not being deleted
 ### Enhancements:
 - Generic SQL Connector
-   - commandTimeout parameter of a data reader is set to match connector timeout. If you have long-running queries, taking more than 30 seconds to complete, you can increase this timeout in global parameters section
+   - commandTimeout parameter of a data reader is set to match connector timeout. If you have long-running queries, taking more than 30 seconds to complete, you can increase this timeout in the global parameters section
 - Graph Connector: 
    - Added multi-threaded group membership full import strategy to improve import performance. Delta import remains single-threaded operation
    - Added support for complex schema types resulting attributes like OnPremisesExtentionAttributes.* being available now
