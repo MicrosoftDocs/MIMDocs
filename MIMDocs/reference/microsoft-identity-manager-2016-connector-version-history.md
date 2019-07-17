@@ -37,6 +37,12 @@ Related links:
 * [Web Services Connector](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) reference documentation
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
+* [SharePoint User Profile Store Connector](http://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
+
+## 4.4.1800.1 (July 2019)
+### Enhancements:
+- SharePoint User Profile Store Connector
+   - Added support for SharePoint Server 2019. The connector is available as a download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?linkid=279713) 
 
 ## 1.1.953.0 (June 2019)
 
@@ -57,7 +63,7 @@ Related links:
    - Fixed an issue with last member of a group not being deleted
 ### Enhancements:
 - Generic SQL Connector
-   - commandTimeout parameter of a data reader is set to be equal to import profile command timeout. If you have long-running queries taking more than 30 seconds to complete, you can increase this parameter in your import profile run step configuration
+   - commandTimeout parameter of a data reader is set to match connector timeout. If you have long-running queries, taking more than 30 seconds to complete, you can increase this timeout in the global parameters section
 - Graph Connector: 
    - Added multi-threaded group membership full import strategy to improve import performance. Delta import remains single-threaded operation
    - Added support for complex schema types resulting attributes like OnPremisesExtentionAttributes.* being available now
