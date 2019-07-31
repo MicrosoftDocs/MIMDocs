@@ -1,16 +1,15 @@
-﻿---
+---
 # required metadata
 
 title: Microsoft Identity Manager licensing and downloads | Microsoft Docs
 description: This article outlines the approaches for licensing Microsoft Identity Manager (MIM) 2016, with pointers on where to download the software.
 keywords:
 author: markwahl-msft
-ms.author: markwahl-msft
+ms.author: mwahl
 manager: femila
 ms.date: 02/25/2019
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 
 
 # optional metadata

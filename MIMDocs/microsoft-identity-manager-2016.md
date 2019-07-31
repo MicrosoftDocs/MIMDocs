@@ -9,7 +9,6 @@ manager: mtillman
 ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
 
 ---
 
