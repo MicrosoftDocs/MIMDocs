@@ -8,7 +8,7 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/01/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc

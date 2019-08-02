@@ -6,7 +6,7 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/23/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
