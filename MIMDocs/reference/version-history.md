@@ -27,6 +27,9 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  The current version of the generic connectors is 1.1.913.0 of January 2019.
 
 ## MIM Version 4.5.412.0
+> [!IMPORTANT]
+>- RCDC form for group objects fails to render when 'displayedOwner' attribute value is not populated. You will not be able to edit/view groups when such an error occurs.<br>
+
 - Availabilty date: May 10, 2019
 - [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
 - [KB article 4489646](https://support.microsoft.com/en-us/help/4489646/hotfix-rollup-4-5-412-0-available-for-mim-2016-sp1)
