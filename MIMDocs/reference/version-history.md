@@ -24,7 +24,44 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
 >
->The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  The current version of the generic connectors is 1.1.913.0 of January 2019.
+>The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
+
+## MIM Version 4.6.24.0
+* Status: MIM 2016 Service Pack 2 (SP2) of September 15, 2019
+* Corresponding BHOLD version number: 6.0.62.0
+- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
+- [KB article 4512924](https://support.microsoft.com/en-us/help/4512924)
+- [ISO download from VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)
+- [ISO download from VSO](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
+
+> [!IMPORTANT]
+>- .NET Framework 4.6 is required<br>
+>- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
+
+>[!NOTE]
+Make sure to read [MIM deployment guide]() for updated list of [pre-requisites](http://link) and limitations related to TLS 1.2 only environments, [group managed service accounts support](http://link) and [upgrade path from previous MIM and FIM versions](http://).
+
+A Service Pack 2 (SP2) rollup package (build 4.6.24.0) is available for Microsoft Identity Manager (MIM) 2016. It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.412.0.
+### Updates in this service pack
+
+#### MIM Client addons
+- Added support for MIM Outlook add-on to be loaded into the Microsoft Office 365 Outlook Click-To-Run version.
+
+#### Service and Portal
+- Added support for MIM Service and Portal to be installed on Windows Server 2019 and use SQL Server 2017, Exchange Server 2019, SharePoint 2019, System Center Service Manager Data Warehouse 2019
+- Enabled MIM Service and Portal installation in TLS 1.2 only environments.
+- Enabled installation for MIM Service, Password Reset and Password Registration web sites, PAM Monitoring Service, PAM Component Service to use group managed service accounts.
+- Added ‘keepSQLjobs’ installer parameter.
+
+#### Synchronization Service
+- Added support for MIM Synchronization Service to be installed on Windows Server 2019, and use SQL Server 2017, Exchange Server 2019
+- Enabled MIM Synchronization Service installation in TLS 1.2 only environments.
+- Enabled installation for MIM Synchronization Service to use a group managed service account.
+- Added ‘Use MIMSync account’ option for MIM Service Management Agent.
+ 
+#### Privilege Access Management 
+- PowerShell cmdlet ‘Get-PAMRequest’ returns an additional property.
+
 
 ## MIM Version 4.5.412.0
 > [!IMPORTANT]
