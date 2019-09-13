@@ -52,6 +52,9 @@ A Service Pack 2 (SP2) rollup package (build 4.6.24.0) is available for Microsof
 - Enabled MIM Service and Portal installation in TLS 1.2 only environments.
 - Enabled installation for MIM Service, Password Reset and Password Registration web sites, PAM Monitoring Service, PAM Component Service to use group managed service accounts.
 - Added ‘keepSQLjobs’ installer parameter.
+- MIM SQL Server Agent temporal jobs no longer start on secondary SQL Always-On Availability Group replicas.
+- ‘ExplicitMember.Add’ and ‘ExplicitMember.Remove’ virtual attributes enabled for custom object types on RCDC forms to work with delta changes.
+- MIM Service MA schema refresh no longer causes synchronization rules corruption.
 
 #### Synchronization Service
 - Added support for MIM Synchronization Service to be installed on Windows Server 2019, and use SQL Server 2017, Exchange Server 2019
