@@ -28,9 +28,13 @@ ms.suite: ems
 # Set up an identity management server: SharePoint
 
 > [!div class="step-by-step"]
-> [« SQL Server 2016](prepare-server-sql2016.md)
+> [« SQL Server](prepare-server-sql2016.md)
 > [Exchange Server »](prepare-server-exchange.md)
 > 
+
+> [!NOTE]
+SharePoint Server 2019 setup procedure does not differ from SharePoint Server 2016 setup procedure except one extra step needed for SharePoint Server 2019 to unblock ASHX files used by the MIM Portal.
+
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -103,6 +107,8 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
     > A warning message will appear saying that Windows Classic authentication method is being used, and it may take several minutes for the final command to return. When completed, the output will indicate the URL of the new portal. Keep the **SharePoint 2016 Management Shell** window open to reference later.
 
 2. Launch  SharePoint 2016 Management Shell and run the following PowerShell script to create a **SharePoint Site Collection** associated with that web application.
+    > [!IMPORTANT]
+SharePoint Server 2019 uses different web application property to keep a list of blocked file extensions than SharePoint Server 2016. Therefore, in order to unblock .ASHX files used by the MIM Portal two extra commands must be manually executed from the SharePoint Management Shell.
 
    ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
@@ -111,9 +117,18 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
    ```
-
    > [!NOTE]
    > Verify that the result of the *CompatibilityLevel* variable is “15”. If the result is other than “15”, then the site collection was not created the correct experience version; delete the site collection and recreate it.
+
+    **Execute the next three commands for SharePoint 2019 only**
+   ```
+    $w.BlockedASPNetExtensions.Remove("ashx")
+    $w.Update()
+    $w.BlockedASPNetExtensions
+   ```
+   > [!NOTE]
+   > Verify that the the *BlockedASPNetExtensions* list does not contain ASHX extension otherwise several MIM Portal pages will fail to render correctly.
+
 
 3. Disable **SharePoint Server-Side Viewstate** and the SharePoint task "Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)" by running the following PowerShell commands in the **SharePoint 2016 Management Shell**:
 
@@ -137,5 +152,5 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 7. Open the **Administrative Tools** program, navigate to **Services**, locate the SharePoint Administration service, and start it if it is not already running.
 
 > [!div class="step-by-step"]  
-> [« SQL Server 2016](prepare-server-sql2016.md)
+> [« SQL Server](prepare-server-sql2016.md)
 > [Exchange Server »](prepare-server-exchange.md)

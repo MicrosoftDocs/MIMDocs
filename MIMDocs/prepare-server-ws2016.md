@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure Windows Server 2016 for MIM 2016 SP1 | Microsoft Docs
-description: Get the steps and minimum requirements to prepare Windows Server 2016 to work with MIM 2016 SP1.
+title: Configure Windows Server 2016 or 2019 for MIM 2016 SP2 | Microsoft Docs
+description: Get the steps and minimum requirements to prepare Windows Server 2016 or 2019 to work with MIM 2016 SP2.
 keywords:
 author: billmath
 ms.author: billmath
@@ -25,12 +25,17 @@ ms.suite: ems
 
 ---
 
-# Set up an identity management server: Windows Server 2016
+# Set up an identity management server: Windows Server 2016 or 2019
 
 > [!div class="step-by-step"]
 > [« Preparing a domain](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)
 > 
+
+> [!NOTE]
+Windows Server 2019 setup procedure does not differ from Windows Server 2016 setup procedure except that when installing MIM 2016 SP2 on Windows Server 2016 .NET Framework 4.6 must be installed separately.
+
+
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -121,4 +126,4 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 > [!div class="step-by-step"]  
 > [« Preparing a domain](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)

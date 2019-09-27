@@ -26,8 +26,8 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
 
-## MIM Version 4.6.24.0
-* Status: MIM 2016 Service Pack 2 (SP2) of September 15, 2019
+## MIM Version 4.6.31.0
+* Status: MIM 2016 Service Pack 2 (SP2) of September 30, 2019
 * Corresponding BHOLD version number: 6.0.62.0
 - [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
 - [KB article 4512924](https://support.microsoft.com/en-us/help/4512924)
@@ -35,14 +35,14 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 - [ISO download from VSO](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
 
 > [!IMPORTANT]
->- .NET Framework 4.6 is required<br>
->- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
+>- .NET Framework 4.6 or 4.7 is required<br>
+>- [Visual C++ 2013 Redistributable Package (vcresist_x64.exe or vcredist_x86.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is required for all MIM components<br>
 
 >[!NOTE]
-Make sure to read [MIM deployment guide]() for updated list of [pre-requisites](http://link) and limitations related to TLS 1.2 only environments, [group managed service accounts support](http://link) and [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).
+Make sure to read [MIM deployment guide](../microsoft-identity-manager-deploy.md) for updated list of pre-requisites and limitations related to TLS 1.2 only environments, group managed service accounts support and [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).
 
-A Service Pack 2 (SP2) rollup package (build 4.6.24.0) is available for Microsoft Identity Manager (MIM) 2016. It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.412.0.
-### Updates in this service pack
+A Service Pack 2 (SP2) rollup package (build 4.6.31.0) is available for Microsoft Identity Manager (MIM) 2016. It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.412.0.
+### Updates in MIM 2016 Service Pack 2
 
 #### MIM Client addons
 - Added support for MIM Outlook add-on to be loaded into the Microsoft Office 365 Outlook Click-To-Run version.
@@ -54,7 +54,6 @@ A Service Pack 2 (SP2) rollup package (build 4.6.24.0) is available for Microsof
 - Added ‘keepSQLjobs’ installer parameter.
 - MIM SQL Server Agent temporal jobs no longer start on secondary SQL Always-On Availability Group replicas.
 - ‘ExplicitMember.Add’ and ‘ExplicitMember.Remove’ virtual attributes enabled for custom object types on RCDC forms to work with delta changes.
-- MIM Service MA schema refresh no longer causes synchronization rules corruption.
 
 #### Synchronization Service
 - Added support for MIM Synchronization Service to be installed on Windows Server 2019, and use SQL Server 2017, Exchange Server 2019
@@ -63,7 +62,7 @@ A Service Pack 2 (SP2) rollup package (build 4.6.24.0) is available for Microsof
 - Added ‘Use MIMSync account’ option for MIM Service Management Agent.
  
 #### Privilege Access Management 
-- PowerShell cmdlet ‘Get-PAMRequest’ returns an additional property.
+- PowerShell cmdlet ‘Get-PAMRequest’ returns an additional property FIMRequestID.
 
 
 ## MIM Version 4.5.412.0

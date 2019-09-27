@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Deploy Microsoft Identity Manager 2016 SP1
+# Deploy Microsoft Identity Manager 2016 SP2
 The articles in this section provide step-by-step instructions for deploying Microsoft Identity Manager (MIM) 2016 for end-user self-service scenarios on a fresh server that has not had FIM or MIM previously deployed.
 
 > [!NOTE]
@@ -37,16 +37,22 @@ The process for deploying MIM is very similar to the process for its predecessor
 
 ## First: Prepare a domain
 MIM works with Active Directory (AD), so follow these steps to configure your AD domain controller.
-- [Domain setup](preparing-domain.md)
+- [Domain setup](preparing-domain.md) or
+- [Domain setup for Group Managed Service Accounts scenario (MIM 2016 SP2 only)](preparing-domain-gmsa.md)
 
 ## Next: Prepare an identity management servers
 Once your domain is in place and configured, prepare your corporate identity management server. This includes setting up:
-- [Windows Server 2016](prepare-server-ws2016.md)
-- [SQL Server 2016](prepare-server-sql2016.md)
-- [SharePoint 2016](prepare-server-sharepoint.md)
+- [Windows Server](prepare-server-ws2016.md)
+- [SQL Server](prepare-server-sql2016.md)
+- [SharePoint Server](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optional)
 
-## Finally: Install Microsoft Identity Manager 2016 SP1 components
+## Next: Software prerequisites, TLS 1.2 support in MIM 2016 SP2
+Before install MIM 2016 SP2 components please make sure that you install software prerequisites.<br/>
+- All MIM components require .NET Framework 4.6 or 4.7 and [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/en-us/download/details.aspx?id=40784) unless explicitly stated otherwise.<br/>
+- [Additional prerequisites for "TLS 1.2 - only" environments]()
+
+## Finally: Install Microsoft Identity Manager 2016 SP2 components
 Once you have set up the domain and server, you're ready to install the MIM components and configure them to sync with AD.
 - [MIM Synchronization Service](install-mim-sync.md)
 - [MIM Service and Portal](install-mim-service-portal.md)
