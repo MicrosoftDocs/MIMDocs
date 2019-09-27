@@ -206,7 +206,7 @@ Add-KDSRootKey -EffectiveTime ((Get-Date).AddHours(-10))
     Set-ADServiceAccount -Identity MIMSrvGMSAsvc -TrustedForDelegation $true -OtherAttributes @{'msDS-AllowedToDelegateTo'='FIMService/mimportal.contoso.com,FIMService/mimportal,FIMService/mim.contoso.com,FIMService/mim'}
     ```
 
-4.  For SSPR scenarios you need MIM Service Account be able to communicate with MIM Synchronization Service, threfor MIM Service account must be either a member of MIMSyncAdministrators or MIM Sync Password Reset and Browse groups:
+4.  For SSPR scenarios you need MIM Service Account be able to communicate with MIM Synchronization Service, therefore MIM Service account must be either a member of MIMSyncAdministrators or MIM Sync Password Reset and Browse groups:
     ```PowerShell
     Add-ADGroupmember -identity MIMSyncPasswordReset -Members svcMIMService 
     Add-ADGroupmember -identity MIMSyncBrowse -Members svcMIMService 
