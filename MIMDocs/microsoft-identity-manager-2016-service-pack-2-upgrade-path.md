@@ -58,8 +58,8 @@ The minimal supported version of Forefront Identity Manager that can be directly
 1. Uninstall MIM Language Packs if used.
 1. Stop MIM services.
 1. **Option 1: In-place upgrade - hotfix installation**
-    1. Apply MIM 2016 SP2 Synchronization Service [hotfix](https://www.microsoft.com/en-us/download/details.aspx?id=100412)
-    1. Apply MIM 2016 SP2 Service [hotfix](https://www.microsoft.com/en-us/download/details.aspx?id=100412)
+    1. Apply MIM 2016 SP2 Synchronization Service [hotfix](https://www.microsoft.com/download/details.aspx?id=100412)
+    1. Apply MIM 2016 SP2 Service [hotfix](https://www.microsoft.com/download/details.aspx?id=100412)
     1. Review miisserver.exe.config and Microsoft.ResourceManagement.Service.exe.config files for missing .net redirects or any custom sections that must be added.
     1. Install MIM 2016 SP2 Language Packs if needed.
     1. Re-submit customizations to RCDC objects and RCDC resource strings and localizations if needed.
@@ -76,4 +76,4 @@ The minimal supported version of Forefront Identity Manager that can be directly
 > [!NOTE]
 Language Packs updates after MIM 2016 SP2 will be distributed as hotfixes (.msp files), eliminating the need to uninstall/reinstall Language Packs.
 
-More detailed information about the upgrade and databases backup procedures could be found in the [Upgrade to FIM 2010 R2](https://docs.microsoft.com/en-us/previous-versions/mim/jj134291%28v%3dws.10%29) article, that is applicable to any FIM or MIM upgrade process.
+More detailed information about the upgrade and databases backup procedures could be found in the [Upgrade to FIM 2010 R2](https://docs.microsoft.com/previous-versions/mim/jj134291%28v%3dws.10%29) article, that is applicable to any FIM or MIM upgrade process.

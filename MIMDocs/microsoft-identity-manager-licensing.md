@@ -30,17 +30,17 @@ This article outlines the approaches for licensing Microsoft Identity Manager (M
 
 ## Licensing MIM for your organization
 
-Microsoft Identity Manager 2016 is licensed on a per-user basis.  The details on licensing are included in the Product Terms and related documents, which can be downloaded from the [licensing terms](https://www.microsoft.com/en-us/licensing/product-licensing/products.aspx) page.
+Microsoft Identity Manager 2016 is licensed on a per-user basis.  The details on licensing are included in the Product Terms and related documents, which can be downloaded from the [licensing terms](https://www.microsoft.com/licensing/product-licensing/products.aspx) page.
 
 ### Licensing for Azure AD Premium customers
 
 Microsoft Identity Manager 2016 is included with Azure Active Directory Premium (P1 and P2), which is part of Enterprise Mobility + Security.
 
-Azure AD Premium is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/en-us/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Office 365 subscribers can also buy Azure Active Directory Premium P1 and P2 online.  Read more at [Azure Active Directory pricing](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+Azure AD Premium is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Office 365 subscribers can also buy Azure Active Directory Premium P1 and P2 online.  Read more at [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### MIM CALs
 
-If you do not have Azure Active Directory Premium subscriptions for your users, and are using more MIM capabilities beyond synchronization, then a [Client Access License (CAL)](https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license.aspx) is required for each user whose identity is managed in MIM. If you want external users—such as business partners, external contractors, or customers—to be able to access MIM, you can acquire CALs for each of your external users, or acquire External Connector (EC) licenses. Microsoft Identity Manager 2016 CALs are not required for users whose identity is only in the Microsoft Identity Manager synchronization service and is not managed in any other MIM component.
+If you do not have Azure Active Directory Premium subscriptions for your users, and are using more MIM capabilities beyond synchronization, then a [Client Access License (CAL)](https://www.microsoft.com/licensing/product-licensing/client-access-license.aspx) is required for each user whose identity is managed in MIM. If you want external users—such as business partners, external contractors, or customers—to be able to access MIM, you can acquire CALs for each of your external users, or acquire External Connector (EC) licenses. Microsoft Identity Manager 2016 CALs are not required for users whose identity is only in the Microsoft Identity Manager synchronization service and is not managed in any other MIM component.
 
 ### Licenses for platform components
 
@@ -78,7 +78,7 @@ The DVD ISO file contains one folder for each MIM component: Synchronization Ser
 
 If you do not have access to the Volume Licensing Service Center, customers with an appropriate developer subscription can also download MIM 2016 SP2 as an ISO file from [Visual Studio My Benefits Downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202&pgroup=).  Search for "Microsoft Identity Manager 2016 with Service Pack 2".  
 
-If you do not have access to the Volume Licensing Service Center and merely wish to try out the MIM software for a limited time, you can download an [evaluation version of MIM 2016](https://www.microsoft.com/en-us/download/details.aspx?id=48244). This software is not intended for production use and will cease to operate 180 days after first installation, and cannot be upgraded. The evaluation version requires Windows Server 2008 R2, Windows Server 2012 or Windows Server 2012 R2 for installation.  If you are new to MIM and learning the technology, keep in mind that all MIM scenarios require an Active Directory domain, a Windows Server, and SQL Server to be present. If you do not have Windows Server or SQL Server already present, you may wish to try [provisioning a VM with SQL Server 2016 and Windows Server 2016](https://azure.microsoft.com/en-us/blog/azure-images-sql-server-2016-on-windows-server-2016/).
+If you do not have access to the Volume Licensing Service Center and merely wish to try out the MIM software for a limited time, you can download an [evaluation version of MIM 2016](https://www.microsoft.com/en-us/download/details.aspx?id=48244). This software is not intended for production use and will cease to operate 180 days after first installation, and cannot be upgraded. The evaluation version requires Windows Server 2008 R2, Windows Server 2012 or Windows Server 2012 R2 for installation.  If you are new to MIM and learning the technology, keep in mind that all MIM scenarios require an Active Directory domain, a Windows Server, and SQL Server to be present. If you do not have Windows Server or SQL Server already present, you may wish to try [provisioning a VM with SQL Server 2016 and Windows Server 2016](https://azure.microsoft.com/blog/azure-images-sql-server-2016-on-windows-server-2016/).
 
 ### Obtaining updates
 
@@ -101,7 +101,7 @@ To determine which update files are necessary, this table lists the components a
 
 Be sure to read any release notes associated with the update prior to installing the MSP file.
 
-Updates to [BHOLD](https://www.microsoft.com/en-us/download/details.aspx?id=55950) are not distributed as MSP files, only as MSI installers.
+Updates to [BHOLD](https://www.microsoft.com/download/details.aspx?id=55950) are not distributed as MSP files, only as MSI installers.
 
 ### Additional downloads
 
@@ -111,7 +111,7 @@ The following downloads may also be relevant:
 
 - [Generic LDAP Connector, Generic SQL Connector, Graph Connector, Lotus Domino Connector, PowerShell Connector, Web Services Connector](http://go.microsoft.com/fwlink/?LinkId=717495)
 
-- [Connector for SharePoint User Profile Store](https://www.microsoft.com/en-us/download/details.aspx?id=41164)
+- [Connector for SharePoint User Profile Store](https://www.microsoft.com/download/details.aspx?id=41164)
 
 - If you do not already have an Active Directory domain and are setting up a PAM scenario for experimentation, see the [MIM 2016 SP1 PAM deployment scripts](sp1-deployment-scripts.md).
 
