@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/01/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
@@ -18,7 +18,7 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mwahl
+ms.reviewer: markwahl-msft
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,7 +30,7 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
 > [MIM Service and Portal »](install-mim-service-portal.md)
-> 
+ 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -70,6 +70,8 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
    ![Database connection image](media/install-mim-sync/MIM_Install3.png)
 
+    3. *MIM 2016 SP2 and later*: Configure the MIM Synchronization Service Database name
+
 7. Configure the Sync Service Account according to the account you created earlier:
 
    1. Service account: *MIMSync*
@@ -77,6 +79,9 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
    2. Password: <em>Pass@word1</em>
 
    3. Service Account Domain or local computer name: *contoso*
+
+    >[!NOTE]
+MIM 2016 SP2 and later: for Group Managed Service Accounts, ensure the **$** character is at the end of the Service Account Name, e.g. MIMSync$, and leave the Password field empty.
 
    ![Service account image](media/install-mim-sync/MIM_Install4.png)
 
@@ -104,7 +109,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     3. A notice on creating a backup for the encryption key appears – click **OK**, then select a folder to store the encryption key backup.
 
-        ![MIM Sync backup encryption key notice image](media/MIM-Install7.png)
+    ![MIM Sync backup encryption key notice image](media/MIM-Install7.png)
 
     4. When the installer successfully completes the installation, click **Finish**.
 

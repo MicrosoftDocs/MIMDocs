@@ -44,6 +44,9 @@ Sql Server 2017 setup procedure does not differ from Sql Server 2016 setup proce
 > - SQL Server name - **corpsql**
 > - Password - <strong>Pass@word1</strong>
 
+> [!IMPORTANT]
+MIM 2016 SP2 supports SQL AlwaysOn Availability Group (AoAG) listeners with *RegisterAllProvidersIP* option set to 0, meaning that SQL Server AoAG cross-subnet failover is not currently supported.
+
 ## Install **SQL Server 2016 Standard/Enterprise Edition**
 
 1. Launch **PowerShell** as a domain administrator.
@@ -57,6 +60,7 @@ Sql Server 2017 setup procedure does not differ from Sql Server 2016 setup proce
     ```
     
 More info SQL deployment accounts and services can be found [here](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017)
+
 > [!NOTE]
 > SSMS is no longer included in SQL 2016. Download details can be found [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)
 > 

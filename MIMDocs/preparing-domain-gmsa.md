@@ -41,20 +41,20 @@ Group Managed Service Accounts eliminate the need to periodically change service
 
 -   MIM Synchronization service (FIMSynchronizationService)
 -   MIM Service (FIMService)
--   MIM Service Management Agent 
--   MIM Password Registration Web Site 
--   MIM Password Reset Web Site
+-   MIM Password Registration web site application pool
+-   MIM Password Reset web site application pool
+-   PAM REST API web site application pool
 -   PAM Monitoring Service (PamMonitoringService)
 -   PAM Component Service (PrivilegeManagementComponentService)
 
 The following MIM components do not support gMSA accounts:
 
--   MIM Portal is not supported it is part of the SharePoint environment and you would need to deploy in farm mode and [Configure automatic password change in SharePoint Server](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
--   All Management Agents except MIM Service
+-   MIM Portal is not supported, it is part of the SharePoint environment and you would need to deploy in farm mode and [Configure automatic password change in SharePoint Server](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change)
+-   All Management Agents
 -   Microsoft Certificate Management
 -   BHOLD
 
-As a general rule, in most cases when you want a MIM component installer to use gMSA instead of a regular account, you append the dollar sign to gMSA name, e.g. **contoso\MIMSyncGMSAsvc$**, and leave password empty. The only known exception from this rule is *miisactive.exe* tool that accepts gMSA name without the dollar sign.
+As a general rule, in most cases when you want MIM component installer to use gMSA instead of a regular account, you append the dollar sign to gMSA name, e.g. **contoso\MIMSyncGMSAsvc$**, and leave password empty. The only known exception from this rule is *miisactivate.exe* tool that accepts gMSA name without the dollar sign.
 <br/>
 
 More information about gMSA can be found in these articles:
@@ -63,8 +63,6 @@ More information about gMSA can be found in these articles:
 -   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps)
 
 -   [Create the Key Distribution Services KDS Root Key](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx)
-
-
 
 ## Create user accounts and groups
 
@@ -99,10 +97,6 @@ All the components of your MIM deployment need their own identities in the domai
     Set-ADAccountPassword –identity svcMIMSql –NewPassword $sp
     Set-ADUser –identity svcMIMSql –Enabled 1 –PasswordNeverExpires 1
 
-    New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
-    Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
-    Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
-
     New-ADUser –SamAccountName svcMIMAppPool –name svcMIMAppPool
     Set-ADAccountPassword –identity svcMIMAppPool –NewPassword $sp
     Set-ADUser –identity svcMIMAppPool –Enabled 1 -PasswordNeverExpires 1
@@ -115,7 +109,7 @@ All the components of your MIM deployment need their own identities in the domai
     New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncOperators
     New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
     New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncBrowse
-    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
+    New-ADGroup –name MIMSyncPasswordSet –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordSet
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupMember -identity MIMSyncAdmins -Members MIMAdmin
     ```
@@ -123,7 +117,7 @@ All the components of your MIM deployment need their own identities in the domai
 4.  Add SPNs to enable Kerberos authentication for service accounts
 
     ```PowerShell
-    Set-ADServiceAccount -Identity svcMIMAppPool -ServicePrincipalNames @{Add="http/mim.contoso.com,http/mim"}
+    Set-ADServiceAccount -Identity svcMIMAppPool -ServicePrincipalNames @{Add="http/mim.contoso.com"}
     ```
 
 5.  Make sure to register the following DNS 'A' records for proper name resolution (assuming that MIM Service, MIM Portal, Password Reset and Password Registration web sites will be hosted on the same machine)
@@ -148,14 +142,15 @@ First Step on your windows domain controller
     ![](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
     >[!NOTE]
-In the Lab or Test environment you can skip 10 hours replication delay by running the following command instead:<br/>
+In the Lab or Test environment you can avoid 10 hours replication delay by running the following command instead:
+<br/>
 Add-KDSRootKey -EffectiveTime ((Get-Date).AddHours(-10))
 
-## Create MIM Synchronization Service accounts and groups
+## Create MIM Synchronization Service account and group
 -----------------------
 
-1.  Create a group called *MIMSync_Servers* and add all MIM Synchronization servers to this group.
-    Start PowerShell and type the following PowerShell script as domain admin to create new AD group for MIM Synchronization Servers and add MIM servers, e.g. *MIMSync.contoso.com*, into this group.
+1.  Create a group *MIMSync_Servers* and add all MIM Synchronization servers to this group.
+    Start PowerShell and type the following PowerShell script as domain admin to create new AD group for MIM Synchronization Servers and add MIM Synchronization server Active Directory computer accounts, e.g. *contoso\MIMSync$*, into this group.
 
     ```PowerShell
     New-ADGroup –name MIMSync_Servers –GroupCategory Security –GroupScope Global –SamAccountName MIMSync_Servers
@@ -176,16 +171,37 @@ Add-KDSRootKey -EffectiveTime ((Get-Date).AddHours(-10))
 3.  If you plan to run Password Change Notification Service, you need to register Service Principal Name by executing this PowerShell command:
 
     ```PowerShell
-    Set-ADServiceAccount -Identity MIMSyncGMSAsvc -ServicePrincipalNames @{Add="PCNSCLNT/mimsync.contoso.com,PCNSCLNT/mimsync"}
+    Set-ADServiceAccount -Identity MIMSyncGMSAsvc -ServicePrincipalNames @{Add="PCNSCLNT/mimsync.contoso.com"}
     ```
+4. Reboot your MIM Synchronization server to refresh a Kerberos token associated with the server as the "MIMSync_Server" group membership has changed
 
-    >[!IMPORTANT]
- You can skip creation of the MIM Service Management Agent service account (MIM MA account) and enable 'Use MIMSync Account' option when creating MIM Service Management Agent. In this case, use MIM Synchronization Service gMSA name, e.g. contoso\MIMSyncGMSAsvc$, instead of the MIM MA account in the MIM Service installer and leave the password empty. <br/>Also, do not enable 'Deny Logon from Network' for the MIM Synchronization Service gMSA as MIM MA account requires 'Allow Network Logon' permissions.
+## Create MIM Service Management Agent service account
+
+There are two options available:
+
+1. Use MIM Synchronization Service group managed service account
+
+    You can skip creation of the MIM Service Management Agent service account (MIM MA account). In this case, use MIM Synchronization Service gMSA name, e.g. *contoso\MIMSyncGMSAsvc$*, instead of the MIM MA account when installing MIM Service. Later on in the MIM Service Management Agent configuration enable *'Use MIMSync Account'* option.
+
+    Do not enable 'Deny Logon from Network' for the MIM Synchronization Service gMSA as MIM MA account requires 'Allow Network Logon' permission.
+
+1. Use a regular service account
+
+    Start PowerShell as domain administrator and type the following to create new AD domain user
+
+    ```PowerShell
+    $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+    
+    New-ADUser –SamAccountName svcMIMMA –name svcMIMMA
+    Set-ADAccountPassword –identity svcMIMMA –NewPassword $sp
+    Set-ADUser –identity svcMIMMA –Enabled 1 –PasswordNeverExpires 1
+    ```
+    Do not enable 'Deny Logon from Network' for the MIM MA account as it requires 'Allow Network Logon' permission.
 
 ## Create MIM Service accounts and groups
 
-1.  Create a group called *MIMService_Servers* and add all MIM Service and Portal servers to this group.
-    Start PowerShell and type the following PowerShell script as domain admin to create new AD group for MIM Service and Portal Servers and add MIM servers, e.g. *MIMPortal.contoso.com*, into this group.
+1.  Create a group *MIMService_Servers* and add all MIM Service servers to this group.
+    Start PowerShell and type the following PowerShell script as domain admin to create new AD group for MIM Service servers and add MIM Service server Active Directory computer account, e.g. *contoso\MIMPortal$*, into this group
 
     ```PowerShell
     New-ADGroup –name MIMService_Servers –GroupCategory Security –GroupScope Global –SamAccountName MIMService_Servers
@@ -196,24 +212,26 @@ Add-KDSRootKey -EffectiveTime ((Get-Date).AddHours(-10))
     computer account already joined to the domain
 
     ```PowerShell
-    New-ADServiceAccount -Name MIMSrvGMSAsvc -DNSHostName MIMSrvGMSAsvc.contoso.com -PrincipalsAllowedToRetrieveManagedPassword "MIMService_Servers"
+    New-ADServiceAccount -Name MIMSrvGMSAsvc -DNSHostName MIMSrvGMSAsvc.contoso.com -PrincipalsAllowedToRetrieveManagedPassword "MIMService_Servers" -OtherAttributes @{'msDS-AllowedToDelegateTo'='FIMService/mimportal.contoso.com'} 
     ```
 
 3.  Register Service Principal Name and enable Kerberos delegation by executing this PowerShell command:
 
     ```PowerShell
-    Set-ADServiceAccount -Identity MIMSrvGMSAsvc -ServicePrincipalNames @{Add="FIMService/mimportal.contoso.com,FIMService/mimportal,FIMService/mim.contoso.com,FIMService/mim"}
-    Set-ADServiceAccount -Identity MIMSrvGMSAsvc -TrustedForDelegation $true -OtherAttributes @{'msDS-AllowedToDelegateTo'='FIMService/mimportal.contoso.com,FIMService/mimportal,FIMService/mim.contoso.com,FIMService/mim'}
+    Set-ADServiceAccount -Identity MIMSrvGMSAsvc -TrustedForDelegation $true -ServicePrincipalNames @{Add="FIMService/mimportal.contoso.com"}
     ```
 
 4.  For SSPR scenarios you need MIM Service Account be able to communicate with MIM Synchronization Service, therefore MIM Service account must be either a member of MIMSyncAdministrators or MIM Sync Password Reset and Browse groups:
+
     ```PowerShell
-    Add-ADGroupmember -identity MIMSyncPasswordReset -Members svcMIMService 
-    Add-ADGroupmember -identity MIMSyncBrowse -Members svcMIMService 
+    Add-ADGroupmember -identity MIMSyncPasswordSet -Members MIMSrvGMSAsvc$ 
+    Add-ADGroupmember -identity MIMSyncBrowse -Members MIMSrvGMSAsvc$ 
     ```
 
+5. Reboot your MIM Service server to refresh a Kerberos token associated with the server as the "MIMService_Servers" group membership has changed.
+
 ## Other MIM accounts and groups
-Following the same principals as describe above for MIM Synchronization Service and MIM Service you can create other gMSA  for:
+Following the same guidelines as described above for the MIM Synchronization Service and MIM Service you can create other gMSA for:
 - MIM Password Reset web site application pool
 - MIM Password Registration web site application pool
 - MIM PAM REST API web site application pool

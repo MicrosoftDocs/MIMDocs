@@ -6,7 +6,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 11/05/2018
+ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -22,23 +22,25 @@ With MIM, an organization can simplify identity lifecycle management with automa
  - Integration of the contents of directories with HR systems and other sources of authority
  - Synchronizing identities between directories, databases, and on-premises applications through common APIs and protocols, Microsoft-delivered connectors, and partner-delivered connectors
 
-The current release under mainstream support is MIM 2016 Service Pack 1 (SP1).  This release in August 2017 included updates to MIM Portal, PAM scenario and added support for new platforms.  Customers running FIM or MIM versions prior to MIM 2016 SP1 should upgrade to MIM 2016 SP1 or a later hotfix.  Read more about [Upgrading to MIM 2016 SP1](./reference/version-history.md).
-
-## Updates since MIM 2016 SP1
+The current releases under mainstream support are MIM 2016 Service Pack 1 and Service Pack 2 (SP2).  Customers running FIM or MIM versions prior to MIM 2016 SP1 should upgrade to MIM 2016 SP2 or a later hotfix.
 
 Microsoft regularly delivers updates to MIM, including enhancements for customer requests and bug fixes, on an ongoing release cycle.
 
+## Updates in MIM 2016 SP2
+
+MIM 2016 Service Pack 2 is a rollup of existing hotfixes since MIM 2016 SP1. It also introduces the option to configure use of Group Managed Service Accounts for MIM Synchronization Service and MIM Service, and enables MIM to be deployed with other updated platform software. More details could be found in [MIM 2016 Version Release History](./reference/version-history.md)
+
 ### Major new and updated scenarios
 
-- [Azure AD B2B collaboration with MIM Graph connector and Azure Application proxy is GA](microsoft-identity-manager-2016-graph-b2b-scenario.md), last updated April 2018
-- [Hybrid MIM reporting is GA](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), last updated February 2018
+- [Azure AD B2B collaboration with MIM Graph connector and Azure Application proxy is GA](microsoft-identity-manager-2016-graph-b2b-scenario.md), last updated July 2019
+- [Hybrid MIM reporting is GA](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), last updated April 2019
 - [MIM deprecated feature list revised](microsoft-identity-manager-2016-deprecated-features.md), last updated February 2018
 
 ### Recent software releases
 
-- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated March 2018
-- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated November 2017
-- [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated September 2017
+- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated July 2019
+- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated October 2019
+- [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated October 2018
 
 
 

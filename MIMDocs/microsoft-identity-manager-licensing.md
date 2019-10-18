@@ -7,7 +7,7 @@ keywords:
 author: markwahl-msft
 ms.author: mwahl
 manager: femila
-ms.date: 02/25/2019
+ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 
@@ -76,7 +76,7 @@ For a new installation, most organizations download the MIM installation package
 
 The DVD ISO file contains one folder for each MIM component: Synchronization Service, Service and Portal, etc. If you are going to install the software on a different computer from which you downloaded it, be sure to copy either the entire ISO file or the folder for the component: do not merely copy just an MSI file out of a folder without the rest of the files and sub-folders.
 
-If you do not have access to the Volume Licensing Service Center, customers with an appropriate developer subscription can also download MIM 2016 SP1 as an ISO file from [Visual Studio My Benefits Downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%201&pgroup=).  Search for "Microsoft Identity Manager 2016 with Service Pack 1".  
+If you do not have access to the Volume Licensing Service Center, customers with an appropriate developer subscription can also download MIM 2016 SP2 as an ISO file from [Visual Studio My Benefits Downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202&pgroup=).  Search for "Microsoft Identity Manager 2016 with Service Pack 2".  
 
 If you do not have access to the Volume Licensing Service Center and merely wish to try out the MIM software for a limited time, you can download an [evaluation version of MIM 2016](https://www.microsoft.com/en-us/download/details.aspx?id=48244). This software is not intended for production use and will cease to operate 180 days after first installation, and cannot be upgraded. The evaluation version requires Windows Server 2008 R2, Windows Server 2012 or Windows Server 2012 R2 for installation.  If you are new to MIM and learning the technology, keep in mind that all MIM scenarios require an Active Directory domain, a Windows Server, and SQL Server to be present. If you do not have Windows Server or SQL Server already present, you may wish to try [provisioning a VM with SQL Server 2016 and Windows Server 2016](https://azure.microsoft.com/en-us/blog/azure-images-sql-server-2016-on-windows-server-2016/).
 
@@ -90,14 +90,14 @@ To determine which update files are necessary, this table lists the components a
 
 | Scenario | Component | DVD ISO folder name | Corresponding update patch file name |
 |----------|-----------|-   |-------------------|----------|--------------|
-|Synchronization| Sync Service | `Synchronization Service` | `FIMSyncService_x64*.msp` |
-| Self-service | MIM Service, MIM Portal | `Service and Portal` | `FIMService_x64*msp` |
-| Self-service | Add-ins and extensions | `Add-ins and extensions` | `FIMAddinsExtensions*msp` |
+|Synchronization| Sync Service | `Synchronization Service` | `MIMSyncService_x64*.msp` |
+| Self-service | MIM Service, MIM Portal | `Service and Portal` | `MIMService_x64*msp` |
+| Self-service | Add-ins and extensions | `Add-ins and extensions` | `MIMAddinsExtensions*msp` |
 | Self-service | Language packs | `LANGUAGE Packs` | `LANGUAGE Packs.zip` |
 | Access management (BHOLD) | BHOLD | `BHOLD` | `AccessManagementConnector.msi`, `BHOLD*.msi` |
-| Certificate Management | CM |  `Certificate Management` | `FIMCM*.msp` |
-| Certificate Management | CM Bulk Client |  `CM Bulk Client` |`FIMCMBulkClient*msp` |
-| Certificate Management | CM Client | CM Client |`FIMCMClient*msp` |
+| Certificate Management | CM |  `Certificate Management` | `MIMCM*.msp` |
+| Certificate Management | CM Bulk Client |  `CM Bulk Client` |`MIMCMBulkClient*msp` |
+| Certificate Management | CM Client | `CM Client` |`MIMCMClient*msp` |
 
 Be sure to read any release notes associated with the update prior to installing the MSP file.
 

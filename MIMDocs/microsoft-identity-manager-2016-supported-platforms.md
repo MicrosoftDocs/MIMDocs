@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 02/22/2019
+ms.date: 10/19/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -27,7 +27,7 @@ ms.custom: mim
 
 # Supported platforms for MIM 2016
 
-This table describes the supported platforms and version for each component of Microsoft Identity Manager 2016. The versions marked with a * are only supported in MIM 2016 service pack 1 with the latest hotfix. The versions marked with a ** are only supported in MIM 2016 service pack 2. The versions marked with "NR", for not recommended, are supported but are not recommended if starting a fresh deployment of that platform for MIM.
+This table describes the supported platforms and version for each component of Microsoft Identity Manager 2016. The versions marked with a * are only supported in MIM 2016 service pack 1. The versions marked with ** are only supported in MIM 2016 service pack 2 or a later hotfix. The versions marked with "NR", for not recommended, are supported but are not recommended if starting a fresh deployment of that platform for MIM.
 
 
 | **MIM component** | **Platform** | **Version** |

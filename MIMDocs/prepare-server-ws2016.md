@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/26/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
@@ -33,7 +33,7 @@ ms.suite: ems
 > 
 
 > [!NOTE]
-Windows Server 2019 setup procedure does not differ from Windows Server 2016 setup procedure except that when installing MIM 2016 SP2 on Windows Server 2016 .NET Framework 4.6 must be installed separately.
+Windows Server 2019 setup procedure does not differ from Windows Server 2016 setup procedure.
 
 
 > [!NOTE]
@@ -111,6 +111,20 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 12. Close the Local Security Policy window.
 
+
+## Next: Software prerequisites
+
+Before installing MIM 2016 SP2 components please make sure you install all software prerequisites:
+
+13. Install [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/download/details.aspx?id=40784).
+
+14. Install .NET Framework 4.6.
+
+15. On the server that will host MIM Synchronization Service, MIM Synchronization Service requires [SQL Server Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
+
+16. On the server that will host MIM Service, MIM Service requires .NET Framework 3.5.
+
+17. Optionally, if using TLS 1.2 or FIPS mode, see [MIM 2016 SP2 in "TLS 1.2 only" or FIPS-mode environments](preparing-tls.md).
 
 ## Change the IIS Windows Authentication mode if needed
 

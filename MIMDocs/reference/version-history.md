@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 5/10/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -26,22 +26,21 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
 
-## MIM Version 4.6.31.0
-* Status: MIM 2016 Service Pack 2 (SP2) of September 30, 2019
+## MIM Version 4.6.34.0
+* Status: MIM 2016 Service Pack 2 (SP2) of October, 2019
 * Corresponding BHOLD version number: 6.0.62.0
-- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
+- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=100412)
 - [KB article 4512924](https://support.microsoft.com/en-us/help/4512924)
-- [ISO download from VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)
-- [ISO download from VSO](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
+- ISO file can be downloaded [from VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or via  [Visual Studio downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
 
 > [!IMPORTANT]
->- .NET Framework 4.6 or 4.7 is required<br>
->- [Visual C++ 2013 Redistributable Package (vcresist_x64.exe or vcredist_x86.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is required for all MIM components<br>
+>- .NET Framework 4.6 is required<br>
+>- [Visual C++ 2013 Redistributable Package (vcredist_x64.exe or vcredist_x86.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is required<br>
 
 >[!NOTE]
-Make sure to read [MIM deployment guide](../microsoft-identity-manager-deploy.md) for updated list of pre-requisites and limitations related to TLS 1.2 only environments, group managed service accounts support and [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).
+Make sure to read [MIM deployment guide](../microsoft-identity-manager-deploy.md) for updated list of pre-requisites and limitations related to TLS 1.2 only environments, Group Managed Service Accounts support and the [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).
 
-A Service Pack 2 (SP2) rollup package (build 4.6.31.0) is available for Microsoft Identity Manager (MIM) 2016. It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.412.0.
+A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsoft Identity Manager (MIM) 2016. It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.412.0.
 ### Updates in MIM 2016 Service Pack 2
 
 #### MIM Client addons
@@ -62,7 +61,7 @@ A Service Pack 2 (SP2) rollup package (build 4.6.31.0) is available for Microsof
 - Added ‘Use MIMSync account’ option for MIM Service Management Agent.
  
 #### Privilege Access Management 
-- PowerShell cmdlet ‘Get-PAMRequest’ returns an additional property FIMRequestID.
+- PowerShell cmdlet ‘Get-PAMRequest’ returns an additional property 'FIMRequestID'.
 
 
 ## MIM Version 4.5.412.0
@@ -97,7 +96,6 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 
 ## Version 4.5.202.0
 - Status: August 30, 2018
-- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=57278)
 - [KB Release KB](https://support.microsoft.com/en-us/help/4346632)
 
 > [!IMPORTANT]
@@ -123,7 +121,6 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 
 ## Version 4.5.26.0
 - Status: June 30, 2018
-- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=57078)
 - [KB Release KB4073679](https://support.microsoft.com/en-us/help/4073679)
 
 > [!IMPORTANT]
