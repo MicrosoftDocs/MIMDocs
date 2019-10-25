@@ -111,8 +111,7 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 12. Close the Local Security Policy window.
 
-
-## Next: Software prerequisites
+## Software prerequisites
 
 Before installing MIM 2016 SP2 components please make sure you install all software prerequisites:
 

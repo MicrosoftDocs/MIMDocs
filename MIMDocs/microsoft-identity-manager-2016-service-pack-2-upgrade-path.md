@@ -31,6 +31,8 @@ Organizations can upgrade to Microsoft Identity Manager 2016 SP2 from earlier ve
 
 There are several upgrade options available. If you're already running MIM 2016, and do not need to refresh the underlying platform (Windows Server, SQL, SharePoint, SCSM DW) or run MIM services using group managed service accounts, and you do not use MIM Language Packs then the easiest option will be in-place upgrade / hotfix (.msp) installation. Otherwise, the full installation is recommended.
 
+> [!IMPORTANT]
+> Check updated [Software prerequisites](prepare-server-ws2016.md#software-prerequisites) section before installing MIM 2016 SP2
 
 ## Upgrade from FIM 2010 R2 SP1 or later FIM builds
 
