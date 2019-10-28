@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/30/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
@@ -18,7 +18,7 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mwahl
+ms.reviewer: markwahl-msft
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,7 +29,7 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [« MIM Synchronization Service](install-mim-sync.md)
 > [Synchronize databases »](install-mim-sync-ad-service.md)
-> 
+ 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **mimservername**
@@ -63,22 +63,27 @@ If you didn't set up the MIM installation package in the last step, go back and 
 8. Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
 
 9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example <em>Pass@word1</em>, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
+    >[!NOTE]
+MIM 2016 SP2 and later: if you are using Group Managed Service Accounts, you will need to ensure the  the **$** character is at the end of the Service Account Name, e.g. MIMService$, and leave the Service Account Password field empty.
+
 
     ![Configure the MIM service account image](media/install-mim-service-portal/MIM_Install12.png)
 
 10. Note that a warning may appear that the Service Account is not secure in its current configuration.
 
 11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMMA*.
+    >[!NOTE]
+MIM 2016 SP2 and later: if you plan to use MIM Synchronization Service Group Managed Service Account in MIM Sync, and enable 'Use MIM Sync account' feature, then enter MIM Synchronization Service gMSA name as the MIM MA account, e.g. *contoso\MIMSync$*.
 
     ![Configure the MIM Service and Portal image](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Specify *CORPIDM* (this computer's name) as MIM Service server address for the MIM Portal.
 
-13. Specify `*http://mim.contoso.com*` as the SharePoint site collection URL.
+13. Specify `http://mim.contoso.com` as the SharePoint site collection URL.
 
-14. Specify `*http://passwordregistration.contoso.com*` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
+14. Specify `http://passwordregistration.contoso.com` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
 
-15. Specify `*http://passwordreset.contoso.com*` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
+15. Specify `http://passwordreset.contoso.com` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
 
 16. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to MIM Portal.
 
@@ -112,8 +117,7 @@ When all pre-installation definitions are ready, click **Install** to begin inst
 
 After installation completes, verify that the MIM Portal is active.
 
-1. Launch Internet Explorer and connect to the MIM Portal on  *http://mim.contoso.com/identitymanagement*. Note that there may be a short delay on the first visit to this page.
-
+1. Launch Internet Explorer and connect to the MIM Portal on  *http://mim.contoso.com/identitymanagement*. Note, that there may be a short delay on the first visit to this page.
     - If necessary, authenticate as *contoso\miminstall* to Internet Explorer.
 
 2. In Internet Explorer, open the **Internet Options**, change to the **security** tab, and add the site to the **Local intranet** zone if it is not already there.  Close the **Internet Options** dialog.
@@ -136,9 +140,8 @@ After installation completes, verify that the MIM Portal is active.
 
     3.  Verify that the two following rules appear:
 
-        -   Forefront Identity Manager Service (STS).
-
-        -   Forefront Identity Manager Service (Webservice).
+    -   Forefront Identity Manager Service (STS).
+    -   Forefront Identity Manager Service (Webservice).
 
     4.  Complete the wizard and close the **Windows Firewall** application.
 
@@ -150,7 +153,7 @@ After installation completes, verify that the MIM Portal is active.
 
 > [!NOTE]
 > Optional: At this point you can install MIM add-ins and extensions.
-> 
+ 
 > [!div class="step-by-step"]  
 > [« MIM Synchronization Service](install-mim-sync.md)
 > [Synchronize databases »](install-mim-sync-ad-service.md)

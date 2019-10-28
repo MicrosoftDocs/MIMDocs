@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 5/10/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -24,7 +24,45 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
 >
->The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  The current version of the generic connectors is 1.1.913.0 of January 2019.
+>The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
+
+## MIM Version 4.6.34.0
+* Status: MIM 2016 Service Pack 2 (SP2) of October, 2019
+* Corresponding BHOLD version number: 6.0.62.0
+- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=100412)
+- [KB article 4512924](https://support.microsoft.com/en-us/help/4512924)
+- ISO file can be downloaded [from VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or via  [Visual Studio downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
+
+> [!IMPORTANT]
+>- .NET Framework 4.6 is required<br>
+>- [Visual C++ 2013 Redistributable Package (vcredist_x64.exe or vcredist_x86.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is required<br>
+
+>[!NOTE]
+Make sure to read [MIM deployment guide](../microsoft-identity-manager-deploy.md) for updated list of pre-requisites and limitations related to TLS 1.2 only environments, Group Managed Service Accounts support and the [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).
+
+A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsoft Identity Manager (MIM) 2016. It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.412.0.
+### Updates in MIM 2016 Service Pack 2
+
+#### MIM Client addons
+- Added support for MIM Outlook add-on to be loaded into the Microsoft Office 365 Outlook Click-To-Run version.
+
+#### Service and Portal
+- Added support for MIM Service and Portal to be installed on Windows Server 2019 and use SQL Server 2017, Exchange Server 2019, SharePoint 2019, System Center Service Manager Data Warehouse 2019
+- Enabled MIM Service and Portal installation in TLS 1.2 only environments.
+- Enabled installation for MIM Service, Password Reset and Password Registration web sites, PAM Monitoring Service, PAM Component Service to use group managed service accounts.
+- Added ‘keepSQLjobs’ installer parameter.
+- MIM SQL Server Agent temporal jobs no longer start on secondary SQL Always-On Availability Group replicas.
+- ‘ExplicitMember.Add’ and ‘ExplicitMember.Remove’ virtual attributes enabled for custom object types on RCDC forms to work with delta changes.
+
+#### Synchronization Service
+- Added support for MIM Synchronization Service to be installed on Windows Server 2019, and use SQL Server 2017, Exchange Server 2019
+- Enabled MIM Synchronization Service installation in TLS 1.2 only environments.
+- Enabled installation for MIM Synchronization Service to use a group managed service account.
+- Added ‘Use MIMSync account’ option for MIM Service Management Agent.
+ 
+#### Privilege Access Management 
+- PowerShell cmdlet ‘Get-PAMRequest’ returns an additional property 'FIMRequestID'.
+
 
 ## MIM Version 4.5.412.0
 > [!IMPORTANT]
@@ -58,7 +96,6 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 
 ## Version 4.5.202.0
 - Status: August 30, 2018
-- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=57278)
 - [KB Release KB](https://support.microsoft.com/en-us/help/4346632)
 
 > [!IMPORTANT]
@@ -84,7 +121,6 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 
 ## Version 4.5.26.0
 - Status: June 30, 2018
-- [Hotfix Download](https://www.microsoft.com/download/details.aspx?id=57078)
 - [KB Release KB4073679](https://support.microsoft.com/en-us/help/4073679)
 
 > [!IMPORTANT]

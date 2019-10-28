@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure Windows Server 2016 for MIM 2016 SP1 | Microsoft Docs
-description: Get the steps and minimum requirements to prepare Windows Server 2016 to work with MIM 2016 SP1.
+title: Configure Windows Server 2016 or 2019 for MIM 2016 SP2 | Microsoft Docs
+description: Get the steps and minimum requirements to prepare Windows Server 2016 or 2019 to work with MIM 2016 SP2.
 keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/26/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
@@ -25,12 +25,17 @@ ms.suite: ems
 
 ---
 
-# Set up an identity management server: Windows Server 2016
+# Set up an identity management server: Windows Server 2016 or 2019
 
 > [!div class="step-by-step"]
 > [« Preparing a domain](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)
 > 
+
+> [!NOTE]
+Windows Server 2019 setup procedure does not differ from Windows Server 2016 setup procedure.
+
+
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -106,6 +111,19 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 12. Close the Local Security Policy window.
 
+## Software prerequisites
+
+Before installing MIM 2016 SP2 components please make sure you install all software prerequisites:
+
+13. Install [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/download/details.aspx?id=40784).
+
+14. Install .NET Framework 4.6.
+
+15. On the server that will host MIM Synchronization Service, MIM Synchronization Service requires [SQL Server Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
+
+16. On the server that will host MIM Service, MIM Service requires .NET Framework 3.5.
+
+17. Optionally, if using TLS 1.2 or FIPS mode, see [MIM 2016 SP2 in "TLS 1.2 only" or FIPS-mode environments](preparing-tls.md).
 
 ## Change the IIS Windows Authentication mode if needed
 
@@ -121,4 +139,4 @@ Set up the server security policy to allow the newly-created accounts to run as 
 
 > [!div class="step-by-step"]  
 > [« Preparing a domain](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)

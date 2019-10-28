@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure SQL Server for Microsoft Identity Manager 2016 SP1 | Microsoft Docs
-description: Install SQL Server 2016 in preparation for your MIM 2016 installation.
+title: Configure SQL Server for Microsoft Identity Manager 2016 SP2 | Microsoft Docs
+description: Install SQL Server 2016 or 2017 in preparation for your MIM 2016 installation.
 keywords:
 author: billmath
 ms.author: billmath
@@ -25,12 +25,16 @@ ms.suite: ems
 
 ---
 
-# Set up an identity management server: SQL Server 2016
+# Set up an identity management server: SQL Server 2016 or 2017
 
 > [!div class="step-by-step"]
-> [« Windows Server 2016](prepare-server-ws2016.md)
+> [« Windows Server](prepare-server-ws2016.md)
 > [SharePoint »](prepare-server-sharepoint.md)
 > 
+
+> [!NOTE]
+Sql Server 2017 setup procedure does not differ from Sql Server 2016 setup procedure.
+
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **corpdc**
@@ -39,6 +43,9 @@ ms.suite: ems
 > - MIM Sync Server name - **corpsync**
 > - SQL Server name - **corpsql**
 > - Password - <strong>Pass@word1</strong>
+
+> [!IMPORTANT]
+MIM 2016 SP2 supports SQL AlwaysOn Availability Group (AoAG) listeners with *RegisterAllProvidersIP* option set to 0, meaning that SQL Server AoAG cross-subnet failover is not currently supported.
 
 ## Install **SQL Server 2016 Standard/Enterprise Edition**
 
@@ -53,9 +60,10 @@ ms.suite: ems
     ```
     
 More info SQL deployment accounts and services can be found [here](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017)
+
 > [!NOTE]
 > SSMS is no longer included in SQL 2016. Download details can be found [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)
 > 
 > [!div class="step-by-step"]  
-> [« Windows Server 2016](prepare-server-ws2016.md)
+> [« Windows Server](prepare-server-ws2016.md)
 > [SharePoint »](prepare-server-sharepoint.md)
