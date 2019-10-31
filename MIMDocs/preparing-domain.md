@@ -28,7 +28,7 @@ ms.suite: ems
 # Set up a domain
 
 > [!div class="step-by-step"]
-> [Windows Server 2016 »](prepare-server-ws2016.md)
+> [Windows Server »](prepare-server-ws2016.md)
 
 Microsoft Identity Manger (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.
 
@@ -54,7 +54,7 @@ All the components of your MIM deployment need their own identities in the domai
     ```PowerShell
     import-module activedirectory
     $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-    New-ADUser –SamAccountName MIMINSTALL –name MIMMA
+    New-ADUser –SamAccountName MIMINSTALL –name MIMINSTALL
     Set-ADAccountPassword –identity MIMINSTALL –NewPassword $sp
     Set-ADUser –identity MIMINSTALL –Enabled 1 –PasswordNeverExpires 1
     New-ADUser –SamAccountName MIMMA –name MIMMA
@@ -78,7 +78,7 @@ All the components of your MIM deployment need their own identities in the domai
     New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
     Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
     Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
-    New-ADUser –SamAccountName MIMpool –name BackupAdmin
+    New-ADUser –SamAccountName MIMpool –name MIMpool
     Set-ADAccountPassword –identity MIMPool –NewPassword $sp
     Set-ADUser –identity MIMPool –Enabled 1 -PasswordNeverExpires 1
     ```
@@ -90,7 +90,7 @@ All the components of your MIM deployment need their own identities in the domai
     New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncOperators
     New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
     New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncBrowse
-    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
+    New-ADGroup –name MIMSyncPasswordSet –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordSet
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMInstall
@@ -113,4 +113,4 @@ All the components of your MIM deployment need their own identities in the domai
 - passwordregistration.contoso.com Point to corpservice physical ip address
 
 > [!div class="step-by-step"]
-> [Windows Server 2016 »](prepare-server-ws2016.md)
+> [Windows Server »](prepare-server-ws2016.md)

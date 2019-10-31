@@ -44,7 +44,7 @@ The MIM management agent (MA) is a connector for MIM Sync to the MIM Service. To
 When you configure a MIM management agent, you need to specify a user account. This document uses **MIMMA** as the name for this account.
 
 > [!NOTE]
-> The account you use for your MIM management agent must be the same account as the one you have specified during the installation of MIM Service.
+> The account you use for your MIM management agent must be the same account as the one you have specified during the installation of MIM Service. If you plan to enable 'Use MIMSync account' feature then MIM Synchronization Service must be installed using Group Managed Service Account.
 
 ### To create the MIM MA
 
@@ -59,7 +59,6 @@ When you configure a MIM management agent, you need to specify a user account. T
     -   Name: MIMMA
 
 4.  On the **Connect to Database** page, provide the following settings, and then click **Next**
-
     -   Server: localhost
 
     -   Database: FIMService

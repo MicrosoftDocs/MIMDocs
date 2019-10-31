@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 10/12/2017
+ms.date: 10/17/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -18,14 +18,14 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mwahl
+ms.reviewer: markwahl-msft
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# Deploy Microsoft Identity Manager 2016 SP1
+# Deploy Microsoft Identity Manager 2016 SP2
 The articles in this section provide step-by-step instructions for deploying Microsoft Identity Manager (MIM) 2016 for end-user self-service scenarios on a fresh server that has not had FIM or MIM previously deployed.
 
 > [!NOTE]
@@ -39,16 +39,21 @@ The process for deploying MIM is very similar to the process for its predecessor
 MIM works with Active Directory (AD), so follow these steps to configure your AD domain controller.
 - [Domain setup](preparing-domain.md)
 
+
 ## Next: Prepare an identity management servers
-Once your domain is in place and configured, prepare your corporate identity management server. This includes setting up:
-- [Windows Server 2016](prepare-server-ws2016.md)
-- [SQL Server 2016](prepare-server-sql2016.md)
-- [SharePoint 2016](prepare-server-sharepoint.md)
+Once your domain is in place and configured, prepare your corporate identity management server.
+
+For more information on supported platforms, see [Supported platforms for MIM 2016 or later](microsoft-identity-manager-2016-supported-platforms.md)
+
+ This includes setting up:
+- [Windows Server](prepare-server-ws2016.md)
+- [SQL Server](prepare-server-sql2016.md)
+- [SharePoint Server](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optional)
 
-## Finally: Install Microsoft Identity Manager 2016 SP1 components
+## Finally: Install Microsoft Identity Manager 2016 SP2 components
 Once you have set up the domain and server, you're ready to install the MIM components and configure them to sync with AD.
 - [MIM Synchronization Service](install-mim-sync.md)
 - [MIM Service and Portal](install-mim-service-portal.md)
 - [Synchronize Active Directory and MIM Service databases](install-mim-sync-ad-service.md)
-- [Supported platforms for MIM 2016 or greater](microsoft-identity-manager-2016-supported-platforms.md)
+
