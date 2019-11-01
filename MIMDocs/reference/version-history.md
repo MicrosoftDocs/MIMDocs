@@ -29,13 +29,13 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 ## MIM Version 4.6.34.0
 * Status: MIM 2016 Service Pack 2 (SP2) of October, 2019
 * Corresponding BHOLD version number: 6.0.62.0
-- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=100412)
-- [KB article 4512924](https://support.microsoft.com/en-us/help/4512924)
+- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=100412)
+- [KB article 4512924](https://support.microsoft.com/help/4512924)
 - ISO file can be downloaded [from VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or via  [Visual Studio downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
 
 > [!IMPORTANT]
 >- .NET Framework 4.6 is required<br>
->- [Visual C++ 2013 Redistributable Package (vcredist_x64.exe or vcredist_x86.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is required<br>
+>- [Visual C++ 2013 Redistributable Package (vcredist_x64.exe or vcredist_x86.exe)](https://www.microsoft.com/download/details.aspx?id=40784) is required<br>
 
 >[!NOTE]
 > Make sure to read [MIM deployment guide](../microsoft-identity-manager-deploy.md) for updated list of pre-requisites and limitations related to TLS 1.2 only environments, Group Managed Service Accounts support and the [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).

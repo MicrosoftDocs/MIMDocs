@@ -30,10 +30,9 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [« Windows Server](prepare-server-ws2016.md)
 > [SharePoint »](prepare-server-sharepoint.md)
-> 
-
-> [!NOTE]
-Sql Server 2017 setup procedure does not differ from Sql Server 2016 setup procedure.
+ 
+> [!NOTE] 
+> Sql Server 2017 setup procedure does not differ from Sql Server 2016 setup procedure.
 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
@@ -45,7 +44,7 @@ Sql Server 2017 setup procedure does not differ from Sql Server 2016 setup proce
 > - Password - <strong>Pass@word1</strong>
 
 > [!IMPORTANT]
-MIM 2016 SP2 supports SQL AlwaysOn Availability Group (AoAG) listeners with *RegisterAllProvidersIP* option set to 0, meaning that SQL Server AoAG cross-subnet failover is not currently supported.
+> MIM 2016 SP2 supports SQL AlwaysOn Availability Group (AoAG) listeners with *RegisterAllProvidersIP* option set to 0, meaning that SQL Server AoAG cross-subnet failover is not currently supported.
 
 ## Install **SQL Server 2016 Standard/Enterprise Edition**
 
@@ -63,7 +62,7 @@ More info SQL deployment accounts and services can be found [here](https://docs.
 
 > [!NOTE]
 > SSMS is no longer included in SQL 2016. Download details can be found [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)
-> 
+
 > [!div class="step-by-step"]  
 > [« Windows Server](prepare-server-ws2016.md)
 > [SharePoint »](prepare-server-sharepoint.md)

@@ -33,7 +33,7 @@ ms.suite: ems
 > 
 
 > [!NOTE]
-Windows Server 2019 setup procedure does not differ from Windows Server 2016 setup procedure.
+> Windows Server 2019 setup procedure does not differ from Windows Server 2016 setup procedure.
 
 
 > [!NOTE]
@@ -96,8 +96,6 @@ Set up the server security policy to allow the newly-created accounts to run as 
 5. Click **OK** to close the **Log on as a service Properties** window.
 
 6.  On the details pane, right-click on **Deny access to this computer from the network**, and select **Properties**.>
-
-[!NOTE] Separating role servers will break some functionality like SSPR.
 
 7. Click **Add User or Group**, and in the text box type `contoso\MIMSync; contoso\MIMService` and click **OK**.
 
