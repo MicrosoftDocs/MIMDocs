@@ -38,7 +38,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >- [Visual C++ 2013 Redistributable Package (vcredist_x64.exe or vcredist_x86.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=40784) is required<br>
 
 >[!NOTE]
-Make sure to read [MIM deployment guide](../microsoft-identity-manager-deploy.md) for updated list of pre-requisites and limitations related to TLS 1.2 only environments, Group Managed Service Accounts support and the [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).
+> Make sure to read [MIM deployment guide](../microsoft-identity-manager-deploy.md) for updated list of pre-requisites and limitations related to TLS 1.2 only environments, Group Managed Service Accounts support and the [upgrade path from previous MIM and FIM versions](../microsoft-identity-manager-2016-service-pack-2-upgrade-path.md).
 
 A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsoft Identity Manager (MIM) 2016. It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.412.0.
 ### Updates in MIM 2016 Service Pack 2
