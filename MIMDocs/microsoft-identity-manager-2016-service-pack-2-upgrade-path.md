@@ -37,7 +37,7 @@ There are several upgrade options available. If you're already running MIM 2016,
 ## Upgrade from FIM 2010 R2 SP1 or later FIM builds
 
 > [!NOTE]
-The minimal supported version of Forefront Identity Manager that can be directly upgraded to MIM 2016 SP2 is FIM 2010 R2 SP1 (build 4.1.3419.0). Direct upgrade to MIM 2016 SP2 from earlier versions of FIM is not supported. If you're running FIM builds earlier than 4.1.3419.0 then you have to upgrade to FIM 2010 R2 SP1 prior to upgrading to MIM 2016 SP2.
+> The minimal supported version of Forefront Identity Manager that can be directly upgraded to MIM 2016 SP2 is FIM 2010 R2 SP1 (build 4.1.3419.0). Direct upgrade to MIM 2016 SP2 from earlier versions of FIM is not supported. If you're running FIM builds earlier than 4.1.3419.0 then you have to upgrade to FIM 2010 R2 SP1 prior to upgrading to MIM 2016 SP2.
 
 1. **Option 1: Full installation using existing databases**
     1. Make a backup copy of your FIMSynchronizationService and FIMService databases.
@@ -76,6 +76,6 @@ The minimal supported version of Forefront Identity Manager that can be directly
     1. Upgrade MIM 2016 Add-ons and Password Reset clients, provide new MIM Service server name if MIM Service server name changed.
 
 > [!NOTE]
-Language Packs updates after MIM 2016 SP2 will be distributed as hotfixes (.msp files), eliminating the need to uninstall/reinstall Language Packs.
+> Language Packs updates after MIM 2016 SP2 will be distributed as hotfixes (.msp files), eliminating the need to uninstall/reinstall Language Packs.
 
 More detailed information about the upgrade and databases backup procedures could be found in the [Upgrade to FIM 2010 R2](https://docs.microsoft.com/previous-versions/mim/jj134291%28v%3dws.10%29) article, that is applicable to any FIM or MIM upgrade process.
