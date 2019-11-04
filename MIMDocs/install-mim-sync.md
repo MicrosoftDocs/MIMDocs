@@ -81,9 +81,9 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
    3. Service Account Domain or local computer name: *contoso*
 
     >[!NOTE]
-MIM 2016 SP2 and later: for Group Managed Service Accounts, ensure the **$** character is at the end of the Service Account Name, e.g. MIMSync$, and leave the Password field empty.
+    >MIM 2016 SP2 and later: for Group Managed Service Accounts, ensure the **$** character is at the end of the Service Account Name, e.g. MIMSync$, and leave the Password field empty.
 
-   ![Service account image](media/install-mim-sync/MIM_Install4.png)
+    ![Service account image](media/install-mim-sync/MIM_Install4.png)
 
 8. Provide MIM Sync Service installer with the relevant security groups:
 

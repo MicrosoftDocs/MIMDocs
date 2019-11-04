@@ -64,8 +64,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example <em>Pass@word1</em>, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
     >[!NOTE]
-MIM 2016 SP2 and later: if you are using Group Managed Service Accounts, you will need to ensure the  the **$** character is at the end of the Service Account Name, e.g. MIMService$, and leave the Service Account Password field empty.
-
+    >MIM 2016 SP2 and later: if you are using Group Managed Service Accounts, you will need to ensure the  the **$** character is at the end of the Service Account Name, e.g. MIMService$, and leave the Service Account Password field empty.
 
     ![Configure the MIM service account image](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -73,7 +72,7 @@ MIM 2016 SP2 and later: if you are using Group Managed Service Accounts, you wil
 
 11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMMA*.
     >[!NOTE]
-MIM 2016 SP2 and later: if you plan to use MIM Synchronization Service Group Managed Service Account in MIM Sync, and enable 'Use MIM Sync account' feature, then enter MIM Synchronization Service gMSA name as the MIM MA account, e.g. *contoso\MIMSync$*.
+    >MIM 2016 SP2 and later: if you plan to use MIM Synchronization Service Group Managed Service Account in MIM Sync, and enable 'Use MIM Sync account' feature, then enter MIM Synchronization Service gMSA name as the MIM MA account, e.g. *contoso\MIMSync$*.
 
     ![Configure the MIM Service and Portal image](media/install-mim-service-portal/MIM_Install13.png)
 
