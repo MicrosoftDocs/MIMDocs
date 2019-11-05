@@ -73,4 +73,5 @@ As with the standard multitier topology, you can increase MIM Portal performance
 The computers running SQL Server that host the MIM Synchronization Service and the MIM Service database will dramatically influence the overall performance of your MIM deployment. Therefore, follow the recommendations in SQL Server documentation for optimizing database performance. See the following documents for more information:
 
 ## See also
-- The downloadable [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) goes into more detail about a test build and performance testing results.
+
+- The downloadable [Forefront Identity Manager (FIM) 2010 Capacity Planning Guide](https://www.microsoft.com/en-us/download/details.aspx?id=7437) goes into more detail about a test build and performance testing results.
