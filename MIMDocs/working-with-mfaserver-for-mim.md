@@ -1,7 +1,7 @@
 ---
 
-title: Use Azure Multi-Factor Authentication Server SDK to activate PAM or SSPR Scenarios | Microsoft Docs
-description: Set up Azure Multi-Factor Authentication Server SDK as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
+title: Use Azure Multi-Factor Authentication Server to activate PAM or SSPR Scenarios | Microsoft Docs
+description: Set up Azure Multi-Factor Authentication Server as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
 keywords:
 author: billmath
 ms.author: billmath
@@ -13,12 +13,12 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 ---
 # Use Azure Multi-Factor Authentication Server to activate PAM or SSPR
-The following document describes how to setup the Azure MFA server as a second layer of security when your users activate roles in Priviledge Access Management or Self-Service Password Reset.
+The following document describes how to setup the Azure MFA server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
 
 > [!IMPORTANT]
-> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will not be able to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on changes to MFA by integrating with Azure Multi-Factor Authentication Server SDK.
+> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit, the Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will not be able to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package.
 
-The Article below will outline the configuration update and steps to enable for a simple switch from Azure MFA SDK to Azure Multi-Factor Authentication Server SDK when released as this will be included in an upcoming hotfix please see [version history](./reference/version-history.md) for announcements. 
+The Article below outlines the configuration update and steps to enable moving from Azure MFA SDK to Azure Multi-Factor Authentication Server.
 
 ## Prerequisites
 
@@ -93,7 +93,7 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/en-us/
 > To revert setting replace MfaSettings.xml with your backup file in step 2
 
 
-## Next Steps
+## See also
 
 -    [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)

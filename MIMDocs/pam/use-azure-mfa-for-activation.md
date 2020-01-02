@@ -15,7 +15,9 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 
 # Using Azure MFA for activation
 > [!IMPORTANT]
-> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit. The Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will not be able to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package. <br> The Microsoft development team is working on changes to MFA by integrating with MFA Server SDK.  This will be included in an upcoming hotfix please see [version history](../reference/version-history.md) for announcements. 
+> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit, the Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will not be able to download Azure MFA SDK anymore via the Azure classic portal. For information on using Azure MFA Server, see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md).
+
+
 
 
 When configuring a PAM role, you can choose how to authorize users that request to activate the role. The choices that the PAM authorization activity implements are:
@@ -50,7 +52,11 @@ In this section, you set up your Azure MFA provider in Microsoft Azure Active Di
 
 ## Downloading the Azure MFA Service Credentials
 
-Next, you’ll generate a file that includes the authentication material for PAM to contact Azure MFA.
+> [!IMPORTANT]
+> The Azure MFA SDK is no longer available. For information on using Azure MFA Server, see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md) instead.
+
+
+Previously, you'd generate a file that includes the authentication material for PAM to contact Azure MFA.
 
 1. Open a web browser and connect to the [Azure classic portal](https://manage.windowsazure.com) as an Azure subscription administrator.
 
