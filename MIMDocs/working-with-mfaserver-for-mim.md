@@ -43,7 +43,7 @@ Sign-in to the [Azure portal](https://portal.azure.com/) and download the Azure 
 Use the **Generate activation credentials to initiate use** link to generate activation credentials. Once Generated save for later use.
 
 ### Step 3: Install the Azure Multi-Factor Authentication Server
-Once you have downloaded the server, [install](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) it.  Your activation credentials will be required. 
+Once you have downloaded the server, [install](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) it.  Your activation credentials will be required. 
 
 ### Step 4: Create your IIS Web Application that will host the SDK
 1. Open IIS Manager
@@ -95,7 +95,7 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/en-us/
 
 ## See also
 
--    [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+-    [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Use Custom Multi-Factor Authentication API to activate PAM or SSPR](Working-with-custommfaserver-for-mim.md)
 - [MIM version release history](./reference/version-history.md)
