@@ -37,7 +37,8 @@ The process for deploying MIM is very similar to the process for its predecessor
 
 ## First: Prepare a domain
 MIM works with Active Directory (AD), so follow these steps to configure your AD domain controller.
-- [Domain setup](preparing-domain.md)
+- [Domain setup](preparing-domain.md) or
+- [Domain setup for Group Managed Service Accounts](preparing-domain-gmsa.md)
 
 
 ## Next: Prepare an identity management servers
@@ -56,4 +57,3 @@ Once you have set up the domain and server, you're ready to install the MIM comp
 - [MIM Synchronization Service](install-mim-sync.md)
 - [MIM Service and Portal](install-mim-service-portal.md)
 - [Synchronize Active Directory and MIM Service databases](install-mim-sync-ad-service.md)
-
