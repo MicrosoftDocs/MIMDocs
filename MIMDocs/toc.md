@@ -17,6 +17,7 @@
 ## [Deploying in TLS 1.2 or FIPS-mode environments](preparing-tls.md)
 ## [First time deployment](microsoft-identity-manager-deploy.md)
 ### [Domain setup](preparing-domain.md)
+### [Domain setup for GMSA](preparing-domain-gmsa.md)
 ### [Server setup: Windows Server](prepare-server-ws2016.md)
 ### [Server setup: SQL](prepare-server-sql2016.md)
 ### [Server setup: SharePoint](prepare-server-sharepoint.md)
