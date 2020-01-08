@@ -35,7 +35,7 @@ ms.suite: ems
 
 Microsoft Identity Manger (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.  This article describes how to set up Group Managed Service Accounts in that domain for use by MIM.
 
-# Overview
+## Overview
 
 Group Managed Service Accounts eliminate the need to periodically change service account passwords. With the release of MIM 2016 SP2, the following MIM components can have gMSA accounts configured to be used during the installation process:
 
