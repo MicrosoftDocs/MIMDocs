@@ -5,7 +5,7 @@ title: Set up a gMSAs for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Set up Group Managed Service Accounts in a domain for Microsoft Identity Manager 2016
 keywords:
 author: EugeneSergeev
-ms.author: EugeneSergeev
+ms.author: esergeev
 manager: aashiman
 ms.date: 1/7/2019
 ms.topic: article
