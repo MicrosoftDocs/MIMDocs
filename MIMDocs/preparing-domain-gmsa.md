@@ -144,9 +144,9 @@ If there is already a root key for the domain (use **Get-KdsRootKey** to check),
     ![](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
     >[!NOTE]
-In the Lab or Test environment you can avoid 10 hours replication delay by running the following command instead:
-<br/>
-Add-KDSRootKey -EffectiveTime ((Get-Date).AddHours(-10))
+    >In the Lab or Test environment you can avoid 10 hours replication delay by running the following command instead:
+    ><br/>
+    >Add-KDSRootKey -EffectiveTime ((Get-Date).AddHours(-10))
 
 ## Create MIM Synchronization Service account, group and service principal
 -----------------------
