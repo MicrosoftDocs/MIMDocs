@@ -82,7 +82,6 @@
 ### [Export performance guide](https://technet.microsoft.com/library/hh322883)
 ## Reporting
 ### [Reporting custom reports and extensibility](https://technet.microsoft.com/library/jj133861)
-## [Microsoft identity software: Public release build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Reference](../reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Developer Reference
 ### [MIM 2016 developer reference](../reference/microsoft-identity-manager-2016-developer-reference.md)
