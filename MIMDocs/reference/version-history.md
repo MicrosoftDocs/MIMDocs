@@ -68,7 +68,7 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 > [!IMPORTANT]
 >- RCDC form for group objects fails to render when 'displayedOwner' attribute value is not populated. You will not be able to edit/view groups when such an error occurs.<br>
 
-- Availabilty date: May 10, 2019
+- Availability date: May 10, 2019
 - [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
 - [KB article 4489646](https://support.microsoft.com/en-us/help/4489646/hotfix-rollup-4-5-412-0-available-for-mim-2016-sp1)
 
@@ -101,11 +101,11 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
 >- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
->- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
 #### MIM service
-- Azure MFA Server intergration
+- Azure MFA Server integration
     -Alternate Multi-Factor Authentication provider
 
 #### Privilege Access Management 
@@ -114,7 +114,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 #### Microsoft Identity Portal
 - Portal are displayed with an incorrect table length
 - Advanced Search dialog of the Portal, the scrollbars don’t display properly
-- Language Pack Language Pack trong name signature verification failed
+- Language Pack Language Pack strong name signature verification failed
 
 #### Certificate Management
 - Binding redirect statement for REST API
@@ -126,7 +126,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
 >- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
->- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
 #### Synchronization service
@@ -141,7 +141,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - Updated partition information is saved as expected when the Refresh then OK buttons are clicked
 - When indexing an Indexable String attribute is too long an Unexpected Error was returned, more descriptive error message is now returned
 - Creating a Text File management agent when the MIM Synchronization Service is installed on Windows Server 2016, some text encoding options, including Unicode were unavailable
-- MIM Service MA If an export error message contains an invalid character, this causes corruption in the run history entries. This build we removed from the error message before being saved to the connectorspace object and run history
+- MIM Service MA If an export error message contains an invalid character, this causes corruption in the run history entries. This build we removed from the error message before being saved to the connector space object and run history
 
 #### MIM service
 - *Support for Group Managed Service Accounts
@@ -420,13 +420,11 @@ You need to backup the MIMService and MIM Sync databases.
 ## Version 4.3.2064.0
 
 * Status MIM 2016 Hotfix of December 11, 2015; customers must upgrade to a more recent version to stay supported
-* Correpsonding BHOLD version number: 5.0.3176.0
+* Corresponding BHOLD version number: 5.0.3176.0
 * Read more at [https://support.microsoft.com/kb/3092179](https://support.microsoft.com/kb/3092179)
 
 ## Version 4.3.1935.0
 
 * Status MIM 2016 GA of August 6, 2015; customers must upgrade to a more recent version to stay supported
 * Corresponding BHOLD version number: 5.0.3079.0
-## Next steps
 
-- See the [Support team blog build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) for public release versions of the Identity products. The blog provides information about service packs, updates, rollups, and hotfixes of MIM 2016, Azure AD Connect, FIM 2010 R2, and older build types.
