@@ -427,6 +427,4 @@ You need to backup the MIMService and MIM Sync databases.
 
 * Status MIM 2016 GA of August 6, 2015; customers must upgrade to a more recent version to stay supported
 * Corresponding BHOLD version number: 5.0.3079.0
-## Next steps
 
-- See the [Support team blog build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) for public release versions of the Identity products. The blog provides information about service packs, updates, rollups, and hotfixes of MIM 2016, Azure AD Connect, FIM 2010 R2, and older build types.

@@ -68,7 +68,6 @@ The following issues have been fixed in BHOLD version 6.0.36.0.
 
 ## Next steps
 
-- [Support team blog build versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) for information about public release versions of the Identity products (service packs, updates, rollups, and hotfixes for MIM 2016, Azure AD Connect, FIM 2010 R2, and older build types)
 - [BHOLD concepts guide](../bhold/bhold-concepts-guide.md)
 - [BHOLD installation guide](../bhold/bhold-installation-guide.md)
 - [BHOLD developer reference](mim2016-bhold-developer-reference.md)
