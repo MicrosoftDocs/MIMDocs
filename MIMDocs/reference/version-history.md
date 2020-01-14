@@ -101,7 +101,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
 >- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
->- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
 #### MIM service
@@ -126,7 +126,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
 >- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
->- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
 #### Synchronization service
