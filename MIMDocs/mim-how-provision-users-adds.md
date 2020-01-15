@@ -587,9 +587,7 @@ your outbound synchronization rule is now active on the object in the metaverse.
 ![Applied synchronization rule](media/how-provision-users-adds/image028.jpg)
 
 Because a new object has been provisioned to the ADMA connector space, you
-should have one Add pending export on this management agent. By using a script
-made for this purpose, you can see one reported Add pending export for the
-Fabrikam ADMA. To use the script, see [Using Windows PowerShell to Display the Export State of a Management Agent](http://go.microsoft.com/FWLink/p/?LinkId=189664).
+should have one Add pending export on this management agent. 
 
 ![Pending exports for management Agent](media/how-provision-users-adds/image029.jpg)
 

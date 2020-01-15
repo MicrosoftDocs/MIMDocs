@@ -31,7 +31,7 @@ This article outlines how to use MIM with a custom multi-factor authentication p
 In order to use a custom Multi-Factor Authentication provider API with MIM, you need:
 
 - Phone numbers for all candidate users
-- MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278)  or later - see [version history](reference/version-history.md) for announcements
+- MIM hotfix 4.5.202.0 or later - see [version history](reference/version-history.md) for announcements
 - MIM Service configured for SSPR or PAM
 
 ## Approach using custom multi-factor authentication code

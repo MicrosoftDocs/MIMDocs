@@ -33,8 +33,6 @@ Application Proxy:
 
 -   You have Azure AD Connect configured for synchronizing users and groups to Azure AD.
 
--   You have Azure AD Connect configured for synchronizing Office Groups for controlling application  [back to on-premises AD DS](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
-
 -   You have already set up Application Proxy connectors and connector groups, if not you can visit [here](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) to install and configure
 
 -   You have already published one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Azure AD App Proxy
