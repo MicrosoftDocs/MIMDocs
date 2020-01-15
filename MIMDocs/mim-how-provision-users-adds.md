@@ -460,7 +460,7 @@ configuration, you:
 ### Step 10: Create a sample user in MIM
 
 
-The following table lists the properties of the sample user. Create a sample user according the data in the table below.
+The following table lists the properties of the sample user. Create a sample user according to the data in the table below.
 
 | Attribute                              | Value                                                          |
 |----------------------------------------|----------------------------------------------------------------|
@@ -496,7 +496,7 @@ To verify whether the user is in the scope of the synchronization rule, open the
 user’s property page and review the Expected Rules List attribute in the
 Provisioning tab. The Expected Rules List attribute should list the AD User
 
-Outbound Synchronization Rule. The following screen shot shows an example of the
+Outbound Synchronization Rule. The following screenshot shows an example of the
 Expected Rules List attribute.
 
 ![Synchronization rule status](media/how-provision-users-adds/image023.jpg)
@@ -551,7 +551,7 @@ To accomplish these tasks, you run the following run profiles.
 | Fabrikam FIMMA   | 1. Export <br/> 2. Delta Import       |
 
 
-After the import from the FIM Service database, Britta Simon and the ExpectedRuleEntry object that links Britta to the AD User Outbound Synchronization Rule are staged in the Fabrikam FIMMA connector space. When you review Britta’s properties in the connector space, next to the attribute values that you have configured in the FIM Portal, you also find a valid reference to the Expected Rule Entry object. The following screen shot shows an example of this.
+After the import from the FIM Service database, Britta Simon and the ExpectedRuleEntry object that links Britta to the AD User Outbound Synchronization Rule are staged in the Fabrikam FIMMA connector space. When you review Britta’s properties in the connector space, next to the attribute values that you have configured in the FIM Portal, you also find a valid reference to the Expected Rule Entry object. The following screenshot shows an example of this.
 
 ![Connector space object properties](media/how-provision-users-adds/image025.jpg)
 
@@ -648,18 +648,16 @@ Other Resources
 
 [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189670)
 
-[About Reference Attributes](http://go.microsoft.com/FWLink/p/?LinkId=189671)
+[Understanding Reference Attributes Processing](http://go.microsoft.com/FWLink/p/?LinkId=189671)
 
-[How Can I Manage My FIM MA Account](http://go.microsoft.com/FWLink/p/?LinkId=189672)
+[How to Manage the FIM MA Account](http://go.microsoft.com/FWLink/p/?LinkId=189672)
 
-[Detecting Nonauthoritative Accounts – Part 1: Envisioning](http://go.microsoft.com/FWLink/p/?LinkId=189673)
+[Detecting Non-authoritative Accounts – Part 1: Envisioning](http://go.microsoft.com/FWLink/p/?LinkId=189673)
 
-[The Poor Man’s Version of a Connector Detection Mechanism](http://go.microsoft.com/FWLink/p/?LinkId=189674)
+[How to Detect Connectors](http://go.microsoft.com/FWLink/p/?LinkId=189674)
 
-[Configuring the ADMA Account](http://go.microsoft.com/FWLink/p/?LinkId=189657)
-
-[A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment](http://go.microsoft.com/FWLink/p/?LinkId=189667)
+[How to configure the ADMA Account](http://go.microsoft.com/FWLink/p/?LinkId=189657)
 
 [About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675)
 
-[About Exports](http://go.microsoft.com/FWLink/p/?LinkId=189676)
+[Understanding Exports](https://social.technet.microsoft.com/wiki/contents/articles/1861.understanding-exports-in-ilm-2007.aspx)
