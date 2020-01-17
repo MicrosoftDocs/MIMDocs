@@ -33,8 +33,6 @@ Application Proxy:
 
 -   You have Azure AD Connect configured for synchronizing users and groups to Azure AD.
 
--   You have Azure AD Connect configured for synchronizing Office Groups for controlling application  [back to on-premises AD DS](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
-
 -   You have already set up Application Proxy connectors and connector groups, if not you can visit [here](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) to install and configure
 
 -   You have already published one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Azure AD App Proxy
@@ -70,7 +68,7 @@ By default, Azure AD Connect will assume that non-admin users in Active Director
 Therefore, the users brought into AD DS by MIM from Azure AD need to be stored in a way that Azure AD will not attempt to synchronize those users back to Azure AD.
 One way to do this is to create a new organizational unit in AD DS, and configure Azure AD Connect to exclude that organizational unit.  
 
-More information can be found in [Azure AD Connect sync: Configure filtering](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
+More information can be found in [Azure AD Connect sync: Configure filtering](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
  
 
 ## Create the Azure AD application 
@@ -335,4 +333,4 @@ Next Steps
 
 [How to provide secure remote access to on-premises applications](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
-[Download Microsoft Identity Manager connector for Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+[Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
