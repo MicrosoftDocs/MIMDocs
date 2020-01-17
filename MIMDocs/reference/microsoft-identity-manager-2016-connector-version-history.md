@@ -31,18 +31,18 @@ This topic list all versions of the generic connectors package that have been re
 
 Related links:
 
-* [Download Latest Connectors](http://go.microsoft.com/fwlink/?LinkId=717495)
+* [Download Latest Connectors](https://go.microsoft.com/fwlink/?LinkId=717495)
 * [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation
 * [Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation
-* [Web Services Connector](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) reference documentation
+* [Web Services Connector](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) reference documentation
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
-* [SharePoint User Profile Store Connector](http://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
+* [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
 ## 4.4.1800.1 (July 2019)
 ### Enhancements:
 - SharePoint User Profile Store Connector
-   - Added support for SharePoint Server 2019. The connector is available as a download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?linkid=279713) 
+   - Added support for SharePoint Server 2019. The connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=279713) 
 
 ## 1.1.953.0 (June 2019)
 
@@ -371,7 +371,7 @@ The Forefront Identity Manager Connector for SharePoint User Profile Store helps
 
 More information on this connector can be found at the 
 [hotfix rollup](https://support.microsoft.com/en-us/help/3156030/hotfix-rollup-build-4-3-2201-0-is-available-for-forefront-identity-man)
-and instructions on how to [Use a sample MIM solution in SharePoint Server 2016](https://docs.microsoft.com/en-us/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server-2016).
+and instructions on how to [Use a sample MIM solution in SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server-2016).
 
 ### Forefront Identity Manager Connector for Windows Azure Active Directory (legacy connector)
 
