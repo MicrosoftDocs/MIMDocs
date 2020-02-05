@@ -119,7 +119,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/index/i_blog.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_blog.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
