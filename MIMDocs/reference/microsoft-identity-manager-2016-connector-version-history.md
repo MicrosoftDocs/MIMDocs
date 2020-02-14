@@ -6,6 +6,7 @@ documentationcenter: ''
 author: EugeneSergeev
 manager: aashiman
 editor: ''
+reviewer: markwahl-msft
 
 ms.assetid: 6a0c66ab-55df-4669-a0c7-1fe1a091a7f9
 ms.devlang: na
@@ -21,8 +22,7 @@ ms.suite: ems
 ---
 # Connector Version Release History
 
-
-Connectors link specific connected data sources to Microsoft Identity Manager (MIM) and Azure AD Connect.  (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation, and the installation package of Azure AD Connect.    In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
+Connectors link specific connected data sources to Microsoft Identity Manager (MIM) and Azure AD Connect. (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation and the installation package of Azure AD Connect. In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
 
 > [!NOTE]
 > This topic is primarily on FIM and MIM Connectors only. Unless explicitly called out below, these Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on Azure AD Connect when upgrading to specified Build.
@@ -57,7 +57,7 @@ Related links:
    - Fixed a bug with last element of multi-valued reference attribute not being deleted on export
    - Fixed a bug with schema refresh causing reference attributes to be set to strings
    - Fixed a bug with stored procedure parameters values being truncated to 397 bytes
-   - Fixed a bug with Oracle tables and views schema detection being case sensitive
+   - Fixed a bug with Oracle tables and views schema detection being case-sensitive
 - Lotus Notes Connector
    - Performance improved when importing group members
    - Full import no longer fails with 'Null reference errors'
@@ -66,7 +66,7 @@ Related links:
    - Fixed a bug with non-printing characters left in attributes after string values deletions
 - Generic LDAP Connector
    - Delta import no longer shows 'replace' literal value when no value is set in the source changelog
-### Enchancements
+### Enhancements
 - Graph Connector
    - Added support for sovereign clouds and ability to configure Login and Graph Resource URLs
    - Unsupported attributes are filtered out and hidden in connector properties after schema discovery
@@ -100,8 +100,8 @@ Related links:
    - Added multi-threaded group membership full import strategy to improve import performance. Delta import remains single-threaded operation
    - Added support for complex schema types resulting attributes like OnPremisesExtentionAttributes.* being available now
    - Added support for export_password attribute to avoid export-change-not-reimported errors and do not show initial password in the connector space. Behavior is similar to other ECMA2 connectors
-   - Added a handler to support HTTP requests throttling. When Azure AD replica receives too many requests from a client it might respond with Retry-After instruction. Connector will pause and retry instead of failing
-   - Delta import profile will no longer start if query filters are defined. If you want to import only specific objects from Azure AD, e.g. users having last name that starts with A*, then delta import functionality will be blocked
+   - Added a handler to support HTTP requests throttling. When Azure AD replica receives too many requests from a client, it might respond with Retry-After instruction. Connector will pause and retry instead of failing
+   - Delta import profile will no longer start if query filters are defined. If you want to import only specific objects from Azure AD, for example, users having last name that starts with A*, then delta import functionality will be blocked
 
 
 ## 1.1.913.0 \(January 2019\)
@@ -109,7 +109,7 @@ Related links:
 ### Fixed issues:
 
 * Generic SQL:
-    * Fixed a regression bug on the Generic SQL Connector where the it was only reading the first 5000 objects.
+    * Fixed a regression bug on the Generic SQL Connector where it was only reading the first 5000 objects.
 * Graph Connector:
     * Fixed an issue where the Graph API Connector failed to read/write from a tenant or create a new connector when the beta option is selected on connectivity.
 
@@ -162,15 +162,15 @@ Related links:
 
 ### Fixed issues:
 * Resolved ConnectorsLog System.Diagnostics.EventLogInternal.InternalWriteEvent(Message: A device attached to the system is not functioning)
-* In this release of connectors you will need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
+* In this release of connectors, you will need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
 * Generic Web Services:
     * Resolved Valid JSON response could not be saved in configuration tool
 * Generic SQL:
     * Export always generates only update query for the operation of deleting. Added to generate a delete query
-    * The SQL query which gets objects for the operation of Delta Import,  if ‘Delta Strategy’ is ‘Change Tracking’ was fixed. In this implementation known limitation:  Delta Import with ‘Change Tracking’ mode does not track changes in multi-valued attributes
-    * Added possibility to generate a delete query for case, when it is necessary to delete the last value of multivalued attribute and this row does not contain any other data except value which it is necessary to delete.
-    * System.ArgumentException handling when implemented OUTPUT parameters by SP 
-    * Incorrect query to make the operation of export into field which has varbinary(max) type
+    * The SQL query, which gets objects for the operation of Delta Import,  if ‘Delta Strategy’ is ‘Change Tracking’ was fixed. In this implementation known limitation:  Delta Import with ‘Change Tracking’ mode does not track changes in multi-valued attributes
+    * Added possibility to generate a delete query for case, when it is necessary to delete the last value of multivalued attribute and this row does not contain any other data except value, which it is necessary to delete.
+    * System.ArgumentException handling when implemented OUTPUT parameters by SP
+    * Incorrect query to make the operation of export into field, that has varbinary(max) type
     * Issue with parameterList variable was initialized twice (in the functions ExportAttributes and GetQueryForMultiValue)
 
 
@@ -182,9 +182,9 @@ Related links:
   * Filtering custom certifiers option
   * Import of the class ImportOperations fixed the definition of what operations can be run in the 'Views' mode and which in the 'Search' mode.
 * Generic LDAP:
-  * OpenLDAP Directory uses DN as anchor rather than entryUUI. New option to GLDAP connector which allows to modify anchor
+  * OpenLDAP Directory uses DN as anchor rather than entryUUI. New option to GLDAP connector, which allows to modify anchor
 * Generic SQL:
-  * Fixed export into field which has varbinary(max) type.
+  * Fixed export into field, that has varbinary(max) type.
   * When adding binary data from a data source to CSEntry object, The DataTypeConversion function failed on zero bytes. Fixed DataTypeConversion function of the CSEntryOperationBase class.
 
 
@@ -196,13 +196,13 @@ Related links:
   * The ability to configure the mode for execute stored procedure with named
     parameters or not named is added in a configuration window of the Generic
     SQL management agent in the page 'Global Parameters'. In the page
-    'Global Parameters' there is check box with the label 'Use named parameters
-    to execute a stored procedure' which is responsible for mode for execute
+    'Global Parameters', there is check box with the label 'Use named parameters
+    to execute a stored procedure', which is responsible for mode for execute
     stored procedure with named parameters or not.
     * Currently, the ability to execute stored procedure with named parameters
     works only for databases IBM DB2 and MSSQL. For databases Oracle and MySQL
     this approach doesn’t work: 
-      * The SQL syntaxes of MySQL doesn’t support named parameters in stored
+      * The SQL syntax of MySQL doesn’t support named parameters in stored
         procedures.
       * The ODBC driver for the Oracle doesn’t support named parameters for
         named parameters in stored procedures)
@@ -222,14 +222,14 @@ Related links:
 ### Fixed issues:
 
 * Generic Web Services:
-  * The Wsconfig tool did not convert correctly the Json array from "sample request" for the REST service method. This caused problems with serialization this Json array for the REST request.
+  * The WSconfig tool did not convert correctly the Json array from "sample request" for the REST service method. This caused problems with serialization this Json array for the REST request.
   * Web Service Connector Configuration Tool does not support usage of space symbols in JSON attribute names 
-    * A Substitution pattern can be added manually to the WSConfigTool.exe.config file, e.g. ```<appSettings> <add key=”JSONSpaceNamePattern” value="__" /> </appSettings>```
+    * A Substitution pattern can be added manually to the WSConfigTool.exe.config file, for example,  ```<appSettings> <add key=”JSONSpaceNamePattern” value="__" /> </appSettings>```
       > [!NOTE]
       > JSONSpaceNamePattern key is required as for export you will recieve the following error: Message: Empty name is not legal. 
 
 * Lotus Notes:
-  * When the option **Allow custom certifiers for Organization/Organizational Units** is disabled then the connector fails during export (Update) After the export flow all attributes are exported to Domino but at the time of export a KeyNotFoundException is returned to Sync. 
+  * If the option **Allow custom certifiers for Organization/Organizational Units** is disabled, then the connector fails during export (Update) After the export flow all attributes are exported to Domino but at the time of export a KeyNotFoundException is returned to Sync. 
     * This happens because the rename operation fails when it tries to change DN (UserName attribute) by changing one of the attributes below:  
       - LastName
       - FirstName
@@ -280,7 +280,7 @@ Released: 2017 March
 * Generic LDAP:</br>
   **Scenario:**
   When only few containers are selected in specific partition, then the search still will be done in whole partition. Specific will be filtered by Synchronization
-  Service, but not by MA which might cause performance degradation. </br>
+  Service, but not by MA, that might cause performance degradation. </br>
 
   **Solution description:** Changed GLDAP connector's code to make it possible go through all containers and search objects in each of them, instead of searching in the whole partition.
 
@@ -292,7 +292,7 @@ Released: 2017 March
 
 ### Fixed issues:
 * Generic Web Services:
-  * When changing the service URL in Default SAP wsconfig projects through WebService Configuration Tool then the following error happens:
+  * When changing the service URL in Default SAP WSconfig projects through WebService Configuration Tool then the following error happens:
   Could not find a part of the path
 
       ``'C:\Users\cstpopovaz\AppData\Local\Temp\2\e2c9d9b0-0d8a-4409-b059-dceeb900a2b3\b9bedcc0-88ac-454c-8c69-7d6ea1c41d17\cfg.config\cloneconfig.xml'. ``
