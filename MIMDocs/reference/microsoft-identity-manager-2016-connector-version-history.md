@@ -3,8 +3,8 @@ title: Connector Version Release History | Microsoft Docs
 description: This topic lists all releases of the Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM)
 services: active-directory
 documentationcenter: ''
-author: billmath
-manager: mtillman
+author: EugeneSergeev
+manager: aashiman
 editor: ''
 
 ms.assetid: 6a0c66ab-55df-4669-a0c7-1fe1a091a7f9
@@ -14,7 +14,9 @@ ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
 ms.date: 01/23/2019
-ms.author: billmath
+ms.author: esergeev
+ms.reviewer: mwahl
+ms.suite: ems
 
 ---
 # Connector Version Release History
@@ -38,6 +40,36 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
+
+## 1.1.1130.0 (February 2020)
+### Fixed issues
+- Graph Connector
+   - Export no longer fails when trying to add a member into a group that has been already added
+   - 'export_password' virtual attribute support is fixed, no need to set up 'password' attribute flow anymore
+   - Fixed export flow of multi-valued string attributes
+   - Fixed several bugs affecting delta import
+   - Various potential datetime format bugs fixed
+- Generic SQL Connector
+   - Various UI bugs fixed
+   - Fixed incorrect references handling during delta import
+   - Fixed a bug with SQL Change Tracking delta import strategy and multi-valued tables to import group membership changes correctly
+   - Fixed a bug with attribute values not being cleared on export
+   - Fixed a bug with last element of multi-valued reference attribute not being deleted on export
+   - Fixed a bug with schema refresh causing reference attributes to be set to strings
+   - Fixed a bug with stored procedure parameters values being truncated to 397 bytes
+   - Fixed a bug with Oracle tables and views schema detection being case sensitive
+- Lotus Notes Connector
+   - Performance improved when importing group members
+   - Full import no longer fails with 'Null reference errors'
+   - Fixed a bug with Notes mailbox deletion when ACL is set
+   - Empty group names no longer cause delta import failures
+   - Fixed a bug with non-printing characters left in attributes after string values deletions
+- Generic LDAP Connector
+   - Delta import no longer shows 'replace' literal value when no value is set in the source changelog
+### Enchancements
+- Graph Connector
+   - Added support for sovereign clouds and ability to configure Login and Graph Resource URLs
+   - Unsupported attributes are filtered out and hidden in connector properties after schema discovery
 
 ## 4.4.1800.1 (July 2019)
 ### Enhancements:
