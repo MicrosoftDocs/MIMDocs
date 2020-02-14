@@ -162,7 +162,7 @@ Related links:
 
 ### Fixed issues:
 * Resolved ConnectorsLog System.Diagnostics.EventLogInternal.InternalWriteEvent(Message: A device attached to the system is not functioning)
-* In this release of connectors, you will need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
+* In this release of connectors you will need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
 * Generic Web Services:
     * Resolved Valid JSON response could not be saved in configuration tool
 * Generic SQL:
