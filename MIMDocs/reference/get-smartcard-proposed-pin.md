@@ -42,7 +42,7 @@ GET     |/CertificateManagement/api/v1.0/smartcards/{id}/serverproposedpin
 ###URL Parameters
 Parameter | Description
 ---------|------------
-id | The smartcard identifier (MIM CM specific). Obtained from the Microsft.Clm.Shared.Smartcard object.
+id | The smartcard identifier (MIM CM specific). Obtained from the Microsoft.Clm.Shared.Smartcard object.
 ###Query Parameters
 Parameter | Description
 ---------|------------
