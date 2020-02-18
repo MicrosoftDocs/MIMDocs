@@ -116,7 +116,7 @@ All the components of your MIM deployment need their own identities in the domai
 4.  Add SPNs to enable Kerberos authentication for service accounts
 
     ```PowerShell
-    Set-ADServiceAccount -Identity svcMIMAppPool -ServicePrincipalNames @{Add="http/mim.contoso.com"}
+    setspn -S http/mim.contoso.com contoso\svcMIMAppPool
     ```
 
 5.  Make sure to register the following DNS 'A' records for proper name resolution (assuming that MIM Service, MIM Portal, Password Reset and Password Registration web sites will be hosted on the same machine)
