@@ -14,13 +14,13 @@ LOB applications and SaaS solutions.
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/microsoft-identity-manager/reference/version-history">
+        <a href="reference/version-history.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_whats-new.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_whats-new.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -32,13 +32,13 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/microsoft-identity-manager-2016">
+        <a href="microsoft-identity-manager-2016.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_learn-about.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_learn-about.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -49,13 +49,13 @@ LOB applications and SaaS solutions.
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/microsoft-identity-manager-deploy">
+        <a href="microsoft-identity-manager-deploy.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_deploy.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_deploy.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -83,7 +83,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_reference.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -101,7 +101,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_reference.svg" alt="" />
+                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -119,7 +119,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/index/i_blog.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_blog.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
