@@ -48,7 +48,7 @@ This article covers the connectors that are included & supported in MIM, but the
 | Microsoft SQL Server | SQL Server 2012 - 2017 |
 | Oracle (previously Sun and Netscape) Directory Servers | Sun Directory Server 6.x, 7.x and Oracle 11 |
 | [Windows PowerShell Connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 or better |
-| [Microsoft Azure Active Directory Connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (not recomended for new deployments) |
+| [Microsoft Azure Active Directory Connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (not recommended for new deployments) |
 | [Generic LDAP Connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3 server (RFC 4510 compliant)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
 | [Generic SQL Connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [The Connector is supported with all 64-bit ODBC drivers](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
 | [Connector for Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x, v9.0.x |
