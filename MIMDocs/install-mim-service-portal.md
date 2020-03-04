@@ -4,9 +4,9 @@
 title: Install Microsoft Identity Manager Service and Portal | Microsoft Docs
 description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016
 keywords:
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
@@ -57,6 +57,11 @@ If you didn't set up the MIM installation package in the last step, go back and 
     ![Configure the MIM database connection image](media/install-mim-service-portal/MIM_Install10.png)
 
 7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server** or you can use **O365 Mailbox**. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
+    >[!NOTE]
+    >MIM 2016 SP2 and later: if you are using Group Managed Service Accounts, you must check **Use different user for Exchange** checkbox even if you do not plan to use Exchange.
+    
+    >[!NOTE]
+    >When **Use Exchange Online** option is selected, in order to enable MIM Service to process approval responses from the MIM Outlook Add-On, you need to set the registry key HKLM\SYSTEM\CurrentControlSet\Services\FIMService value of PollExchangeEnabled to 1 after installation.
 
     ![Configure mail server connection image](media/install-mim-service-portal/MIM_Install11.png)
 
