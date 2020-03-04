@@ -1,9 +1,9 @@
 ---
 title: "Conversion of MIM Specific Services to gMSA | Microsoft Docs"
 description: Topic describing the basic steps to configure gMSA.
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -16,7 +16,7 @@ This Guide will step through the basic steps to configure gMSA for supported
 services. The process to convert to gMSA is easy once you pre-configure your
 environment.
 
-Hotfix Required: \<link to latest KB\>
+Hotfix Required: [4.5.26.0 or later](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history)
 
 Supported:
 
@@ -200,7 +200,9 @@ configuration has been done.*
 5.  On “Configure main server connection page” check “Use different account for
     Exchange (for managed accounts)” checkbox. Here you will have an option to
     use the old account that has a mailbox or use cloud mailbox.
-
+    >[!NOTE]
+    >When **Use Exchange Online** option is selected, in order to enable MIM Service to process approval responses from the MIM Outlook Add-On, you need to set the registry key HKLM\SYSTEM\CurrentControlSet\Services\FIMService value of PollExchangeEnabled to 1 after installation.
+    
 ![](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
 6.  On “Configure MIM Service account” page type service account with \$ symbol
