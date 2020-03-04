@@ -1,9 +1,9 @@
 ---
 title: "Conversion of MIM Specific Services to gMSA | Microsoft Docs"
 description: Topic describing the basic steps to configure gMSA.
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -16,7 +16,7 @@ This Guide will step through the basic steps to configure gMSA for supported
 services. The process to convert to gMSA is easy once you pre-configure your
 environment.
 
-Hotfix Required: \<link to latest KB\>
+Hotfix Required: [4.5.26.0 or later](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history)
 
 Supported:
 
