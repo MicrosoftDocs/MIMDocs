@@ -38,7 +38,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_learn-about.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_learn-about.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -55,7 +55,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_deploy.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_deploy.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -83,7 +83,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -101,7 +101,7 @@ LOB applications and SaaS solutions.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src=/MIMDocs/media/index/i_reference.svg" alt="" />
+                            <img src="/MIMDocs/media/index/i_reference.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
