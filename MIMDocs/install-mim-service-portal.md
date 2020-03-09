@@ -6,7 +6,7 @@ description: Get the steps to configure and install MIM Service and Portal for M
 keywords:
 author: EugeneSergeev
 ms.author: esergeev
-manager: aashiman
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

@@ -3,7 +3,7 @@ title: "Conversion of MIM Specific Services to gMSA | Microsoft Docs"
 description: Topic describing the basic steps to configure gMSA.
 author: EugeneSergeev
 ms.author: esergeev
-manager: aashiman
+manager: daveba
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager

@@ -6,7 +6,7 @@ description: Get the full list of steps involved in deploying Microsoft Identity
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/17/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager

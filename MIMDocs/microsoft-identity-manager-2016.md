@@ -5,7 +5,7 @@ description: MIM includes the access management capabilities of FIM 2010 and hel
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager

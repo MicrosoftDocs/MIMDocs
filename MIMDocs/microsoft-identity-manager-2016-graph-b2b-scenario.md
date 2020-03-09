@@ -6,7 +6,7 @@ description: Microsoft Graph connector is external user AD account lifecycle man
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager

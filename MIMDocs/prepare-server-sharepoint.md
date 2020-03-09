@@ -6,7 +6,7 @@ description: Install and configure SharePoint Foundation so that it can host the
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 04/26/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

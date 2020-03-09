@@ -4,7 +4,7 @@ description: This topic lists all releases of the Connectors for Forefront Ident
 services: active-directory
 documentationcenter: ''
 author: EugeneSergeev
-manager: aashiman
+manager: daveba
 editor: ''
 reviewer: markwahl-msft
 
