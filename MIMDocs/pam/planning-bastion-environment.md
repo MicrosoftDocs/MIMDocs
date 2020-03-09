@@ -6,7 +6,7 @@ description:
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -48,7 +48,7 @@ According to the [Tier model](tier-model-for-partitioning-administrative-privile
 
 The production *CORP* forest should trust the administrative *PRIV* forest, but not the other way around. This can be a domain trust or a forest trust. The admin forest domain does not need to trust the managed domains and forests to manage Active Directory, though additional applications may require a two-way trust relationship, security validation, and testing.
 
-Selective authentication should be used to ensure that accounts in the admin forest only use the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the “Allowed to logon” right for domain controllers to designated Tier 0 admin accounts in the admin forest. See [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) for more information.
+Selective authentication should be used to ensure that accounts in the admin forest only use the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the “Allowed to logon” right for domain controllers to designated Tier 0 admin accounts in the admin forest. See [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx) for more information.
 
 ## Maintain logical separation
 
