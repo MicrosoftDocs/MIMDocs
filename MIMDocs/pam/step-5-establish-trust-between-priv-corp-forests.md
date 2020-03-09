@@ -93,7 +93,7 @@ For each existing forest, enable read access to AD by PRIV administrators and th
     ```
     The output should say either **Enabling SID history for this trust** or **SID history is already enabled for this trust**.
 
-    The output should also indicate that **SID filtering is not enabled for this trust**. See [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx)  for more information.
+    The output should also indicate that **SID filtering is not enabled for this trust**. See [Disable SID filter quarantining](https://technet.microsoft.com/library/cc772816.aspx)  for more information.
 
 ## Start the Monitoring and Component services
 

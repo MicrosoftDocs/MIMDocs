@@ -21,7 +21,7 @@ The BHOLD Suite Access Management Connector module supports both initial and ong
 
 ## Access Management Connector software requirements
 
-Before you can install the Access Management Connector module, you must install Microsoft .NET Framework 4. For more information about .NET Framework 4 and installation instructions, see the [Microsoft .NET home page](http://www.microsoft.com/net).
+Before you can install the Access Management Connector module, you must install Microsoft .NET Framework 4. For more information about .NET Framework 4 and installation instructions, see the [Microsoft .NET home page](https://www.microsoft.com/net).
 You must install the Access Management Connector on a computer running the FIM Synchronization Service of MIM.
 
 ## Access Management Connector setup

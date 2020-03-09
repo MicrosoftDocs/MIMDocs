@@ -55,7 +55,7 @@ PAM makes it harder for attackers to penetrate a network and obtain privileged a
 
 ## Setting up PAM
 
-PAM builds on the principle of just-in-time administration, which relates to [just enough administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is a Windows PowerShell toolkit that defines a set of commands for performing privileged activities. It is an endpoint where administrators can get authorization to run commands. In JEA, an administrator decides that users with a certain privilege can perform a certain task. Every time an eligible user needs to perform that task, they enable that permission. The permissions expire after a specified time period, so that a malicious user can't steal the access.
+PAM builds on the principle of just-in-time administration, which relates to [just enough administration (JEA)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is a Windows PowerShell toolkit that defines a set of commands for performing privileged activities. It is an endpoint where administrators can get authorization to run commands. In JEA, an administrator decides that users with a certain privilege can perform a certain task. Every time an eligible user needs to perform that task, they enable that permission. The permissions expire after a specified time period, so that a malicious user can't steal the access.
 
 PAM setup and operation has four steps.
 

@@ -45,7 +45,7 @@ Replace *\<Version\>* with the version number of the BHOLD Analytics release tha
 
 To run the program file as an administrator, right-click the file and then click **Run as administrator**.
 
-# Next steps
+## Next steps
 
 - [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)
 - [BHOLD installation guide](bhold-installation-guide.md)

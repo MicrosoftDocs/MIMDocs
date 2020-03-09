@@ -32,7 +32,7 @@ This article describes a security model intended to protect against elevation of
 
 Users, services, or applications accounts that are granted permanent administrative privileges to Windows Server Active Directory (AD) forests introduce a significant amount of risk to the organization’s mission and business. These accounts are often targeted by attackers because if they are compromised, the attacker has rights to connect to other servers or applications in the domain.
 
-The tier model creates divisions between administrators based on what resources they manage. Admins with control over user workstations are separated from those that control applications, or manage enterprise identities. Learn about this model in the [Securing privileged access reference material](http://aka.ms/tiermodel).
+The tier model creates divisions between administrators based on what resources they manage. Admins with control over user workstations are separated from those that control applications, or manage enterprise identities. Learn about this model in the [Securing privileged access reference material](https://aka.ms/tiermodel).
 
 ## Restricting credential exposure with logon restrictions
 
