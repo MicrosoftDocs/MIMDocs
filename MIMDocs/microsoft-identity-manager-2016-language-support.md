@@ -4,7 +4,7 @@ description: A list of languages that are supported by Microsoft Identity Manage
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 05/23/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

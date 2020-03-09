@@ -6,7 +6,7 @@ description: Hybrid audit activity reports in Azure Active Directory lets you vi
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager

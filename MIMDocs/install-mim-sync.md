@@ -6,7 +6,7 @@ description: Get started with the MIM 2016 components by installing and configur
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

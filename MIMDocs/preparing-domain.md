@@ -6,7 +6,7 @@ description: Create an Active Directory domain controller before installing MIM 
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/26/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

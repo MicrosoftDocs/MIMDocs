@@ -6,7 +6,7 @@ description: Find the products and versions that are compatible with each of the
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/19/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager

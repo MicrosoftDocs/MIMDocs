@@ -6,7 +6,7 @@ description: Get the steps to install and configure the MIM Password Change Noti
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

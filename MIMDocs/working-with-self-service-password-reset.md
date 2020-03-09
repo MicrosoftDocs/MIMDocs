@@ -5,7 +5,7 @@ description: See what's new with Self-Service Password Reset in MIM 2016, includ
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
