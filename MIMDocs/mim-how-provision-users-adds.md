@@ -610,8 +610,8 @@ FIMObjects OU. Britta Simon should be located in the FIMObjects OU.
 
 ![verifying the user is in the FIMObjects OU](media/how-provision-users-adds/image033.jpg)
 
-Summary
-=======
+## Summary
+
 
 The objective of this document is to introduce you to the main building blocks
 for synchronizing a user in MIM with AD DS. In your initial testing, you should
@@ -640,11 +640,7 @@ correctly. If the attribute flow precedence is not correctly configured, the
 synchronization engine blocks attribute values from being populated. You can
 find more information about attribute flow precedence in the article [About Attribute Flow Precedence](https://go.microsoft.com/FWLink/p/?LinkId=189675).
 
-See Also
-=========
-
-Other Resources
----------------
+## Next Steps
 
 [Using FIM to Enable or Disable Accounts in Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189670)
 
