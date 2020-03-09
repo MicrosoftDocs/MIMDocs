@@ -6,7 +6,7 @@ description: This article outlines the approaches for licensing Microsoft Identi
 keywords:
 author: markwahl-msft
 ms.author: mwahl
-manager: femila
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager

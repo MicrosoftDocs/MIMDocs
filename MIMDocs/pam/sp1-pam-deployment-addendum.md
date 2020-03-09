@@ -4,7 +4,7 @@ description: This is the Addendum to the documents covering the scripted deploym
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

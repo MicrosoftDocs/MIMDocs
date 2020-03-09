@@ -6,7 +6,7 @@ description: Decide which privileged roles should be managed, and define the man
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

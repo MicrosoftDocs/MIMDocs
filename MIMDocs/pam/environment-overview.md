@@ -6,7 +6,7 @@ description: Find the required number and configuration of virtual machines to s
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

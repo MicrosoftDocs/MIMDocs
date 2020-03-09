@@ -6,7 +6,7 @@ description: Learn how to combine on-premises and cloud data into hybrid reports
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 2/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager

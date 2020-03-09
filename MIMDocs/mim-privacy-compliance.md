@@ -6,7 +6,7 @@ description: Understand Microsoft Identity Manager data handling to indentify an
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

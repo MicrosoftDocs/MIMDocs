@@ -6,7 +6,7 @@ description: Learn about deploying Privileged Access Management with server 2016
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -51,7 +51,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
   - The changes described in "Configure auditing"(item #8) and "Configure registry settings" (item #10) are **recommended but not required** when both CORP and PRIV domain controllers are Windows Server 2016 domain functional level.
 
-- If you choose to use Windows Server 2012 R2 as the operating system for CORPDC, you must install hotfixes 2919442, 2919355, [and update 3155495](http://support.microsoft.com/kb/3156418) on CORPDC.
+- If you choose to use Windows Server 2012 R2 as the operating system for CORPDC, you must install hotfixes 2919442, 2919355, [and update 3155495](https://support.microsoft.com/kb/3156418) on CORPDC.
 
 - Follow the instructions in [Step 2 - Prepare PRIV domain controller](step-2-prepare-priv-domain-controller.md), except for these adjustments:
 

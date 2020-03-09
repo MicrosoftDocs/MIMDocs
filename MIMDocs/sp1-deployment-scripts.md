@@ -6,7 +6,7 @@ description: This is page is part of the series of articles about configuring Pr
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/17/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

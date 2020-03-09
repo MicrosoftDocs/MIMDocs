@@ -6,7 +6,7 @@ description: This article is step 3 of the series of articles covering how to co
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

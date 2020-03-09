@@ -6,7 +6,7 @@ description: Prepare the CORP domain with existing or new identities to be manag
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -165,7 +165,7 @@ In this section you will configure the registry settings that are needed for sID
    Restart-Computer
    ```
 
-This will restart the domain controller, CORPDC. For further information on this registry setting, see [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](http://support.microsoft.com/kb/322970).
+This will restart the domain controller, CORPDC. For further information on this registry setting, see [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](https://support.microsoft.com/kb/322970).
 
 ## Prepare a CORP workstation and resource
 
