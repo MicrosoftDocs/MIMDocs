@@ -6,7 +6,7 @@ description: Privileged Access Management (PAM) helps organizations restrict pri
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 03/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

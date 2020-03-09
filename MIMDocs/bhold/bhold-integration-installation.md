@@ -6,7 +6,7 @@ description: BHOLD integration module add self-service role management to MIM an
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

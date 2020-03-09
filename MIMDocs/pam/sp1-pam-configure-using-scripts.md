@@ -6,7 +6,7 @@ description: This article is part of the series for configuring PAM using script
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

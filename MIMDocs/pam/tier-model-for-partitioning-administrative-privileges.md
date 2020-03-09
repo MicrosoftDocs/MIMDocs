@@ -6,7 +6,7 @@ description: Learn about the tier model that segregates your system based on vul
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/30/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
