@@ -6,7 +6,7 @@ description: This article covers the steps required to install the Web Service C
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 11/28/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

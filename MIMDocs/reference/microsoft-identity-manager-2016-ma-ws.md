@@ -6,7 +6,7 @@ description: Overview of the configuration and requirements for the generic Web 
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

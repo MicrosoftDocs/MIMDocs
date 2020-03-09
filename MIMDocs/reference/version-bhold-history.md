@@ -6,7 +6,7 @@ description: This article documents the various changes made as part of updates 
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/14/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
