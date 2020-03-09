@@ -50,6 +50,6 @@ The developer documentation for Microsoft Identity Manager 2016 is organized by 
 
 - [BHOLD developer reference](mim2016-bhold-developer-reference.md)
  
-# See also
+## Next Steps
 
 - [Microsoft Identity Manager (MIM) cmdlets reference](https://docs.microsoft.com/powershell/identitymanager/)
