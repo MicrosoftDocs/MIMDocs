@@ -82,7 +82,7 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
 
     -   If you entered something incorrectly, you will receive the following error
 
-    -   If you've entered the account information successfully, you're given the option to change the destination (export file location) of the backup encryption key. By default, the export file location is *C:\Windows\system32\miiskeys-1.bin*.
+    -   If you've entered the account information successfully, you have the option to change the destination, or export file location, of the backup encryption key. By default, the export file location is *C:\Windows\system32\miiskeys-1.bin*.
 
 1. Install Microsoft Identity Manager SP1 Synchronization Service build 4.4.1302.0, which you can find at the Volume Licensing Service Center or the MSDN Downloads site. After you've completed the installation, save the keyset *miiskeys.bin*.
 
@@ -110,13 +110,12 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
    ![Management Agents list in Synchronization Service Manager](media/03e7762f34750365e963f0b90e43717c.png)
 
 > [!NOTE]
-> SQL permission added is account is created for login therefore you
-must allow the user applying change mode permission to add account and dbo on the Synchronization Service database.
+> SQL permission added is account is created for login therefore you must allow the user applying change mode permission to add account and dbo on the Synchronization Service database.
 
 ## Microsoft Identity Manager Service
 
 >[!IMPORTANT]
->Follow process in this section carefully when you convert the Microsoft Identity Manager service-related accounts to gMSA accounts. The PowerShell cmdlets noted in the Appendix can be used only to change the account information after the initial configuration is completed.
+>Follow the instructions in this section carefully when you convert the Microsoft Identity Manager service-related accounts to gMSA accounts. The PowerShell cmdlets noted in the Appendix can be used only to change the account information after the initial configuration is completed.
 
 1. Create Group Managed Accounts for Microsoft Identity Manager Service, the PAM Rest API, PAM Monitoring Service, PAM Component Service, the self-service password reset (SSPR) Registration Portal, and the SSPR Reset Portal.
 
