@@ -4,7 +4,7 @@ description: This article presents the prerequisites and basic steps for configu
 author: EugeneSergeev
 ms.author: esergeev
 manager: aashiman
-ms.date: 06/27/2018
+ms.date: 02/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -193,6 +193,6 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
 
 To update the password to your stored accounts without having to run change mode, [download this PowerShell script](microsoft-identity-manager-2016-gmsascript.md).
 
-To encrypt the Exchange password, the installer creates an additional service and runs it under the managed account. The following messages are added in the Application Event Log during installation:
+To encrypt the Exchange password, the installer creates an additional service and runs it under the managed account. The following messages are added in the **Application** event log during installation:
 
 ![The Event Viewer window](media/95b315454705cd4d939b55ac5ad910f5.jpg)
