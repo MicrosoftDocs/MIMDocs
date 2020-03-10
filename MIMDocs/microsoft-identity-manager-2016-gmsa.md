@@ -1,6 +1,6 @@
 ---
 title: "Convert Microsoft Identity Manager-specific services to gMSA | Microsoft Docs"
-description: Topic describing the basic steps to configure gMSA.
+description: This article presents the prerequisites and basic steps for configuring a group Managed Service Account (gMSA).
 author: EugeneSergeev
 ms.author: esergeev
 manager: aashiman
@@ -10,9 +10,9 @@ ms.prod: microsoft-identity-manager
 
 ---
 
-# Convert Microsoft Identity Manager-specific services to gMSA
+# Convert Microsoft Identity Manager-specific services to use group Managed Service Accounts
 
-This article is a guide for configuring a group Managed Service Account (gMSA) for supported services. After you've preconfigured your environment, the process of converting to gMSA is easy.
+This article is a guide for configuring supported Microsoft Identity Manager services to use group Managed Service Accounts (gMSA). After you've preconfigured your environment, the process of converting to gMSA is easy.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
     Unsupported services:
 
     -   The Microsoft Identity Manager portal is not supported. It is part of the SharePoint environment, and you would need to deploy it in farm mode and [Configure automatic password change in SharePoint Server](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change).
-    -   All management agents
+    -   All management agents except the Microsoft Identity Manager Service management agent
     -   Microsoft Certificate Management
     -   BHOLD
 
@@ -46,7 +46,7 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
     - Include `Add-KDSRootKey –EffectiveImmediately`. "–EffectiveImmediately" means that it might take up to 10 hours to replicate the root key to all domain controllers. It can take about 1 hour to replicate to two domain controllers. 
     ![The "–EffectiveImmediately" string](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
-## Connect to Synchronization Service Manager
+## Actions to run on the Active Directory Domain controller
 
 1.  Create a group called *MIMSync_Servers*, and add all synchronization servers to it.
 
@@ -66,13 +66,15 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
         `Set-ADServiceAccount -Identity MIMSyncGMSAsvc -ServicePrincipalNames
         @{Add="PCNSCLNT/mimsync.contoso.com"}`
 
+## Actions to run on the Microsoft Identity Manager Synchronization server
+
 1. In Synchronization Service Manager, back up the encryption key. It will be requested with the change mode installation. Do the following:
 
     a. On the server that Synchronization Service Manager is installed on, look for the Synchronization Service Key Management tool. The **Export key set** is already selected by default.
 
     b. Select **Next**. 
     
-    c. At the prompt, enter and verify the Forefront Identity Manager (FIM) Synchronization Service account information:
+    c. At the prompt, enter and verify the Microsoft Identity Manager or Forefront Identity Manager (FIM) Synchronization Service account information:
 
       -   **Account Name**: The name of the Synchronization Service account that's used during the initial installation.  
       -   **Password**: The password of the Synchronization Service account.  
@@ -80,15 +82,13 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
 
     d. Select **Next**.
 
-    -   If you entered something incorrectly, you will receive the following error
+       If you've entered the account information successfully, you have the option to change the destination, or export file location, of the backup encryption key. By default, the export file location is *C:\Windows\system32\miiskeys-1.bin*.
 
-    -   If you've entered the account information successfully, you have the option to change the destination, or export file location, of the backup encryption key. By default, the export file location is *C:\Windows\system32\miiskeys-1.bin*.
-
-1. Install Microsoft Identity Manager SP1 Synchronization Service build 4.4.1302.0, which you can find at the Volume Licensing Service Center or the MSDN Downloads site. After you've completed the installation, save the keyset *miiskeys.bin*.
+1. Install Microsoft Identity Manager SP1, which you can find at the Volume Licensing Service Center or the MSDN Downloads site. After you've completed the installation, save the keyset *miiskeys.bin*.
 
    ![The Microsoft Identity Manager Synchronization Service installation progress window](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
-1. Install [Microsoft Identity Manager hotfix 4.5.x.x](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) or later.
+1. Install [hotfix 4.5.2.6.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) or later.
 
 1. After the patch is installed, stop FIM Synchronization Service by doing the following:
 
@@ -105,17 +105,14 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
    e. Select **Next** > **Next** > **Install**.  
    f. Restore the keyset from the *miiskeys.bin* file that you saved earlier.
 
-   ![Permission window for restoring keyset configuration](media/44cd474323584feb6d8b48b80cfceb9b.png)
+   ![Option to restore the keyset configuration](media/44cd474323584feb6d8b48b80cfceb9b.png)
 
-   ![Management Agents list in Synchronization Service Manager](media/03e7762f34750365e963f0b90e43717c.png)
-
-> [!NOTE]
-> SQL permission added is account is created for login therefore you must allow the user applying change mode permission to add account and dbo on the Synchronization Service database.
+   ![The Management Agents list in Synchronization Service Manager](media/03e7762f34750365e963f0b90e43717c.png)
 
 ## Microsoft Identity Manager Service
 
 >[!IMPORTANT]
->Follow the instructions in this section carefully when you convert the Microsoft Identity Manager service-related accounts to gMSA accounts. The PowerShell cmdlets noted in the Appendix can be used only to change the account information after the initial configuration is completed.
+>Follow the instructions in this section carefully when you convert Microsoft Identity Manager service-related accounts to gMSA accounts.
 
 1. Create Group Managed Accounts for Microsoft Identity Manager Service, the PAM Rest API, PAM Monitoring Service, PAM Component Service, the self-service password reset (SSPR) Registration Portal, and the SSPR Reset Portal.
 
@@ -140,11 +137,11 @@ This article is a guide for configuring a group Managed Service Account (gMSA) f
     ![The Active Directory Users and Computers window](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > A known issue on Windows Server 2012 R2 is that services that use a managed account hang after the server is restarted, because the Microsoft Key Distribution Service isn't started after Windows restarts. The workaround for this issue is to run the following command: 
+    > A known issue on Windows Server 2012 R2 is that services that use a managed account hang after the server is restarted, because Microsoft Key Distribution Service isn't started after Windows restarts. The workaround for this issue is to run the following command: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >
-    > The command starts the Microsoft Key Distribution Service when the network is on (typically early in the boot cycle).
+    > The command starts Microsoft Key Distribution Service when the network is on (typically early in the boot cycle).
     >
     > For a discussion about a similar issue, see [AD FS Windows 2012 R2: adfssrv hangs in starting mode](https://social.technet.microsoft.com/Forums/en-US/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS).
 
