@@ -76,13 +76,13 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
     
     c. At the prompt, enter and verify the Microsoft Identity Manager or Forefront Identity Manager (FIM) Synchronization Service account information:
 
-      -   **Account Name**: The name of the Synchronization Service account that's used during the initial installation.  
-      -   **Password**: The password of the Synchronization Service account.  
-      -   **Domain**: The domain that the Synchronization Service account is a part of.
+    -   **Account Name**: The name of the Synchronization Service account that's used during the initial installation.  
+    -   **Password**: The password of the Synchronization Service account.  
+    -   **Domain**: The domain that the Synchronization Service account is a part of.
 
     d. Select **Next**.
 
-       If you've entered the account information successfully, you have the option to change the destination, or export file location, of the backup encryption key. By default, the export file location is *C:\Windows\system32\miiskeys-1.bin*.
+    If you've entered the account information successfully, you have the option to change the destination, or export file location, of the backup encryption key. By default, the export file location is *C:\Windows\system32\miiskeys-1.bin*.
 
 1. Install Microsoft Identity Manager SP1, which you can find at the Volume Licensing Service Center or the MSDN Downloads site. After you've completed the installation, save the keyset *miiskeys.bin*.
 
@@ -180,7 +180,7 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
 
     ![The Configure MIM Password Registration Portal window](media/601e935cdfda298b61ae753a2a152996.png)
 
-1.  In the “Configure MIM Password Reset Portal” window, in the **Account Name** box, enter the account name. Be sure to include the dollar sign ($) symbol. Leave the **Password** box empty.
+1.  In the **Configure MIM Password Reset Portal** window, in the **Account Name** box, enter the account name. Be sure to include the dollar sign ($) symbol. Leave the **Password** box empty.
 
     ![The Configure MIM Password Reset Portal window](media/10c8cfa8ff2b6d703d14bd0b7ddc6949.png)
 
