@@ -6,7 +6,7 @@ description:
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/01/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager

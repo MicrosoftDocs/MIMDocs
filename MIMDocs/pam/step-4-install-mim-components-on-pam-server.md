@@ -6,7 +6,7 @@ description: Install and configure MIM Service and Portal on your Privileged Acc
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager

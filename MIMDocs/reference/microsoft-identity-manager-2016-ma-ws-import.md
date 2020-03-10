@@ -6,7 +6,7 @@ description: Import Web Services Connector with multiple Web Services configurat
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 12/19/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

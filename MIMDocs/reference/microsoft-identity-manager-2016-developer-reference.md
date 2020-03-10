@@ -6,7 +6,7 @@ description:
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 02/25/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -50,6 +50,6 @@ The developer documentation for Microsoft Identity Manager 2016 is organized by 
 
 - [BHOLD developer reference](mim2016-bhold-developer-reference.md)
  
-# See also
+## Next Steps
 
 - [Microsoft Identity Manager (MIM) cmdlets reference](https://docs.microsoft.com/powershell/identitymanager/)

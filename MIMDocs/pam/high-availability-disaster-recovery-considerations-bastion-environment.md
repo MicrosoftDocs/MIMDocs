@@ -6,7 +6,7 @@ description: Learn how to configure Privileged Access Management for high availa
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -28,7 +28,7 @@ ms.suite: ems
 
 This article describes considerations for high availability and disaster recovery when deploying Active Directory Domain Services (AD DS) and Microsoft Identity Manager 2016 (MIM) for Privileged Access Management (PAM).
 
-Enterprises focus on high availability and disaster recover for workloads in Windows Server, SQL Server, and Active Directory. But the reliable availability of the bastion environment for Privileged Access Management is also important. The bastion environment is a critical part of the organization's IT infrastructure, as users interact with its components in order to take on administrative roles. For more information on high availability in general, you can download the white paper [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc).
+Enterprises focus on high availability and disaster recover for workloads in Windows Server, SQL Server, and Active Directory. But the reliable availability of the bastion environment for Privileged Access Management is also important. The bastion environment is a critical part of the organization's IT infrastructure, as users interact with its components in order to take on administrative roles. For more information on high availability in general, you can download the white paper [Microsoft High Availability Overview](https://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc).
 
 ## High availability and disaster recovery scenarios
 
@@ -220,7 +220,7 @@ The MIM Service is required to process activation requests.  In order that a com
 
 #### Preparation
 It is recommended to deploy the MIM Service on multiple servers joined to the PRIV domain.
-For high availability, see the Windows Server documents for [Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx) and [Creating a Windows Server 2012 Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx).
+For high availability, see the Windows Server documents for [Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx) and [Creating a Windows Server 2012 Failover Cluster](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx).
 
 For production deployment across multiple servers, you can use Network Load Balancing (NLB) to distribute the processing load.  You should also have a single alias (for instance, A or CNAME records) so that one common name is exposed to the user.
 

@@ -7,7 +7,7 @@ description: BHOLD developer reference
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/14/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager

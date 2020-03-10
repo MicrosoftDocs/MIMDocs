@@ -6,7 +6,7 @@ description: Prepare the PRIV domain controller, which will provide the bastion 
 keywords:
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -243,7 +243,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
    ```
 
 > [!NOTE]
-> The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
+> The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
 ### Configure delegation to give MIM service accounts access
 
