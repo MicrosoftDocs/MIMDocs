@@ -19,7 +19,7 @@ Azure AD business-to-business (B2B) collaboration with Microsoft Identity Manage
 ============================================================================================================================
 
 The initial scenario is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
+management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
 
 ## Scenario-Specific Guidance
 
@@ -53,7 +53,7 @@ application provided by Contoso Pharmaceuticals.
 -   Contoso Pharmaceuticals are in their own tenant, to have
     configured a custom domain.
 
--   Someone has invited an external user to the Contoso Pharmaceuticals tenant.
+-   Someone has invited an external user to the Contoso Pharmaceuticals tenant.
     This user has accepted the invitation and can access resources that are
     shared.
 
@@ -80,8 +80,8 @@ Ensure that the application has been authorized for least one of these permissio
 ## Create the New Management Agent
 
 
-In the Synchronization Service Manager UI, select **Connectors** and **Create**.
-Select **Graph (Microsoft)** and give it a descriptive name.
+In the Synchronization Service Manager UI, select **Connectors** and **Create**.
+Select **Graph (Microsoft)** and give it a descriptive name.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
