@@ -139,7 +139,7 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. On your identity management server, open a new web browser tab, navigate to http://mim.contoso.com/ and login as *contoso\miminstall*.  An empty SharePoint site named *MIM Portal* will be shown.
+4. On your identity management server, open a new web browser tab, navigate to `http://mim.contoso.com/` and login as *contoso\miminstall*.  An empty SharePoint site named *MIM Portal* will be shown.
 
     ![MIM Portal at http://mim.contoso.com/ image](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
