@@ -97,7 +97,7 @@ To enable certificate-based authentication:
 - Create a copy of my_project.wsconfig file and rename it to my_project.zip
 - Open this archive and modify generated.config file to replace basic authentication with certificate-based authentication (an example provided below)
 - Replace generated.config file in my_project.zip and rename it to my_project_updated.wsconfig
-- Import the updated project it into MIM Synchronization Server
+- Select my_project_updated.wsconfig when creating a management agent in MIM Synchronization Server
 
 Find generated.config sample file with certificate-based authentication below:
 
