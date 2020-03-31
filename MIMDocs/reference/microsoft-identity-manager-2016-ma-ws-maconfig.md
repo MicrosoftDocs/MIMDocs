@@ -87,17 +87,20 @@ Your Connector is now configured:
 
 After a Connector is configured, you can configure the Run Profiles by selecting **Configure Run Profiles**.
 
-## Known issues
+## Additional steps
 
-The Web Service Configuration Tool does not generate proper WSConfig file when certificate-based authentication is used. This issue leads to inability to import Web Service Connector project into MIM Synchronization Service.
+When certificate-based authentication is used, an additional change is needed after the Web Service Configuration Tool generates a WSConfig file, before that file can be imported into a Web Service Connector project in MIM Synchronization Service.
 
-To fix this issue:
+To enable certificate-based authentication:
+
 - Configure your project to use Basic Authentication in the Web Service Configuration Tool
 - Create a copy of my_project.wsconfig file and rename it to my_project.zip
 - Open this archive and modify generated.config file to replace basic authentication with certificate-based authentication (an example provided below)
-- Replace generated.config file in archive and rename my_project.zip back to my_project.wsconfig
+- Replace generated.config file in my_project.zip and rename it to my_project_updated.wsconfig
+- Import the updated project it into MIM Synchronization Server
 
 Find generated.config sample file with certificate-based authentication below:
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
     <configuration>
