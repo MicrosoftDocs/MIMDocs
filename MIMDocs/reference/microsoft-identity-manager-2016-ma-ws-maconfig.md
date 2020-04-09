@@ -4,13 +4,13 @@
 title: Web Service Connector configuration options | Microsoft Docs
 description: This article covers the steps required to install the Web Service Configuration Tool.
 keywords:
-author: billmath
-ms.author: billmath
-manager: daveba
-ms.date: 11/28/2017
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
+ms.date: 3/27/2020
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
-
+ms.reviewer: markwahl-msft
 ms.assetid: 
 ---
 
@@ -43,7 +43,7 @@ You can create a new Web Service Connector using Management Agent designer. Afte
     - If the location of the data source observes Daylight Saving and the data source is configured to automatically adjust to daylight saving settings, check the **Data Source is configured to automatically adjust clock for Daylight Saving Time** option.
     - If you want to trigger the test connection workflow from this connector, check the **Test Connection** option.
 
-6. On next screen select **default** for **Select directory partitions**. Then, select **Next**.
+6. On next screen, select **default** for **Select directory partitions**. Then, select **Next**.
 
     ![Create partitions for the management agent](media/microsoft-identity-manager-2016-ma-ws-maconfig/create-ma-partitions.png)
 
@@ -75,7 +75,7 @@ You can create a new Web Service Connector using Management Agent designer. Afte
 
     ![Specify the type of deprovisioning](media/microsoft-identity-manager-2016-ma-ws-maconfig/deprovisioning.png)
 
-14. In the case of an Import flow, the **Configure Extensions** page is disabled. You can configure extensiones for Export flows by first selecting the **Advanced** mapping type on the **Configure Attribute Flow** page.
+14. In the case of an Import flow, the **Configure Extensions** page is disabled. You can configure extensions for Export flows by first selecting the **Advanced** mapping type on the **Configure Attribute Flow** page.
 
     ![Configure extensions](media/microsoft-identity-manager-2016-ma-ws-maconfig/extensions.png)
 
@@ -87,7 +87,58 @@ Your Connector is now configured:
 
 After a Connector is configured, you can configure the Run Profiles by selecting **Configure Run Profiles**.
 
-## Next steps 
+## Additional steps
+
+When certificate-based authentication is used, an additional change is needed after the Web Service Configuration Tool generates a WSConfig file, before that file can be imported into a Web Service Connector project in MIM Synchronization Service.
+
+To enable certificate-based authentication:
+
+- Configure your project to use Basic Authentication in the Web Service Configuration Tool
+- Create a copy of my_project.wsconfig file and rename it to my_project.zip
+- Open this archive and modify generated.config file to replace basic authentication with certificate-based authentication (an example provided below)
+- Replace generated.config file in my_project.zip and rename it to my_project_updated.wsconfig
+- Select my_project_updated.wsconfig when creating a management agent in MIM Synchronization Server
+
+Find generated.config sample file with certificate-based authentication below:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+    <configuration>
+        <appSettings>
+            <add key="SoapAuthenticationType" value="Certificate"/>
+        </appSettings>
+        <system.serviceModel>
+            <bindings>
+                <wsHttpBinding>
+                    <binding name="binding">
+                        <security mode="Transport">
+                            <transport clientCredentialType="Certificate"/>
+                        </security>
+                    </binding>
+                </wsHttpBinding>
+            </bindings>
+            <client>
+                <endpoint address="https://myserver.local.net:8011/sap/bc/srt/scs/sap/zsapconnect?sap-client=800"
+                    binding="wsHttpBinding" bindingConfiguration="binding"
+                    contract="SAPCONNECTOR.ZSAPConnect" name="binding"/>
+            </client>
+            <behaviors>
+                <endpointBehaviors>
+                    <behavior name="endpointCredentialBehavior">
+                        <clientCredentials>
+                            <clientCertificate findValue="my.certificate.name.local.net"
+                                storeLocation="LocalMachine"
+                                storeName="My"
+                                x509FindType="FindBySubjectName"/>
+                        </clientCredentials>
+                    </behavior>
+                </endpointBehaviors>
+            </behaviors>
+        </system.serviceModel>
+    </configuration>
+```
+
+## Next steps
 
 - [Install the Web Service Configuration Tool](microsoft-identity-manager-2016-ma-ws-install.md)
 - [SOAP deployment guide](microsoft-identity-manager-2016-ma-ws-soap.md)
