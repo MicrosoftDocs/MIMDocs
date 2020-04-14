@@ -51,10 +51,10 @@ Related links:
    - Fixed a bug with LDAP directory operations attributes, e.g. *pwdUpdateTime*, not visible in schema
 ### Enhancements
 - Graph Connector   
-   - UPNs of external guest users are no longer rendered 'as-is', instead they are shown in connector space to look like emails.
+   - UPNs of external guest users are no longer rendered 'as-is', instead they are shown in connector space to look like emails
    - Added support for B2B guest users provisioning
 
-    To invite B2B guest users, you need to:
+   To invite B2B guest users, you need to:
    - Grant permissions to invite guests to your Azure AD application associated with Graph connector
    - Complete connector configuration section for inviting external users: set Invite Redirect URL (mandatory) and choose whether to send invitation emails
    - Set mandatory attributes in your outbound synchronization rule:
