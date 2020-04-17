@@ -41,6 +41,28 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
+## 1.1.1170.0 (April 2020)
+### Fixed issues
+- Generic SQL Connector
+   - Fixed a bug with query-based export strategy and multi-valued attributes updates
+- Lotus Notes Connector
+   - Groups from secondary Notes Address Books are no longer deleted by *AdminP* process. Direct delete operation is used now
+- Generic LDAP Connector
+   - Fixed a bug with LDAP directory operations attributes, e.g. *pwdUpdateTime*, not visible in schema
+### Enhancements
+- Graph Connector   
+   - UPNs of external guest users are no longer rendered 'as-is', instead they are shown in connector space to look like emails
+   - Added support for B2B guest users provisioning
+
+   To invite B2B guest users, you need to:
+   - Grant permissions to invite guests to your Azure AD application associated with Graph connector
+   - Complete connector configuration section for inviting external users: set Invite Redirect URL (mandatory) and choose whether to send invitation emails
+   - Set mandatory attributes in your outbound synchronization rule:
+     - "Guest"=>*userType* (initial flow only)
+     - external email address=>*userPrincipalName*
+     - CustomExpression("CN="+csObjectID+",OBJECT=user")=>*dn* (initial flow only)
+     - csObjectID=>*id* (initial flow only)
+
 ## 1.1.1130.0 (February 2020)
 ### Fixed issues
 - Graph Connector
@@ -95,7 +117,7 @@ Related links:
    - Fixed an issue with last member of a group not being deleted
 ### Enhancements:
 - Generic SQL Connector
-   - commandTimeout parameter of a data reader is set to match connector timeout. If you have long-running queries, taking more than 30 seconds to complete, you can increase the “Command Timeout” parameter value in the “Connectivity” section
+   - commandTimeout parameter of a data reader is set to match connector timeout. If you have long-running queries, taking more than 30 seconds to complete, you can increase the "Command Timeout" parameter value in the "Connectivity" section
 - Graph Connector: 
    - Added multi-threaded group membership full import strategy to improve import performance. Delta import remains single-threaded operation
    - Added support for complex schema types resulting attributes like OnPremisesExtentionAttributes.* being available now
@@ -143,7 +165,7 @@ Related links:
 * Generic SQL:
     * Export Binary Attribute
     * Object types cannot be substrings of each other
-    * Changes in multi-valued table are not tracked in the operation of “Delta import”, if “Delta Strategy” is “Change Tracking”
+    * Changes in multi-valued table are not tracked in the operation of "Delta import", if "Delta Strategy" is "Change Tracking"
 * Graph Connector(Public Preview)
     * Error on Group Deletes
     * Update User-Agent to http header
@@ -167,7 +189,7 @@ Related links:
     * Resolved Valid JSON response could not be saved in configuration tool
 * Generic SQL:
     * Export always generates only update query for the operation of deleting. Added to generate a delete query
-    * The SQL query, which gets objects for the operation of Delta Import,  if ‘Delta Strategy’ is ‘Change Tracking’ was fixed. In this implementation known limitation:  Delta Import with ‘Change Tracking’ mode does not track changes in multi-valued attributes
+    * The SQL query, which gets objects for the operation of Delta Import,  if 'Delta Strategy' is 'Change Tracking' was fixed. In this implementation known limitation:  Delta Import with 'Change Tracking' mode does not track changes in multi-valued attributes
     * Added possibility to generate a delete query for case, when it is necessary to delete the last value of multivalued attribute and this row does not contain any other data except value, which it is necessary to delete.
     * System.ArgumentException handling when implemented OUTPUT parameters by SP
     * Incorrect query to make the operation of export into field, that has varbinary(max) type
@@ -201,10 +223,10 @@ Related links:
     stored procedure with named parameters or not.
     * Currently, the ability to execute stored procedure with named parameters
     works only for databases IBM DB2 and MSSQL. For databases Oracle and MySQL
-    this approach doesn’t work: 
-      * The SQL syntax of MySQL doesn’t support named parameters in stored
+    this approach doesn't work: 
+      * The SQL syntax of MySQL doesn't support named parameters in stored
         procedures.
-      * The ODBC driver for the Oracle doesn’t support named parameters for
+      * The ODBC driver for the Oracle doesn't support named parameters for
         named parameters in stored procedures)
 
 ## 1.1.604.0 (AADConnect 1.1.614.0)
@@ -224,7 +246,7 @@ Related links:
 * Generic Web Services:
   * The WSconfig tool did not convert correctly the Json array from "sample request" for the REST service method. This caused problems with serialization this Json array for the REST request.
   * Web Service Connector Configuration Tool does not support usage of space symbols in JSON attribute names 
-    * A Substitution pattern can be added manually to the WSConfigTool.exe.config file, for example,  ```<appSettings> <add key=”JSONSpaceNamePattern” value="__" /> </appSettings>```
+    * A Substitution pattern can be added manually to the WSConfigTool.exe.config file, for example,  ```<appSettings> <add key="JSONSpaceNamePattern" value="__" /> </appSettings>```
       > [!NOTE]
       > JSONSpaceNamePattern key is required as for export you will recieve the following error: Message: Empty name is not legal. 
 
@@ -251,7 +273,7 @@ Related links:
 ### Fixed issues:
 
 * Generic Web Services:
-  * Can’t import Server configuration if WebService Connector is present
+  * Can't import Server configuration if WebService Connector is present
   * WebService Connector is not working with multiple  Web Services
 
 * Generic SQL:
@@ -301,7 +323,7 @@ Released: 2017 March
   * GLDAP Connector does not see all attributes in AD LDS
   * Wizard breaks when no UPN attributes are detected from the LDAP directory schema
   * Delta Imports Failing with discovery errors not present during full import, when "objectclass" attribute is not selected
-  * A "Configure Partitions and Hierarchies” configuration page, doesn’t show any objects which type is equal to the partition for Novel servers in the Generic  
+  * A "Configure Partitions and Hierarchies" configuration page, doesn't show any objects which type is equal to the partition for Novel servers in the Generic  
   LDAP MA. They showed only objects from RootDSE partition.
 
 
@@ -315,8 +337,8 @@ Released: 2017 March
   * Fix for duplicate Certifier error
   * When the Object without any data is selected on the Lotus Domino Connector with other objects then we receive the Discovery error while performing Full-Import.
   * When Delta Import is being running on the Lotus Domino Connector, at the end of that run, the Microsoft.IdentityManagement.MA.LotusDomino.Service.exe service sometimes returns an Application Error.
-  * Group membership overall works fine and is maintained, except when running the export to try to remove a user from membership it shows as successful with an update, but the user doesn’t actually get removed from membership in Lotus Notes.
-  * An opportunity to choose mode of export as “Append Item at bottom” was added in configuration GUI of Lotus MA to append new items at bottom during the export for multi-valued attributes.
+  * Group membership overall works fine and is maintained, except when running the export to try to remove a user from membership it shows as successful with an update, but the user doesn't actually get removed from membership in Lotus Notes.
+  * An opportunity to choose mode of export as "Append Item at bottom" was added in configuration GUI of Lotus MA to append new items at bottom during the export for multi-valued attributes.
   * Connector will add the needed logic to delete the file from the Mail Folder and ID Vault.
   * Delete membership not working for cross NAB member.
   * Values should be successfully deleted from multi-valued attribute
