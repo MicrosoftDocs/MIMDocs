@@ -60,7 +60,7 @@ If you do not have licenses for Windows, SQL Server, or Windows Server you can d
 
 ### Microsoft Download Center
 
-- [SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)  
 - [SharePoint Foundation 2013 SP1 and its prerequisites](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## Hardware requirements

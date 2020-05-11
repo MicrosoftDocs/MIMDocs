@@ -209,7 +209,7 @@ Next, create a SharePoint Site Collection associated with that web application t
 ## Set the website as the local intranet
 
 1. Launch Internet Explorer and open a new web browser tab
-2. Navigate to http://pamsrv.priv.contoso.local:82/ and sign in as PRIV\MIMAdmin.  An empty SharePoint site named “MIM Portal” will be shown.  
+2. Navigate to `http://pamsrv.priv.contoso.local:82/` and sign in as PRIV\MIMAdmin.  An empty SharePoint site named “MIM Portal” will be shown.  
 3. In Internet Explorer open **Internet Options**, change to the **Security** tab, select **Local intranet**, and add the URL `http://pamsrv.priv.contoso.local:82/`.
 
 If sign in fails, the Kerberos SPNs created earlier in [Step 2](step-2-prepare-priv-domain-controller.md) might need to be updated.

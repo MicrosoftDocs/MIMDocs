@@ -220,7 +220,7 @@ The MIM Service is required to process activation requests.  In order that a com
 
 #### Preparation
 It is recommended to deploy the MIM Service on multiple servers joined to the PRIV domain.
-For high availability, see the Windows Server documents for [Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx) and [Creating a Windows Server 2012 Failover Cluster](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx).
+For high availability, see the Windows Server documents for [Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx) and [Creating a Windows Server 2012 Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/creating-a-windows-server-2012-failover-cluster/ba-p/371763).
 
 For production deployment across multiple servers, you can use Network Load Balancing (NLB) to distribute the processing load.  You should also have a single alias (for instance, A or CNAME records) so that one common name is exposed to the user.
 
