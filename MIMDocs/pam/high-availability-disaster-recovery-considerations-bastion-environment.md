@@ -59,7 +59,7 @@ Trust establishment requires that the existing forest domain controllers be onli
 
 ### User and group migration
 
-Once trust has been established, shadow groups can be created in the bastion environment, as well as user accounts for members of those groups and approvers. This enables those users to activate privileged roles and re-gain effective group memberships.
+Once trust has been established, shadow groups can be created in the bastion environment, as well as user accounts for members of those groups and approvers. This enables those users to activate privileged roles and regain effective group memberships.
 
 User and group migration requires that the existing forest domain controllers be online, as well as the MIM and AD components of the bastion environment.   If the existing forest domain controllers are unreachable, then no additional users and groups can be added to the bastion environment, but existing users and groups are unaffected. If an outage of any of the components occurs during the migration, the administrator can retry once the outage has been addressed.
 
@@ -83,7 +83,7 @@ Resource management requires that a domain controller for the resource domain be
 
 ### Monitoring of users and groups in the existing forest
 
-MIM also includes a PAM monitoring service which regularly checks the users and groups in the existing domains, and updates the MIM database and AD accordingly.  This service does not need to be online for role activation or during resource management.
+MIM also includes a PAM monitoring service, which regularly checks the users and groups in the existing domains, and updates the MIM database and AD accordingly.  This service does not need to be online for role activation or during resource management.
 
 Monitoring requires that the existing forest domain controllers be online, as well as the MIM and AD components of the bastion environment.  
 
@@ -101,7 +101,7 @@ The computers hosting Active Directory Domain Services and those hosting the MIM
 - users to request activation
 - users to have Kerberos tickets consumable by resources in existing forest
 - MIM to monitor the existing forest domains
-- MIM to send email vail mail servers located in the existing forest.
+- MIM to send email via mail servers located in the existing forest.
 
 ### Minimal high availability topologies
 
@@ -188,7 +188,7 @@ The procedure for adding an additional domain controller can be found at [Instal
 
 After an outage, ensure that at least one domain controller is available in the bastion environment before restarting other servers.
 
-Within a domain, Active Directory distributes the Flexible Single Master Operation (FSMO) roles across domain controllers, as described in [How Operations Masters Work](https://technet.microsoft.com/library/cc780487.aspx).  If a domain controller has failed, it may be necessary to transfer one or more of the [Domain Controller Roles](https://technet.microsoft.com/library/cc786438.aspx) which that domain controller was assigned.
+Within a domain, Active Directory distributes the Flexible Single Master Operation (FSMO) roles across domain controllers, as described in [How Operations Masters Work](https://technet.microsoft.com/library/cc780487.aspx).  If a domain controller has failed, it may be necessary to transfer one or more of the [Domain Controller Roles that that domain controller was assigned.
 
 After determining that a domain controller will not be returned to production, be sure to check whether any roles were assigned to that domain controller and reassign them as necessary. Instructions can be found in [View the Current Operations Master Role Holders](https://technet.microsoft.com/library/cc816893.aspx) and its related articles.
 

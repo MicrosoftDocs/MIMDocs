@@ -191,7 +191,7 @@ Next, create a SharePoint Site Collection associated with that web application t
 
     Make sure that the **CompatibilityLevel** variable is set to *14*. If it returns *15*, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
 
-2.  Run the following PowerShell commands in the **SharePoint 2013 Management Shell**. This will isable SharePoint server-side viewstate, and the SharePoint task **Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)**.
+2.  Run the following PowerShell commands in the **SharePoint 2013 Management Shell**. This will disable the SharePoint server-side ViewState, and the SharePoint task **Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)**.
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
