@@ -191,7 +191,7 @@ Next, create a SharePoint Site Collection associated with that web application t
 
     Make sure that the **CompatibilityLevel** variable is set to *14*. If it returns *15*, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
 
-2.  Run the following PowerShell commands in the **SharePoint 2013 Management Shell**. This will isable SharePoint server-side viewstate, and the SharePoint task **Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)**.
+2.  Run the following PowerShell commands in the **SharePoint 2013 Management Shell**. This will disable the SharePoint server-side ViewState, and the SharePoint task **Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)**.
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -209,7 +209,7 @@ Next, create a SharePoint Site Collection associated with that web application t
 ## Set the website as the local intranet
 
 1. Launch Internet Explorer and open a new web browser tab
-2. Navigate to http://pamsrv.priv.contoso.local:82/ and sign in as PRIV\MIMAdmin.  An empty SharePoint site named “MIM Portal” will be shown.  
+2. Navigate to `http://pamsrv.priv.contoso.local:82/` and sign in as PRIV\MIMAdmin.  An empty SharePoint site named “MIM Portal” will be shown.  
 3. In Internet Explorer open **Internet Options**, change to the **Security** tab, select **Local intranet**, and add the URL `http://pamsrv.priv.contoso.local:82/`.
 
 If sign in fails, the Kerberos SPNs created earlier in [Step 2](step-2-prepare-priv-domain-controller.md) might need to be updated.

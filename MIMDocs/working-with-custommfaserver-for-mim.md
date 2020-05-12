@@ -38,7 +38,7 @@ In order to use a custom Multi-Factor Authentication provider API with MIM, you 
 
 ### Step 1: Ensure MIM Service is at version 4.5.202.0 or later
 
-Download and install MIM hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) or a later version.
+Download and install MIM hotfix [4.5.202.0](https://support.microsoft.com/help/4346632/hotfix-rollup-package-build-4-5-202-0-is-available-for-microsoft) or a later version.
 
 ### Step 2: Create a DLL which implements the IPhoneServiceProvider interface
 
