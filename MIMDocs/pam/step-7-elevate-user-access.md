@@ -87,7 +87,7 @@ Activate by requesting privileged access via the PAM sample portal.
     ```
 
 3. When prompted, type the password for the PRIV.Jen account. A new web browser window will appear.
-4. Navigate to http://pamsrv.priv.contoso.local:8090 and ensure that a web page from the sample portal is visible.
+4. Navigate to `http://pamsrv.priv.contoso.local:8090` and ensure that a web page from the sample portal is visible.
 5. In Internet Explorer, select **Tools** > **Internet Options** and click the **Security** tab.
 6. Click on the **Local intranet zone** > **Sites** > **Advanced** then add the website to the zone.
 7. Close the **Internet Options** dialogs.

@@ -4,7 +4,6 @@ author: billmath
 
 description: Microsoft Graph connector is external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
-author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 10/02/2018
@@ -225,16 +224,16 @@ Configure the following inbound attribute flow rules.  Be sure to populate the `
 
 | **Initial Flow Only** | **Use as Existence Test** | **Flow (Source Value ⇒ FIM Attribute)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
-|                       |                           | [Left(id,20)⇒accountName](javascript:void(0);)                        |
-|                       |                           | [id⇒uid](javascript:void(0);)                                         |
-|                       |                           | [userType⇒employeeType](javascript:void(0);)                          |
-|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
-|                       |                           | [surname⇒sn](javascript:void(0);)                                     |
-|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-|                       |                           | [id⇒cn](javascript:void(0);)                                          |
-|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
-|                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
+|                       |                           | `[displayName⇒displayName](javascript:void(0);)`                        |
+|                       |                           | `[Left(id,20)⇒accountName](javascript:void(0);)`                        |
+|                       |                           | `[id⇒uid](javascript:void(0);)`                                         |
+|                       |                           | `[userType⇒employeeType](javascript:void(0);)`                          |
+|                       |                           | `[givenName⇒givenName](javascript:void(0);)`                            |
+|                       |                           | `[surname⇒sn](javascript:void(0);)`                                     |
+|                       |                           | `[userPrincipalName⇒userPrincipalName](javascript:void(0);)`            |
+|                       |                           | `[id⇒cn](javascript:void(0);)`                                          |
+|                       |                           | `[mail⇒mail](javascript:void(0);)`                                      |
+|                       |                           | `[mobilePhone⇒mobilePhone](javascript:void(0);)`                        |
 
 ### Synchronization Rule: Create Guest User account to Active Directory 
 

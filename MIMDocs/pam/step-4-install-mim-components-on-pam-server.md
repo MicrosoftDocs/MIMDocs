@@ -64,7 +64,7 @@ Follow the guidelines of the installer and complete the installation.
 
 7. Set *PAMSRV* as MIM Service server address.
 
-8. Set *http://pamsrv.priv.contoso.local:82* as the SharePoint site collection URL.
+8. Set `http://pamsrv.priv.contoso.local:82` as the SharePoint site collection URL.
 
 9. Leave the registration portal URL blank.
 
@@ -105,7 +105,7 @@ After installation completes, the server will reboot, then verify that the MIM P
 
 1. After PAMSRV reboots, sign in as PRIV\Administrator.
 
-2. Launch Internet Explorer and connect to the MIM Portal on http://pamsrv.priv.contoso.local:82/identitymanagement. There may be a short delay the first time this page is located.
+2. Launch Internet Explorer and connect to the MIM Portal on `http://pamsrv.priv.contoso.local:82/identitymanagement`. There may be a short delay the first time this page is located.
 
 3. If necessary, sign in as PRIV\Administrator for Internet Explorer.
 
@@ -160,7 +160,7 @@ In this section you will install and configure the sample web application for th
    </httpProtocol>
    ```
 
-5. Configure the sample web application. Using a text editor such as Notepad, edit the file **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Set the value of **pamRespApiUrl** to *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5. Configure the sample web application. Using a text editor such as Notepad, edit the file **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Set the value of **pamRespApiUrl** to `http://pamsrv.priv.contoso.local:8086/api/pamresources/`.
 
 6. Restart IIS with the following command for these changes to take effect.
 
@@ -168,7 +168,7 @@ In this section you will install and configure the sample web application for th
    iisreset
    ```
 
-7. (Optional) Verify that the user can authenticate to the REST API. Open a web browser as the administrator on PAMSRV.  Navigate to the web site URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, authenticate if needed, and ensure that a download occurs.
+7. (Optional) Verify that the user can authenticate to the REST API. Open a web browser as the administrator on PAMSRV.  Navigate to the web site URL `http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/`, authenticate if needed, and ensure that a download occurs.
 
 ## Install the MIM PAM requestor cmdlets
 
@@ -184,7 +184,7 @@ Install the MIM PAM requestor cmdlets on the workstation configured in Step 1.
 
 5.  On the custom setup, specify the **PAM Client** is to be installed, but not the **MIM Add-in for Outlook** or the **MIM Password and Authentication Extensions**.
 
-6.  On the PAM Server address, specify as the hostname of the PRIV MIM server *pamsrv.priv.contoso.local*.
+6.  On the PAM Server address, specify as the hostname of the PRIV MIM server `pamsrv.priv.contoso.local`.
 
 After the installation completes, restart CORPWKSTN to complete the registration of the new PowerShell module.
 

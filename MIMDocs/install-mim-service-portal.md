@@ -121,7 +121,7 @@ When all pre-installation definitions are ready, click **Install** to begin inst
 
 After installation completes, verify that the MIM Portal is active.
 
-1. Launch Internet Explorer and connect to the MIM Portal on  *http://mim.contoso.com/identitymanagement*. Note, that there may be a short delay on the first visit to this page.
+1. Launch Internet Explorer and connect to the MIM Portal on `http://mim.contoso.com/identitymanagement`. Note, that there may be a short delay on the first visit to this page.
     - If necessary, authenticate as *contoso\miminstall* to Internet Explorer.
 
 2. In Internet Explorer, open the **Internet Options**, change to the **security** tab, and add the site to the **Local intranet** zone if it is not already there.  Close the **Internet Options** dialog.
