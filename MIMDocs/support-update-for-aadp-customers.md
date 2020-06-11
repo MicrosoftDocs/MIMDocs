@@ -7,7 +7,7 @@ keywords:
 author: EugeneSergeev
 ms.author: esergeev
 manager: aashiman
-ms.date: 6/9/2021
+ms.date: 6/9/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 
