@@ -43,12 +43,12 @@ These MIM components populate Active Directory, and by extension, Azure AD throu
 As an additional support option for Microsoft Identity Manager, Azure AD Premium customers are able to request support for the above mentioned components of Microsoft Identity Manager 2016 Service Pack 2, or a later hotfix or update, through the Azure portal.
 
 A customer can create an Azure support request, using the instructions at [How to create an Azure support request](https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request):
- - select *Issue type: Technical*
- - switch to show *All Services* 
- - in the services list under Azure Active Directory selects  *User Provisioning and Synchronization*
- - select *Problem type: Microsoft Identity Manager (MIM)*
- - select *Problem subtype*: *Connectors*, *Service and Portal* or *Synchronization engine*
- 
+- select *Issue type: Technical*
+- switch to show *All Services*
+- in the services list under Azure Active Directory selects  *User Provisioning and Synchronization*
+- select *Problem type: Microsoft Identity Manager (MIM)*
+- select *Problem subtype*: *Connectors*, *Service and Portal* or *Synchronization engine*
+
 ![Create MIM Support request](media/aad-new-support-request.png)
 
 The MIM components are listed as problem types within *Azure Active Directory User Provisioning and Synchronization* in the Azure portal.
@@ -62,5 +62,5 @@ MIM 2016 SP2, build 4.6.34.0, was released in October 2019. Customers are highly
 For customers still using an older build of MIM, or customers who do not have Azure support or subscription to a suite that includes Azure Active Directory Premium, or for issues with other components of MIM not listed above, support continues to be available. The support policy is described at [Fixed lifecycle policy](https://docs.microsoft.com/lifecycle/policies/fixed) with the specific dates at [support lifecycle for Microsoft Identity Manager 2016](https://support.microsoft.com/lifecycle/search?alpha=microsoft%20identity%20manager%202016).
 
 In addition to Azure support, there are several other support options organizations can use to obtain support. For example, if you have Microsoft Professional Support, you can [create a new support request](https://support.microsoft.com/supportforbusiness/productselection). To select the relevant MIM component:
- - select product family *Security*
- - select product *Identity Manager 2016*
+- select product family *Security*
+- select product *Identity Manager 2016*
