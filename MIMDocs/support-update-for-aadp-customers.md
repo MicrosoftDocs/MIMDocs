@@ -51,7 +51,7 @@ A customer can create an Azure support request, using the instructions at [How t
  
 ![Create MIM Support request](media/aad-new-support-request.png)
 
-The MIM components are listed as problem types within *Azure Active Directory User Provisioning and Sychronization* in the Azure portal.
+The MIM components are listed as problem types within *Azure Active Directory User Provisioning and Synchronization* in the Azure portal.
 
 For requests opened through the Azure portal, standard support is available for Azure AD Premium customers for following components of Microsoft Identity Manager 2016 Service Pack 2, or a [later hotfix or update](reference/version-history.md): Synchronization Service, Password Change Notification Service (PCNS), Connectors, Service and Portal, Add-ins and extensions, Data Warehouse Support Scripts, and language packs.
 
