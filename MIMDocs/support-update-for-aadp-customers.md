@@ -45,7 +45,7 @@ As an additional support option for Microsoft Identity Manager, Azure AD Premium
 A customer can create an Azure support request, using the instructions at [How to create an Azure support request](https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request):
  - select *Issue type: Technical*
  - switch to show *All Services* 
- - in the services list under *Azure Active Directory* select  *User Provisioning and Synchronization*
+ - in the services list under Azure Active Directory selects  *User Provisioning and Synchronization*
  - select *Problem type: Microsoft Identity Manager (MIM)*
  - select *Problem subtype*: *Connectors*, *Service and Portal* or *Synchronization engine*
  
@@ -57,7 +57,7 @@ For requests opened through the Azure portal, standard support is available for 
 
 ## Other support options
 
-MIM 2016 SP2, build 4.6.34.0, was released in October 2019. Customers are highly encouraged to stay on a fully supported service pack to ensure they are on the latest and most secure version of their product; please see the [service pack lifecycle policy](https://support.microsoft.com/help/17138) for more information.
+MIM 2016 SP2, build 4.6.34.0, was released in October 2019. Customers are highly encouraged to stay on a fully supported service pack to ensure they are on the latest and most secure version of their product; see the [service pack lifecycle policy](https://support.microsoft.com/help/17138) for more information.
 
 For customers still using an older build of MIM, or customers who do not have Azure support or subscription to a suite that includes Azure Active Directory Premium, or for issues with other components of MIM not listed above, support continues to be available. The support policy is described at [Fixed lifecycle policy](https://docs.microsoft.com/lifecycle/policies/fixed) with the specific dates at [support lifecycle for Microsoft Identity Manager 2016](https://support.microsoft.com/lifecycle/search?alpha=microsoft%20identity%20manager%202016).
 
