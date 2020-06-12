@@ -39,6 +39,9 @@ When installing MIM 2016 SP2 in the locked-down environment that has all encrypt
 - To establish secure TLS 1.2 connection with SQL server, MIM Synchronization Service and built-in SQL management agent require [SQL Native Client 11.0.7001.0](https://www.microsoft.com/download/details.aspx?id=50402) or later.
 
 ## MIM Service
+   >[!NOTE]
+   >MIM 2016 SP2 unattended install fails in TLS 1.2 only environment. Install MIM Service either in interactive mode or unattended with TLS 1.1 enabled and enforce TLS 1.2 after install completes.
+
 - Self-signed certificates cannot be used by MIM Service in TLS 1.2 only environment. Choose strong encryption compatible certificate issued by trusted Certification Authority when installing MIM Service.
 - MIM Service installer additionally requires [OLE DB Driver for SQL Server version 18.2](https://www.microsoft.com/download/details.aspx?id=56730) or later.
 
