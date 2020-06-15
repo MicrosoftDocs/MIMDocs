@@ -40,7 +40,7 @@ When installing MIM 2016 SP2 in the locked-down environment that has all encrypt
 
 ## MIM Service
    >[!NOTE]
-   >MIM 2016 SP2 unattended install fails in TLS 1.2 only environment. Either install MIM Service in interactive mode or if installing unattended then make sure TLS 1.1 is enabled. After unattended installation completes, enforce TLS 1.2 if needed.
+   >MIM 2016 SP2 unattended install fails in TLS 1.2 only environment. Either install MIM Service in interactive mode or, if installing unattended, make sure TLS 1.1 is enabled. After unattended installation completes, enforce TLS 1.2 if needed.
 
 - Self-signed certificates cannot be used by MIM Service in TLS 1.2 only environment. Choose strong encryption compatible certificate issued by trusted Certification Authority when installing MIM Service.
 - MIM Service installer additionally requires [OLE DB Driver for SQL Server version 18.2](https://www.microsoft.com/download/details.aspx?id=56730) or later.
