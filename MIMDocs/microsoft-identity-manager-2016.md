@@ -30,6 +30,9 @@ Microsoft regularly delivers updates to MIM, including enhancements for customer
 
 MIM 2016 Service Pack 2 is a rollup of existing hotfixes since MIM 2016 SP1. It also introduces the option to configure use of Group Managed Service Accounts for MIM Synchronization Service and MIM Service, and enables MIM to be deployed with other updated platform software. More details could be found in [MIM 2016 Version Release History](./reference/version-history.md)
 
+### Support update for Azure Active Directory Premium customers
+For Azure AD Premium customers, standard support is available from June 2020 onward, continuing after January 2021. For more information, see the [Azure AD support process](support-update-for-azure-active-directory-premium-customers.md).
+
 ### Major new and updated scenarios
 
 - [Azure AD B2B collaboration with MIM Graph connector and Azure Application proxy is GA](microsoft-identity-manager-2016-graph-b2b-scenario.md), last updated July 2019
