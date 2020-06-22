@@ -29,6 +29,8 @@ ms.suite: ems
 # Topology considerations
 You can deploy Microsoft Identity Manager (MIM) components on the same server or among multiple servers in multiple configurations. The topology that you select for your deployment affects the performance that you can achieve from MIM. This article introduces multiple deployment topologies that you may consider implementing.
 
+[!Important] MIM 2016 SP2 supports SQL AlwaysOn Availability Group (AoAG) listeners with RegisterAllProvidersIP option set to 0, meaning that SQL Server AoAG cross-subnet failover is not currently supported.
+
 ## MIM components
 When designing your deployment topology, it's important to know what each component does and how they all interact.
 
