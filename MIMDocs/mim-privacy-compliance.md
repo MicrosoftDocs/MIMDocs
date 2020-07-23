@@ -168,7 +168,7 @@ Another option is to remove the user object right from the BHOLD Core User inter
 ### Certificate Management
 To remove a user from CM, delete the user is in active directory.
 
-Certificate management as it will only store the profile uid from certificate services with domain sAMAccountName. Once the user is deleted from AD the user cache is only present for the certificates, witch they have enrolled. We do not recommend deleting anything in the database as this can cause overall harm to the operation of the environment.
+Certificate management as it will only store the profile uid from certificate services with domain sAMAccountName. Once the user is deleted from AD the user cache is only present for the certificates which they have enrolled. We do not recommend deleting anything in the database as this can cause overall harm to the operation of the environment.
 
 ## Opt-out of telemetry
 Previous builds FIM/MIM used to collects anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data was used by Microsoft to help improve future versions of FIM/MIM in the past.
