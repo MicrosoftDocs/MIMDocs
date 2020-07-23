@@ -104,10 +104,10 @@ PAM can use the same syntax above or you can use the [MIMPAM Module](https://doc
 - [Example Querying The MIM Service Using PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
 
 ### BHOLD
-Bhold data can be exported using the bhold reporting module to your preferred format.
+Bhold data can be exported using the Bhold reporting module to your preferred format.
 
 ### Certificate Management
-Certificate management data related to personal data is connected to active directory. An administrator can export this data using Active Directory powershell.
+Certificate management data related to personal data is connected to active directory. An administrator can export this data using Active Directory PowerShell.
 
 ## Updating personal data
 
