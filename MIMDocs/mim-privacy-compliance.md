@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager data handling  | Microsoft Docs
-description: Understand Microsoft Identity Manager data handling to indentify and report on data within the enviroment, take action in given system based on operational functions and requirement.
+description: Understand Microsoft Identity Manager data handling to identify and report on data within the environment, take action in given system based on operational functions and requirement.
 keywords:
 author: billmath
 ms.author: billmath
@@ -117,7 +117,7 @@ Personal data about users or objects in MIM Solutions typically is derived from 
 
 In order to perform management operations, administrators must be part of synchronization operations or admin defined [here](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
 
-Updating of data is done by defining rules from the source of authority. Management console helps identify the source of authority to update it at the source. Another option is create sync rule or rule extention to control the data updating if source like HR data still needs to remain. These are avialible supported options.
+Updating of data is done by defining rules from the source of authority. Management console helps identify the source of authority to update it at the source. Another option is create sync rule or rule extention to control the data updating if source like HR data still needs to remain. These are available supported options.
 
 For more information on different ways to update attribute, see below. 
 
