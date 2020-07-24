@@ -137,7 +137,7 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
     ![The Active Directory Users and Computers window](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > A known issue on Windows Server 2012 R2 is that services that use a managed account hang after the server is restarted, because Microsoft Key Distribution Service isn't started after Windows restarts. The workaround for this issue is to run the following command: 
+    > A known issue on Windows Server 2012 R2 is that services that use a managed account stop responding after the server is restarted, because Microsoft Key Distribution Service isn't started after Windows restarts. The workaround for this issue is to run the following command: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >
