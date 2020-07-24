@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager data handling  | Microsoft Docs
-description: Understand Microsoft Identity Manager data handling to indentify and report on data within the enviroment, take action in given system based on operational functions and requirement.
+description: Understand Microsoft Identity Manager data handling to identify and report on data within the environment, take action in given system based on operational functions and requirement.
 keywords:
 author: billmath
 ms.author: billmath
@@ -104,10 +104,10 @@ PAM can use the same syntax above or you can use the [MIMPAM Module](https://doc
 - [Example Querying The MIM Service Using PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
 
 ### BHOLD
-Bhold data can be exported using the bhold reporting module to your preferred format.
+Bhold data can be exported using the Bhold reporting module to your preferred format.
 
 ### Certificate Management
-Certificate management data related to personal data is connected to active directory. An administrator can export this data using Active Directory powershell.
+Certificate management data related to personal data is connected to active directory. An administrator can export this data using Active Directory PowerShell.
 
 ## Updating personal data
 
@@ -117,7 +117,7 @@ Personal data about users or objects in MIM Solutions typically is derived from 
 
 In order to perform management operations, administrators must be part of synchronization operations or admin defined [here](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
 
-Updating of data is done by defining rules from the source of authority. Management console helps identify the source of authority to update it at the source. Another option is create sync rule or rule extention to control the data updating if source like HR data still needs to remain. These are avialible supported options.
+Updating of data is done by defining rules from the source of authority. Management console helps identify the source of authority to update it at the source. Another option is create sync rule or rule extention to control the data updating if source like HR data still needs to remain. These are available supported options.
 
 For more information on different ways to update attribute, see below. 
 
@@ -168,7 +168,7 @@ Another option is to remove the user object right from the BHOLD Core User inter
 ### Certificate Management
 To remove a user from CM, delete the user is in active directory.
 
-Certificate management as it will only store the profile uid from certificate services with domain sAMAccountName. Once the user is deleted from AD the user cache is only present for the certificates, witch they have enrolled. We do not recommend deleting anything in the database as this can cause overall harm to the operation of the environment.
+Certificate management as it will only store the profile uid from certificate services with domain sAMAccountName. Once the user is deleted from AD the user cache is only present for the certificates which they have enrolled. We do not recommend deleting anything in the database as this can cause overall harm to the operation of the environment.
 
 ## Opt-out of telemetry
 Previous builds FIM/MIM used to collects anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data was used by Microsoft to help improve future versions of FIM/MIM in the past.
