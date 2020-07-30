@@ -25,13 +25,13 @@ This article describes the deprecated features of Microsoft Identity Manager 201
 
 ## BHOLD
 
-Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD will continue to be supported. Azure AD now provides [access reviews](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) which replaces the BHOLD attestation campaign features, and entitlement management which replaces the access assignment features.
+Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD will continue to be supported. Azure AD now provides [access reviews](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## Service and Portal
 
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
-| Programmatic Configuration of sync | Web Service configuration interface(ma-data and mv-data) | The ability to configure the MIM synchronization service through MIM service web service may be removed in a future hotfix or service pack.
+| Programmatic Configuration of sync | Web Service configuration interface(ma-data and mv-data) | The ability to configure the MIM synchronization service, through MIM service web service, may be removed in a future hotfix or service pack.
 |
 
 ## Synchronization Service 
@@ -44,7 +44,7 @@ The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating ex
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Management Agents           | Running Connectors out-of-proc      | The synchronization service will always call the connector in the same process. It is the responsibility of the connector to start and manage the other process. |
 | Management Agents           | Configure partition display name    | This option was only used to provide an alternative name for a partition in the WMI interfaces.                                                                                                                                                                       |
-| Run profiles                | Combined profiles                   | The combined profiles delta import/sync, full import/delta sync, and full import/sync may be removed. You should use run profiles with two steps instead.
+| Run profiles                | Combined profiles                   | The combined profiles delta import/sync, full import/delta sync, and full import/sync may be removed. Use run profiles with two steps instead.
 
 > [!NOTE]
 > You should keep combined run profiles only in environments where the performance would be impacted by a large number of existing disconnectors.
@@ -53,10 +53,10 @@ The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating ex
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Attribute Precedence | Multi- mastery/equal precedence                       | Equal precedence may be removed. You should configure manual precedence instead. You can continue to use this feature if your environment has a FIM Service management agent deployed. This management agent does not provide manual precedence to avoid export-not-precedent for declarative provisioning. |
 | Join Rules           | Join on “Any” object type                             | All join rules should explicitly define the metaverse object type they are trying to join to.       |
-| Attribute flows      | Unselect “allow nulls” for exported values            | “Allow Nulls” will always be selected. You should make sure that you have “Allow Nulls” selected in your current environment.  |
+| Attribute flows      | Unselect “allow nulls” for exported values            | “Allow Nulls” will always be selected, so make sure that you have “Allow Nulls” selected in your current environment.  |
 | Attribute flows      | “Do not recall attributes”                            | Attributes will always be recalled, which is the best practice.  |
 | Rules Extension      | Running metaverse and ma rules extension out- of-proc | The metaverse and attribute flow rules will run in the same process as the synchronization engine.       |
-| Rules Extension      | Transaction properties                                | You should avoid passing data between inbound, provisioning, and outbound synchronization using this utility class.  |
+| Rules Extension      | Transaction properties                                | Avoid passing data between inbound, provisioning, and outbound synchronization using this utility class.  |
 | Rules Extension      | ExchangeUtils: Create55\* methods                     | The methods to create objects for Exchange 5.5 servers may be removed.        |
 | Interface            | Mms_Metaverse                                        | All ClmUtils class members may be removed in a future hotfix or service pack.   |
 
