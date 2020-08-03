@@ -41,6 +41,27 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
+## 1.1.1301.0 (August 2020)
+### Fixed issues
+- Graph Connector
+  - Fixed a bug with import failures caused by empty *UserType* attribute value
+  - Fixed a bug with delta import failures connector cache not being readable caused by discovery errors
+  - Service and proxy reported timeouts can be retried automatically
+  - Updated schema discovery for */beta* endpoint 
+### Enhancements
+- Graph Connector
+  - Added support for reading and writing values of custom directory extension attributes
+  - Added support for reading *Service Principal* members of groups in the */beta* endpoint 
+  - Performance improvements for delta import runs related to schema discovery
+  - Graph connector can now invite external member users  
+
+> [!NOTE]  If you have been using guest invite in build 1.1.1170.0 of the connector, please update your sync rules with the following logic:
+- Outbound flows
+  - A user is invited when exporting the creation of the user, and the export includes a *Mail* attribute but not a *UserPrincipalName attribute*.  If the *UserPrincipalName* is supplied, then a user will be created rather than invited  
+  - *UserType* attribute only defines whether a user will become a *Member* or a *Guest* (defaults to *Member* if not set)
+- Inbound flows
+  - *UserPrincipalName* attribute values of external users are rendered 'as-is'
+
 ## 1.1.1170.0 (April 2020)
 ### Fixed issues
 - Generic SQL Connector
