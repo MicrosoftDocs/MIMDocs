@@ -55,8 +55,10 @@ Related links:
   - Performance improvements for delta import runs related to schema discovery
   - Graph connector can now invite external member users
 
+
 > [!NOTE]
 > If you have been using guest invite in build 1.1.1170.0 of the connector, please update your sync rules with the following logic:
+
 
 - Outbound flows
   - A user is invited when exporting the creation of the user, and the export includes a *Mail* attribute but not a *UserPrincipalName attribute*.  If the *UserPrincipalName* is supplied, then a user will be created rather than invited
