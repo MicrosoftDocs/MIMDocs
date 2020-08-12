@@ -1,9 +1,8 @@
 ---
 title: "The Microsoft Identity Manager connector for Microsoft Graph | Microsoft Docs"
-author: billmath
 description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
-author: fimguy
+author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 10/02/2018
@@ -18,7 +17,7 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ## Summary 
 
 
-The [Microsoft Identity Manager connector for Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+The [Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
  enables additional integration scenarios for Azure AD Premium customers.  It surfaces in the MIM sync metaverse additional objects obtained from the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta.
 
 ## Scenarios covered
@@ -236,5 +235,5 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 
 - [Graph Explorer, great for troubleshooting HTTP call issues]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Versioning, support, and breaking change policies for Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
-- [Download Microsoft Identity Manager connector for Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
 [MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
