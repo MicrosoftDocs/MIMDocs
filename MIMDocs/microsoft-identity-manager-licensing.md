@@ -109,7 +109,7 @@ The following downloads may also be relevant:
 
 - [MIM Hybrid Reporting Agent](https://www.microsoft.com/download/details.aspx?id=55112)
 
-- [Generic LDAP Connector, Generic SQL Connector, Graph Connector, Lotus Domino Connector, PowerShell Connector, Web Services Connector](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Generic LDAP Connector, Generic SQL Connector, Graph Connector, Lotus Domino Connector, PowerShell Connector, Web Services Connector](https://go.microsoft.com/fwlink/?LinkId=717495)
 
 - [Connector for SharePoint User Profile Store](https://www.microsoft.com/download/details.aspx?id=41164)
 
