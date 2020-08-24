@@ -60,7 +60,7 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 ### Updates in MIM 2016 Service Pack 2
 
 #### MIM Client addons
-- Added support for MIM Outlook add-on to be loaded into the Microsoft Office 365 Outlook Click-To-Run version.
+- Added support for MIM Outlook add-on to be loaded into the Outlook for Microsoft 365 Click-To-Run version.
 
 #### Service and Portal
 - Added support for MIM Service and Portal to be installed on Windows Server 2019 and use SQL Server 2017, Exchange Server 2019, SharePoint 2019, System Center Service Manager Data Warehouse 2019
@@ -171,7 +171,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
     - Implemented initialization of new MIM Boolean attributes to false on adding new Boolean attribute binding to the resource
 - Customer Experience Improvement Program setting is maintained to false 
 - MIM Service installation failed with Database Upgrade error: Cannot insert the value NULL into column 'Name' if not default database name is used
-- In hotfix cases the Office 365 setting would be cleared , The encrypted password for the MIM Service’s Exchange Online mailbox is not changed
+- In hotfix cases the Microsoft 365 setting would be cleared , The encrypted password for the MIM Service’s Exchange Online mailbox is not changed
 - *There was no limit to the MIM Service log file created, Updated logging default setting and implemented circular logging capability
 
 #### Privileged Access Management 
@@ -367,7 +367,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 
 - **MIM Portal cross-browser compatibility for end-user self-service:** In this Service Pack we are introducing support for most major browsers. Users may now access and interact with the MIM Portal for self-service group and profile management from Edge, Chrome, and Safari.
 
-- **MIM Service support for Exchange Online:** The MIM Service has long supported sending and receiving emails for approvals and notifications. Prior to SP1 MIM only supported Exchange Server or SMTP. With service pack 1, the MIM Service can send and receive requests as well as email notifications using an Office365 Exchange online account.
+- **MIM Service support for Exchange Online:** The MIM Service has long supported sending and receiving emails for approvals and notifications. Prior to SP1 MIM only supported Exchange Server or SMTP. With service pack 1, the MIM Service can send and receive requests as well as email notifications using a Microsoft 365 Exchange online account.
 
 - **Image file format validation on upload:** MIM is now able to validate the file format of images when they are uploaded to the portal.
 

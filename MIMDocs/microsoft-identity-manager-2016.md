@@ -17,7 +17,7 @@ ms.prod: microsoft-identity-manager
 Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of Forefront Identity Manager. Like its predecessor, MIM helps you manage the users, credentials, policies, and access within your organization.  Additionally, MIM 2016 adds a hybrid experience, privileged access management capabilities, and support for new platforms.
 
 
-With MIM, an organization can simplify identity lifecycle management with automated workflows, business rules and easy integration with heterogeneous platforms across the datacenter. MIM enables the organization to have the right users and access rights for Active Directory for on-premises apps, and Azure AD Connect can then make available in Azure AD for Office 365 and cloud-hosted apps. Common MIM scenarios include:
+With MIM, an organization can simplify identity lifecycle management with automated workflows, business rules and easy integration with heterogeneous platforms across the datacenter. MIM enables the organization to have the right users and access rights for Active Directory for on-premises apps, and Azure AD Connect can then make available in Azure AD for Microsoft 365 and cloud-hosted apps. Common MIM scenarios include:
  - Automatic identity and group provisioning based on business policy and workflow-driven provisioning
  - Integration of the contents of directories with HR systems and other sources of authority
  - Synchronizing identities between directories, databases, and on-premises applications through common APIs and protocols, Microsoft-delivered connectors, and partner-delivered connectors
