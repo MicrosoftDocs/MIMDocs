@@ -52,7 +52,7 @@ This table describes the supported platforms and version for each component of M
 | **MIM Password Reset and Registration Portals** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Web browser | All major supported browsers |
 | **MIM Add-ins and Extensions** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Outlook integration (optional) | Outlook 2010 (on Windows, except Click-To-Run)<br/>Outlook 2013 (on Windows, except Click-To-Run) <br/> Outlook 2016 (on Windows 10, except Click-To-Run) *<br/>Office 365 Outlook (on Windows 10, including Click-To-Run) ** |
+| | Outlook integration (optional) | Outlook 2010 (on Windows, except Click-To-Run)<br/>Outlook 2013 (on Windows, except Click-To-Run) <br/> Outlook 2016 (on Windows 10, except Click-To-Run) *<br/>Outlook for Microsoft 365 (on Windows 10, including Click-To-Run) ** |
 | | PAM PowerShell requestor cmdlets (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (Server and CA integration) | Windows server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Certificate authority | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |

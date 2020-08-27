@@ -36,7 +36,7 @@ Microsoft Identity Manager 2016 is licensed on a per-user basis.  The details on
 
 Microsoft Identity Manager 2016 is included with Azure Active Directory Premium (P1 and P2), which is part of Enterprise Mobility + Security.
 
-Azure AD Premium is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Office 365 subscribers can also buy Azure Active Directory Premium P1 and P2 online.  Read more at [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD Premium is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Microsoft 365 subscribers can also buy Azure Active Directory Premium P1 and P2 online.  Read more at [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### MIM CALs
 
@@ -109,7 +109,7 @@ The following downloads may also be relevant:
 
 - [MIM Hybrid Reporting Agent](https://www.microsoft.com/download/details.aspx?id=55112)
 
-- [Generic LDAP Connector, Generic SQL Connector, Graph Connector, Lotus Domino Connector, PowerShell Connector, Web Services Connector](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Generic LDAP Connector, Generic SQL Connector, Graph Connector, Lotus Domino Connector, PowerShell Connector, Web Services Connector](https://go.microsoft.com/fwlink/?LinkId=717495)
 
 - [Connector for SharePoint User Profile Store](https://www.microsoft.com/download/details.aspx?id=41164)
 
