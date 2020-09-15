@@ -18,7 +18,7 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 
 The [Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
- enables additional integration scenarios for Azure AD Premium customers.  It surfaces in the MIM sync metaverse additional objects obtained from the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta.
+ enables additional integration scenarios for Azure AD Premium customers.  It surfaces in the MIM sync metaverse additional objects obtained from the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta.
 
 ## Scenarios covered
 
@@ -36,7 +36,7 @@ To learn how to configure MIM sync to automatically create and maintain AD DS ac
 ### Other identity management scenarios
 
 
-The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Azure AD, beyond user and group synchronization to Azure AD. When evaluating potential scenarios, please keep in mind: this connector cannot be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with an Azure AD Connect deployment.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.  Azure AD Connect has many more synchronization features and enables scenarios such as password and device writeback, which are not possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it is excluded from Azure AD Connect attempting to match those objects back to the Azure AD directory.  Nor can this connector be used to make changes to Azure AD objects, which were created by Azure AD Connect.
+The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Azure AD, beyond user and group synchronization to Azure AD. When evaluating potential scenarios, please keep in mind: this connector cannot be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with an Azure AD Connect deployment.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.  Azure AD Connect has many more synchronization features and enables scenarios such as password and device writeback, which are not possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it is excluded from Azure AD Connect attempting to match those objects back to the Azure AD directory.  Nor can this connector be used to make changes to Azure AD objects, which were created by Azure AD Connect.
 
 
 
@@ -99,8 +99,8 @@ More details about required permissions could be found [here](https://developer.
 
 
 
-9.  In the Synchronization Service Manager UI, select **Connectors** and **Create**.
-Select **Graph (Microsoft)** , create a connector and give it a descriptive name.
+9.  In the Synchronization Service Manager UI, select **Connectors** and **Create**.
+Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
