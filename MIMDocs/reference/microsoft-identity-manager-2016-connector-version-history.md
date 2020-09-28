@@ -44,10 +44,7 @@ Related links:
 ## 1.1.1302.0 (September 2020)
 ### Fixed issues
 - Graph Connector
-  - Fixed a bug with schema refresh when */beta* endpoint is used
-### Enhancements
-- Graph Connector
-  - Added support for navigation properties of complex schema types
+  - Fixed an issue with schema refresh for */beta* endpoint
 
 ## 1.1.1301.0 (August 2020)
 ### Fixed issues
