@@ -7,7 +7,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: mbaldwin
-ms.date: 05/1/2017
+ms.date: 06/28/2019
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
@@ -49,9 +49,9 @@ For the full XSD schema, see Appendix A: Default XSD Schema later in this docume
 The following is the XSD schema for the ObjectControlConfiguration element:
 
 ```XML
-<xsd:element name="ObjectControlConfiguration"\>
-  <xsd:complexType\>
-    <xsd:sequence\>
+<xsd:element name="ObjectControlConfiguration">
+  <xsd:complexType>
+    <xsd:sequence>
       <xsd:element ref="my:ObjectDataSource" minOccurs="0" maxOccurs="32"/>
       <xsd:element ref="my:XmlDataSource" minOccurs="0" maxOccurs="32"/>
       <xsd:element ref="my:Panel"/>
@@ -1229,31 +1229,36 @@ of string, integer, datetime, and Boolean are good candidates for this control.
 
 **Properties**:
 
-1.  **All Common Properties**: For more information, see the Common properties
+1. **All Common Properties**: For more information, see the Common properties
     section of this document.
 
-2.  **ValuePath**: The property to get the Value attribute from ItemSource. When
+2. **ValuePath**: The property to get the Value attribute from ItemSource. When
     ItemSource is specified as Custom, the value path is set to Value. It binds
     with the Value field from the Option element that is defined later in this
     document.
 
-3.  **CaptionPath**: The property to get the Value attribute from ItemSource. When
+3. **CaptionPath**: The property to get the Value attribute from ItemSource. When
     ItemSource is specified as Custom, the value path is set to Caption. It
     binds with the Caption field from the Option element that is defined later
     in this document.
 
-4.  **HintPath**: The property to get the Value attribute from ItemSource. When
+4. **HintPath**: The property to get the Value attribute from ItemSource. When
     ItemSource is specified as Custom, the value path is set to Hint. It binds
     with the Hint field from the Option element that is defined later in this
     document.
 
-5.  **ItemSource**: A collection of ListControlItems that defines the choices in the
+5. **ItemSource**: A collection of ListControlItems that defines the choices in the
     list. The user can explicitly set this to Custom and use the Option element
     to specify the string value.
 
-6.  **SelectedValue**: The value that is currently selected. This is a required,
+6. **SelectedValue**: The value that is currently selected. This is a required,
     string-type property. This property is bound with string data from the data
     source.
+    
+7. **DefaultValue**: This is an optional, string-type property. Use this property to define a default value for the drop-down box if it is used to create a new object.
+
+> [!IMPORTANT]
+> The DefaultValue property is only available in MIM update rollup 4.4.1459.0 and newer.
 
 Events:
 
@@ -1394,22 +1399,27 @@ There is no indication of the upload progress or status. When the file is upload
 
 Properties:
 
-1.  All Common Properties: For information, see the Common properties section of
+1. All Common Properties: For information, see the Common properties section of
     this document.
 
-2.  Value: This is a required attribute. It specifies the schema attribute
+2. Value: This is a required attribute. It specifies the schema attribute
     binding on the server to which the data is uploaded.
 
-3.  ContentType: This is an optional, string-type attribute. This is the data
+3. ContentType: This is an optional, string-type attribute. This is the data
     type that the file is saved to on the server. This can be set to Text or
     Binary. When the property is missing, the default value is Binary.
 
-4.  MaxFileSize: This is an optional, string-type attribute. MaxFileSize defines
+4. MaxFileSize: This is an optional, string-type attribute. MaxFileSize defines
     how big the uploaded file size can be. By default, if the property is
     missing, the maximum size is 1 megabyte (MB).
 
-5.  PromptedForNoValue: This is an optional, string-type attribute. It defines
+5. PromptedForNoValue: This is an optional, string-type attribute. It defines
     the text that appears to the user when a file is not being uploaded.
+
+6. ValidateImage: This is an optional, boolean-type attribute. It defines if the uploaded content should be verified to ensure that it is an image. The uploaded file is verified by attempting to process the uploaded content with the .NET Framework [Image.FromStream()](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.fromstream?view=netframework-3.5) method.
+
+> [!IMPORTANT]
+> The ValidateImage property is only available in MIM update rollup 4.3.2195.0 and newer.
 
 Events:
 
@@ -2122,21 +2132,26 @@ options to choose from. Otherwise, UOCListView is recommended.
 
 Properties:
 
-1.  All Common Properties: For information about this property, see the Common
+1. All Common Properties: For information about this property, see the Common
     properties section of this document.
 
-2.  ValuePath: The value path is set to Value. It binds with the Value field
+2. ValuePath: The value path is set to Value. It binds with the Value field
     from the Option element that is defined in this document.
 
-3.  CaptionPath: The value path is set to Caption. It binds with the Caption
+3. CaptionPath: The value path is set to Caption. It binds with the Caption
     field from the Option element that is defined in this document.
 
-4.  HintPath: The value path is set to Hint. It binds with the Hint field from
+4. HintPath: The value path is set to Hint. It binds with the Hint field from
     the Option element that is defined in this document.
 
-5.  SelectedValue: The value that is currently selected. This is a required,
+5. SelectedValue: The value that is currently selected. This is a required,
     string-type property. This property binds with string data from the data
     source.
+
+6. DefaultValue: This is an optional, string-type property. Use this property to define a default value for the drop-down box if it is used to create a new object.
+
+> [!IMPORTANT]
+> The DefaultValue property is only available in MIM update rollup 4.4.1459.0 and newer.
 
 Events:
 
