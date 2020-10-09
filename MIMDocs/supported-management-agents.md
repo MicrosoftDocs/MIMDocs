@@ -34,19 +34,19 @@ This article covers the connectors that are included & supported in MIM, but the
 
 ## Supported connectors in MIM 2016 SP1
 
-| Name | Supported versions of the connected data source & Technical links |
+| Connector name | Supported versions of the connected data source & Technical links |
 | ---- | ----------------------------------------------- |
 | Active Directory Domain Services | Active Directory in Windows Server 2012 - 2019 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
-| Active Directory Global Address List (GAL) | Active Directory Global Address List (GAL) – Exchange 2013 - 2019 |
+| Active Directory Global Address List (GAL) | Active Directory Global Address List (GAL) in Exchange 2013 - 2019 |
 | Extensible Connectivity 2.0 | Any call-based or file-based data source |
 | FIM Service | MIM Service. Note that the MIM Synchronization Service and MIM Service must be the same version. |
-| IBM DB2 Universal Database | IBM DB2 version 9.5 or 9.7; IBM DB2 OLEDB v9.5 FP5 or v9.7 FP1 |
-| IBM Directory Server | IBM Tivoli Directory Server 6.x |
-| Novell eDirectory | Novell eDirectory version 8.7.3, 8.8.5 and 8.8.6 |
-| Oracle Database | Oracle Database 10g or 11g; 64-bit client |
-| Microsoft SQL Server | SQL Server 2012 - 2017 |
-| Oracle (previously Sun and Netscape) Directory Servers | Sun Directory Server 6.x, 7.x and Oracle 11 |
+| IBM DB2 Universal Database | IBM DB2 version 9.5 or 9.7; IBM DB2 OLEDB v9.5 FP5 or v9.7 FP1 <br/> Use Generic SQL connector for later versions|
+| IBM Directory Server | IBM Tivoli Directory Server 6.x <br/> Use Generic LDAP connector for later versions|
+| Novell eDirectory | Novell eDirectory version 8.7.3, 8.8.5 and 8.8.6 <br/> Use Generic LDAP connector for later versions|
+| Oracle Database | Oracle Database 10g or 11g; 64-bit client <br/> Use Generic SQL connector for later versions|
+| Microsoft SQL Server | SQL Server 2012 - 2017 <br/> Use Generic SQL connector for later versions or SQL Azure|
+| Oracle (previously Sun and Netscape) Directory Servers | Sun Directory Server 6.x, 7.x and Oracle 11<br/> Use Generic LDAP connector for later versions |
 | [Windows PowerShell Connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 or better |
 | [Microsoft Azure Active Directory Connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (not recommended for new deployments) |
 | [Generic LDAP Connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3 server (RFC 4510 compliant)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
