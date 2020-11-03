@@ -29,7 +29,7 @@ Microsoft® BHOLD Suite Service Pack 1 (SP1) is a collection of applications tha
 
 
 > [!NOTE]
-> **Applies To**: Microsoft Identity Manager 2016 SP1
+> **Applies To**: Microsoft Identity Manager 2016 SP1 or later
 
 ## What this document covers
 
@@ -37,7 +37,7 @@ This document explains how to plan your BHOLD deployment to meet your business n
 
 ## Pre-requisite knowledge
 
-This document assumes that you have a basic understanding of how to install software on server computers. It also assumes that you have basic knowledge of Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM), and Microsoft SQL Server 2012 database software. A description of how to set up and configure dependent technologies such as AD DS and FIM is out of the scope of this documentation. For information about the functions that the Microsoft BHOLD modules perform, see [the Microsoft BHOLD suite concepts guide](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
+This document assumes that you have a basic understanding of how to install software on server computers. It also assumes that you have basic knowledge of Active Directory® Domain Services, Forefront or Microsoft Identity Manager (FIM), and Microsoft SQL Server 2012 database software. A description of how to set up and configure dependent technologies such as AD DS and FIM is out of the scope of this documentation. For information about the functions that the Microsoft BHOLD modules perform, see [the Microsoft BHOLD suite concepts guide](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## Audience
 

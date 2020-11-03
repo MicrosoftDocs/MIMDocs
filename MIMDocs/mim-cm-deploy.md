@@ -410,7 +410,7 @@ It is highly recommended that you require SSL on the MIM CM portal. If you donâ€
 
 2. Ensure you are logged on as Contoso\\MIMINSTALL.
 
-3. Mount the Microsoft Identity Manager SP1 ISO.
+3. Mount the Microsoft Identity Manager 2016 SP1 or later service pack ISO.
 
 4. **Open** the **Certificate Management\\x64** directory.
 

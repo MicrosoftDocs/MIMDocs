@@ -17,7 +17,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/2/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -26,13 +26,13 @@ ms.suite: ems
 
 # Connect to your directories
 
-Connectors link specific connected data sources to Microsoft Identity Manager SP1 (MIM). A connector moves data from a connected data source to MIM. When data in MIM is modified, the connector can also export the data to the connected data source to keep it synchronized with MIM. Generally, there is at least one connector for each connected directory.
+Connectors link specific connected data sources to Microsoft Identity Manager (MIM). A connector moves data from a connected data source to MIM. When data in MIM is modified, the connector can also export the data to the connected data source to keep it synchronized with MIM. Generally, there is at least one connector for each connected directory.
 
 In Forefront Identity Manager, connectors were known as management agents. That term is still used in some articles or parts of the product, but know that both terms refer to the same concept.
 
 This article covers the connectors that are included & supported in MIM, but the connector for Extensible Connectivity 2.0 makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## Supported connectors in MIM 2016 SP1
+## Supported connectors in MIM 2016 SP2
 
 | Connector name | Supported versions of the connected data source & Technical links |
 | ---- | ----------------------------------------------- |

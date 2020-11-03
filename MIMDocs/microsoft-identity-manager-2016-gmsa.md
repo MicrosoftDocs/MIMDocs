@@ -84,7 +84,7 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
 
     If you've entered the account information successfully, you have the option to change the destination, or export file location, of the backup encryption key. By default, the export file location is *C:\Windows\system32\miiskeys-1.bin*.
 
-1. Install Microsoft Identity Manager SP1, which you can find at the Volume Licensing Service Center or the MSDN Downloads site. After you've completed the installation, save the keyset *miiskeys.bin*.
+1. Install Microsoft Identity Manager 2016 SP1 or later hotfix, which you can find at the Volume Licensing Service Center or the MSDN Downloads site. After you've completed the installation, save the keyset *miiskeys.bin*.
 
    ![The Microsoft Identity Manager Synchronization Service installation progress window](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
