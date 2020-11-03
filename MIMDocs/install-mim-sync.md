@@ -46,7 +46,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 2. Unpack the MIM installation package or mount the MIM image DVD.  If you do not have this DVD, see [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md).
 
-## Install MIM 2016 SP1 Synchronization Service
+## Install MIM 2016 SP1 or later Synchronization Service
 
 1. In the unpacked MIM installation folder, navigate to the **Synchronization Service** folder.
 

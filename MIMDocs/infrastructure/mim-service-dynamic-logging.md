@@ -13,7 +13,7 @@ ms.prod: microsoft-identity-manager
 
 
 
-# MIM SP1 (4.4.1436.0)  Service Dynamic Logging
+# MIM 2016 SP1 (4.4.1436.0)  Service Dynamic Logging
 
 In 4.4.1436.0 We have introduced a new logging capability. This enable administrator and support engineers to turn on logging without having to restart the management service.
 
