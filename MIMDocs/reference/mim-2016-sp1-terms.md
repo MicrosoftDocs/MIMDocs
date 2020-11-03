@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Microsoft Identity Manager 2016 SP1 terminology
 
-This document is a comprehensive list of terms that are referenced in Microsoft Identity Manager 2016 SP1.
+This document is a comprehensive list of terms that are referenced in Microsoft Identity Manager 2016 SP1 and later.
 
 ## A
 

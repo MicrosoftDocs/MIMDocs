@@ -17,7 +17,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/2/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -26,13 +26,13 @@ ms.suite: ems
 
 # Connect to your directories
 
-Connectors link specific connected data sources to Microsoft Identity Manager SP1 (MIM). A connector moves data from a connected data source to MIM. When data in MIM is modified, the connector can also export the data to the connected data source to keep it synchronized with MIM. Generally, there is at least one connector for each connected directory.
+Connectors link specific connected data sources to Microsoft Identity Manager (MIM). A connector moves data from a connected data source to MIM. When data in MIM is modified, the connector can also export the data to the connected data source to keep it synchronized with MIM. Generally, there is at least one connector for each connected directory.
 
 In Forefront Identity Manager, connectors were known as management agents. That term is still used in some articles or parts of the product, but know that both terms refer to the same concept.
 
 This article covers the connectors that are included & supported in MIM, but the connector for Extensible Connectivity 2.0 makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## Supported connectors in MIM 2016 SP1
+## Supported connectors in MIM 2016 SP2
 
 | Connector name | Supported versions of the connected data source & Technical links |
 | ---- | ----------------------------------------------- |
@@ -48,9 +48,9 @@ This article covers the connectors that are included & supported in MIM, but the
 | Microsoft SQL Server | SQL Server 2012 - 2017 <br/> Use Generic SQL connector for later versions or SQL Azure|
 | Oracle (previously Sun and Netscape) Directory Servers | Sun Directory Server 6.x, 7.x and Oracle 11<br/> Use Generic LDAP connector for later versions |
 | [Windows PowerShell Connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 or better |
-| [Microsoft Azure Active Directory Connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (not recommended for new deployments) |
-| [Generic LDAP Connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3 server (RFC 4510 compliant)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
-| [Generic SQL Connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [The Connector is supported with all 64-bit ODBC drivers](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
+| [Microsoft Azure Active Directory Connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (not recommended for new deployments, use Azure AD Connect sync, Azure AD Connect cloud provisioning, or Graph connector instead) |
+| [Generic LDAP Connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3 server (RFC 4510 compliant)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector), including 389 Directory Server, Apache Directory Server, IBM Tivoli DS, Isode Directory, NetIQ eDirectory, Novell eDirectory, Open DJ, Open DS, Open LDAP, Oracle Directory Server Enterprise Edition, RadiantOne Virtual Directory Server, Sun One Directory Server |
+| [Generic SQL Connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [The Connector is supported with all 64-bit ODBC drivers](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) including Microsoft SQL Server & SQL Azure, IBM DB2 10.x, IBM DB2 9.x, Oracle 10 & 11g, Oracle 12c & 18c, MySQL 5.x|
 | [Connector for Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x, v9.0.x |
 | [SharePoint Services Connector UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint server 2013 - 2019 with User Profile service application (UPA) |
 | [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 or 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 and other SOAP and REST APIs](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
