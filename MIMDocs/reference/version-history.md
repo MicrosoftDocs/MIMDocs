@@ -26,6 +26,14 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
 
+## MIM Version 4.6.355.0
+- Status: November 6, 2020
+- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=102301)
+- [KB article 4585922](https://support.microsoft.com/help/4585922)
+
+This hotfix contains updates for the MIM Synchronization Manager, MIM Service and MIM Portal components.
+
+
 ## MIM Version 4.6.263.0
 - Status: August 7, 2020
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=101612)
