@@ -31,7 +31,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=102301)
 - [KB article 4585922](https://support.microsoft.com/help/4585922)
 
-This hotfix contains updates for the MIM Synchronization Manager, MIM Service and MIM Portal components.
+This hotfix contains updates for the MIM Synchronization Manager, MIM Service and MIM Portal components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
 
 
 ## MIM Version 4.6.263.0
