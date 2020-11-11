@@ -44,13 +44,13 @@ Related links:
 ## 1.1.1346.0 (November 2020)
 ### Fixed issues
 - Graph Connector
-  - Fixed an issue with local connector cache corruption causing delta import runs failures
+  - Fixed an issue with local connector cache corruption causing delta import run failures
   - Fixed an issue with duplicated entries reported by connector during full import run causing discovery errors
   - Fixed an issue with incorrect import of complex data types, e.g. *employeeOrgData*
 - Generic SQL Connector
-  - Fixed an issue with SQL native authentication failures due to DSN connection string property *TrustedConnection* set to *false* 
+  - Fixed an issue with SQL native authentication failure due to DSN connection string property *TrustedConnection* set to *false* 
 - Generic LDAP Connector
-  - Fixed an issue with *OpenLDAP* *accessLog* entries processing on delta import causing incorrect group membership changes reported by connector
+  - Fixed an issue with *OpenLDAP* *accessLog* entries processing on delta import causing incorrect group membership changes and other errors
 
 ## 1.1.1302.0 (September 2020)
 ### Fixed issues
