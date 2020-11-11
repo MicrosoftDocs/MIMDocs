@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 11/11/20220
+ms.date: 11/11/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
