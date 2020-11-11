@@ -4,7 +4,7 @@ description: This topic lists all releases of the Connectors for Forefront Ident
 services: active-directory
 documentationcenter: ''
 author: EugeneSergeev
-manager: daveba
+manager: aashiman
 editor: ''
 reviewer: markwahl-msft
 
@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/11/20220
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
