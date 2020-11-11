@@ -41,6 +41,17 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
+## 1.1.1346.0 (November 2020)
+### Fixed issues
+- Graph Connector
+  - Fixed an issue with local connector cache corruption causing delta import runs failures
+  - Fixed an issue with duplicated entries reported by connector during full import run causing discovery errors
+  - Fixed an issue with incorrect import of complex data types, e.g. *employeeOrgData*
+- Generic SQL Connector
+  - Fixed an issue with SQL native authentication failures due to DSN connection string property *TrustedConnection* set to *false* 
+- Generic LDAP Connector
+  - Fixed an issue with *OpenLDAP* *accessLog* entries processing on delta import causing incorrect group membership changes reported by connector
+
 ## 1.1.1302.0 (September 2020)
 ### Fixed issues
 - Graph Connector
