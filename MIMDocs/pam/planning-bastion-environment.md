@@ -128,7 +128,7 @@ Although inconvenient, separate hardened workstations dedicated to users with hi
 
 - **Secure Boot** to mitigate against attackers or malware attempting to load unsigned code into the boot process.
 
-- **Software restriction** to ensure that only authorized administrative software is executed on the administrative hosts. Customers can use AppLocker for this task with a whitelist of authorized applications, to help prevent malicious software and unsupported applications from executing.
+- **Software restriction** to ensure that only authorized administrative software is executed on the administrative hosts. Customers can use AppLocker for this task with an approved list of authorized applications, to help prevent malicious software and unsupported applications from executing.
 
 - **Full volume encryption** to mitigate against physical loss of computers, such as administrative laptops used remotely.
 
