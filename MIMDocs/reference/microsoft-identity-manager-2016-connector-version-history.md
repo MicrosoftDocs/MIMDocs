@@ -44,7 +44,7 @@ Related links:
 ## 1.1.1347.0 (December 2020)
 ### Fixed issues
 - Graph Connector
-  - Fixed an issue with connector sending b2b invitations instead of creating a mail-enabled group or a contact
+  - Fixed an issue with connector incorrectly sending B2B invitations when creating a mail-enabled group or a contact
 
 ## 1.1.1346.0 (November 2020)
 ### Fixed issues
