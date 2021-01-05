@@ -28,7 +28,7 @@ Connectors link specific connected data sources to Microsoft Identity Manager (M
 > This topic is primarily on FIM and MIM Connectors only. Unless explicitly called out below, these Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on Azure AD Connect when upgrading to specified Build.
 
 
-This topic list all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
+This topic lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
 
 
 Related links:
@@ -477,8 +477,8 @@ The Azure AD Connector for FIM was an early technology for synchronizing identit
 
 ## Next steps
 
-Learn more about the [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation
-Learn more about the[Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation
-Learn more about the [Web Services Connector](microsoft-identity-manager-2016-ma-ws.md) reference documentation
-Learn more about the [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
-Learn more about the [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
+Learn more about the [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation.
+Learn more about the[Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation.
+Learn more about the [Web Services Connector](microsoft-identity-manager-2016-ma-ws.md) reference documentation.
+Learn more about the [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation.
+Learn more about the [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation.
