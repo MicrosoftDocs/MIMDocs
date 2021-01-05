@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/14/2017
+ms.date: 10/1/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -19,10 +19,14 @@ ms.assetid:
 
 The Microsoft Identity Manager team regularly releases updates that are listed in the [version](version-history.md) history. This article helps you keep track of the versions that have been released for BHOLD, a subcomponent of the Microsoft Identity Manager. You can then decide whether you need to update to the newest version or not.
 
+## Version 6.0.62.0
+
+- Status: October 2018
+- [Download](https://www.microsoft.com/download/details.aspx?id=55950)
+
 ## Version 6.0.36.0
 
 - Status: September 7, 2017
-- [Download](https://www.microsoft.com/en-us/download/details.aspx?id=55950)
 
 ### Enhancements 
 BHOLD version 6.0.36.0 includes the following enhancements:

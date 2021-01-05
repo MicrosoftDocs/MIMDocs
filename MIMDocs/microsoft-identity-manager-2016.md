@@ -6,7 +6,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 10/18/2019
+ms.date: 1/5/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -22,13 +22,13 @@ With MIM, an organization can simplify identity lifecycle management with automa
  - Integration of the contents of directories with HR systems and other sources of authority
  - Synchronizing identities between directories, databases, and on-premises applications through common APIs and protocols, Microsoft-delivered connectors, and partner-delivered connectors
 
-The current releases under mainstream support are MIM 2016 Service Pack 1 and Service Pack 2 (SP2).  Customers running FIM or MIM versions prior to MIM 2016 SP1 should upgrade to MIM 2016 SP2 or a later hotfix.
+The current MIM releases supported under fixed and Azure support policies are MIM 2016 Service Pack 2 (SP2) and later hotfixes.  Customers running FIM or MIM versions prior to MIM 2016 SP2 should upgrade to MIM 2016 SP2 or a later hotfix.
 
-Microsoft regularly delivers updates to MIM, including enhancements for customer requests and bug fixes, on an ongoing release cycle.
+Microsoft regularly delivers updates to MIM, including enhancements for customer requests and bug fixes, on an ongoing release cycle through hotfixes and service packs. See the [version history](./reference/version-history.md) for links to the most recent.
 
 ## Updates in MIM 2016 SP2
 
-MIM 2016 Service Pack 2 is a rollup of existing hotfixes since MIM 2016 SP1. It also introduces the option to configure use of Group Managed Service Accounts for MIM Synchronization Service and MIM Service, and enables MIM to be deployed with other updated platform software. More details could be found in [MIM 2016 Version Release History](./reference/version-history.md)
+MIM 2016 Service Pack 2 is a rollup of existing hotfixes since MIM 2016 SP1. It also introduces the option to configure use of Group Managed Service Accounts for MIM Synchronization Service and MIM Service, and enables MIM to be deployed with other updated platform software. More details could be found in [MIM 2016 Version Release History](./reference/version-history.md).
 
 ### Support update for Azure Active Directory Premium customers
 For Azure AD Premium customers, standard support is available from June 2020 onward, continuing after January 2021. For more information, see the [Azure AD support process](support-update-for-azure-active-directory-premium-customers.md).
@@ -41,11 +41,9 @@ For Azure AD Premium customers, standard support is available from June 2020 onw
 
 ### Recent software releases
 
-- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated July 2019
-- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated October 2019
+- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated December 2020
+- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated November 2020
 - [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated October 2018
-
-
 
 
 ## Related topics
