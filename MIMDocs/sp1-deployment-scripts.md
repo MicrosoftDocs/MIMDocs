@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: MIM2016 SP1 PAM Deployment Scripts
-description: This is page is part of the series of articles about configuring Microsoft Identity Manager using scripts. It includes a list of the assumptions about the environment.
+title: MIM PAM Deployment Scripts
+description: This page is part of the series of articles about configuring Microsoft Identity Manager using scripts. It includes a list of the assumptions about the environment.
 keywords:
 author: billmath
 ms.author: billmath
@@ -24,15 +24,15 @@ ms.suite: ems
 #ms.custom:
 
 ---
-# MIM2016 SP1 PAM deployment scripts
+# MIM PAM deployment scripts
 
-In this service pack we are introducing a set of deployment scripts to make it easier to deploy PAM. These scripts are available at the download center . Before you attempt to use the scripts it is important that you make sure that you meet the requirements below:
+MIM 2016 Service Pack 1 introduced a set of deployment scripts to make it easier to deploy PAM. These scripts are available at the download center. Before you attempt to use the scripts, it is important that you make sure that you meet the requirements below:
 
 1. The operating system on all servers is at least Windows Server 2012 R2.
 2. DNS must be configured to enable name resolution between your Domain Controllers and component servers.
 3. Installation binaries must be available locally on the designated servers for installation of SQL, SharePoint, and MIM.
 4. The environment has three dedicated (physical or virtual) machines independently running CORPDC, PRIVDC, and PAMSERVER.
-5. For the validation option you need to have a dedicated workstation.
+5. For the validation option, you need to have a dedicated workstation.
 
 >[!NOTE]
 >If you run into any problem with script execution you may need to take a look at the logs. All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file and include this, along with details of the operation and the error, in your support case.
