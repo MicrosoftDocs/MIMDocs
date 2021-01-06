@@ -36,12 +36,14 @@ landingContent:
     linkLists:
       - linkListType: whats-new
         links:
-          - text: MIM version history
+          - text: MIM Version History
             url: reference/version-history.md
-          - text: Connectors version history
+          - text: Connectors Version History
             url: reference/microsoft-identity-manager-2016-connector-version-history.md
       - linkListType: reference
         links:
+          - text: PowerShell Cmdlets Reference
+            url: /powershell/microsoft-identity-manager/overview
           - text: Privileged Access Management REST API Reference
             url: /microsoft-identity-manager/reference/privileged-access-management-rest-api-reference
           - text: Certificate Management REST API Reference

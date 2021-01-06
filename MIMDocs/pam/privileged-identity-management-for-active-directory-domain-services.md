@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/30/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -27,7 +27,7 @@ experiment_id: kgremban_images
 ---
 # Privileged Access Management for Active Directory Domain Services
 
-Privileged Access Management (PAM) is a solution that helps organizations restrict privileged access within an existing Active Directory environment.
+MIM Privileged Access Management (PAM) is a solution that helps organizations restrict privileged access within an existing and isolated Active Directory environment.
 
 Privileged Access Management accomplishes two goals:
 
@@ -35,25 +35,17 @@ Privileged Access Management accomplishes two goals:
 - Isolate the use of privileged accounts to reduce the risk of those credentials being stolen.
 
 > [!NOTE]
-> PAM is distinct from [Azure Active Directory Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM).  Azure AD PIM is a service in Azure AD that enables you to manage, control, and monitor access to resources in Azure AD, Azure, and other Microsoft Online Services such as Microsoft 365 or Microsoft Intune.
+> MIM PAM is distinct from [Azure Active Directory Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM). MIM PAM is intended for isolated on-premises AD environments. Azure AD PIM is a service in Azure AD that enables you to manage, control, and monitor access to resources in Azure AD, Azure, and other Microsoft Online Services such as Microsoft 365 or Microsoft Intune. For guidance on on-premises Internet-connected environments and hybrid environments, see [securing privileged access](/security/compass/overview) for more information.
 
-## What problems does PAM help solve?
+## What problems does MIM PAM help solve?
 
-A real concern for enterprises today is resource access within an Active Directory environment. Particularly troubling are:
-
-- Vulnerabilities.
-- Unauthorized privilege escalations.
-- [Pass-the-hash](https://technet.microsoft.com/dn785092.aspx).
-- Pass-the-ticket.
-- spear phishing.
-- Kerberos compromises.
-- Other attacks.
-
-Today, it’s too easy for attackers to obtain Domain Admins account credentials, and it’s too hard to discover these attacks after the fact. The goal of PAM is to reduce opportunities for malicious users to get access, while increasing your control and awareness of the environment.
+Today, it's too easy for attackers to obtain Domain Admins account credentials, and it's too hard to discover these attacks after the fact. The goal of PAM is to reduce opportunities for malicious users to get access, while increasing your control and awareness of the environment.
 
 PAM makes it harder for attackers to penetrate a network and obtain privileged account access. PAM adds protection to privileged groups that control access across a range of domain-joined computers and applications on those computers. It also adds more monitoring, more visibility, and more fine-grained controls. This allows organizations to see who their privileged administrators are and what are they doing. PAM gives organizations more insight into how administrative accounts are used in the environment.
 
-## Setting up PAM
+The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
+
+## Setting up MIM PAM
 
 PAM builds on the principle of just-in-time administration, which relates to [just enough administration (JEA)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA is a Windows PowerShell toolkit that defines a set of commands for performing privileged activities. It is an endpoint where administrators can get authorization to run commands. In JEA, an administrator decides that users with a certain privilege can perform a certain task. Every time an eligible user needs to perform that task, they enable that permission. The permissions expire after a specified time period, so that a malicious user can't steal the access.
 
@@ -62,11 +54,11 @@ PAM setup and operation has four steps.
 ![PAM steps: prepare, protect, operate, monitor - diagram](media/MIM_PIM_SetupProcess.png)
 
 1. **Prepare**: Identify which groups in your existing forest have significant privileges. Recreate these groups without members in the bastion forest.
-2. **Protect**: Set up lifecycle and authentication protection, such as Multi-Factor Authentication (MFA), for when users request just-in-time administration. MFA helps prevent programmatic attacks from malicious software or following credential theft.
+2. **Protect**: Set up lifecycle and authentication protection for when users request just-in-time administration. 
 3. **Operate**: After authentication requirements are met and a request is approved, a user account gets added temporarily to a privileged group in the bastion forest. For a pre-set amount of time, the administrator has all privileges and access permissions that are assigned to that group. After that time, the account is removed from the group.
 4. **Monitor**: PAM adds auditing, alerts, and reports of privileged access requests. You can review the history of privileged access, and see who performed an activity. You can decide whether the activity is valid or not and easily identify unauthorized activity, such as an attempt to add a user directly to a privileged group in the original forest. This step is important not only to identify malicious software but also for tracking "inside" attackers.
 
-## How does PAM work?
+## How does MIM PAM work?
 
 PAM is based on new capabilities in AD DS, particularly for domain account authentication and authorization, and new capabilities in Microsoft Identity Manager. PAM separates privileged accounts from an existing Active Directory environment. When a privileged account needs to be used, it first needs to be requested, and then approved. After approval, the privileged account is given permission via a foreign principal group in a new bastion forest rather than in the current forest of the user or application. The use of a bastion forest gives the organization greater control, such as when a user can be a member of a privileged group, and how the user needs to authenticate.
 
@@ -102,9 +94,9 @@ Get details about the [Privileged Access Management cmdlets](https://docs.micros
 
 ## What workflows and monitoring options are available?
 
-As an example, let’s say a user was a member of an administrative group before PIM is set up. As part of PIM setup, the user is removed from the administrative group, and a policy is created in MIM. The policy specifies that if that user requests administrative privileges and is authenticated by MFA, the request is approved and a separate account for the user will be added to the privileged group in the bastion forest.
+As an example, let's say a user was a member of an administrative group before PAM is set up. As part of PAM setup, the user is removed from the administrative group, and a policy is created in MIM. The policy specifies that if that user requests administrative privileges, the request is approved and a separate account for the user will be added to the privileged group in the bastion forest.
 
-Assuming the request is approved, the Action workflow communicates directly with bastion forest Active Directory to put a user in a group. For example, when Jen requests to administer the HR database, the administrative account for Jen is added to the privileged group in the bastion forest within seconds. Her administrative account’s membership in that group will expire after a time limit. With Windows Server Technical Preview, that membership is associated in Active Directory with a time limit; with Windows Server 2012 R2 in the bastion forest, that time limit is enforced by MIM.
+Assuming the request is approved, the Action workflow communicates directly with bastion forest Active Directory to put a user in a group. For example, when Jen requests to administer the HR database, the administrative account for Jen is added to the privileged group in the bastion forest within seconds. Her administrative account's membership in that group will expire after a time limit. With Windows Server 2016 or later, that membership is associated in Active Directory with a time limit.
 
 > [!NOTE]
 > When you add a new member to a group, the change needs to replicate to other domain controllers (DCs) in the bastion forest. Replication latency can impact the ability for users to access resources. For more information about replication latency, see [How Active Directory Replication Topology Works](https://technet.microsoft.com/library/cc755994.aspx).
@@ -115,5 +107,5 @@ This workflow is specifically intended for these administrative accounts. Admini
 
 ## Next steps
 
-- [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft, Version 1 and 2](https://www.microsoft.com/download/details.aspx?id=36036)
+- [Privileged access strategy](https://docs.microsoft.com/security/compass/privileged-access-strategy)
 - [Privileged Access Management cmdlets](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)
