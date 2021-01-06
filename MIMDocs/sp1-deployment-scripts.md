@@ -2,7 +2,7 @@
 # required metadata
 
 title: MIM2016 SP1 PAM Deployment Scripts
-description: This is page is part of the series of articles about configuring Privileged Identity Manager using scripts. It includes a list of the assumptions about the environment.
+description: This is page is part of the series of articles about configuring Microsoft Identity Manager using scripts. It includes a list of the assumptions about the environment.
 keywords:
 author: billmath
 ms.author: billmath

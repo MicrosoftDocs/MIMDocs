@@ -1,6 +1,6 @@
 ---
 title: Step 7 Setup SID history/SID filtering
-description: This is Step 7 of configuring Privileged Identity Manager using scripts. This step covers setting up SID history/SID filtering.
+description: This is Step 7 of configuring Microsoft Identity Manager using scripts. This step covers setting up SID history/SID filtering.
 keywords:
 author: billmath
 ms.author: billmath

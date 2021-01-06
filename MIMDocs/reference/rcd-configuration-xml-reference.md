@@ -657,7 +657,7 @@ If you create new resources and attributes, you may want to update the existing 
 >Information about the basics of formatting or editing HTML is not provided in this article. Users are expected to know how to edit HTML files.
 
 ### Location of Help files
-All the Help files for the Microsoft Identity Management 2016 SP1 Portal are located in the folder `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html` on the MIM service server.
+All the Help files for the Microsoft Identity Manager 2016 SP1 Portal are located in the folder `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html` on the MIM service server.
 
 ### Locate a specific Help file
 All the Help files for the FIM Portal are named with a globally unique identifier (GUID). To locate the correct file for your custom resource:

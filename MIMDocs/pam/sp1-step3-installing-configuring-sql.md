@@ -2,7 +2,7 @@
 # required metadata
 
 title: Step 3 Configuring SQL
-description: This article is step 3 of the series of articles covering how to configure Privileged Identity Manager using scripts and it discusses the SQL server configuration steps.
+description: This article is step 3 of the series of articles covering how to configure Microsoft Identity Manager using scripts and it discusses the SQL server configuration steps.
 keywords:
 author: billmath
 ms.author: billmath
