@@ -29,7 +29,7 @@ ms.suite: ems
 This article describes a security model intended to protect against elevation of privilege by segregating high-privilege activities from high-risk zones.
 
 > [!IMPORTANT]
-> The model in this article is intended only for isolated Active Directory environments using MIM PAM.  For hybrid environments, see instead the guidance in the [enterprise access model](security/compass/privileged-access-access-model).
+> The model in this article is intended only for isolated Active Directory environments using MIM PAM.  For hybrid environments, see instead the guidance in the [enterprise access model](/security/compass/privileged-access-access-model).
 
 ## Elevation of Privilege in Active Directory forests
 
@@ -69,4 +69,4 @@ Logon restrictions can be enforced with:
 ## Next steps
 
 - The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
-- [Securing devices](security/compass/concept-azure-managed-workstation) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
+- [Securing devices](/security/compass/concept-azure-managed-workstation) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.

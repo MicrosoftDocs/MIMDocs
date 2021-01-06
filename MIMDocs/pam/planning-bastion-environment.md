@@ -31,7 +31,7 @@ Adding a bastion environment with a dedicated administrative forest to an Active
 > [!NOTE]
 > The PAM approach with a bastion environment provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
 
-This architecture enables a number of controls that aren’t possible or easily configured in a single forest architecture. That includes provisioning accounts as standard non-privileged users in the administrative forest that are highly privileged in the production environment, enabling greater technical enforcement of governance. This architecture also enables the use of the selective authentication feature of a trust as a means to restrict logons (and credential exposure) to only authorized hosts. In situations in which a greater level of assurance is desired for the production forest without incurring the cost and complexity of a complete rebuild, an administrative forest can provide an environment that increases the assurance level of the production environment.
+This architecture enables controls that aren’t possible or easily configured in a single forest architecture. That includes provisioning accounts as standard non-privileged users in the administrative forest that are highly privileged in the production environment, enabling greater technical enforcement of governance. This architecture also enables the use of the selective authentication feature of a trust as a means to restrict logons (and credential exposure) to only authorized hosts. In situations in which a greater level of assurance is desired for the production forest without incurring the cost and complexity of a complete rebuild, an administrative forest can provide an environment that increases the assurance level of the production environment.
 
 Additional techniques can be used in addition to the dedicated administrative forest. These include restricting where administrative credentials are exposed, limiting role privileges of users in that forest, and ensuring administrative tasks are not performed on hosts used for standard user activities (for example, email and web browsing).
 
@@ -49,7 +49,7 @@ According to the [Tier model](tier-model-for-partitioning-administrative-privile
 
 ### Restricted trust
 
-The production *CORP* forest should trust the administrative *PRIV* forest, but not the other way around. This can be a domain trust or a forest trust. The admin forest domain does not need to trust the managed domains and forests to manage Active Directory, though additional applications may require a two-way trust relationship, security validation, and testing.
+The production *CORP* forest should trust the administrative *PRIV* forest, but not the other way around. This trust can be a domain trust or a forest trust. The admin forest domain does not need to trust the managed domains and forests to manage Active Directory, though additional applications may require a two-way trust relationship, security validation, and testing.
 
 Selective authentication should be used to ensure that accounts in the admin forest only use the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the “Allowed to logon” right for domain controllers to designated Tier 0 admin accounts in the admin forest. See [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx) for more information.
 
@@ -75,7 +75,7 @@ As administration of applications will be transitioned to the bastion environmen
 
 - Deploy Active Directory Domain Services on multiple computers in the bastion environment. At least two are necessary to ensure continued authentication, even if one server is temporarily restarted for scheduled maintenance. Additional computers may be necessary for higher load or to manage resources and administrators based in multiple geographic regions.
 
-- Prepare break glass accounts in the existing forest and the dedicated admin forest, for emergency purposes.
+- Prepare break-glass accounts in the existing forest and the dedicated admin forest, for emergency purposes.
 
 - Deploy SQL Server and MIM Service on multiple computers in the bastion environment.
 
@@ -95,7 +95,7 @@ When creating the bastion environment, before installing Microsoft Identity Mana
 
 - **Break glass accounts** should only be able to log into the domain controllers in the bastion environment.
 
-- **"Red Card" administrators** provision other accounts and perform unscheduled maintenance. No access to existing forests or systems outside of the bastion environment is provided to these accounts. The credentials, e.g., a smartcard, should be physically secured, and use of these account should be logged.
+- **"Red Card" administrators** provision other accounts and perform unscheduled maintenance. No access to existing forests or systems outside of the bastion environment is provided to these accounts. The credentials, e.g., a smartcard, should be physically secured, and use of these accounts should be logged.
 
 - **Service accounts** needed by Microsoft Identity Manager, SQL Server, and other software.
 
@@ -137,7 +137,7 @@ Although inconvenient, separate hardened workstations dedicated to users with hi
 
 - **USB restrictions** to protect against physical infection.
 
-- **Network isolation** to protect against network attacks and inadvertent admin actions. Host firewalls should block all incoming connections except those explicitly required and block all unneeded outbound Internet access.
+- **Network isolation** to protect against network attacks and inadvertent admin actions. Host firewalls should block all incoming connections except those connections explicitly required, and block all unneeded outbound Internet access.
 
 - **Antimalware** to protect against known threats and malware.
 
@@ -173,7 +173,7 @@ There are seven requirements for enabling management for an existing domain.
 
 ### 1. A security group on the local domain
 
-There must be a group in the existing domain, whose name is the NetBIOS domain name followed by three dollar signs, e.g., *CONTOSO$$$*. The group scope must be *domain local* and the group type must be *Security*. This is needed for groups to be created in the dedicated administrative forest with the same Security identifier as groups in this domain. Create this group with the following PowerShell command, performed by an administrator of the existing domain and run on an workstation joined to the existing domain:
+There must be a group in the existing domain, whose name is the NetBIOS domain name followed by three dollar signs, e.g., *CONTOSO$$$*. The group scope must be *domain local* and the group type must be *Security*. This is needed for groups to be created in the dedicated administrative forest with the same Security identifier as groups in this domain. Create this group with the following PowerShell command, performed by an administrator of the existing domain and run on a workstation joined to the existing domain:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
@@ -257,4 +257,4 @@ Review the permissions on the *AdminSDHolder* object in the System container in 
 
 ## Select users and groups for inclusion
 
-The next step is defining the PAM roles, associating the users and groups to which they should have access. This will typically be a subset of the users and groups for the tier identified as being managed in the bastion environment. More information is in [Defining roles for Privileged Access Management](defining-roles-for-pam.md).
+The next step is defining the PAM roles, associating the users and groups to which they should have access. These users and groups will typically be a subset of the users and groups for the tier identified as being managed in the bastion environment. More information is in [Defining roles for Privileged Access Management](defining-roles-for-pam.md).
