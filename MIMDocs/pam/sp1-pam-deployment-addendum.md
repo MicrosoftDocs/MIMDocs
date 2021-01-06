@@ -26,7 +26,7 @@ ms.suite: ems
 
 ## Addendum 1 Setting up the PRIV domain
 
-After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Please update the DNSName, the NetbiosName, the DC name, the Database/Log Path & Sysvol Path. Also update the Domain & ForestMode. If you are testing Windows Server Technical Preview 5, please set the DomainMode & ForestMode to WinThreshold.
+After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Please update the DNSName, the NetbiosName, the DC name, the Database/Log Path & Sysvol Path. Also update the Domain & ForestMode. If you are using Windows Server 2016 or later, please set the DomainMode & ForestMode to WinThreshold.
 
 1. Login to the PRIV domain DC as Administrator
 2. Run PowerShell as Administrator
@@ -74,4 +74,4 @@ Proceed with Step 8 provided above.
 
 ## Addendum 4 if something goes wrong
 
-All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file and email it to [mim2016@microsoft.com](mailto:mim2016@microsoft.com) along with details of the operation and the error.
+All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file along with details of the operation and the error if needed by support.

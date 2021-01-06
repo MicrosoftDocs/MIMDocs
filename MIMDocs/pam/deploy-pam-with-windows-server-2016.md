@@ -22,9 +22,6 @@ ms.assetid:
 
 This scenario enables MIM 2016 SP1 to leverage features of Windows Server 2016 as the domain controller for the “PRIV” forest.  When this scenario is configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activations. 
 
-> [!Note]
-> Earlier technical previews of Windows Server 2016 before Technical Preview 5 cannot be used with this MIM release.
-
 ## Preparation
 
 A minimum of two VMs are required for the lab environment:
