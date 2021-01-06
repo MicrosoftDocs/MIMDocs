@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/13/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -26,7 +26,10 @@ ms.suite: ems
 ---
 # Planning a bastion environment
 
-Adding a bastion environment with a dedicated administrative forest to an Active Directory enables organizations to easily manage administrative accounts, workstations, and groups in an environment that has stronger security controls than their existing production environment.
+Adding a bastion environment with a dedicated administrative forest to an Active Directory enables organizations to manage administrative accounts, workstations, and groups in an environment that has stronger security controls than their existing production environment.
+
+> [!NOTE]
+> The PAM approach with a bastion environment provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
 
 This architecture enables a number of controls that aren’t possible or easily configured in a single forest architecture. That includes provisioning accounts as standard non-privileged users in the administrative forest that are highly privileged in the production environment, enabling greater technical enforcement of governance. This architecture also enables the use of the selective authentication feature of a trust as a means to restrict logons (and credential exposure) to only authorized hosts. In situations in which a greater level of assurance is desired for the production forest without incurring the cost and complexity of a complete rebuild, an administrative forest can provide an environment that increases the assurance level of the production environment.
 

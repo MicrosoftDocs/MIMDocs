@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/31/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -24,8 +24,9 @@ ms.suite: ems
 #ms.custom:
 
 ---
-# Environment overview
+# MIM PAM test lab environment overview
 
+To set up a test lab of MIM PAM, you can install the software on virtual machines.
 Privileged Access Management works with virtual machines (VMs) with separate drives that are connected to each other on a shared network. These virtual machines can be hosted by Windows 8.1, Windows Server 2012 R2, or other operating system platforms.
 
 ![PAM servers: relationships and supported platforms - diagram](media/pam-test-lab-architecture.png)

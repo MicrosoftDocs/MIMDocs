@@ -26,7 +26,12 @@ ms.suite: ems
 ---
 # Understand the components of MIM PAM
 
-Privileged Access Management keeps administrative access separate from day-to-day user accounts. This solution relies on parallel forests:
+Privileged Access Management keeps administrative access separate from day-to-day user accounts using a separate forest.
+
+> [!NOTE]
+> The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
+
+ This solution relies on parallel forests:
 
 - *CORP*: Your general-purpose corporate forest that includes one or more domains. While you may have multiple CORP forests, the examples in these articles assume a single forest with a single domain for simplicity.  
 - *PRIV*: A dedicated forest created especially for this PAM scenario. This forest includes one domain to accommodate privileged groups and accounts which are shadowed from one or more CORP domains.

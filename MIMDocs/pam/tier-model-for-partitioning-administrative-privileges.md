@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/30/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -26,13 +26,16 @@ ms.suite: ems
 ---
 # Tier model for partitioning administrative privileges
 
-This article describes a security model intended to protect against elevation of privilege by segregating high-privilege activities from high-risk zones. This model provides a good user experience while still adhering to best practices and security principles.
+This article describes a security model intended to protect against elevation of privilege by segregating high-privilege activities from high-risk zones.
+
+> [!IMPORTANT]
+> The model in this article is intended only for isolated Active Directory environments using MIM PAM.  For hybrid environments, see instead the guidance in the [enterprise access model](security/compass/privileged-access-access-model).
 
 ## Elevation of Privilege in Active Directory forests
 
 Users, services, or applications accounts that are granted permanent administrative privileges to Windows Server Active Directory (AD) forests introduce a significant amount of risk to the organization’s mission and business. These accounts are often targeted by attackers because if they are compromised, the attacker has rights to connect to other servers or applications in the domain.
 
-The tier model creates divisions between administrators based on what resources they manage. Admins with control over user workstations are separated from those that control applications, or manage enterprise identities. Learn about this model in the [Securing privileged access reference material](https://aka.ms/tiermodel).
+The tier model creates divisions between administrators based on what resources they manage. Admins with control over user workstations are separated from those that control applications, or manage enterprise identities.
 
 ## Restricting credential exposure with logon restrictions
 
@@ -66,4 +69,4 @@ Logon restrictions can be enforced with:
 ## Next steps
 
 - The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
-- [Priviledged Access workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
+- [Securing devices](security/compass/concept-azure-managed-workstation) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
