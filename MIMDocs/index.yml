@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Identity Manager documentation
-summary: Microsoft Identity Manager 2016 binds Microsoft's identity and access management solutions together by seamlessly bridging multiple on-premises authentication stores like Active Directory, LDAP, Oracle, and other applications with Azure Active Directory. This provides consistent experiences to on-premises LOB applications and SaaS solutions.
+summary: Microsoft Identity Manager 2016 extends the reach of Azure Active Directory, Microsoft's identity and access management solution.  MIM ensures consistent user identities by seamlessly bridging multiple on-premises authoritative systems and authentication stores like Active Directory, SAP, Oracle, and other LDAP and SQL systems. When used with Active Directory, Azure AD Connect and Azure Active Directory, this solution provides consistent experiences for signing into on-premises and SaaS applications.
 metadata:
   title: Microsoft Identity Manager documentation
   description: Learn how to use Microsoft Identity Manager.

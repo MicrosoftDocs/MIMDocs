@@ -1,6 +1,6 @@
 ---
 title: Step 7 Setup SID history/SID filtering
-description: This is Step 7 of configuring Microsoft Identity Manager using scripts. This step covers setting up SID history/SID filtering.
+description: Step 7 of configuring Microsoft Identity Manager using scripts. This step covers setting up SID history/SID filtering.
 keywords:
 author: billmath
 ms.author: billmath
@@ -23,13 +23,13 @@ ms.suite: ems
 
 ---
 
-# Step 7 Set up SID history/SID filtering
+# Step 7 Setup SID history/SID filtering
 
 > [!div class="step-by-step"]
 > [« Step 6](sp1-step6-setup-pam-trust.md)
 > [Step 8 »](sp1-step8-pam-deployment-verification.md)
 
-**This is not required for a PRIV only environment**
+**The following commands are not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.
 
 1. Login to the CORP DC as administrator
