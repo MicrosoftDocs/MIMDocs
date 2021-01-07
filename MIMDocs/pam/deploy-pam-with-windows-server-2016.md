@@ -20,18 +20,15 @@ ms.assetid:
 # Deploy MIM PAM with Windows Server 2016
 
 
-This scenario enables MIM 2016 SP1 to leverage features of Windows Server 2016 as the domain controller for the “PRIV” forest.  When this scenario is configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activations. 
-
-> [!Note]
-> Earlier technical previews of Windows Server 2016 before Technical Preview 5 cannot be used with this MIM release.
+This scenario enables MIM 2016 SP2 for the PAM scenario using features of Windows Server 2016 or later as the domain controller for the “PRIV” forest.  When this scenario is configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activations.
 
 ## Preparation
 
 A minimum of two VMs are required for the lab environment:
 
--   VM hosts the PRIV Domain Controller, running Windows Server 2016
+-   VM hosts the PRIV Domain Controller, running Windows Server 2016 or later
 
--   VM hosts the MIM Service, running Windows Server 2016 (recommended) or Windows Server 2012 R2
+-   VM hosts the MIM Service, running Windows Server 2016 or later (recommended) or Windows Server 2012 R2
 
 > [!NOTE]
 > If you do not already have a “CORP” domain in your lab environment, an additional domain controller for that domain is required. The “CORP” domain controller can run either Windows Server 2016 or Windows Server 2012 R2.
@@ -76,7 +73,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
   - After configuring delegation, and before restarting the server, authorize the MIM administrators and MIM Service account to create and update shadow principals.
 
-    a. Launch a powershell window and type ADSIEdit.
+    a. Launch a PowerShell window and type ADSIEdit.
 
     b. Open the Actions menu, click “Connect To”. On the Connection point setting, change the naming context from “Default naming context” to “Configuration” and click OK.
 
@@ -126,7 +123,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
 - Follow the instructions in [Step 5 - Establish trust](step-5-establish-trust-between-priv-corp-forests.md) with these adjustments:
 
-  - When establishing one way trust, only perform the first two PowerShell commands (get-credential and New-PAMTrust), **do not perform the New-PAMDomainConfiguration command**.
+  - When establishing one-way trust, only perform the first two PowerShell commands (get-credential and New-PAMTrust), **do not perform the New-PAMDomainConfiguration command**.
 
   - After establishing trust, log onto PRIVDC as PRIV\\Administrator, launch PowerShell and type the following commands:
     ```

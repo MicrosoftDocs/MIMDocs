@@ -2,7 +2,7 @@
 # required metadata
 
 title: Deploy PAM Step 1 - CORP domain | Microsoft Docs
-description: Prepare the CORP domain with existing or new identities to be managed by Privileged Identity Manager
+description: Prepare the CORP domain with existing or new identities to be managed by Microsoft Identity Manager
 keywords:
 author: billmath
 ms.author: billmath
@@ -39,9 +39,9 @@ This section describes how to set up a domain controller for a CORP domain. In t
 
 ### Install Windows Server
 
-Install Windows Server 2012 R2, or Windows Server 2016 Technical Preview 4 or later, on a virtual machine to create a computer called *CORPDC*.
+Install Windows Server 2012 R2 or later on a virtual machine to create a computer called *CORPDC*.
 
-1. Choose **Windows Server 2012 R2 Standard (Server with a GUI) x64** or **Windows Server 2016 Technical Preview (Server with Desktop Experience)**.
+1. Choose **Windows Server 2012 R2 Standard (Server with a GUI) x64** or **Windows Server 2016 (Server with Desktop Experience)**.
 
 2. Review and accept the license terms.
 
