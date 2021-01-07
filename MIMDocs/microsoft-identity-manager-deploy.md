@@ -33,7 +33,7 @@ The articles in this section provide step-by-step instructions for deploying Mic
 
 The privileged access management scenario is deployed differently than other MIM scenarios, as it requires a dedicated bastion forest environment.  If you want to learn more about deploying MIM for Privileged Access Management, see [Configure the MIM environment for Privileged Access Management](./pam/configuring-mim-environment-for-pam.md).
 
-The process for deploying MIM is very similar to the process for its predecessor, FIM 2010 R2. If you want to refer to the FIM documentation, see the [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310).
+The process for deploying MIM is similar to the process for its predecessor, FIM 2010 R2. If you want to refer to the FIM documentation, see the [Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310).
 
 ## First: Prepare a domain
 MIM works with Active Directory (AD), so follow these steps to configure your AD domain controller.
@@ -41,7 +41,7 @@ MIM works with Active Directory (AD), so follow these steps to configure your AD
 - [Domain setup for Group Managed Service Accounts](preparing-domain-gmsa.md)
 
 
-## Next: Prepare an identity management servers
+## Next: Prepare identity management servers
 Once your domain is in place and configured, prepare your corporate identity management server.
 
 For more information on supported platforms, see [Supported platforms for MIM 2016 or later](microsoft-identity-manager-2016-supported-platforms.md)

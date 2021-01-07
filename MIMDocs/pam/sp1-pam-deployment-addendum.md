@@ -26,13 +26,13 @@ ms.suite: ems
 
 ## Addendum 1 Setting up the PRIV domain
 
-After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Please update the DNSName, the NetbiosName, the DC name, the Database/Log Path & Sysvol Path. Also update the Domain & ForestMode. If you are using Windows Server 2016 or later, set the DomainMode & ForestMode to WinThreshold.
+After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Update the DNSName, the NetbiosName, the DC name, the Database/Log Path & sysvol folder Path. Also update the Domain & ForestMode. If you are using Windows Server 2016 or later, set the DomainMode & ForestMode to Windows Server 2016 (WinThreshold).
 
 1. Log in to the PRIV domain DC as Administrator
 2. Run PowerShell as Administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
-5. select menu option 9 (Priv Forest setup)
+5. select menu option 9 (PRIV Forest setup)
 
 
 The DC will reboot automatically after completion. The directory Services Restore Mode (DSRM) administrator password must match the following criteria:
@@ -44,7 +44,7 @@ The DC will reboot automatically after completion. The directory Services Restor
 
 ## Addendum 2 Setting up the CORP domain
 
-If you are just starting off with PAM, and want to set up a test environment, the script also allows configuration of a CORP Domain. After unzipping the compressed file to the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml adding the details of the CORP forest. Update the DNSName, NetbiosName, DC name, Database/Log Path, and Sysvol Path. The functional level should be at least Windows Server 2012 R2.
+If you are just starting off with PAM, and want to set up a test environment, the script also allows configuration of a CORP Domain. After unzipping the compressed file to the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml adding the details of the CORP forest. Update the DNSName, NetbiosName, DC name, Database/Log Path, and sysvol folder Path. The functional level should be at least Windows Server 2012 R2.
 
 1. Log in to the CORP domain DC as Administrator
 2. Run PowerShell as Administrator

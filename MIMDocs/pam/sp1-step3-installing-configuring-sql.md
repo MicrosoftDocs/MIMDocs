@@ -30,14 +30,14 @@ ms.suite: ems
 > [« Step 2](sp1-step2-configuring-corp-domain.md)
 > [Step 4 »](sp1-step4-configuring-sharepoint.md)
 
-Before you move forward with the steps below make sure that you are using SQL Server 2012 SP1 or later, or SQL server 2014. For domain joined servers, login using the MIMAdmin account otherwise login as a local administrator
+Before you move forward with the steps below make sure that you are using SQL Server 2012 SP1 or later, or SQL server 2014. For domain joined servers, log in using the MIMAdmin account,otherwise log in as a local administrator.
 1. Run PowerShell as Administrator
 2. cd $env:SYSTEMDRIVE\PAM
 3. .\PAMDeployment.ps1
 4. Select Menu Option 3 (SQL Server Setup)
 
    If the server is not yet domain joined to the PRIV domain, it will prompt you for credentials, and join the server to the domain.
-   After domain join, the machine will reboot. Upon successful reboot, logon to the server with the MIMAdmin account.
+   After domain join, the machine will reboot. Upon successful reboot, log on to the server with the MIMAdmin account.
 
 5. Run PowerShell as administrator
 6. cd $env:SYSTEMDRIVE\PAM

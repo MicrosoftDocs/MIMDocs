@@ -30,9 +30,9 @@ ms.suite: ems
 > [Step 8 »](sp1-step8-pam-deployment-verification.md)
 
 **The following commands are not required for a PRIV only environment**
-Login to the PAMServer with the MIMAdmin account.
+Log in to the PAMServer with the MIMAdmin account.
 
-1. Login to the CORP DC as administrator
+1. Log in to the CORP DC as administrator
 2. Run PowerShell as administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
