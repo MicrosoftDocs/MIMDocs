@@ -28,6 +28,10 @@ ms.suite: ems
 
 With Privileged Access Management, you can assign users to privileged roles that they can activate as needed for just-in-time access. These roles are defined manually and established in the bastion environment. This article walks you through the process of deciding which roles to manage through PAM, and how to define them with appropriate permissions and restrictions.
 
+> [!IMPORTANT]
+> The model in this article is intended only for isolated Active Directory environments using MIM PAM.  For hybrid environments, see instead the guidance in the [enterprise access model](/security/compass/privileged-access-access-model).
+
+
 A straightforward approach to defining roles for privileged access management is to compile all the information in a spreadsheet. List the roles in the roles, and use the columns to identify governance requirements and permissions.
 
 The governance requirements vary depending on existing identity and access policies or compliance requirements. The parameters to identify for each role might include:
@@ -48,7 +52,7 @@ Start by identifying all the roles that you might want to manage with PAM. On th
 
 To find the appropriate roles, consider each application in scope for management:
 
-- Is the application in [tier 0, tier 1 or tier 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Is the application in tier 0, tier 1 or tier 2?
 - What are the privileges that impact the confidentiality, integrity or availability of the application?
 - Does the application have dependencies on other components of the system? For example,  does it have dependencies on databases, networking, security infrastructure, virtualization or hosting platform?
 
@@ -101,8 +105,6 @@ In some cases, a user may be permanently assigned to a role. In that case, they 
 - A user account in the administrative forest who authenticates with a password. This could be, a user who needs permanent 24x7 administrative permissions and logs on from a device which cannot support strong authentication.
 
 - A user account in the administrative forest, with a smartcard or virtual smartcard (for example, an account with an offline smartcard, needed for rare maintenance tasks)
-
-For organizations concerned about the potential for credential theft or misuse, the [Using Azure MFA for activation](use-azure-mfa-for-activation.md) guide includes instructions for how to configure MIM to require an additional out of band check at the time of role activation.
 
 ## Delegate Active Directory permissions
 
@@ -213,5 +215,5 @@ Roles for non-administrative user and computer management might include:
 
 ## Next steps
 
-- [Securing Privileged Access Reference Material](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
-- [Using Azure MFA for activation](use-azure-mfa-for-activation.md)
+- [enterprise access model](/security/compass/privileged-access-access-model)
+

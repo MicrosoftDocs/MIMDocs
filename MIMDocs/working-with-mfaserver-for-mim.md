@@ -6,7 +6,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 10/29/2018
+ms.date: 1/5/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
@@ -16,9 +16,9 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 The following document describes how to setup the Azure MFA server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
 
 > [!IMPORTANT]
-> Due to the announcement of Deprecation of Azure Multi-Factor Authentication Software Development Kit, the Azure MFA SDK will be supported for existing customers up until the retirement date of November 14, 2018. New customers and current customers will not be able to download SDK anymore via the Azure classic portal. To download you will need to reach out to Azure customer support to receive your generated MFA Service Credentials package.
+> Due to the deprecation of Azure Multi-Factor Authentication (MFA) Software Development Kit (SDK), customers will not be able to download the Azure MFA SDK anymore.
 
-The Article below outlines the configuration update and steps to enable moving from Azure MFA SDK to Azure Multi-Factor Authentication Server.
+The Article below outlines the configuration update and steps to enable moving from Azure MFA SDK to Azure MFA Server.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ In order to use Azure Multi-Factor Authentication Server with MIM, you need:
 - Internet access from each MIM Service or MFA Server providing PAM and SSPR, to contact the Azure MFA service
 - An Azure subscription
 - Install is already using Azure MFA SDK
-- Azure Active Directory Premium licenses for candidate users, or an alternate means of licensing Azure MFA
+- Azure Active Directory Premium licenses for candidate users
 - Phone numbers for all candidate users
 - MIM hotfix 4.5. or greater see [version history](./reference/version-history.md) for announcements
 
