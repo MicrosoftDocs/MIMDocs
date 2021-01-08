@@ -118,7 +118,7 @@ One limitation of the Domain Admins group is that it cannot have members from an
 
 In place of default groups like Domain Admins, create new security groups that provide only the necessary permissions. You should then use MIM to dynamically provide administrator accounts with those group memberships.
 
-### Service management permissions
+### Service Management permissions
 
 The following table gives examples of permissions which would be relevant to include in roles for managing AD.
 
@@ -152,7 +152,7 @@ The following table gives examples of permissions that would be relevant to incl
 
 ## Example role definitions
 
-The choice of role definitions depend on the tier of servers being managed. This also depends on the choice of applications being managed. Applications like Exchange or third party enterprise products such as SAP will often bring their own additional role definitions for delegated administration.
+The choice of role definitions depends on the tier of servers being managed. This also depends on the choice of applications being managed. Applications like Exchange or third party enterprise products such as SAP will often bring their own additional role definitions for delegated administration.
 
 The following sections give examples for typical enterprise scenarios.
 
@@ -178,7 +178,7 @@ Roles suitable for managing the tier 0 production forest accounts and resources 
 - Storage admins
 - Anti-Malware admins for Tier 0 servers
 - SCCM admins for Tier 0 SCCM
-- SCOM Admins for Tier 0 SCOM
+- System Center Operations Manager Admins for Tier 0 Operations Manager
 - Backup admins for Tier 0
 - Users of out-of-band and baseboard management controllers (for KVM or lights-out management) connected to Tier 0 hosts
 
@@ -191,7 +191,7 @@ Roles for management and backup of servers in Tier 1 might include:
 - Security Scanner Account
 - Anti-Malware admins for Tier 1 servers
 - SCCM admins for Tier 1 SCCM
-- SCOM admins for Tier 1 SCOM
+- System Center Operations Manager admins for Tier 1 Operations Manager
 - Backup admins for Tier 1 servers
 - Users of out-of-band and baseboard management controllers (for KVM or lights-out management) to Tier 1 hosts
 

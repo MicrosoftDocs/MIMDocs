@@ -120,7 +120,7 @@ Users in your organization can now register for password reset.  During this pro
 
 #### Register users for password reset
 
-1.  A user will launch a web browser a navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
+1.  A user will launch a web browser and navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
 
     They need to enter the Password Registration Portal and authenticate using their username and password.
 
