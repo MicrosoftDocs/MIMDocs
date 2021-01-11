@@ -55,7 +55,7 @@ If you do not have licenses for Windows, SQL Server, or Windows Server you can d
 
 ### TechNet Evaluation Center
 
-- [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)
+- Windows Server 2012 R2 or later
 - [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
 
 ### Microsoft Download Center
