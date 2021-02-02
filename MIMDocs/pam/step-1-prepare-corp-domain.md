@@ -64,7 +64,7 @@ In this section, you will add the Active Directory Domain Services (AD DS), DNS 
 
 2. Type the following commands.
 
-  ```
+  ```PowerShell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -88,7 +88,7 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 2. Type the following commands, but replace "CONTOSO" with the NetBIOS name of your domain.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -109,7 +109,7 @@ We're going to create a security group named *CorpAdmins* and a user named *Jen*
 
 2. Type the following commands. Replace the password 'Pass@word1' with a different password string.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -147,7 +147,7 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 8. Apply the audit settings by launching a PowerShell window and typing:
 
-  ```
+  ```PowerShell
   gpupdate /force /target:computer
   ```
 
@@ -200,7 +200,7 @@ You will need a resource for demonstrating the security group-based access contr
 
 4. Type the following commands.
 
-  ```
+  ```PowerShell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
