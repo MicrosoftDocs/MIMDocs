@@ -64,7 +64,7 @@ In this section, you will add the Active Directory Domain Services (AD DS), DNS 
 
 2. Type the following commands.
 
-  ```PowerShell
+  ```powershell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -88,7 +88,7 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 2. Type the following commands, but replace "CONTOSO" with the NetBIOS name of your domain.
 
-  ```PowerShell
+  ```powershell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -109,7 +109,7 @@ We're going to create a security group named *CorpAdmins* and a user named *Jen*
 
 2. Type the following commands. Replace the password 'Pass@word1' with a different password string.
 
-  ```PowerShell
+  ```powershell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -147,7 +147,7 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 8. Apply the audit settings by launching a PowerShell window and typing:
 
-  ```PowerShell
+  ```powershell
   gpupdate /force /target:computer
   ```
 
@@ -161,7 +161,7 @@ In this section you will configure the registry settings that are needed for sID
 
 2. Type the following commands to configure the source domain to permit remote procedure call (RPC) access to the security accounts manager (SAM) database.
 
-  ```
+  ```powershell
   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
   Restart-Computer
@@ -200,7 +200,7 @@ You will need a resource for demonstrating the security group-based access contr
 
 4. Type the following commands.
 
-  ```PowerShell
+  ```powershell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
