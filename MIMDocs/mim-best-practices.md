@@ -26,17 +26,17 @@ This topic describes the best practices for deploying and operating Microsoft Id
 
 Configuration of the Structured Query Language (SQL) server is critical to optimal system performance. Achieving optimum MIM performance in large-scale implementations depends on the application of best practices for a server running SQL. For more information, see the following topics about SQL best practices:
 
--   [Storage Top 10 Best Practices](http://go.microsoft.com/fwlink/?LinkID=183663)
+-   [Storage Top 10 Best Practices](https://go.microsoft.com/fwlink/?LinkID=183663)
 
--   [Optimizing tempdb Performance](http://go.microsoft.com/fwlink/?LinkID=188267)
+-   [Optimizing tempdb Performance](https://go.microsoft.com/fwlink/?LinkID=188267)
 
--   [SQL Server Best Practices Article](http://go.microsoft.com/fwlink/?LinkID=188268)
+-   [SQL Server Best Practices Article](https://go.microsoft.com/fwlink/?LinkID=188268)
 
--   [Reorganizing and Rebuilding Indexes](http://go.microsoft.com/fwlink/?LinkID=188269)
+-   [Reorganizing and Rebuilding Indexes](https://go.microsoft.com/fwlink/?LinkID=188269)
 
 ### Presize data and log files
 
-Do not rely on autogrow. Instead, manage the growth of these files manually. You can leave autogrow on for safety reasons, but you should proactively manage the growth of the data files. For sample sizes of the MIM database, see the [FIM Capacity Planning Guide](http://go.microsoft.com/fwlink/?LinkID=185246).
+Do not rely on autogrow. Instead, manage the growth of these files manually. You can leave autogrow on for safety reasons, but you should proactively manage the growth of the data files. For sample sizes of the MIM database, see the [FIM Capacity Planning Guide](https://go.microsoft.com/fwlink/?LinkID=185246).
 
 ### To presize SQL data and log files
 
@@ -64,7 +64,7 @@ For optimal performance, we recommend that you create one data file per CPU core
 
 ### Ensure adequate space for Log files
 
-It is important to understand your recovery model’s disk requirements. Simple recovery mode may be appropriate during the initial system load to limit the use of your disk space, but the data created after your most recent backup is exposed to data loss. When using Full recovery mode, you need to manage the disk usage through backups which include frequent backups of the transaction log to prevent high disk space usage. For more information, see [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370).
+It is important to understand your recovery model’s disk requirements. Simple recovery mode may be appropriate during the initial system load to limit the use of your disk space, but the data created after your most recent backup is exposed to data loss. When using Full recovery mode, you need to manage the disk usage through backups which include frequent backups of the transaction log to prevent high disk space usage. For more information, see [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370).
 
 ### Limit SQL server memory
 
@@ -112,7 +112,7 @@ In general, you should work with your database administrator to design a backup 
 - If incremental log backups are not planned, the database should be set to the Simple recovery mode. 
 - Ensure that you understand the implications of the different recovery models before implementing your backup strategy. Learn the disk space requirements for these models. Full recovery model requires frequent log backups to avoid high disk space usage. 
 
-For more information, see [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370) and [FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864).
+For more information, see [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370) and [FIM 2010 Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## Create a Backup Administrator account for the FIM Service after installation
 
@@ -135,11 +135,11 @@ The following are best practices for configuring Microsoft Exchange Server for t
 
 3.  Select the **Require that all senders are authenticated** check box.
 
-For further information, see [Configure Message Delivery Restrictions](http://go.microsoft.com/fwlink/?LinkID=183625).
+For further information, see [Configure Message Delivery Restrictions](https://go.microsoft.com/fwlink/?LinkID=183625).
 
--   Configure the service account so that it rejects mail with sizes greater than 1 MB. Follow the best practice to [Configure Message Size Limits](http://go.microsoft.com/fwlink/?LinkID=183626) for a Mailbox or a Mail-Enabled Public Folder.
+-   Configure the service account so that it rejects mail with sizes greater than 1 MB. Follow the best practice to [Configure Message Size Limits](https://go.microsoft.com/fwlink/?LinkID=183626) for a Mailbox or a Mail-Enabled Public Folder.
 
--   Configure the service account so that it has a mailbox storage quota of 5 GB. For optimum results, follow the best practices listed in [Configure Storage Quotas for a Mailbox](http://go.microsoft.com/fwlink/?LinkID=156929).
+-   Configure the service account so that it has a mailbox storage quota of 5 GB. For optimum results, follow the best practices listed in [Configure Storage Quotas for a Mailbox](https://go.microsoft.com/fwlink/?LinkID=156929).
 
 ## MIM Portal
 
@@ -170,7 +170,7 @@ We recommend that you disable Microsoft Office SharePoint® indexing. There are 
 This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It is important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. This is a one-time operation and is not a continuous synchronization.
 
 > [!NOTE]
-> For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
+> For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](https://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
 > 
 > [!IMPORTANT]
 > Ensure that you have applied the best practices covered in the SQL setup section of this guide. 
@@ -192,7 +192,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
 > [!IMPORTANT]
-> Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
+> Not implementing these procedures can result in high disk space usage, possibly causing you to run out of disk space. You can find additional details about this topic in [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370). [The FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864) contains additional information.
 
 ### Step 2: Apply the minimum necessary MIM configuration during the load process
 
@@ -239,7 +239,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = AUTO
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = AUTO
 ```
 
-If you have to switch to Simple recovery mode, ensure that you reconfigure your backup schedule in accordance with your organization’s backup policy. Additional details of FIM backup schedules are available in the [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864).
+If you have to switch to Simple recovery mode, ensure that you reconfigure your backup schedule in accordance with your organization’s backup policy. Additional details of FIM backup schedules are available in the [FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## Configuration Migration
 
@@ -362,9 +362,9 @@ To implement SSL:
 
 28. Click Operations, and then click Alternate Access Mappings.
 
-29. Click http://servername.
+29. Click https://servername.
 
-30. Change http://servername to https://servername, and then click OK.
+30. Change https://servername to https://servername, and then click OK.
 
 31. Click Start, click Run, type iisreset, and then click OK.
 
@@ -401,7 +401,7 @@ MIM provides two types of MPRs, Request and Set Transition:
   - Scoped to the members of the set.
 
 >[NOTE]
-For additional details, see [Designing Business Policy Rules](http://go.microsoft.com/fwlink/?LinkID=183691).
+For additional details, see [Designing Business Policy Rules](httpss://go.microsoft.com/fwlink/?LinkID=183691).
 
 #### Only enable MPRs as necessary
 
@@ -522,7 +522,7 @@ If this registry key is set to true, the user very likely goes through the passw
 
 It is possible to log clear-text passwords when turning on diagnostic Service Level tracing in Windows
 
-Communication Foundation (WCF). This option is not turned on by default, and you are discouraged from turning it on in production environments. These passwords are visible as clear-text elements within an encrypted Simple Object Access Protocol (SOAP) message when users register for password reset. For more information, see [Configuring Message Logging](http://go.microsoft.com/fwlink/?LinkID=168572).
+Communication Foundation (WCF). This option is not turned on by default, and you are discouraged from turning it on in production environments. These passwords are visible as clear-text elements within an encrypted Simple Object Access Protocol (SOAP) message when users register for password reset. For more information, see [Configuring Message Logging](https://go.microsoft.com/fwlink/?LinkID=168572).
 
 #### Do not map an authorization workflow to the password reset process
 
@@ -540,7 +540,7 @@ When adding, removing, or changing the order of authentication activities in an 
 
 #### Consider adding a privacy disclaimer to the user profile page
 
-In MIM, by default, some user profile information may be displayed to other users. As a courtesy to the users, administrators should consider adding custom text consistent with their company's policies to the User Profile page. For more information about adding custom text to a MIM Portal page, see Introduction to [Configuring and Customizing the FIM Portal](http://go.microsoft.com/fwlink/?LinkID=165848).
+In MIM, by default, some user profile information may be displayed to other users. As a courtesy to the users, administrators should consider adding custom text consistent with their company's policies to the User Profile page. For more information about adding custom text to a MIM Portal page, see Introduction to [Configuring and Customizing the FIM Portal](https://go.microsoft.com/fwlink/?LinkID=165848).
 
 ### Schema
 
@@ -641,6 +641,6 @@ The objective of MIM is to process requests that can be initiated by various MIM
 For additional information see [Understanding FIM Service Partitions](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx).
 
 ## Next steps
-- [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)
-- [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) 
-- [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370).
+- [FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864)
+- [How do I Synchronize Users from Active Directory to FIM](https://go.microsoft.com/fwlink/?LinkID=188277) 
+- [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370).

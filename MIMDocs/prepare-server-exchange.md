@@ -34,7 +34,7 @@ ms.suite: ems
 ## Deploy Microsoft Exchange Server
 If you would like to configure MIM to send and receive email or provision mailboxes, then it is necessary to have Exchange present in the environment. If you do not have Exchange already deployed, then you can install a trial version for evaluation purposes:
 
-* Download and install [MS Exchange Server 2013 180-day Trial version](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
+* Download and install [MS Exchange Server 2013 180-day Trial version](https://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
 
 > [!div class="step-by-step"]  
 > [« SharePoint](prepare-server-sharepoint.md)

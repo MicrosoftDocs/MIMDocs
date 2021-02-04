@@ -59,4 +59,4 @@ The PAM REST API operates on the following resources:
 For more detailed information about the service, see [PAM REST API Service Details](privileged-access-management-rest-api-service-details.md).
 
 ## PAM sample portal on GitHub
-One way to learn how to use the PAM REST API is by using the PAM sample portal, an example web application that uses the API. You can find the code for the PAM Sample portal in the [PAM sample repository on GitHub](http://go.microsoft.com/fwlink/?LinkID=618550&clcid=0x409). You can learn how to deploy the sample portal in the PAM Test Lab Guide.
+One way to learn how to use the PAM REST API is by using the PAM sample portal, an example web application that uses the API. You can find the code for the PAM Sample portal in the [PAM sample repository on GitHub](https://go.microsoft.com/fwlink/?LinkID=618550&clcid=0x409). You can learn how to deploy the sample portal in the PAM Test Lab Guide.
