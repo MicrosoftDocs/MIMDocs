@@ -56,7 +56,7 @@ For optimal performance, we recommend that you create one data file per CPU core
 
 ### To create additional tempdb files
 
-1.  Start SQL Server Mangement Studio.
+1.  Start SQL Server Management Studio.
 
 2.  Navigate to the database tempdb in System Databases, right-click tempdb, and then click Properties.
 
