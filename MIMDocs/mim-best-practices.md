@@ -401,7 +401,7 @@ MIM provides two types of MPRs, Request and Set Transition:
   - Scoped to the members of the set.
 
 >[NOTE]
-For additional details, see [Designing Business Policy Rules](httpss://go.microsoft.com/fwlink/?LinkID=183691).
+For additional details, see [Designing Business Policy Rules](https://go.microsoft.com/fwlink/?LinkID=183691).
 
 #### Only enable MPRs as necessary
 
