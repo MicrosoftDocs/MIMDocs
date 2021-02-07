@@ -86,7 +86,7 @@ After Reporting Agent is installed, the data from Identity Manager activity is e
 
 3.  Install Reporting Agent by doing the following:
 
-    a.  Download the [MIMHReportingAgentSetup.exe file](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) for the Identity Manager Service server.
+    a.  Download the [MIMHReportingAgentSetup.exe file](https://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) for the Identity Manager Service server.
 
     b.  Run `MIMHReportingAgentSetup.exe`. 
 

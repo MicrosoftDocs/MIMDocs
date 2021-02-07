@@ -24,7 +24,7 @@ This article describes the Generic LDAP Connector. The article applies to the fo
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * Must use hotfix 4.1.3671.0 or later [KB3092178](https://support.microsoft.com/kb/3092178).
 
-For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=717495).
+For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 When referring to IETF RFCs, this document is using the format (RFC [RFC number]/[section in RFC document]), for example (RFC 4512/4.3).
 You can find more information at [https://tools.ietf.org/](https://tools.ietf.org/). In the left panel, enter an RFC number in the **Doc fetch** dialog box and test it to make sure it is valid.
@@ -267,4 +267,4 @@ For Novell eDirectory, the delta import is not detecting any object deletes. For
 For directories with a delta change log that is based on date/time, it is highly recommended to run a full import at periodic times. This process allows the sync engine to find and dissimilarities between the LDAP server and what is currently in the connector space.
 
 ## Troubleshooting
-* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](http://go.microsoft.com/fwlink/?LinkId=335731).
+* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).

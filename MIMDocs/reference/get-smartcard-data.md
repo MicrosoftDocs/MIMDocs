@@ -42,13 +42,13 @@ GET     |/CertificateManagement/api/v1.0/smartcards <br/> /CertificateManagement
 
 Property| Description
 ---------|--------
-smartcarduuid | Optional. The smart card UUID as denoted by Microsoft Identity Manager (MIM) Certificate Management (CM). The value corresponds to the "uuid" field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
+smartcarduuid | Optional. The smart card UUID as denoted by Microsoft Identity Manager (MIM) Certificate Management (CM). The value corresponds to the "uuid" field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
 ### Query parameters
 
 Property| Description
 ---------|--------
-cardid | Optional. The smart card UUID as denoted by MIM CM. The value corresponds to the "uuid" field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
+cardid | Optional. The smart card UUID as denoted by MIM CM. The value corresponds to the "uuid" field in the [Microsoft.Clm.Shared.Smartcards.Smartcard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
 ### Request headers
 For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
@@ -72,7 +72,7 @@ Code  |Description
 For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
 ### Response body
-On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object with the following properties:
+On success, returns a JSON-Serialized [Microsoft.Clm.Shared.Smartcards.Smartcard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object with the following properties:
 
 Name | Description
 -----|-----------
