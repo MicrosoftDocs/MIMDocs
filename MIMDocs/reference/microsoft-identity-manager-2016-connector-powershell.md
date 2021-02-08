@@ -24,7 +24,7 @@ This article describes the Windows PowerShell Connector. The article applies to 
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * Must use hotfix 4.1.3671.0 or later [KB3092178](https://support.microsoft.com/kb/3092178).
 
-For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=717495).
+For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 ## Overview of the PowerShell Connector
 The PowerShell Connector enables you to integrate the synchronization service with external systems that offer Windows PowerShell based APIs. The connector provides a bridge between the capabilities of the call-based extensible connectivity management agent 2 (ECMA2) framework and Windows PowerShell. For more information about the ECMA framework, see the [Extensible Connectivity 2.2 Management Agent Reference](https://msdn.microsoft.com/library/windows/desktop/hh859557.aspx).
@@ -310,7 +310,7 @@ Read access to the following file system folders:
 Substitute the name of the Windows PowerShell connector for the {ConnectorName} placeholder.
 
 ## Troubleshooting
-* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](http://go.microsoft.com/fwlink/?LinkId=335731).
+* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
 
 <!--Reference style links - using these makes the source content way more readable than using inline links-->
 [cpp]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.configparameterpage.aspx
@@ -341,4 +341,4 @@ Substitute the name of the Windows PowerShell connector for the {ConnectorName} 
 [pwdex1]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordpolicyviolationexception.aspx
 [pwdex2]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordillformedexception.aspx
 [pwdex3]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordextensionexception.aspx
-[samp]: http://go.microsoft.com/fwlink/?LinkId=394291
+[samp]: https://go.microsoft.com/fwlink/?LinkId=394291
