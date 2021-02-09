@@ -41,6 +41,13 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
+## 1.1.1380.0 (February 2021)
+### Fixed issues
+- Graph Connector
+  - Fixed an issue with multi-valued string attributes handled incorrectly when sending B2B invitations
+- Generic LDAP Connector
+  - Improved Oracle Unified Directory changelog entries processing
+
 ## 1.1.1347.0 (December 2020)
 ### Fixed issues
 - Graph Connector
