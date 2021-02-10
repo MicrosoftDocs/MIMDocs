@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/13/2017
+ms.date: 02/09/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -60,7 +60,7 @@ Follow the guidelines of the installer and complete the installation.
    - Service Account Domain: *PRIV*  
    - Service Email Account: <em>MIMService@priv.contoso.local</em>  
 
-6. Accept the defaults for the synchronization server hostname and specify the MIM Management Agent account as *PRIV\MIMMA*. A warning message will appear that the MIM synchronization service does not exist. This is OK, since the MIM synchronization service is not used in this scenario.
+6. Accept the defaults for the synchronization server hostname and specify the MIM Management Agent account as *PRIV\MIMMA*. A warning message will appear that the MIM synchronization service does not exist. This warning is OK, since the MIM synchronization service is not used in this scenario.
 
 7. Set *PAMSRV* as MIM Service server address.
 
@@ -130,19 +130,19 @@ The firewall should allow incoming connections to TCP port 5725, 5726, 8086 and 
 5.  After completing the wizard, close the Windows Firewall application.
 
 6.  Launch **Control Panel**.  
-7.  Under Network and Internet select **View network status and tasks**.  
-8.  Verify that there is an active Network which is listed as being priv.contoso.local and a Domain network.  
+7.  Under Network and Internet, select **View network status and tasks**.
+8.  Verify that there is an active network, which is listed as being priv.contoso.local, and a Domain network.
 9. Close **Control Panel**.
 
-## Set up the sample web application
+## Optional: Set up the sample web application
 
-In this section you will install and configure the sample web application for the MIM PAM REST API.
+In this section, you can install and configure the sample web application for the MIM PAM REST API.  This component is only needed if you wish to learn how to use the MIM PAM REST API. If you intend to use PowerShell to request and approve access, continue with the next section to install the MIM PAM requestor cmdlets.
 
 1. From the sample web application archive, download the [Identity Management samples](https://github.com/Azure/identity-management-samples) as a zip file.
 
 2. Unpack the contents of the folder **identity-management-samples-master\Privileged-Access-Management-Portal\src** into a new folder **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal**.
 
-3. Create new web site in IIS with a site name of MIM Privileged Access Management Example Portal, physical path C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal, and port 8090.  This can be done using the following PowerShell command:
+3. Create new web site in IIS with a site name of MIM Privileged Access Management Example Portal, physical path C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal, and port 8090.  This site creation can be done using the following PowerShell command:
 
    ```PowerShell
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
