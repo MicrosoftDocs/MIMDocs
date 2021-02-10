@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/13/2017
+ms.date: 02/09/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -134,9 +134,9 @@ The firewall should allow incoming connections to TCP port 5725, 5726, 8086 and 
 8.  Verify that there is an active Network which is listed as being priv.contoso.local and a Domain network.  
 9. Close **Control Panel**.
 
-## Set up the sample web application
+## Optional: Set up the sample web application
 
-In this section you will install and configure the sample web application for the MIM PAM REST API.
+In this section you will install and configure the sample web application for the MIM PAM REST API.  This is only needed if you wish to learn how to use the MIM PAM REST API. If you intend to use PowerShell to request and approve access, continue with the next section to install the MIM PAM requestor cmdlets.
 
 1. From the sample web application archive, download the [Identity Management samples](https://github.com/Azure/identity-management-samples) as a zip file.
 
