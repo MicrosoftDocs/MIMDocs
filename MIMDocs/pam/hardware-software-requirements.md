@@ -26,10 +26,10 @@ ms.suite: ems
 ---
 # Hardware and software requirements
 
-Privileged Access Management has no hardware requirements beyond those of the underlying software platforms. Just make sure you have sufficient memory or disk space, and network connectivity.
+Privileged Access Management has no hardware requirements beyond those requirements of the underlying software platforms. Just make sure you have sufficient memory or disk space, and network connectivity.
 
 > [!IMPORTANT]
-> This article provides the minimum requirements for a basic deployment on an isolated network. It is not intended to demonstrate performance, scalability, or high availability, and does not represent a recommended deployment topology for large enterprises or production environments.  If your Active Directory is part of an Internet-connected environment, see instead [securing privileged access](/security/compass/overview) for more information on where to start.
+> This article provides the minimum requirements for a basic deployment on an isolated network. It is not intended to demonstrate performance, scalability, or high availability, and does not represent a recommended deployment topology for large enterprises or production environments.  If your Active Directory is part of an Internet-connected environment, see instead the [securing privileged access](/security/compass/overview) guidance for more information on where to start.
 
 ## Installing from software packages
 
@@ -48,20 +48,6 @@ The following optional software can be downloaded from GitHub:
 - Windows Server 2016
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 or SQL Server 2014
-
-## Evaluation software
-
-If you do not have licenses for Windows, SQL Server, or Windows Server you can download evaluation versions.
-
-### TechNet Evaluation Center
-
-- Windows Server 2016 or later
-- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
-
-### Microsoft Download Center
-
-- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)  
-- [SharePoint Foundation 2013 SP1 and its prerequisites](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## Hardware requirements
 
