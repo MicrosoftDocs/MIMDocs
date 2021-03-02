@@ -64,18 +64,19 @@ Code  |Description
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
+## Response Headers
 For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
+
+### Response Body
 On success, returns a string that represents the PIN proposed by the server.
 
-##Example
+## Example
 
-###Request
+### Request
 ```
-GET GET /CertificateManagement/api/v1.0/smartcards/C6BAD97C-F97F-4920-8947-BE980C98C6B5/serverproposedpin HTTP/1.1
+GET /CertificateManagement/api/v1.0/smartcards/C6BAD97C-F97F-4920-8947-BE980C98C6B5/serverproposedpin HTTP/1.1
 ```
-###Response
+### Response
 ```
 HTTP/1.1 200 OK
 
