@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Microsoft Identity Manager Service and Portal in organizations licensed for Azure AD Premium | Microsoft Docs
+title: Install Microsoft Identity Manager Service and Portal for Azure AD Premium customers | Microsoft Docs
 description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016 SP2 in organizations licensed for Azure AD Premium
 services: active-directory
 documentationcenter: ''
@@ -23,7 +23,7 @@ ms.reviewer: mwahl
 ms.suite: ems
 
 ---
-# Install MIM 2016 with SP2: MIM Service and Portal (AADP Version)
+# Install MIM 2016 with SP2: MIM Service and Portal for Azure AD Premium customers
 
 > [!div class="step-by-step"]
 > [« MIM Synchronization Service](install-mim-sync.md)
@@ -301,19 +301,19 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
 1. On the **Configure common services** page select **Office 365** mail service and **Basic Authentication**. Enable **Use Group Managed Service Account** option. Click **Next**.
 
-   ![Mail service type selection screen image - option F](media/install-mim-service-portal-aadp/optionG001.png)
+   ![Mail service type selection screen image - option G](media/install-mim-service-portal-aadp/optionG001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image - option F](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option G](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image - option F](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option G](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service group-managed service account name, domain name, MIM Service’s Office 365 mailbox SMTP address and the MIM Service account’s Azure AD password. Click **Next**.
 
-    ![Configure the MIM service account image - option F](media/install-mim-service-portal-aadp/optionG002.png)
+    ![Configure the MIM service account image - option G](media/install-mim-service-portal-aadp/optionG002.png)
 
 ### Option H. Group-managed service account + Office 365 application context authentication
 
@@ -411,14 +411,14 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    A warning will appear – read it and click **Next**.
 
-   ![Warning message screen image 4](media/install-mim-service-portal-aadp/aadp025.png)
+   ![Warning message screen image 5](media/install-mim-service-portal-aadp/aadp025.png)
 
 1. In the next MIM Password Reset Portal configuration screen, type the MIM Service Server Address for the Password Reset Portal and select whether this website will be accessible by intranet users. Click **Next**.
 
    ![Password Reset portal configuration screen image](media/install-mim-service-portal-aadp/aadp026.png)
 
 1. When all pre-installation definitions are ready, click **Install** to begin installing the selected **Service and Portal** components.
-   ![MIM Service and Portal installation screen image](media/install-mim-service-portal-aadp/aadp027.png)
+   ![MIM Service and Portal installation screen image - final](media/install-mim-service-portal-aadp/aadp027.png)
 
 ## Post-installation tasks
 
