@@ -157,7 +157,7 @@ The next step is to configure the workflows for your object type. Workflow files
 - Test Connection: Configure a workflow to check if the connection with data source server is successfully established.
 
 >[!NOTE]
->You can configure these workflows for your project or download the default project from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=29944).
+>You can configure these workflows for your project or download the default project from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29944).
 
 
 ### Workflow Designer
@@ -169,13 +169,13 @@ The Workflow Designer is composed of the following UI elements:
 
    - **Nodes in left pane**: These help you to select which you want to design which workflow.
 
-   - **Central Workflow Designer**: Here you can drop the activities for configuring the workflows. To accomplish various MIM operations (Export, Import, Password management), you can use the standard and custom workflow activities of .NET Workflow Framework 4. The Web Service Configuration tool uses standard and custom workflow activities. For more information on standard activities, see [Using activity designers](http://msdn.microsoft.com/library/ee829528.aspx).
+   - **Central Workflow Designer**: Here you can drop the activities for configuring the workflows. To accomplish various MIM operations (Export, Import, Password management), you can use the standard and custom workflow activities of .NET Workflow Framework 4. The Web Service Configuration tool uses standard and custom workflow activities. For more information on standard activities, see [Using activity designers](https://msdn.microsoft.com/library/ee829528.aspx).
 
       - In the Central Workflow Designer, a red circle with exclamation mark beside any activity indicates that the operation dropped and is not defined correctly and completely. Hover over the red circle to find out the exact error. After the activity is defined correctly, the red circle changes to the yellow information mark.
       
       - In the Central Workflow Designer, a yellow triangle information mark beside any activity indicates that the activity is defined, but there is more that you can do to complete the activity. Hover over the yellow triangle to see more information.
 
-   - **Toolbox**: Packages all the tools including system and custom activities and predefined statements to design the workflow. For more information, see [Toolbox](http://msdn.microsoft.com/library/aa480213.aspx).
+   - **Toolbox**: Packages all the tools including system and custom activities and predefined statements to design the workflow. For more information, see [Toolbox](https://msdn.microsoft.com/library/aa480213.aspx).
    
    - **Toolbox sections**: The Toolbox has the following sections and categories:
    
@@ -189,11 +189,11 @@ The Workflow Designer is composed of the following UI elements:
       
       - **Debug**: System workflow activities for debugging defined in Workflow 4. These activities allow issue tracking for a workflow.
       
-      - **Statements**: System workflow activities defined in Workflow 4. For more information, see [Using activity designers](http://msdn.microsoft.com/library/ee829528.aspx).
+      - **Statements**: System workflow activities defined in Workflow 4. For more information, see [Using activity designers](https://msdn.microsoft.com/library/ee829528.aspx).
 
-   - **Properties**: The properties tab displays the properties of a particular workflow activity that is dropped in the designer area and selected. The figure on the left shows the properties of **Assign** activity. For every activity, the properties differ and are used while configuring the custom workflow. This tab allows you to define the attributes of the selected tool that has been dropped into the central workflow designer. For more information, see [Properties](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Properties**: The properties tab displays the properties of a particular workflow activity that is dropped in the designer area and selected. The figure on the left shows the properties of **Assign** activity. For every activity, the properties differ and are used while configuring the custom workflow. This tab allows you to define the attributes of the selected tool that has been dropped into the central workflow designer. For more information, see [Properties](https://msdn.microsoft.com/library/ee342461.aspx).
 
-   - **Task Bar:** The task bar includes three elements: **Variables**, **Arguments**, and **Imports**. These elements are used together with workflow activities. For more information, see [A developer's introduction to Windows Workflow Foundation (WF) in .NET 4](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Task Bar:** The task bar includes three elements: **Variables**, **Arguments**, and **Imports**. These elements are used together with workflow activities. For more information, see [A developer's introduction to Windows Workflow Foundation (WF) in .NET 4](https://msdn.microsoft.com/library/ee342461.aspx).
 
 
 

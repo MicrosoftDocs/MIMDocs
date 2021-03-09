@@ -182,6 +182,6 @@ HTTP/1.1 200 OK
 
 ## See also
 
-- [Microsoft.Clm.Provision.FindOperations.FindRequest method](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
-- [Microsoft.Clm.Shared.RequestPermission enumeration](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
+- [Microsoft.Clm.Provision.FindOperations.FindRequest method](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
+- [Microsoft.Clm.Shared.RequestPermission enumeration](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
 - [Microsoft.Clm.Shared.Requests.Request class](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx)

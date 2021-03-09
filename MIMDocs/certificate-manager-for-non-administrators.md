@@ -32,7 +32,7 @@ If a user isn’t a local administrator on their computer, they won’t be able 
 
 1.  **Unpack the appx file**
 
-    Obtain a signing certificate. Follow the steps to [Sign Windows 8 applications using an internal PKI](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop when you get to “Sign the Application”. Name the exported pfx file. Export to a .cer file as well, and import it to the client using the cer file of the new signing certificate.
+    Obtain a signing certificate. Follow the steps to [Sign Windows 8 applications using an internal PKI](https://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop when you get to “Sign the Application”. Name the exported pfx file. Export to a .cer file as well, and import it to the client using the cer file of the new signing certificate.
 
     Run the following to unpack the appx file:
 
