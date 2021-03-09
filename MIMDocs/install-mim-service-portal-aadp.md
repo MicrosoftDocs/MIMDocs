@@ -46,17 +46,17 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 ## Deployment options
 
-The choice of deployment depends upon two decisions. The first decision is whether MIM Service will be  running as a regular Windows service account or as a group managed service account (gMSA). The second is whether MIM Service will be sending email through an Exchange Server, Office 365, or a SMTP server. Deployment options available:
+The choice of deployment depends upon two decisions. The first decision is whether MIM Service will be  running as a regular Windows service account or as a group-managed service account (gMSA). The second is whether MIM Service will be sending email through an Exchange Server, Office 365, or an SMTP server. Deployment options available:
 
 - Option A: Regular service account + Exchange Server
 - Option B: Regular service account + Office 365 basic authentication
 - Option C: Regular service account + Office 365 application context authentication
 - Option D: Regular service account + SMTP
 - Option E: Regular service account + no mail server
-- Option F: Group managed service account + Exchange Server
-- Option G: Group managed service account + Office 365 basic authentication
-- Option H: Group managed service account + Office 365 application context authentication
-- Option I: Group managed service account + no mail server
+- Option F: Group-managed service account + Exchange Server
+- Option G: Group-managed service account + Office 365 basic authentication
+- Option H: Group-managed service account + Office 365 application context authentication
+- Option I: Group-managed service account + no mail server
 
 > [!NOTE]
 > The SMTP server option only works with regular service accounts and Integrated Windows Authentication, and does not permit use of the Outlook add-in for approvals.
@@ -65,11 +65,11 @@ The choice of deployment depends upon two decisions. The first decision is wheth
 
 Starting from build 4.6.421.0, in addition to basic authentication, MIM Service supports application context authentication to Office 365 mailboxes. End of support for basic authentication was announced on 20 September 2019, therefore it is recommended to use application context authentication for sending notifications and collecting approval responses.
 
-Application context authentication scenario requires you to register an application in Azure AD, create a client secret to be used instead of a password and grant this application permissions to access the MIM Service mailbox. MIM Service will be using this application ID and this secret to access its mailbox in Office 365. You can register your application in Azure AD either using a script (recommended) or manually.
+Application context authentication scenario requires you to register an application in Azure AD, create a client secret to be used instead of a password and grant this application permission to access the MIM Service mailbox. MIM Service will be using this application ID and this secret to access its mailbox in Office 365. You can register your application in Azure AD either using a script (recommended) or manually.
 
 ### Registering application using Azure AD portal
 
-1. Logon to [Azure AD portal](https://portal.azure.com) with Tenant Global Administrator role.
+1. Log on to [Azure AD portal](https://portal.azure.com) with Tenant Global Administrator role.
 1. Navigate to Azure AD blade and copy your Tenant ID from *Overview* section and save it.
 1. Navigate to *App registrations* section and click **New Registration** button.
 1. Give your application a name, e.g., *MIM Service mailbox client access*, and click **Register**.
@@ -108,7 +108,7 @@ After successful application registration your script output should look like th
 
 ![PowerShell script output image](media/install-mim-service-portal-aadp/ps1.png)
 
-There is a 30 seconds delay after the application is registered and a browser window is opened to avoid replication issues. Provide your Azure AD Tenant Administrator credentials and accept a request to grant your application access to the MIM Service mailbox. The popup window should look like this:
+There is a 30 second delay after the application is registered and a browser window is opened to avoid replication issues. Provide your Azure AD Tenant Administrator credentials and accept a request to grant your application access to the MIM Service mailbox. The popup window should look like this:
 
 ![Admin consent screen image](media/install-mim-service-portal-aadp/ps2.png)
 
@@ -169,7 +169,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
    ![Mail service type selection screen image](media/install-mim-service-portal-aadp/aadp010.png)
    ![Authentication type selection screen image](media/install-mim-service-portal-aadp/aadp011.png)
 
-   If installing MIM Service using Group Managed Service Account, then select the corresponding checkbox, otherwise leave this checkbox unchecked. Click **Next**.
+   If installing MIM Service using Group-Managed Service Account, then select the corresponding checkbox, otherwise leave this checkbox unchecked. Click **Next**.
 
    ![Group managed service account selection screen image](media/install-mim-service-portal-aadp/aadp012.png)
 
@@ -279,7 +279,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
     ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionE002.png)
 
-### Option F. Group managed service account + Exchange Server
+### Option F. Group-managed service account + Exchange Server
 
 1. On the **Configure common services** page select **Exchange Server 2013 or later** and **Integrated Windows Authentication**. Type your Exchange server hostname. Enable **Use Group Managed Service Account** option. Click **Next**.
 
@@ -293,11 +293,11 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
 
-1. Type MIM Service group managed service account name, domain name, MIM Service mailbox SMTP address and password. Click **Next**.
+1. Type MIM Service group-managed service account name, domain name, MIM Service mailbox SMTP address and password. Click **Next**.
 
     ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionF002.png)
 
-### Option G. Group managed service account + Office 365 basic authentication
+### Option G. Group-managed service account + Office 365 basic authentication
 
 1. On the **Configure common services** page select **Office 365** mail service and **Basic Authentication**. Enable **Use Group Managed Service Account** option. Click **Next**.
 
@@ -311,11 +311,11 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
 
-1. Type MIM Service group managed service account name, domain name, MIM Service’s Office 365 mailbox SMTP address and the MIM Service account’s Azure AD password. Click **Next**.
+1. Type MIM Service group-managed service account name, domain name, MIM Service’s Office 365 mailbox SMTP address and the MIM Service account’s Azure AD password. Click **Next**.
 
     ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionG002.png)
 
-### Option H. Group managed service account + Office 365 application context authentication
+### Option H. Group-managed service account + Office 365 application context authentication
 
 1. On the **Configure common services** page select **Office 365** mail service and **Application Context Authentication**. Enable **Use Group Managed Service Account** option. Click **Next**.
 
@@ -341,11 +341,11 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
 
-1. Type MIM Service group managed service account name, domain name and MIM Service Office 365 mailbox SMTP address. Click **Next**.
+1. Type MIM Service group-managed service account name, domain name and MIM Service Office 365 mailbox SMTP address. Click **Next**.
 
     ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionH002.png)
 
-### Option I. Group managed service account + no mail server
+### Option I. Group-managed service account + no mail server
 
 1. On the **Configure common services** page select **None** server type. Enable **Use Group Managed Service Account** option. Click **Next**.
 
@@ -359,7 +359,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
 
-1. Type MIM Service group managed service account name, domain name. Click **Next**.
+1. Type MIM Service group-managed service account name, domain name. Click **Next**.
 
     ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionI002.png)
 
@@ -369,7 +369,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Warning screen image](media/install-mim-service-portal-aadp/aadp014.png)
 
-1. Type MIM Synchronization Server hostname. Type MIM Management Agent account name. If you are installing MIM Synchronization Service using Group Managed Service Account, then add the dollar sign to the account name, e.g. *contoso\MIMSyncGMSAsvc$*. Click **Next**.
+1. Type MIM Synchronization Server hostname. Type MIM Management Agent account name. If you are installing MIM Synchronization Service using Group-Managed Service Account, then add the dollar sign to the account name, e.g. *contoso\MIMSyncGMSAsvc$*. Click **Next**.
 
     ![Synchronization Server name screen image](media/install-mim-service-portal-aadp/aadp015.png)
 
