@@ -69,15 +69,15 @@ Application context authentication scenario requires you to register an applicat
 
 ### Registering application using Azure AD portal
 
-1. Log on to [Azure AD portal](https://portal.azure.com) with Tenant Global Administrator role.
+1. Sign in to [Azure AD portal](https://portal.azure.com) with Tenant Global Administrator role.
 1. Navigate to Azure AD blade and copy your Tenant ID from *Overview* section and save it.
 1. Navigate to *App registrations* section and click **New Registration** button.
-1. Give your application a name, e.g., *MIM Service mailbox client access*, and click **Register**.
+1. Give your application a name, for example, *MIM Service mailbox client access*, and click **Register**.
 1. After your application is registered, copy the *Application (client) ID* value and save it.
 1. Navigate to *API Permissions* section and revoke *User.Read* permission by clicking on three dots right to permission name and choosing **Remove Permission**. Confirm that you want to remove this permission.
 1. Click on **Add a permission** button. Switch to *APIs my organization uses* and type *Office*. Select *Office 365 Exchange Online* and *Application permissions* type. Type *full* and select **full_access_as app**. Click **Add Permissions** button.
 1. You will see permission added and that admin consent is not granted. Click on **Grant admin consent** button next to *Add a permission* button.
-1. Navigate to *Certificates and secrets* and choose to add **New client secret**. If you select an expiration time for the secret, you will have to reconfigure MIM Service closer to its expiration date to use another secret. If you do not plan to rotate application secrets, select *Never*. Give your secret a name, e.g., *MIM Service* and click **Add** button. You will see the secret value displayed in the portal. Copy this value (not secret ID) and save it.
+1. Navigate to *Certificates and secrets* and choose to add **New client secret**. If you select an expiration time for the secret, you will have to reconfigure MIM Service closer to its expiration date to use another secret. If you do not plan to rotate application secrets, select *Never*. Give your secret a name, for example, *MIM Service* and click **Add** button. You will see the secret value displayed in the portal. Copy this value (not secret ID) and save it.
 1. Now that you have Tenant ID, Application ID and application secret needed by installer you can continue with MIM Service and Portal installation. In addition, you may want to restrict access of your newly registered application to MIM Service mailbox only (*full_access_as_app* grants access to all mailboxes in your organization). To do so, you need to create an [application access policy](https://developer.microsoft.com/microsoft-365/blogs/application-access-policy-support-added-to-exchange-web-services/). Follow [this guide](https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy?view=exchange-ps&preserve-view=true) to restrict access of your application to the MIM Service mailbox only. You will need to create a distribution or mail-enabled security group and add your MIM Service mailbox into that group. Then run a PowerShell command and provide your Exchange Online administrator credentials:
 
     ```PowerShell
@@ -92,7 +92,7 @@ Application context authentication scenario requires you to register an applicat
 
 *Create-MIMMailboxApp.ps1* script could be found either in *Scripts.zip/Scripts/Service and Portal* or in *Service and Portal.zip\Service and Portal\Program Files\Microsoft Forefront Identity Manager\2010\Service\Scripts*.
 
-Unless your MIM Service mailbox is hosted in a national or government cloud, the only parameter you need to pass to the script is MIM Service email, e.g. MIMService@contoso.onmicrosoft.com.
+Unless your MIM Service mailbox is hosted in a national or government cloud, the only parameter you need to pass to the script is MIM Service email, for example, MIMService@contoso.onmicrosoft.com.
 
 From a PowerShell window start Create-MIMMailboxApp.ps1 with -MailboxAccountEmail <email> parameter and provide MIM Service email.
 
@@ -102,27 +102,27 @@ From a PowerShell window start Create-MIMMailboxApp.ps1 with -MailboxAccountEmai
 
 When asked for credentials, provide your Azure AD Global Administrator credentials to register an application in Azure.
 
-Once the application is registered another popup will ask for Exchange Online Administrator credentials to create an application access policy.
+Once the application is registered, another popup will ask for Exchange Online Administrator credentials to create an application access policy.
 
 After successful application registration your script output should look like this:
 
 ![PowerShell script output image](media/install-mim-service-portal-aadp/ps1.png)
 
-There is a 30 second delay after the application is registered and a browser window is opened to avoid replication issues. Provide your Azure AD Tenant Administrator credentials and accept a request to grant your application access to the MIM Service mailbox. The popup window should look like this:
+There is a 30-second delay after the application is registered and a browser window is opened to avoid replication issues. Provide your Azure AD Tenant Administrator credentials and accept a request to grant your application access to the MIM Service mailbox. The popup window should look like this:
 
 ![Admin consent screen image](media/install-mim-service-portal-aadp/ps2.png)
 
-After you click Accept button you will be redirected to https://admin.office.com. You can close the browser window and check the script output. It should look like this:
+After you click Accept button, you will be redirected to https://admin.office.com. You can close the browser window and check the script output. It should look like this:
 
 ![PowerShell script output image 2](media/install-mim-service-portal-aadp/ps3.png)
 
-Copy ApplicationId, TenantId and ClientSecret values as they will be needed by the MIM Service and Portal installer.
+Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by the MIM Service and Portal installer.
 
 ## Deploying MIM Service and Portal
 
 ### Common deployment steps
 
-1. Create a temporary directory to keep installer logs in, e.g. c:\miminstall.
+1. Create a temporary directory to keep installer logs in, for example, c:\miminstall.
 1. Start elevated command prompt, navigate to MIM Service installer binaries folder and run
    ```cmd
    msiexec /i "Service and Portal.msi" /lvxi* c:\miminstall\log.txt
@@ -139,7 +139,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Azure instance selection screen image](media/install-mim-service-portal-aadp/aadp003.png)
 
-   Organizations which are not using a national or government cloud should select the global instance, Azure AD.
+   Organizations, which are not using a national or government cloud should select the global instance, Azure AD.
    ![Azure instance selection screen image 2](media/install-mim-service-portal-aadp/aadp004.png)
 
 1. After selecting the appropriate cloud, the installer will ask you to authenticate to that tenant. In the popup window, provide Azure AD user credentials of a user in that tenant to validate your tenant subscription level. Type your Azure AD username and click **Next**.
@@ -150,13 +150,13 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Sign-in popup window image 2](media/install-mim-service-portal-aadp/aadp006.png)
 
-   If the installer is unable to locate a subscription to Azure AD Premium P1 or another subscription which includes Azure AD Premium, you will see a popup error. Please check that the username is for the correct tenant and look at the installer log file for more information.
+   If the installer is unable to locate a subscription to Azure AD Premium P1 or another subscription, which includes Azure AD Premium, you will see a popup error. Check that the username is for the correct tenant and look at the installer log file for more information.
 
 1. Once the license check is complete, select MIM Service and Portal components to install and click **Next**.
 
    ![MIM Service Component selection screen image](media/install-mim-service-portal-aadp/aadp007.png)
 
-1. Provide the SQL server and database name. Choose to re-use the existing database if upgrading from previous MIM versions. If installing using SQL failover cluster or Always-On Availability Groups Listener provide a cluster or a listener name. Click **Next**.
+1. Provide the SQL server and database name. Choose to reuse the existing database if upgrading from previous MIM versions. If installing using SQL failover cluster or Always-On Availability Groups Listener, provide a cluster or a listener name. Click **Next**.
 
     ![Configure the MIM database connection screen image](media/install-mim-service-portal-aadp/aadp008.png)
 
@@ -369,7 +369,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    ![Warning screen image 2](media/install-mim-service-portal-aadp/aadp014.png)
 
-1. Type MIM Synchronization Server hostname. Type MIM Management Agent account name. If you are installing MIM Synchronization Service using Group-Managed Service Account, then add the dollar sign to the account name, e.g. *contoso\MIMSyncGMSAsvc$*. Click **Next**.
+1. Type MIM Synchronization Server hostname. Type MIM Management Agent account name. If you are installing MIM Synchronization Service using Group-Managed Service Account, then add the dollar sign to the account name, for example, *contoso\MIMSyncGMSAsvc$*. Click **Next**.
 
     ![Synchronization Server name screen image](media/install-mim-service-portal-aadp/aadp015.png)
 
@@ -415,7 +415,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
 1. In the next MIM Password Reset Portal configuration screen, type the MIM Service Server Address for the Password Reset Portal and select whether this website will be accessible by intranet users. Click **Next**.
 
-   ![Password Reset portal configuration screen image](media/install-mim-service-portal-aadp/aadp026.png)
+   ![Password Reset portal configuration screen image 2](media/install-mim-service-portal-aadp/aadp026.png)
 
 1. When all pre-installation definitions are ready, click **Install** to begin installing the selected **Service and Portal** components.
    ![MIM Service and Portal installation screen image - final](media/install-mim-service-portal-aadp/aadp027.png)
