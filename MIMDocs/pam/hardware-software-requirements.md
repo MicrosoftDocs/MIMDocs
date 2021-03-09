@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/06/2017
+ms.date: 02/09/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -26,10 +26,10 @@ ms.suite: ems
 ---
 # Hardware and software requirements
 
-Privileged Access Management has no hardware requirements beyond those of the underlying software platforms. Just make sure you have sufficient memory or disk space, and network connectivity.
+Privileged Access Management has no hardware requirements beyond those requirements of the underlying software platforms. Just make sure you have sufficient memory or disk space, and network connectivity.
 
 > [!IMPORTANT]
-> This article provides the minimum requirements for a basic deployment. It is not intended to demonstrate performance, scalability, or high availability. It does not represent a recommended deployment topology for large enterprises or production environments.
+> This article provides the minimum requirements for a basic deployment on an isolated network. It is not intended to demonstrate performance, scalability, or high availability, and does not represent a recommended deployment topology for large enterprises or production environments.  If your Active Directory is part of an Internet-connected environment, see instead the [securing privileged access](/security/compass/overview) guidance for more information on where to start.
 
 ## Installing from software packages
 
@@ -39,29 +39,15 @@ The following software can be downloaded from TechNet Evaluation Center or MSDN:
   - Service and Portal: contains the installer for MIM Service and MIM Portal and for the PAM Scenario
   - Add-ins and Extensions: contains the installer for the requestor PowerShell cmdlets
 
-The following software can be downloaded from GitHub:
+The following optional software can be downloaded from GitHub:
 
 - [PAMSamplePortal](https://github.com/Azure/identity-management-samples): contains sample web application for the REST API
 
 ## Required software
 
-- Windows Server 2012 R2
+- Windows Server 2016
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 or SQL Server 2014
-
-## Evaluation software
-
-If you do not have licenses for Windows, SQL Server, or Windows Server you can download evaluation versions.
-
-### TechNet Evaluation Center
-
-- [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)
-- [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)
-
-### Microsoft Download Center
-
-- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)  
-- [SharePoint Foundation 2013 SP1 and its prerequisites](https://www.microsoft.com/download/details.aspx?id=42039)
 
 ## Hardware requirements
 
@@ -77,9 +63,9 @@ For CORPWKSTN:
 
 For PRIVDC:
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
+- Windows Server 2016
 
 For PAMSRV:
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
+- Windows Server 2016
 - [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) or [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

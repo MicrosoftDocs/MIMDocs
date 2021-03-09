@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/31/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -24,8 +24,12 @@ ms.suite: ems
 #ms.custom:
 
 ---
-# Environment overview
+# MIM PAM test lab environment overview
 
+> [!NOTE]
+> The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. If your Active Directory is part of an Internet-connected environment, see instead [securing privileged access](/security/compass/overview) for more information on where to start.
+
+To set up a test lab of MIM PAM, you can install the software on virtual machines.
 Privileged Access Management works with virtual machines (VMs) with separate drives that are connected to each other on a shared network. These virtual machines can be hosted by Windows 8.1, Windows Server 2012 R2, or other operating system platforms.
 
 ![PAM servers: relationships and supported platforms - diagram](media/pam-test-lab-architecture.png)

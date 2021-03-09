@@ -16,7 +16,7 @@ ms.assetid:
 
 # Resource control display configuration XML reference
 
-Resource control display configuration (RCDC) resources are user-defined resources that you can use to control how other resources in the Microsoft Identity Manager 2016 SP1 (MIM) data store appear in the user interface (UI) to the end user. Each RCDC resource contains an XML configuration file that you can change to add, modify, or remove UI text and UI controls. While MIM 2016 SP1 provides several default RCDC resources, you can also create custom RCDC resources for custom resources. For more information about using the RCDC UI in the FIM Portal, see [Introduction to Configuring and Customizing the FIM Portal](http://go.microsoft.com/fwlink/?LinkID=165848) in the FIM documentation.
+Resource control display configuration (RCDC) resources are user-defined resources that you can use to control how other resources in the Microsoft Identity Manager 2016 SP1 (MIM) data store appear in the user interface (UI) to the end user. Each RCDC resource contains an XML configuration file that you can change to add, modify, or remove UI text and UI controls. While MIM 2016 SP1 provides several default RCDC resources, you can also create custom RCDC resources for custom resources. For more information about using the RCDC UI in the FIM Portal, see [Introduction to Configuring and Customizing the FIM Portal](/previous-versions/mim/ee534913(v=ws.10)) in the FIM documentation.
 
 
 ## Known issues
@@ -109,7 +109,7 @@ By using an **XMLDataSource** element, you can specify custom data that the RCDC
 |---|---|---|---|
 | **XMLDataSource**            | The data source represents XML data. The data can be either in XSL or embedded XSL formats:<ul><li>XSL format in Microsoft.IdentityManagement.WebUI.Controls.dll:<br/>```<my:XmlDataSource my:Name="summaryTransformXsl" my:Parameters="Microsoft.IdentityManagement. WebUI.Controls.Resources.DefaultSummary.xsl"> </my:XmlDataSource>```</li><li>Embedded XSL format:<br/>```<my:XmlDataSource my:Name="RequestStatusTransformXsl"><xsl:stylesheet version="1.0" xmlns:xsl=http://www.w3.org/1999/XSL/Transform xmlns:msxsl="urn:schemas-microsoft-com:xslt"></xsl:stylesheet></my:XmlDataSource>```</li></ul>  | No | `Xpath[;namespaces]`where `Xpath` is a valid XML xpath to select the required note, most often “/” (root). `namespaces` is an optional list of prefix=URI strings. The string is delimited by semicolons as required for the Xpath to work against the namespaced XML. |
 | **ReferenceDeltaDataSource** | The data source represents deltas of multivalued reference attributes. It is used only on RCDC for Group and Set. <br/> Although the data source is not limited to Groups or Sets, it requires code changes in the RCDC host to submit such deltas. Currently, Group and Set are the only hosts that recognize this datasource.  | Yes | `[AttributeName].Add` where `[AttributeName]` represents a reference attribute and the data returned is the delta additions.<ul><li>Example: `[ReferenceAttribute].Add`</li><li>Example: `<my:Property my:Name="Value" my:Value="{Binding Source=delta, Path=ExplicitMember.Add, Mode=TwoWay}"/>`</li></ul>`[AttributeName].Remove` where `[AttributeName]` represents a reference attribute and the data returned is the delta removals. <br/> DeltaXml <!-- Is bold formatting needed for DeltaXml? --> |
-|**RequestDetailsDataSource**| The data source represents the RequestParameter attribute of Request objects. The parameter sets the maximum number of attribute values to be displayed per multivalued attribute It is used only in RCDC for Request. `<my:ObjectDataSource my:TypeName="RequestDetailsDataSource" my:Name="requestDetails" my:Parameters="1000" />`| No | DeltaXml |
+|**RequestDetailsDataSource**| The data source represents the RequestParameter attribute of Request objects. The parameter sets the maximum number of attribute values to be displayed per multivalued attribute. It is used only in RCDC for Request. `<my:ObjectDataSource my:TypeName="RequestDetailsDataSource" my:Name="requestDetails" my:Parameters="1000" />`| No | DeltaXml |
 |**RequestStatusDataSource**| The data source represents the **RequestStatusDetails** attribute of Request objects. It is used only in RCDC for Request. | No | DeltaXml |
 
 To define a custom XML data source, use the following XML:
@@ -577,7 +577,7 @@ All RCDC controls that are specified in this document can have the common proper
 
 - **ReadOnly**: By setting this property to true, the end user experiences the control in a read-only mode. This is an optional, Boolean-type attribute. The default value is set to false. However, sometimes the behavior of this property is overwritten by the type of rights a person has on the data bind with the control. For example, if a user does not have rights to update a field and the field is bound with inline rights, the user sees the data in a read-only mode even this property is set to false.
 
-- **RegularExpression**: This property specifies restrictions that are imposed on the value in the control. The formats of this property value are the formats that are supported in the .NET StringRegex standard. For more information, see [.NET Framework Regular Expressions](http://go.microsoft.com/fwlink/?LinkId=165361). If the control is used to input a value, the value is checked against the restriction that is specified in this property when the user attempts to leave the current page. The error message appears on top of the control that has invalid input. The user can explicitly specify a string regular expression. The user can also bind it with schema information of a given attribute. By default, if this property is missing, it means that the control does not check for any restrictions on input strings.
+- **RegularExpression**: This property specifies restrictions that are imposed on the value in the control. The formats of this property value are the formats that are supported in the .NET StringRegex standard. For more information, see [.NET Framework Regular Expressions](https://go.microsoft.com/fwlink/?LinkId=165361). If the control is used to input a value, the value is checked against the restriction that is specified in this property when the user attempts to leave the current page. The error message appears on top of the control that has invalid input. The user can explicitly specify a string regular expression. The user can also bind it with schema information of a given attribute. By default, if this property is missing, it means that the control does not check for any restrictions on input strings.
 
     The following example uses an explicit value for this property:
 
@@ -646,7 +646,7 @@ The following environment variables can be used in any RCDC configuration:
 
 ## Debug XML configuration files
 
-When you are developing or modifying XML configuration files for an RCDC, you can help reduce errors by validating the XML against XSD files by using an editor such as Microsoft Visual Studio. For more information, see [An Introduction to the XML Tools in Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkID=74512).
+When you are developing or modifying XML configuration files for an RCDC, you can help reduce errors by validating the XML against XSD files by using an editor such as Microsoft Visual Studio. For more information, see [An Introduction to the XML Tools in Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=74512).
 
 
 ## Customize Help files
@@ -657,7 +657,7 @@ If you create new resources and attributes, you may want to update the existing 
 >Information about the basics of formatting or editing HTML is not provided in this article. Users are expected to know how to edit HTML files.
 
 ### Location of Help files
-All the Help files for the Microsoft Identity Management 2016 SP1 Portal are located in the folder `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html` on the MIM service server.
+All the Help files for the Microsoft Identity Manager 2016 SP1 Portal are located in the folder `<ProgramFiles>\Common Files\Microsoft Shared\Web Server Extensions\12\Template\Layouts\MSILM2\Help\1033\html` on the MIM service server.
 
 ### Locate a specific Help file
 All the Help files for the FIM Portal are named with a globally unique identifier (GUID). To locate the correct file for your custom resource:
@@ -1458,7 +1458,7 @@ For a sample of the UocLabel control, see simple control in the Simple control s
 
 - **PageSize**: This is an optional integer property. The user can specify how many entries fit in one page in a list view control. The default value is 10 entries. Any positive integer is valid.
 
-- **UsageKeyword**: This is an optional, string-type property. The user can specify a list of keywords that define what search scope is used in the list-view search control. There are search scope resources in FIM 2010 server. The attribute on a SearchScopeConfiguration structure, called UsageKeyword, is used to group a set of search scopes. The list view consumes that list of keywords. Each keyword is separated by a comma (,). This the usage keyword used on the corresponding search scope that you want to show in this list view. This is only in effect when ShowSearchControl property is set to true.
+- **UsageKeyword**: This is an optional, string-type property. The user can specify a list of keywords that define what search scope is used in the list-view search control. There are search scope resources in FIM 2010 server. The attribute on a SearchScopeConfiguration structure, called UsageKeyword, is used to group a set of search scopes. The list view consumes that list of keywords. Each keyword is separated by a comma (,). This is the usage keyword used on the corresponding search scope that you want to show in this list view. This is only in effect when ShowSearchControl property is set to true.
 
 - **SearchControlAutoPostback**: This is an optional Boolean property. Set the value of this property to true to perform autopostback when a search is triggered. By default, SearchControlAutoPostback is set to false.
 

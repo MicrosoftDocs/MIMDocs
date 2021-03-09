@@ -28,6 +28,10 @@ ms.suite: ems
 
 With Privileged Access Management, you can assign users to privileged roles that they can activate as needed for just-in-time access. These roles are defined manually and established in the bastion environment. This article walks you through the process of deciding which roles to manage through PAM, and how to define them with appropriate permissions and restrictions.
 
+> [!IMPORTANT]
+> The model in this article is intended only for isolated Active Directory environments using MIM PAM.  For hybrid environments, see instead the guidance in the [enterprise access model](/security/compass/privileged-access-access-model).
+
+
 A straightforward approach to defining roles for privileged access management is to compile all the information in a spreadsheet. List the roles in the roles, and use the columns to identify governance requirements and permissions.
 
 The governance requirements vary depending on existing identity and access policies or compliance requirements. The parameters to identify for each role might include:
@@ -48,7 +52,7 @@ Start by identifying all the roles that you might want to manage with PAM. On th
 
 To find the appropriate roles, consider each application in scope for management:
 
-- Is the application in [tier 0, tier 1 or tier 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Is the application in tier 0, tier 1 or tier 2?
 - What are the privileges that impact the confidentiality, integrity or availability of the application?
 - Does the application have dependencies on other components of the system? For example,  does it have dependencies on databases, networking, security infrastructure, virtualization or hosting platform?
 
@@ -102,8 +106,6 @@ In some cases, a user may be permanently assigned to a role. In that case, they 
 
 - A user account in the administrative forest, with a smartcard or virtual smartcard (for example, an account with an offline smartcard, needed for rare maintenance tasks)
 
-For organizations concerned about the potential for credential theft or misuse, the [Using Azure MFA for activation](use-azure-mfa-for-activation.md) guide includes instructions for how to configure MIM to require an additional out of band check at the time of role activation.
-
 ## Delegate Active Directory permissions
 
 Windows Server automatically creates default groups such as "Domain Admins" when new domains are created. These groups simplify getting started and may be suitable for smaller organizations. Larger organizations, or those requiring more isolation of administrative privileges, should empty those groups and replace them with groups that provide fine-grained permissions.
@@ -116,7 +118,7 @@ One limitation of the Domain Admins group is that it cannot have members from an
 
 In place of default groups like Domain Admins, create new security groups that provide only the necessary permissions. You should then use MIM to dynamically provide administrator accounts with those group memberships.
 
-### Service management permissions
+### Service Management permissions
 
 The following table gives examples of permissions which would be relevant to include in roles for managing AD.
 
@@ -150,7 +152,7 @@ The following table gives examples of permissions that would be relevant to incl
 
 ## Example role definitions
 
-The choice of role definitions depend on the tier of servers being managed. This also depends on the choice of applications being managed. Applications like Exchange or third party enterprise products such as SAP will often bring their own additional role definitions for delegated administration.
+The choice of role definitions depends on the tier of servers being managed. This also depends on the choice of applications being managed. Applications like Exchange or third party enterprise products such as SAP will often bring their own additional role definitions for delegated administration.
 
 The following sections give examples for typical enterprise scenarios.
 
@@ -176,7 +178,7 @@ Roles suitable for managing the tier 0 production forest accounts and resources 
 - Storage admins
 - Anti-Malware admins for Tier 0 servers
 - SCCM admins for Tier 0 SCCM
-- SCOM Admins for Tier 0 SCOM
+- System Center Operations Manager Admins for Tier 0 Operations Manager
 - Backup admins for Tier 0
 - Users of out-of-band and baseboard management controllers (for KVM or lights-out management) connected to Tier 0 hosts
 
@@ -189,7 +191,7 @@ Roles for management and backup of servers in Tier 1 might include:
 - Security Scanner Account
 - Anti-Malware admins for Tier 1 servers
 - SCCM admins for Tier 1 SCCM
-- SCOM admins for Tier 1 SCOM
+- System Center Operations Manager admins for Tier 1 Operations Manager
 - Backup admins for Tier 1 servers
 - Users of out-of-band and baseboard management controllers (for KVM or lights-out management) to Tier 1 hosts
 
@@ -213,5 +215,5 @@ Roles for non-administrative user and computer management might include:
 
 ## Next steps
 
-- [Securing Privileged Access Reference Material](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
-- [Using Azure MFA for activation](use-azure-mfa-for-activation.md)
+- [enterprise access model](/security/compass/privileged-access-access-model)
+

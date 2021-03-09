@@ -1,6 +1,6 @@
 ---
 title: Step 5 Installing/Configuring PAM
-description: This is step 5 of configuring Privileged Identity Manager using scripts and it covers the deployment steps on the PAM server.
+description: This is step 5 of configuring Microsoft Identity Manager using scripts and it covers the deployment steps on the PAM server.
 keywords:
 author: billmath
 ms.author: billmath

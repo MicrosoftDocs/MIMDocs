@@ -42,7 +42,7 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/auth
 Parameter | Description
 ---------|------------
 reqid | Required. The request identifier that's specific to Microsoft Identity Manager (MIM) Certificate Management (CM).
-scid | Required. The smart card identifier that's specific to MIM CM. The scid is obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
+scid | Required. The smart card identifier that's specific to MIM CM. The scid is obtained from the [Microsoft.Clm.Shared.Smartcards.Smartcard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) object.
 
 ### Query parameters
 

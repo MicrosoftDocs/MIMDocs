@@ -30,11 +30,7 @@ For customers, which have not yet deployed Azure AD self-service password reset 
 - The MIM Self-Service Password Reset portal and Windows login screen  let users unlock their accounts without changing their passwords.
 - A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Azure Multi-Factor Authentication (MFA) service.
 
-MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download the Azure Multi-Factor Authentication Software Development Kit (Azure MFA SDK).  That SDK has been deprecated, and the Azure MFA SDK will be supported for existing customers only up until the retirement date of November 14, 2018. Until that date, customers must contact Azure customer support to receive your generated MFA Service Credentials package, as they will be unable to download the Azure MFA SDK. 
-
-#### NEW! Update current Azure MFA configuration to Azure Multi-Factor Authentication Server
-
-This [article](working-with-mfaserver-for-mim.md) describes how to update your deployment MIM self-service password reset portal and PAM configuration, using Azure Multi-Factor Authentication Server for multi-factor authentication.
+MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download the Azure Multi-Factor Authentication Software Development Kit (Azure MFA SDK).  That SDK has been deprecated, and customers should move to either using MIM SSPR with Azure MFA Server, or Azure AD self-service password reset. This [article](working-with-mfaserver-for-mim.md) describes how to update your deployment MIM self-service password reset portal and PAM configuration, using Azure Multi-Factor Authentication Server for multi-factor authentication.
 
 ## Deploying MIM Self-Service Password Reset Portal using Azure MFA for Multi-Factor Authentication
 
@@ -73,17 +69,12 @@ This scenario requires you to have MIM CALs for your users as well as subscripti
 ## Prepare MIM to work with multi-factor authentication
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
-In the next section, you will set up your Azure MFA provider in Microsoft Azure Active Directory. As part of this, you’ll generate a file that includes the authentication material which MFA requires to be able to contact Azure MFA.  In order to proceed, you will need an Azure subscription.
-
-### Register your multi-factor authentication provider in Azure
-
-1.  Create an [MFA provider](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
-
-2. Open a support case and request the direct SDK for ASP.net 2.0 C#. The SDK will only be provided to current users of MIM with MFA because the direct SDK has been deprecated. New customers should adopt the next version of MIM that will integrate with MFA server.
-
-3. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
 
 ### Update the configuration file
+
+> [!NOTE]
+> This section was based on the earlier guidance using the ZIP file provided by Azure MFA SDK. Instead, use the guidance in the article on how to [yse Azure Multi-Factor Authentication Server](working-with-mfaserver-for-mim.md).
+
 
 1. Sign into the computer where MIM Service is installed, as the user who installed MIM.
 
@@ -129,7 +120,7 @@ Users in your organization can now register for password reset.  During this pro
 
 #### Register users for password reset
 
-1.  A user will launch a web browser a navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
+1.  A user will launch a web browser and navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
 
     They need to enter the Password Registration Portal and authenticate using their username and password.
 
@@ -190,7 +181,6 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 4.  After successful authentication, the user will be given two options, either to keep his current password or to set a new password.
 
-5.  ![MIM ac
-6.  count unlocked success image](media/MIM-SSPR-account-unlock.JPG)
+5.  ![MIM account unlocked success image](media/MIM-SSPR-account-unlock.JPG)
 
 6.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
