@@ -13,7 +13,7 @@ ms.devlang: na
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 11/11/2020
+ms.date: 03/09/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -24,7 +24,7 @@ ms.topic: reference
 
 # Identity Manager version release history
 
-The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then determine whether you are already on the latest service pack and hotfix update version, or if you need to upgrade. 
+The Microsoft Identity Manager team regularly releases updates. This article is designed to help you keep track of the versions that have been released. You can then determine whether you are already on the latest service pack and hotfix update version, or if you need to upgrade.
 
 >[!NOTE]
 >This article only describes releases of the MIM Sync, Service and Portal, client, CM and PAM components.  Not sure what components you need?  See [Microsoft Identity Manager licensing and downloads](../microsoft-identity-manager-licensing.md).
@@ -33,7 +33,19 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
 
+## MIM Version 4.6.421.0
+
+- Status: March 5, 2021
+- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=102786)
+- [KB article 4599279](https://support.microsoft.com/help/4599279)
+- Full version for Azure AD Premium customers is available for [download from here](https://aka.ms/MIMForAADP)
+
+This hotfix contains updates for the MIM Service and MIM Portal components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
+
+This build introduces Application Context Authentication method to Office 365 mailboxes for the MIM Service component. In order to switch from Basic authentication to Application Context Authentication apply this hotfix first, run a PowerShell script to register an application in Azure AD and reconfigure your MIM Service and Portal using installer's Change mode. Check the [Deployment guide: Installing MIM Service and Portal for Azure AD Premium customers](https://docs.microsoft.com/microsoft-identity-manager/install-mim-service-portal-aadp) for more details.
+
 ## MIM Version 4.6.359.0
+
 - Status: November 29, 2020
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=102301)
 - [KB article 4585922](https://support.microsoft.com/help/4585922)
@@ -42,28 +54,30 @@ This hotfix contains updates for the MIM Synchronization Manager, MIM Service an
 Replaces build 4.6.355.0 to address MIM Service performance issues.
 
 ## MIM Version 4.6.355.0
+
 - Status: November 6, 2020
 
 Superseded by 4.6.359.0
 
 
 ## MIM Version 4.6.263.0
+
 - Status: August 7, 2020
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=101612)
 - [KB article 4576473](https://support.microsoft.com/help/4576473)
 
 This hotfix contains updates for the MIM CM, MIM Synchronization Manager and PAM components.
 
-
 ## MIM Version 4.6.258.0
+
 - Status: May 22, 2020
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=101305)
 - [KB article 4560335](https://support.microsoft.com/help/4560335)
 
 This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 
-
 ## MIM Version 4.6.34.0
+
 * Status: MIM 2016 Service Pack 2 (SP2) of October, 2019
 * Corresponding BHOLD version number: 6.0.62.0
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=100412)
