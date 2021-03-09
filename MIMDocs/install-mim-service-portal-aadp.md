@@ -40,7 +40,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 ## Before you begin
 
-- This guide is intended for installing MIM Service in organizations licensed for Azure AD Premium. If your organization does not have Azure AD Premium or is not using Azure AD, then you will need to instead follow [the guide for Volume License edition of MIM](install-mim-service-portal).
+- This guide is intended for installing MIM Service in organizations licensed for Azure AD Premium. If your organization does not have Azure AD Premium or is not using Azure AD, then you will need to instead follow [the guide for Volume License edition of MIM](install-mim-service-portal.md).
 - Ensure you have Azure AD user credentials with enough permissions to validate that your tenant subscription includes Azure AD Premium and create app registrations.
 - If you plan to use Office 365 application context authentication, you will run a script to register the MIM Service application in Azure AD and grant MIM Service permissions to access a MIM Service mailbox in Office 365. Save the script output as you will need your application ID and its secret later during installation. It is assumed that MIM Service Office 365 mailbox is already created.
 
@@ -78,7 +78,7 @@ Application context authentication scenario requires you to register an applicat
 1. Click on **Add a permission** button. Switch to *APIs my organization uses* and type *Office*. Select *Office 365 Exchange Online* and *Application permissions* type. Type *full* and select **full_access_as app**. Click **Add Permissions** button.
 1. You will see permission added and that admin consent is not granted. Click on **Grant admin consent** button next to *Add a permission* button.
 1. Navigate to *Certificates and secrets* and choose to add **New client secret**. If you select an expiration time for the secret, you will have to reconfigure MIM Service closer to its expiration date to use another secret. If you do not plan to rotate application secrets, select *Never*. Give your secret a name, e.g., *MIM Service* and click **Add** button. You will see the secret value displayed in the portal. Copy this value (not secret ID) and save it.
-1. Now that you have Tenant ID, Application ID and application secret needed by installer you can continue with MIM Service and Portal installation. In addition, you may want to restrict access of your newly registered application to MIM Service mailbox only (*full_access_as_app* grants access to all mailboxes in your organization). To do so, you need to create an [application access policy](https://developer.microsoft.com/microsoft-365/blogs/application-access-policy-support-added-to-exchange-web-services/). Follow [this guide](https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy?view=exchange-ps) to restrict access of your application to the MIM Service mailbox only. You will need to create a distribution or mail-enabled security group and add your MIM Service mailbox into that group. Then run a PowerShell command and provide your Exchange Online administrator credentials:
+1. Now that you have Tenant ID, Application ID and application secret needed by installer you can continue with MIM Service and Portal installation. In addition, you may want to restrict access of your newly registered application to MIM Service mailbox only (*full_access_as_app* grants access to all mailboxes in your organization). To do so, you need to create an [application access policy](https://developer.microsoft.com/microsoft-365/blogs/application-access-policy-support-added-to-exchange-web-services/). Follow [this guide](https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy?view=exchange-ps&preserve-view=true) to restrict access of your application to the MIM Service mailbox only. You will need to create a distribution or mail-enabled security group and add your MIM Service mailbox into that group. Then run a PowerShell command and provide your Exchange Online administrator credentials:
 
     ```PowerShell
     New-ApplicationAccessPolicy `
@@ -114,7 +114,7 @@ There is a 30 second delay after the application is registered and a browser win
 
 After you click Accept button you will be redirected to https://admin.office.com. You can close the browser window and check the script output. It should look like this:
 
-![PowerShell script output image](media/install-mim-service-portal-aadp/ps3.png)
+![PowerShell script output image 2](media/install-mim-service-portal-aadp/ps3.png)
 
 Copy ApplicationId, TenantId and ClientSecret values as they will be needed by the MIM Service and Portal installer.
 
@@ -140,7 +140,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
    ![Azure instance selection screen image](media/install-mim-service-portal-aadp/aadp003.png)
 
    Organizations which are not using a national or government cloud should select the global instance, Azure AD.
-   ![Azure instance selection screen image](media/install-mim-service-portal-aadp/aadp004.png)
+   ![Azure instance selection screen image 2](media/install-mim-service-portal-aadp/aadp004.png)
 
 1. After selecting the appropriate cloud, the installer will ask you to authenticate to that tenant. In the popup window, provide Azure AD user credentials of a user in that tenant to validate your tenant subscription level. Type your Azure AD username and click **Next**.
 
@@ -148,7 +148,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    Type your password and click **Sign In**.
 
-   ![Sign-in popup window image](media/install-mim-service-portal-aadp/aadp006.png)
+   ![Sign-in popup window image 2](media/install-mim-service-portal-aadp/aadp006.png)
 
    If the installer is unable to locate a subscription to Azure AD Premium P1 or another subscription which includes Azure AD Premium, you will see a popup error. Please check that the username is for the correct tenant and look at the installer log file for more information.
 
@@ -162,164 +162,164 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
 1. If installing MIM using an existing database, a warning appears. Click **Next**.
 
-    ![Warning message screen image](media/install-mim-service-portal-aadp/aadp009.png)
+    ![Warning message screen image 1](media/install-mim-service-portal-aadp/aadp009.png)
 
 1. Choose a combination of mail server type and authentication method (options A-F, see below)
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/aadp010.png)
-   ![Authentication type selection screen image](media/install-mim-service-portal-aadp/aadp011.png)
+   ![Mail service type selection screen image 1](media/install-mim-service-portal-aadp/aadp010.png)
+   ![Authentication type selection screen image 1](media/install-mim-service-portal-aadp/aadp011.png)
 
    If installing MIM Service using Group-Managed Service Account, then select the corresponding checkbox, otherwise leave this checkbox unchecked. Click **Next**.
 
-   ![Group managed service account selection screen image](media/install-mim-service-portal-aadp/aadp012.png)
+   ![Group managed service account selection screen image 1](media/install-mim-service-portal-aadp/aadp012.png)
 
    If you select incompatible combination of mail server type and authentication method, after you click Next, a popup error appears.
 
-   ![Popup error screen image](media/install-mim-service-portal-aadp/aadp013.png)
+   ![Popup error screen image 1](media/install-mim-service-portal-aadp/aadp013.png)
 
 ### Option A. Regular service account + Exchange Server
 
 1. On the **Configure common services** page select **Exchange Server 2013 or later** and **Integrated Windows Authentication**. Type your Exchange server hostname. Leave **Use Group Managed Service Account** checkbox **unchecked**. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionA001.png)
+   ![Mail service type selection screen image - option A](media/install-mim-service-portal-aadp/optionA001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option A](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option A](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service account name and password, domain name and MIM Service mailbox SMTP address. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionA002.png)
+    ![Configure the MIM service account image - option A](media/install-mim-service-portal-aadp/optionA002.png)
 
 ### Option B. Regular service account + Office 365 basic authentication
 
 1. On the **Configure common services** page select **Office 365** mail service and **Basic Authentication**. Leave **Use Group Managed Service Account** checkbox **unchecked**. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionB001.png)
+   ![Mail service type selection screen image - option B](media/install-mim-service-portal-aadp/optionB001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option B](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option B](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service account name and password, domain name, MIM Service’s Office 365 mailbox SMTP address and MIM Service mailbox Azure AD password. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionB002.png)
+    ![Configure the MIM service account image - option B](media/install-mim-service-portal-aadp/optionB002.png)
 
 ### Option C. Regular service account + Office 365 application context authentication
 
 1. On the **Configure common services** page select **Office 365** mail service and **Application Context Authentication**. Leave **Use Group Managed Service Account** checkbox **unchecked**. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionC001.png)
+   ![Mail service type selection screen image - option C](media/install-mim-service-portal-aadp/optionC001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option C](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. Provide the Azure AD Application ID, Tenant ID and Client Secret, that were generated by a script earlier. Click **Next**.
 
-   ![Azure AD Application ID, Tenant ID and client secret screen image](media/install-mim-service-portal-aadp/optionC003.png)
+   ![Azure AD Application ID, Tenant ID and client secret screen image - option C](media/install-mim-service-portal-aadp/optionC003.png)
 
    If installer fails to validate the Application ID or Tenant ID, an error appears:
 
-   ![Popup error screen image](media/install-mim-service-portal-aadp/optionC004.png)
+   ![Popup error screen image - option C](media/install-mim-service-portal-aadp/optionC004.png)
 
    If installer fails to access MIM Service mailbox, another error appears:
 
-   ![Popup error screen image](media/install-mim-service-portal-aadp/optionC005.png)
+   ![Popup error screen image - option C 2](media/install-mim-service-portal-aadp/optionC005.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option C](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service account name and password, domain name and MIM Service’s Office 365 mailbox SMTP address. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionC002.png)
+    ![Configure the MIM service account image - option C](media/install-mim-service-portal-aadp/optionC002.png)
 
 ### Option D. Regular service account + SMTP server
 
 1. On the **Configure common services** page select **SMTP**  and **Integrated Windows Authentication**. Type SMTP server hostname. Leave **Use Group Managed Service Account** checkbox **unchecked**. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionD001.png)
+   ![Mail service type selection screen image - option D](media/install-mim-service-portal-aadp/optionD001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option D](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option D](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service account name and password, domain name and MIM Service SMTP address. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionA002.png)
+    ![Configure the MIM service account image - option D](media/install-mim-service-portal-aadp/optionA002.png)
 
 ### Option E. Regular service account + no mail server
 
 1. On the **Configure common services** page select **None** server type. Leave **Use Group Managed Service Account** checkbox **unchecked**. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionE001.png)
+   ![Mail service type selection screen image - option E](media/install-mim-service-portal-aadp/optionE001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option E](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option E](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service account name and password, domain name. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionE002.png)
+    ![Configure the MIM service account image - option E](media/install-mim-service-portal-aadp/optionE002.png)
 
 ### Option F. Group-managed service account + Exchange Server
 
 1. On the **Configure common services** page select **Exchange Server 2013 or later** and **Integrated Windows Authentication**. Type your Exchange server hostname. Enable **Use Group Managed Service Account** option. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionF001.png)
+   ![Mail service type selection screen image - option F](media/install-mim-service-portal-aadp/optionF001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option F](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option F](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service group-managed service account name, domain name, MIM Service mailbox SMTP address and password. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionF002.png)
+    ![Configure the MIM service account image - option F](media/install-mim-service-portal-aadp/optionF002.png)
 
 ### Option G. Group-managed service account + Office 365 basic authentication
 
 1. On the **Configure common services** page select **Office 365** mail service and **Basic Authentication**. Enable **Use Group Managed Service Account** option. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionG001.png)
+   ![Mail service type selection screen image - option F](media/install-mim-service-portal-aadp/optionG001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option F](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option F](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service group-managed service account name, domain name, MIM Service’s Office 365 mailbox SMTP address and the MIM Service account’s Azure AD password. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionG002.png)
+    ![Configure the MIM service account image - option F](media/install-mim-service-portal-aadp/optionG002.png)
 
 ### Option H. Group-managed service account + Office 365 application context authentication
 
 1. On the **Configure common services** page select **Office 365** mail service and **Application Context Authentication**. Enable **Use Group Managed Service Account** option. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionH001.png)
+   ![Mail service type selection screen image - option H](media/install-mim-service-portal-aadp/optionH001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
@@ -327,47 +327,47 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
 1. Provide the Azure AD Application ID, Tenant ID and Client Secret, that were generated by a script earlier. Click **Next**.
 
-   ![Azure AD Application ID, Tenant ID and client secret screen image](media/install-mim-service-portal-aadp/optionC003.png)
+   ![Azure AD Application ID, Tenant ID and client secret screen image - option H](media/install-mim-service-portal-aadp/optionC003.png)
 
    If installer fails to validate the Application ID or Tenant ID, an error appears:
 
-   ![Popup error screen image](media/install-mim-service-portal-aadp/optionC004.png)
+   ![Popup error screen image - option H](media/install-mim-service-portal-aadp/optionC004.png)
 
    If installer fails to access MIM Service mailbox, another error appears:
 
-   ![Popup error screen image](media/install-mim-service-portal-aadp/optionC005.png)
+   ![Popup error screen image - option H 2](media/install-mim-service-portal-aadp/optionC005.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option H](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service group-managed service account name, domain name and MIM Service Office 365 mailbox SMTP address. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionH002.png)
+    ![Configure the MIM service account image - option H](media/install-mim-service-portal-aadp/optionH002.png)
 
 ### Option I. Group-managed service account + no mail server
 
 1. On the **Configure common services** page select **None** server type. Enable **Use Group Managed Service Account** option. Click **Next**.
 
-   ![Mail service type selection screen image](media/install-mim-service-portal-aadp/optionI001.png)
+   ![Mail service type selection screen image - option I](media/install-mim-service-portal-aadp/optionI001.png)
 
 1. If installing MIM Reporting component, type System Center Service Manager management server name and click **Next**.
 
-   ![SCSM server name screen image](media/install-mim-service-portal-aadp/scsm001.png)
+   ![SCSM server name screen image - option I](media/install-mim-service-portal-aadp/scsm001.png)
 
 1. If installing MIM Reporting component in TLS 1.2 only environment with System Center Service Manager 2019, choose a certificate trusted by SCSM Server with MIM server hostname in certificate’s subject, otherwise choose to generate a new self-signed certificate. Click **Next**.
 
-   ![Certificate selection screen image](media/install-mim-service-portal-aadp/cert001.png)
+   ![Certificate selection screen image - option I](media/install-mim-service-portal-aadp/cert001.png)
 
 1. Type MIM Service group-managed service account name, domain name. Click **Next**.
 
-    ![Configure the MIM service account image](media/install-mim-service-portal-aadp/optionI002.png)
+    ![Configure the MIM service account image - option I](media/install-mim-service-portal-aadp/optionI002.png)
 
 ### Common deployment steps. Continuation
 
 1. If MIM Service account was not restricted to deny local logons a warning message appears. Click **Next**.
 
-   ![Warning screen image](media/install-mim-service-portal-aadp/aadp014.png)
+   ![Warning screen image 2](media/install-mim-service-portal-aadp/aadp014.png)
 
 1. Type MIM Synchronization Server hostname. Type MIM Management Agent account name. If you are installing MIM Synchronization Service using Group-Managed Service Account, then add the dollar sign to the account name, e.g. *contoso\MIMSyncGMSAsvc$*. Click **Next**.
 
@@ -375,7 +375,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
 1. Type MIM Service Server hostname. In a case a load-balancer is used to balance MIM Service payload, provide the name of the cluster. Click **Next**.
 
-    ![MIM Service Server name screen image](media/install-mim-service-portal-aadp/aadp016.png)
+    ![MIM Service Server name screen image 2](media/install-mim-service-portal-aadp/aadp016.png)
 
 1. Provide SharePoint site collection name. Make sure to replace http://localhost with a proper value. Click **Next**.
 
@@ -383,7 +383,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    A warning appears. Click **Next**.
 
-    ![Warning message screen image](media/install-mim-service-portal-aadp/aadp018.png)
+    ![Warning message screen image 3](media/install-mim-service-portal-aadp/aadp018.png)
 
 1. If installing Self-Service Password Registration website, specify a URL MIM clients will be redirected to after logon. Click **Next**.
 
@@ -399,11 +399,11 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    A warning will appear – read it and click **Next**.
 
-   ![Warning message screen image](media/install-mim-service-portal-aadp/aadp022.png)
+   ![Warning message screen image 4](media/install-mim-service-portal-aadp/aadp022.png)
 
 1. In the next MIM Password Registration Portal configuration screen, type the MIM Service Server Address for the Password Registration Portal and select whether this website will be accessible by intranet users. Click **Next**.
 
-   ![Password registration portal configuration screen image](media/install-mim-service-portal-aadp/aadp023.png)
+   ![Password registration portal configuration screen image 2](media/install-mim-service-portal-aadp/aadp023.png)
 
 1. If installing Self-Service Password Reset website, set the application pool account name and its password, the host name and the port for the website. Enable the *Open port in firewall* option if needed. Click **Next**.
 
@@ -411,7 +411,7 @@ Copy ApplicationId, TenantId and ClientSecret values as they will be needed by t
 
    A warning will appear – read it and click **Next**.
 
-   ![Warning message screen image](media/install-mim-service-portal-aadp/aadp025.png)
+   ![Warning message screen image 4](media/install-mim-service-portal-aadp/aadp025.png)
 
 1. In the next MIM Password Reset Portal configuration screen, type the MIM Service Server Address for the Password Reset Portal and select whether this website will be accessible by intranet users. Click **Next**.
 
