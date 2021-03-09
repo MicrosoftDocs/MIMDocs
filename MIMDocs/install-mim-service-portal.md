@@ -37,8 +37,9 @@ ms.suite: ems
 > - Password - <strong>Pass@word1</strong>
 > - Service account name - **MIMService**
 
-If you didn't set up the MIM installation package in the last step, go back and install the Microsoft Identity Manager 2016 components before continuing.
+## Before you begin
 
+- This guide is intended for installing Volume License edition of MIM. If your organization has Azure AD Premium subscription or is using Azure AD, then you will need to instead follow [the guide for MIM Service in organizations licensed for Azure AD Premium](install-mim-service-portal-aadp.md).
 
 ## Configure MIM Service and Portal for installation
 
