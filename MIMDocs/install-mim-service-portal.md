@@ -110,7 +110,7 @@ ms.suite: ems
 
 2. Specify  *passwordreset.contoso.com* as the Host Name for MIM Password Reset Portal, and set the port to **80**. Enable the **Open port in firewall** option.
 
-   ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install15.png)
+   ![Enter configuration information used by IIS image 2](media/install-mim-service-portal/MIM_Install15.png)
 
 3. A warning will appear – read it and click **Next**.
 
