@@ -55,6 +55,5 @@ For more information on supported platforms, see [Supported platforms for MIM 20
 ## Finally: Install Microsoft Identity Manager 2016 SP2 components
 Once you have set up the domain and server, you're ready to install the MIM components and configure them to sync with AD.
 - [MIM Synchronization Service](install-mim-sync.md)
-- [MIM Service and Portal](install-mim-service-portal.md) or
-- [MIM Service and Portal for Azure AD Premium customers](install-mim-service-portal-aadp.md)
+- [MIM Service and Portal](install-mim-service-portal.md)
 - [Synchronize Active Directory and MIM Service databases](install-mim-sync-ad-service.md)
