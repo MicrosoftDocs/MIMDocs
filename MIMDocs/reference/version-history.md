@@ -33,17 +33,6 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
 
-## MIM Version 4.6.421.0
-
-- Status: March 5, 2021
-- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=102786)
-- [KB article 4599279](https://support.microsoft.com/help/4599279)
-- Full version for Azure AD Premium customers is available for [download from here](https://aka.ms/MIMForAADP)
-
-This hotfix contains updates for the MIM Service and MIM Portal components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
-
-This build introduces Application Context Authentication method to Office 365 mailboxes for the MIM Service component. In order to switch from Basic authentication to Application Context Authentication apply this hotfix first, run a PowerShell script to register an application in Azure AD and reconfigure your MIM Service and Portal using installer's Change mode. Check the [Deployment guide: Installing MIM Service and Portal for Azure AD Premium customers](https://docs.microsoft.com/microsoft-identity-manager/install-mim-service-portal-aadp) for more details.
-
 ## MIM Version 4.6.359.0
 
 - Status: November 29, 2020

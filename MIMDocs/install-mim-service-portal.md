@@ -37,10 +37,6 @@ ms.suite: ems
 > - Password - <strong>Pass@word1</strong>
 > - Service account name - **MIMService**
 
-## Before you begin
-
-- This guide is intended for installing Volume License edition of MIM. If your organization has Azure AD Premium subscription or is using Azure AD, then you will need to instead follow [the guide for MIM Service in organizations licensed for Azure AD Premium](install-mim-service-portal-aadp.md).
-
 ## Configure MIM Service and Portal for installation
 
 1. Run the **MIM Service and Portal installer** from the unpacked **Service and Portal** sub-folder.

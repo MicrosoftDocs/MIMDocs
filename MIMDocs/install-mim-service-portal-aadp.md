@@ -38,13 +38,18 @@ ms.suite: ems
 
 ## Before you begin
 
-- This guide is intended for installing MIM Service in organizations licensed for Azure AD Premium. If your organization does not have Azure AD Premium or is not using Azure AD, then you will need to instead follow [the guide for Volume License edition of MIM](install-mim-service-portal.md).
-- Ensure you have Azure AD user credentials with enough permissions to validate that your tenant subscription includes Azure AD Premium and create app registrations.
-- If you plan to use Office 365 application context authentication, you will run a script to register the MIM Service application in Azure AD and grant MIM Service permissions to access a MIM Service mailbox in Office 365. Save the script output as you will need your application ID and its secret later during installation. It is assumed that MIM Service Office 365 mailbox is already created.
+- This guide is intended for installing MIM Service in organizations licensed for Azure AD Premium. If your organization does not have Azure AD Premium or is not using Azure AD, then you will need to instead follow [installation guide for Volume License edition of MIM](install-mim-service-portal.md).
+- Ensure you have Azure AD user credentials with enough permissions to validate that your tenant subscription includes Azure AD Premium and can create app registrations.
+- If you plan to use Office 365 application context authentication, you will need to run a script to register the MIM Service application in Azure AD and grant the MIM Service permissions to access a MIM Service mailbox in Office 365. Save the script output as you will need the resulting application ID and secret later during the installation.
 
 ## Deployment options
 
-The choice of deployment depends upon two decisions. The first decision is whether MIM Service will be  running as a regular Windows service account or as a group-managed service account (gMSA). The second is whether MIM Service will be sending email through an Exchange Server, Office 365, or an SMTP server. Deployment options available:
+Choices in deployment depend on two criteria:
+
+- Whether the MIM Service will be running as a regular Windows service account or as a group-managed service account (gMSA)
+- Whether the MIM Service will be sending email through an Exchange Server, Office 365, or an SMTP server
+
+Available deployment options:
 
 - Option A: Regular service account + Exchange Server
 - Option B: Regular service account + Office 365 basic authentication
@@ -61,13 +66,13 @@ The choice of deployment depends upon two decisions. The first decision is wheth
 
 ## Preparing for Office 365 Application context authentication
 
-Starting from build 4.6.421.0, in addition to basic authentication, MIM Service supports application context authentication to Office 365 mailboxes. End of support for basic authentication was announced on 20 September 2019, therefore it is recommended to use application context authentication for sending notifications and collecting approval responses.
+Starting from build 4.6.421.0, in addition to basic authentication, the MIM Service supports application context authentication to Office 365 mailboxes. End of support for basic authentication was announced on 20 September 2019, therefore it is recommended to use application context authentication for sending notifications and collecting approval responses.
 
-Application context authentication scenario requires you to register an application in Azure AD, create a client secret to be used instead of a password and grant this application permission to access the MIM Service mailbox. MIM Service will be using this application ID and this secret to access its mailbox in Office 365. You can register your application in Azure AD either using a script (recommended) or manually.
+Application context authentication scenario requires you to register an application in Azure AD, create a client secret to be used instead of a password and grant this application permission to access the MIM Service mailbox. The MIM Service will be using this application ID and this secret to access its mailbox in Office 365. You can register your application in Azure AD either using a script (recommended) or manually.
 
 ### Registering application using Azure AD portal
 
-1. Sign in to [Azure AD portal](https://portal.azure.com) with Tenant Global Administrator role.
+1. Sign in to [Azure AD portal](https://portal.azure.com) with Global Administrator role.
 1. Navigate to Azure AD blade and copy your Tenant ID from *Overview* section and save it.
 1. Navigate to *App registrations* section and click **New Registration** button.
 1. Give your application a name, for example, *MIM Service mailbox client access*, and click **Register**.

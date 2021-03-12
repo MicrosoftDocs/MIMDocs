@@ -25,7 +25,6 @@
 ### [Server setup: Exchange](prepare-server-exchange.md)
 ### [Install MIM: Synchronization](install-mim-sync.md)
 ### [Install MIM: Service and Portal](install-mim-service-portal.md)
-### [Install MIM: Service and Portal for Azure AD Premium customers](install-mim-service-portal-aadp.md)
 ### [Install MIM: Sync databases](install-mim-sync-ad-service.md)
 ## [Upgrade from Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
 ## [Upgrade to MIM 2016 SP2](microsoft-identity-manager-2016-service-pack-2-upgrade-path.md)
