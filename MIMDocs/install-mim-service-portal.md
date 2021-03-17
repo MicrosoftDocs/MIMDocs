@@ -37,9 +37,6 @@ ms.suite: ems
 > - Password - <strong>Pass@word1</strong>
 > - Service account name - **MIMService**
 
-If you didn't set up the MIM installation package in the last step, go back and install the Microsoft Identity Manager 2016 components before continuing.
-
-
 ## Configure MIM Service and Portal for installation
 
 1. Run the **MIM Service and Portal installer** from the unpacked **Service and Portal** sub-folder.
@@ -97,7 +94,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 2. Specify  *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
 
-   ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install14.png)
+   ![Enter configuration information used by password registration web site image](media/install-mim-service-portal/MIM_Install14.png)
 
 3. A warning will appear – read it and click **Next**.
 
@@ -109,7 +106,7 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 2. Specify  *passwordreset.contoso.com* as the Host Name for MIM Password Reset Portal, and set the port to **80**. Enable the **Open port in firewall** option.
 
-   ![Enter configuration information used by IIS image](media/install-mim-service-portal/MIM_Install15.png)
+   ![Enter configuration information used by password reset web site](media/install-mim-service-portal/MIM_Install15.png)
 
 3. A warning will appear – read it and click **Next**.
 
