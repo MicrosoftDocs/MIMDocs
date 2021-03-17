@@ -3,26 +3,24 @@
 
 title: Steps required to deploy Microsoft Identity Manager 2016 | Microsoft Docs
 description: Get the full list of steps involved in deploying Microsoft Identity Manager 2016, from preparing the environment to configuring the portals.
-keywords:
-author: billmath
-ms.author: billmath
-manager: daveba
-ms.date: 10/17/2019
+services: active-directory
+documentationcenter: ''
+keywords: MIM
+author: EugeneSergeev
+ms.author: esergeev
+reviewer: markwahl-msft
+manager: aashiman
+ms.date: 03/17/2021
+ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
+ms.tgt_pltfrm: na
+ms.workload: identity
 
-ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
+ms.assetid: b0b39631-66df-4c5f-90c9-a1774346f816
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: markwahl-msft
+ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Deploy Microsoft Identity Manager 2016 SP2
@@ -55,5 +53,6 @@ For more information on supported platforms, see [Supported platforms for MIM 20
 ## Finally: Install Microsoft Identity Manager 2016 SP2 components
 Once you have set up the domain and server, you're ready to install the MIM components and configure them to sync with AD.
 - [MIM Synchronization Service](install-mim-sync.md)
-- [MIM Service and Portal](install-mim-service-portal.md)
+- [MIM Service and Portal](install-mim-service-portal.md) or
+- [MIM Service and Portal for Azure AD Premium customers](install-mim-service-portal-azure-ad-premium.md)
 - [Synchronize Active Directory and MIM Service databases](install-mim-sync-ad-service.md)

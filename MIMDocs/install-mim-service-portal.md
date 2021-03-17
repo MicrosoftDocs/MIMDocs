@@ -3,25 +3,24 @@
 
 title: Install Microsoft Identity Manager Service and Portal | Microsoft Docs
 description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016
-keywords:
+services: active-directory
+documentationcenter: ''
+keywords: MIM
 author: EugeneSergeev
 ms.author: esergeev
-manager: daveba
-ms.date: 10/18/2019
-ms.topic: conceptual
+reviewer: markwahl-msft
+manager: aashiman
+ms.date: 03/17/2021
+ms.devlang: na
+ms.topic: article
 ms.prod: microsoft-identity-manager
+ms.tgt_pltfrm: na
+ms.workload: identity
 
-ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
+ms.assetid: b0b39631-66df-4c5f-90c9-a1774346f816
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: markwahl-msft
+ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 # Install MIM 2016: MIM Service and Portal
@@ -36,6 +35,10 @@ ms.suite: ems
 > - Domain name - **contoso**
 > - Password - <strong>Pass@word1</strong>
 > - Service account name - **MIMService**
+
+## Before you begin
+
+- This guide is intended for installing Volume License edition of MIM. If your organization has Azure AD Premium subscription or is using Azure AD, then you will need to instead follow [the guide for MIM Service in organizations licensed for Azure AD Premium](install-mim-service-portal-azure-ad-premium.md).
 
 ## Configure MIM Service and Portal for installation
 
