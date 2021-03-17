@@ -117,7 +117,7 @@ There is a 30-second delay after the application is registered and a browser win
 
 After you click Accept button, you will be redirected to Microsoft 365 admin center. You can close the browser window and check the script output. It should look like this:
 
-![PowerShell script output image 2](media/install-mim-service-portal-azure-ad-premium/final-powershell-script-output.png)
+![Final PowerShell script output image](media/install-mim-service-portal-azure-ad-premium/final-powershell-script-output.png)
 
 Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by the MIM Service and Portal installer.
 
