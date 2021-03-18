@@ -10,14 +10,14 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 03/17/2021
+ms.date: 03/18/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
 
-ms.assetid: b0b39631-66df-4c5f-90c9-a1774346f816
+ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 
 ms.reviewer: mwahl
 ms.suite: ems
@@ -118,46 +118,29 @@ ms.suite: ems
 ## Install MIM Service and Portal
 
 When all pre-installation definitions are ready, click **Install** to begin installing the selected **Service and Portal** components.
+   ![MIM Service and Portal installation screen image - final](media/install-mim-service-portal-azure-ad-premium/install-screen.png)
+
+## Post-installation tasks
 
 After installation completes, verify that the MIM Portal is active.
 
 1. Launch Internet Explorer and connect to the MIM Portal on `http://mim.contoso.com/identitymanagement`. Note, that there may be a short delay on the first visit to this page.
-    - If necessary, authenticate as *contoso\miminstall* to Internet Explorer.
+    - If necessary, authenticate as a user, that installed MIM Service and Portal, to Internet Explorer.
 
-2. In Internet Explorer, open the **Internet Options**, change to the **security** tab, and add the site to the **Local intranet** zone if it is not already there.  Close the **Internet Options** dialog.
+1. In Internet Explorer, open the **Internet Options**, change to the **Security** tab, and add the site to the **Local intranet** zone if it is not already there. Close the **Internet Options** dialog.
 
-3. Enable users to view their own entry in MIM.
+1. In Internet Explorer, open the **Settings**, change to the **Compatibility view settings** tab, and uncheck **Display Intranet Sites in Compatibility view** checkbox. Close **Compatibility View** dialog.
 
-    1.  Using Internet Explorer, in **MIM Portal**, click on **Management Policy Rules**.
+1. Enable non-administrators to access MIM Portal.
 
-    2.  Search for the management policy rule, **User management: Users can read attributes of their own**.
-
-    3.  Select this management policy rule, uncheck **Policy is disabled**.
-
-    4.  Click **OK** and then click **Submit**.
-
-4.  Verify that the firewall allows incoming connections to TCP port 5725 and 5726.
-
-    1.  Launch **Administrative Tools » Windows Firewall** with **Advanced Security**.
-
-    2.  Click on **Inbound Rules**.
-
-    3.  Verify that the two following rules appear:
-
-    -   Forefront Identity Manager Service (STS).
-    -   Forefront Identity Manager Service (Webservice).
-
-    4.  Complete the wizard and close the **Windows Firewall** application.
-
-    5.  Launch **Control Panel » Network and Internet » View network status and tasks**.
-
-    6.  Verify that there is an active Network listed as contoso.local as a Domain network.
-
-    7.  Close **Control Panel**.
+   1. Using Internet Explorer, in **MIM Portal**, click on **Management Policy Rules**.
+   1. Search for the management policy rule, **User management: Users can read attributes of their own**.
+   1. Select this management policy rule, uncheck **Policy is disabled**.
+   1. Click **OK** and then click **Submit**.
 
 > [!NOTE]
-> Optional: At this point you can install MIM add-ins and extensions.
- 
+> Optional: At this point you can install MIM add-ins and extensions and language packs.
+
 > [!div class="step-by-step"]  
 > [« MIM Synchronization Service](install-mim-sync.md)
 > [Synchronize databases »](install-mim-sync-ad-service.md)
