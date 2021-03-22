@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 2/15/2021
+ms.date: 2/22/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -40,6 +40,14 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
+
+## 1.1.1431.0 (March 2021)
+### Enhancements
+- Generic LDAP Connector
+  - Added option to hash passwords prior to sending to OpenLDAP
+  - Improved Oracle Unified Directory delta import entries processing
+- Webservices Connector
+  - Added support for TLS 1.2
 
 ## 1.1.1381.0 (February 2021)
 ### Fixed issues
