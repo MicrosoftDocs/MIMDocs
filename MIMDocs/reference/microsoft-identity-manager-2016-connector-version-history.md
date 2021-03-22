@@ -44,7 +44,7 @@ Related links:
 ## 1.1.1431.0 (March 2021)
 ### Fixed issues
 - Generic LDAP Connector
-  - Added ability to send OpenLDAP password hashes instead of clear-text passwords for password reset and password set operations 
+  - Added option to hash passwords prior to sending to OpenLDAP
   - Improved Oracle Unified Directory delta import entries processing
 - Webservices Connector
   - Added support for TLS 1.2
