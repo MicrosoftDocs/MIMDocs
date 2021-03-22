@@ -42,7 +42,7 @@ Related links:
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
 ## 1.1.1431.0 (March 2021)
-### Fixed issues
+### Enhancements and issues fixed
 - Generic LDAP Connector
   - Added option to hash passwords prior to sending to OpenLDAP
   - Improved Oracle Unified Directory delta import entries processing
