@@ -2,13 +2,24 @@
 
 title: Microsoft Identity Manager | Microsoft Docs
 description: MIM includes the access management capabilities of FIM 2010 and helps you manage users, credentials, policies, and access within your organization.
-keywords:
-author: billmath
-ms.author: billmath
-manager: daveba
-ms.date: 1/5/2021
+services: active-directory
+documentationcenter: ''
+keywords: MIM
+author: EugeneSergeev
+ms.author: esergeev
+reviewer: markwahl-msft
+manager: aashiman
+ms.date: 03/17/2021
+ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
+ms.tgt_pltfrm: na
+ms.workload: identity
+
+ms.assetid: b0b39631-66df-4c5f-90c9-a1774346f816
+
+ms.reviewer: mwahl
+ms.suite: ems
 
 ---
 
@@ -41,8 +52,9 @@ For Azure AD Premium customers, standard support is available from June 2020 onw
 
 ### Recent software releases
 
-- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated December 2020
-- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated November 2020
+- [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP), last updated March 2021
+- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated March 2021
+- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated March 2021
 - [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated October 2018
 
 
