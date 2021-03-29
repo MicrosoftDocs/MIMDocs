@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 03/17/2021
+ms.date: 03/18/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -31,10 +31,11 @@ ms.suite: ems
  
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
-> - Domain controller name - **mim**
+> - MIM Service and Portal server name - **mim.contoso.com**
+> - SQL server name - **contosoagl.contoso.com**
+> - Service account name - **svcMIMService**
 > - Domain name - **contoso**
 > - Password - <strong>Pass@word1</strong>
-> - Service account name - **svcMIMService**
 
 ## Before you begin
 
@@ -167,7 +168,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
     ![SQL Warning message screen image](media/install-mim-service-portal-azure-ad-premium/database-backup-warning.png)
 
-1. Choose a combination of mail server type and authentication method (options A-F, see below)
+1. Choose a combination of mail server type and authentication method (options A-I, see below)
 
    ![General Mail service type selection screen image](media/install-mim-service-portal-azure-ad-premium/mail-service-type-selection.png)
    ![General Authentication type selection screen image](media/install-mim-service-portal-azure-ad-premium/authentication-type-selection.png)

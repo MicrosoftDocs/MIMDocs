@@ -3,22 +3,24 @@
 
 title: Identity Manager version history | Microsoft Docs
 description: This article documents the various changes made as part of updates to MIM 2016
-keywords:
+services: active-directory
+documentationcenter: ''
+keywords: MIM
 author: EugeneSergeev
-manager: aashiman
-editor: ''
+ms.author: esergeev
 reviewer: markwahl-msft
-
+manager: aashiman
+ms.date: 03/18/2021
 ms.devlang: na
+ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 03/09/2021
-ms.author: esergeev
+
+ms.assetid: b0b39631-66df-4c5f-10c9-a1774346f816
+
 ms.reviewer: mwahl
 ms.suite: ems
-ms.topic: reference
-
 
 ---
 
@@ -31,7 +33,18 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
 >
->The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).  
+>The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).
+
+## MIM Version 4.6.421.0
+
+- Status: March 17, 2021
+- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=102786)
+- [KB article 4599279](https://support.microsoft.com/help/4599279)
+- Full version for Azure AD Premium customers is available for [download from here](https://aka.ms/MIMForAADP)
+
+This hotfix contains updates for the MIM Service and MIM Portal components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
+
+This build introduces Application Context Authentication method to Office 365 mailboxes for the MIM Service component. In order to switch from Basic authentication to Application Context Authentication apply this hotfix first, run a PowerShell script to register an application in Azure AD and reconfigure your MIM Service and Portal using installer's Change mode. Check the [Deployment guide: Installing MIM Service and Portal for Azure AD Premium customers](https://docs.microsoft.com/microsoft-identity-manager/install-mim-service-portal-azure-ad-premium) for details.
 
 ## MIM Version 4.6.359.0
 
