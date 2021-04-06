@@ -7,7 +7,7 @@ keywords:
 author: markwahl-msft
 ms.author: mwahl
 manager: daveba
-ms.date: 10/18/2019
+ms.date: 4/6/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 
@@ -36,7 +36,7 @@ Microsoft Identity Manager 2016 is licensed on a per-user basis.  The details on
 
 Microsoft Identity Manager 2016 is included with Azure Active Directory Premium (P1 and P2), which is part of Enterprise Mobility + Security.
 
-Azure AD Premium is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Microsoft 365 subscribers can also buy Azure Active Directory Premium P1 and P2 online.  Read more at [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD Premium is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Microsoft 365 subscribers can also buy Azure Active Directory Premium P1 and P2 online.  Read more at [Azure Active Directory pricing](https://www.microsoft.com/security/business/identity-access-management/azure-ad-pricing).
 
 ### MIM CALs
 
@@ -71,18 +71,15 @@ If you are starting a fresh install, you will need to download the installation 
 
 ### Obtaining Windows installer packages
 
-For a new installation, most organizations download the MIM installation packages from the [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx). 
+For a new installation, most organizations with Volume License agreements download the MIM installation packages from the [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx). The DVD ISO file contains one folder for each MIM component: `Synchronization Service`, `Service and Portal`, etc. If you are going to install the software on a different computer from which you downloaded it, be sure to copy either the entire ISO file or the folder for the component: do not merely copy just an MSI file out of a folder without the rest of the files and sub-folders.
 
+If you do not have access to the Volume Licensing Service Center and have a subscription for Azure AD Premium P1 or P2, you can download the [Azure AD Premium edition of MIM 2016](https://aka.ms/MIMforAADP). This edition includes the `Synchronization Service` and `Service and Portal` components. The MIM Service installer for the Azure AD Premium edition, in order to validate your subscription, requires internet connectivity and will ask you to provide Azure AD credentials with enough permissions to read subscribedSKUs.
 
-The DVD ISO file contains one folder for each MIM component: Synchronization Service, Service and Portal, etc. If you are going to install the software on a different computer from which you downloaded it, be sure to copy either the entire ISO file or the folder for the component: do not merely copy just an MSI file out of a folder without the rest of the files and sub-folders.
-
-If you do not have access to the Volume Licensing Service Center, customers with an appropriate developer subscription can also download MIM 2016 SP2 as an ISO file from [Visual Studio My Benefits Downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202&pgroup=).  Search for "Microsoft Identity Manager 2016 with Service Pack 2".  
-
-If you do not have access to the Volume Licensing Service Center and merely wish to try out the MIM software for a limited time, you can download an [evaluation version of MIM 2016](https://www.microsoft.com/en-us/download/details.aspx?id=48244). This software is not intended for production use and will cease to operate 180 days after first installation, and cannot be upgraded. The evaluation version requires Windows Server 2008 R2, Windows Server 2012 or Windows Server 2012 R2 for installation.  If you are new to MIM and learning the technology, keep in mind that all MIM scenarios require an Active Directory domain, a Windows Server, and SQL Server to be present. If you do not have Windows Server or SQL Server already present, you may wish to try [provisioning a VM with SQL Server 2016 and Windows Server 2016](https://azure.microsoft.com/blog/azure-images-sql-server-2016-on-windows-server-2016/).
+If you do not have access to the Volume Licensing Service Center, customers with an appropriate developer subscription can also download MIM 2016 SP2 as an ISO file from [Visual Studio My Benefits Downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202&pgroup=).  Search for "Microsoft Identity Manager 2016 with Service pack 2".
 
 ### Obtaining updates
 
-After installing MIM from MSI, you should next install the necessary hotfixes.
+After installing MIM from an MSI file, you should next install the necessary hotfixes.
 
 Check the [Identity Manager version release history](./reference/version-history.md) for the most recent update release, which has a link to the download site for the installer patch files.
 
@@ -113,11 +110,9 @@ The following downloads may also be relevant:
 
 - [Connector for SharePoint User Profile Store](https://www.microsoft.com/download/details.aspx?id=41164)
 
-- If you do not already have an Active Directory domain and are setting up a PAM scenario for experimentation, see the [MIM 2016 SP1 PAM deployment scripts](sp1-deployment-scripts.md).
 
 ## Next steps
 
 - Learn more on scenarios delivered in [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md).
 - Read the [capacity planning guide](capacity-planning-guide.md).
-- Deploy MIM for a [synchronization scenario](microsoft-identity-manager-deploy.md) or the [Privileged access management scenario](./pam/privileged-identity-management-for-active-directory-domain-services.md).
-
+- Deploy MIM for a [synchronization scenario](microsoft-identity-manager-deploy.md).
