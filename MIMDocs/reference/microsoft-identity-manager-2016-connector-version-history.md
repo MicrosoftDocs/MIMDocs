@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 2/22/2021
+ms.date: 4/7/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -25,7 +25,7 @@ ms.suite: ems
 Connectors link specific connected data sources to Microsoft Identity Manager (MIM) and Azure AD Connect. (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation and the installation package of Azure AD Connect. In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
 
 > [!NOTE]
-> This topic is primarily on FIM and MIM Connectors only. Unless explicitly called out below, these Connectors are not supported for install on Azure AD Connect. Released Connectors are preinstalled on Azure AD Connect when upgrading to specified Build.
+> This topic is primarily for MIM Connectors only. Unless explicitly called out below, these Connectors are not supported for install on Azure AD Connect.
 
 
 This topic lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
@@ -34,6 +34,7 @@ This topic lists all versions of the generic connectors package that have been r
 Related links:
 
 * [Download Latest Connectors](https://go.microsoft.com/fwlink/?LinkId=717495)
+* [Graph Connector](~/microsoft-identity-manager-2016-connector-graph.md) reference documentation
 * [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation
 * [Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation
 * [Web Services Connector](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) reference documentation
@@ -488,12 +489,13 @@ and instructions on how to [Use a sample MIM solution in SharePoint Server 2016]
 
 ### Forefront Identity Manager Connector for Windows Azure Active Directory (legacy connector)
 
-The Azure AD Connector for FIM was an early technology for synchronizing identity information to Azure Active Directory. The Azure AD Connector for FIM, version 1.0.6635.0069 from February 19, 2014, is at feature freeze. [It](https://www.microsoft.com/en-us/download/details.aspx?id=41166) does not receive any updates but it is still supported. The solution of using FIM and the Azure AD Connector has been superseded by [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect). Microsoft recommends that you do not begin a new deployment using this Connector.
+The Azure AD Connector for FIM was an early technology for synchronizing identity information to Azure Active Directory. The Azure AD Connector for FIM, version 1.0.6635.0069 from February 19, 2014, is at feature freeze. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the MIM Graph Connector. Do not begin a new deployment using the Forefront Identity Manager Connector for Windows Azure AD.
 
 ## Next steps
 
-Learn more about the [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation.
-Learn more about the[Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation.
-Learn more about the [Web Services Connector](microsoft-identity-manager-2016-ma-ws.md) reference documentation.
-Learn more about the [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation.
-Learn more about the [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation.
+* Learn more about the [Graph Connector](~/microsoft-identity-manager-2016-connector-graph.md).
+* Learn more about the [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md).
+* Learn more about the [Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md).
+* Learn more about the [Web Services Connector](microsoft-identity-manager-2016-ma-ws.md).
+* Learn more about the [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md).
+* Learn more about the [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md).
