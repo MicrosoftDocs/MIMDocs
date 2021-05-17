@@ -27,8 +27,7 @@ The [Microsoft Identity Manager connector for Microsoft Graph](https://go.micros
 
 
 The initial scenario for the Microsoft Identity Manager connector for Microsoft Graph is as a connector to help automate AD DS account lifecycle
-management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
+management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
 To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 SP1 with Azure Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
@@ -108,7 +107,8 @@ Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Azure AD to avoid running import in parallel for the same application.
 
 
-![](media/microsoft-identity-manager-2016-ma-graph/77c2eb73bab8d5187da06293938f5fd9.png)
+![Connector settings image with connectivity details](media/microsoft-identity-manager-2016-ma-graph/connector-settings-connectivity.png)
+
 
 Picture 5. Connectivity page
 
@@ -182,6 +182,23 @@ In this case there will be two iterations during the import, each of them will r
 
 During the export a new access token will be requested for each object that must be added/updated/deleted.
 
+## Query filters
+
+Graph API endpoints offer an ability to limit amount of objects returned by GET queries by introducing *$filter* parameter. 
+
+In order to enable the use of query filters to improve full import performance cycle, on the *Schema 1* page of connector properties, enable **Add objects filter** checkbox.
+![Connector settings page one image with Add objects filter checkbox checked](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-1.png)
+
+After that, on *Schema 2* page type an expression to be used to filter users, groups, contacts or service principals.
+![Connector settings page two image with a sample filter startsWith(displayName,'J')](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-2.png)
+
+On the screenshot above, the filter *startsWith(displayName,'J')* is set to read only users whose displayName attribute value starts with 'J'.
+
+For more information about *$filter* query parameter usage, see this article: [Use query parameters to customize responses](https://docs.microsoft.com/graph/query-parameters#filter-parameter).
+
+>[!NOTE]
+>Delta query endpoint currently does not offer filtering capabilities, therefore usage of filters is limited to full import only. You will get an error trying to start delta import run with query filters enabled.
+
 ## Troubleshooting
 
 
@@ -189,22 +206,17 @@ During the export a new access token will be requested for each object that must
 
 If there are any issues in Graph, then logs could be used to localize the problem. So, traces could be enabled in [the same way like for Generic connectors](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Or just by adding the following to `miiserver.exe.config` (inside `system.diagnostics/sources` section):
 
-```
-\<source name="ConnectorsLog" switchValue="Verbose"\>
-
-\<listeners\>
-
-\<add initializeData="ConnectorsLog"
+```XML
+<source name="ConnectorsLog" switchValue="Verbose">
+<listeners>
+<add initializeData="ConnectorsLog"
 type="System.Diagnostics.EventLogTraceListener, System, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=b77a5c561934e089"
 name="ConnectorsLogListener" traceOutputOptions="LogicalOperationStack,
-DateTime, Timestamp, Call stack" /\>
-
-\<remove name="Default" /\>
-
-\</listeners\>
-
-\</source\>
+DateTime, Timestamp, Call stack" />
+<remove name="Default" />
+</listeners>
+</source>
 ```
 >[!NOTE]
 >If ‘Run this management agent in a separate process’ is enabled, then
@@ -220,7 +232,7 @@ expired.”:
 Picture 7. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, the access token expires after 1 hour. To increase expiration time, please see [this article](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
+Azure side. By default, the access token expires after 1 hour. To increase expiration time, see [this article](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 
