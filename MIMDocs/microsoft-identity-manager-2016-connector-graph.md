@@ -5,7 +5,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 10/02/2018
+ms.date: 5/17/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -27,7 +27,7 @@ The [Microsoft Identity Manager connector for Microsoft Graph](https://go.micros
 
 
 The initial scenario for the Microsoft Identity Manager connector for Microsoft Graph is as a connector to help automate AD DS account lifecycle
-management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
+management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
 To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 SP1 with Azure Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
