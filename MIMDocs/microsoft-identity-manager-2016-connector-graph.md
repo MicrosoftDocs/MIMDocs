@@ -85,7 +85,8 @@ The connector can be used for other specific identity management scenarios invol
 
     More details about required permissions could be found [here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
 
->[!NOTE] **Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
+>[!NOTE]
+>**Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
 
 5. Grant admin consent for selected permissions.
     ![Image of granted admin consent](media/microsoft-identity-manager-2016-ma-graph/granted-admin-consent.png)
