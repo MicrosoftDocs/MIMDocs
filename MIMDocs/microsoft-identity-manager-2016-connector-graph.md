@@ -46,39 +46,49 @@ The connector can be used for other specific identity management scenarios invol
 
 1.  The connector requires a Web app / API application to be created in Azure AD, so that it can be authorized with appropriate permissions to operate on Azure AD objects through Microsoft Graph.
 
-![](media/microsoft-identity-manager-2016-ma-graph/724d3fc33b4c405ab7eb9126e7fe831f.png)
+    ![Image of new application registration button](media/microsoft-identity-manager-2016-ma-graph/new-application-registration-button.png)
+    ![Image of application registration](media/microsoft-identity-manager-2016-ma-graph/new-application-registration.png)
 
-Picture 1. New application registration
+    Picture 1. New application registration
 
 2.  In the Azure portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
 
-![](media/microsoft-identity-manager-2016-ma-graph/ecfcb97674790290aa9ca2dcaccdafbc.png)
+    ![Image of application registration details](media/microsoft-identity-manager-2016-ma-graph/new-application-id.png)
 
-Picture 2. Application ID
+    Picture 2. Application ID
 
-3.  Generate new Client Secret by opening All settings -\> Keys. Set some Key description and select needful Duration. Save changes. A secret
-    value will not be available after leaving the page.
+3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select needful Duration. Save changes. A secret value will not be available after leaving the page.
 
-![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
+    ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
-Picture 3. New Client Secret
+    Picture 3. New Client Secret
 
-4.  Add “Microsoft Graph API” to the application by opening “Required permissions.”
+4.  Grant proper 'Microsoft Graph' permissions to the application by opening "API Permissions"
 
-![](media/microsoft-identity-manager-2016-ma-graph/908788fbf8c3c75101f7b663a8d78a4b.png)
+    ![Image of add permissions button](media/microsoft-identity-manager-2016-ma-graph/add-permission-button.png)
+    Picture 4. Add new API
 
-Picture 4. Add new API
+    Select 'Microsoft Graph' Application permissions.
+    ![Image of applications permissions](media/microsoft-identity-manager-2016-ma-graph/application-permissions.png)
 
-The following permission should be added to the application to allow it to use the “Microsoft Graph API”, depending on the scenario:
+    Revoke all unneeded permissions.
 
-| Operation with object | Permission required                                                                  | Permission type |
-|-----------------------|--------------------------------------------------------------------------------------|-----------------|
-| Import Group          | `Group.Read.All` or `Group.ReadWrite.All`                                                | Application     |
-| Import User           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All` | Application     |
+    ![Image of applications permissions](media/microsoft-identity-manager-2016-ma-graph/not-granted-permissions.png)
 
-More details about required permissions could be found [here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
+    The following permission should be added to the application to allow it to use the “Microsoft Graph API”, depending on the scenario:
 
-5. Grant the application the required permissions.
+    | Operation with object | Permission required                                                                  | Permission type |
+    |-----------------------|--------------------------------------------------------------------------------------|-----------------|
+    | *Schema detection*      | *`Application.Read.All`*                                                               | Application     |
+    | Import Group          | `Group.Read.All` or `Group.ReadWrite.All`                                                | Application     |
+    | Import User           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All` | Application     |
+
+    More details about required permissions could be found [here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
+
+    >[!Note] **Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
+
+5. Grant admin consent for selected permissions.
+    ![Image of granted admin consent](media/microsoft-identity-manager-2016-ma-graph/granted-admin-consent.png)
 
 
 ## Installing the connector
@@ -193,6 +203,10 @@ After that, on *Schema 2* page type an expression to be used to filter users, gr
 ![Connector settings page two image with a sample filter startsWith(displayName,'J')](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-2.png)
 
 On the screenshot above, the filter *startsWith(displayName,'J')* is set to read only users whose displayName attribute value starts with 'J'.
+
+Make sure that the attribute used in filter expression is selected in connector properties.
+![Connector settings page image with a displayName attribute selected](media/microsoft-identity-manager-2016-ma-graph/connector-attributes-selected.png)
+
 
 For more information about *$filter* query parameter usage, see this article: [Use query parameters to customize responses](https://docs.microsoft.com/graph/query-parameters#filter-parameter).
 
