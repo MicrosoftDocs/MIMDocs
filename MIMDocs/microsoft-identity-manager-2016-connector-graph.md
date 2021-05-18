@@ -73,7 +73,7 @@ The connector can be used for other specific identity management scenarios invol
 
     Revoke all unneeded permissions.
 
-    ![Image of applications permissions](media/microsoft-identity-manager-2016-ma-graph/not-granted-permissions.png)
+    ![Image of not granted applications permissions](media/microsoft-identity-manager-2016-ma-graph/not-granted-permissions.png)
 
     The following permission should be added to the application to allow it to use the “Microsoft Graph API”, depending on the scenario:
 
