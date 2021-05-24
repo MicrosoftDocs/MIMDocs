@@ -2,10 +2,11 @@
 title: "The Microsoft Identity Manager connector for Microsoft Graph | Microsoft Docs"
 description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
-author: billmath
-ms.author: billmath
-manager: daveba
-ms.date: 5/17/2021
+author: EugeneSergeev
+ms.author: esergeev
+reviewer: markwahl-msft
+manager: aashiman
+ms.date: 5/24/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -112,7 +113,7 @@ The connector can be used for other specific identity management scenarios invol
 9.  In the Synchronization Service Manager UI, select **Connectors** and **Create**.
 Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 
-![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
+![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 
 10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Azure AD to avoid running import in parallel for the same application.
@@ -129,7 +130,7 @@ Key value of the WebAPI application that must be created in Azure AD.
 
 11. Make any necessary changes on the Global Parameters page:
 
-![](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
+![Global parameters page image](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
 
 Picture 6. Global Parameters page
 
@@ -242,7 +243,7 @@ DateTime, Timestamp, Call stack" />
 Connector might return HTTP error 401 Unauthorized, message “Access token has
 expired.”:
 
-![](media/microsoft-identity-manager-2016-ma-graph/ce9e23ffe17e3dac79b58bba31cb5a8d.png)
+![Error details image](media/microsoft-identity-manager-2016-ma-graph/ce9e23ffe17e3dac79b58bba31cb5a8d.png)
 
 Picture 7. “Access token has expired.” Error
 
@@ -251,7 +252,7 @@ Azure side. By default, the access token expires after 1 hour. To increase expir
 
 Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 
-![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
+![Acces token lifetime image](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
 New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 **"AccessTokenLifetime":"5:00:00"**}}') -DisplayName
