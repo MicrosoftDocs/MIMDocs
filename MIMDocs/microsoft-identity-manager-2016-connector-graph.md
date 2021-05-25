@@ -2,10 +2,11 @@
 title: "The Microsoft Identity Manager connector for Microsoft Graph | Microsoft Docs"
 description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
-author: billmath
-ms.author: billmath
-manager: daveba
-ms.date: 10/02/2018
+author: EugeneSergeev
+ms.author: esergeev
+reviewer: markwahl-msft
+manager: aashiman
+ms.date: 5/24/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -27,8 +28,7 @@ The [Microsoft Identity Manager connector for Microsoft Graph](https://go.micros
 
 
 The initial scenario for the Microsoft Identity Manager connector for Microsoft Graph is as a connector to help automate AD DS account lifecycle
-management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows
-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
+management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
 To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 SP1 with Azure Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
@@ -47,39 +47,50 @@ The connector can be used for other specific identity management scenarios invol
 
 1.  The connector requires a Web app / API application to be created in Azure AD, so that it can be authorized with appropriate permissions to operate on Azure AD objects through Microsoft Graph.
 
-![](media/microsoft-identity-manager-2016-ma-graph/724d3fc33b4c405ab7eb9126e7fe831f.png)
+    ![Image of new application registration button](media/microsoft-identity-manager-2016-ma-graph/new-application-registration-button.png)
+    ![Image of application registration](media/microsoft-identity-manager-2016-ma-graph/new-application-registration.png)
 
-Picture 1. New application registration
+    Picture 1. New application registration
 
 2.  In the Azure portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
 
-![](media/microsoft-identity-manager-2016-ma-graph/ecfcb97674790290aa9ca2dcaccdafbc.png)
+    ![Image of application registration details](media/microsoft-identity-manager-2016-ma-graph/new-application-id.png)
 
-Picture 2. Application ID
+    Picture 2. Application ID
 
-3.  Generate new Client Secret by opening All settings -\> Keys. Set some Key description and select needful Duration. Save changes. A secret
-    value will not be available after leaving the page.
+3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select needful Duration. Save changes. A secret value will not be available after leaving the page.
 
-![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
+    ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
-Picture 3. New Client Secret
+    Picture 3. New Client Secret
 
-4.  Add “Microsoft Graph API” to the application by opening “Required permissions.”
+4.  Grant proper 'Microsoft Graph' permissions to the application by opening "API Permissions"
 
-![](media/microsoft-identity-manager-2016-ma-graph/908788fbf8c3c75101f7b663a8d78a4b.png)
+    ![Image of add permissions button](media/microsoft-identity-manager-2016-ma-graph/add-permission-button.png)
+    Picture 4. Add new API
 
-Picture 4. Add new API
+    Select 'Microsoft Graph' Application permissions.
+    ![Image of applications permissions](media/microsoft-identity-manager-2016-ma-graph/application-permissions.png)
 
-The following permission should be added to the application to allow it to use the “Microsoft Graph API”, depending on the scenario:
+    Revoke all unneeded permissions.
 
-| Operation with object | Permission required                                                                  | Permission type |
-|-----------------------|--------------------------------------------------------------------------------------|-----------------|
-| Import Group          | `Group.Read.All` or `Group.ReadWrite.All`                                                | Application     |
-| Import User           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All` | Application     |
+    ![Image of not granted applications permissions](media/microsoft-identity-manager-2016-ma-graph/not-granted-permissions.png)
 
-More details about required permissions could be found [here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
+    The following permission should be added to the application to allow it to use the “Microsoft Graph API”, depending on the scenario:
 
-5. Grant the application the required permissions.
+    | Operation with object | Permission required                                                                  | Permission type |
+    |-----------------------|--------------------------------------------------------------------------------------|-----------------|
+    | *Schema detection*      | *`Application.Read.All`*                                                               | Application     |
+    | Import Group          | `Group.Read.All` or `Group.ReadWrite.All`                                                | Application     |
+    | Import User           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All` | Application     |
+
+    More details about required permissions could be found [here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
+
+>[!NOTE]
+>**Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
+
+5. Grant admin consent for selected permissions.
+    ![Image of granted admin consent](media/microsoft-identity-manager-2016-ma-graph/granted-admin-consent.png)
 
 
 ## Installing the connector
@@ -102,13 +113,14 @@ More details about required permissions could be found [here](https://developer.
 9.  In the Synchronization Service Manager UI, select **Connectors** and **Create**.
 Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 
-![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
+![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 
 10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Azure AD to avoid running import in parallel for the same application.
 
 
-![](media/microsoft-identity-manager-2016-ma-graph/77c2eb73bab8d5187da06293938f5fd9.png)
+![Connector settings image with connectivity details](media/microsoft-identity-manager-2016-ma-graph/connector-settings-connectivity.png)
+
 
 Picture 5. Connectivity page
 
@@ -118,7 +130,7 @@ Key value of the WebAPI application that must be created in Azure AD.
 
 11. Make any necessary changes on the Global Parameters page:
 
-![](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
+![Global parameters page image](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
 
 Picture 6. Global Parameters page
 
@@ -182,6 +194,27 @@ In this case there will be two iterations during the import, each of them will r
 
 During the export a new access token will be requested for each object that must be added/updated/deleted.
 
+## Query filters
+
+Graph API endpoints offer an ability to limit amount of objects returned by GET queries by introducing *$filter* parameter. 
+
+In order to enable the use of query filters to improve full import performance cycle, on the *Schema 1* page of connector properties, enable **Add objects filter** checkbox.
+![Connector settings page one image with Add objects filter checkbox checked](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-1.png)
+
+After that, on *Schema 2* page type an expression to be used to filter users, groups, contacts or service principals.
+![Connector settings page two image with a sample filter startsWith(displayName,'J')](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-2.png)
+
+On the screenshot above, the filter *startsWith(displayName,'J')* is set to read only users whose displayName attribute value starts with 'J'.
+
+Make sure that the attribute used in filter expression is selected in connector properties.
+![Connector settings page image with a displayName attribute selected](media/microsoft-identity-manager-2016-ma-graph/connector-attributes-selected.png)
+
+
+For more information about *$filter* query parameter usage, see this article: [Use query parameters to customize responses](https://docs.microsoft.com/graph/query-parameters#filter-parameter).
+
+>[!NOTE]
+>Delta query endpoint currently does not offer filtering capabilities, therefore usage of filters is limited to full import only. You will get an error trying to start delta import run with query filters enabled.
+
 ## Troubleshooting
 
 
@@ -189,22 +222,17 @@ During the export a new access token will be requested for each object that must
 
 If there are any issues in Graph, then logs could be used to localize the problem. So, traces could be enabled in [the same way like for Generic connectors](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Or just by adding the following to `miiserver.exe.config` (inside `system.diagnostics/sources` section):
 
-```
-\<source name="ConnectorsLog" switchValue="Verbose"\>
-
-\<listeners\>
-
-\<add initializeData="ConnectorsLog"
+```XML
+<source name="ConnectorsLog" switchValue="Verbose">
+<listeners>
+<add initializeData="ConnectorsLog"
 type="System.Diagnostics.EventLogTraceListener, System, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=b77a5c561934e089"
 name="ConnectorsLogListener" traceOutputOptions="LogicalOperationStack,
-DateTime, Timestamp, Call stack" /\>
-
-\<remove name="Default" /\>
-
-\</listeners\>
-
-\</source\>
+DateTime, Timestamp, Call stack" />
+<remove name="Default" />
+</listeners>
+</source>
 ```
 >[!NOTE]
 >If ‘Run this management agent in a separate process’ is enabled, then
@@ -215,16 +243,16 @@ DateTime, Timestamp, Call stack" /\>
 Connector might return HTTP error 401 Unauthorized, message “Access token has
 expired.”:
 
-![](media/microsoft-identity-manager-2016-ma-graph/ce9e23ffe17e3dac79b58bba31cb5a8d.png)
+![Error details image](media/microsoft-identity-manager-2016-ma-graph/ce9e23ffe17e3dac79b58bba31cb5a8d.png)
 
 Picture 7. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, the access token expires after 1 hour. To increase expiration time, please see [this article](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
+Azure side. By default, the access token expires after 1 hour. To increase expiration time, see [this article](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 
-![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
+![Acces token lifetime image](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
 New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 **"AccessTokenLifetime":"5:00:00"**}}') -DisplayName
