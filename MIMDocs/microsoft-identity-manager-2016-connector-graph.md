@@ -199,14 +199,17 @@ During the export a new access token will be requested for each object that must
 Graph API endpoints offer an ability to limit amount of objects returned by GET queries by introducing *$filter* parameter. 
 
 In order to enable the use of query filters to improve full import performance cycle, on the *Schema 1* page of connector properties, enable **Add objects filter** checkbox.
+
 ![Connector settings page one image with Add objects filter checkbox checked](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-1.png)
 
 After that, on *Schema 2* page type an expression to be used to filter users, groups, contacts or service principals.
+
 ![Connector settings page two image with a sample filter startsWith(displayName,'J')](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-2.png)
 
 On the screenshot above, the filter *startsWith(displayName,'J')* is set to read only users whose displayName attribute value starts with 'J'.
 
 Make sure that the attribute used in filter expression is selected in connector properties.
+
 ![Connector settings page image with a displayName attribute selected](media/microsoft-identity-manager-2016-ma-graph/connector-attributes-selected.png)
 
 
