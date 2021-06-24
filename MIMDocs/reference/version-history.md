@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 03/18/2021
+ms.date: 06/24/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -45,6 +45,9 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 This hotfix contains updates for the MIM Service and MIM Portal components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
 
 This build introduces Application Context Authentication method to Office 365 mailboxes for the MIM Service component. In order to switch from Basic authentication to Application Context Authentication apply this hotfix first, run a PowerShell script to register an application in Azure AD and reconfigure your MIM Service and Portal using installer's Change mode. Check the [Deployment guide: Installing MIM Service and Portal for Azure AD Premium customers](https://docs.microsoft.com/microsoft-identity-manager/install-mim-service-portal-azure-ad-premium) for details.
+
+> [!IMPORTANT]
+>The hotfix may fail to update MIM Service when Group-Managed Service Account or Office 365 basic authentication method is used and *PollExchangeEnabled* registry key value is set to 1. As a workaround, set a registry key *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FIMService\PollExchangeEnabled* to *0* before applying this hotfix. After the hotfix is installed, revert this value back to *1* and restart MIM Service.
 
 ## MIM Version 4.6.359.0
 
