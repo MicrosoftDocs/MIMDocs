@@ -416,7 +416,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 - **PAM "PRIV" (bastion) forest support for Windows Server 2016 functional level:** The MIM PAM Service may be configured in an environment with domain controllers running at the Active Directory Domain Services forest functional level of Windows Server 2016. When configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activation.
 
     >[!Note]
-    If you choose to maintain the forest functional level of Windows Server 2012 R2 in your CORP domain, it is recommended to install [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) and [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) on the CORP domain controller.
+    >If you choose to maintain the forest functional level of Windows Server 2012 R2 in your CORP domain, it is recommended to install [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) and [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) on the CORP domain controller.
 
 - **Privileged account elevation into groups exclusive to the “PRIV” (bastion) forest:** Now, administrators can inform the MIM Service of groups and users exclusive to the “PRIV” forest. Doing this allows these groups and users to be included in PAM roles.  They can then be activated for a role and assigned membership to groups in the “PRIV” forest.
 
@@ -425,7 +425,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 - **PAM Cmdlets for Authentication Policy Silo configuration:** Service pack 1 introduces new Cmdlets to harden the security of your bastion forest. These Cmdlets automatically create an Authentication Policy Silo, bound to an Authentication Policy Template.
 
     >[!Note]
-    These Cmdlets run automatically as part of the deployments scripts.
+    > These Cmdlets run automatically as part of the deployments scripts.
 
 
 
