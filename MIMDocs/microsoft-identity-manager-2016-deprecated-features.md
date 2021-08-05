@@ -30,8 +30,9 @@ Microsoft does not recommend customers start new deployments of the Microsoft BH
 Microsoft Silverlight will reach its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).
 Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules which require Silverlight. This includes the BHOLD Model Generator, BHOLD FIM Self-service integration, and BHOLD Analytics. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers by October 2021. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
 
-
 ## Service and Portal
+
+Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlyng database, is deprecated, as these platforms are no longer in mainstream support.  Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
 
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
@@ -45,6 +46,8 @@ The following MAs have been removed in MIM 2016: </br> 1.  MA for FIM Certificat
 The Azure AD Connector for FIM is at feature freeze and deprecated. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as the internal interfaces used by the Azure AD Connector for FIM are being removed from Azure AD.
 
 ## Synchronization Service
+
+Deploying MIM Sync on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlyng database, is deprecated, as these platforms are no longer in mainstream support.
 
 The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating existing ECMA1 management agents with ECMA2.0 connectors is required.
 
@@ -67,6 +70,16 @@ The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating ex
 | Rules Extension      | Transaction properties                                | Avoid passing data between inbound, provisioning, and outbound synchronization using this utility class.  |
 | Rules Extension      | ExchangeUtils: Create55\* methods                     | The methods to create objects for Exchange 5.5 servers may be removed.        |
 | Interface            | Mms_Metaverse                                        | All ClmUtils class members may be removed in a future hotfix or service pack.   |
+
+## Certificate Management
+
+Deploying MIM CM on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlyng database, is deprecated.
+
+The MIM CM bulk client is deprecated and not recommended for new deployments.
+
+## MIM PAM
+
+Deploying MIM for Privileged Access Manager with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with WIndows Server 2016 functional level, for your PRIV forest domain.  (Windows Server 2012 R2 is permtted for a CORP forest domain.)
 
 ## Next steps
 Learn more about:
