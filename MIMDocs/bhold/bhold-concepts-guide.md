@@ -34,6 +34,8 @@ This guide helps you understand how BHOLD Suite works with MIM and covers the fo
 - Reporting
 - Access Management Connector
 
+BHOLD is not recommended for new deployments.  Azure AD now provides [access reviews](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
+
 ## Role-based access control
 
 The most common method for controlling user access to data and applications is through discretionary access control (DAC). In most common implementations, every significant object has an identified owner. The owner has the ability to grant or deny access to the object to others based on individual identity or group membership. In practice, DAC typically results in a plethora of security groups, some that reflect organizational structure, others that represent functional groupings (such as job types or project assignments), and others that consist of makeshift collections of users and devices that are linked for more temporary purposes. As organizations grow, membership in these groups becomes increasingly difficult to manage. For example, if an employee is transferred from one project to another, the groups that are used to control access to the projects assets must be updated manually. In such cases, it is not uncommon for mistakes to occur, mistakes that can impede project security or productivity.
@@ -65,13 +67,13 @@ Organizational units (OrgUnits) are the principal means by which users are organ
 
 Although it is not required, in most cases organizational units are structured in BHOLD to represent the hierarchical structure of the actual organization, similar to the one below:
 
-![](media/bhold-concepts-guide/org-chart.png)
+![sample organizational chart](media/bhold-concepts-guide/org-chart.png)
 
 In this sample, the role model would organizationalganizatinal unit for the corporation as a whole (represented by the president, because the president is not part of a mororganizationalganizatinal unit), or the BHOLD root organizational unit (which always exists) could be used for that purpose. OrgUnits representing the corporate divisions headed by the vice presidents would be placed in the corporate organizational unit. Next, organizational units corresponding to the marketing and sales directors would be added to the marketing and sales organizational units, and organizational units representing the regional sales managers would be placed in the organizational unit for the east region sales manager. Sales associates, who do not manage other users, would be made members of the organizational unit of the east region sales manager. Note that users can be members of an organizational unit at any level. For example, an administrative assistant, who is not a manager and reports directly to a vice president, would be a member of the vice president's organizational unit.
 
 In addition to representing organizational structure, organizational units can also be used to group users and other organizational units according to functional criteria, such as for projects or specialization. The following diagram shows how organizational units would be used to group sales associates according to customer type:
 
-![](media/bhold-concepts-guide/org-chart-02.png)
+![sample project organization](media/bhold-concepts-guide/org-chart-02.png)
 
 In this example, each sales associate would belong to two organizational units: one representing the associate's place in the organization's management structure, and one representing the associate's customer base (retail or corporate). Each organizational unit can be assigned different roles which, in turn, can be assigned different permissions for accessing the organization's IT resources. In addition, roles can be inherited from parent organizational units, simplifying the process of propagating roles to users. On the other hand, specific roles can be prevented from being inherited, ensuring that a specific role is associated only with the appropriate organizational units.
 
@@ -103,7 +105,7 @@ A role assigned to a parent organizational unit optionally can be inherited by i
 
 The following diagram illustrates how an individual user can be assigned a role in BHOLD:
 
-![](media/bhold-concepts-guide/org-chart-flow.png)
+![role assignment](media/bhold-concepts-guide/org-chart-flow.png)
 
 In this diagram, role A is assigned to an organizational unit as an inheritable role, and so is inherited by its member organizational units and all users within those organizational units. Role B is assigned as a proposed role for an organizational unit. It must be activated before a user in the organizational unit can be authorized with the role's permissions. Role C is an effective role, so its permissions apply immediately to all users in the organizational unit. Role D is linked directly to the user and so its permissions apply immediately to that user.
 
@@ -193,7 +195,7 @@ The system of attributes in BHOLD is highly extensible. You can define new attri
 
 ## Attestation
 
-The BHOLD Suite provides tools that you can use to verify that individual users have been given appropriate permissions to accomplish their business tasks. The administrator can use the portal provided by the BHOLD Attestation module to design an manage the attestation process.
+The BHOLD Suite provides tools that you can use to verify that individual users have been given appropriate permissions to accomplish their business tasks. The administrator can use the portal provided by the BHOLD Attestation module to design and manage the attestation process.
 
 The attestation process is conducted by means of campaigns in which campaign stewards are given the opportunity and means to verify that the users for which they are responsible have appropriate access to BHOLD-managed applications and correct permissions within those applications. A campaign owner is designated to oversee the campaign and to ensure that the campaign is being carried out properly. A campaign can be created to occur once or on a recurring basis.
 
