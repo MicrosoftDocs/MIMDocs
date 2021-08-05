@@ -17,7 +17,7 @@ ms.assetid:
 
 # Deprecated Features
 
-This article describes the deprecated features of Microsoft Identity Manager 2016 SP2. Where the feature is still present in Microsoft Identity Manager, it is still supported, unless it is dependent upon an underlying platform, interface or separate component that is no longer supported. Features are not recommended for new deployments, as they may be removed in a future hotfix or service pack release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
+This article describes the deprecated features of Microsoft Identity Manager 2016 SP2. Where the feature is still present in Microsoft Identity Manager, it is still supported, except where the feature is dependent upon an underlying platform, interface or separate component that is no longer supported. Deprecated features are not recommended for new deployments, as they may be removed in a future hotfix or service pack release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
 
 > [!NOTE]
 >
@@ -28,11 +28,11 @@ This article describes the deprecated features of Microsoft Identity Manager 201
 Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD will continue to be supported, except where the underlying component is no longer supported. Azure AD now provides [access reviews](/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 Microsoft Silverlight will reach its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).
-Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules which require Silverlight. This includes the BHOLD Model Generator, BHOLD FIM Self-service integration, and BHOLD Analytics. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers by October 2021. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
+Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules that require Silverlight. This includes the BHOLD Model Generator, BHOLD FIM Self-service integration, and BHOLD Analytics. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers by October 2021. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
 
 ## Service and Portal
 
-Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlyng database, is deprecated, as these platforms are no longer in mainstream support.  Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
+Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.  Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
 
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
@@ -47,7 +47,7 @@ The Azure AD Connector for FIM is at feature freeze and deprecated. The solution
 
 ## Synchronization Service
 
-Deploying MIM Sync on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlyng database, is deprecated, as these platforms are no longer in mainstream support.
+Deploying MIM Sync on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.
 
 The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating existing ECMA1 management agents with ECMA2.0 connectors is required.
 
@@ -73,7 +73,7 @@ The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating ex
 
 ## Certificate Management
 
-Deploying MIM CM on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlyng database, is deprecated.
+Deploying MIM CM on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated.
 
 The MIM CM bulk client is deprecated and not recommended for new deployments.
 
