@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 03/18/2021
+ms.date: 06/24/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -45,6 +45,9 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 This hotfix contains updates for the MIM Service and MIM Portal components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
 
 This build introduces Application Context Authentication method to Office 365 mailboxes for the MIM Service component. In order to switch from Basic authentication to Application Context Authentication apply this hotfix first, run a PowerShell script to register an application in Azure AD and reconfigure your MIM Service and Portal using installer's Change mode. Check the [Deployment guide: Installing MIM Service and Portal for Azure AD Premium customers](https://docs.microsoft.com/microsoft-identity-manager/install-mim-service-portal-azure-ad-premium) for details.
+
+> [!IMPORTANT]
+>The hotfix may fail to update MIM Service when Group-Managed Service Account or Office 365 basic authentication method is used and *PollExchangeEnabled* registry key value is set to *1*. As a workaround, set a registry key *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FIMService\PollExchangeEnabled* to *0* before applying this hotfix. After the hotfix is installed, revert this value back to *1* and restart MIM Service.
 
 ## MIM Version 4.6.359.0
 
@@ -413,7 +416,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 - **PAM "PRIV" (bastion) forest support for Windows Server 2016 functional level:** The MIM PAM Service may be configured in an environment with domain controllers running at the Active Directory Domain Services forest functional level of Windows Server 2016. When configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activation.
 
     >[!Note]
-    If you choose to maintain the forest functional level of Windows Server 2012 R2 in your CORP domain, it is recommended to install [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) and [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) on the CORP domain controller.
+    >If you choose to maintain the forest functional level of Windows Server 2012 R2 in your CORP domain, it is recommended to install [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) and [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) on the CORP domain controller.
 
 - **Privileged account elevation into groups exclusive to the “PRIV” (bastion) forest:** Now, administrators can inform the MIM Service of groups and users exclusive to the “PRIV” forest. Doing this allows these groups and users to be included in PAM roles.  They can then be activated for a role and assigned membership to groups in the “PRIV” forest.
 
@@ -422,7 +425,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 - **PAM Cmdlets for Authentication Policy Silo configuration:** Service pack 1 introduces new Cmdlets to harden the security of your bastion forest. These Cmdlets automatically create an Authentication Policy Silo, bound to an Authentication Policy Template.
 
     >[!Note]
-    These Cmdlets run automatically as part of the deployments scripts.
+    > These Cmdlets run automatically as part of the deployments scripts.
 
 
 

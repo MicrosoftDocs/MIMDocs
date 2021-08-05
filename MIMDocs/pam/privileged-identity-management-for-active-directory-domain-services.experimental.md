@@ -24,7 +24,7 @@ ms.suite: ems
 #ms.custom:
 experiment_id: kgremban_images
 ---
-# Privileged Access Management for Active Directory Domain Services
+# Privileged Access Management for Active Directory Domain Services.
 
 Privileged Access Management (PAM) helps organizations restrict privileged access within an existing Active Directory environment.
 
