@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 11/2/2020
+ms.date: 7/1/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -32,35 +32,35 @@ This table describes the supported platforms and version for each component of M
 
 | **MIM component** | **Platform** | **Version** |
 |-------------------|--------------|--------------|
-| **MIM Sync** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2<br/>Windows Server 2016 *<br/>Windows Server 2019 ** |
+| **MIM Sync** | Windows Server | Windows Server 2012 (NR)<br/>Windows Server 2012 R2<br/>Windows Server 2016 *<br/>Windows Server 2019 ** |
 | | Active Directory functional level for user provisioning, PCNS and GAL Sync | Windows 2000 (NR)<br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
-| | MIM Sync database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/>SQL Server 2016 SP2 * <br/>SQL Server 2017 ** <br/> SQL Server 2019 ** |
-| | Active Directory for user provisioning, PCNS, and GAL Sync (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
+| | MIM Sync database | SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/>SQL Server 2016 SP2 * <br/>SQL Server 2017 ** <br/> SQL Server 2019 ** |
+| | Active Directory for user provisioning, PCNS, and GAL Sync (optional)|Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2013 SP1<br/>Exchange Server 2016 *<br/>Exchange Server 2019 ** |
 | | Development environment (optional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
-| | Additional connected system (optional) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 or later<br/>SharePoint Server 2013<br/> SharePoint Server 2016 *<br/> SharePoint Server 2019 ** <br/> Other third-party products |
-| **MIM Service and Portal** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
+| | Additional connected system (optional) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2012 or later<br/>SharePoint Server 2013<br/> SharePoint Server 2016 *<br/> SharePoint Server 2019 ** <br/> Other third-party products |
+| **MIM Service and Portal** | Windows Server | Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | |PAM Scenario: Windows Server | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * <br/> Windows Server 2019 **|
 | |PAM Scenario: Active Directory for bastion environment PAM forest | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * <br/> Windows Server 2019 ** |
-| |PAM Scenario: Active Directory for PAM scenario existing (CORP) forests | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * <br/> Windows Server 2019 ** |
-| | MIM Service database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 *<br/> SQL Server 2017 ** <br/> SQL Server 2019 ** |
-| | SharePoint | SharePoint Foundation 2010 SP2 (NR)<br/>SharePoint Foundation 2013 SP1 (NR) <br/> SharePoint 2016 *<br/> SharePoint 2019 ** |
+| |PAM Scenario: Active Directory for PAM scenario existing (CORP) forests | Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * <br/> Windows Server 2019 ** |
+| | MIM Service database | SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 *<br/> SQL Server 2017 ** <br/> SQL Server 2019 ** |
+| | SharePoint | SharePoint Foundation 2013 SP1 (NR) <br/> SharePoint 2016 *<br/> SharePoint 2019 ** |
 | | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Server 2019 ** <br/> Exchange Online * (Notification only before build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490)) |
 | | Browser | All major supported browsers * (Mobile devices limited)|
-| **MIM Service Reporting** | Windows Server |  Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR) <br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
+| **MIM Service Reporting** | Windows Server |  Windows Server 2012 (NR) <br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Data warehouse | System Center 2012 Service Manager SP1 <br/> System Center 2012 R2 Service Manager <br/> System Center 2016 Service Manager * (With 4.4.1459)<br/> System Center 2019 Service Manager ** |
-| **MIM Password Reset and Registration Portals** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
+| **MIM Password Reset and Registration Portals** | Windows Server | Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Web browser | All major supported browsers |
-| **MIM Add-ins and Extensions** | Windows | Windows 7<br/>Windows 8.1<br/>Windows 10 |
+| **MIM Add-ins and Extensions** | Windows | Windows 8.1<br/>Windows 10 |
 | | Outlook integration (optional) | Outlook 2013 (on Windows, except Click-To-Run) <br/> Outlook 2016 (on Windows 10, except Click-To-Run) *<br/>Outlook for Microsoft 365 (on Windows 10, including Click-To-Run) ** |
 | | PAM PowerShell requestor cmdlets (optional) | Windows 8.1<br/>Windows 10 |
-| **MIM Certificate Management** (Server and CA integration) | Windows server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
-| | Certificate authority | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
-| | MIM CM database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 *<br/> SQL Server 2017 ** |
+| **MIM Certificate Management** (Server and CA integration) | Windows server | Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
+| | Certificate authority | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
+| | MIM CM database | SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 *<br/> SQL Server 2017 ** |
 | **MIM Certificate Management** (Application) | Windows | Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (Bulk Client) | Windows | Windows 7 |
 | **MIM Certificate Management** (Client ActiveX based smart card) | Windows | Windows 7 <br/>Windows 8.1 <br/> Windows 10 |
-| **MIM BHOLD Suite** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | BHOLD database | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4  <br/> SQL Server 2014 SP3 * <br/> SQL Server 2016 SP2 * |
+| **MIM BHOLD Suite** | Windows Server | Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| | BHOLD database | SQL Server 2012 SP4  <br/> SQL Server 2014 SP3 * <br/> SQL Server 2016 SP2 * |
 | | Mail server (optional) | Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
-| | Web browser | Internet Explorer supported browsers with Silverlight |
+
