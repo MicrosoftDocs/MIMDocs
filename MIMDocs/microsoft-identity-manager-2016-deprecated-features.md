@@ -15,7 +15,7 @@ ms.assetid:
 
 ---
 
-# Deprecated Features
+# Deprecated Features and planning for the future
 
 This article describes the deprecated features of Microsoft Identity Manager 2016 SP2. Where the feature is still present in Microsoft Identity Manager, it is still supported, except where the feature is dependent upon an underlying platform, interface or separate component that is no longer supported. Deprecated features are not recommended for new deployments, as they may be removed in a future hotfix or service pack release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
 
@@ -79,7 +79,9 @@ The MIM CM bulk client is deprecated and not recommended for new deployments.
 
 ## MIM PAM
 
-Deploying MIM for Privileged Access Manager with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with Windows Server 2016 functional level, for your PRIV forest domain.  The Windows Server 2012 R2 functional level is still permitted for a CORP forest's domain.
+The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. PAM is not recommended as a starting point in deployments of Active Directory with Internet connectivity.  If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
+
+Deploying MIM for Privileged Access Management with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with Windows Server 2016 functional level, for your PRIV forest domain.  The Windows Server 2012 R2 functional level is still permitted for a CORP forest's domain.
 
 ## Next steps
 Learn more about:
