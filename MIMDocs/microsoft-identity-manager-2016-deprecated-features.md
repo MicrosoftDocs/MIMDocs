@@ -79,7 +79,7 @@ The MIM CM bulk client is deprecated and not recommended for new deployments.
 
 ## MIM PAM
 
-Deploying MIM for Privileged Access Manager with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with WIndows Server 2016 functional level, for your PRIV forest domain.  (Windows Server 2012 R2 is permtted for a CORP forest domain.)
+Deploying MIM for Privileged Access Manager with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with Windows Server 2016 functional level, for your PRIV forest domain.  The Windows Server 2012 R2 functional level is still permitted for a CORP forest's domain.
 
 ## Next steps
 Learn more about:
