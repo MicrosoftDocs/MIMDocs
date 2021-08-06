@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 4/7/2021
+ms.date: 8/6/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -41,6 +41,11 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
+
+## August 2021
+### Updates
+- Forefront Identity Manager Connector for Windows Azure Active Directory
+  - Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md).
 
 ## 1.1.1431.0 (March 2021)
 ### Enhancements
@@ -477,7 +482,7 @@ To refresh the definition:
 
 ## Other connectors
 
-In addition to the connectors listed above, connectors for SharePoint, and a legacy connector for Windows Azure Active Directory, were also distributed separately from MIM.
+In addition to the connectors listed above, connectors for SharePoint, and a now-deprecated connector for Windows Azure Active Directory, were also distributed separately from MIM.
 
 ### SharePoint User Profile
 
@@ -487,9 +492,9 @@ More information on this connector can be found at the
 [hotfix rollup](https://support.microsoft.com/en-us/help/3156030/hotfix-rollup-build-4-3-2201-0-is-available-for-forefront-identity-man)
 and instructions on how to [Use a sample MIM solution in SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server-2016).
 
-### Forefront Identity Manager Connector for Windows Azure Active Directory (legacy connector)
+### Forefront Identity Manager Connector for Windows Azure Active Directory (deprecated connector)
 
-The Azure AD Connector for FIM was an early technology for synchronizing identity information to Azure Active Directory. The Azure AD Connector for FIM, version 1.0.6635.0069 from February 19, 2014, is at feature freeze. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the MIM Graph Connector. Do not begin a new deployment using the Forefront Identity Manager Connector for Windows Azure AD.
+The Azure AD Connector for FIM was an early technology for synchronizing identity information to Azure Active Directory. The Azure AD Connector for FIM, version 1.0.6635.0069 from February 19, 2014, is at feature freeze and deprecated. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md). Do not begin a new deployment using the Forefront Identity Manager Connector for Windows Azure AD.
 
 ## Next steps
 

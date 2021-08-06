@@ -215,7 +215,7 @@ You must be logged in as a member of the Domain Admins group to perform this pro
 
 ## Next steps
 
-After you have installed BHOLD Core and validated that the installation was successful, you can install additional modules. At this point, the BHOLD database will be essentially empty, containing only one user account, the root account, and one organizational unit (orgunit), the root orgunit. To add more users to the BHOLD database, you can either install the Access Management Connector module or the BHOLD Model Generator module, depending on your needs. You can use the Access Management Connector module to import user data from the FIM Synchronization Service, or you can use the BHOLD Model Generator to import user data from a set of structured files. For more information about using the Access Management Connector module, see [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
+After you have installed BHOLD Core and validated that the installation was successful, you can install additional modules. At this point, the BHOLD database will be essentially empty, containing only one user account, the root account, and one organizational unit (orgunit), the root orgunit. To add more users to the BHOLD database, you can install the Access Management Connector module to import user data from the FIM Synchronization Service. For more information about using the Access Management Connector module, see [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
 For more information about using the BHOLD Model Generator module, see:
 
