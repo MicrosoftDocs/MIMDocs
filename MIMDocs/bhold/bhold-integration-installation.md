@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 05/14/2021
+ms.date: 08/4/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -21,10 +21,4 @@ ms.assetid:
 > [!NOTE]
 > The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules will be removed from BHOLD, as these modules have a dependency on Microsoft Silverlight, which will reach the [end of support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) on October 12, 2021.
 
-To connect FIM Sync or MIM Sync with BHOLD Core, use the BHOLD Access Management Connector.  For information about installing and using the Access Management Connector module, see [Access Management Connector Installation](bhold-access-management-connector-install.md) and [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
-
-## Next steps
-
-- [BHOLD installation guide](bhold-installation-guide.md)
-- [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
-- [BHOLD version history](../reference/version-bhold-history.md)
+THe BHOLD FIM integration module is not recommended for new installations.  To connect FIM Sync or MIM Sync with BHOLD Core, use the BHOLD Access Management Connector.  For information about installing and using the Access Management Connector module, see [Access Management Connector Installation](bhold-access-management-connector-install.md) and [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
