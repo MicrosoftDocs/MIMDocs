@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 8/2/2021
+ms.date: 8/6/2021
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -49,8 +49,6 @@ The Azure AD Connector for FIM is at feature freeze and deprecated. The solution
 ## Synchronization Service
 
 Deploying MIM Sync on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.
-
-## Synchronization Service
 
 The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating existing ECMA1 management agents with ECMA2.0 connectors is required.
 

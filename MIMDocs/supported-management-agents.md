@@ -17,7 +17,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 8/2/2021
+ms.date: 8/6/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
