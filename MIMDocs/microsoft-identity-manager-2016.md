@@ -25,7 +25,7 @@ ms.suite: ems
 
 # Microsoft Identity Manager 2016 news and updates
 
-Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of Forefront Identity Manager and predecessor technologies.  MIM provides integration with heterogeneous platforms across the datacenter, including on-premises HR, directories and databases.
+Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of Forefront Identity Manager and predecessor technologies.  MIM provides integration with heterogeneous platforms across the datacenter, including on-premises HR systems, directories, and databases.
 
 MIM augments Azure AD cloud-hosted services by enabling the organization to have the right users in Active Directory for on-premises apps. Azure AD Connect can then make available in Azure AD for Microsoft 365 and cloud-hosted apps. Common MIM scenarios include:
  - Automatic identity and group provisioning based on business policy and workflow-driven provisioning
@@ -39,13 +39,12 @@ Microsoft regularly delivers updates to MIM, including enhancements for customer
 MIM 2016 Service Pack 2 is a rollup of existing hotfixes since MIM 2016 SP1. It also introduces the option to configure use of Group Managed Service Accounts for MIM Synchronization Service and MIM Service, and enables MIM to be deployed with other updated platform software. More details could be found in [MIM 2016 Version Release History](./reference/version-history.md).
 
 ### Support update for Azure Active Directory Premium customers
-For Azure AD Premium customers, standard support continues to be available for customers using [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP) to prepare data for AD which can then be sent to Azure AD. For more information, see the [Azure AD support process](support-update-for-azure-active-directory-premium-customers.md).
+For Azure AD Premium customers, standard support continues to be available for customers using the [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP) release, or the current MIM hotfix, to prepare data for AD that can then be sent to Azure AD. For more information, see the [Azure AD support process](support-update-for-azure-active-directory-premium-customers.md).
 
 ### Major new and updated scenarios
 
 - [MIM deprecated feature list and planning for the future](microsoft-identity-manager-2016-deprecated-features.md), last updated August 2021
 - [Azure AD B2B collaboration with MIM Graph connector and Azure Application proxy is GA](microsoft-identity-manager-2016-graph-b2b-scenario.md), last updated December 2020
-- [Hybrid MIM reporting is GA](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), last updated April 2019
 
 ### Recent software releases
 
