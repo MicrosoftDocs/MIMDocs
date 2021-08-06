@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/11/2017
+ms.date: 05/14/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -15,21 +15,20 @@ ms.assetid:
 
 
 ---
-# Microsoft BHOLD Suite SP1 (6.0) Installation Guide
+# Microsoft BHOLD Suite Installation Guide
 
-Microsoft® BHOLD Suite Service Pack 1 (SP1) is a collection of applications that, when used with Microsoft Identity Manager 2016 SP1 (MIM), adds effective role management, analytics, and attestation to MIM. Microsoft BHOLD Suite SP1 consists of the following modules:
+Microsoft® BHOLD Suite  is a collection of applications that, when used with Microsoft Identity Manager 2016 SP2 (MIM), adds effective role management and attestation to MIM. Microsoft BHOLD Suite SP1 consists of the following modules:
 
 - BHOLD Core
 - Access Management Connector
-- BHOLD FIM/MIM Integration
-- BHOLD Model Generator
-- BHOLD Analytics
 - BHOLD Reporting
 - BHOLD Attestation
 
 
 > [!NOTE]
-> **Applies To**: Microsoft Identity Manager 2016 SP1 or later
+> **Applies To**: Microsoft Identity Manager 2016 SP2 or later.  The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules will be removed from BHOLD, as these modules have a dependency on Microsoft Silverlight, which will reach the [end of support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) on October 12, 2021.
+
+BHOLD is not recommended for new deployments.  Azure AD now provides [access reviews](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## What this document covers
 
@@ -65,16 +64,11 @@ For guidance on installing FIM in a single-server configuration, see [Common Con
 
 ### Dual-server architecture
 
-Installing BHOLD Core and FIM on separate servers provides greater performance and flexibility for medium-size organizations that do not require a more complex deployment, such as that provided by multitier architectures. The following figure shows BHOLD and FIM installed on their own servers; the FIM server is also running SQL Server to provide database services to BHOLD and FIM. The FIM Synchronization Service running on the FIM server synchronizes changes between the FIM and BHOLD databases. Note that if end-user self-service is required, the BHOLD FIM Integration module must be installed on the same server as the FIM Service and FIM Portal. The BHOLD FIM Integration module requires that the FIM Service and the BHOLD FIM Integration module are installed on the same server.
-
-![Dual server architecture](media/bhold-installation-guide/dual.png)
-
-> [!IMPORTANT]
-> The reporting feature of the BHOLD FIM Integration module requires the BHOLD and FIM databases to be installed on the same SQL Server instance, and the BHOLD service account must have access rights to the FIM Service database.
+Installing BHOLD Core and FIM on separate servers provides greater performance and flexibility for medium-size organizations that do not require a more complex deployment, such as that provided by multitier architectures. The following figure shows BHOLD and FIM installed on their own servers; the FIM server is also running SQL Server to provide database services to BHOLD and FIM. The FIM Synchronization Service running on the FIM server synchronizes changes between the FIM and BHOLD databases.
 
 ### Two-tier architecture
 
-In most environments, especially those where performance is important, you should run the BHOLD Suite SP1, FIM, and SQL Server on separate servers (two-tier architecture). With a two-tier architecture, memory and CPU resources are dedicated for each tier. The following illustration shows one possible way to configure a two-tier architecture. The FIM Synchronization Service running on the FIM server synchronizes changes between the FIM and BHOLD databases. Note that if end-user self-service is required, the BHOLD FIM Integration module must be installed on the same server as the FIM Service and Portal.
+In most environments, especially those where performance is important, you should run the BHOLD Suite SP1, FIM, and SQL Server on separate servers (two-tier architecture). With a two-tier architecture, memory and CPU resources are dedicated for each tier. The following illustration shows one possible way to configure a two-tier architecture. The FIM Synchronization Service running on the FIM server synchronizes changes between the FIM and BHOLD databases.
 
 ![two-tier architecture](media/bhold-installation-guide/two-tier.png)
 

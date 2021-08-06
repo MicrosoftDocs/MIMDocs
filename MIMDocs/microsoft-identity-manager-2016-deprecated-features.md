@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 7/28/2020
+ms.date: 8/2/2021
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -15,9 +15,9 @@ ms.assetid:
 
 ---
 
-# Deprecated Features
+# Deprecated Features and planning for the future
 
-This article describes the deprecated features of Microsoft Identity Manager 2016 SP2. Where the feature is still present in Microsoft Identity Manager, it is still supported. Features are not recommended for new deployments, as they may be removed in a future hotfix or service pack release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
+This article describes the deprecated features of Microsoft Identity Manager 2016 SP2. Where the feature is still present in Microsoft Identity Manager, it is still supported, except where the feature is dependent upon an underlying platform, interface or separate component that is no longer supported. Deprecated features are not recommended for new deployments, as they may be removed in a future hotfix or service pack release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
 
 > [!NOTE]
 >
@@ -25,7 +25,11 @@ This article describes the deprecated features of Microsoft Identity Manager 201
 
 ## BHOLD
 
-Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD will continue to be supported. Azure AD now provides [access reviews](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
+Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD for role-based provisioning will continue to be supported, except where the underlying component is no longer supported.
+
+The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules have a dependency on Microsoft Silverlight. Microsoft Silverlight will reach its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).  Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules that require Silverlight. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers by October 2021. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
+
+Azure AD now provides [access reviews](/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## Service and Portal
 
@@ -34,11 +38,15 @@ Microsoft does not recommend customers start new deployments of the Microsoft BH
 | Programmatic Configuration of sync | Web Service configuration interface(ma-data and mv-data) | The ability to configure the MIM synchronization service, through MIM service web service, may be removed in a future hotfix or service pack.
 |
 
-## Synchronization Service 
+## Connectors and Management Agents
 
 The following MAs have been removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs have been replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
 
+## Synchronization Service
+
 The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating existing ECMA1 management agents with ECMA2.0 connectors is required.
+
+The Windows Azure Active Directory connector is not recommended for new deployments. Customers should instead use Azure AD Connect, [Azure AD Connect cloud sync](https://docs.microsoft.com/azure/active-directory/cloud-sync/what-is-cloud-sync), or the [MIM graph connector](~/microsoft-identity-manager-2016-connector-graph.md).
 
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
@@ -59,6 +67,12 @@ The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating ex
 | Rules Extension      | Transaction properties                                | Avoid passing data between inbound, provisioning, and outbound synchronization using this utility class.  |
 | Rules Extension      | ExchangeUtils: Create55\* methods                     | The methods to create objects for Exchange 5.5 servers may be removed.        |
 | Interface            | Mms_Metaverse                                        | All ClmUtils class members may be removed in a future hotfix or service pack.   |
+
+## MIM PAM
+
+The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. PAM is not recommended as a starting point in deployments of Active Directory with Internet connectivity.  If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
+
+Deploying MIM for Privileged Access Management with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with Windows Server 2016 functional level, for your PRIV forest domain.  The Windows Server 2012 R2 functional level is still permitted for a CORP forest's domain.
 
 ## Next steps
 Learn more about:
