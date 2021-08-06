@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 8/2/2021
+ms.date: 8/6/2021
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 
@@ -33,6 +33,8 @@ Azure AD now provides [access reviews](/azure/active-directory/active-directory-
 
 ## Service and Portal
 
+Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.  Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
+
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Programmatic Configuration of sync | Web Service configuration interface(ma-data and mv-data) | The ability to configure the MIM synchronization service, through MIM service web service, may be removed in a future hotfix or service pack.
@@ -40,9 +42,13 @@ Azure AD now provides [access reviews](/azure/active-directory/active-directory-
 
 ## Connectors and Management Agents
 
-The following MAs have been removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs have been replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
+The following MAs have been removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs have been replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
+
+The Azure AD Connector for FIM is at feature freeze and deprecated. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as the internal interfaces used by the Azure AD Connector for FIM are being removed from Azure AD.
 
 ## Synchronization Service
+
+Deploying MIM Sync on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.
 
 The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating existing ECMA1 management agents with ECMA2.0 connectors is required.
 
@@ -67,6 +73,12 @@ The Windows Azure Active Directory connector is not recommended for new deployme
 | Rules Extension      | Transaction properties                                | Avoid passing data between inbound, provisioning, and outbound synchronization using this utility class.  |
 | Rules Extension      | ExchangeUtils: Create55\* methods                     | The methods to create objects for Exchange 5.5 servers may be removed.        |
 | Interface            | Mms_Metaverse                                        | All ClmUtils class members may be removed in a future hotfix or service pack.   |
+
+## Certificate Management
+
+Deploying MIM CM on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated.
+
+The MIM CM bulk client is not recommended for new deployments.
 
 ## MIM PAM
 
