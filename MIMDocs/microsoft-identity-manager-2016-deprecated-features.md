@@ -44,15 +44,13 @@ Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2
 
 The following MAs have been removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs have been replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
 
-The Azure AD Connector for FIM is at feature freeze and deprecated. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as the internal interfaces used by the Azure AD Connector for FIM are being removed from Azure AD.
+The Windows Azure AD Connector for FIM is at feature freeze and deprecated. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as the internal interfaces used by the Azure AD Connector for FIM are being removed from Azure AD.
 
 ## Synchronization Service
 
 Deploying MIM Sync on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.
 
 The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating existing ECMA1 management agents with ECMA2.0 connectors is required.
-
-The Windows Azure Active Directory connector is not recommended for new deployments. Customers should instead use Azure AD Connect, [Azure AD Connect cloud sync](https://docs.microsoft.com/azure/active-directory/cloud-sync/what-is-cloud-sync), or the [MIM graph connector](~/microsoft-identity-manager-2016-connector-graph.md).
 
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
