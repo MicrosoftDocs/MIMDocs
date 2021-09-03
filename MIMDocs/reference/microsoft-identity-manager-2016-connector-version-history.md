@@ -57,6 +57,11 @@ Related links:
    - Fixed an issue with a drop-down menu that enables hashing of OpenLDAP passwords
    - Improved LDAP schema classes processing, inherited classes are now processed when parent class is in scope
 
+## August 2021
+### Updates
+- Forefront Identity Manager Connector for Windows Azure Active Directory
+  - Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md).
+
 ## 1.1.1431.0 (March 2021)
 ### Enhancements
 - Generic LDAP Connector

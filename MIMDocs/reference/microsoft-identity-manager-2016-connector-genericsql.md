@@ -41,7 +41,7 @@ From a high-level perspective, the following features are supported by the curre
 | Schema |<li>Dynamic discovery of objects and attributes</li> |
 
 > [!NOTE]
-> *Connections to data sources not listed above are currently limited to query-based import and export strategies.
+> *Connections to data sources not listed above, e.g. PostgreSQL, are currently limited to query-based import and export strategies.
 
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
