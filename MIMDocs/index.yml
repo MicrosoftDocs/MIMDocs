@@ -7,6 +7,7 @@ metadata:
   description: Learn how to use Microsoft Identity Manager.
   ms.topic: landing-page # Required
   ms.date: 01/05/2021
+  ms.service: identity 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
