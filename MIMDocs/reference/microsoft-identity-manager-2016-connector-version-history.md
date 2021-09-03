@@ -37,7 +37,7 @@ Related links:
 * [Graph Connector](../microsoft-identity-manager-2016-connector-graph.md) reference documentation
 * [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation
 * [Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation
-* [Web Services Connector](reference/microsoft-identity-manager-2016-ma-ws) reference documentation
+* [Web Services Connector](microsoft-identity-manager-2016-ma-ws) reference documentation
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
