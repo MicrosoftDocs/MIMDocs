@@ -28,7 +28,7 @@ You must install the Access Management Connector on a computer running the FIM S
 
 To install the Access Management Control module, log on as a member of the
 Domain Admins group, download the following file and run it as administrator on
-the server that you intend to install the BHOLD FIM Integration module on:
+the server that you intend to install the BHOLD access management connector module on:
 
 - AccessManagementConnector.msi
 
@@ -37,7 +37,7 @@ To run the program file as an administrator, right-click the file and then click
 
 ## Next steps
 
-- [BHOLD FIM integration installation](https://technet.microsoft.com/library/jj134093(v=ws.10).aspx) To enable end-user self-service of roles, you can install the BHOLD FIM Integration module
+
 - [BHOLD installation guide](bhold-installation-guide.md)
 - [BHOLD developer reference](../reference/mim2016-bhold-developer-reference.md)
 - [BHOLD version history](../reference/version-bhold-history.md)

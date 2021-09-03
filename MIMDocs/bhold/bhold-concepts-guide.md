@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/14/2017
+ms.date: 05/14/2021
 ms.topic: conceptual
 ms.assetid: 
 ms.prod: microsoft-identity-manager
@@ -31,10 +31,10 @@ This guide helps you understand how BHOLD Suite works with MIM and covers the fo
 
 - Role-based access control
 - Attestation
-- Analytics
 - Reporting
 - Access Management Connector
-- MIM Integration
+
+BHOLD is not recommended for new deployments.  Azure AD now provides [access reviews](https://docs.microsoft.com/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## Role-based access control
 
@@ -67,17 +67,17 @@ Organizational units (OrgUnits) are the principal means by which users are organ
 
 Although it is not required, in most cases organizational units are structured in BHOLD to represent the hierarchical structure of the actual organization, similar to the one below:
 
-![](media/bhold-concepts-guide/org-chart.png)
+![sample organizational chart](media/bhold-concepts-guide/org-chart.png)
 
 In this sample, the role model would organizationalganizatinal unit for the corporation as a whole (represented by the president, because the president is not part of a mororganizationalganizatinal unit), or the BHOLD root organizational unit (which always exists) could be used for that purpose. OrgUnits representing the corporate divisions headed by the vice presidents would be placed in the corporate organizational unit. Next, organizational units corresponding to the marketing and sales directors would be added to the marketing and sales organizational units, and organizational units representing the regional sales managers would be placed in the organizational unit for the east region sales manager. Sales associates, who do not manage other users, would be made members of the organizational unit of the east region sales manager. Note that users can be members of an organizational unit at any level. For example, an administrative assistant, who is not a manager and reports directly to a vice president, would be a member of the vice president's organizational unit.
 
 In addition to representing organizational structure, organizational units can also be used to group users and other organizational units according to functional criteria, such as for projects or specialization. The following diagram shows how organizational units would be used to group sales associates according to customer type:
 
-![](media/bhold-concepts-guide/org-chart-02.png)
+![sample project organization](media/bhold-concepts-guide/org-chart-02.png)
 
 In this example, each sales associate would belong to two organizational units: one representing the associate's place in the organization's management structure, and one representing the associate's customer base (retail or corporate). Each organizational unit can be assigned different roles which, in turn, can be assigned different permissions for accessing the organization's IT resources. In addition, roles can be inherited from parent organizational units, simplifying the process of propagating roles to users. On the other hand, specific roles can be prevented from being inherited, ensuring that a specific role is associated only with the appropriate organizational units.
 
-OrgUnits can be created in BHOLD Suite by using the BHOLD Core web portal or by using the BHOLD Model Generator.
+OrgUnits can be created in BHOLD Suite by using the BHOLD Core web portal.
 
 #### Users
 
@@ -85,7 +85,7 @@ As noted above, every user must belong to at least one organizational unit (OrgU
 
 When a user is not active within the organization (while away for medical leave, for example), the user can be suspended, which revokes all the user's permissions without removing the user from the role model. Upon returning to duty, the user can be reactivated, which restores all the permissions granted by the user's roles.
 
-Objects for users can be created individually in BHOLD through the BHOLD Core web portal, or they can be imported in bulk by using BHOLD Model Generator, or by using the Access Management Connector with the FIM Synchronization Service to import user information from such sources as Active Directory Domain Services or human resources applications.
+Objects for users can be created individually in BHOLD through the BHOLD Core web portal, or by using the Access Management Connector with the FIM Synchronization Service to import user information from such sources as Active Directory Domain Services or human resources applications.
 
 Users can be created directly in BHOLD without using the FIM Synchronization Service. This can be useful when modeling roles in a preproduction or test environment. You can also allow external users (such as employees of a subcontractor) to be assigned roles and thus given access to IT resources without being added to the employee database; however, these users will not be able
 to use the BHOLD self-service features.
@@ -105,7 +105,7 @@ A role assigned to a parent organizational unit optionally can be inherited by i
 
 The following diagram illustrates how an individual user can be assigned a role in BHOLD:
 
-![](media/bhold-concepts-guide/org-chart-flow.png)
+![role assignment](media/bhold-concepts-guide/org-chart-flow.png)
 
 In this diagram, role A is assigned to an organizational unit as an inheritable role, and so is inherited by its member organizational units and all users within those organizational units. Role B is assigned as a proposed role for an organizational unit. It must be activated before a user in the organizational unit can be authorized with the role's permissions. Role C is an effective role, so its permissions apply immediately to all users in the organizational unit. Role D is linked directly to the user and so its permissions apply immediately to that user.
 
@@ -195,7 +195,7 @@ The system of attributes in BHOLD is highly extensible. You can define new attri
 
 ## Attestation
 
-The BHOLD Suite provides tools that you can use to verify that individual users have been given appropriate permissions to accomplish their business tasks. The administrator can use the portal provided by the BHOLD Attestation module to design an manage the attestation process.
+The BHOLD Suite provides tools that you can use to verify that individual users have been given appropriate permissions to accomplish their business tasks. The administrator can use the portal provided by the BHOLD Attestation module to design and manage the attestation process.
 
 The attestation process is conducted by means of campaigns in which campaign stewards are given the opportunity and means to verify that the users for which they are responsible have appropriate access to BHOLD-managed applications and correct permissions within those applications. A campaign owner is designated to oversee the campaign and to ensure that the campaign is being carried out properly. A campaign can be created to occur once or on a recurring basis.
 
@@ -205,106 +205,6 @@ When a campaign begins, BHOLD sends an email notification message to the campaig
 users.
 
 Campaign owners also use the portal to monitor the progress of the campaign, and campaign activities are logged so campaign owners can analyze the actions that were taken in the course of the campaign.
-
-## Analytics
-
-One of the important considerations when implementing a comprehensive rights-based access control (RBAC) system is the balance between maintaining strict access control and avoiding unnecessary (or, worse, unexpected) barriers to access. The effort to maintain this balance often results in an access-control structure that is so complex that unexpected interactions between policies are nearly unavoidable.
-
-For that reason, it is important to be able to analyze the effects of access-control policies before they are actually put in place. The Analytics module of BHOLD Suite gives you the ability to perform this analysis by letting you develop rules that represent your policies and then showing the users whose permissions conform or conflict with the rule. Based on this analysis, you can adjust the policy or modify roles and permissions to eliminate any conflicts with the policy.
-
-The BHOLD Analytics portal gives you the ability to construct rulesets that consist of one or more rules that you create to test a particular policy or group of policies. A rule consists of the following major parts:
-
-- A title and description that let you identify and describe the rule
-- A status that indicates whether the rule is ready for review, being reviewed, or approved
-- An element set (such as users or permissions) that the rule is designed to test
-- Optional subset filters that are expressions that you can use to select an appropriate subgroup of the element to be examined
-- One or more rule filters that are expressions that represent the policy being tested.
-
-A rule can test any one of the following element sets:
-
-- Users
-- Organizational Units
-- Roles
-- Permissions
-- Applications
-- Accounts
-
-The following diagram illustrates a simple rule consisting of two subset rules and two filter rules:
-
-![](media/bhold-concepts-guide/rules.png)
-
-Note the difference in the effect of failing a subset filter and of failing a rule filter: Failing a subset filter removes an element object from testing by subsequent filters, while failing a rule filter causes the object to be reported as not compliant. Only those objects that pass all the subset filters and all the rule filters are reported as compliant.
-
-Each filter consists of a type, an operator (which is type dependent), a key (one of the elements) and a value against which the key is tested by the operator. For example, the following filter would test whether the number of users in an element subset exceeds 10:
-
-
-|   |   |   |   |   |
-|---|---|---|---|---|
-|**Type:**   | Number of   |
-| **Key:**  | Users  |
-| **Operator**  | >  |
-| **Value:** | 10 |
-
-The rules filters can be of three types, and use operators specific to their type, as indicated:
-
-- Attribute
-  - < and >
-  - = and !=
-  - **Contains**
-  - **Does not contain**
-- Number of
-  - < and >
-  - = and !=
-- Restrictive
-  - **Must have any and Must have all**
-  - **Cannot have any and Cannot have all**
-  - **Can only have any and Can only have all**
-  - **Exclusively have any and Exclusively have all**
-
-> [!Note]
-> Restrictive filters can use the indicated operators to test a key against a set of multiple values.
-
-For example, if you wanted to test the implementation of a segregation of duties (SoD) policy that states that no user who has Request Payment permission is also to have Approve Payment permission, you could construct a rule like the following:
-
-|   |  |
-|---|--|
-|Name:| Payment SoD Test|
-|Element:| Users|
-|Subset filter:| Having any permission Request Payment|
-|Rule filter: | Cannot have any permission Approve Payment|
-
-When you run this rule, the BHOLD Analytics module displays the number of users in the selected subset (the number of users with the Request Payment permission), the number of users that comply with the rule, and the number of users that do not comply with the rule. You can then display the noncompliant users so you can correct the inconsistency.
-
-In addition to displaying the results, you can also save the report as a comma-separated value (CSV) or XML file to allow you to analyze the results later. You can also customize the resulting report to show additional information that can help you better understand the impact. For example, if you are testing users, you can display (or report) the accounts of the compliant or noncompliant users so you can see which applications are involved.
-
-Because a rule can contain multiple filters, you can connect filters to test whether a particular combination of conditions exist. By default, the result is the product of an AND Boolean test of all filters, but you can specify that an OR test of the filter combination be performed.
-
-For example, if your business policy requires managers to have either the Modify Payment permission or the Approve Payment permission, then you could test compliance with the policy by constructing a rule like the following:
-
-
-|  |  |
-|--|--|
-|Name: | Modify Payment SoD Test|
-|Element: | Users |
-|Subset filter: | Having any role Manager|
-| Rule filters: |Must have any permission Modify Payment </br> Must have any permission Approve Payment|
-
-By default, any user who is a manager who has both the Modify Payment and the Request Payment permission will be reported as compliant. However, the policy requires that a manager have either permission, not necessarily both. To test actual compliance with the policy, you must use the OR Boolean operator with the rule to determine if there are any managers who do not have either the Modify Payment permission or Approve Payment permission.
-
-Unlike other operators, the **Exclusively have any** and the **Exclusively have all** operators indicate compliance for objects that would otherwise be excluded by a subset filter. For example to test a policy that all managers (and only managers) have the Approve Reviews permission, you could construct a rule as follows:
-
-|  |  |
-|--|--|
-|Name: | Review Approval Test|
-|Element: | Users|
-| Subset filter: | Having any role Manager
-|Rule filter: | Exclusively have any permission Approve Reviews|
-
-This rule will report as compliant users who are managers and have the Approve Reviews permission and users who are not managers and who do not have the Approve Reviews permission. Conversely, managers who do not have that permission and users who are not managers but have that permission are reported as not compliant.
-
-As noted previously, you can combine rules into a ruleset, making it easier for you to categorize and manage rules to meet your business requirements.
-
-You can also define a set of global filters that, when enabled, apply to any rule that is tested. If you frequently need to exclude a particular subset of records when testing rules in different rulesets, you can specify global filters that you can enable or disable as needed.
 
 ## Reporting
 
@@ -343,11 +243,6 @@ The BHOLD Suite Access Management Connector module supports both initial and ong
 
 Previous versions of BHOLD required multiple MAs to control data flow between MIM and intermediate BHOLD database tables. In BHOLD Suite SP1, the Access Management Connector lets you define management agents (MAs) in MIM that provide data transfer directly between BHOLD and MIM.
 
-## MIM Integration
-
-An important and powerful feature of Forefront Identity Manager 2010 and Forefront Identity Manager 2010 R2 is the self-service portal that allows end users to view and manage their identity and membership information. MIM Integration extends the MIM Portal with self-service role management. For example, by using the BHOLD features in the MIM Portal, a user can request role assignment and can view active roles and pending requests. Additional capabilities can be granted to delegated administrators, such as the ability to request role assignments for other users.
-
-It is important to note that the BHOLD extensions to the MIM Portal support self-service role and workflow management, and reporting. Other BHOLD administration functions, as well as attestation, are provided by the web portals of the BHOLD modules, which are hosted separately from the MIM Portal.
 
 ## Next steps
 
