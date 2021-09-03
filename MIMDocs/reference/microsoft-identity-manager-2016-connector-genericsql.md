@@ -187,7 +187,7 @@ The Generic SQL Connector supports the following methods for Delta Import:
 
 **Additional Parameters**: Specify the Database Server Time Zone indicating where your Database server is located. This value is used to support the various formats of date & time attributes.
 
-The Connector always stores date and date-time in UTC format. To be able to correctly convert the date and times, the time zone of the database server and the format used must be specified. The format should be expressed in .Net format.
+The Connector always stores date and date-time in UTC format. To be able to correctly convert the date and times, the time zone of the database server and the format used must be specified. The format should be expressed in .NET format.
 
 During export every date time attribute must be provided to the Connector in UTC time format.
 
