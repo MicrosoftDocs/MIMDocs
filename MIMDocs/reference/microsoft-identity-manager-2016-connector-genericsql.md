@@ -63,12 +63,12 @@ For the ports required for the ODBC driver to work, consult the database vendor'
 ## Create a new Connector
 To Create a Generic SQL connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Generic SQL (Microsoft)** Connector.
 
-![CreateConnector](./media/microsoft-identity-manager-2016-connector-genericsql/createconnector.png)
+![CreateConnector page 1](./media/microsoft-identity-manager-2016-connector-genericsql/createconnector.png)
 
 ### Connectivity
 The Connector uses an ODBC DSN file for connectivity. Create the DSN file using **ODBC Data Sources** found in the start menu under **Administrative Tools**. In the administrative tool, create a **File DSN** so it can be provided to the Connector.
 
-![CreateConnector](./media/microsoft-identity-manager-2016-connector-genericsql/connectivity.png)
+![CreateConnector page 2](./media/microsoft-identity-manager-2016-connector-genericsql/connectivity.png)
 
 The Connectivity screen is the first when you create a new Generic SQL Connector. You first need to provide the following information:
 
@@ -94,20 +94,20 @@ On this page, you are going to configure how the Connector is going to find the 
 
 Every object type is presented as a partition and configured further on **Configure Partitions and Hierarchies**.
 
-![schema1a](./media/microsoft-identity-manager-2016-connector-genericsql/schema1a.png)
+![schema1a image](./media/microsoft-identity-manager-2016-connector-genericsql/schema1a.png)
 
 **Object Type detection method**: The Connector supports these object type detection methods.
 
 * **Fixed Value**: You provide the list of object types with a comma-separated list. For example: `User,Group,Department`.  
-  ![schema1b](./media/microsoft-identity-manager-2016-connector-genericsql/schema1b.png)
+  ![schema1b image](./media/microsoft-identity-manager-2016-connector-genericsql/schema1b.png)
 * **Table/View/Stored Procedure**: Provide the name of the table/view/stored procedure and then the column name that provides the list of object types. If you use a stored procedure, then also provide parameters for it in the format **[Name]:[Direction]:[Value]**. Provide each parameter on a separate line (use Ctrl+Enter to get a new line).  
-  ![schema1c](./media/microsoft-identity-manager-2016-connector-genericsql/schema1c.png)
+  ![schema1c image](./media/microsoft-identity-manager-2016-connector-genericsql/schema1c.png)
 * **SQL Query**: This option allows you to provide a SQL query that returns a single column with object types, for example `SELECT [Column Name] FROM TABLENAME`. The returned column must be of type string (varchar).
 
 ### Schema 2 (Detect attribute types)
 On this page, you are going to configure how the attribute names and types are going to be detected. The configuration options are listed for every object type detected on the previous page.
 
-![schema2a](./media/microsoft-identity-manager-2016-connector-genericsql/schema2a.png)
+![schema2a image](./media/microsoft-identity-manager-2016-connector-genericsql/schema2a.png)
 
 **Attribute Type detection method**: The Connector supports these attribute type detection methods with every detected object type in Schema 1 screen.
 
@@ -117,23 +117,23 @@ On this page, you are going to configure how the attribute names and types are g
 ### Schema 3 (Define anchor and DN)
 This page allows you to configure anchor and DN attribute for each detected object type. You can select multiple attributes to make the anchor unique.
 
-![schema3a](./media/microsoft-identity-manager-2016-connector-genericsql/schema3a.png)
+![schema3a image](./media/microsoft-identity-manager-2016-connector-genericsql/schema3a.png)
 
 * Multi-valued and Boolean attributes are not listed.
 * Same attribute cannot use for DN and anchor, unless **DN is Anchor** is selected on the Connectivity page.
 * If **DN is Anchor** is selected on the Connectivity page, this page requires only the DN attribute. This attribute would also be used as the anchor attribute.
 
-  ![schema3b](./media/microsoft-identity-manager-2016-connector-genericsql/schema3b.png)
+  ![schema3b image](./media/microsoft-identity-manager-2016-connector-genericsql/schema3b.png)
 
 ### Schema 4 (Define attribute type, reference, and direction)
 This page allows you to configure the attribute type, such as integer, binary, or Boolean, and direction for each attribute. All attributes from page **schema 2** are listed including multi-valued attributes.
 
-![schema4a](./media/microsoft-identity-manager-2016-connector-genericsql/schema4a.png)
+![schema4a image](./media/microsoft-identity-manager-2016-connector-genericsql/schema4a.png)
 
 * **DataType**: Used to map the attribute type to those types known by the sync engine. The default is to use the same type as detected in the SQL schema, but DateTime and Reference are not easily detectable. For those, you need to specify **DateTime** or **Reference**.
 * **Direction**: You can set the attribute direction to Import, Export, or ImportExport. ImportExport is default.
 
-![schema4b](./media/microsoft-identity-manager-2016-connector-genericsql/schema4b.png)
+![schema4b image](./media/microsoft-identity-manager-2016-connector-genericsql/schema4b.png)
 
 Notes:
 
@@ -144,14 +144,14 @@ Notes:
 ### Schema 5 (Define partition for reference attributes)
 On this page, you configure for all reference attributes which partition (object type) an attribute is referring to.
 
-![schema5](./media/microsoft-identity-manager-2016-connector-genericsql/schema5.png)
+![schema5 image](./media/microsoft-identity-manager-2016-connector-genericsql/schema5.png)
 
 If you use **DN is anchor**, then you must use the same object type as the one you are referring from. You cannot reference another object type.
 
 > [!NOTE]
 > Starting in the March 2017 update there is now an option for "*" When this option is chosen then all possible member types will be imported.
 
-![globalparameters3](./media/microsoft-identity-manager-2016-connector-genericsql/any-option.png)
+![globalparameters3 image](./media/microsoft-identity-manager-2016-connector-genericsql/any-option.png)
 
 > [!IMPORTANT]
 >  As of May 2017 the “\*” aka **any option** has been changed to support import and export flow. If you want to use this option your multi-valued table/view should have an attribute that contains the object type.
@@ -162,14 +162,14 @@ If you use **DN is anchor**, then you must use the same object type as the one y
 
 After import you will see something similar to the image below:
 
-  ![globalparameters3](./media/microsoft-identity-manager-2016-connector-genericsql/after-import.png)
+  ![globalparameters3 image](./media/microsoft-identity-manager-2016-connector-genericsql/after-import.png)
 
 
 
 ### Global Parameters
 The Global Parameters page is used to configure Delta Import, Date/Time format, and Password method.
 
-![globalparameters1](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters1.png)
+![globalparameters1 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters1.png)
 
 
 
@@ -191,33 +191,33 @@ The Connector always stores date and date-time in UTC format. To be able to corr
 
 During export every date time attribute must be provided to the Connector in UTC time format.
 
-![globalparameters2](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters2.png)
+![globalparameters2 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters2.png)
 
 **Password Configuration**: The connector provides password synchronization capabilities and supports set and change password.
 
 The Connector provides two methods to support password synchronization:
 
 * **Stored Procedure**: This method requires two stored procedures to support Set & Change password. Type all parameters for add and change the password operation in **Set Password SP** and **Change Password SP** Parameters respectively as per below example.
-  ![globalparameters3](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters3.png)
+  ![globalparameters3 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters3.png)
 * **Password Extension**: This method requires Password extension DLL (you need to provide the Extension DLL Name that is implementing the [IMAExtensible2Password](https://msdn.microsoft.com/library/microsoft.metadirectoryservices.imaextensible2password.aspx) interface). Password extension assembly must be placed in extension folder so that the connector can load the DLL at runtime.
-  ![globalparameters4](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters4.png)
+  ![globalparameters4 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters4.png)
 
 You also have to enable the Password Management on the **Configure Extension** page.
-![globalparameters5](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters5.png)
+![globalparameters5 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters5.png)
 
 ### Configure Partitions and Hierarchies
 On the partitions and hierarchies page, select all object types. Each object type is its own partition.
 
-![partitions1](./media/microsoft-identity-manager-2016-connector-genericsql/partitions1.png)
+![partitions1 image](./media/microsoft-identity-manager-2016-connector-genericsql/partitions1.png)
 
 You can also override the values defined on the **Connectivity** or **Global Parameters** page.
 
-![partitions2](./media/microsoft-identity-manager-2016-connector-genericsql/partitions2.png)
+![partitions2 image](./media/microsoft-identity-manager-2016-connector-genericsql/partitions2.png)
 
 ### Configure Anchors
 This page is read-only since the anchor has already been defined. The selected anchor attribute is always appended with the object type to ensure it remains unique across object types.
 
-![anchors](./media/microsoft-identity-manager-2016-connector-genericsql/anchors.png)
+![anchors image](./media/microsoft-identity-manager-2016-connector-genericsql/anchors.png)
 
 ## Configure Run Step Parameter
 These steps are configured on the run profiles on the Connector. These configurations do the actual work of importing and exporting data.
@@ -230,7 +230,7 @@ Generic SQL Connector support Full and Delta Import using these methods:
 * Stored Procedure
 * SQL Query
 
-![runstep1](./media/microsoft-identity-manager-2016-connector-genericsql/runstep1.png)
+![runstep1 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep1.png)
 
 **Table/View**  
 To import multi-valued attributes for an object, you have to provide the table/view name in **Name of Multi-Valued table/views** and respective join conditions in the **Join condition** with the parent table. If there are more than one multi-valued table in the data source, you can  use union to a single view.
@@ -245,10 +245,10 @@ Do the following:
 * Type **Employee** in **Table/View/SP**.
 * Type Department in **Name of Multi-Valued table/views**.
 * Type the join condition between Employee & Department in **Join Condition**, for example `Employee.DEPTID=Department.DepartmentID`.
-  ![runstep2](./media/microsoft-identity-manager-2016-connector-genericsql/runstep2.png)
+  ![runstep2 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep2.png)
 
 **Stored procedures**  
-![runstep3](./media/microsoft-identity-manager-2016-connector-genericsql/runstep3.png)
+![runstep3 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep3.png)
 
 * If you have much data, it is recommended to implement pagination with your Stored Procedures.
 * For your Stored Procedure to support pagination, you need to provide Start Index and End Index. See: [Efficiently Paging Through Large Amounts of Data](https://msdn.microsoft.com/library/bb445504.aspx).
@@ -258,15 +258,15 @@ Do the following:
 * Generic SQL Connector supports only those objects that have similar structure (both alias name and data type) between run steps information and schema detection. If the selected object from schema and provided information at run step is different, then SQL Connector is unable to support this type of scenarios.
 
 **SQL Query**  
-![runstep4](./media/microsoft-identity-manager-2016-connector-genericsql/runstep4.png)
+![runstep4 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep4.png)
 
-![runstep5](./media/microsoft-identity-manager-2016-connector-genericsql/runstep5.png)
+![runstep5 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep5.png)
 
 * Multiple result sets queries not supported.
 * SQL query supports the pagination and provide start Index and End Index as a variable to support pagination.
 
 ### Delta Import
-![runstep6](./media/microsoft-identity-manager-2016-connector-genericsql/runstep6.png)
+![runstep6 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep6.png)
 
 Delta Import configuration requires some more configuration compared with Full Import.
 
@@ -277,7 +277,7 @@ Delta Import configuration requires some more configuration compared with Full I
 * The **change Type attribute** column is required for the change type. This column maps a change that occurs in the primary table or multi-value table to a change type in the delta view. This column can contain the Modify_Attribute change type for attribute-level change or an Add, Modify, or Delete change type for an object-level change type. If it is something other than the default value Add, Modify, or Delete, then you can define those values using this option.
 
 ### Export
-![runstep7](./media/microsoft-identity-manager-2016-connector-genericsql/runstep7.png)
+![runstep7 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep7.png)
 
 Generic SQL Connector support Export using four supported methods such as:
 
@@ -290,7 +290,7 @@ Generic SQL Connector support Export using four supported methods such as:
 If you choose the Table/View option, then the connector generates the respective queries to do the Export.
 
 **Stored procedures**  
-![runstep8](./media/microsoft-identity-manager-2016-connector-genericsql/runstep8.png)
+![runstep8 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep8.png)
 
 If you choose the Stored Procedure option, Export requires three different Stored procedures to perform Insert/Update/Delete operations.
 
@@ -301,7 +301,7 @@ If you choose the Stored Procedure option, Export requires three different Store
 * To run parameterized stored procedure, provide parameters in `[Name]:[Direction]:[Value]` format. Enter each parameter on a separate line (Use Ctrl + Enter to get a new line).
 
 **SQL query**  
-![runstep9](./media/microsoft-identity-manager-2016-connector-genericsql/runstep9.png)
+![runstep9 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep9.png)
 
 If you choose the SQL query option, Export requires three different queries to perform Insert/Update/Delete operations.
 
