@@ -81,7 +81,7 @@ The database should support one of these authentication methods:
 
 * **Windows authentication**: The authenticating database uses the Windows credentials to verify the user. The user name/password specified is used to authenticate with the database. This account needs permissions to the database.
 * **SQL authentication**: The authenticating database uses the user name/password defined one the Connectivity screen to connect to the database. If you store the user name/pasword in the DSN file, the credentials provided on the Connectivity screen have precedence.
-* **Azure SQL Database authentication**: For more information, see [Connect to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure).
+* **Azure SQL Database authentication**: For more information, see [Connect to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication-configure).
 
 **DN is Anchor**: If you select this option, the DN is also used as the anchor attribute. It can be used for a simple implementation but also has the following limitation:
 
@@ -156,13 +156,13 @@ If you use **DN is anchor**, then you must use the same object type as the one y
 > [!IMPORTANT]
 >  As of May 2017 the “\*” aka **any option** has been changed to support import and export flow. If you want to use this option your multi-valued table/view should have an attribute that contains the object type.
 
-![](./media/microsoft-identity-manager-2016-connector-genericsql/any-02.png)
+![multivalued any option before image](./media/microsoft-identity-manager-2016-connector-genericsql/any-02.png)
 
- </br> If "*" is selected then the name of the column with the object type must also be specified.</br> ![](./media/microsoft-identity-manager-2016-connector-genericsql/any-03.png)
+ </br> If "*" is selected then the name of the column with the object type must also be specified.</br> ![multivalued any option after image](./media/microsoft-identity-manager-2016-connector-genericsql/any-03.png)
 
 After import you will see something similar to the image below:
 
-  ![globalparameters3 image](./media/microsoft-identity-manager-2016-connector-genericsql/after-import.png)
+  ![globalparameters31 image](./media/microsoft-identity-manager-2016-connector-genericsql/after-import.png)
 
 
 
@@ -198,7 +198,7 @@ During export every date time attribute must be provided to the Connector in UTC
 The Connector provides two methods to support password synchronization:
 
 * **Stored Procedure**: This method requires two stored procedures to support Set & Change password. Type all parameters for add and change the password operation in **Set Password SP** and **Change Password SP** Parameters respectively as per below example.
-  ![globalparameters3 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters3.png)
+  ![globalparameters32 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters3.png)
 * **Password Extension**: This method requires Password extension DLL (you need to provide the Extension DLL Name that is implementing the [IMAExtensible2Password](https://msdn.microsoft.com/library/microsoft.metadirectoryservices.imaextensible2password.aspx) interface). Password extension assembly must be placed in extension folder so that the connector can load the DLL at runtime.
   ![globalparameters4 image](./media/microsoft-identity-manager-2016-connector-genericsql/globalparameters4.png)
 
