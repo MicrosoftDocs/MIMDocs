@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.date: 04/02/2018
+ms.date: 09/03/2021
 ms.author: billmath
 
 ---
@@ -41,7 +41,7 @@ From a high-level perspective, the following features are supported by the curre
 | Schema |<li>Dynamic discovery of objects and attributes</li> |
 
 > [!NOTE]
-> *Connections to data sources not listed above are currently limited to read-only scenarios.
+> *Connections to data sources not listed above are currently limited to query-based import and export strategies.
 
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
