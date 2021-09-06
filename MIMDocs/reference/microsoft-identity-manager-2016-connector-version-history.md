@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 9/3/2021
+ms.date: 9/6/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -42,7 +42,7 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
-## 1.1.1609.0 (September 2021)
+## 1.1.1610.0 (September 2021)
 ### Enhancements
 - PowerShell Connector
    - Added a timeout value in connector properties to stop long-running scripts and prevent connector freezes
