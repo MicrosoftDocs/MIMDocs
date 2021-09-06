@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 8/6/2021
+ms.date: 9/3/2021
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -34,13 +34,28 @@ This topic lists all versions of the generic connectors package that have been r
 Related links:
 
 * [Download Latest Connectors](https://go.microsoft.com/fwlink/?LinkId=717495)
-* [Graph Connector](~/microsoft-identity-manager-2016-connector-graph.md) reference documentation
+* [Graph Connector](../microsoft-identity-manager-2016-connector-graph.md) reference documentation
 * [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation
 * [Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation
-* [Web Services Connector](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) reference documentation
+* [Web Services Connector](microsoft-identity-manager-2016-ma-ws.md) reference documentation
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
+
+## 1.1.1609.0 (September 2021)
+### Enhancements
+- PowerShell Connector
+   - Added a timeout value in connector properties to stop long-running scripts and prevent connector freezes
+- Generic SQL Connector
+  - Added support for query-based export strategies for [additional types of data sources](microsoft-identity-manager-2016-connector-genericsql.md), e.g. PostgreSQL
+
+### Fixed issues
+- Lotus Notes Connector
+   - Fixed an issue with non-printable characters left after deletion of multi-valued string attributes
+- Generic LDAP Connector
+   - Fixed an issue with Kerberos authentication by enabling 3-part SPN authentication for LDAP connections
+   - Fixed an issue with a drop-down menu that enables hashing of OpenLDAP passwords
+   - Improved LDAP schema classes processing, inherited classes are now processed when parent class is in scope
 
 ## August 2021
 ### Updates
@@ -490,7 +505,7 @@ The Forefront Identity Manager Connector for SharePoint User Profile Store helps
 
 More information on this connector can be found at the 
 [hotfix rollup](https://support.microsoft.com/en-us/help/3156030/hotfix-rollup-build-4-3-2201-0-is-available-for-forefront-identity-man)
-and instructions on how to [Use a sample MIM solution in SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server-2016).
+and instructions on how to [Use a sample MIM solution in SharePoint Server 2016](/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server-2016).
 
 ### Forefront Identity Manager Connector for Windows Azure Active Directory (deprecated connector)
 
