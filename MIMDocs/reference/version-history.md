@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 06/24/2021
+ms.date: 09/29/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -34,6 +34,16 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >The version history for Microsoft BHOLD Suite components can be found at [BHOLD modules version release history](version-bhold-history.md).
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).
+
+## MIM Version 4.6.530.0
+
+- Status: September 29, 2021
+- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=103467)
+- [KB article 5004861](https://support.microsoft.com/help/5004861)
+
+This hotfix contains updates for the MIM Synchronization Service, MIM Service and MIM PAM components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
+
+The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
 
 ## MIM Version 4.6.421.0
 
