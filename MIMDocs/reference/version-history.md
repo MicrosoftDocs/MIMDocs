@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 09/29/2021
+ms.date: 09/30/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -44,6 +44,9 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 This hotfix contains updates for the MIM Synchronization Service, MIM Service and MIM PAM components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
 
 The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
+
+> [!IMPORTANT]
+>MIM Service hotfix fails to install when Group-Managed Service Account (gMSA) is used. To work around this issue, update the following registry key value to replace with "None" before running the update: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service\MailServerType*. After the update is successfully installed, change back to the original value. 
 
 ## MIM Version 4.6.421.0
 
