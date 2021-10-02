@@ -46,7 +46,7 @@ This hotfix contains updates for the MIM Synchronization Service, MIM Service an
 The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
 
 > [!IMPORTANT]
->This hotfix mail fail to update MIM Service version 4.6.421.0 when Group-Managed Service Account (gMSA) is used. To work around this issue, update the following registry key value to replace with "None" before running the update: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service\MailServerType*. After the update is successfully installed, change back to the original value. 
+>This hotfix may fail to update MIM Service version 4.6.421.0 when Group-Managed Service Account (gMSA) is used. To work around this issue, update the following registry key value to replace with "None" before running the update: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service\MailServerType*. After the update is successfully installed, change back to the original value. 
 
 ## MIM Version 4.6.421.0
 
