@@ -96,6 +96,8 @@ Before you use the Connector, make sure you have the following on the synchroniz
 
 * Microsoft .NET 4.5.2 Framework or later
 
+Deploying this connector may require changes to the configuration of the directory server as well as configuration changes to MIM.  For deployments involving integrating MIM with a third party directory server in a production environment, we recommend customers work with their directory server vendor, or a deployment partner for help, guidance and support for this integration.
+
 ### Detecting the LDAP server
 The Connector relies upon various techniques to detect and identify the LDAP server. The Connector uses the Root DSE, vendor name/version, and it inspects the schema to find unique objects and attributes known to exist in certain LDAP servers. This data, if found, is used to pre-populate the configuration options in the Connector.
 
@@ -134,7 +136,7 @@ ShowDeletedControl is only used with the USNChanged delta import method to be ab
 The connector tries to detect the options present on the server. If the options cannot be detected, a warning is present on the Global page in the connector properties. Not all LDAP servers present all controls/features they support and even if this warning is present, the connector might work without issues.
 
 ### Delta import
-Delta import is only available when a support directory has been detected. The following methods are currently used:
+Delta import is only available when a directory that supports it has been detected. The following methods are currently used:
 
 * LDAP Accesslog. See [http://www.openldap.org/doc/admin24/overlays.html#Access Logging](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
 * LDAP Changelog. See [http://tools.ietf.org/html/draft-good-ldap-changelog-04](http://tools.ietf.org/html/draft-good-ldap-changelog-04)

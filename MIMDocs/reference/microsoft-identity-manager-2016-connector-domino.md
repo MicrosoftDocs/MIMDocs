@@ -47,6 +47,8 @@ Before you use the Connector, make sure you have the following prerequisites on 
 * The Lotus Notes client must be installed on your synchronization server
 * The Lotus Domino Connector requires the default Lotus Domino LDAP schema database (schema.nsf) to be present on the Domino Directory server. If it is not present, you can install it by running or restarting the LDAP service on the Domino server.
 
+Deploying this connector may require customization of your Lotus Domino server.  For deployments involving integrating MIM with Domino in a production environment, we recommend customers work with a deployment partner for help, guidance and support for this integration.
+
 ### Connected Data Source permissions
 To perform any of the supported tasks in Lotus Domino connector, you must be a member of following groups:
 
