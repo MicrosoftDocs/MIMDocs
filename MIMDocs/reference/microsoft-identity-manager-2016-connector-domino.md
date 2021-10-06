@@ -189,7 +189,7 @@ In a large Domino implementation, it is possible that multiple objects have the 
 If the option **Use AdminP for updating references** is unselected, then export of reference attributes, such as member, is a direct call and does not use the AdminP process. Only use this option when AdminP has not been configured to maintain referential integrity.
 
 #### Routing Information
-In Domino, it is possible that a reference attribute has routing information embedded as a suffix to the DN. For example, the member attribute in a group could contain <strong>CN=example/organization@ABC</strong>. The suffix @ABC is the routing information. The routing information is used by Domino to send emails to the correct Domino system, which could be a system in a different organization. In the Routing Information field, you can specify the routing suffixes used within the organization in scope of the Connector. If one of these values is found as a suffix in a reference attribute, the routing information is removed from the reference. If the routing suffix on a reference value cannot be matched to one of those values specified, a \_Contact object is created. These \_Contact objects are created with ``RO=@<RoutingSuffix>`` inserted into the DN. For these \_Contact objects the following attributes are also added to allow joining to a real object if necessary: \_routingName, \_contactName, \_displayName, and UniversalID.
+In Domino, it is possible that a reference attribute has routing information embedded as a suffix to the DN. For example, the member attribute in a group could contain <strong>CN=example/organization@ABC</strong>. The suffix @ABC is the routing information. The routing information is used by Domino to send emails to the correct Domino system, which could be a system in a different organization. In the Routing Information field, you can specify the routing suffixes used within the organization in scope of the Connector. If one of these values is found as a suffix in a reference attribute, the routing information is removed from the reference. If the routing suffix on a reference value cannot be matched to one of those values specified, a \_Contact object is created. These \_Contact objects are created with **RO=@\<RoutingSuffix\>** inserted into the DN. For these \_Contact objects the following attributes are also added to allow joining to a real object if necessary: \_routingName, \_contactName, \_displayName, and UniversalID.
 
 #### Additional address books
 If you do not have **directory assistance** installed, which provides the name of secondary address books, then you can manually enter these address books.
@@ -245,14 +245,14 @@ Example: The Assistant attribute of a person object has the following values:
 
 The most recent update to this attribute is **David Alexander**. Because the Import operation option is set to Multivalued to Single Value, connector only imports **David Alexander** into the connector space.
 
-The logic to convert multi-valued attributes into single-valued attributes does not apply to the group member attribute and to the person fullname attribute.
+The logic to convert multi-valued attributes into single-valued attributes does not apply to the group member attribute and to the person **fullname** attribute.
 
-It also possible to configure import and export transformation rules for multivalued attributes per attribute, as an exception to the global rule. To configure this option, enter [objecttype].[attributename] in the **import exclusion attribute list** and **export exclusion attribute list** text boxes. For example, if you enter Person.Assistant and the global flag is set to import all values, only the first value is imported for the assistant.
+It also possible to configure import and export transformation rules for multivalued attributes per attribute, as an exception to the global rule. To configure this option, enter **[objecttype].[attributename]** in the **import exclusion attribute list** and **export exclusion attribute list** text boxes. For example, if you enter Person.Assistant and the global flag is set to import all values, only the first value is imported for the assistant.
 
 #### Certifiers
 All Organization/Organizational Units are listed by the connector. To be able to export person objects to the primary address book, a certifier with its password is required.
 
-If all certifiers have the same password, the **Password for all Certifers** can be used. Then you can enter the password here and only specify the certifier file.
+If all certifiers have the same password, the **Password for all Certifiers** can be used. Then you can enter the password here and only specify the certifier file.
 
 If you only import, then you do not have to specify any certifiers.
 
@@ -376,7 +376,7 @@ The following table lists these properties and provides a description of them.
 | \_MMS_AltFullNameLanguage |The language to be used for specifying the alternate full name of user. |
 | \_MMS_CertDaysToExpire |The number of days from the current date before the certificate expires. If not specified, the default date is two years from the current date. |
 | \_MMS_Certifier |Property that contains the organizational hierarchy name of the certifier. For Example: OU=OrganizationUnit,O=Org,C=Country. |
-| \_MMS_IDPath |If the property is empty, no user identification file is created locally on the Sync Server. If the property contains a file name, a user ID file is created in the madata folder. The property can also contain a full path. |
+| \_MMS_IDPath |If the property is empty, no user identification file is created locally on the Sync Server. If the property contains a file name, a user ID file is created in the ``madata`` folder. The property can also contain a full path. |
 | \_MMS_IDRegType |Persons can be classified as contacts, US Users, and international Users. The following table lists the possible values: <li>0 - Contact</li><li>1 - U.S. user</li><li>2 - International user</li> |
 | \_MMS_IDStoreType |Required property for U.S. and international users. The property contains an integer value that specifies whether the user identification is stored as an attachment in the Notes address book or in the person’s mail file. If the User ID file is an attachment in the address book, it can optionally be created as a file with \_MMS_IDPath. <li>Empty - Store ID file in ID Vault, No identification file (used for Contacts).</li><li> 1 - Attachment in the Notes address book. The \_MMS_Password property must be set for user identification files that are attachments</li><li>2 - Store ID in person’s Mail File. The \_MMS_UseAdminP must be set to false to let the mail file be created during the Person registration. The \_MMS_Password property must be set for user identification files.</li> |
 | \_MMS_MailQuotaSizeLimit |The number of megabytes that are allowed for the e-mail file database. |
