@@ -51,7 +51,7 @@ Before you use the Connector, make sure you have the following on the synchroniz
 * If you are using the connector to communicate with Oracle 12c, this requires Oracle Instant Client 12.2.0.1 or newer with the ODBC package.
 * If you are using the connector to communicate with Oracle 18c, this requires Oracle Instant Client 18.3.0.0 or newer with ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters.
 
-Deploying this connector may require changes to the configuration of the database as well as configuration changes to MIM.  For deployments involving integrating MIM with a third party database server in a production environment, we recommend customers work with their database vendor, or a deployment partner for help, guidance and support for this integration.
+Deploying this connector may require changes to the configuration of the database as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party database server in a production environment, we recommend customers work with their database vendor, or a deployment partner for help, guidance, and support for this integration.
 
 ### Permissions in connected data source
 To create or perform any of the supported tasks in Generic SQL connector, you must have:

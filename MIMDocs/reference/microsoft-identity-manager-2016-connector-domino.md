@@ -47,7 +47,7 @@ Before you use the Connector, make sure you have the following prerequisites on 
 * The Lotus Notes client must be installed on your synchronization server
 * The Lotus Domino Connector requires the default Lotus Domino LDAP schema database (schema.nsf) to be present on the Domino Directory server. If it is not present, you can install it by running or restarting the LDAP service on the Domino server.
 
-Deploying this connector may require customization of your Lotus Domino server.  For deployments involving integrating MIM with Domino in a production environment, we recommend customers work with a deployment partner for help, guidance and support for this integration.
+Deploying this connector may require customization of your Lotus Domino server.  For deployments involving integrating MIM with Domino in a production environment, we recommend customers work with a deployment partner for help, guidance, and support for this integration.
 
 ### Connected Data Source permissions
 To perform any of the supported tasks in Lotus Domino connector, you must be a member of following groups:
@@ -128,7 +128,7 @@ The provided UserID file is stored in the configuration database of the synchron
 For **Delta Import** you have these options:
 
 * **None**. The Connector does not do any delta imports.
-* **Add/Update**. The Connector does delta import add and update operations. For delete, a **Full Import** operation is required. This operation is using the .Net interop.
+* **Add/Update**. The Connector does delta import add and update operations. For delete, a **Full Import** operation is required. This operation is using the .NET interop.
 * **Add/Update/Delete**. The Connector does delta import add, update, and delete operations. This operation is using the native C++ interfaces.
 
 In **Schema Options** you have the following options:
@@ -245,9 +245,9 @@ Example: The Assistant attribute of a person object has the following values:
 
 The most recent update to this attribute is **David Alexander**. Because the Import operation option is set to Multivalued to Single Value, connector only imports **David Alexander** into the connector space.
 
-The logic to convert multi-valued attributes into single-valued attributes does not apply to the group member attribute and to the person **fullname** attribute.
+The logic to convert multi-valued attributes into single-valued attributes does not apply to the group member attribute and to the person ``fullname`` attribute.
 
-It also possible to configure import and export transformation rules for multivalued attributes per attribute, as an exception to the global rule. To configure this option, enter **[objecttype].[attributename]** in the **import exclusion attribute list** and **export exclusion attribute list** text boxes. For example, if you enter Person.Assistant and the global flag is set to import all values, only the first value is imported for the assistant.
+It also possible to configure import and export transformation rules for multivalued attributes per attribute, as an exception to the global rule. To configure this option, enter ``[objecttype].[attributename]`` in the **import exclusion attribute list** and **export exclusion attribute list** text boxes. For example, if you enter Person.Assistant and the global flag is set to import all values, only the first value is imported for the assistant.
 
 #### Certifiers
 All Organization/Organizational Units are listed by the connector. To be able to export person objects to the primary address book, a certifier with its password is required.

@@ -24,7 +24,7 @@ When MIM Synchronization Service invokes the Web Service connector, it loads its
 
 ### Prerequisites
 
-Deploying this connector may require changes to the configuration of the target system as well as configuration changes to MIM.  For deployments involving integrating MIM with a third party system in a production environment, we recommend customers work with their directory server vendor, or a deployment partner for help, guidance and support for this integration.
+Deploying this connector may require changes to the configuration of the target system as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party system in a production environment, we recommend customers work with their directory server vendor, or a deployment partner for help, guidance, and support for this integration.
 
 ## Web Service layers
 

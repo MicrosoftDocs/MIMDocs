@@ -96,7 +96,7 @@ Before you use the Connector, make sure you have the following on the synchroniz
 
 * Microsoft .NET 4.5.2 Framework or later
 
-Deploying this connector may require changes to the configuration of the directory server as well as configuration changes to MIM.  For deployments involving integrating MIM with a third party directory server in a production environment, we recommend customers work with their directory server vendor, or a deployment partner for help, guidance and support for this integration.
+Deploying this connector may require changes to the configuration of the directory server as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party directory server in a production environment, we recommend customers work with their directory server vendor, or a deployment partner for help, guidance, and support for this integration.
 
 ### Detecting the LDAP server
 The Connector relies upon various techniques to detect and identify the LDAP server. The Connector uses the Root DSE, vendor name/version, and it inspects the schema to find unique objects and attributes known to exist in certain LDAP servers. This data, if found, is used to pre-populate the configuration options in the Connector.
