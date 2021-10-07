@@ -47,6 +47,8 @@ Before you use the Connector, make sure you have the following prerequisites on 
 * The Lotus Notes client must be installed on your synchronization server
 * The Lotus Domino Connector requires the default Lotus Domino LDAP schema database (schema.nsf) to be present on the Domino Directory server. If it is not present, you can install it by running or restarting the LDAP service on the Domino server.
 
+Deploying this connector may require customization of your Lotus Domino server.  For deployments involving integrating MIM with Domino in a production environment, we recommend customers work with a deployment partner for help, guidance, and support for this integration.
+
 ### Connected Data Source permissions
 To perform any of the supported tasks in Lotus Domino connector, you must be a member of following groups:
 
@@ -97,22 +99,22 @@ The following operations are not supported by the current release of the Lotus D
 Lotus Notes must be installed on the server **before** the Connector is installed.
 
 When you install, make sure you do a **Single User Install**. The default **Multi-User Install** does not work.  
-![Notes1](./media/microsoft-identity-manager-2016-connector-domino/notes1.png)
+![screenshot of IBM Notes install wizard installation path selection](./media/microsoft-identity-manager-2016-connector-domino/notes1.png)
 
 On the features page, install only the required Lotus Notes features and **Client Single Logon**. Single Logon is required for the connector to be able to log on to the Domino server.  
-![Notes2](./media/microsoft-identity-manager-2016-connector-domino/notes2.png)
+![screenshot of IBM Notes install wizard custom setup](./media/microsoft-identity-manager-2016-connector-domino/notes2.png)
 
 **Note:** Start Lotus Notes once with a user that is located on the same server as the account you use as the connector’s service account. Also make sure to close the Lotus Notes client on the server. It cannot be running at the same time the Connector tries to connect to the Domino server.
 
 ### Create Connector
 To Create a Lotus Domino connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Lotus Domino (Microsoft)** Connector.  
-![CreateConnector](./media/microsoft-identity-manager-2016-connector-domino/createconnector.png)
+![screenshot of MIM Sync Create Connector](./media/microsoft-identity-manager-2016-connector-domino/createconnector.png)
 
 If your version of synchronization service offers the ability to configure **Architecture**, make sure the connector is set to its default value to run in **Process**.
 
 ### Connectivity
 On the Connectivity page, you must specify the Lotus Domino server name and enter the logon credentials.  
-![Connectivity](./media/microsoft-identity-manager-2016-connector-domino/connectivity.png)
+![screenshot of MIM Sync Notes connector Connectivity page](./media/microsoft-identity-manager-2016-connector-domino/connectivity.png)
 
 The Domino Server property supports two formats for the server name:
 
@@ -126,7 +128,7 @@ The provided UserID file is stored in the configuration database of the synchron
 For **Delta Import** you have these options:
 
 * **None**. The Connector does not do any delta imports.
-* **Add/Update**. The Connector does delta import add and update operations. For delete, a **Full Import** operation is required. This operation is using the .Net interop.
+* **Add/Update**. The Connector does delta import add and update operations. For delete, a **Full Import** operation is required. This operation is using the .NET interop.
 * **Add/Update/Delete**. The Connector does delta import add, update, and delete operations. This operation is using the native C++ interfaces.
 
 In **Schema Options** you have the following options:
@@ -138,7 +140,7 @@ When you click Next, the UserID and password configuration parameters are verifi
 
 ### Global Parameters
 On the Global Parameters page, you configure the time zone and the import and export operation option.  
-![Global Parameters](./media/microsoft-identity-manager-2016-connector-domino/globalparameters.png)
+![screenshot of MIM Sync Notes connector Global Parameters page](./media/microsoft-identity-manager-2016-connector-domino/globalparameters.png)
 
 The **Domino Server Time Zone** parameter defines the location of your Domino Server.
 
@@ -147,7 +149,7 @@ This configuration option is required to support **delta import** operations bec
 > [!Note]
 > Starting in the March 2017 update the Global parameters screen includes the option to delete the user's mail database during the user's deletion.
 
-![Delete user's mailbox](./media/microsoft-identity-manager-2016-connector-domino/AdminP.png)
+![screenshot of MIM Sync Notes connector Global Parameters page setting to Delete user's mailbox](./media/microsoft-identity-manager-2016-connector-domino/AdminP.png)
 
 #### Import settings, method
 The **Perform Full Import By** has these options:
@@ -187,7 +189,7 @@ In a large Domino implementation, it is possible that multiple objects have the 
 If the option **Use AdminP for updating references** is unselected, then export of reference attributes, such as member, is a direct call and does not use the AdminP process. Only use this option when AdminP has not been configured to maintain referential integrity.
 
 #### Routing Information
-In Domino, it is possible that a reference attribute has routing information embedded as a suffix to the DN. For example, the member attribute in a group could contain <strong>CN=example/organization@ABC</strong>. The suffix @ABC is the routing information. The routing information is used by Domino to send emails to the correct Domino system, which could be a system in a different organization. In the Routing Information field, you can specify the routing suffixes used within the organization in scope of the Connector. If one of these values is found as a suffix in a reference attribute, the routing information is removed from the reference. If the routing suffix on a reference value cannot be matched to one of those values specified, a \_Contact object is created. These \_Contact objects are created with **RO=@<RoutingSuffix>** inserted into the DN. For these \_Contact objects the following attributes are also added to allow joining to a real object if necessary: \_routingName, \_contactName, \_displayName, and UniversalID.
+In Domino, it is possible that a reference attribute has routing information embedded as a suffix to the DN. For example, the member attribute in a group could contain <strong>CN=example/organization@ABC</strong>. The suffix @ABC is the routing information. The routing information is used by Domino to send emails to the correct Domino system, which could be a system in a different organization. In the Routing Information field, you can specify the routing suffixes used within the organization in scope of the Connector. If one of these values is found as a suffix in a reference attribute, the routing information is removed from the reference. If the routing suffix on a reference value cannot be matched to one of those values specified, a \_Contact object is created. These \_Contact objects are created with **RO=@\<RoutingSuffix\>** inserted into the DN. For these \_Contact objects the following attributes are also added to allow joining to a real object if necessary: \_routingName, \_contactName, \_displayName, and UniversalID.
 
 #### Additional address books
 If you do not have **directory assistance** installed, which provides the name of secondary address books, then you can manually enter these address books.
@@ -243,29 +245,29 @@ Example: The Assistant attribute of a person object has the following values:
 
 The most recent update to this attribute is **David Alexander**. Because the Import operation option is set to Multivalued to Single Value, connector only imports **David Alexander** into the connector space.
 
-The logic to convert multi-valued attributes into single-valued attributes does not apply to the group member attribute and to the person fullname attribute.
+The logic to convert multi-valued attributes into single-valued attributes does not apply to the group member attribute and to the person ``fullname`` attribute.
 
-It also possible to configure import and export transformation rules for multivalued attributes per attribute, as an exception to the global rule. To configure this option, enter [objecttype].[attributename] in the **import exclusion attribute list** and **export exclusion attribute list** text boxes. For example, if you enter Person.Assistant and the global flag is set to import all values, only the first value is imported for the assistant.
+It also possible to configure import and export transformation rules for multivalued attributes per attribute, as an exception to the global rule. To configure this option, enter ``[objecttype].[attributename]`` in the **import exclusion attribute list** and **export exclusion attribute list** text boxes. For example, if you enter Person.Assistant and the global flag is set to import all values, only the first value is imported for the assistant.
 
 #### Certifiers
 All Organization/Organizational Units are listed by the connector. To be able to export person objects to the primary address book, a certifier with its password is required.
 
-If all certifiers have the same password, the **Password for all Certifers** can be used. Then you can enter the password here and only specify the certifier file.
+If all certifiers have the same password, the **Password for all Certifiers** can be used. Then you can enter the password here and only specify the certifier file.
 
 If you only import, then you do not have to specify any certifiers.
 
 ### Configure Provisioning Hierarchy
 When you configure the Lotus Domino connector, skip this dialog page. The Lotus Domino connector does not support hierarchy provisioning.  
-![Provisioning hierarchy](./media/microsoft-identity-manager-2016-connector-domino/provisioninghierarchy.png)
+![screenshot of MIM Sync Notes connector Provisioning hierarchy page](./media/microsoft-identity-manager-2016-connector-domino/provisioninghierarchy.png)
 
 ### Configure Partitions and Hierarchies
 When you configure partitions and hierarchies, you must select the primary address book called NAB=names.nsf. In addition to the primary address book, you can select secondary address books if they exist.  
-![Partitions](./media/microsoft-identity-manager-2016-connector-domino/partitions.png)
+![screenshot of MIM Sync Notes connector Partitions page](./media/microsoft-identity-manager-2016-connector-domino/partitions.png)
 
 ### Select Attributes
 When you configure your attributes, you must select all attributes that are prefixed with **\_MMS\_**. These attributes are required when you provision new objects to Lotus Domino
 
-![Attributes](./media/microsoft-identity-manager-2016-connector-domino/attributes.png)
+![screenshot of MIM Sync Notes connector Attributes page](./media/microsoft-identity-manager-2016-connector-domino/attributes.png)
 
 ## Object Lifecycle Management
 This section provides an overview of the different objects in Domino.
@@ -374,7 +376,7 @@ The following table lists these properties and provides a description of them.
 | \_MMS_AltFullNameLanguage |The language to be used for specifying the alternate full name of user. |
 | \_MMS_CertDaysToExpire |The number of days from the current date before the certificate expires. If not specified, the default date is two years from the current date. |
 | \_MMS_Certifier |Property that contains the organizational hierarchy name of the certifier. For Example: OU=OrganizationUnit,O=Org,C=Country. |
-| \_MMS_IDPath |If the property is empty, no user identification file is created locally on the Sync Server. If the property contains a file name, a user ID file is created in the madata folder. The property can also contain a full path. |
+| \_MMS_IDPath |If the property is empty, no user identification file is created locally on the Sync Server. If the property contains a file name, a user ID file is created in the ``madata`` folder. The property can also contain a full path. |
 | \_MMS_IDRegType |Persons can be classified as contacts, US Users, and international Users. The following table lists the possible values: <li>0 - Contact</li><li>1 - U.S. user</li><li>2 - International user</li> |
 | \_MMS_IDStoreType |Required property for U.S. and international users. The property contains an integer value that specifies whether the user identification is stored as an attachment in the Notes address book or in the person’s mail file. If the User ID file is an attachment in the address book, it can optionally be created as a file with \_MMS_IDPath. <li>Empty - Store ID file in ID Vault, No identification file (used for Contacts).</li><li> 1 - Attachment in the Notes address book. The \_MMS_Password property must be set for user identification files that are attachments</li><li>2 - Store ID in person’s Mail File. The \_MMS_UseAdminP must be set to false to let the mail file be created during the Person registration. The \_MMS_Password property must be set for user identification files.</li> |
 | \_MMS_MailQuotaSizeLimit |The number of megabytes that are allowed for the e-mail file database. |

@@ -20,7 +20,11 @@ The Web Service connector integrates identities through Web Service operations w
 
 When MIM Synchronization Service invokes the Web Service connector, it loads its configured project file (**WsConfig** file). This file helps it recognize the data source’s Endpoint that should be used to establish a connection. The file also tells it the workflow to execute in order to implement a MIM operation. To execute the configured workflows, the web service connector leverages the .NET 4 Workflow Foundation run time engine.
 
-![Workflow](media/microsoft-identity-manager-2016-ma-ws/workflow.png)
+![Configuration of workflow with the web services configuration tool](media/microsoft-identity-manager-2016-ma-ws/workflow.png)
+
+### Prerequisites
+
+Deploying this connector may require changes to the configuration of the target system as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party system in a production environment, we recommend customers work with their directory server vendor, or a deployment partner for help, guidance, and support for this integration.
 
 ## Web Service layers
 
@@ -60,7 +64,7 @@ The Web Service Configuration Tool generates the necessary resources needed to c
 
 - REST assembly: While parsing sample request-response for REST Web Service, the configuration tool will generate types (classes), which will be used in workflow to communicate with web service via Web Service Call activity. Each Request/Response will be defined in its own namespace. The namespace has a syntax as \<ServiceName\>.\<ResourceName\>.\<MethodName\>.[Request/Response]. Wrapping each request/response in separate namespace will help to reduce issues due to duplicate type(class) name.
 
-![Workflow](media/microsoft-identity-manager-2016-ma-ws/workflow2.png)
+![Workflow creation of a .wsconfig file by the web services configuration tool for use by the web services management agent](media/microsoft-identity-manager-2016-ma-ws/workflow2.png)
 
 ### Project file type
 
