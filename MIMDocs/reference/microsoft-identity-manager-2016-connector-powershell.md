@@ -52,7 +52,7 @@ To Create a PowerShell connector, in **Synchronization Service** select **Manage
 ### Connectivity
 Supply configuration parameters for connecting to a remote system. These values are securely stored by the Synchronization Service and made available to your Windows PowerShell scripts when the connector is run.
 
-![Connectivity](./media/microsoft-identity-manager-2016-connector-powershell/connectivity.png)
+![MIM Sync connector configuration Connectivity page](./media/microsoft-identity-manager-2016-connector-powershell/connectivity.png)
 
 You can configure the following Connectivity parameters:
 
@@ -120,7 +120,7 @@ To access custom configuration settings from a script, you must suffix the name 
 ### Capabilities
 The capabilities tab of the Management Agent Designer defines the behavior and functionality of the connector. The selections made on this tab cannot be modified when the connector has been created. This table lists the capability settings.
 
-![Capabilities](./media/microsoft-identity-manager-2016-connector-powershell/capabilities.png)
+![MIM Sync connector configuration Capabilities tab](./media/microsoft-identity-manager-2016-connector-powershell/capabilities.png)
 
 | Capability | Description |
 | --- | --- |

@@ -151,12 +151,12 @@ The following LDAP features are not supported:
 ## Create a new Connector
 To Create a Generic LDAP connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Generic LDAP (Microsoft)** Connector.
 
-![CreateConnector](./media/microsoft-identity-manager-2016-connector-genericldap/createconnector.png)
+![MIM Sync UI to Create a new Connector](./media/microsoft-identity-manager-2016-connector-genericldap/createconnector.png)
 
 ### Connectivity
 On the Connectivity page, you must specify the Host, Port, and Binding information. Depending on which Binding is selected, additional information might be supplied in the following sections.
 
-![Connectivity](./media/microsoft-identity-manager-2016-connector-genericldap/connectivity.png)
+![MIM Sync connector configuration Connectivity page](./media/microsoft-identity-manager-2016-connector-genericldap/connectivity.png)
 
 * The Connection Timeout setting is only used for the first connection to the server when detecting the schema.
 * If Binding is Anonymous, then neither username / password nor certificate are used.
@@ -169,7 +169,7 @@ The **attribute aliases** text box is used for attributes defined in the schema 
 
 The following is an example for how this configuration could look like:
 
-![Connectivity](./media/microsoft-identity-manager-2016-connector-genericldap/connectivityattributes.png)
+![MIM Sync connector configuration Connectivity page with attributes](./media/microsoft-identity-manager-2016-connector-genericldap/connectivityattributes.png)
 
 Select the **include operational attributes in schema** checkbox to also include attributes created by the server. These include attributes such as when the object was created and last update time.
 
@@ -178,7 +178,7 @@ Select **Include extensible attributes in schema** if extensible objects (RFC451
 ### Global Parameters
 On the Global Parameters page, you configure the DN to the delta change log and additional LDAP features. The page is pre-populated with the information provided by the LDAP server.
 
-![Connectivity](./media/microsoft-identity-manager-2016-connector-genericldap/globalparameters.png)
+![MIM Sync connector configuration global parameters page](./media/microsoft-identity-manager-2016-connector-genericldap/globalparameters.png)
 
 The top section shows information provided by the server itself, such as the name of the server. The Connector also verifies that the mandatory controls are present in the Root DSE. If these controls are not listed, a warning is presented. Some LDAP directories do not list all features in the Root DSE and it is possible that the Connector works without issues even if a warning is present.
 
@@ -223,7 +223,7 @@ By configuring provisioning hierarchy, you can configure the Connector to automa
 ### Configure Partitions and Hierarchies
 On the partitions and hierarchies page, select all namespaces with objects you plan to import and export.
 
-![Partitions](./media/microsoft-identity-manager-2016-connector-genericldap/partitions.png)
+![MIM Sync connector configuration Partitions page](./media/microsoft-identity-manager-2016-connector-genericldap/partitions.png)
 
 For each namespace, it is also possible to configure connectivity settings that would override the values specified on the Connectivity screen. If these values are left to their default blank value, the information from the Connectivity screen is used.
 
@@ -237,9 +237,9 @@ When performing a search this is done across all containers in the partition. In
 ![Search only selected containers](./media/microsoft-identity-manager-2016-connector-genericldap/partitions-only-selected-containers.png)
 
 ### Configure Anchors
-This page does always have a preconfigured value and cannot be changed. If the server vendor has been identified, then the anchor might be populated with an immutable attribute, for example the GUID for an object. If it has not been detected or is known to not have an immutable attribute, then the connector uses dn (distinguished name) as the anchor.
+This page always have a preconfigured value and cannot be changed. If the server vendor has been identified, then the anchor might be populated with an immutable attribute, for example the GUID for an object. If it has not been detected or is known to not have an immutable attribute, then the connector uses dn (distinguished name) as the anchor.
 
-![anchors](./media/microsoft-identity-manager-2016-connector-genericldap/anchors.png)
+![MIM Sync connector configuration anchors page](./media/microsoft-identity-manager-2016-connector-genericldap/anchors.png)
 
 
 The following is a list of LDAP servers and the anchor being used:
