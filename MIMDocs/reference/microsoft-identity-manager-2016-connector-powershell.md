@@ -38,6 +38,8 @@ Before you use the Connector, make sure you have the following on the synchroniz
 The execution policy on the Synchronization Service server must be configured to allow the connector to run Windows PowerShell scripts. Unless the scripts the connector runs are digitally signed, configure the execution policy by running this command:  
 `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`
 
+Deploying this connector will require one or more PowerShell scripts.  Some Microsoft products may provide scripts for use with this connector, and the support statement for those scripts would be provided by that product.  If you are developing your own scripts for use with this connector, you will need to have familiarity with the [Extensible Connectivity Management Agent API](https://msdn.microsoft.com/library/windows/desktop/hh859557.aspx) to develop and maintain those scripts.  If you are integrating with third party systems using your own scripts in a production environment, we recommend you work with the third party vendor or a deployment partner for help, guidance and support for this integration.
+
 ## Create a new Connector
 To create a Windows PowerShell connector in the synchronization service, you must provide a series of Windows PowerShell scripts that execute the steps requested by the synchronization service. Depending on the data source you connect to and the functionality you require, the scripts you must implement varies. This section outlines each of the scripts that can be implemented and when they are required.
 
@@ -50,7 +52,7 @@ To Create a PowerShell connector, in **Synchronization Service** select **Manage
 ### Connectivity
 Supply configuration parameters for connecting to a remote system. These values are securely stored by the Synchronization Service and made available to your Windows PowerShell scripts when the connector is run.
 
-![Connectivity](./media/microsoft-identity-manager-2016-connector-powershell/connectivity.png)
+![MIM Sync connector configuration Connectivity page](./media/microsoft-identity-manager-2016-connector-powershell/connectivity.png)
 
 You can configure the following Connectivity parameters:
 
@@ -118,7 +120,7 @@ To access custom configuration settings from a script, you must suffix the name 
 ### Capabilities
 The capabilities tab of the Management Agent Designer defines the behavior and functionality of the connector. The selections made on this tab cannot be modified when the connector has been created. This table lists the capability settings.
 
-![Capabilities](./media/microsoft-identity-manager-2016-connector-powershell/capabilities.png)
+![MIM Sync connector configuration Capabilities tab](./media/microsoft-identity-manager-2016-connector-powershell/capabilities.png)
 
 | Capability | Description |
 | --- | --- |
