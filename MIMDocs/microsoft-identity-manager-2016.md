@@ -49,7 +49,7 @@ For Azure AD Premium customers, standard support continues to be available for c
 ### Recent software releases
 
 - [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP), last updated March 2021
-- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated March 2021
+- [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated October 2021
 - [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated September 2021
 - [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated October 2018
 
