@@ -58,7 +58,7 @@ The following MIM components do not support running as gMSA accounts:
 More information about gMSA can be found in these articles:
 -   [Group Managed Service Accounts Overview](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
--   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps)
+-   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2019-ps)
 
 -   [Create the Key Distribution Services KDS Root Key](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx)
 
