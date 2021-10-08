@@ -41,7 +41,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=103467)
 - [KB article 5004861](https://support.microsoft.com/help/5004861)
 
-This hotfix contains updates for the MIM Synchronization Service, MIM Service and MIM PAM components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2. It also fixes an installer issue found in 4.6.530.0 build.
+This hotfix contains updates for the MIM Synchronization Service, MIM Service and MIM PAM components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2. It also fixes a MIM Service installer issue found in 4.6.530.0 build.
 
 The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
 
