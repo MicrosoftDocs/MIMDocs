@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 09/30/2021
+ms.date: 10/08/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -35,18 +35,19 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).
 
-## MIM Version 4.6.530.0
+## MIM Version 4.6.531.0
 
-- Status: September 29, 2021
+- Status: October 08, 2021
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=103467)
 - [KB article 5004861](https://support.microsoft.com/help/5004861)
 
-This hotfix contains updates for the MIM Synchronization Service, MIM Service and MIM PAM components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
+This hotfix contains updates for the MIM Synchronization Service, MIM Service and MIM PAM components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2. It also fixes a MIM Service installer issue found in 4.6.530.0 build.
 
 The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
 
-> [!IMPORTANT]
->This hotfix may fail to update MIM Service version 4.6.421.0 when Group-Managed Service Account (gMSA) is used. To work around this issue, update the following registry key value to replace with "None" before running the update: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service\MailServerType*. After the update is successfully installed, change back to the original value. 
+## MIM Version 4.6.530.0
+
+Superseded by 4.6.531.0
 
 ## MIM Version 4.6.421.0
 
