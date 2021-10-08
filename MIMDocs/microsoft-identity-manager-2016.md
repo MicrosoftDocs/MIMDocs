@@ -9,7 +9,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 9/3/2021
+ms.date: 10/8/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
