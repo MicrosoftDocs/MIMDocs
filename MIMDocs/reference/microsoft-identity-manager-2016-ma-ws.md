@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 11/27/2017
+ms.date: 10/08/2021
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
