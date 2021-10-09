@@ -16,7 +16,7 @@ ms.assetid:
 
 # Overview of the generic Web Service connector
 
-The Web Service connector integrates identities through Web Service operations with Microsoft Identity Manager (MIM) 2016 SP1. The connector requires the Web Service Project file to connect with the correct data source. This project can be downloaded from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=235883) along with [documentation](https://www.microsoft.com/en-us/download/details.aspx?id=29943) for using the connector with Oracle eBusiness, Oracle PeopleSoft and SAP. You can also create it by using the Web Service Configuration Tool.
+The Web Service connector integrates identities through Web Service operations with Microsoft Identity Manager (MIM) 2016 SP1. The connector requires the Web Service Project file to connect with the correct data source. This project can be downloaded from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=717495) along with [documentation](https://www.microsoft.com/en-us/download/details.aspx?id=29943) for using the connector with Oracle eBusiness, Oracle PeopleSoft and SAP. You can also create it by using the Web Service Configuration Tool.
 
 When MIM Synchronization Service invokes the Web Service connector, it loads its configured project file (**WsConfig** file). This file helps it recognize the data source’s Endpoint that should be used to establish a connection. The file also tells it the workflow to execute in order to implement a MIM operation. To execute the configured workflows, the web service connector leverages the .NET 4 Workflow Foundation run time engine.
 
