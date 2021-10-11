@@ -37,7 +37,7 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
 - For background and general reference information about setting up your environment, see: 
 
     -   [Group Managed Service Accounts overview](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)  
-    -   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps)  
+    -   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2019-ps)
 
 - Before you begin, [create the Key Distribution Services root key](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx) on your Windows domain controller. Keep in mind the following information:  
 

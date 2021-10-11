@@ -286,10 +286,10 @@ The person object represents users in Organization and Organization Units. In ad
 
 Persons (except contacts) can further be grouped into US Users and International Users as defined by the value of the \_MMS\_IDRegType property. These people use the Notes Client to access Lotus Domino servers, have a Notes Id, and a Person document. If they are using Notes mail, then they also have a mail file. The user must be registered to become active. For more information, see:
 
-* [Setting up Notes users](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_SETTING_UP_NOTES_USERS.html)
-* [User Registration](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_REGISTERING_USERS.html)
-* [Managing users](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_MANAGING_USERS_5151.html)
-* [Renaming users](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_RENAMING_A_LOTUS_INOTES_USER_STEPS.html)
+* Setting up Notes users, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_SETTING_UP_NOTES_USERS.html`
+* User Registration, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_REGISTERING_USERS.html`
+* Managing users, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_MANAGING_USERS_5151.html`
+* Renaming users, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_RENAMING_A_LOTUS_INOTES_USER_STEPS.html`
 
 All these operations are performed in Lotus Domino and then imported into the synchronization service.
 
@@ -313,10 +313,10 @@ The Resource Reservation database contains three types of documents:
 * Resource
 * Reservation
 
-For more information on setting up of Resource Reservation database, see [Setting up the Resource Reservations database](https://www-01.ibm.com/support/knowledgecenter/SSKTMJ_8.0.1/com.ibm.help.domino.admin.doc/DOC/H_SETTING_UP_THE_RESOURCE_RESERVATIONS_DATABASE.html).
+For more information on setting up of Resource Reservation database, see Setting up the Resource Reservations database, previously at `https://www-01.ibm.com/support/knowledgecenter/SSKTMJ_8.0.1/com.ibm.help.domino.admin.doc/DOC/H_SETTING_UP_THE_RESOURCE_RESERVATIONS_DATABASE.html`.
 
 **Create, Update, and Delete Resources**  
-The Create, Update, and Delete operations are performed by the Lotus Domino connector in the Resource Reservation database. Resources are created as documents in Names.nsf (that is, the primary address book). For more information about editing and deleting Resources, see [Editing and deleting Resource documents](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_EDITING_AND_DELETING_RESOURCE_DOCUMENTS.html).
+The Create, Update, and Delete operations are performed by the Lotus Domino connector in the Resource Reservation database. Resources are created as documents in Names.nsf (that is, the primary address book). For more information about editing and deleting Resources, see Editing and deleting Resource documents, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_EDITING_AND_DELETING_RESOURCE_DOCUMENTS.html`.
 
 **Import and Export operation for Resources**  
 The Resources can be imported to and exported from the synchronization service, like any other object type. Select the object type as Resource during configuration. For successful export operation, you should have details for Resource type, Conference Database, and Site name.
@@ -328,18 +328,18 @@ If there is a need for a separate mailbox with its own e-mail address that can b
 
 For a list of the required attributes, see the section called [Mandatory Attributes](#mandatory-attributes) later in this article.
 
-When a database is designed to receive a mail, a Mail-In Database document is created in Lotus Domino. This document must exist in Domino Directory of every server that stores a copy of the database. For a detailed description about creating a mail-in database document, see [Creating a Mail-In Database document](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_A_MAILIN_DATABASE_DOCUMENT_FOR_A_NEW_DATABASE_OVERVIEW.html).
+When a database is designed to receive a mail, a Mail-In Database document is created in Lotus Domino. This document must exist in Domino Directory of every server that stores a copy of the database. For a detailed description about creating a mail-in database document, see Creating a Mail-In Database document, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_A_MAILIN_DATABASE_DOCUMENT_FOR_A_NEW_DATABASE_OVERVIEW.html`.
 
 Before creating a Mail-In Database, the database should already exist (should have been created by Lotus Admin) at the Domino server.
 
 ### Group Management
 You can get a detailed overview of the Lotus Domino group management from the following resources:
 
-* [Using groups](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_USING_GROUPS_OVER.html)
-* [Creating a group](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_AND_MODIFYING_GROUPS_STEPS_MIDTOPIC_55038956829238418.html)
-* [Creating and modifying groups](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_AND_MODIFYING_GROUPS_STEPS.html)
-* [Managing groups](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_MANAGING_GROUPS_1804.html)
-* [Renaming a group](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_RENAMING_A_GROUP_STEPS.html)
+* Using groups, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_USING_GROUPS_OVER.html`
+* Creating a group, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_AND_MODIFYING_GROUPS_STEPS_MIDTOPIC_55038956829238418.html`
+* Creating and modifying groups, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_AND_MODIFYING_GROUPS_STEPS.html`
+* Managing groups, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_MANAGING_GROUPS_1804.html`
+* Renaming a group, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_RENAMING_A_GROUP_STEPS.html`
 
 ### Password Management
 For a registered Lotus Domino user, there are two types of passwords:
@@ -359,8 +359,8 @@ The Lotus Domino connector support following operations on Internet password:
 
 For more information, see:
 
-* [Using the Internet lockout feature](http://www.ibm.com/developerworks/lotus/library/domino8-lockout/)
-* [Managing Internet passwords](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_NOTES_AND_INTERNET_PASSWORD_SYNCHRONIZATION_7570_OVER.html)
+* [Using the Internet lockout feature](https://help.hcltechsw.com/domino/9.0.1/admin/admin/conf_securinginternetpasswords_t.html)
+* Managing Internet passwords, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_NOTES_AND_INTERNET_PASSWORD_SYNCHRONIZATION_7570_OVER.html`
 
 ## Reference Information
 This section lists such as attribute descriptions and attribute requirements for the Lotus Domino connector.
@@ -426,14 +426,14 @@ To be able to detect the schema, it is necessary that the schema.nsf file is pre
 * Force a restart of the LDAP server. Open **Lotus Domino Console** and use **Tell LDAP ReloadSchema** command to reload the schema.
 
 ### Not all secondary address books are visible
-The Domino Connector relies on the feature **Directory Assistance** to be able to find the secondary address books. If the secondary address books are missing, verify if [Directory Assistance](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_ABOUT_DIRECTORY_ASSISTANCE.html) has been enabled and configured on the Domino Server.
+The Domino Connector relies on the feature **Directory Assistance** to be able to find the secondary address books. If the secondary address books are missing, verify if Directory Assistance, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_ABOUT_DIRECTORY_ASSISTANCE.html` has been enabled and configured on the Domino Server.
 
 ### Custom attributes in Domino
 There are several ways in Domino to extend the schema so it appears as a custom attribute consumable by the Connector.
 
 **Approach 1: Extend Lotus Domino schema**
 
-1. Create a copy of Domino Directory Template {PUBNAMES.NTF} by following [these steps](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_A_COPY_OF_THE_DEFAULT_PUBIC_ADDRESS_BOOK_TEMPLATE.html) (you should not customize the default IBM Lotus Domino directory Template):
+1. Create a copy of Domino Directory Template {PUBNAMES.NTF} by following these steps, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_A_COPY_OF_THE_DEFAULT_PUBIC_ADDRESS_BOOK_TEMPLATE.html` (you should not customize the default IBM Lotus Domino directory Template):
 2. Open the Copy of Domino directory template {CONTOSO.NTF} template that was created in Domino Designer and follow these steps:
    * Click Shared Elements and expand Subforms
    * Double-click ${ObjectName}InheritableSchema subform (where {ObjectName} is the name of the default structural object class, for example: Person).
@@ -441,16 +441,16 @@ There are several ways in Domino to extend the schema so it appears as a custom 
    * In the added field, set its properties by selecting its Type, Style, size, font, and other related parameters on field Properties window.
    * Keep the attribute Default value same as the name given for that attribute (For example, if attribute name is MyPersonAttribute, keep the default value with the same name).
    * Save the ${ObjectName}InheritableSchema subform with updated values.
-3. Replace the Domino Directory Template {PUBNAMES.NTF} with the new customized template {CONTOSO.NTF} by following [these steps](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_ABOUT_RULES_FOR_CUSTOMIZING_THE_PUBLIC_ADDRESS_BOOK.html).
+3. Replace the Domino Directory Template {PUBNAMES.NTF} with the new customized template {CONTOSO.NTF} by following these steps, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_ABOUT_RULES_FOR_CUSTOMIZING_THE_PUBLIC_ADDRESS_BOOK.html`.
 4. Close Domino Admin and open Domino Console to restart the LDAP service and to Reload the LDAP Schema:
-   * In Domino Console, insert the command under **Domino Command** text filed to restart the LDAP service - [Restart Task LDAP](https://www.ibm.com/support/knowledgecenter/SSKTMJ_10.0.1/admin/conf_startingandstoppingtheldapservice_c.html).
+   * In Domino Console, insert the command under **Domino Command** text filed to restart the LDAP service - Restart Task LDAP, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_10.0.1/admin/conf_startingandstoppingtheldapservice_c.html`.
    * To reload LDAP schema use Tell LDAP command - Tell LDAP ReloadSchema
 5. Open Domino Admin and select People & Groups tab to see added attribute is reflected in domino Add Person.
 6. Open Schema.nsf from **Files** tab and see added attribute is reflected into dominoPerson LDAP object class.
 
 **Approach 2: Create an auxClass with custom attribute and associate with the object class**
 
-1. Create a copy of Domino Directory Template {PUBNAMES.NTF} by following [these steps](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_A_COPY_OF_THE_DEFAULT_PUBIC_ADDRESS_BOOK_TEMPLATE.html) (Never customize the default IBM Lotus Domino directory Template):
+1. Create a copy of Domino Directory Template {PUBNAMES.NTF} by following these steps, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_CREATING_A_COPY_OF_THE_DEFAULT_PUBIC_ADDRESS_BOOK_TEMPLATE.html` (Never customize the default IBM Lotus Domino directory Template):
 2. Open the Copy of Domino directory template {CONTOSO.NTF} template that was created, in Domino Designer.
 3. In the left pane, select Shared Code and then Subforms.
 4. Click New Subform
@@ -473,9 +473,9 @@ There are several ways in Domino to extend the schema so it appears as a custom 
      * Click the third tab from the left, and select **Propagate this prohibition of design change**.
 7. Open ${ObjectName}ExtensibleSchema subform, (where {ObjectName} is the name of the default structural object class, for example – Person).
 8. Insert Resource and select the Subform (that you created, for example – TestSubform) and save the ${ObjectName}ExtensibleSchema subform.
-9. Replace the Domino Directory Template {PUBNAMES.NTF} with the new customized template {CONTOSO.NTF} by following [these steps](https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_ABOUT_RULES_FOR_CUSTOMIZING_THE_PUBLIC_ADDRESS_BOOK.html).
+9. Replace the Domino Directory Template {PUBNAMES.NTF} with the new customized template {CONTOSO.NTF} by following these steps, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_8.5.3/com.ibm.help.domino.admin85.doc/H_ABOUT_RULES_FOR_CUSTOMIZING_THE_PUBLIC_ADDRESS_BOOK.html`.
 10. Close Domino Admin and open Domino Console to restart the LDAP service and to Reload the LDAP Schema:
-    * In Domino Console, insert the command under **Domino Command** text filed to restart the LDAP service - [Restart Task LDAP](https://www.ibm.com/support/knowledgecenter/SSKTMJ_10.0.1/admin/conf_startingandstoppingtheldapservice_c.html).
+    * In Domino Console, insert the command under **Domino Command** text filed to restart the LDAP service - Restart Task LDAP, previously at `https://www.ibm.com/support/knowledgecenter/SSKTMJ_10.0.1/admin/conf_startingandstoppingtheldapservice_c.html`.
     * To reload LDAP schema use Tell LDAP command **Tell LDAP ReloadSchema**.
 11. Open Domino Admin and select People & Groups tab to see added attribute is reflected in domino Add Person (under Others tab).
 12. Open Schema.nsf from **Files** tab and see added attribute is reflected under TestSubform LDAP Auxiliary object class.
