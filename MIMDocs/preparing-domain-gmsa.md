@@ -58,7 +58,7 @@ The following MIM components do not support running as gMSA accounts:
 More information about gMSA can be found in these articles:
 -   [Group Managed Service Accounts Overview](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
--   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps)
+-   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2019-ps)
 
 -   [Create the Key Distribution Services KDS Root Key](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx)
 
@@ -141,7 +141,7 @@ If there is already a root key for the domain (use **Get-KdsRootKey** to check),
     *–EffectiveImmediately* may require a delay of up to \~10 hours as it will need to replicate
         to all domain controllers. This delay was approximately 1 hour for two domain controllers.
 
-    ![](media/7fbdf01a847ea0e330feeaf062e30668.png)
+    ![screenshot of powershell command Add-KDSRootKey being run](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
     >[!NOTE]
     >In the Lab or Test environment you can avoid 10 hours replication delay by running the following command instead:
@@ -169,7 +169,7 @@ Ensure that all the computer accounts for computers where MIM software is to be 
 
     Check details of the GSMA created by executing *Get-ADServiceAccount* PowerShell command:
 
-    ![](media/c80b0a7ed11588b3fb93e6977b384be4.png)
+    ![screenshot of PowerShell Get-ADServiceAccount command being run](media/c80b0a7ed11588b3fb93e6977b384be4.png)
 
 9.  If you plan to run Password Change Notification Service, you need to register Service Principal Name by executing this PowerShell command:
 

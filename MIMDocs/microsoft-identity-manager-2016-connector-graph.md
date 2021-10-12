@@ -84,7 +84,7 @@ The connector can be used for other specific identity management scenarios invol
     | Import Group          | `Group.Read.All` or `Group.ReadWrite.All`                                                | Application     |
     | Import User           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All` | Application     |
 
-    More details about required permissions could be found [here](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
+    More details about required permissions could be found in the [permissions reference](https://docs.microsoft.com/graph/permissions-reference).
 
 >[!NOTE]
 >**Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
@@ -265,6 +265,6 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 ## Next steps
 
 - [Graph Explorer, great for troubleshooting HTTP call issues]( https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Versioning, support, and breaking change policies for Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
+- [Versioning, support, and breaking change policies for Microsoft Graph](https://docs.microsoft.com/graph/versioning-and-support)
 - [Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
 [MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
