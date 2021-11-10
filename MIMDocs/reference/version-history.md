@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 10/08/2021
+ms.date: 11/09/2021
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -35,15 +35,23 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).
 
+## MIM Version 4.6.540.0
+
+- Status: November 9, 2021
+- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=103573)
+- [KB article 5007373](https://support.microsoft.com/help/5007373)
+
+This hotfix adds defense against XSS (cross-site scripting) for the MIM Portal, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
+
+The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
+
 ## MIM Version 4.6.531.0
 
-- Status: October 08, 2021
+- Status: October 8, 2021
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=103467)
 - [KB article 5004861](https://support.microsoft.com/help/5004861)
 
 This hotfix contains updates for the MIM Synchronization Service, MIM Service and MIM PAM components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2. It also fixes a MIM Service installer issue found in 4.6.530.0 build.
-
-The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
 
 ## MIM Version 4.6.530.0
 
