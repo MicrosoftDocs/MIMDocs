@@ -22,7 +22,7 @@ This article describes the Lotus Domino Connector. The article applies to the fo
 
 * Microsoft Identity Manager 2016 (MIM2016)
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
-  * Must use hotfix 4.1.3671.0 or later [KB3092178](https://support.microsoft.com/kb/3092178).
+  * Must use hotfix 4.1.3671.0.
 
 For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
