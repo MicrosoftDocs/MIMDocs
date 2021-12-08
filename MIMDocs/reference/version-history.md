@@ -147,7 +147,6 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 >- RCDC form for group objects fails to render when 'displayedOwner' attribute value is not populated. You will not be able to edit/view groups when such an error occurs.<br>
 
 - Availability date: May 10, 2019
-- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
 - [KB article 4489646](https://support.microsoft.com/en-us/help/4489646/hotfix-rollup-4-5-412-0-available-for-mim-2016-sp1)
 
 This hotfix contains updates for MIM Sync, MIM Service, MIM Portal, MIM CM and PAM components.  It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.286.0.

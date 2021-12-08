@@ -457,24 +457,10 @@ Before March 2016, the Connectors were released as support topics.
 
 **Generic LDAP**
 
-* [KB3078617](https://support.microsoft.com/kb/3078617) - 1.0.0597, 2015 September
-* [KB3044896](https://support.microsoft.com/kb/3044896) - 1.0.0549, 2015 March
-* [KB3031009](https://support.microsoft.com/kb/3031009) - 1.0.0534, 2015 January
 * [KB3008177](https://support.microsoft.com/kb/3008177) - 1.0.0419, 2014 September
-* [KB2936070](https://support.microsoft.com/kb/2936070) - 4.3.1082, 2014 March
-
-**WebServices**
-
-* [KB3008178](https://support.microsoft.com/kb/3008178) - 1.0.0419, 2014 September
-
-**PowerShell**
-
-* [KB3008179](https://support.microsoft.com/kb/3008179) - 1.0.0419, 2014 September
 
 **Lotus Domino**
 
-* [KB3096533](https://support.microsoft.com/kb/3096533) - 1.0.0597, 2015 September
-* [KB3044895](https://support.microsoft.com/kb/3044895) - 1.0.0549, 2015 March
 * [KB2977286](https://support.microsoft.com/kb/2977286) - 5.3.0712, 2014 August
 * [KB2932635](https://support.microsoft.com/kb/2932635) - 5.3.1003, 2014 February  
 * [KB2899874](https://support.microsoft.com/kb/2899874) - 5.3.0721, 2013 October
