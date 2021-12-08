@@ -90,7 +90,7 @@ There are a number of ways in which a user can submit a request, including:
 - A REST endpoint
 - Windows PowerShell (`New-PAMRequest`)
 
-Get details about the [Privileged Access Management cmdlets](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam).
+Get details about the [Privileged Access Management cmdlets](/powershell/identitymanager/mimpam/vlatest/mimpam).
 
 ## What workflows and monitoring options are available?
 
@@ -107,5 +107,5 @@ This workflow is specifically intended for these administrative accounts. Admini
 
 ## Next steps
 
-- [Privileged access strategy](https://docs.microsoft.com/security/compass/privileged-access-strategy)
-- [Privileged Access Management cmdlets](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)
+- [Privileged access strategy](/security/compass/privileged-access-strategy)
+- [Privileged Access Management cmdlets](/powershell/identitymanager/mimpam/vlatest/mimpam)
