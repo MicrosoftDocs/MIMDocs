@@ -452,20 +452,6 @@ Initial release of the [Generic SQL Connector](microsoft-identity-manager-2016-c
   * An export which both added and removed member from a group only exported the added members.
   * If a Notes Document is invalid (the attribute isValid set to false), then the Connector fails.
 
-## Older releases
-Before March 2016, the Connectors were released as support topics.
-
-**Generic LDAP**
-
-* [KB3008177](https://support.microsoft.com/kb/3008177) - 1.0.0419, 2014 September
-
-**Lotus Domino**
-
-* [KB2977286](https://support.microsoft.com/kb/2977286) - 5.3.0712, 2014 August
-* [KB2932635](https://support.microsoft.com/kb/2932635) - 5.3.1003, 2014 February  
-* [KB2899874](https://support.microsoft.com/kb/2899874) - 5.3.0721, 2013 October
-* [KB2875551](https://support.microsoft.com/kb/2875551) - 5.3.0534, 2013 August
-
 ## Troubleshooting 
 
 > [!NOTE]
