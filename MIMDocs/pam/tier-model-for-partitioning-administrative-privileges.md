@@ -69,4 +69,4 @@ Logon restrictions can be enforced with:
 ## Next steps
 
 - The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
-- [Securing devices](/security/compass/concept-azure-managed-workstation) provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
+- Securing devices provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.
