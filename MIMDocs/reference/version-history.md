@@ -66,7 +66,7 @@ Superseded by 4.6.531.0
 
 This hotfix contains updates for the MIM Service and MIM Portal components, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
 
-This build introduces Application Context Authentication method to Office 365 mailboxes for the MIM Service component. In order to switch from Basic authentication to Application Context Authentication apply this hotfix first, run a PowerShell script to register an application in Azure AD and reconfigure your MIM Service and Portal using installer's Change mode. Check the [Deployment guide: Installing MIM Service and Portal for Azure AD Premium customers](https://docs.microsoft.com/microsoft-identity-manager/install-mim-service-portal-azure-ad-premium) for details.
+This build introduces Application Context Authentication method to Office 365 mailboxes for the MIM Service component. In order to switch from Basic authentication to Application Context Authentication apply this hotfix first, run a PowerShell script to register an application in Azure AD and reconfigure your MIM Service and Portal using installer's Change mode. Check the [Deployment guide: Installing MIM Service and Portal for Azure AD Premium customers](/microsoft-identity-manager/install-mim-service-portal-azure-ad-premium) for details.
 
 > [!IMPORTANT]
 >The hotfix may fail to update MIM Service when Group-Managed Service Account or Office 365 basic authentication method is used and *PollExchangeEnabled* registry key value is set to *1*. As a workaround, set a registry key *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FIMService\PollExchangeEnabled* to *0* before applying this hotfix. After the hotfix is installed, revert this value back to *1* and restart MIM Service.
@@ -147,7 +147,6 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 >- RCDC form for group objects fails to render when 'displayedOwner' attribute value is not populated. You will not be able to edit/view groups when such an error occurs.<br>
 
 - Availability date: May 10, 2019
-- [Hotfix download](https://www.microsoft.com/en-us/download/details.aspx?id=58213)
 - [KB article 4489646](https://support.microsoft.com/en-us/help/4489646/hotfix-rollup-4-5-412-0-available-for-mim-2016-sp1)
 
 This hotfix contains updates for MIM Sync, MIM Service, MIM Portal, MIM CM and PAM components.  It is a cumulative update that replaces earlier MIM 2016 SP1 updates 4.4.1302.0 through build 4.5.286.0.
@@ -179,7 +178,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
 >- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
->- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- Updated supported locales to new ISO standards ([here](/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
 #### MIM service
@@ -204,7 +203,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 > [!IMPORTANT]
 >- .NET Framework 4.6 is also required for the installer <br>
 >- [Visual C++ 2013 x64 Redistributable Packages (vcresist_x64.exe)](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) is required<br>
->- Updated supported locales to new ISO standards ([here](https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
+>- Updated supported locales to new ISO standards ([here](/microsoft-identity-manager/microsoft-identity-manager-2016-language-support))<br>
 >- *Denotes New Enhancement 
 
 #### Synchronization service
@@ -265,7 +264,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - Portal, popup dialogs aren’t displayed properly when viewing in Internet Explorer (IE) 10
 - Cyrillic symbols in the title bar text is displayed correctly
 - Popup windows no longer have the extra scroll bar displaying, when viewed in Internet Explorer
-- Failed “Import Workflow Definition” properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition
+- Failed “Import Workflow Definition” properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition 
 - <httpRuntime enableVersionHeader="false" /> added to default web.config
 - Special characters in the distinguishedName no longer prevents Self-Service Password Reset from resetting the user’s password in the Active Directory
 - Improvements in the sentences are properly localized in the display
