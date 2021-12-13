@@ -103,7 +103,7 @@ The next step is to configure the workflows for your object type. Workflow files
 - Test Connection: Configure a workflow to check if the connection with data source server is successfully established.
 
 >[!NOTE]
->You can configure these workflows for your project or download the default project from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29944).
+>You can configure these workflows for your project or download the default project from the Microsoft Download Center.
 
 
 ### Workflow Designer
