@@ -85,13 +85,13 @@ ms.suite: ems
 
 13. Specify `http://mim.contoso.com` as the SharePoint site collection URL.
 
-14. Specify `http://passwordregistration.contoso.com` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
+14. If not using Azure AD for password reset, specify `http://passwordregistration.contoso.com` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
 
-15. Specify `http://passwordreset.contoso.com` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
+15. If not using Azure AD for password reset, specify `http://passwordreset.contoso.com` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
 
 16. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to MIM Portal.
 
-## Configure MIM Password Registration Portal
+## Configure MIM Password Registration Portal (optional, if not using Azure AD for SSPR)
 
 1. Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to <em>Pass@word1</em>.
 
@@ -103,7 +103,7 @@ ms.suite: ems
 
 4. In the next MIM Password Registration Portal configuration screen, specify  *mim.contoso.com* as the MIM Service Server Address for the Password Registration Portal.
 
-## Configure MIM Password Reset Portal
+## Configure MIM Password Reset Portal (optional)
 
 1. Set the service account name for SSPR Registration to *Contoso\MIMSSPR* and its password to <em>Pass@word1</em>.
 

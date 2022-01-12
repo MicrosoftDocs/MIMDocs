@@ -389,7 +389,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
     ![SharePoint Timer warning message screen image](media/install-mim-service-portal-azure-ad-premium/sharepoint-timer-warning.png)
 
-1. If installing Self-Service Password Registration website, specify a URL MIM clients will be redirected to after logon. Click **Next**.
+1. If installing Self-Service Password Registration website (not needed if you are using Azure AD for password reset), specify a URL MIM clients will be redirected to after logon. Click **Next**.
 
     ![Self-Service Password Registration URL screen image](media/install-mim-service-portal-azure-ad-premium/registration-portal-url.png)
 
@@ -397,7 +397,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![Firewall configuration screen image](media/install-mim-service-portal-azure-ad-premium/firewall-configuration.png)
 
-1. If installing Self-Service Password Registration website, set the application pool account name and its password, the host name and the port for the website. Enable the *Open port in firewall* option if needed. Click **Next**.
+1. If installing Self-Service Password Registration website (not needed if you are using Azure AD for password reset), set the application pool account name and its password, the host name and the port for the website. Enable the *Open port in firewall* option if needed. Click **Next**.
 
    ![Password registration portal configuration screen image](media/install-mim-service-portal-azure-ad-premium/password-registration-portal-details.png)
 
