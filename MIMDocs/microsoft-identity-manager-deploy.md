@@ -48,7 +48,6 @@ For more information on supported platforms, see [Supported platforms for MIM 20
 - [Windows Server](prepare-server-ws2016.md)
 - [SQL Server](prepare-server-sql2016.md)
 - [SharePoint Server](prepare-server-sharepoint.md)
-- [Exchange Server](prepare-server-exchange.md) (optional)
 
 ## Finally: Install Microsoft Identity Manager 2016 SP2 components
 Once you have set up the domain and server, you're ready to install the MIM components and configure them to sync with AD.

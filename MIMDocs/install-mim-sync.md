@@ -28,7 +28,7 @@ ms.suite: ems
 # Install MIM 2016: MIM Synchronization Service
 
 > [!div class="step-by-step"]
-> [« Exchange Server](prepare-server-exchange.md)
+> > [« SharePoint](prepare-server-sharepoint.md)
 > [MIM Service and Portal »](install-mim-service-portal.md)
  
 > [!NOTE]
@@ -116,5 +116,5 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
     5. You need to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
 
 > [!div class="step-by-step"]  
-> [« Exchange Server](prepare-server-exchange.md)
+> > [« SharePoint](prepare-server-sharepoint.md)
 > [MIM Service and Portal »](install-mim-service-portal.md)
