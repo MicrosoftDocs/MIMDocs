@@ -42,7 +42,7 @@ ms.suite: ems
 
 To install Microsoft Identity Manager 2016 components, first set up the installation package.
 
-1. Sign in as *contoso\miminstall* to the server you are using for identity management syncronization server **corpsync**.
+1. Sign in as *contoso\miminstall* to the server you are using for identity management synchronization server **corpsync**.
 
 2. Unpack the MIM installation package or mount the MIM image DVD.  If you do not have this DVD, see [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md).
 

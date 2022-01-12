@@ -98,7 +98,7 @@ Application context authentication scenario requires you to register an applicat
 
 Unless your MIM Service mailbox is hosted in a national or government cloud, the only parameter you need to pass to the script is MIM Service email, for example, MIMService@contoso.onmicrosoft.com.
 
-From a PowerShell window start Create-MIMMailboxApp.ps1 with -MailboxAccountEmail <email> parameter and provide MIM Service email.
+From a PowerShell window start Create-MIMMailboxApp.ps1 with -MailboxAccountEmail \<email\> parameter and provide MIM Service email.
 
 ```PowerShell
 ./Create-MIMMailboxApp.ps1 -MailboxAccountEmail <MIM Service email>
