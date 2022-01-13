@@ -15,7 +15,6 @@
 ### [Server setup: Windows Server](../prepare-server-ws2016.md)
 ### [Server setup: SQL](../prepare-server-sql2016.md)
 ### [Server setup: SharePoint](../prepare-server-sharepoint.md)
-### [Server setup: Exchange](../prepare-server-exchange.md)
 ### [Install MIM: Synchronization](../install-mim-sync.md)
 ### [Install MIM: Service and Portal](../install-mim-service-portal.md)
 ### [Install MIM: Sync databases](../install-mim-sync-ad-service.md)

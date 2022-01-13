@@ -32,6 +32,8 @@ In Forefront Identity Manager, connectors were known as management agents. That 
 
 This article covers the connectors that are included & supported in MIM, but the connector for Extensible Connectivity 2.0 makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
+This table does not include the software on which MIM itself is deployed; see the [supported platforms](microsoft-identity-manager-2016-supported-platforms.md) list for more information.
+
 ## Supported connectors in MIM 2016 SP2
 
 | Connector name | Supported versions of the connected data source & Technical links |
