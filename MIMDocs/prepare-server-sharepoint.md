@@ -29,7 +29,7 @@ ms.suite: ems
 
 > [!div class="step-by-step"]
 > [« SQL Server](prepare-server-sql2016.md)
-> [Exchange Server »](prepare-server-exchange.md)
+> [MIM Synchronization Service »](install-mim-sync.md)
 > 
 
 > [!NOTE]
@@ -153,4 +153,4 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
 
 > [!div class="step-by-step"]  
 > [« SQL Server](prepare-server-sql2016.md)
-> [Exchange Server »](prepare-server-exchange.md)
+> [MIM Synchronization Service »](install-mim-sync.md)
