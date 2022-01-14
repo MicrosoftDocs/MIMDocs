@@ -32,7 +32,7 @@ For customers, which have not yet deployed Azure AD self-service password reset 
 
 MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download the Azure MFA Software Development Kit (Azure MFA SDK).  That SDK has been deprecated, and existing deployments should move to either using MIM SSPR with Azure MFA Server, a custom MFA provider, or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). This [article](working-with-mfaserver-for-mim.md) describes how to update your deployment MIM self-service password reset portal, using Azure MFAServer for multi-factor authentication.  New deployments should use either a custom MFA provider or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
 
-## Deploying MIM Self-Service Password Reset Portal using a custom provider for Multi-Factor Authentication
+## Deploying MIM Self-Service Password Reset Portal using a custom provider for multi-factor authentication
 
 The following section describes how to deploy MIM self-service password reset portal, using a provider for multi-factor authentication.  These steps are only necessary for customers who are not using Azure AD self-service password reset for their users.
 
@@ -116,7 +116,7 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 2.  The user will be directed to authenticate. If MFA was configured, the user will receive a phone call.
 
-3.  In the background, what’s happening is that the MFA provider then places a phone call to the number the user gave when he signed up for the service.
+3.  In the background, what’s happening is that the MFA provider then places a phone call to the number the user gave when that user signed up for the service.
 
 4.  When a user answers the phone, they may be asked to interact, for example, to press the pound key # on the phone. Then the user clicks **Next** in the portal.
 
@@ -133,16 +133,16 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 1.  Users can open a web browser, navigate to the **Password Reset Portal** and enter their username and click **Next**.
 
-    If MFA was configured, the user will receive a phone call. In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when he signed up for the service.
+    If MFA was configured, the user will receive a phone call. In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when they signed up for the service.
 
-    When a user answers the phone, he will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
+    When a user answers the phone, they will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
 
 2.  If you set up other gates as well, the user will be asked to provide more information in subsequent screens.
 
     > [!NOTE]
     > If the user is impatient and clicks **Next** before pressing the pound key #, authentication fails.
 
-3.  The user will have to choose if he wants to reset his password or unlock his account. If he chooses to unlock his account, the account will be unlocked.
+3.  The user will have to choose if they want to reset his password or unlock his account. If they chooses to unlock his account, the account will be unlocked.
 
     ![MIM Login Assistant Account Unlock image](media/MIM-SSPR-accountUnlock.JPG)
 

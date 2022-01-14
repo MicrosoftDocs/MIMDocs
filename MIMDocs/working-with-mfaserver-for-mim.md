@@ -52,25 +52,25 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/azure/
 ### Step 4: Create your IIS Web Application that will host the SDK
 1. Open IIS Manager
 ![IIS Manager](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG)
-2.  Create new Website call "MIM MFASDK" , link it to an empty directory 
+2.  Create new Website called "MIM MFASDK", and link it to an empty directory.
 ![Adding a website in IIS Manager](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkweb.PNG)
-3. Open Multi-Factor Authentication Console and click on Web Service SDK
+3. Open Multi-Factor Authentication Console and click on Web Service SDK.
 ![MFA Server application, button to install Web Service SDK](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkinstall.PNG)
-4. Once wizards it click through config, Select "MIM MFASDK" and app pool
+4. Once wizard opens, click through config, and select "MIM MFASDK" and app pool.
 
 > [!NOTE] 
-> Wizard will require a admin group to be created. More information can be found on the Azure > > MFA Azure MFA Server documentation.
+> The wizard will require a admin group to be created. More information can be found on the Azure MFA Server documentation.
 
-5. Next we need to import the MIM Service account. Open Multi-Factor Authentication Console and select "Users".
+5. Next, import the MIM Service account. In the console, select "Users".
 
     a. Click on "Import from Active Directory".
     b. Navigate to the service account, such as "contoso\mimservice".
     c. Click "Import" and "Close".
 
    ![importing users from Azure AD in the MFA console](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG)
-6. Edit the MIM Service account to Enable in Multi-Factor Authentication Console.
+6. Edit the MIM Service account to enable it.
 ![Editing a user in the MFA console](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG)
-1. Update the IIS authentication on the "MIM MFASDK" website. First, we will disable the "Anonymous Authentication", then Enable Windows Authentication".
+1. Update the IIS authentication on the "MIM MFASDK" website. First, we will disable the "Anonymous Authentication", then enable Windows Authentication".
 ![Changing authentication in IIS Manager](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG)
 1. Final Step: Add the MIM service account to the "PhoneFactor Admins"
 ![Add a user to an AD group](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)
@@ -103,5 +103,5 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/azure/
 
 -    [Getting started with the Azure MFA Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [What is Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
-- [Use Custom Multi-Factor Authentication API to activate PAM or SSPR](Working-with-custommfaserver-for-mim.md)
+- [Use Custom MFA API to activate PAM or SSPR](Working-with-custommfaserver-for-mim.md)
 - [MIM version release history](./reference/version-history.md)
