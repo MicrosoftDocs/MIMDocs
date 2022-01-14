@@ -13,16 +13,16 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 ---
 # Use Azure Multi-Factor Authentication Server to activate PAM or SSPR
-The following document describes how to setup the Azure MFA server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
+The following document describes how to setup the Azure MFA Server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
 
-> [!IMPORTANT]
-> Due to the deprecation of Azure Multi-Factor Authentication (MFA) Software Development Kit (SDK), customers will not be able to download the Azure MFA SDK anymore.
+The article below outlines the configuration update and steps to enable existing deployments of MIM moving from MIM using the Azure Multi-Factor Authentication (MFA) Software Development Kit (SDK) to MIM using the Azure MFA Server.
 
-The Article below outlines the configuration update and steps to enable moving from Azure MFA SDK to Azure MFA Server.
+> [!NOTE]
+> Microsoft no longer offers Azure MFA Server for new deployments. To use a different MFA provider, see the article on how to [use Custom Multi-Factor Authentication API](Working-with-custommfaserver-for-mim.md).
 
 ## Prerequisites
 
-In order to use Azure Multi-Factor Authentication Server with MIM, you need:
+In order to migrate to use Azure Multi-Factor Authentication Server with MIM, you need:
 
 - Internet access from each MIM Service or MFA Server providing PAM and SSPR, to contact the Azure MFA service
 - An Azure subscription

@@ -14,8 +14,9 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ---
 
 # Using Azure MFA for activation in MIM PAM
+
 > [!IMPORTANT]
-> Previous versions of MIM used the Azure Multi-Factor Authentication (MFA) Software Development Kit (SDK) to integrate with Azure MFA.  Due to the deprecation of Azure MFA SDK, existing and new MIM customers will not be able to download Azure MFA SDK anymore. For information on using Azure MFA Server in place of the Azure MFA SDK, see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md).
+> This article is provided for guidance for existing deployments.  Previous versions of MIM used the Azure Multi-Factor Authentication (MFA) Software Development Kit (SDK) to integrate with Azure MFA.  Due to the deprecation of Azure MFA SDK and Azure MFA Server, customers can no longer download Azure MFA SDK anymore, and new customers cannot download Azure MFA Server. Customers who had previously been using Azure MFA SDK can upgrade from Azure MFA SDK to Azure MFA Server; see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md).  New customers should not deploy Azure MFA Server, and instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.
 
 
 
@@ -44,7 +45,7 @@ In order to use Azure MFA with MIM PAM, you need:
 
 ## Downloading the Azure MFA Service Credentials
 
-Previously, you'd download a ZIP file of the Azure MFA SDK that included the authentication material for MIM to contact Azure MFA. However, as the Azure MFA SDK is no longer available, see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md) For information on using Azure MFA Server instead.
+See [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md) For information on using Azure MFA Server.
 
 
 ## Configuring the MIM Service for Azure MFA

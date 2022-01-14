@@ -30,7 +30,7 @@ For customers, which have not yet deployed Azure AD self-service password reset 
 - The MIM Self-Service Password Reset portal and Windows login screen  let users unlock their accounts without changing their passwords.
 - A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Azure Multi-Factor Authentication (MFA) service.
 
-MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download the Azure Multi-Factor Authentication Software Development Kit (Azure MFA SDK).  That SDK has been deprecated, and customers should move to either using MIM SSPR with Azure MFA Server, or Azure AD self-service password reset. This [article](working-with-mfaserver-for-mim.md) describes how to update your deployment MIM self-service password reset portal and PAM configuration, using Azure Multi-Factor Authentication Server for multi-factor authentication.
+MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download the Azure Multi-Factor Authentication Software Development Kit (Azure MFA SDK).  That SDK has been deprecated, and existing deployments should move to either using MIM SSPR with Azure MFA Server, a custom MFA provider, or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). This [article](working-with-mfaserver-for-mim.md) describes how to update your deployment MIM self-service password reset portal, using Azure Multi-Factor Authentication Server for multi-factor authentication.  New deployments should use either a custom MFA provider or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
 
 ## Deploying MIM Self-Service Password Reset Portal using Azure MFA for Multi-Factor Authentication
 
@@ -69,36 +69,7 @@ This scenario requires you to have MIM CALs for your users as well as subscripti
 ## Prepare MIM to work with multi-factor authentication
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
-
-### Update the configuration file
-
-> [!NOTE]
-> This section was based on the earlier guidance using the ZIP file provided by Azure MFA SDK. Instead, use the guidance in the article on how to [yse Azure Multi-Factor Authentication Server](working-with-mfaserver-for-mim.md).
-
-
-1. Sign into the computer where MIM Service is installed, as the user who installed MIM.
-
-2. Create a new directory folder located below the directory where the MIM Service was installed, such as **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts**.
-
-3. Using Windows Explorer, navigate into the **\pf\certs** folder of the ZIP file downloaded in the previous section, and copy the file **cert_key.p12** to the new directory.
-
-4.  In the SDK zip file, in the folder **\pf**, open the file **pf_auth.cs**.
-
-5.  Find these three parameters: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
-
-    ![pf_auth.cs code image](media/MIM-SSPR-pFile.png)
-
-6.  In **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**, open the file: **MfaSettings**.xml.
-
-7.  Copy the values from the `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` parameters in the pf_aut.cs file into their respective xml elements in the MfaSettings.xml file.
-
-8.  In the SDK zip file, under \pf\certs, extract the file **cert_key.p12** and enter the full path to it in the MfaSettings.xml file into the `<CertFilePath>` xml element.
-
-9. In the `<username>` element enter any username.
-
-10. In the `<DefaultCountryCode>` element enter your default country code. In case phone-numbers are registered for users without a country code, this is the country code they will get. In case a user has an international country code, it has to be included in the registered phone number.
-
-11. Save the MfaSettings.xml file with the same name in the same location.
+ If you are upgrading from the Azure MFA SDK to Azure MFA Server, use the guidance in the article on how to [use Azure Multi-Factor Authentication Server](working-with-mfaserver-for-mim.md) to configure MFA.
 
 #### Configure the Phone gate or the One-Time Password SMS Gate
 

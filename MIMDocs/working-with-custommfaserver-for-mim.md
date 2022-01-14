@@ -17,9 +17,7 @@ ms.prod: microsoft-identity-manager
 
 # Use a custom Multi-Factor Authentication provider via an API during PAM role activation or in SSPR
 
-Customers of Azure AD Premium or Azure MFA can integrate Azure MFA in two MIM scenarios - Privileged Access Management (PAM) role activation, and Self-Service Password Reset (SSPR).
-
-MIM customers have two additional options:
+MIM customers have two options for multi-factor authentication in the SSPR and PAM scenarios:
 
  - Use a custom one-time-password delivery provider, which is applicable only in the MIM SSPR scenario and documented in guide to [Configure Self-Service Password Reset with OTP SMS Gate](https://docs.microsoft.com/previous-versions/mim/hh824692(v=ws.10))
  - Use a custom multi-factor authentication telephony provider. This is applicable in both the MIM SSPR and PAM scenarios, described in this article
