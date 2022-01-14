@@ -65,7 +65,7 @@ User and group migration requires that the existing forest domain controllers be
 
 ### MIM administration
 
-Once users and groups have been migrated, then an administrator can further configure in MIM the role assignments linking users as candidates for activation into roles.  They can also configure the MIM policies for approval and Azure MFA.  
+Once users and groups have been migrated, then an administrator can further configure in MIM the role assignments linking users as candidates for activation into roles.  They can also configure the MIM policies for approval.
 
 MIM administration requires that the MIM and AD components of the bastion environment be online.
 
@@ -73,13 +73,13 @@ MIM administration requires that the MIM and AD components of the bastion enviro
 
 When a user wishes to activate a privileged role, they must authenticate to the bastion environment domain, and submit a request to MIM.  MIM includes SOAP and REST APIs, as well as user interfaces in PowerShell and in a web page.
 
-Privileged role activation requires that the MIM and AD components of the bastion environment be online.  In addition, if MIM is configured to use [Azure MFA for activation](use-azure-mfa-for-activation.md) of the selected role, then Internet access is required to contact the Azure MFA service.
+Privileged role activation requires that the MIM and AD components of the bastion environment be online.  In addition, if MIM had been configured to use [Azure MFA for activation](use-azure-mfa-for-activation.md) of the selected role, then Internet access is required to contact the Azure MFA service.
 
 ### Resource Management
 
 Once a user has been successfully activated into the role, the domain controller can generate a Kerberos ticket for them that is usable by domain controllers in the existing domains, and will recognize the user's new temporary group memberships.
 
-Resource management requires that a domain controller for the resource domain be online, as well as a domain controller in the bastion environment.  Once a user is activated, issuing their Kerberos ticket does not require MIM or SQL to be online in the bastion environment.  (Note that with Windows Server 2012 R2 as the functional level for the bastion environment, MIM is required to be online, to terminate the temporary group membership.)
+Resource management requires that a domain controller for the resource domain be online, as well as a domain controller in the bastion environment.  Once a user is activated, issuing their Kerberos ticket does not require MIM or SQL to be online in the bastion environment. Note that this requires MIM PAM and Windows Server to be using Windows Server 2016 or later as the functional level for the bastion environment, so that AD DS can remove the temporary membership.)
 
 ### Monitoring of users and groups in the existing forest
 
@@ -225,7 +225,7 @@ For high availability, see the Windows Server documents for [Failover Clustering
 For production deployment across multiple servers, you can use Network Load Balancing (NLB) to distribute the processing load.  You should also have a single alias (for instance, A or CNAME records) so that one common name is exposed to the user.
 
 >[!IMPORTANT]
-> If you use a load-balancing technology other than the NLB feature in Windows Server 2012 R2, make sure your solution will redirect one session to the same server and not to a random server.
+> If you use a load-balancing technology other than the NLB feature in Windows Server 2012 R2 or later, make sure your solution will redirect one session to the same server and not to a random server.
 
 In a multi-server MIM deployment, each MIM Service has an external host name, a service name, and a service partition name.  The default value of the service name is the computer's name, and the default value of the external hostname and service partition name are configured during MIM Service installation on the screen that asks for the MIM Service Server address. These three names are stored in file %ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config file as attributes `externalHostName`, `serviceName` and `servicePartitionName` of the `resourceManagementService` configuration node.  
 
@@ -249,4 +249,4 @@ The Privileged Access Management components should be installed on each computer
 
 After recovery from an outage, ensure that the MIM Service is running on at least one server.  Then ensure that the MIM PAM monitoring service is also running on that server, using `net start "PAM Monitoring service"`.
 
-If the bastion environment forest functional level is Windows Server 2012 R2, ensure that the MIM PAM component service is also running on that server, using the command `net start "PAM Component service"`.
+If the bastion environment forest functional level was not at Windows Server 2012 R2, ensure that the MIM PAM component service is also running on that server, using the command `net start "PAM Component service"`.

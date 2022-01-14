@@ -32,17 +32,19 @@ These steps are laid out so that you can start from scratch and build a test env
 
 1. Prepare *CORPDC* server as a domain controller and *CORPWKSTN* as a member workstation.
 
-2. Prepare *PRIVDC* server as a domain controller.
+2. Prepare *PRIVDC* server as a domain controller for a separate domain and forest, *PRIV*.
 
 3.  Prepare *PAMSRV* server in the *PRIV* forest.
 
-4.  Install MIM components on *PAMSRV* and the cmdlets on a *CONTOSO* forest member workstation, and prepare them for Privileged Access Management.
+4.  Install MIM components on *PAMSRV* and prepare them for Privileged Access Management.
 
-5.  Establish trust between *PRIV* and *CONTOSO* forests.
+5.  Install the cmdlets on a *CONTOSO* forest member workstation.
 
-6.  Preparing privileged security groups with access to protected resources and member accounts for Just-in-time Privileged Access Management.
+6.  Establish trust between *PRIV* and *CONTOSO* forests.
 
-7.  Demonstrate requesting, receiving, and making use of privileged elevated access to a protected resource.
+7.  Preparing privileged security groups with access to protected resources and member accounts for Just-in-time Privileged Access Management.
+
+8.  Demonstrate requesting, receiving, and making use of privileged elevated access to a protected resource.
 
 > [!div class="step-by-step"]
 > [Start »](step-1-prepare-corp-domain.md)

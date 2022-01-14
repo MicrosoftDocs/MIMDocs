@@ -45,7 +45,7 @@ The following optional software can be downloaded from GitHub:
 
 ## Required software
 
-- Windows Server 2016
+- Windows Server 2016 or Windows Server 2019
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1, SQL Server 2014, SQL Server 2017 or SQL Server 2019
 
@@ -55,7 +55,7 @@ For each component of PAM, refer to the system requirements of the software prod
 
 For CORPDC (optional):
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx) or earlier
+- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx) or later
 
 For CORPWKSTN:
 
