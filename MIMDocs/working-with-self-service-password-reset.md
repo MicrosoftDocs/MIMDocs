@@ -142,11 +142,11 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
     > [!NOTE]
     > If the user is impatient and clicks **Next** before pressing the pound key #, authentication fails.
 
-3.  The user will have to choose if they want to reset his password or unlock his account. If they chooses to unlock his account, the account will be unlocked.
+3.  The user will have to choose if they want to reset their password or unlock their account. If they chooses to unlock their account, the account will be unlocked.
 
     ![MIM Login Assistant Account Unlock image](media/MIM-SSPR-accountUnlock.JPG)
 
-4.  After successful authentication, the user will be given two options, either to keep his current password or to set a new password.
+4.  After successful authentication, the user will be given two options, either to keep their current password or to set a new password.
 
 5.  ![MIM account unlocked success image](media/MIM-SSPR-account-unlock.JPG)
 
