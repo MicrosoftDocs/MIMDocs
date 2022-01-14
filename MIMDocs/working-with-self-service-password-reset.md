@@ -28,19 +28,15 @@ For existing customers who had previously deployed Forefront Identity Manager (F
 For customers, which have not yet deployed Azure AD self-service password reset for their users, MIM also provides self-service password reset portals.  Compared to FIM, MIM 2016 includes the following changes:
 
 - The MIM Self-Service Password Reset portal and Windows login screen  let users unlock their accounts without changing their passwords.
-- A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Azure Multi-Factor Authentication (MFA) service.
+- A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Azure MFA service.
 
-MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download the Azure Multi-Factor Authentication Software Development Kit (Azure MFA SDK).  That SDK has been deprecated, and existing deployments should move to either using MIM SSPR with Azure MFA Server, a custom MFA provider, or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). This [article](working-with-mfaserver-for-mim.md) describes how to update your deployment MIM self-service password reset portal, using Azure Multi-Factor Authentication Server for multi-factor authentication.  New deployments should use either a custom MFA provider or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
+MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download the Azure MFA Software Development Kit (Azure MFA SDK).  That SDK has been deprecated, and existing deployments should move to either using MIM SSPR with Azure MFA Server, a custom MFA provider, or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). This [article](working-with-mfaserver-for-mim.md) describes how to update your deployment MIM self-service password reset portal, using Azure MFAServer for multi-factor authentication.  New deployments should use either a custom MFA provider or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
 
-## Deploying MIM Self-Service Password Reset Portal using Azure MFA for Multi-Factor Authentication
+## Deploying MIM Self-Service Password Reset Portal using a custom provider for Multi-Factor Authentication
 
-The following section describes how to deploy MIM self-service password reset portal, using Azure MFA for multi-factor authentication.  These steps are only necessary for customers who are not using Azure AD self-service password reset for their users.
+The following section describes how to deploy MIM self-service password reset portal, using a provider for multi-factor authentication.  These steps are only necessary for customers who are not using Azure AD self-service password reset for their users.
 
-Microsoft Azure Multi-Factor Authentication is an authentication service that requires users to verify their sign-in attempts with a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-prem enterprise applications.
-
-Azure MFA provides an additional authentication mechanism that can reinforce existing authentication processes, such as the one carried out by MIM for self-service login assistance.
-
-When using Azure MFA, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
+When using MFA, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
 
 ## Prerequisites to set up self-service account unlock and password reset using MFA
 
@@ -64,12 +60,12 @@ This section assumes that you have downloaded and completed the deployment of th
 
 -   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client is deployed on the server or on a separate client computer.
 
-This scenario requires you to have MIM CALs for your users as well as subscription for Azure MFA.
+If you are using Azure MFA, this scenario requires you to have MIM CALs for your users as well as subscription for Azure MFA.
 
-## Prepare MIM to work with multi-factor authentication
+## Prepare MIM to work with MFA
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
- If you are upgrading from the Azure MFA SDK to Azure MFA Server, use the guidance in the article on how to [use Azure Multi-Factor Authentication Server](working-with-mfaserver-for-mim.md) to configure MFA.
+ If you are upgrading from the Azure MFA SDK to Azure MFA Server, use the guidance in the article on how to [use Azure MFA Server](working-with-mfaserver-for-mim.md) to configure MFA.
 
 #### Configure the Phone gate or the One-Time Password SMS Gate
 
@@ -120,9 +116,9 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 2.  The user will be directed to authenticate. If MFA was configured, the user will receive a phone call.
 
-3.  In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when he signed up for the service.
+3.  In the background, what’s happening is that the MFA provider then places a phone call to the number the user gave when he signed up for the service.
 
-4.  When a user answers the phone, they will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
+4.  When a user answers the phone, they may be asked to interact, for example, to press the pound key # on the phone. Then the user clicks **Next** in the portal.
 
     If you set up other gates as well, the user will be asked to provide more information in subsequent screens.
 

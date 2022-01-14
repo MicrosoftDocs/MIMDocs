@@ -1,6 +1,6 @@
 ---
 
-title: Use an alternate Multi-Factor Authentication provider via an API to activate PAM or in SSPR scenario | Microsoft Docs
+title: Use an alternate multi-Factor authentication provider via an API to activate PAM or in SSPR scenario | Microsoft Docs
 description: Set up Custom MFA API as a second layer of security when your users activate roles in Privileged Access Management and use Self Service Password Reset.
 keywords:
 author: billmath
@@ -15,7 +15,7 @@ ms.prod: microsoft-identity-manager
 
 ---
 
-# Use a custom Multi-Factor Authentication provider via an API during PAM role activation or in SSPR
+# Use a custom multi-factor authentication provider via an API during PAM role activation or in SSPR
 
 MIM customers have two options for multi-factor authentication in the SSPR and PAM scenarios:
 
@@ -26,7 +26,7 @@ This article outlines how to use MIM with a custom multi-factor authentication p
 
 ## Prerequisites
 
-In order to use a custom Multi-Factor Authentication provider API with MIM, you need:
+In order to use a custom multi-factor authentication provider API with MIM, you need:
 
 - Phone numbers for all candidate users
 - MIM hotfix 4.5.202.0 or later - see [version history](reference/version-history.md) for announcements
@@ -153,6 +153,6 @@ After the service has restarted, use SSPR and/or PAM to validate functionality w
 
 ## Next Steps
 
-- [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
-- [What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Getting started with the Azure MFA Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [What is Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [MIM version release history](./reference/version-history.md)

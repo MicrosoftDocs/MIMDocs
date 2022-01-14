@@ -16,7 +16,7 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 # Using Azure MFA for activation in MIM PAM
 
 > [!IMPORTANT]
-> This article is provided for guidance for existing deployments.  Previous versions of MIM used the Azure Multi-Factor Authentication (MFA) Software Development Kit (SDK) to integrate with Azure MFA.  Due to the deprecation of Azure MFA SDK and Azure MFA Server, customers can no longer download Azure MFA SDK anymore, and new customers cannot download Azure MFA Server. Customers who had previously been using Azure MFA SDK can upgrade from Azure MFA SDK to Azure MFA Server; see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md).  New customers should not deploy Azure MFA Server, and instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.
+> This article is provided for guidance for existing deployments.  Previous versions of MIM used the Azure MFA Software Development Kit (SDK) to integrate with Azure MFA.  Due to the deprecation of Azure MFA SDK and Azure MFA Server, customers can no longer download Azure MFA SDK anymore, and new customers cannot download Azure MFA Server. Customers who had previously been using Azure MFA SDK can upgrade from Azure MFA SDK to Azure MFA Server; see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md).  New customers should not deploy Azure MFA Server, and instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.
 
 
 
@@ -24,11 +24,11 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 When configuring a PAM role, you can choose how to authorize users that request to activate the role. The choices that the PAM authorization activity implements are:
 
 - Role owner approval
-- [Azure Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 
 If neither check is enabled, candidate users are automatically activated for their role.
 
-Microsoft Azure Multi-Factor Authentication (MFA) is an authentication service that requires users to verify their sign-in attempts by using a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-premises enterprise applications. For the PAM scenario, Azure MFA provides an additional authentication mechanism. Azure MFA can be used for authorization, regardless of how a user authenticated to the Windows PRIV domain.
+Microsoft Azure MFA is an authentication service that requires users to verify their sign-in attempts by using a mobile app, phone call, or text message.
 
 > [!NOTE]
 > The PAM approach with a bastion environment provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments.  As Azure MFA is an Internet service, this guidance is provided solely for existing MIM PAM customers or those in environments where this configuration is required by regulation. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
@@ -39,7 +39,7 @@ In order to use Azure MFA with MIM PAM, you need:
 
 - Internet access from each MIM Service providing PAM, to contact the Azure MFA service
 - An Azure subscription
-- Azure MFA
+- Azure MFA Server from before July 1, 2019
 - Azure Active Directory Premium licenses for candidate users
 - Phone numbers for all candidate users
 
@@ -111,4 +111,4 @@ The following events can be found in the Privileged Access Management event log:
 
 ## Next Steps
 
-- [What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [What is Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
