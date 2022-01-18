@@ -1,6 +1,6 @@
 ---
 
-title: Use an alternate Multi-Factor Authentication provider via an API to activate PAM or in SSPR scenario | Microsoft Docs
+title: Use an MFA provider via an API to activate PAM or in SSPR scenario | Microsoft Docs
 description: Set up Custom MFA API as a second layer of security when your users activate roles in Privileged Access Management and use Self Service Password Reset.
 keywords:
 author: billmath
@@ -15,11 +15,9 @@ ms.prod: microsoft-identity-manager
 
 ---
 
-# Use a custom Multi-Factor Authentication provider via an API during PAM role activation or in SSPR
+# Use a custom multi-factor authentication provider via an API during PAM role activation or in SSPR
 
-Customers of Azure AD Premium or Azure MFA can integrate Azure MFA in two MIM scenarios - Privileged Access Management (PAM) role activation, and Self-Service Password Reset (SSPR).
-
-MIM customers have two additional options:
+MIM customers have two options for multi-factor authentication in the SSPR and PAM scenarios:
 
  - Use a custom one-time-password delivery provider, which is applicable only in the MIM SSPR scenario and documented in guide to [Configure Self-Service Password Reset with OTP SMS Gate](https://docs.microsoft.com/previous-versions/mim/hh824692(v=ws.10))
  - Use a custom multi-factor authentication telephony provider. This is applicable in both the MIM SSPR and PAM scenarios, described in this article
@@ -28,7 +26,7 @@ This article outlines how to use MIM with a custom multi-factor authentication p
 
 ## Prerequisites
 
-In order to use a custom Multi-Factor Authentication provider API with MIM, you need:
+In order to use a custom multi-factor authentication provider API with MIM, you need:
 
 - Phone numbers for all candidate users
 - MIM hotfix 4.5.202.0 or later - see [version history](reference/version-history.md) for announcements
@@ -155,6 +153,6 @@ After the service has restarted, use SSPR and/or PAM to validate functionality w
 
 ## Next Steps
 
-- [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
-- [What is Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Getting started with the Azure MFA Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [What is Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [MIM version release history](./reference/version-history.md)

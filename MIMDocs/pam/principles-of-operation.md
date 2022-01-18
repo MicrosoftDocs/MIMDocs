@@ -41,7 +41,7 @@ The MIM solution as configured for PAM includes the following components:
 - **MIM Service**: implements business logic for performing identity and access management operations, including privileged account management and elevation request handling.
 - **MIM Portal**: a SharePoint-based portal, hosted by SharePoint 2013 or later, which provides an administrator management and configuration UI.
 - **MIM Service Database**: stored in SQL Server 2012 or later, and holds identity data and meta-data required for MIM Service.
-- **PAM Monitoring Service** and **PAM Component Service**: two services that manage the lifecycle of privileged accounts and assists the PRIV AD in group membership lifecycle.
+- **PAM Monitoring Service** and if needed the **PAM Component Service**: two services that manage the lifecycle of privileged accounts and assists the PRIV AD in group membership lifecycle.
 - **PowerShell cmdlets**: for populating MIM Service and PRIV AD with users and groups that correspond to the users and groups in the CORP forest for PAM administrators, and for end users requesting just-in-time (JIT) use of privileges on an administrative account.
 - **PAM REST API and sample portal**: for developers integrating MIM in the PAM scenario with custom clients for elevation, without needing to use PowerShell or SOAP. The use of the REST API is demonstrated with a sample web application.
 
