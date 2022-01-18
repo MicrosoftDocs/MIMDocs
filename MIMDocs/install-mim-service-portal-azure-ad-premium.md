@@ -143,7 +143,8 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![Azure instance selection screen image](media/install-mim-service-portal-azure-ad-premium/azure-ad-instance-selection.png)
 
-   Organizations, which are not using a national or government cloud should select the global instance, Azure AD.
+   Organizations which are not using a national or government cloud should select the global instance, Azure AD.
+
    ![Azure instance selected screen image](media/install-mim-service-portal-azure-ad-premium/azure-ad-instance-selected.png)
 
 1. After selecting the appropriate cloud, the installer will ask you to authenticate to that tenant. In the popup window, provide Azure AD user credentials of a user in that tenant to validate your tenant subscription level. Type your Azure AD username and click **Next**.
