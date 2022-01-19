@@ -107,7 +107,7 @@ If you want to use PowerShell:
 If you want to use a text editor such as Notepad:
 
 1. Open the file **C:\Windows\System32\inetsrv\config\applicationHost.config**
-2. Scroll down to line 82 of that file. The tag value of **overrideModeDefault** should be **<section name="windowsAuthentication" overrideModeDefault="Deny" />**  
+2. Scroll down to line 82 of that file. The tag value of **overrideModeDefault** should be `<section name="windowsAuthentication" overrideModeDefault="Deny" />`
 3. Change the value of **overrideModeDefault** to *Allow*  
 4. Save the file, and restart IIS with the PowerShell command `iisreset /START`
 

@@ -220,7 +220,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
 
 1. Launch PowerShell.
 
-2. For each domain at the top of each existing forest, type the following command, specifying the existing DNS domain (e.g., contoso.local), and the IP address of the master server of that domain.  
+2. For each domain at the top of each existing forest, type the following command, specifying the existing DNS domain (e.g., contoso.local), and the IP address of the primary DNS server of that domain.  
 
    If you created one domain contoso.local in the previous step, then specify *10.1.1.31* for the CORPDC computer’s virtual network IP address.
 
@@ -332,7 +332,7 @@ If you do not already have a workstation computer that will be joined to the PRI
 
 ### Install Windows 10 Enterprise
 
-On another new virtual machine with no software installed, install Windows Windows 10 Enterprise to make a computer *“PRIVWKSTN”*.
+On another new virtual machine with no software installed, install Windows 10 Enterprise to make a computer *“PRIVWKSTN”*.
 
 1. Use Express settings during installation.
 
