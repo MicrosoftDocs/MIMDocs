@@ -30,7 +30,6 @@ ms.suite: ems
 > [Step 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Log in to the PRIVDC as Administrator
-   * If this PAM deployment is a PRIV-Only environment, login to the CORPDC
 2. Run PowerShell as Administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -39,7 +38,7 @@ ms.suite: ems
 
 The Service Accounts required for managing SQL, SharePoint and MIM are automatically created, if they are not already present in the domain. You will be prompted to enter the passwords for creation of these service accounts during script execution.
 
-If the PRIV domain is Windows Server 2016, with the Functional Level set to Windows Server 2016, the script will prompt for enabling the optional Active Directory ‘Privileged Access Management Feature’ required by PAM. Confirm ‘Yes’ to proceed. For functional levels below Windows Server 2016, dismiss the warning that additional configuration will not be performed. You will need to rerun the PAMDeployment.ps1 and PAM Forest Configuration, once the administrator raises the functional level to Windows Server 2016.
+When deploying, the PRIV domain Functional Level should be set to Windows Server 2016. The script will prompt for enabling the optional Active Directory ‘Privileged Access Management Feature’ required by PAM. Confirm ‘Yes’ to proceed. Do not deploy PAM for functional levels below Windows Server 2016, as you will need to rerun the PAMDeployment.ps1 and PAM Forest Configuration, once the administrator raises the functional level to Windows Server 2016.
 
 >[!NOTE]
 >The following steps are not required for PRIVOnly configurations

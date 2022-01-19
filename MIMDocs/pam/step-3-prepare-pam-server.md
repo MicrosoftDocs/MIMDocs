@@ -123,9 +123,9 @@ If SQL Server is not in the bastion environment already, install either SQL Serv
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
 
-## Install SharePoint Server 2016 or 2019
+## Install SharePoint Server 2016 or 2019 (only required for MIM Portal)
 
-Use the guide for the [Preparing Sharepoint](/microsoft-identity-manager/prepare-server-sharepoint) to install SharePoint Server 2016 or 2019.
+Use the guide for [Preparing Sharepoint](/microsoft-identity-manager/prepare-server-sharepoint) to install SharePoint Server 2016 or 2019.
 
 ## Change update settings
 

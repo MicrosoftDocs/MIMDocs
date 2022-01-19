@@ -29,7 +29,8 @@ ms.suite: ems
 > [« Step 3](sp1-step3-installing-configuring-sql.md)
 > [Step 5 »](sp1-step5-configuring-pam.md)
 
-SharePoint must be SharePoint Foundation 2013 with SP1.
+When using the script, SharePoint must be SharePoint Foundation 2013 with SP1.  If you wish to deploy MIM Portal on a later version of SharePoint, instead follow the steps for [Preparing Sharepoint](/microsoft-identity-manager/prepare-server-sharepoint) to install SharePoint Server 2016 or 2019.
+
 
 For domain joined servers, login as MIMAdmin
 

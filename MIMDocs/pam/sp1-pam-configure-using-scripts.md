@@ -39,9 +39,8 @@ steps:
 4. In the Roles section, update the **service account**, **machine details**, and the **location of the installation binaries** for SQL, SharePoint and MIM roles.
     1. The MIM binary location must point to the directory containing the “Service and Portal” folder. The Client binary location must point to the directory containing the “Add-ins and Extensions.msi”.
 
-5. If this is a PRIVOnly environment, the PRIVOnly tag must be set to True.
+5. If this is a PRIVOnly environment, in which there is no CORP forest, then the PRIVOnly tag must be set to True.
     1. For PRIVOnly environments, update the **DNSName** and **NetbiosName** of the PRIV Domain to match the CORP domain. Make sure the machine suffixes are correct for the machines where SQL, SharePoint, and MIM will be installed, as the default template file assumes a CORP and PRIV configuration.
-    2. Click here for more details about PRIVOnly environments.
 
 6. Copy the same PAMDeploymentConfig.xml to %SYSTEMDRIVE%\PAM folder on all the machines, CORPDC, PRIVDC, PAM Server, SQL Server, and SharePoint servers.
 
