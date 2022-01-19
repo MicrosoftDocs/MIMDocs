@@ -69,7 +69,7 @@ Before you proceed update the PAMDeploymentConfig.xml and place the updated copy
 | CORPDC  | CORP Domain Admin   | Import-module .\PAMValidation.psm1 ; Create-PAMValidationCORPDCConfig   |
 | PAMServer   | MIMAdmin  | Import-module .\PAMValidation.psm1 ; Move-PAMValidationUsersToPAM  |
 | CORPClient  | CORP User (local admin)   |   Import-module .\PAMValidation.psm1 ; Enable-PAMUsersCORPClientRemote |
-|  CORPClient | <PRIV>\PRIV.pamRequestor user and in the case of PRIVOnly : <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+|  CORPClient | `<PRIV>\PRIV.pamRequestor` user and in the case of PRIVOnly : `<CORP>\pamrequestor`   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
 
 
 > [!div class="step-by-step"]

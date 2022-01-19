@@ -29,6 +29,26 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [Step 2 »](sp1-step2-configuring-corp-domain.md)
 
+
+## Set up the PRIV domain
+After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Update the DNSName, the NetbiosName, the DC name, the Database/Log Path & sysvol folder Path. Also update the Domain & ForestMode to Windows Server 2016 (WinThreshold).
+
+1. Log in to the PRIV domain DC as Administrator
+2. Run PowerShell as Administrator
+3. cd $env:SYSTEMDRIVE\PAM
+4. import-module .\PAMDeployment.ps1
+5. select menu option 9 (PRIV Forest setup)
+
+
+The DC will reboot automatically after completion. The directory Services Restore Mode (DSRM) administrator password must match the following criteria:
+
+  * Password length is a minimum of 15 characters
+  * Password contains at least one lowercase character
+  * Password contains at least one UPPERCASE character
+  * Password contains at least one digit or special character
+
+## Configure the PRIV domain
+
 1. Log in to the PRIVDC as Administrator
 2. Run PowerShell as Administrator
 3. cd $env:SYSTEMDRIVE\PAM
