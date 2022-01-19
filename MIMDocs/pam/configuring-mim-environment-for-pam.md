@@ -30,11 +30,11 @@ There are seven steps to complete when setting up the environment for cross-fore
 
 These steps are laid out so that you can start from scratch and build a test environment. If you're applying PAM to an existing environment, you can use your own domain controllers or user accounts for the *CONTOSO* domain, instead of creating new ones to match the examples.
 
-1. Prepare *CORPDC* server as a domain controller and *CORPWKSTN* as a member workstation.
+1. if you do not have an existing domain you wish to have as the domain to manage, prepare *CORPDC* server as a domain controller and *CORPWKSTN* as a member workstation.
 
-2. Prepare *PRIVDC* server as a domain controller for a separate domain and forest, *PRIV*.
+2. Prepare *PRIVDC* server as a domain controller for a separate WS 2016 domain and forest, *PRIV*.
 
-3.  Prepare *PAMSRV* server in the *PRIV* forest.
+3.  Prepare *PAMSRV* server in the *PRIV* forest, to hold the MIM server software.
 
 4.  Install MIM components on *PAMSRV* and prepare them for Privileged Access Management.
 

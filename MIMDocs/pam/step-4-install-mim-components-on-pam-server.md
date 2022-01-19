@@ -33,15 +33,15 @@ ms.suite: ems
 On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service and Portal and the sample portal web application.
 
   > [!NOTE]
-  > You must be a domain administrator; if you are not running the following commands as a domain administrator, the trust validation checks in the next step will not be completed.
+  > You must be a domain administrator; if you are not running the following commands as a user who does not have write access to the PRIV domain in AD, the install will not succeed.  This is because the MIM installation creates a new AD OU “PAM objects”.
 
 If you have downloaded MIM, unpack the MIM installation archive to a new folder.
 
-## Run the Service and Portal install program.
+## Run the Service and Portal install program
 
 Follow the guidelines of the installer and complete the installation.
 
-1. When selecting component features, include MIM Service (with Privileged Access Management, but not MIM Reporting) and MIM Portal  
+1. When selecting component features, include MIM Service (with Privileged Access Management, but not MIM Reporting) and MIM Portal.  If you did not install SharePoint in the previous step, then do not install the MIM Portal.
 
    ![Custom setup - screenshot](./media/PAM_GS_MIM_2015_Service_Portal.png)
 
