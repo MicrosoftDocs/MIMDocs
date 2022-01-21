@@ -283,10 +283,10 @@ Perform the following steps on PRIVDC as a domain administrator.
     ```
 19.	Update the access control list as needed to ensure that MIM service and MIM component service can update memberships of groups protected by this ACL.  Type the command:
 
-```cmd
-dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
-dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
-```
+    ```cmd
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+    ```
 
 ### Configure PAM in Windows Server 2016
 
@@ -294,10 +294,10 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
 
 1. Enable the Privileged Access Management features in Windows Server 2016 Active Directory by launching a PowerShell window as administrator and typing the following commands.
 
-  ```
-  $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
-  Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
-  ```
+   ```
+   $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
+   Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
+   ```
 
 2. Launch a PowerShell window and type ADSIEdit.
 
