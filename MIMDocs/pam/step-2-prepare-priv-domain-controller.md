@@ -34,13 +34,13 @@ In this step you will create a new domain that will provide the bastion environm
 
 ## Create a new Privileged Access Management domain controller
 
-In this section you will set up a virtual machine to act as a domain controller for a new forest
+In this section you will set up a virtual machine to act as a domain controller for a new forest.
 
-### Install Windows Server 2012 R2
+### Install Windows Server 2016
 
-On another new virtual machine with no software installed, install Windows Server 2012 R2 to make a computer “PRIVDC”.
+On another new virtual machine with no software installed, install Windows Server 2016 or later to make a computer “PRIVDC”.
 
-1. Select to perform a custom (not upgrade) install of Windows Server. When installing, specify **Windows Server 2012 R2 Standard (Server with a GUI) x64**; _do not select_ **Data Center or Server Core**.
+1. Select to perform a custom (not upgrade) install of Windows Server. When installing, specify **Windows Server 2016 (Server with Desktop Experience)**; _do not select_ **Data Center or Server Core**.
 
 2. Review and accept the license terms.
 
@@ -84,7 +84,7 @@ In this document, the name priv.contoso.local is used as the domain name of the 
 
    ```PowerShell
    $ca= get-credential
-   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
+   Install-ADDSForest –DomainMode 7 –ForestMode 7 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
    ```
 
 2. When the popup appears, provide the credentials for the CORP forest administrator (e.g., the username CONTOSO\\Administrator and the corresponding password from step 1).
@@ -171,7 +171,7 @@ You need to set up auditing in order for the PAM configuration to be established
 
 1. Make sure you are signed in as the domain administrator (PRIV\\Administrator).
 
-2. Go to **Start** > **Administrative Tools** > **Group Policy Management**.
+2. Go to **Start** > **Windows Administrative Tools** > **Group Policy Management**.
 
 3. Navigate to **Forest: priv.contoso.local** > **Domains** > **priv.contoso.local** > **Domain Controllers** > **Default Domain Controllers Policy**. A warning message will appear.
 
@@ -220,7 +220,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
 
 1. Launch PowerShell.
 
-2. For each domain at the top of each existing forest, type the following command, specifying the existing DNS domain (e.g., contoso.local), and the IP address of the master server of that domain.  
+2. For each domain at the top of each existing forest, type the following command, specifying the existing DNS domain (e.g., contoso.local), and the IP address of the primary DNS server of that domain.  
 
    If you created one domain contoso.local in the previous step, then specify *10.1.1.31* for the CORPDC computer’s virtual network IP address.
 
@@ -283,20 +283,56 @@ Perform the following steps on PRIVDC as a domain administrator.
     ```
 19.	Update the access control list as needed to ensure that MIM service and MIM component service can update memberships of groups protected by this ACL.  Type the command:
 
-```cmd
-dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
-dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
-```
+    ```cmd
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+    ```
 
-20. Restart the PRIVDC server so that these changes take effect.
+### Configure PAM in Windows Server 2016
+
+Next, authorize the MIM administrators and MIM Service account to create and update shadow principals.
+
+1. Enable the Privileged Access Management features in Windows Server 2016 Active Directory by launching a PowerShell window as administrator and typing the following commands.
+
+   ```
+   $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
+   Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
+   ```
+
+2. Launch a PowerShell window and type ADSIEdit.
+
+3. Open the Actions menu, click “Connect To”. On the Connection point setting, change the naming context from “Default naming context” to “Configuration” and click OK.
+
+4. After connecting, on the left side of the window below “ADSI Edit”, expand the Configuration node to see “CN=Configuration,DC=priv,....”. Expand CN=Configuration, and then expand CN=Services.
+
+5. Right click on “CN=Shadow Principal Configuration” and click on Properties. When the properties dialog appears, change to the security tab.
+
+6. Click Add. Specify the accounts “MIMService”, as well as any other MIM administrators who will later be performing New-PAMGroup to create additional PAM groups. For each user, in the allowed permissions list, add “Write”, “Create all child objects”, and “Delete all child objects”. Add the permissions.
+
+7. Change to Advanced Security settings. On the line which allows MIMService access, click Edit. Change the “Applies to” setting to “to this object and all descendant objects”. Update this permission setting and close the security dialog box.
+
+8. Close ADSI Edit.
+
+9. Next, authorize the MIM administrators to create and update authentication policy. Launch an elevated **Command prompt** and type the following commands, substituting the name of your MIM administrator account for “mimadmin” in each of the four lines:
+    ```
+    dsacls "CN=AuthN Policies,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g mimadmin:RPWPRCWD;;msDS-AuthNPolicy /i:s
+
+    dsacls "CN=AuthN Policies,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g mimadmin:CCDC;msDS-AuthNPolicy
+
+    dsacls "CN=AuthN Silos,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g mimadmin:RPWPRCWD;;msDS-AuthNPolicySilo /i:s
+
+    dsacls "CN=AuthN Silos,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g mimadmin:CCDC;msDS-AuthNPolicySilo
+    ```
+
+10. Restart the PRIVDC server so that these changes take effect.
 
 ## Prepare a PRIV workstation
 
 If you do not already have a workstation computer that will be joined to the PRIV domain for performing maintenance of PRIV resources (such as MIM), follow these instructions to prepare a workstation.  
 
-### Install Windows 8.1 or Windows 10 Enterprise
+### Install Windows 10 Enterprise
 
-On another new virtual machine with no software installed, install Windows 8.1 Enterprise or Windows 10 Enterprise to make a computer *“PRIVWKSTN”*.
+On another new virtual machine with no software installed, install Windows 10 Enterprise to make a computer *“PRIVWKSTN”*.
 
 1. Use Express settings during installation.
 

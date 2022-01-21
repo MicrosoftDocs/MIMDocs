@@ -30,13 +30,11 @@ ms.suite: ems
 > [« Step 2](step-2-prepare-priv-domain-controller.md)
 > [Step 4 »](step-4-install-mim-components-on-pam-server.md)
 
-## Install Windows Server 2012 R2
+## Install Windows Server 2016
 
-On a third virtual machine, install Windows Server 2012 R2, specifically Windows Server 2012 R2 Standard (Server with a GUI) x64, to make *PAMSRV*. Since SQL Server and SharePoint 2013 will be installed on this computer, it requires at least 8GB of RAM.
+On a third virtual machine, install Windows Server 2016, to make *PAMSRV*. Since SQL Server and SharePoint 2013 will be installed on this computer, it requires at least 8GB of RAM.
 
-1. Select **Windows Server 2012 R2 Standard (Server with a GUI) x64**.
-
-    ![Choose Windows Server standard with GUI - screenshot](media/PAM_GS_Select_WS2012.png)
+1. When installing, specify **Windows Server 2016 (Server with Desktop Experience)**.
 
 2. Review and accept the license terms.
 
@@ -53,7 +51,7 @@ On a third virtual machine, install Windows Server 2012 R2, specifically Windows
 
 ### Add the web server (IIS) and application server roles
 
-Add the Web Server (IIS) and Application Server roles, the .NET Framework 3.5 Features, the Active Directory module for Windows PowerShell, and other features required by SharePoint
+Add the Web Server (IIS) role, the .NET Framework 3.5 Features, the Active Directory module for Windows PowerShell, and other features required by SharePoint
 
 1.  Sign in as a PRIV domain administrator (PRIV\Administrator) and launch PowerShell.
 
@@ -62,7 +60,7 @@ Add the Web Server (IIS) and Application Server roles, the .NET Framework 3.5 Fe
     ```PowerShell
     import-module ServerManager
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,
-    rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,
+    rsat-ad-powershell,Web-Mgmt-Tools,
     Windows-Identity-Foundation,Server-Media-Foundation,
     Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
@@ -109,7 +107,7 @@ If you want to use PowerShell:
 If you want to use a text editor such as Notepad:
 
 1. Open the file **C:\Windows\System32\inetsrv\config\applicationHost.config**
-2. Scroll down to line 82 of that file. The tag value of **overrideModeDefault** should be **<section name="windowsAuthentication" overrideModeDefault="Deny" />**  
+2. Scroll down to line 82 of that file. The tag value of **overrideModeDefault** should be `<section name="windowsAuthentication" overrideModeDefault="Deny" />`
 3. Change the value of **overrideModeDefault** to *Allow*  
 4. Save the file, and restart IIS with the PowerShell command `iisreset /START`
 
@@ -125,80 +123,9 @@ If SQL Server is not in the bastion environment already, install either SQL Serv
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
 
-## Install SharePoint Foundation 2013
+## Install SharePoint Server 2016 or 2019 (only required for MIM Portal)
 
-Using the SharePoint Foundation 2013 with SP1 installer, install SharePoint’s software prerequisites on PAMSRV.
-
-> [!NOTE]
-> This installer requires an internet connection to download the prerequisites. And after they are installed, the server will restart.
-
-1. Right click on PowerShell and select **Run as administrator**.  
-2. Change to the directory where SharePoint was unpacked.  
-3. Type the command `.\prerequisiteinstaller.exe`.
-
-After the SharePoint prerequisites are installed, install SharePoint Foundation 2013 with SP1.
-
-1.  Right click on PowerShell and select **Run as administrator**.  
-2.  Change to the directory where SharePoint was unpacked.  
-3.  Type the command `.\setup.exe`.  
-4.  Select the **complete server** type.  
-5.  After the install completes, select to run the wizard.  
-
-### Configure SharePoint
-
-Run the SharePoint Products Configuration Wizard to configure SharePoint.
-
-1.  On the Connect to a Server Farm tab, change to **Create a new server farm**.  
-2.  Specify **PAMSRV** as the database server for the configuration database, and **PRIV\SharePoint** as the database access account for SharePoint to use.  
-3.  Specify a password as the farm security passphrase (it will not be used later in this walkthrough).  
-4.  For now, accept the rest of the SharePoint configuration wizard default settings to make a single-server farm.    
-5.  When the configuration wizard completes configuration task 10 of 10, click **Finish** and a web browser will open.  
-6.  In the Internet Explorer popup, authenticate as the domain administrator (PRIV\MIMAdmin) to proceed.  
-7.  Start the wizard within the web app to configure the SharePoint farm.  
-8.  Select to use the existing managed account (PRIV\SharePoint), uncheck to disable any optional services, and click **Next**.  
-9. Once the Creating a Site Collection Window appears, click **Skip** then **Finish**.  
-
-## Create a SharePoint Foundation 2013 web application
-
-After the wizards complete, use PowerShell to create a SharePoint Foundation 2013 Web Application to host the MIM Portal. Since this walkthrough is for demonstration purposes, SSL will not be enabled.
-
-1.  Right click on SharePoint 2013 Management Shell, select **Run as administrator**, and run the following PowerShell script:
-
-    ```PowerShell
-    $dbManagedAccount = Get-SPManagedAccount -Identity PRIV\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
-    ```
-
-2. A warning message will appear that Windows Classic authentication method is being used, and it may take several minutes for the final command to return.  When completed, the output will give the URL of the new portal.
-
-> [!NOTE]
-> Keep the SharePoint 2013 Management Shell window open to use it in the next step.
-
-## Create a SharePoint site collection
-
-Next, create a SharePoint Site Collection associated with that web application to host the MIM Portal.
-
-1.  Launch  **SharePoint 2013 Management Shell**, if not already open, and run the following PowerShell script
-
-    ```PowerShell
-    $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
-    $w = Get-SPWebApplication http://pamsrv.priv.contoso.local:82
-    New-SPSite -Url $w.Url -Template $t -OwnerAlias PRIV\MIMAdmin                -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias PRIV\BackupAdmin
-    $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
-    $s.CompatibilityLevel
-    ```
-
-    Make sure that the **CompatibilityLevel** variable is set to *14*. If it returns *15*, then the site collection was not created for the 2010 experience version; delete the site collection and recreate it.
-
-2.  Run the following PowerShell commands in the **SharePoint 2013 Management Shell**. This will disable the SharePoint server-side ViewState, and the SharePoint task **Health Analysis Job (Hourly, Microsoft SharePoint Foundation Timer, All Servers)**.
-
-    ```PowerShell
-    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-    $contentService.ViewStateOnServer = $false;
-    $contentService.Update();
-    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-    ```
+Use the guide for [Preparing Sharepoint](/microsoft-identity-manager/prepare-server-sharepoint) to install SharePoint Server 2016 or 2019.
 
 ## Change update settings
 
