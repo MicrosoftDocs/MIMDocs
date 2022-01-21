@@ -65,14 +65,17 @@ On PAMSRV, establish one-way trust with each domain such as CORPDC so that the C
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
-4.  Type the following PowerShell commands for each domain in the existing forests. Enter the credential for the CORP domain administrator (CONTOSO\Administrator) when prompted.
+4.  Type the following commands for each domain in the existing forests.
 
     ```PowerShell
-    $ca = get-credential
-    New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
+    netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes /usero:contoso\administrator /passwordo:Pass@word1
+
+    netdom trust contoso.local /domain:priv.contoso.local /quarantine:no        /usero:contoso\administrator /passwordo:Pass@word1
+
+    netdom trust contoso.local /domain:priv.contoso.local /enablepimtrust:yes   /usero:contoso\administrator /passwordo:Pass@word1
     ```
 
-## Give forests read access to Active Directory
+## Give read access to existing Active Directory forests
 
 For each existing forest, enable read access to AD by PRIV administrators and the monitoring service.
 

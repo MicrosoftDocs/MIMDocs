@@ -33,21 +33,18 @@ Privileged Access Management has no hardware requirements beyond those requireme
 
 ## Installing from software packages
 
-The following software can be downloaded from TechNet Evaluation Center or MSDN:
+The following software is required:
 
-- Microsoft Identity Manager 2016
+- Microsoft Identity Manager 2016 Service Pack 2 (or a subsequent hotfix)
   - Service and Portal: contains the installer for MIM Service and MIM Portal and for the PAM Scenario
   - Add-ins and Extensions: contains the installer for the requestor PowerShell cmdlets
+- Windows Server 2016 or Windows Server 2019
+- Windows 10 Enterprise
+- SQL Server 2012 Service Pack 1, SQL Server 2014, SQL Server 2017 or SQL Server 2019
 
 The following optional software can be downloaded from GitHub:
 
 - [PAMSamplePortal](https://github.com/Azure/identity-management-samples): contains sample web application for the REST API
-
-## Required software
-
-- Windows Server 2016 or Windows Server 2019
-- Windows 10 Enterprise
-- SQL Server 2012 Service Pack 1, SQL Server 2014, SQL Server 2017 or SQL Server 2019
 
 ## Hardware requirements
 
@@ -55,7 +52,7 @@ For each component of PAM, refer to the system requirements of the software prod
 
 For CORPDC (optional):
 
-- [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx) or later
+- Windows Server 2016 or later
 
 For CORPWKSTN:
 

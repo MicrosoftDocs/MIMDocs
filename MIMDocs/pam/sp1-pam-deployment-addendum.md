@@ -26,7 +26,7 @@ ms.suite: ems
 
 ## Addendum 1 Setting up the PRIV domain
 
-After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Update the DNSName, the NetbiosName, the DC name, the Database/Log Path & sysvol folder Path. Also update the Domain & ForestMode. If you are using Windows Server 2016 or later, set the DomainMode & ForestMode to Windows Server 2016 (WinThreshold).
+After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Update the DNSName, the NetbiosName, the DC name, the Database/Log Path & sysvol folder Path. Also update the Domain & ForestMode to Windows Server 2016 (WinThreshold).
 
 1. Log in to the PRIV domain DC as Administrator
 2. Run PowerShell as Administrator

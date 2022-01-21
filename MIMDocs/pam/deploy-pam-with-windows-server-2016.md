@@ -28,7 +28,7 @@ A minimum of two VMs are required for the lab environment:
 
 -   VM hosts the PRIV Domain Controller, running Windows Server 2016 or later
 
--   VM hosts the MIM Service, running Windows Server 2016 or later (recommended) or Windows Server 2012 R2
+-   VM hosts the MIM Service, running Windows Server 2016 or later
 
 > [!NOTE]
 > If you do not already have a “CORP” domain in your lab environment, an additional domain controller for that domain is required. The “CORP” domain controller can run either Windows Server 2016 or Windows Server 2012 R2.
@@ -50,7 +50,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
 - If you choose to use Windows Server 2012 R2 as the operating system for CORPDC, you must install hotfixes 2919442, 2919355, [and update 3155495](https://support.microsoft.com/kb/3156418) on CORPDC.
 
-- Follow the instructions in [Step 2 - Prepare PRIV domain controller](step-2-prepare-priv-domain-controller.md), except for these adjustments:
+- Follow the instructions in [Step 2 - Prepare PRIV domain controller](step-2-prepare-priv-domain-controller.md), and ensure if you were using a previous version of the content, to make these adjustments:
 
   -   Install using Windows Server 2016 media. The installation option will be called Windows Server 2016 (Server with Desktop Experience).
 
@@ -62,7 +62,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
   -   When configuring the auditing and logon rights, note that the Group Policy Management program will be located in the Windows Administrative Tools folder.
 
-  -   Configuring the registry settings needed for SID history migration (item #8) is **not required when the PRIV domain is Windows Server 2016 domain functional level**.
+  -   Configuring the registry settings needed for SID history migration (item #8) is **no longer required when the PRIV domain is Windows Server 2016 domain functional level**.
 
   -   After configuring delegation, and before restarting the server, enable the Privileged Access Management features in Windows Server 2016 Active Directory by launching a PowerShell window as administrator and typing the following commands.
 
@@ -109,23 +109,21 @@ Perform the install as described in the [Getting started guide](privileged-ident
     ```
 
 
-- Follow the instructions in [Step 3 - Prepare a PAM server](step-3-prepare-pam-server.md), with these adjustments.
+- Follow the instructions in [Step 3 - Prepare a PAM server](step-3-prepare-pam-server.md).
 
-  -   If installing on Windows Server 2016, note that the “ApplicationServer” role is not available.
+  -   Note that when installing on Windows Server 2016, the “ApplicationServer” role is no longer available.
 
-  -   If installing MIM on Windows Server 2016, **it is not possible to install SharePoint 2013**.
+  -   If installing MIM on Windows Server 2016, it is not possible to install SharePoint 2013.  If you wish to use the MIM Portal, you must use a later version of SharePoint.
 
 - Follow the instructions in [Step 4 – Install MIM components on PAM server and workstation](step-4-install-mim-components-on-pam-server.md), with these adjustments.
 
-  -   The user installing the MIM Service and PAM components **must have write access to the PRIV domain in AD**, as the MIM installation creates a new AD OU “PAM objects”.
+  -   The user installing the MIM Service and PAM components must have write access to the PRIV domain in AD, as the MIM installation creates a new AD OU “PAM objects”.
 
   -   If SharePoint is not installed, do not install the MIM Portal.
 
 - Follow the instructions in [Step 5 - Establish trust](step-5-establish-trust-between-priv-corp-forests.md) with these adjustments:
 
-  - When establishing one-way trust, only perform the first two PowerShell commands (get-credential and New-PAMTrust), **do not perform the New-PAMDomainConfiguration command**.
-
-  - After establishing trust, log onto PRIVDC as PRIV\\Administrator, launch PowerShell and type the following commands:
+  - When establishing one-way trust, only perform the first two PowerShell commands (get-credential and New-PAMTrust), You do not perform the New-PAMDomainConfiguration command. Instead, after establishing trust, log onto PRIVDC as PRIV\\Administrator, launch PowerShell and type the following commands:
     ```
     netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes
     /usero:contoso\administrator /passwordo:Pass@word1
@@ -137,7 +135,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
     /usero:contoso\administrator /passwordo:Pass@word1
     ```
 
-- Item #5 (verification of trust) is **not required when both CORP and PRIV domains are at Windows Server 2016 domain functional level**.
+- Item #5 (verification of trust) is no longer required when both CORP and PRIV domains are at Windows Server 2016 domain functional level.
 
 ## More information
 

@@ -29,7 +29,8 @@ ms.suite: ems
 > [« Step 3](sp1-step3-installing-configuring-sql.md)
 > [Step 5 »](sp1-step5-configuring-pam.md)
 
-SharePoint must be SharePoint Foundation 2013 with SP1.
+When using the script, SharePoint must be SharePoint Foundation 2013 with SP1.  If you wish to deploy MIM Portal on a later version of SharePoint, instead follow the steps for [Preparing Sharepoint](/microsoft-identity-manager/prepare-server-sharepoint) to install SharePoint Server 2016 or 2019.
+
 
 For domain joined servers, login as MIMAdmin
 
@@ -46,11 +47,11 @@ For workgroup servers
 4. select Menu option 4 (SharePoint Setup)
 
 The machine will reboot several times as it installs SharePoint. Each time, the SharePoint setup must be re-run, being sure to login with the MIMAdmin account.
-If the machine installing SharePoint does not have Internet connectivity to download pre-requisites, they can be downloaded independently and put in a local folder. **This local folder path needs to be updated in the PAMConfiguration.xml file in <PrerequisitesBinaryLocation/>.** Please see Addendum 5 for the links to download the files.
+If the machine installing SharePoint does not have Internet connectivity to download pre-requisites, they can be downloaded independently and put in a local folder. This local folder path needs to be updated in the PAMConfiguration.xml file in `<PrerequisitesBinaryLocation/>`.
 After installation, the SharePoint Configuration GUI will open, and walk through the steps to complete the SharePoint installation. Please select Complete Server and walk through the rest of the UI. After installation, it will prompt for running the Configuration Wizard. Complete the steps as given below.
 
 1. On the **Connect to server farm** tab, change to **create a new server farm.**
-2. Specify the **SQLServer** as the database server for the configuration database, and the **SharePoint ServiceAccount** as the databsea access acount for SharePoint to use.
+2. Specify the **SQLServer** as the database server for the configuration database, and the **SharePoint ServiceAccount** as the database access account for SharePoint to use.
 3. Specify a password as the farm security passphrase **(it will not be used later)**
 4. Accept the rest of the SharePoint configuration wizard default settings to make a single-server farm
 

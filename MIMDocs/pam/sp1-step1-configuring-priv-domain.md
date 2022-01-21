@@ -29,8 +29,27 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [Step 2 »](sp1-step2-configuring-corp-domain.md)
 
+
+## Set up the PRIV domain
+After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Update the DNSName, the NetbiosName, the DC name, the Database/Log Path & sysvol folder Path. Also update the Domain & ForestMode to Windows Server 2016 (WinThreshold).
+
+1. Log in to the PRIV domain DC as Administrator
+2. Run PowerShell as Administrator
+3. cd $env:SYSTEMDRIVE\PAM
+4. import-module .\PAMDeployment.ps1
+5. select menu option 9 (PRIV Forest setup)
+
+
+The DC will reboot automatically after completion. The directory Services Restore Mode (DSRM) administrator password must match the following criteria:
+
+  * Password length is a minimum of 15 characters
+  * Password contains at least one lowercase character
+  * Password contains at least one UPPERCASE character
+  * Password contains at least one digit or special character
+
+## Configure the PRIV domain
+
 1. Log in to the PRIVDC as Administrator
-   * If this PAM deployment is a PRIV-Only environment, login to the CORPDC
 2. Run PowerShell as Administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -39,7 +58,7 @@ ms.suite: ems
 
 The Service Accounts required for managing SQL, SharePoint and MIM are automatically created, if they are not already present in the domain. You will be prompted to enter the passwords for creation of these service accounts during script execution.
 
-If the PRIV domain is Windows Server 2016, with the Functional Level set to Windows Server 2016, the script will prompt for enabling the optional Active Directory ‘Privileged Access Management Feature’ required by PAM. Confirm ‘Yes’ to proceed. For functional levels below Windows Server 2016, dismiss the warning that additional configuration will not be performed. You will need to rerun the PAMDeployment.ps1 and PAM Forest Configuration, once the administrator raises the functional level to Windows Server 2016.
+When deploying, the PRIV domain Functional Level should be set to Windows Server 2016. The script will prompt for enabling the optional Active Directory ‘Privileged Access Management Feature’ required by PAM. Confirm ‘Yes’ to proceed. Do not deploy PAM for functional levels below Windows Server 2016, as you will need to rerun the PAMDeployment.ps1 and PAM Forest Configuration, once the administrator raises the functional level to Windows Server 2016.
 
 >[!NOTE]
 >The following steps are not required for PRIVOnly configurations
