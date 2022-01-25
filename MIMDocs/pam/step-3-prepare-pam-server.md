@@ -38,15 +38,15 @@ On a third virtual machine, install Windows Server 2016 or 2019, to make *PAMSRV
 
 2. Review and accept the license terms.
 
-3.  Since the disk will be empty, select **Custom: Install Windows only** and use the **uninitialized disk space**.
+3.  Select **Custom: Install Windows only** and use the **uninitialized disk space**, since the disk will be empty.
 
 4.  Sign in to that new computer as its administrator.  Using Control Panel, give it a static IP address on the virtual network, configure that network interface to send DNS queries to the IP address of PRIVDC and set the computer name to *PAMSRV*.  This will require a server restart.
 
 5.  If the virtual network doesn't provide Internet connectivity, add an additional network interface to the computer that provides a connection to the Internet.  This will be needed for the SharePoint installation, and can be disabled after this step is completed.
 
-6.  After the server has restarted, sign in as the administrator. Using Control Panel, configure the computer to check for updates, and install any updates needed.  This may require a server restart.
+6.  Wait for the server to restart. After the server has restarted, sign in as the administrator. Using Control Panel, configure the computer to check for updates, and install any updates needed.  This may require a server restart.
 
-7.  After the server restarts, sign in as Administrator, open the Control Panel and join PAMSRV to the PRIV domain (priv.contoso.local).  This will require providing the username and credentials of a PRIV domain administrator (PRIV\Administrator). After the welcome message appears, close the dialog box and restart this server.
+7.  Wait for the server to restart. After the server restarts, sign in as Administrator, open the Control Panel and join PAMSRV to the PRIV domain (priv.contoso.local).  This will require providing the username and credentials of a PRIV domain administrator (PRIV\Administrator). After the welcome message appears, close the dialog box and restart this server.
 
 
 ### Add the web server (IIS) and application server roles
@@ -74,17 +74,17 @@ Configure the server security policy to allow the newly-created accounts to run 
 3.  On the details pane, right-click on **Log on as a service**, and select **Properties**.
 4.  Click **Add User or Group**, and in the User and group names, type *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer*. Click **Check Names**, and click **OK**.
 
-5.  Click **OK** to close the Properties window.
+5.  Select **OK** to close the properties window.
 6.  On the details pane, right-click on **Deny access to this computer from the network**, and select **Properties**.
 7.  Click **Add User or Group**, and in the User and group names, type *priv\mimmonitor; priv\MIMService; priv\mimcomponent* and click **OK**.
-8.  Click **OK** to close the properties window.
+8.  Select **OK** to close the properties window.
 
 9. On the details pane, right-click on **Deny log on locally**, and select **Properties**.
 10. Click **Add User or Group**, and in the User and group names, type *priv\mimmonitor; priv\MIMService; priv\mimcomponent* and click **OK**.
-11. Click **OK** to close the properties window.
+11. Select **OK** to close the properties window.
 12. Close the Local Security Policy window.
 
-13. Open Control Panel and switch to **User Accounts**.
+13. Launch Control Panel and switch to **User Accounts**.
 14. Click **Give others access to this computer**.
 15. Click **Add**, enter the user *MIMADMIN* in the domain *PRIV*, and on the next screen in the wizard, click **Add this user as an Administrator**.
 16. Click **Add**, enter the user *SharePoint* in the domain *PRIV*, and on the next screen in the wizard, click **Add this user as an Administrator**.

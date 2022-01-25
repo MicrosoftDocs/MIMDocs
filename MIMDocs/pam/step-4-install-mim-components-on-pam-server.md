@@ -127,11 +127,11 @@ If you installed the MIM Portal, skip to the next section.
 
 4. In Internet Explorer, open the **Internet Options**, change to the **Security** tab, and add the site to the **Local intranet zone** if it is not already there. Close the Internet Options dialog.
 
-5. Using Internet Explorer to view MIM Portal, click on **Management Policy Rules**.
+5. Using Internet Explorer to view MIM Portal, select **Management Policy Rules**.
 
 6. Search for the management policy rule **User management: Users can read attributes of their own**.
 
-7. Select this management policy rule, uncheck **Policy is disabled**, click **OK**, and then click **Submit**.
+7. Select this management policy rule, uncheck **Policy is disabled**, select **OK**, and then select **Submit**.
 
 ## Verify the firewall connections
 
