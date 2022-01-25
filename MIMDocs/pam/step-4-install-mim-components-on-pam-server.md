@@ -55,10 +55,10 @@ Follow the guidelines of the installer and complete the installation.
 4. Choose to generate a new self-signed certificate.
 
 5. Set the following account credentials:
-   - Service Account Name: *MIMService*  
-   - Service Account Password: <em>Pass@word1</em> (or the password you created in Step 2)  
-   - Service Account Domain: *PRIV*  
-   - Service Email Account: <em>MIMService@priv.contoso.local</em>  
+   - Service Account Name: *MIMService*
+   - Service Account Password: <em>Pass@word1</em> (or the password you created in Step 2)
+   - Service Account Domain: *PRIV*
+   - Service Email Account: <em>MIMService@priv.contoso.local</em>
 
 6. Accept the defaults for the synchronization server hostname and specify the MIM Management Agent account as *PRIV\MIMMA*. A warning message will appear that the MIM synchronization service does not exist. This warning is OK, since the MIM synchronization service is not used in this scenario.
 
@@ -68,16 +68,16 @@ Follow the guidelines of the installer and complete the installation.
 
 9. Leave the registration portal URL blank.
 
-10. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to the MIM portal site.
+10. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to the MIM Portal site.
 
 11. Leave the PAM REST API hostname empty, and set *8086* as the port number.
 
     ![Binding Information for the PAM REST API - screenshot](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
 12. Configure the MIM PAM REST API account to use the same account as SharePoint (as the MIM Portal is co-located on this server):
-    - Application Pool Account Name: *SharePoint*  
-    - Application Pool Account Password: <em>Pass@word1</em> (or the password you created in Step 2)  
-    - Application Pool Account Domain: *PRIV*  
+    - Application Pool Account Name: *SharePoint*
+    - Application Pool Account Password: <em>Pass@word1</em> (or the password you created in Step 2)
+    - Application Pool Account Domain: *PRIV*
 
     ![Application pool account credentials - screenshot](./media/PAM_GS_Configure_Component_Service.png)
 
@@ -85,15 +85,15 @@ Follow the guidelines of the installer and complete the installation.
 
 13. Configure the MIM PAM component service:
     - Service Account Name: *MIMComponent*
-    - Service Account Password: <em>Pass@word1</em> (or the password you created in Step 2)  
+    - Service Account Password: <em>Pass@word1</em> (or the password you created in Step 2)
     - Service Account Domain: *PRIV*
 
     ![PAM Component service account credentials - screenshot](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
 
 14. Configure the PAM Monitoring Service:
-    - Service Account Name: *MIMMonitor*  
-    - Service Account Password: <em>Pass@word1</em> (or the password you created in Step 2)  
-    - Service Account Domain: *PRIV*  
+    - Service Account Name: *MIMMonitor*
+    - Service Account Password: <em>Pass@word1</em> (or the password you created in Step 2)
+    - Service Account Domain: *PRIV*
 
     ![PAM Monitoring Service account credentials - screenshot](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
 
@@ -137,15 +137,15 @@ If you installed the MIM Portal, skip to the next section.
 
 The firewall should allow incoming connections to TCP port 5725, 5726, 8086 and 8090.
 
-1.  Launch **Windows Firewall with Advanced Security** (located in Administrative Tools).  
-2.  Click on **Inbound Rules**.  
-3.  Verify that these two rules are listed:  
+1.  Launch **Windows Firewall with Advanced Security** (located in Administrative Tools).
+2.  Click on **Inbound Rules**.
+3.  Verify that these two rules are listed:
     - Forefront Identity Manager Service (STS)
-    - Forefront Identity Manager Service (Webservice)  
-4.  Click **New rule** > **Port** > **TCP**, and type the specific local ports *8086* and *8090*. Click through the wizard accepting the defaults, give the rule a name, and click **Finish**.  
+    - Forefront Identity Manager Service (Webservice)
+4.  Click **New rule** > **Port** > **TCP**, and type the specific local ports *8086* and *8090*. Click through the wizard accepting the defaults, give the rule a name, and click **Finish**.
 5.  After completing the wizard, close the Windows Firewall application.
 
-6.  Launch **Control Panel**.  
+6.  Launch **Control Panel**.
 7.  Under Network and Internet, select **View network status and tasks**.
 8.  Verify that there is an active network, which is listed as being priv.contoso.local, and a Domain network.
 9. Close **Control Panel**.
@@ -158,20 +158,25 @@ In this section, you can install and configure the sample web application for th
 
 2. Unpack the contents of the folder **identity-management-samples-master\Privileged-Access-Management-Portal\src** into a new folder **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal**.
 
-3. Create new web site in IIS with a site name of MIM Privileged Access Management Example Portal, physical path C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal, and port 8090.  This site creation can be done using the following PowerShell command:
+3. Create new web site in IIS with:
+   - a site name of MIM Privileged Access Management Example Portal,
+   - physical path C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal, and
+   - port 8090.
+
+   This site creation can be done using the following PowerShell command:
 
    ```PowerShell
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
    ```
 
-4. Set up the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. In the **<system.webServer>** section, add the following lines:
+4. Set up the sample web application to be able to redirect users to the MIM PAM REST API. Using a text editor such as Notepad, edit the file **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. In the `<system.webServer>` section, add the following lines:
 
    ```XML
    <httpProtocol>
    <customHeaders>
      <add name="Access-Control-Allow-Credentials" value="true"  />
      <add name="Access-Control-Allow-Headers" value="content-type" />
-     <add name="Access-Control-Allow-Origin" value="http://pamsrv:8090" />  
+     <add name="Access-Control-Allow-Origin" value="http://pamsrv:8090" />
    </customHeaders>
    </httpProtocol>
    ```
