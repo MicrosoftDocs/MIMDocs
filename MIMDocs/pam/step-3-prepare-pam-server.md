@@ -51,7 +51,7 @@ On a third virtual machine, install Windows Server 2016, to make *PAMSRV*. Since
 
 ### Add the web server (IIS) and application server roles
 
-Add the Web Server (IIS) role, the .NET Framework 3.5 Features, the Active Directory module for Windows PowerShell, and other features required by SharePoint
+Add the Web Server (IIS) role, the .NET Framework 3.5 and 4.6 Features, the Active Directory module for Windows PowerShell, and other features required by SharePoint (if installing SharePoint).
 
 1.  Sign in as a PRIV domain administrator (PRIV\Administrator) and launch PowerShell.
 
@@ -111,9 +111,15 @@ If you want to use a text editor such as Notepad:
 3. Change the value of **overrideModeDefault** to *Allow*  
 4. Save the file, and restart IIS with the PowerShell command `iisreset /START`
 
+## Install prerequisite libraries
+
+1. Install the [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/download/details.aspx?id=40784) for Windows Server 64-bit.
+
+2. If using TLS 1.2 or FIPS mode, see [MIM 2016 SP2 in "TLS 1.2 only" or FIPS-mode environments](../preparing-tls.md).
+
 ## Install SQL Server
 
-If SQL Server is not in the bastion environment already, install either SQL Server 2012 (Service Pack 1 or later) or SQL Server 2014. The following steps assume SQL 2014.
+If SQL Server is not in the bastion environment already, install either SQL Server 2012 (Service Pack 1 or later), SQL Server 2014 or later. The following steps assume SQL 2014.
 
 1. Make sure you are signed in as MIMAdmin.
 2. Right click on PowerShell and select **Run as administrator**.

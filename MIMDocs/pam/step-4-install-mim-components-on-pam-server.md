@@ -99,9 +99,25 @@ Follow the guidelines of the installer and complete the installation.
 
 15. On the Enter Information for MIM Password Portals page, leave checkboxes empty and continue. Click **Next** to continue the installation.
 
-After installation completes, the server will reboot, then verify that the MIM Portal is active and enable users to view their own object resource in MIM.
+16. After installation completes, the server will reboot.
+17. If you chose to install SharePoint, then verify that the MIM Portal is active and enable users to view their own object resource in MIM.
 
-## Set up MIM Portal management policy rules
+
+## Set up management policy rule from PowerShell
+
+If you installed the MIM Portal, skip to the next section.
+
+1. After PAMSRV reboots, sign in as PRIV\Administrator.
+
+2. Launch PowerShell, and type `add-pssnapin fimautomation` to load the MIM Service configuration PowerShell cmdlets.
+
+3. Download the script [How to Use PowerShell to Enable an MPR](https://social.technet.microsoft.com/wiki/contents/articles/2080.how-to-use-powershell-to-enable-an-mpr.aspx) and save it locally.
+
+4. Use the script to enable the MPR named **User management: Users can read attributes of their own**.  When complete, it will display the message **MPR enabled successfully**.
+
+5. Skip to the section below, **Verify the firewall connections**.
+
+## Set up MIM Portal and management policy rules
 
 1. After PAMSRV reboots, sign in as PRIV\Administrator.
 
