@@ -35,13 +35,13 @@ On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service and P
   > [!NOTE]
   > You must be a domain administrator; if you are not running the following commands as a user who does not have write access to the PRIV domain in AD, the install will not succeed.  This is because the MIM installation creates a new AD OU “PAM objects”.
 
-If you have downloaded MIM, unpack the MIM installation archive to a new folder.
+If you downloaded MIM, unpack the MIM installation archive to a new folder.
 
 ## Run the Service and Portal install program
 
 Follow the guidelines of the installer and complete the installation.
 
-1. When selecting component features, include MIM Service (with Privileged Access Management, but not MIM Reporting) and MIM Portal.  If you did not install SharePoint in the previous step, then do not install the MIM Portal.
+1. When selecting component features, include MIM Service (with Privileged Access Management, but not MIM Reporting). If you installed SharePoint in the previous step, then you can install the MIM Portal.  If you didn't install SharePoint in the previous step, then don't install the MIM Portal.
 
    ![Custom setup - screenshot](./media/PAM_GS_MIM_2015_Service_Portal.png)
 
@@ -50,7 +50,7 @@ Follow the guidelines of the installer and complete the installation.
    > [!NOTE]
    > If you install MIM Service multiple times for high availability, specify **Use an existing database** for all subsequent installations.
 
-3. When configuring a mail server connection, set the mail server to the hostname of an Exchange or SMTP server for the CORP environment (use corpdc.contoso.local if you do not have a mail server) and uncheck the **Use SSL** and **Mail Server is Exchange Server 2007 or Exchange Server 2010** checkboxes.
+3. When configuring a mail server connection, set the mail server to the hostname of an Exchange or SMTP server for the CORP environment (in a test environment, you might use corpdc.contoso.local if you don't have a mail server in the PRIV environment) and uncheck the **Use SSL** and **Mail Server is Exchange Server 2007 or Exchange Server 2010** checkboxes.
 
 4. Choose to generate a new self-signed certificate.
 
@@ -60,7 +60,7 @@ Follow the guidelines of the installer and complete the installation.
    - Service Account Domain: *PRIV*
    - Service Email Account: <em>MIMService@priv.contoso.local</em>
 
-6. Accept the defaults for the synchronization server hostname and specify the MIM Management Agent account as *PRIV\MIMMA*. A warning message will appear that the MIM synchronization service does not exist. This warning is OK, since the MIM synchronization service is not used in this scenario.
+6. Accept the defaults for the synchronization server hostname and specify the MIM Management Agent account as *PRIV\MIMMA*. A warning message will appear that the MIM synchronization service does not exist. This warning is OK, since the MIM synchronization service isn't used in this scenario.
 
 7. Set *PAMSRV* as MIM Service server address.
 
@@ -125,7 +125,7 @@ If you installed the MIM Portal, skip to the next section.
 
 3. If necessary, sign in as PRIV\Administrator for Internet Explorer.
 
-4. In Internet Explorer, open the **Internet Options**, change to the **Security** tab, and add the site to the **Local intranet zone** if it is not already there. Close the Internet Options dialog.
+4. In Internet Explorer, open the **Internet Options**, change to the **Security** tab, and add the site to the **Local intranet zone** if it isn't already there. Close the Internet Options dialog.
 
 5. Using Internet Explorer to view MIM Portal, select **Management Policy Rules**.
 
@@ -147,12 +147,12 @@ The firewall should allow incoming connections to TCP port 5725, 5726, 8086 and 
 
 6.  Launch **Control Panel**.
 7.  Under Network and Internet, select **View network status and tasks**.
-8.  Verify that there is an active network, which is listed as being priv.contoso.local, and a Domain network.
+8.  Verify that there's an active network, which is listed as being priv.contoso.local, and a Domain network.
 9. Close **Control Panel**.
 
 ## Optional: Set up the sample web application
 
-In this section, you can install and configure the sample web application for the MIM PAM REST API.  This component is only needed if you wish to learn how to use the MIM PAM REST API. If you intend to use PowerShell to request and approve access, continue with the next section to install the MIM PAM requestor cmdlets.
+In this section, you'll install and configure the sample web application for the MIM PAM REST API.  This component is only needed if you wish to learn how to use the MIM PAM REST API. If you intend to use PowerShell to request and approve access, continue with the next section to install the MIM PAM requestor cmdlets.
 
 1. From the sample web application archive, download the [Identity Management samples](https://github.com/Azure/identity-management-samples) as a zip file.
 
@@ -209,7 +209,7 @@ Install the MIM PAM requestor cmdlets on the workstation configured in Step 1.
 
 After the installation completes, restart CORPWKSTN to complete the registration of the new PowerShell module.
 
-In the next step, you will establish trust between PRIV and CORP forests.
+In the next step, you'll establish trust between PRIV and CORP forests.
 
 > [!div class="step-by-step"]
 > [« Step 3](step-3-prepare-pam-server.md)
