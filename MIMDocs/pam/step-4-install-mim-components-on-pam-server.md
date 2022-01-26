@@ -164,7 +164,7 @@ In this section, you'll install and configure the sample web application for the
    - physical path C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal, and
    - port 8090.
 
-   This site creation can be done using the following PowerShell command:
+   Use the following PowerShell command to create the site:
 
    ```PowerShell
    New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
