@@ -30,13 +30,13 @@ ms.suite: ems
 > [« Step 1](step-1-prepare-corp-domain.md)
 > [Step 3 »](step-3-prepare-pam-server.md)
 
-In this step you will create a new domain that will provide the bastion environment for administrator authentication.  This forest will need at least one domain controller, a member workstation, and at least one member server. The member server will be configured in the next step.
+In this step, you'll create a new domain that will provide the bastion environment for administrator authentication.  This forest will need at least one domain controller, a member workstation, and at least one member server. The member server will be configured in the next step.
 
 ## Create a new Privileged Access Management domain controller
 
-In this section you will set up a virtual machine to act as a domain controller for a new forest.
+In this section, you'll set up a virtual machine to act as a domain controller for a new forest.
 
-### Install Windows Server 2016
+### Install Windows Server 2016 or later
 
 On another new virtual machine with no software installed, install Windows Server 2016 or later to make a computer “PRIVDC”.
 
@@ -46,7 +46,7 @@ On another new virtual machine with no software installed, install Windows Serve
 
 3. Since the disk will be empty, select **Custom: Install Windows only** and use the uninitialized disk space.
 
-4. After installing the operating system version, sign in to this new computer as the new administrator. Use Control Panel to set the computer name to *PRIVDC*, give it a static IP address on the virtual network, and configure the DNS server to be that of the domain controller installed in the previous step. This will require a server restart.
+4. After installing the operating system version, sign in to this new computer as the new administrator. Use Control Panel to set the computer name to *PRIVDC*. In network settings, give it a static IP address on the virtual network, and configure the DNS server to be that of the domain controller installed in the previous step. This will require a server restart.
 
 5. After the server has restarted, sign in as the administrator. Using Control Panel, configure the computer to check for updates, and install any updates needed. This may require a server restart.
 
@@ -76,7 +76,7 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 Next, promote the server to a domain controller of a new forest.
 
-In this document, the name priv.contoso.local is used as the domain name of the new forest.  The name of the forest is not critical, and it does not need to be subordinate to an existing forest name in the organization. However, both the domain and NetBIOS names of the new forest must be unique and distinct from that of any other domain in the organization.  
+In this guide, the name priv.contoso.local is used as the domain name of the new forest.  The name of the forest is not critical, and it doesn't need to be subordinate to an existing forest name in the organization. However, both the domain and NetBIOS names of the new forest must be unique and distinct from that of any other domain in the organization.
 
 ### Create a domain and forest
 
@@ -87,7 +87,7 @@ In this document, the name priv.contoso.local is used as the domain name of the 
    Install-ADDSForest –DomainMode 7 –ForestMode 7 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
    ```
 
-2. When the popup appears, provide the credentials for the CORP forest administrator (e.g., the username CONTOSO\\Administrator and the corresponding password from step 1).
+2. When the popup appears to configure DNS delegation, provide the credentials for the CORP forest administrator, which in this guide was the username CONTOSO\\Administrator, and the corresponding password from step 1.
 
 3. The PowerShell window will prompt you for a Safe Mode Administrator Password to use. Enter a new password twice. Warning messages for DNS delegation and cryptography settings will appear; these are normal.
 
@@ -169,7 +169,7 @@ Create the user and service accounts for MIM Service and Portal setup. These acc
 
 You need to set up auditing in order for the PAM configuration to be established across forests.
 
-1. Make sure you are signed in as the domain administrator (PRIV\\Administrator).
+1. Make sure you're signed in as the domain administrator (PRIV\\Administrator).
 
 2. Go to **Start** > **Windows Administrative Tools** > **Group Policy Management**.
 
@@ -259,7 +259,7 @@ Perform the following steps on PRIVDC as a domain administrator.
 7. On the Selected Users and Groups tab, click **Add**.  
 8. On the Select Users, Computers, or Groups window, enter *MIMAdmin* and click **Check Names**. After the names are underlined, click **OK** then **Next**.
 9. Select **custom task**, apply to **This folder**, with **General permissions**.
-10. In the permissions list, select the following:
+10. In the permissions list, select the following permissions:
     - **Read**
     - **Write**
     - **Create all Child Objects**
