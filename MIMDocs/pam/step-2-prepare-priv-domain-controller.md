@@ -30,7 +30,7 @@ ms.suite: ems
 > [« Step 1](step-1-prepare-corp-domain.md)
 > [Step 3 »](step-3-prepare-pam-server.md)
 
-In this step you will create a new domain that will provide the bastion environment for administrator authentication.  This forest will need at least one domain controller, and at least one member server. The member server will be configured in the next step.
+In this step you will create a new domain that will provide the bastion environment for administrator authentication.  This forest will need at least one domain controller, a member workstation, and at least one member server. The member server will be configured in the next step.
 
 ## Create a new Privileged Access Management domain controller
 
@@ -328,7 +328,7 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
 
 ## Prepare a PRIV workstation
 
-If you do not already have a workstation computer that will be joined to the PRIV domain for performing maintenance of PRIV resources (such as MIM), follow these instructions to prepare a workstation.  
+Follow these instructions to prepare a workstation.  This will be joined to the PRIV domain for performing maintenance of PRIV resources (such as MIM).
 
 ### Install Windows 10 Enterprise
 
@@ -342,9 +342,11 @@ On another new virtual machine with no software installed, install Windows 10 En
 
 4. Using the Control Panel, domain join the PRIVWKSTN computer to the priv.contoso.local domain. This will require providing the PRIV domain administrator credentials. When this completes, restart the computer PRIVWKSTN.
 
+5. Install the [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/download/details.aspx?id=40784) for 64-bit Windows.
+
 If you want more details, see [securing privileged access workstations](https://technet.microsoft.com/library/mt634654.aspx).
 
-In the next step, you will prepare a PAM server.
+In the next step, you'll prepare a PAM server.
 
 > [!div class="step-by-step"]
 > [« Step 1](step-1-prepare-corp-domain.md)

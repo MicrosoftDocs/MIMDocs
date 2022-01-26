@@ -194,11 +194,11 @@ In this section, you'll install and configure the sample web application for the
 
 ## Install the MIM PAM requestor cmdlets
 
-Install the MIM PAM requestor cmdlets on the workstation configured in Step 1.
+Install the MIM PAM requestor cmdlets on the workstation configured in Step 2.
 
-1.  Sign in to CORPWKSTN as an administrator.
+1.  Sign in to PRIVWKSTN as an administrator.
 
-2.  Download the **Add-ins and extensions** to the CORPWKSTN computer, if not already present.
+2.  Download the **Add-ins and extensions** to the PRIVWKSTN computer, if not already present.
 
 3.  Unpack from the archive the folder **Add-ins and extensions** to a new folder.
 
@@ -208,7 +208,7 @@ Install the MIM PAM requestor cmdlets on the workstation configured in Step 1.
 
 6.  On the PAM Server address, specify as the hostname of the PRIV MIM server `pamsrv.priv.contoso.local`.
 
-After the installation completes, restart CORPWKSTN to complete the registration of the new PowerShell module.
+After the installation completes, restart PRIVWKSTN to complete the registration of the new PowerShell module.
 
 In the next step, you'll establish trust between PRIV and CORP forests.
 

@@ -24,13 +24,13 @@ This step demonstrates that a user can request access to a role via MIM.
 
 Without elevated privileges, Jen cannot access the privileged resource in the CORP forest.
 
-1. Sign out of CORPWKSTN to remove any cached open connections.
-2. Sign in to CORPWKSTN as *CONTOSO\Jen* and switch to the **Desktop** view.
+1. Have Jen sign out of all computers to remove any cached open connections.
+2. Sign in to PRIVWKSTN.
 3. Open a DOS command prompt.
-4. Type the command `dir \\corpwkstn\corpfs`. The error message **Access is denied** should appear.
+4. Type the command `dir \\corpdc\corpfs`. The error message **Access is denied** should appear.
 5. Leave the command prompt window open.
 
-## Request privileged access from MIM.
+## Request privileged access from MIM
 
 > [!NOTE]
 > It is recommended that the workstation be a privileged workstation(PAW).  For more information see [securing devices](/security/compass/privileged-access-devices).
@@ -70,31 +70,11 @@ In the newly opened window, type the following commands.
 
 ```cmd
 whoami /groups
-dir \\corpwkstn\corpfs
+dir \\corpdc\corpfs
 ```
 
 If the dir command fails with the error message **Access is denied**, re-check the trust relationship.
 
-## Activate the privileged role
-
-Activate by requesting privileged access via the PAM sample portal.
-
-1. On CORPWKSTN, make sure that you are signed in as CORP\Jen.
-2. Type the following command in a DOS command window.
-
-    ```cmd
-    runas /user:Priv.Jen@priv.contoso.local "c:\program files\Internet Explorer\iexplore.exe"
-    ```
-
-3. When prompted, type the password for the PRIV.Jen account. A new web browser window will appear.
-4. Navigate to `http://pamsrv.priv.contoso.local:8090` and ensure that a web page from the sample portal is visible.
-5. In Internet Explorer, select **Tools** > **Internet Options** and click the **Security** tab.
-6. Click on the **Local intranet zone** > **Sites** > **Advanced** then add the website to the zone.
-7. Close the **Internet Options** dialogs.
-8. On the left tab, click **Activate**. Select the **PAM role** and then click **Activate**.
-
-> [!Note]
-> In this environment, you can also learn how to develop applications which use the PAM REST API, described in the [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
 ## Summary
 
