@@ -190,6 +190,8 @@ On another new virtual machine with no software installed, install Windows 10 En
 
 4. Using the Control Panel, domain join the CORPWKSTN computer to the contoso.local domain. You will have to provide the Contoso domain administrator credentials. Then when this completes, restart the computer CORPWKSTN.
 
+5. Install the [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/download/details.aspx?id=40784) for 64-bit Windows.
+
 ### Create a resource for demonstration purposes
 
 You will need a resource for demonstrating the security group-based access control with PAM.  If you do not already have a resource, you can use a file folder for the purposes of demonstration.  This will make use of the "Jen" and "CorpAdmins" AD objects you created in the contoso.local domain.

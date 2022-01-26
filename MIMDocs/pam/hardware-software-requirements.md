@@ -54,7 +54,7 @@ For CORPDC (optional):
 
 - Windows Server 2016 or later
 
-For CORPWKSTN:
+For a member workstation:
 
 - [Windows 10](https://technet.microsoft.com/windows/dn798752.aspx)
 
