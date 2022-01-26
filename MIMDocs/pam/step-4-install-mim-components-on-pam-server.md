@@ -30,7 +30,7 @@ ms.suite: ems
 > [« Step 3](step-3-prepare-pam-server.md)
 > [Step 5 »](step-5-establish-trust-between-priv-corp-forests.md)
 
-On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service and Portal and the sample portal web application.
+On PAMSRV, sign in as PRIV\Administrator to be able to install MIM Service.
 
   > [!NOTE]
   > You must be a domain administrator; if you are not running the following commands as a user who does not have write access to the PRIV domain in AD, the install will not succeed.  This is because the MIM installation creates a new AD OU “PAM objects”.
@@ -68,13 +68,13 @@ Follow the guidelines of the installer and complete the installation.
 
 9. Leave the registration portal URL blank.
 
-10. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to the MIM Portal site.
+10. Select the checkbox to open ports 5725 and 5726 in the firewall, and if MIM Portal is being installed, the checkbox to grant all authenticated users access to the MIM Portal site.
 
 11. Leave the PAM REST API hostname empty, and set *8086* as the port number.
 
     ![Binding Information for the PAM REST API - screenshot](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
-12. Configure the MIM PAM REST API account to use the same account as SharePoint (as the MIM Portal is co-located on this server):
+12. Configure the MIM PAM REST API account to use the same account as SharePoint (if the MIM Portal is to be installed co-located on this server):
     - Application Pool Account Name: *SharePoint*
     - Application Pool Account Password: <em>Pass@word1</em> (or the password you created in Step 2)
     - Application Pool Account Domain: *PRIV*
@@ -100,7 +100,6 @@ Follow the guidelines of the installer and complete the installation.
 15. On the Enter Information for MIM Password Portals page, leave checkboxes empty and continue. Click **Next** to continue the installation.
 
 16. After installation completes, the server will reboot.
-17. If you chose to install SharePoint, then verify that the MIM Portal is active and enable users to view their own object resource in MIM.
 
 
 ## Set up management policy rule from PowerShell
@@ -118,6 +117,8 @@ If you installed the MIM Portal, skip to the next section.
 5. Skip to the section below, **Verify the firewall connections**.
 
 ## Set up MIM Portal and management policy rules
+
+If you chose to install SharePoint, then verify that the MIM Portal is active and enable users to view their own object resource in MIM.
 
 1. After PAMSRV reboots, sign in as PRIV\Administrator.
 
