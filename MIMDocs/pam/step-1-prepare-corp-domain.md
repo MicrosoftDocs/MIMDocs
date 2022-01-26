@@ -29,7 +29,7 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [Step 2 »](step-2-prepare-priv-domain-controller.md)
 
-In this step, you will prepare to host the bastion environment. If necessary, you'll also create a domain controller and a member workstation in a new domain and forest (the *CORP* forest) with identities to be managed by the bastion environment. This CORP forest simulates an existing forest that has resources to be managed. This document includes an example resource to be protected, a file share.
+In this step, you'll prepare to host the environment that will be managed by PAM. If necessary, you'll also create a domain controller and a member workstation in a new domain and forest (the *CORP* forest). Access to that forest will be from identities to be managed by the bastion environment, with a *PRIV* forest, created in the next step. This CORP forest simulates an existing forest that has resources to be managed. This document includes an example resource to be protected, a file share.
 
 If you already have an existing Active Directory (AD) domain with a domain controller running Windows Server 2012 R2 or later, where you are a domain administrator, you can use that domain instead, and skip down to the section "Create a group" in this article.
 
@@ -53,7 +53,7 @@ Install Windows Server 2016 or later on a virtual machine to create a computer c
 
 ### Add roles to establish a domain controller
 
-In this section, you will add the Active Directory Domain Services (AD DS), DNS Server, and File Server (part of the File and Storage Services section) roles, and promote this server to a domain controller of a new forest contoso.local.
+In this section, you'll set up the new Windows Server to become a domain controller.  You'll add the Active Directory Domain Services (AD DS), DNS Server, and File Server (part of the File and Storage Services section) roles, and promote this server to a domain controller of a new forest contoso.local.
 
 > [!NOTE]  
 > If you already have a domain to use as your CORP domain, and that domain uses Windows Server 2012 R2 or later as its domain functional level, you can skip to [Create additional users and groups for demonstration purposes](#create-additional-users-and-groups-for-demonstration-purposes).
@@ -103,9 +103,9 @@ In some cases the group may already exist - this is normal if the domain was als
 If you created a new CORP domain, then you should create additional users and groups for demonstrating the PAM scenario. The user and group for demonstration purposes should not be domain administrators or controlled by the adminSDHolder settings in AD.
 
 > [!NOTE]
-> If you already have a domain you will be using as the CORP domain, and it has a user and a group that you can use for demonstration purposes, then you can skip to the section [Configure auditing](#configure-auditing).
+> If you already have a domain you'll be using as the CORP domain, and it has a user and a group that you can use for demonstration purposes, then you can skip to the section [Configure auditing](#configure-auditing).
 
-We're going to create a security group named *CorpAdmins* and a user named *Jen*. You can use different names if you wish.  If you already have an existing user, e.g., with a smartcard, then you do not need to create a new user.
+We're going to create a security group named *CorpAdmins* and a user named *Jen*. You can use different names if you wish.  If you already have an existing user, e.g., with a smartcard, then you won't need to create a new user.
 
 1. Launch PowerShell.
 
@@ -157,7 +157,7 @@ The message **Computer Policy update has completed successfully** should appear 
 
 ### Configure registry settings
 
-In this section you will configure the registry settings that are needed for sID History migration, which will be used for Privileged Access Management group creation.
+In this section you'll configure the registry settings that are needed for sID History migration, which will be used for Privileged Access Management group creation.
 
 1. Launch PowerShell.
 
@@ -173,7 +173,7 @@ This will restart the domain controller, CORPDC. For further information on this
 
 ## Prepare a CORP workstation and resource
 
-If you do not already have a workstation computer joined to the domain, follow these instructions to prepare one.  
+If you don't already have a workstation computer joined to the domain, follow these instructions to prepare one.  
 
 > [!NOTE]
 > If you already have a workstation joined to the domain, skip to [Create a resource for demonstration purposes](#create-a-resource-for-demonstration-purposes).
@@ -194,7 +194,7 @@ On another new virtual machine with no software installed, install Windows 10 En
 
 ### Create a resource for demonstration purposes
 
-You will need a resource for demonstrating the security group-based access control with PAM.  If you do not already have a resource, you can use a file folder for the purposes of demonstration.  This will make use of the "Jen" and "CorpAdmins" AD objects you created in the contoso.local domain.
+You'll need at least one resource in the domain for demonstrating the security group-based access control with PAM.  If you don't already have a resource, you can use a file folder for the purposes of demonstration.  This will make use of the "Jen" and "CorpAdmins" AD objects you created in the contoso.local domain.
 
 1. Connect to the workstation CORPWKSTN. Click the **Switch user** icon, then **Other user**. Make sure that the user CONTOSO\\Jen can log into CORPWKSTN.
 
@@ -218,7 +218,7 @@ You will need a resource for demonstrating the security group-based access contr
    Set-Acl c:\corpfs $acl
    ```
 
-In the next step, you will prepare the PRIV domain controller.
+In the next step, you'll prepare the PRIV domain controller.
 
 > [!div class="step-by-step"]
 > [Step 2 »](step-2-prepare-priv-domain-controller.md)
