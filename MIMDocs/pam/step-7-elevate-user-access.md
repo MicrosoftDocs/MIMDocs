@@ -22,7 +22,7 @@ This step demonstrates that a user can request access to a role via MIM.
 
 ## Verify that Jen cannot access the privileged resource
 
-Without elevated privileges, Jen cannot access the privileged resource in the CORP forest.
+Without elevated privileges, Jen's account won't be able to access the privileged resource in the CORP forest.
 
 1. Have Jen sign out of all computers to remove any cached open connections.
 2. Sign in to PRIVWKSTN.
@@ -33,9 +33,9 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
 ## Request privileged access from MIM
 
 > [!NOTE]
-> It is recommended that the workstation be a privileged workstation(PAW).  For more information see [securing devices](/security/compass/privileged-access-devices).
+> It is recommended that the workstation be a privileged workstation(PAW).  For more information, see the [securing devices](/security/compass/privileged-access-devices) guidance.
 
-1. On PRIVWKSTN, logon as PRIV\priv.jen.
+1. On PRIVWKSTN, logon as `PRIV\priv.jen`.
 2. Click **Start**, **Run**, and enter **PowerShell.exe**.
 3. Type the following command.
 
@@ -43,7 +43,7 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
-2. When prompted, type the password for the PRIV.Jen account. A new command prompt window will appear.
+2. When prompted, type the password for the `PRIV.Jen` account. A new command prompt window will appear.
 3. When the PowerShell window appears, type the following commands.
 
     > [!NOTE]
@@ -57,7 +57,7 @@ Without elevated privileges, Jen cannot access the privileged resource in the CO
     ```
 
 4. After that completes, close the PowerShell window.
-5. In the DOS command window, type the following command
+5. In the command window, type the following command:
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
@@ -78,7 +78,7 @@ If the dir command fails with the error message **Access is denied**, re-check t
 
 ## Summary
 
-Once you have completed the steps in this walkthrough, you will have demonstrated a Privileged Access Management scenario, in which user privileges are elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. The decision of which security groups represent privileged roles is coordinated by the PAM administrator. Once access rights are migrated to the Privileged Access Management system, access that was previously possible with the original user account is now made possible only by signing in with a special privileged account, and made available upon request. As a result, group memberships for highly privileged groups are effective for a limited amount of time.
+Once you've completed the steps in this walkthrough, you'll have demonstrated a Privileged Access Management scenario. In this scenario, user privileges are elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. The decision of which security groups represent privileged roles is coordinated by the PAM administrator. Once you migrate access rights to the Privileged Access Management system, access that was permanently available to the original user account, is now  possible only to special privileged account, and upon request. As a result, group memberships for highly privileged groups are effective for a limited amount of time.
 
 > [!div class="step-by-step"]
 > [« Step 6 ](step-6-transition-group-to-pam.md)
