@@ -171,38 +171,13 @@ In this section you'll configure the registry settings that are needed for sID H
 
 This will restart the domain controller, CORPDC. For further information on this registry setting, see [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](https://support.microsoft.com/kb/322970).
 
-## Prepare a CORP workstation and resource
+## Prepare a CORP resource for demonstration purposes
 
-If you don't already have a workstation computer joined to the domain, follow these instructions to prepare one.  
+You'll need at least one resource in the domain for demonstrating the security group-based access control with PAM.  If you don't already have a resource, you can use a file folder on a server joined to the *CORP* domain for the purposes of demonstration.  This will make use of the "Jen" and "CorpAdmins" AD objects you created in the contoso.local domain.
 
-> [!NOTE]
-> If you already have a workstation joined to the domain, skip to [Create a resource for demonstration purposes](#create-a-resource-for-demonstration-purposes).
+1. Connect to the server as an administrator.
 
-### Install Windows 10 Enterprise as a VM
-
-On another new virtual machine with no software installed, install Windows 10 Enterprise or later to make a computer *CORPWKSTN*.
-
-1. Use Express settings during installation.
-
-2. Note that the installation may not be able to connect to the Internet. Select **Create a local account**. Specify a different username; do not use “Administrator” or “Jen”.
-
-3. Using the Control Panel, give this computer a static IP address on the virtual network, and set the interface’s preferred DNS server to be that of the CORPDC server.
-
-4. Using the Control Panel, domain join the CORPWKSTN computer to the contoso.local domain. You will have to provide the Contoso domain administrator credentials. Then when this completes, restart the computer CORPWKSTN.
-
-5. Install the [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/download/details.aspx?id=40784) for 64-bit Windows.
-
-### Create a resource for demonstration purposes
-
-You'll need at least one resource in the domain for demonstrating the security group-based access control with PAM.  If you don't already have a resource, you can use a file folder for the purposes of demonstration.  This will make use of the "Jen" and "CorpAdmins" AD objects you created in the contoso.local domain.
-
-1. Connect to the workstation CORPWKSTN. Click the **Switch user** icon, then **Other user**. Make sure that the user CONTOSO\\Jen can log into CORPWKSTN.
-
-2. Create a new folder named *CorpFS* and share it with the *CorpAdmins* group.
-
-3. Open PowerShell as an administrator.
-
-4. Type the following commands.
+2. Create a new folder named *CorpFS* and share it with the *CorpAdmins* group.  Open PowerShell as an administrator, and type the following commands.
 
    ```PowerShell
    mkdir c:\corpfs
