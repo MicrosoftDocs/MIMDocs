@@ -82,7 +82,7 @@ Without elevated privileges, Jen's account won't be able to access the privilege
 
 ## Summary
 
-Now that you've completed this walkthrough, you've demonstrated a Privileged Access Management scenario. In this scenario, user privileges were elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. Next, once you migrate access rights to the Privileged Access Management system, access that was permanently available to the original user account, will only possible only to special accounts upon request. As a result, group memberships for highly privileged groups are available only for limited periods of time.
+Now that you've completed this walkthrough, you've demonstrated a Privileged Access Management scenario. In this scenario, user privileges were elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. Next, once you migrate access rights to the Privileged Access Management system, access that was permanently available to the original user account, will only be possible to special accounts upon request. As a result, group memberships for highly privileged groups are available only for limited periods of time.
 
 > [!div class="step-by-step"]
 > [« Step 6 ](step-6-transition-group-to-pam.md)
