@@ -2,7 +2,7 @@
 # required metadata
 
 title: Deploy PAM step 7 – user access | Microsoft Docs
-description: As the final step, grant a privileged user temporary access to demonstrate that your Privileged Access Management deployment was successful.
+description: As the final step, grant a privileged user access to demonstrate that your Privileged Access Management deployment was successful.
 author: billmath
 ms.author: billmath
 manager: daveba
@@ -78,7 +78,7 @@ If the dir command fails with the error message **Access is denied**, recheck th
 
 ## Summary
 
-Now that you've completed this walkthrough, you've demonstrated a Privileged Access Management scenario. In this scenario, user privileges were elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. Next, once you migrate access rights to the Privileged Access Management system, access that was permanently available to the original user account, will only possible only to special privileged account, and upon request. As a result, group memberships for highly privileged groups are effective for a limited amount of time.
+Now that you've completed this walkthrough, you've demonstrated a Privileged Access Management scenario. In this scenario, user privileges were elevated for a limited amount of time, allowing the user to access protected resources with a separate privileged account. As soon as the elevation session expires, the privileged account can no longer access the protected resource. Next, once you migrate access rights to the Privileged Access Management system, access that was permanently available to the original user account, will only possible only to special accounts upon request. As a result, group memberships for highly privileged groups are available only for limited periods of time.
 
 > [!div class="step-by-step"]
 > [« Step 6 ](step-6-transition-group-to-pam.md)
