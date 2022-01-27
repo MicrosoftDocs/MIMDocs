@@ -27,7 +27,7 @@ Without elevated privileges, Jen's account won't be able to access the privilege
 1. Have Jen sign out of all computers to remove any cached open connections.
 2. Sign in to PRIVWKSTN.
 3. Open a DOS command prompt.
-4. Type the command `dir \\corpdc\corpfs`. The error message **Access is denied** should appear.
+4. Type the command that will require the user to have a security group membership.  For example, if the security group is protecting the ability to use a file share `corpfs` on the **CORPDC** computer, type `dir \\corpdc\corpfs`. The error message **Access is denied** should appear.
 5. Leave the command prompt window open.
 
 ## Request privileged access from MIM
@@ -65,15 +65,19 @@ Without elevated privileges, Jen's account won't be able to access the privilege
 
 6. Type the password for the `PRIV.Jen` account. A new command prompt window will appear.
 
-## Validate the elevated access.
-In the newly opened window, type the following commands.
+7. Validate the elevated access in the newly opened window has provided the user with new group memberships. type the following command.
 
-```cmd
-whoami /groups
-dir \\corpdc\corpfs
-```
+    ```cmd
+    whoami /groups
+    ```
 
-If the dir command fails with the error message **Access is denied**, recheck the trust relationship.
+8. Next, type the command which earlier in the step had been shown to have been blocked due to lack of access. For example, if the resource was a file share `corpfs`, type the following command.
+
+    ```cmd
+    dir \\corpdc\corpfs
+    ```
+
+    If the dir command fails with the error message **Access is denied**, recheck the trust relationship.
 
 
 ## Summary
