@@ -193,6 +193,8 @@ You'll need at least one resource in the domain for demonstrating the security g
    Set-Acl c:\corpfs $acl
    ```
 
+3. As the *PRIV* user will be connecting to this server from another forest, you may need to change your firewall configuration on this server to allow the user's computer to be able to connect to this server.
+
 In the next step, you'll prepare the PRIV domain controller.
 
 > [!div class="step-by-step"]
