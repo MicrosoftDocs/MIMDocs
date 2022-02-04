@@ -37,7 +37,7 @@ Before raising the functional level, ensure that the domain controllers, member 
 * All member servers hosting MIM Service for PAM must be Windows Server 2016 or later.
 * The MIM Service software must be MIM 2016 Service Pack 2 or a later hotfix.  See [Microsoft Identity Manager version history](../reference/version-history.md) for more information on the latest hotfixes.
 
-## Step 2 - Raise the functional level
+## Step 2 - Raise the PRIV forest functional level
 
 1. To perform this step, you must be a member of the Enterprise Admins group in the *PRIV* forest.
 
@@ -51,7 +51,9 @@ Before raising the functional level, ensure that the domain controllers, member 
 
 For more information on raising the functional level, or if an error occurs, see [how to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/identity/raise-active-directory-domain-forest-functional-levels).
 
-## Step 3 - Update the domain controller configuration
+6. Close Active Directory Domains and Trusts.
+
+## Step 3 - Update the PRIV domain configuration
 
 Next, authorize the MIM administrators and MIM Service account to create and update shadow principals.
 
@@ -61,6 +63,7 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
    $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
    Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
    ```
+1. Acknowledge the change.
 
 2. Type ADSIEdit.
 
@@ -72,7 +75,7 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
 
 6. Click Add. Specify the accounts “MIMService”, as well as any other MIM administrators who will later be performing New-PAMGroup to create additional PAM groups. For each user, in the allowed permissions list, add “Write”, “Create all child objects”, and “Delete all child objects”. Add the permissions.
 
-7. Change to Advanced Security settings. On the line that allows MIMService access, click Edit. Change the “Applies to” setting to “to this object and all descendant objects”. Update this permission setting and close the security dialog box.
+7. Click Advanced to change to the Advanced Security settings. Select the line that allows MIMService access, and click Edit. Change the “Applies to” setting to “to this object and all descendant objects”. Update this permission setting and close the security dialog box.
 
 8. Close ADSI Edit.
 
@@ -87,8 +90,18 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
     dsacls "CN=AuthN Silos,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g mimadmin:CCDC;msDS-AuthNPolicySilo
     ```
 
-10. Restart the PRIVDC server so that these changes take effect.
+10. Restart the PRIVDC server, and other domain controllers, so that these changes take effect.
 
 ## Step 4 - Update the MIM PAM configuration
 
+1. Stop accepting new PAM requests, and wait for existing PAM requests to be completed.
+1. Make sure you're signed in into the server hosting MIM Service as a MIM administrator.
+1. Launch PowerShell.
+1. Type the following command.
+
+    ```powershell
+    Set-PAMConfiguration -ForestFunctionality DS_BEHAVIOR_2015
+    ```
+
+1. Restart the server where MIM Service is hosted.
 
