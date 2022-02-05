@@ -13,11 +13,19 @@ ms.prod: microsoft-identity-manager
 ---
 # Raise the bastion forest functional level
 
-MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it implemented a "just in time" evaluation engine in the *MIM PAM component* service, to remove members from groups.  With Windows Server 2016, time-limited group memberships are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 offers this and additional security benefits, if you have an existing deployment of MIM PAM with the 2012 functional level, you should plan to upgrade MIM and Windows Server of the bastion forest and raise the functional level.
+MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, time-limited group memberships are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offers this and additional security benefits, if you have an existing deployment of MIM PAM with the 2012 functional level, you should plan to upgrade MIM and Windows Server of the bastion forest and raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (The use of Windows Server 2016 and the Windows Server 2016 functional level in the **CORP** managed forests is recommended, but not required, for the PAM scenario.)
 
 For an existing deployment, raising the functional level of the bastion forest requires additional configuration steps, both in Active Directory and MIM. The steps listed below will ensure that time-limited memberships are enabled and MIM recognizes the new features of that functional level.
 
-## Checking if you need to raise the functional level
+## Step 1 - Upgrade Windows Server and MIM software
+
+Before raising the functional level, ensure that the domain controllers, member servers and MIM meet the minimum version requirements.
+
+* All domain controllers in the bastion environment for the `PRIV` forest must be Windows Server 2016 or later.
+* All member servers hosting MIM Service for PAM must be Windows Server 2016 or later.
+* The MIM Service software must be MIM 2016 version 4.6.607.0 (from February 2022) or a later hotfix.  See [Microsoft Identity Manager version history](../reference/version-history.md) for more information on the latest hotfixes.
+
+## Step 2- check if you need to raise the functional level
 
 1. Make sure you're signed in into the server hosting MIM Service as a MIM administrator.
 2. Launch PowerShell.
@@ -29,15 +37,7 @@ For an existing deployment, raising the functional level of the bastion forest r
 
     If the output is `DS_BEHAVIOR_WIN2012R2`, then you may need to raise the functional level and complete the MIM and PAM configuration, as outlined in the rest of this article.  If the output is `DS_BEHAVIOR_WIN2015`, then you don't need to raise the functional level.
 
-## Step 1 - Upgrade Windows Server and MIM software
-
-Before raising the functional level, ensure that the domain controllers, member servers and MIM meet the minimum version requirements.
-
-* All domain controllers in the bastion environment for the `PRIV` forest must be Windows Server 2016 or later.
-* All member servers hosting MIM Service for PAM must be Windows Server 2016 or later.
-* The MIM Service software must be MIM 2016 Service Pack 2 or a later hotfix.  See [Microsoft Identity Manager version history](../reference/version-history.md) for more information on the latest hotfixes.
-
-## Step 2 - Raise the PRIV forest functional level
+## Step 3 - Raise the PRIV forest functional level
 
 1. To perform this step, you must be a member of the Enterprise Admins group in the *PRIV* forest.
 
@@ -53,7 +53,7 @@ For more information on raising the functional level, or if an error occurs, see
 
 6. Close Active Directory Domains and Trusts.
 
-## Step 3 - Update the PRIV domain configuration
+## Step 4 - Update the PRIV domain configuration
 
 Next, authorize the MIM administrators and MIM Service account to create and update shadow principals.
 
@@ -92,7 +92,7 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
 
 10. Restart the PRIVDC server, and other domain controllers, so that these changes take effect.
 
-## Step 4 - Update the MIM PAM configuration
+## Step 5 - Update the MIM PAM configuration
 
 1. Stop accepting new PAM requests, and wait for existing PAM requests to be completed.
 1. Make sure you're signed in into the server hosting MIM Service as a MIM administrator.
