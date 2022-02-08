@@ -45,13 +45,17 @@ Before raising the functional level, ensure that the domain controllers, member 
 
 3. In the console tree, right-click **Active Directory Domains and Trusts**, and then click **Raise Forest Functional Level**.
 
-4. If the current functional level shown is **Windows Server 2016** or **Windows Server 2019**, then you don't need to raise the functional level, but may need to make further AD or MIM changes.  Close Active Directory Domains and Trusts and continue at the next step.
+4. If the current functional level shown is **Windows Server 2016** or a later functional level, then you don't need to raise the functional level of the forest, but may need to make further AD or MIM changes.
 
-5. In **Select an available forest functional level**, select the value **Windows Server 2016** , and then click **Raise**.
+5. If the functional level is earlier than **Windows Server 2016**, in **Select an available forest functional level**, select the value **Windows Server 2016** , and then click **Raise**.
 
 For more information on raising the functional level, or if an error occurs, see [how to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/identity/raise-active-directory-domain-forest-functional-levels).
 
-6. Close Active Directory Domains and Trusts.
+6. In the console tree, select the domain, and then click **Raise Domain Functional Level**.
+
+7.  If the current functional level shown is earlier than **Windows Server 2016**, in **Select an available forest functional level**, select the value **Windows Server 2016** , and then click **Raise**.
+
+7. Close Active Directory Domains and Trusts.
 
 ## Step 4 - Update the PRIV domain configuration
 
