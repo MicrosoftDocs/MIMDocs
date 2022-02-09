@@ -13,7 +13,7 @@ ms.prod: microsoft-identity-manager
 ---
 # Raise the bastion forest functional level
 
-MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, time-limited group memberships and shadow principal groups are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offers this and additional security benefits, if you have an existing deployment of MIM PAM with the 2012 functional level, you should plan to upgrade MIM and Windows Server of the bastion forest and raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (The use of Windows Server 2016 and the Windows Server 2016 functional level in the **CORP** managed forests is recommended, but not required, for the PAM scenario.)
+MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, time-limited group memberships and shadow principal groups are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offer this and more security benefits, if you have an existing deployment of MIM PAM at the 2012 functional level, you should plan to update MIM and Windows Server so you can raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (Having the **CORP** forests at the Windows Server 2016 functional level is recommended, but not required, for the PAM scenario for any newly created or non-low RID groups.)
 
 For an existing deployment, raising the functional level of the bastion forest requires additional configuration steps, both in Active Directory and MIM. The steps listed below will ensure that time-limited memberships are enabled and MIM recognizes the new features of that functional level.
 
@@ -114,18 +114,15 @@ Next, authorize the MIM administrators and MIM Service accounts to create and up
 
 ## Step 6 - Validate AD shadow principals are being created
 
-After the functional level are raised, the PAM feature is enabled in AD and the MIM configuration changed, then
-
-* MIM will use the TTL feature for memberships in existing PRIV forest groups created using SID history and for shadow security principal groups
-* The `New-PAMGroup` cmdlet will create new shadow security principal groups, rather than use SID history
+After the functional level are raised, the PAM feature is enabled in AD and the MIM configuration changed, then MIM will continue to use the existing PRIV forest groups that were created using SID history, or that are Priv-only groups. In those groups it will use the AD TTL membership feature to time-limit the membership. For any new groups, the `New-PAMGroup` cmdlet will create new shadow security principal groups, rather than use SID history.
 
 1. Create a new security group in a CORP forest domain.  For example, the group could be named "G2".
 1. Make sure you're signed in into the server hosting MIM Service as a MIM administrator.
 1. Launch PowerShell.
-1. Type the following command, referring to the group which was created.
+1. Type the following command, referring to the group that was created.
 
     ```powershell
     New-PAMGroup -SourceDomain "CORP" -SourceGroupName "G2"
     ```
 
-1. When the command completes, check that in the output object, the Source Account SID and Priv Account SID match.  The resulting shadow principal object will have been created in the PRIV domain under `"CN=Shadow Principal Configuration,CN=Services,CN=Configuration"`.
+1. When the command completes, check that in the output object, the Source Account SID and Priv Account SID match.  The resulting shadow principal object will have been created in the PRIV domain under `CN=Shadow Principal Configuration,CN=Services,CN=Configuration`.
