@@ -13,16 +13,19 @@ ms.prod: microsoft-identity-manager
 ---
 # Raise the bastion forest functional level
 
-MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, time-limited group memberships are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offers this and additional security benefits, if you have an existing deployment of MIM PAM with the 2012 functional level, you should plan to upgrade MIM and Windows Server of the bastion forest and raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (The use of Windows Server 2016 and the Windows Server 2016 functional level in the **CORP** managed forests is recommended, but not required, for the PAM scenario.)
+MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, time-limited group memberships and shadow principal groups are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offers this and additional security benefits, if you have an existing deployment of MIM PAM with the 2012 functional level, you should plan to upgrade MIM and Windows Server of the bastion forest and raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (The use of Windows Server 2016 and the Windows Server 2016 functional level in the **CORP** managed forests is recommended, but not required, for the PAM scenario.)
 
 For an existing deployment, raising the functional level of the bastion forest requires additional configuration steps, both in Active Directory and MIM. The steps listed below will ensure that time-limited memberships are enabled and MIM recognizes the new features of that functional level.
+
+
+
 
 ## Step 1 - Upgrade Windows Server and MIM software
 
 Before raising the functional level, ensure that the domain controllers, member servers and MIM meet the minimum version requirements.
 
 * All domain controllers in the bastion environment for the `PRIV` forest must be Windows Server 2016 or later.
-* All member servers hosting MIM Service for PAM must be Windows Server 2016 or later.
+* All member servers hosting MIM Service for PAM must be Windows Server 2016 or later, as needed for the Remote Server Administration Tools.
 * The MIM Service software must be MIM 2016 version 4.6.607.0 (from February 2022) or a later hotfix.  See [Microsoft Identity Manager version history](../reference/version-history.md) for more information on the latest hotfixes.
 
 ## Step 2- check if you need to raise the functional level
@@ -59,7 +62,7 @@ For more information on raising the functional level, or if an error occurs, see
 
 ## Step 4 - Update the PRIV domain configuration
 
-Next, authorize the MIM administrators and MIM Service account to create and update shadow principals.
+Next, authorize the MIM administrators and MIM Service accounts to create and update shadow principals.
 
 1. Enable the Privileged Access Management features in Windows Server 2016 Active Directory are present and enabled in the PRIV forest.  Launch a PowerShell window as administrator and type the following commands.
 
@@ -71,19 +74,19 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
 
 2. Type ADSIEdit.
 
-3. Open the Actions menu, click “Connect To”. On the Connection point setting, change the naming context from “Default naming context” to “Configuration” and click OK.
+3. Open the Actions menu, click "Connect To". On the Connection point setting, change the naming context from "Default naming context" to "Configuration" and click OK.
 
-4. After connecting, on the left side of the window below “ADSI Edit”, expand the Configuration node to see “CN=Configuration,DC=priv,....”. Expand CN=Configuration, and then expand CN=Services.
+4. After connecting, on the left side of the window below "ADSI Edit", expand the Configuration node to see "CN=Configuration,DC=priv,....". Expand CN=Configuration, and then expand CN=Services.
 
-5. Right click on “CN=Shadow Principal Configuration” and click on Properties. When the properties dialog appears, change to the security tab.
+5. Right click on "CN=Shadow Principal Configuration" and click on Properties. When the properties dialog appears, change to the security tab.
 
-6. Click Add. Specify the accounts “MIMService”, as well as any other MIM administrators who will later be performing New-PAMGroup to create additional PAM groups. For each user, in the allowed permissions list, add “Write”, “Create all child objects”, and “Delete all child objects”. Add the permissions.
+6. Click Add. Specify the accounts "MIMService", "MIMMonitor", "MIMComponent", as well as any other MIM administrators who will later be performing New-PAMGroup to create additional PAM groups. For each user, in the allowed permissions list, add "Write", "Create all child objects", and "Delete all child objects". Add the permissions.
 
-7. Click Advanced to change to the Advanced Security settings. Select the line that allows MIMService access, and click Edit. Change the “Applies to” setting to “to this object and all descendant objects”. Update this permission setting and close the security dialog box.
+7. Click Advanced to change to the Advanced Security settings. Select the line that allows MIMService access, and click Edit. Change the "Applies to" setting to "to this object and all descendant objects". Update this permission setting and close the security dialog box.  Repeat for the other accounts.
 
 8. Close ADSI Edit.
 
-9. Next, authorize the MIM administrators to create and update authentication policy. Launch an elevated **Command prompt** and type the following commands, substituting the name of your MIM administrator account for “mimadmin” in each of the four lines:
+9. Next, authorize the MIM administrators to create and update authentication policy. Launch an elevated **Command prompt** and type the following commands, substituting the name of your MIM administrator account for "mimadmin" in each of the four lines:
     ```
     dsacls "CN=AuthN Policies,CN=AuthN Policy Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g mimadmin:RPWPRCWD;;msDS-AuthNPolicy /i:s
 
@@ -109,3 +112,20 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
 
 1. Restart the server where MIM Service is hosted.
 
+## Step 6 - Validate AD shadow principals are being created
+
+After the functional level are raised, the PAM feature is enabled in AD and the MIM configuration changed, then
+
+* MIM will use the TTL feature for memberships in existing PRIV forest groups created using SID history and for shadow security principal groups
+* The `New-PAMGroup` cmdlet will create new shadow security principal groups, rather than use SID history
+
+1. Create a new security group in a CORP forest domain.  For example, the group could be named "G2".
+1. Make sure you're signed in into the server hosting MIM Service as a MIM administrator.
+1. Launch PowerShell.
+1. Type the following command, referring to the group which was created.
+
+    ```powershell
+    New-PAMGroup -SourceDomain "CORP" -SourceGroupName "G2"
+    ```
+
+1. When the command completes, check that in the output object, the Source Account SID and Priv Account SID match.  The resulting shadow principal object will have been created in the PRIV domain under `"CN=Shadow Principal Configuration,CN=Services,CN=Configuration"`.
