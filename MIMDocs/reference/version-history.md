@@ -273,7 +273,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - Cyrillic symbols in the title bar text is displayed correctly
 - Popup windows no longer have the extra scroll bar displaying, when viewed in Internet Explorer
 - Failed “Import Workflow Definition” properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition 
-- <httpRuntime enableVersionHeader="false" /> added to default web.config
+- `<httpRuntime enableVersionHeader="false" />` added to default web.config
 - Special characters in the distinguishedName no longer prevents Self-Service Password Reset from resetting the user’s password in the Active Directory
 - Improvements in the sentences are properly localized in the display
 - MIM Add-in for Outlook includes a copy of the missing Outlook interop binaries

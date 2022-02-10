@@ -264,8 +264,26 @@ Do the following:
 
 ![runstep5 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep5.png)
 
+>[!IMPORTANT]
+>CRLF or new line character serves as a separator between multiple statements.
+>
+
+*Sample SQL query with pagination - incorrect query, will not work as the new line character is used*:
+```
+WITH A AS 
+  (select dense_rank() over (order by BusinessEntityID) 
+    rownumber, BusinessEntityID, DeptID, NationalIDNumber, LoginID, JobTitle, BirthDate, MaritalStatus, HireDate, ModifiedDate, Password 
+    from Employees
+  ) select * from A where rownumber between @StartIndex and @EndIndex
+```
+
+*Sample SQL query with pagination - correct query*:
+```
+WITH A AS (select dense_rank() over (order by BusinessEntityID) rownumber, BusinessEntityID, DeptID, NationalIDNumber, LoginID, JobTitle, BirthDate, MaritalStatus, HireDate, ModifiedDate, Password from Employees) select * from A where rownumber between @StartIndex and @EndInderx
+```
+
 * Multiple result sets queries not supported.
-* SQL query supports the pagination and provide start Index and End Index as a variable to support pagination.
+* SQL query supports the pagination and provide Start Index and End Index as a variable to support pagination.
 
 ### Delta Import
 ![runstep6 image](./media/microsoft-identity-manager-2016-connector-genericsql/runstep6.png)
@@ -311,6 +329,16 @@ If you choose the SQL query option, Export requires three different queries to p
 * **Update Query**: This query runs if any object comes to connector for update in the respective table.
 * **Delete Query**: This query runs if any object comes to connector for deletion in the respective table.
 * Attribute selected from the schema used as a parameter value to the query, for example `Insert into Employee (ID, Name) Values (@ID, @EmployeeName)`
+
+>[!IMPORTANT]
+>CRLF or new line character serves as a separator between multiple statements.
+>
+
+*Sample multi-step update SQL query - the new line character is used to separate SQL statements*:
+```
+update Employee set jobTitle=@JOBTITLE where BusinessEntityID=@BUSINESSENTITYID
+insert into ChangeLog VALUES (@BUSINESSENTITYID)
+```
 
 ## Troubleshooting
 * For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
