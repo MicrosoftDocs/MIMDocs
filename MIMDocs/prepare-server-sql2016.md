@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 04/26/2018
+ms.date: 2/10/2022
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
@@ -45,6 +45,9 @@ ms.suite: ems
 
 > [!IMPORTANT]
 > MIM 2016 SP2 supports SQL AlwaysOn Availability Group (AoAG) listeners with *RegisterAllProvidersIP* option set to 0, meaning that SQL Server AoAG cross-subnet failover is not currently supported.
+
+> [!IMPORTANT]
+> [SQL Transparent Data Encryption](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption) is supported by MIM Synchronization Service and MIM Service and Portal components by MIM SP2 or later builds.
 
 ## Install **SQL Server 2016 Standard/Enterprise Edition**
 
