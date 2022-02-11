@@ -66,11 +66,11 @@ See [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md
 
 7. Copy the values from the LICENSE\_KEY, GROUP\_KEY, and CERT\_PASSWORD parameters in the pf\_auth.cs file into their respective xml elements in the MfaSettings.xml file.
 
-8. In the **<CertFilePath>** XML element, specify the full path name of the cert\_key.p12 file extracted earlier.
+8. In the **\<CertFilePath\>** XML element, specify the full path name of the cert\_key.p12 file extracted earlier.
 
-9. In the **<username>** element enter any username.
+9. In the **\<username\>** element enter any username.
 
-10. In the **<DefaultCountryCode>** element enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
+10. In the **\<DefaultCountryCode\>** element enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
 
 11. Save and overwrite the **MfaSettings.xml** file in the MIM Service folder ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 

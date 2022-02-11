@@ -86,7 +86,7 @@ Once you have downloaded the server, [install](https://docs.microsoft.com/azure/
 <LICENSE_KEY></LICENSE_KEY><br>
 <GROUP_KEY></GROUP_KEY><br>
 <CERT_PASSWORD></CERT_PASSWORD><br>
-<CertFilePath></CertFilePath><br>
+\<CertFilePath\>\</CertFilePath\><br>
 
 2. Update or add the following lines to the following to MfaSettings.xml <br>
 `<Username>mimservice@contoso.com</Username>` <br>
