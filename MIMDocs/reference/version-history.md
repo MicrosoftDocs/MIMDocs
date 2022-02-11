@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 11/09/2021
+ms.date: 2/10/2022
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -35,6 +35,16 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).
 
+## MIM Version 4.6.607.0
+
+- Status: February 10, 2022
+- [Hotfix download](https://www.microsoft.com/download/details.aspx?id=103898)
+- [KB article 5009981](https://support.microsoft.com/help/5009981)
+
+This hotfix contains updates for the MIM PAM components, MIM Service and Portal, MIM Synchronization Service, MIM Self-Service Password portals, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
+
+The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
+
 ## MIM Version 4.6.540.0
 
 - Status: November 9, 2021
@@ -42,8 +52,6 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 - [KB article 5007373](https://support.microsoft.com/help/5007373)
 
 This hotfix adds defense against XSS (cross-site scripting) for the MIM Portal, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
-
-The latest MIM CM version is [4.6.359.0](version-history.md#mim-version-463590).
 
 ## MIM Version 4.6.531.0
 
@@ -182,8 +190,8 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 >- *Denotes New Enhancement 
 
 #### MIM service
-- Azure MFA Server integration
-    -Alternate Multi-Factor Authentication provider
+- Azure AD Multi-Factor Authentication Server integration
+    - Alternate multifactor authentication provider
 
 #### Privilege Access Management 
 - PAM REST API could not be started because it could not load file or assembly
@@ -191,7 +199,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 #### Microsoft Identity Portal
 - Portal are displayed with an incorrect table length
 - Advanced Search dialog of the Portal, the scrollbars don’t display properly
-- Language Pack Language Pack strong name signature verification failed
+- Language Pack strong name signature verification failed
 
 #### Certificate Management
 - Binding redirect statement for REST API
@@ -265,7 +273,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - Cyrillic symbols in the title bar text is displayed correctly
 - Popup windows no longer have the extra scroll bar displaying, when viewed in Internet Explorer
 - Failed “Import Workflow Definition” properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition 
-- <httpRuntime enableVersionHeader="false" /> added to default web.config
+- `<httpRuntime enableVersionHeader="false" />` added to default web.config
 - Special characters in the distinguishedName no longer prevents Self-Service Password Reset from resetting the user’s password in the Active Directory
 - Improvements in the sentences are properly localized in the display
 - MIM Add-in for Outlook includes a copy of the missing Outlook interop binaries
