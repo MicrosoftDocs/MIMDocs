@@ -24,7 +24,7 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 When configuring a PAM role, you can choose how to authorize users that request to activate the role. The choices that the PAM authorization activity implements are:
 
 - Role owner approval
-- [Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Azure MFA](/azure/multi-factor-authentication/multi-factor-authentication)
 
 If neither check is enabled, candidate users are automatically activated for their role.
 
@@ -111,4 +111,4 @@ The following events can be found in the Privileged Access Management event log:
 
 ## Next Steps
 
-- [What is Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [What is Azure MFA](/azure/multi-factor-authentication/multi-factor-authentication)
