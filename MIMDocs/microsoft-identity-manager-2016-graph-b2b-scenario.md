@@ -249,14 +249,14 @@ Flow Rules:
 
 | **Initial Flow Only** | **Use as Existence Test** | **Flow (FIM Value ⇒ Destination Attribute)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [accountName⇒sAMAccountName](javascript:void(0);)                     |
-|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
-|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
-|                       |                           | [sn⇒sn](javascript:void(0);)                                          |
-|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **Y**                 |                           | ["CN="+uid+",OU=B2BGuest,DC=contoso,DC=com"⇒dn](javascript:void(0);) |
-| **Y**                 |                           | [RandomNum(0,999)+userPrincipalName⇒unicodePwd](javascript:void(0);)  |
-| **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
+|                       |                           | `[accountName⇒sAMAccountName](javascript:void(0);)`                     |
+|                       |                           | `[givenName⇒givenName](javascript:void(0);)`                            |
+|                       |                           | `[mail⇒mail](javascript:void(0);)`                                      |
+|                       |                           | `[sn⇒sn](javascript:void(0);)`                                          |
+|                       |                           | `[userPrincipalName⇒userPrincipalName](javascript:void(0);)`            |
+| **Y**                 |                           | `["CN="+uid+",OU=B2BGuest,DC=contoso,DC=com"⇒dn](javascript:void(0);)` |
+| **Y**                 |                           | `[RandomNum(0,999)+userPrincipalName⇒unicodePwd](javascript:void(0);)`  |
+| **Y**                 |                           | `[262656⇒userAccountControl](javascript:void(0);)`                      |
 
 ### Optional Synchronization Rule: Import B2B Guest User Objects SID to allow for login to MIM 
 
@@ -278,9 +278,9 @@ Note that if you configure users to be created in MIM Service, ensure that they 
 
 | **Initial Flow Only** | **Use as Existence Test** | **Flow (Source Value ⇒ FIM Attribute)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
-|                       |                           | ["CONTOSO"⇒domain](javascript:void(0);)                            |
-|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
+|                       |                           | `[sAMAccountName⇒accountName](javascript:void(0);)`                     |
+|                       |                           | `["CONTOSO"⇒domain](javascript:void(0);)`                            |
+|                       |                           | `[objectSid⇒objectSid](javascript:void(0);)`                                      |
 
 
 ## Run the synchronization rules
