@@ -190,8 +190,8 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 >- *Denotes New Enhancement 
 
 #### MIM service
-- Azure MFA Server integration
-    -Alternate Multi-Factor Authentication provider
+- Azure AD Multi-Factor Authentication Server integration
+    - Alternate multifactor authentication provider
 
 #### Privilege Access Management 
 - PAM REST API could not be started because it could not load file or assembly
@@ -199,7 +199,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 #### Microsoft Identity Portal
 - Portal are displayed with an incorrect table length
 - Advanced Search dialog of the Portal, the scrollbars don’t display properly
-- Language Pack Language Pack strong name signature verification failed
+- Language Pack strong name signature verification failed
 
 #### Certificate Management
 - Binding redirect statement for REST API
