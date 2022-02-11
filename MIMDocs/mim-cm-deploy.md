@@ -63,7 +63,7 @@ The diagram below shows an example of the type of environment that may be used. 
 
 The MIM CM configuration wizard requires information to be provided along the way in order for it to complete successfully.
 
-![diagram](media/mim-cm-deploy/image003.png)
+![Diagram showing the environment.](media/mim-cm-deploy/image003.png)
 
 ### Extending the schema
 
@@ -76,7 +76,7 @@ The process of extending the schema is straightforward but must be approached wi
 
 2. Copy the Schema folder to CORPDC then navigate to it.
 
-    ![diagram](media/mim-cm-deploy/image005.png)
+    ![Screenshot showing the schema folder.](media/mim-cm-deploy/image005.png)
 
 3. Run the script resourceForestModifySchema.vbs single Forest scenario. For the Resource forest scenario run the scripts:
    - DomainA â€“ Users located (userForestModifySchema.vbs)
@@ -85,7 +85,7 @@ The process of extending the schema is straightforward but must be approached wi
      >[!NOTE]
      >Schema changes are a one way operation and require a forest recovery to roll back so make sure you have necessary backups. For details on the changes made to the schema by performing this operation review the article [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx)
 
-     ![diagram](media/mim-cm-deploy/image007.png)
+     ![Screenshot showing the schema with command line commands.](media/mim-cm-deploy/image007.png)
 
 4. Run the script and you should receive a success message once that the script completes.
 
@@ -99,9 +99,9 @@ The following table summarizes the accounts and permissions required by MIM CM. 
 
 Users:
 
-![Diagram](media/mim-cm-deploy/image010.png)
+![Screenshot showing user accounts with Name, Type, and Description.](media/mim-cm-deploy/image010.png)
 
-![Diagram](media/mim-cm-deploy/image012.png)
+![Screenshot showing service accounts with Name, Type, Description, and User Logon Name.](media/mim-cm-deploy/image012.png)
 
 | **Role**                   | **User log on name** |
 |----------------------------|---------------------|
@@ -346,7 +346,7 @@ In order to host the website for CM, install and configure IIS.
 
 The MIMCMWebAgent account will be running the MIM CM portal. By default in IIS and up kernel mode authentication is used in IIS by default. You will disable Kerberos kernel mode authentication and configure SPNs on the MIMCMWebAgent account instead. Some command will require elevated permission in active directory and CORPCM server.
 
-![Diagram](media/mim-cm-deploy/image020.png)
+![Screenshot of the Windows PowerShell command line.](media/mim-cm-deploy/image020.png)
 
 ```powershell
 #Kerberos settings
@@ -358,7 +358,7 @@ Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo
 
 **Updating IIS on CORPCM**
 
-![diagram](media/mim-cm-deploy/image022.png)
+![Screenshot of Windows PowerShell updating I I S on CORP C M.](media/mim-cm-deploy/image022.png)
 
 ```powershell
 add-pssnapin WebAdministration
@@ -428,7 +428,7 @@ It is highly recommended that you require SSL on the MIM CM portal. If you donâ€
 
 11. On the **Completed** the Microsoft Identity Manager Certificate Management Setup Wizard page, **click Finish**.
 
-![MIM CM wizard completed](media/mim-cm-deploy/image026.png)
+![Screenshot showing the Finish button on the C M wizard final page.](media/mim-cm-deploy/image026.png)
 
 ### Configuration Wizard of Microsoft Identity Manager 2016 Certificate Management
 
@@ -494,7 +494,7 @@ Before logging in to CORPCM please add MIMINSTALL to **domain Admins, Schema Adm
 
 17. Click **Finish**.
 
-    ![MIM CM wizard completed](media/mim-cm-deploy/image033.png)
+    ![Screenshot of the successful completion of the C M wizard.](media/mim-cm-deploy/image033.png)
 
 18. Close all open windows.
 
@@ -502,7 +502,7 @@ Before logging in to CORPCM please add MIMINSTALL to **domain Admins, Schema Adm
 
 20. Visit site from server CORPCM `https://cm.contoso.com/certificatemanagement`  
 
-    ![diagram](media/mim-cm-deploy/image035.png)
+    ![Screenshot showing the home page for the Microsoft Identity Manager Certificate Management Portal.](media/mim-cm-deploy/image035.png)
 
 ### Verify the CNG Key Isolation Service
 
@@ -891,7 +891,7 @@ Define permissions on the OID container:
 
 **Scripts: Permissions on the OID, Profile Template & Certificate Templates container**
 
-![diagram](media/mim-cm-deploy/image021.png)
+![Screenshot showing Certificate Templates Properties, O I D Properties, and Active Directory Sites and Services.](media/mim-cm-deploy/image021.png)
 
 ```powershell
 import-module activedirectory
@@ -917,7 +917,7 @@ $acl.AddAccessRule($ace)
 
 **Scripts: Delegating permissions on the existing certificate templates.**  
 
-![diagram](media/mim-cm-deploy/image039.png)
+![Screenshot of Windows PowerShell showing delegating permissions.](media/mim-cm-deploy/image039.png)
 
 ```shell
 dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key

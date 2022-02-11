@@ -30,66 +30,66 @@ Also create a user you want to use to connect to the database. In this walkthrou
 The Generic SQL Connector is using ODBC to connect to the remote server. First we need to create a file with the ODBC connection information.
 
 1. Start the ODBC management utility on your server:  
-   ![ODBC](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc.png)
+   ![Screenshot showing a search field with O D B C entered.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc.png)
 2. Select the tab **File DSN**. Click **Add...**.  
-   ![ODBC1](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc1.png)
+   ![Screenshot of the O D B C management utility with the File D S N tab selected.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc1.png)
 3. The out-of-box driver works fine, so select it and click **Next>**.  
-   ![ODBC2](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc2.png)
+   ![Screenshot showing the driver options for the new data source.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc2.png)
 4. Give the file a name, such as **GenericSQL**.  
-   ![ODBC3](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc3.png)
+   ![Screenshot showing an example new file name entered in the field, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc3.png)
 5. Click **Finish**.  
-   ![ODBC4](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc4.png)
+   ![Screenshot showing the new data source details and a Finish button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc4.png)
 6. Time to configure the connection. Give the data source a good description and provide the name of the server running SQL Server.  
-   ![ODBC5](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc5.png)
+   ![Screenshot showing the configuration wizard with an example description and server name, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc5.png)
 7. Select how to authenticate with SQL. In this case, we use Windows Authentication.  
-   ![ODBC6](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc6.png)
+   ![Screenshot showing the authentication step with the integrated windows authentication option selected and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc6.png)
 8. Provide the name of the sample database, **GSQLDEMO**.  
-   ![ODBC7](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc7.png)
+   ![Screenshot showing the database name entered in the database field and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc7.png)
 9. Keep everything default on this screen. Click **Finish**.  
-   ![ODBC8](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc8.png)
+   ![Screenshot showing the default settings on the final step of the wizard and a Finish button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc8.png)
 10. To verify everything is working as expected, click **Test Data Source**.  
-    ![ODBC9](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc9.png)
+    ![Screenshot showing the configuration details of the new O D B C data source and a Test Data Source button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc9.png)
 11. Make sure the test is successful.  
-    ![ODBC10](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc10.png)
+    ![Screenshot showing the test results and an O K button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc10.png)
 12. The ODBC configuration file should now be visible in File DSN.  
-    ![ODBC11](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc11.png)
+    ![Screenshot of the O D B C management utility with the File D S N tab selected and the new O D B C configuration file listed.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/odbc11.png)
 
 We now have the file we need and can start creating the Connector.
 
 ## Create the Generic SQL Connector
 1. In the Synchronization Service Manager UI, select **Connectors** and **Create**. Select **Generic SQL (Microsoft)** and give it a descriptive name.  
-   ![Connector1](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector1.png)
+   ![Screenshot showing the Create Connector wizard with the connector selected and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector1.png)
 2. Find the DSN file you created in the previous section and upload it to the server. Provide the credentials to connect to the database.  
-   ![Connector2](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector2.png)
+   ![Screenshot showing the D S N file with credentials entered and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector2.png)
 3. In this walkthrough, we are making it easy for us and say that there are two object types, **User** and **Group**.
-   ![Connector3](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector3.png)
+   ![Screenshot showing the two object types entered in the fixed value list field, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector3.png)
 4. To find the attributes, we want the Connector to detect those attributes by looking at the table itself. Since **Users** is a reserved word in SQL, we need to provide it in square brackets [ ].  
-   ![Connector4](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector4.png)
+   ![Screenshot showing Attribute Detection value of table and table value of users, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector4.png)
 5. Time to define the anchor attribute and the DN attribute. For **Users**, we use the combination of the two attributes username and EmployeeID. For **group**, we use GroupName (not realistic in real-life, but for this walkthrough it works).
-   ![Connector5](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector5.png)
+   ![Screenshot showing username, employee I D, and group name, with a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector5.png)
 6. Not all attribute types can be detected in a SQL database. The reference attribute type in particular cannot. For the group object type, we need to change the OwnerID and MemberID to reference.  
-   ![Connector6](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector6.png)
+   ![Screenshot showing the updated owner I D and member ID fields, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector6.png)
 7. The attributes we selected as reference attributes in the previous step require the object type these values are a reference to. In our case, the User object type.  
-   ![Connector7](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector7.png)
+   ![Screenshot showing the object type selected, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector7.png)
 8. On the Global Parameters page, select **Watermark** as the delta strategy. Also type in the date/time format **yyyy-MM-dd HH:mm:ss**.
-   ![Connector8](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector8.png)
+   ![Screenshot showing the fields for delta strategy and the date and time format, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector8.png)
 9. On the **Configure Partitions and Hierarchies** page, select both object types.
-   ![Connector9](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector9.png)
+   ![Screenshot showing both object types selected, and Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/connector9.png)
 10. On the **Select Object Types** and **Select Attributes**, select both object types and all attributes. On the **Configure Anchors** page, click **Finish**.
 
 ## Create Run Profiles
 1. In the Synchronization Service Manager UI, select **Connectors**, and **Configure Run Profiles**. Click **New Profile**. We start with **Full Import**.  
-   ![Runprofile1](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile1.png)
+   ![Screenshot showing the Configure Run Profile wizard with Full Import entered in the Name field, and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile1.png)
 2. Select the type **Full Import (Stage Only)**.  
-   ![Runprofile2](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile2.png)
+   ![Screenshot showing the type selected and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile2.png)
 3. Select the partition **OBJECT=User**.  
-   ![Runprofile3](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile3.png)
+   ![Screenshot showing the partition selected and a Next button.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile3.png)
 4. Select **Table** and type **[USERS]**. Scroll down to the multi-valued object type section and enter the data as in the following picture. Select **Finish** to save the step.  
-   ![Runprofile4a](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile4a.png)  
-   ![Runprofile4b](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile4b.png)  
+   ![Screenshot showing operation method Table selected and users in the table field.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile4a.png)  
+   ![Screenshot showing multi-valued object type values entered for name and join condition.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile4b.png)  
 5. Select **New Step**. This time, select **OBJECT=Group**. On the last page, use the configuration as in the following picture. Click **Finish**.  
-   ![Runprofile5a](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile5a.png)  
-   ![Runprofile5b](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile5b.png)  
+   ![Screenshot showing operation method Table selected and group in the table field.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile5a.png)  
+   ![Screenshot showing multi-valued object type values entered for name and join condition.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile5b.png)  
 6. Optional: If you want to, you can configure additional run profiles. For this walkthrough, only the Full Import is used.
 7. Click **OK** to finish changing run profiles.
 
@@ -97,8 +97,8 @@ We now have the file we need and can start creating the Connector.
 Fill out some test data in your sample database. When you are ready, select **Run** and **Full import**.
 
 Here is a user with two phone numbers and a group with some members.  
-![cs1](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/cs1.png)  
-![cs2](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/cs2.png)  
+![Screenshot of data showing a user with two phone numbers.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/cs1.png)  
+![Screenshot of data showing a group with some members.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/cs2.png)  
 
 ## Appendix A
 **SQL script to create the sample database**

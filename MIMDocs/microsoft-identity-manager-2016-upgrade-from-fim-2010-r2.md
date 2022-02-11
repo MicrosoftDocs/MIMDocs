@@ -58,7 +58,7 @@ This guide assumes that you have the following already set up:
 
 3.  Open the **Services** console, locate **Forefront Identity Manager Synchronization Service**, and stop it.
 
-    ![Services console image](media/MIM-UpgFIM1.PNG)
+    ![Screenshot of the services console showing the Forefront Identity Manager Synchronization Service.](media/MIM-UpgFIM1.PNG)
 
 4.  Run the **MIM Synchronization Service installer**. The installer will detect the existing Sync version and suggest an upgrade. Click on the **Update** button to proceed.
 
@@ -94,7 +94,7 @@ This guide assumes that you have the following already set up:
 
 2.  Open the **Services** console, locate **Forefront Identity Manager Service**, and stop it.
 
-    ![Services console image](media/MIM-UpgFIM9.PNG)
+    ![Screenshot of the services console showing Forefront Identity Manager Service.](media/MIM-UpgFIM9.PNG)
 
 3.  Run the MIM Service and Portal installer. Click on the **Install** button to proceed.
 
