@@ -218,7 +218,7 @@ Navigate to the MIM Portal, select Synchronization Rules, and click new.  Create
 On the relationship criteria step, be sure to select "Create resource in FIM".
 ![Screenshot showing the Relationship tab and Relationship Criteria.](media/microsoft-identity-manager-2016-graph-b2b-scenario/9bc4a92136be1557d3596fa2eaa63e61.png)
 
-![Screenshot showing the Inbound Attribute Flow tab.](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
+![Screenshot showing the Inbound Attribute Flow tab on the Synchronization Rule IN screen.](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
 
 Configure the following inbound attribute flow rules.  Be sure to populate the `accountName`,  `userPrincipalName` and `uid` attributes as they will be used later in this scenario :
 

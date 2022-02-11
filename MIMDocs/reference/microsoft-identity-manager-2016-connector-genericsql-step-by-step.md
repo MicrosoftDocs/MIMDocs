@@ -89,7 +89,7 @@ We now have the file we need and can start creating the Connector.
    ![Screenshot showing multi-valued object type values entered for name and join condition.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile4b.png)  
 5. Select **New Step**. This time, select **OBJECT=Group**. On the last page, use the configuration as in the following picture. Click **Finish**.  
    ![Screenshot showing operation method Table selected and group in the table field.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile5a.png)  
-   ![Screenshot showing multi-valued object type values entered for name and join condition.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile5b.png)  
+   ![Screenshot showing object type values entered for name of table and join condition.](./media/microsoft-identity-manager-2016-connector-genericsql-step-by-step/runprofile5b.png)  
 6. Optional: If you want to, you can configure additional run profiles. For this walkthrough, only the Full Import is used.
 7. Click **OK** to finish changing run profiles.
 
