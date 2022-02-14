@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Raise the bastion forest functional level to use AD PAM features| Microsoft Docs
+title: Raise the bastion forest functional level for Microsoft Identity Manager to use AD PAM features| Microsoft Docs
 description: Raise a Privileged Access Management deployment that started with Windows Server 2012 R2 functional level to the Windows Server 2016 functional level.
 author: billmath
 ms.author: billmath
@@ -13,7 +13,7 @@ ms.prod: microsoft-identity-manager
 ---
 # Raise the bastion forest functional level to use AD PAM features
 
-MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, time-limited group memberships and shadow principal groups are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offer this and more security benefits, if you have an existing deployment of MIM PAM at the 2012 functional level, you should plan to update MIM and Windows Server so you can raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (Having the **CORP** forests at the Windows Server 2016 functional level is recommended, but not required, for the PAM scenario for any newly created or non-low RID groups.)
+MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 Active Directory functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, PAM features of time-limited group memberships and shadow principal groups are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offer this and more security benefits, if you have an existing deployment of MIM PAM at the 2012 functional level, you should plan to update MIM and Windows Server so you can raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (Having the **CORP** forests at the Windows Server 2016 functional level is recommended, but not required, for the PAM scenario for any newly created or non-low RID groups.)
 
 For an existing deployment, raising the functional level of the bastion forest requires additional configuration steps, both in Active Directory and MIM. The steps listed below will ensure that time-limited memberships are enabled and MIM recognizes the new features of that functional level.
 
@@ -52,7 +52,7 @@ Before raising the functional level, ensure that the domain controllers, member 
 
 5. If the functional level is earlier than **Windows Server 2016**, in **Select an available forest functional level**, select the value **Windows Server 2016** , and then click **Raise**.
 
-For more information on raising the functional level, or if an error occurs, see [how to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/identity/raise-active-directory-domain-forest-functional-levels).
+   For more information on raising the functional level, or if an error occurs, see [how to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/identity/raise-active-directory-domain-forest-functional-levels).
 
 6. In the console tree, select the domain, and then click **Raise Domain Functional Level**.
 
@@ -126,3 +126,7 @@ After the functional level are raised, the PAM feature is enabled in AD and the 
     ```
 
 1. When the command completes, check that in the output object, the Source Account SID and Priv Account SID match.  The resulting shadow principal object will have been created in the PRIV domain under `CN=Shadow Principal Configuration,CN=Services,CN=Configuration`.
+
+## Next steps
+
+- [elevate a user's access](step-7-elevate-user-access.md)
