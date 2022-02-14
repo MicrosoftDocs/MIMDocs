@@ -319,7 +319,7 @@ verify your configuration, you should run the script in [Using Windows PowerShel
 The following tables show the configuration of the required Fabrikam
 Provisioning synchronization rule. Create the synchronization rule according to the data in the following tables.
 
-| Synchronization rule configuration     |   Data   |
+| Synchronization rule configuration     |   Setting   |
 |----------------------------------------|---------------------------------------------------------------|
 | Name                                   | Active Directory User Outbound Synchronization Rule  |
 | Description                            |           |
@@ -328,30 +328,30 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 | Dependency                             |           |
 
 
-| Scope                             |   Data        |
+| Scope                             |   Setting        |
 |-----------------------------------|---------------|
 | Metaverse Resource Type           | person        |
 | External System                   |Fabrikam ADMA  |
 | External System Resource Type     | user          |
 
-| Relationship                       | Data    |
+| Relationship                       | Setting    |
 |------------------------------------|---------|
 | Create Resource In External System | True    |
 | Enable Deprovisioning              | False   |
 
-| Relationship criteria |Data |
+| Relationship criteria |Setting |
 |-----------------------|---------------------------|
 | ILM Attribute         | Data Source Attribute     |
 | Data Source Attribute | sAMAccountName            |
 
-| Initial outbound attribute flows        |Data                  |        Data      |
+| Initial outbound attribute flows        |Setting 1                  |        Setting 2      |
 |-----------------------------------------|----------------------|------------------------------|
 | Allow nulls                 | Destination                      | Source                       |
 | false                       | dn         | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com")  |
 | false                       | userAccountControl     | **Constant:** 512                              |
 | false                       | unicodePwd                    | Constant: P\@\$\$W0rd                   |
 
-| Persistent outbound attribute flows  |  Data             |  Data        |
+| Persistent outbound attribute flows  |  Setting 1             |  Setting 2        |
 |--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
 | Allow nulls                          | Destination       | Source                                          |
 | false                                | sAMAccountName    | accountName                                     |
@@ -368,14 +368,14 @@ Provisioning synchronization rule. Create the synchronization rule according to 
 The objective of the AD Provisioning Workflow is to add the Fabrikam Provisioning synchronization rule to a resource. The following tables show the
 configuration.  Create a workflow according to the data in the tables below.
 
-| Workflow configuration               |   Detail                                                        |
+| Workflow configuration               |   Setting                                                        |
 |--------------------------------------|-----------------------------------------------------------------|
 | Name                                 | Active Directory User Provisioning Workflow                     |
 | Description                          |                                                                 |
 | Workflow Type                        | Action                                                          |
 | Run On Policy Update                 | False                                                           |
 
-| Synchronization rule                 |   Detail                                                        |
+| Synchronization rule                 |   Setting                                                        |
 |--------------------------------------|-----------------------------------------------------------------|
 | Name                                 | Active Directory User Outbound Synchronization Rule             |
 | Action                               | Add                                                             |
@@ -386,7 +386,7 @@ The required MPR is of type Set Transition and triggers when a resource becomes
 a member of the All Contractors set. The following tables show the
 configuration.  Create an MPR according to the data in the tables below.
 
-| MPR configuration                    |  Detail                                                     |
+| MPR configuration                    |  Setting                                                     |
 |--------------------------------------|-------------------------------------------------------------|
 | Name                                 | AD User Provisioning Management Policy Rule                 |
 | Description                          |                                                             |
@@ -394,12 +394,12 @@ configuration.  Create an MPR according to the data in the tables below.
 | Grants Permissions                   | False                                                       |
 | Disabled                             | False                                                       |
 
-| Transition definition                |  Detail                                                     |
+| Transition definition                |  Setting                                                     |
 |--------------------------------------|-------------------------------------------------------------|
 | Transition Type                      | Transition In                                               |
 | Transition Set                       | All Contractors                                             |
 
-| Policy workflows                     |  Detail                                                     |
+| Policy workflows                     |  Setting                                                     |
 |--------------------------------------|-------------------------------------------------------------|
 | Type                                 | Action                                                      |
 | Display Name                         | Active Directory User Provisioning Workflow                 |
