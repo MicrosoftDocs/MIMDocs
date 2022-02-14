@@ -54,7 +54,7 @@ If you are starting a fresh install, you will need to download the installation 
 
 
 | Scenario | Component | Required for scenario? | DVD ISO folder name | Comments |
-|:----------|:-----------|:---------------------   |:-------------------|:----------|:--------------|
+|----------|-----------|------------------------|---------------------|----------|
 |Synchronization| Sync Service (including connector to AD) | Yes | `Synchronization Service` | |
 | Synchronization | PCNS | No | `Password Change Notification Service` |  To be installed on domain controllers |
 | Synchronization | Connectors for LDAP, SQL, Web Services, PowerShell, Lotus Domino, Graph | No | N/A | Distributed via Download Center |
@@ -86,7 +86,7 @@ Check the [Identity Manager version release history](./reference/version-history
 To determine which update files are necessary, this table lists the components and the name of the corresponding patch (MSP) file in an update.
 
 | Scenario | Component | DVD ISO folder name | Corresponding update patch file name |
-|:----------|:-----------|:-   |:-------------------|:----------|:--------------|
+|----------|-----------|---------------------|--------------------------------------|
 |Synchronization| Sync Service | `Synchronization Service` | `MIMSyncService_x64*.msp` |
 | Self-service | MIM Service, MIM Portal | `Service and Portal` | `MIMService_x64*msp` |
 | Self-service | Add-ins and extensions | `Add-ins and extensions` | `MIMAddinsExtensions*msp` |
