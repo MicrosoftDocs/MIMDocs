@@ -1,17 +1,17 @@
 ---
 # required metadata
 
-title: Raise the bastion forest functional level | Microsoft Docs
+title: Raise the bastion forest functional level to use AD PAM features| Microsoft Docs
 description: Raise a Privileged Access Management deployment that started with Windows Server 2012 R2 functional level to the Windows Server 2016 functional level.
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 01/27/2021
+ms.date: 02/14/2022
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
 ---
-# Raise the bastion forest functional level
+# Raise the bastion forest functional level to use AD PAM features
 
 MIM PAM in MIM 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 functional level of the bastion forest.  For MIM to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the *MIM PAM component* service, that could remove members from groups.  With Windows Server 2016, time-limited group memberships and shadow principal groups are built into Windows Server AD, as described in [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services). As Windows Server 2016 and later versions offer this and more security benefits, if you have an existing deployment of MIM PAM at the 2012 functional level, you should plan to update MIM and Windows Server so you can raise the functional level.  The use of MIM with Windows Server 2012 R2 as the **PRIV** forest functional level is now deprecated. (Having the **CORP** forests at the Windows Server 2016 functional level is recommended, but not required, for the PAM scenario for any newly created or non-low RID groups.)
 
@@ -28,7 +28,7 @@ Before raising the functional level, ensure that the domain controllers, member 
 * All member servers hosting MIM Service for PAM must be Windows Server 2016 or later, as needed for the Remote Server Administration Tools.
 * The MIM Service software must be MIM 2016 version 4.6.607.0 (from February 2022) or a later hotfix.  See [Microsoft Identity Manager version history](../reference/version-history.md) for more information on the latest hotfixes.
 
-## Step 2- check if you need to raise the functional level
+## Step 2 - Check if you need to raise the functional level
 
 1. Make sure you're signed in into the server hosting MIM Service as a MIM administrator.
 2. Launch PowerShell.
