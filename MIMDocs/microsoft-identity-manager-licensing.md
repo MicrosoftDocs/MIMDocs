@@ -52,7 +52,6 @@ Before starting a new install of MIM or an upgrade from an earlier version, ensu
 
 If you are starting a fresh install, you will need to download the installation files for each MIM component that is relevant to your scenario. Then, download any updates for those files, and then download any additional components that are separate downloads from the Download Center.
 
-
 | Scenario | Component | Required for scenario? | DVD ISO folder name | Comments |
 |----------|-----------|------------------------|---------------------|----------|
 |Synchronization| Sync Service (including connector to AD) | Yes | `Synchronization Service` | |
