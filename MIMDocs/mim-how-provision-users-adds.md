@@ -125,10 +125,10 @@ You can run all components on one computer.
 The following table lists the components that are a part of the scenario in this
 guide.
 
-| ![Organizational Unit](media/how-provision-users-adds/image005.jpg)   | Organizational unit                | MIM objects – Organizational unit (OU) that is used as a target for the provisioned users.                        |
+|Icon|Component|Description|
 |----------------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![User accounts](media/how-provision-users-adds/image006.jpg)   | User accounts                      | &#183; **ADMA** – Active Directory user account with sufficient rights to connect to AD DS.<br/> &#183; **FIMMA** - Active Directory user account with sufficient rights to connect to MIM.
-                                                                 |
+| ![Organizational Unit](media/how-provision-users-adds/image005.jpg)   | Organizational unit                | MIM objects – Organizational unit (OU) that is used as a target for the provisioned users.                        |
+| ![User accounts](media/how-provision-users-adds/image006.jpg)   | User accounts                      | &#183; **ADMA** – Active Directory user account with sufficient rights to connect to AD DS.<br/> &#183; **FIMMA** - Active Directory user account with sufficient rights to connect to MIM.|
 | ![Management agents and run profiles](media/how-provision-users-adds/image007.jpg)  | Management agents and run profiles | &#183; **Fabrikam ADMA** – Management agent that exchanges data with AD DS. <br/> &#183; Fabrikam FIMMA - Management agent that exchanges data with MIM.                                                                                 |
 | ![Synchronization rules](media/how-provision-users-adds/image008.jpg)  | Synchronization rules              | Fabrikam Group Outbound Synchronization Rule – Outbound synchronization rule that provisions users to AD DS.                                     |
 | ![Sets](media/how-provision-users-adds/image009.jpg)   | Sets                               | All Contractors – Set with dynamic membership for all objects with an EmployeeType attribute value of Contractor.                                |
@@ -283,13 +283,13 @@ in this guide.
 | Management agent  | Run profile     |
 |-------------------|--------------------------------------|
 | Fabrikam ADMA     | 1. Full import  <br/> 2. Full synchronization <br/> 3. Delta import <br/> 4. Delta synchronization <br/> 5. Export                                                                    |
-| Fabrikam FIMMA   | 1. Full import <br> 2. Full synchronization <br/> 3. Delta Import <br/> 4. Delta synchronization <br/> 5. Export|                                                                                                                                                                                   
+| Fabrikam FIMMA   | 1. Full import <br> 2. Full synchronization <br/> 3. Delta Import <br/> 4. Delta synchronization <br/> 5. Export|
 
 Create run profiles for each management agent according to the previous table.
 
 
 > [!Note]
-> For more information, see the Create a Management Agent Run Profile in MIM Help.                                                                                                                  
+> For more information, see the Create a Management Agent Run Profile in MIM Help.
 > 
 > 
 > [!Important]
