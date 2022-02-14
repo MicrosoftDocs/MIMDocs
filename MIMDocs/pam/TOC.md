@@ -11,6 +11,7 @@
 ### [Define roles](defining-roles-for-pam.md)
 ### [High availability and disaster recovery](high-availability-disaster-recovery-considerations-bastion-environment.md)
 ### [Hardware and software requirements](hardware-software-requirements.md)
+### [Raise the functional level](raise-bastion-functional-level.md)
 ## [Configure MIM for Privileged Access Management](configuring-mim-environment-for-pam.md)
 ### [Step 1 - CORP domain](step-1-prepare-corp-domain.md)
 ### [Step 2 - PRIV domain controller](step-2-prepare-priv-domain-controller.md)
