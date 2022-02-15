@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager 2016 developer reference | Microsoft Docs
-description:
+description: List of MIM developer references by component.
 keywords:
 author: billmath
 ms.author: billmath

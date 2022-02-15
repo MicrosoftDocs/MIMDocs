@@ -2,7 +2,7 @@
 # required metadata
 
 title: Functions reference for Microsoft Identity Manager 2016 | Microsoft Docs
-description:
+description: Descriptions of MIM functions.
 keywords:
 author: billmath
 ms.author: billmath

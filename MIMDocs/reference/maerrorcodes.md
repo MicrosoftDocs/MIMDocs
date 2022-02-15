@@ -2,7 +2,7 @@
 # required metadata
 
 title: Management agent run error codes | Microsoft Docs
-description:
+description: Error codes for the MIM Synchronization Service Manager user interface.
 keywords:
 author: billmath
 ms.author: billmath
