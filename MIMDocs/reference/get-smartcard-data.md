@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get smart card profiles | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to list smart card profiles for a user.
 keywords:
 author: billmath
 ms.author: billmath

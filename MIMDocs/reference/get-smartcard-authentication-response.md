@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get smart card authentication response | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to retrieve the response to a base CSP authentication challenge.
 keywords:
 author: billmath
 ms.author: billmath

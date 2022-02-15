@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get profile data | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to list software certificate profiles for a user.
 keywords:
 author: billmath
 ms.author: billmath

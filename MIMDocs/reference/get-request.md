@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get request | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to list MIM CM requests.
 keywords:
 author: billmath
 ms.author: billmath
