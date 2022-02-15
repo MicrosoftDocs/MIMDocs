@@ -2,7 +2,7 @@
 # required metadata
 
 title: Cancel, abandon, or complete a request | Microsoft Docs
-description: Changing the status of a Microsoft Identity Manager (MIM) Certificate Management (CM) request.
+description: Changing the status of a MIM CM request.
 keywords:
 author: billmath
 ms.author: billmath
