@@ -2,7 +2,7 @@
 # required metadata
 
 title: Planning a bastion environment | Microsoft Docs
-description:
+description: Planning and setting up a bastion environment with a dedicated administrative forest.
 keywords:
 author: billmath
 ms.author: billmath

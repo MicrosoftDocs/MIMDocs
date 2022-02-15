@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager 2016 Best Practices| Microsoft Docs
-description:
+description: Best practices for deploying and operating MIM.
 keywords:
 author: billmath
 ms.author: billmath

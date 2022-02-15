@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft BHOLD Suite Concepts Guide | Microsoft Docs
-description: Get started with the MIM 2016 components by installing and configuring the Synchronization Service.
+description: Understand how Microsoft BHOLD Suite works with MIM 2016.
 keywords:
 author: billmath
 ms.author: billmath

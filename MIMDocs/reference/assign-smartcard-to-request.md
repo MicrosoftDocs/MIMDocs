@@ -2,7 +2,7 @@
 # required metadata
 
 title: Assign a smart card to a request | Microsoft Docs
-description:
+description: Binding a smart card to a specified request.
 keywords:
 author: billmath
 ms.author: billmath

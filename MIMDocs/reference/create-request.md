@@ -2,7 +2,7 @@
 # required metadata
 
 title: Create request | Microsoft Docs
-description:
+description: Instructions and examples for creating a MIM CM request.
 keywords:
 author: billmath
 ms.author: billmath
