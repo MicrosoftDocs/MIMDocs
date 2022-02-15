@@ -2,7 +2,7 @@
 # required metadata
 
 title: Sample enrollment walkthrough | Microsoft Docs
-description:
+description: Virtual smart card self-service enrollment using the MIM CM REST API.
 keywords:
 author: billmath
 ms.author: billmath

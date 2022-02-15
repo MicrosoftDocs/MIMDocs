@@ -2,7 +2,7 @@
 # required metadata
 
 title: Smart card operations | Microsoft Docs
-description:
+description: Articles related to smart card operations in the MIM CM REST API.
 keywords:
 author: billmath
 ms.author: billmath

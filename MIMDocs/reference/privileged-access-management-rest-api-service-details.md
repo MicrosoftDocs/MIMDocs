@@ -2,7 +2,7 @@
 # required metadata
 
 title: PAM REST API service details | Microsoft Docs
-description:
+description: MIM PAM REST API descriptions.
 keywords:
 author: billmath
 ms.author: billmath

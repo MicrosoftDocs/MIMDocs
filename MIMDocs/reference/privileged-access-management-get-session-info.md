@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get PAM session info | Microsoft Docs
-description:
+description: Using the PAM REST API GET command to find the username for the account logged in to a session.
 keywords:
 author: billmath
 ms.author: billmath

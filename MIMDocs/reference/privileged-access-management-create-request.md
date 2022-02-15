@@ -2,7 +2,7 @@
 # required metadata
 
 title: Create PAM request | Microsoft Docs
-description:
+description: Using the PAM REST API POST command to create a request to elevate a role.
 keywords:
 author: billmath
 ms.author: billmath
