@@ -30,13 +30,13 @@ ms.suite: ems
 > [Addendum »](sp1-pam-deployment-addendum.md)
 
 The Deployment package comes with verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
-To use the Deployment Verification, modify the PAMDeploymentConfig.xml section called <PamValidation/> .
+To use the Deployment Verification, modify the PAMDeploymentConfig.xml section called \<PamValidation/\> .
 
 >[!NOTE]
 >Validation requires a Client machine domain joined to the CORP Domain with the PAM client side components installed. Please see Addendum for scripts on how to install a client.
 
-The client machine name must be updated in the <PAMValidationClient/> tag of the PAMDeploymentConfig.xml
-The rest of the data in the <PAMValidation/> node needs to be edited only if it conflicts with existing users/groups, as this validation will attempt to create them.
+The client machine name must be updated in the \<PAMValidationClient/\> tag of the PAMDeploymentConfig.xml
+The rest of the data in the \<PAMValidation/\> node needs to be edited only if it conflicts with existing users/groups, as this validation will attempt to create them.
 Use the following steps to perform validation:
 
 Step 1:
@@ -70,7 +70,7 @@ Step 3:
 
 This step will prompt you for the CORPAdmin credential. Once provided, it will add the required users to the ‘Remote Desktop Users’ and ‘Remote Management Users’ groups.
 On the CORP Client, use the following command to open PowerShell as the PRIV user you are validating. </br></br>
-**Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+`Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe`  </br></br>
 From the PowerShell window, type:
 
 1. cd $env:SYSTEMDRIVE\PAM
