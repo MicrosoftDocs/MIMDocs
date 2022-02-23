@@ -52,13 +52,13 @@ If you're not sure the source of authority you can track this user from the MIM 
 - To perform a review or search of user objects data
     - Open the synchronization service client
         - Using the metaverse designer allow you to see attribute flow imports and precedence.
-![mim-privacy-compliance_1.PNG](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
+![Screenshot of the Synchronization Service Manager showing the Metaverse Designer.](media/mim-privacy-compliance/mim-privacy-compliance_1.PNG)
         - Using the metaverse search allows you to search on any object and attribute within the database
-![mim-privacy-compliance_2.PNG](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
+![Screenshot of the Synchronization Service Manager showing the Metaverse search.](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
 After finding the object, clicking on the object will open the user profile page. The object details provide you with the comprehensive details about the object, its attributes, last modified and source of authority, and related connected data source derived from management agent configuration example below.
 
-![mim-privacy-compliance.PNG](media/mim-privacy-compliance/mim-privacy-compliance.PNG)
+![Screenshot of the Synchronization Service Manager showing a user profile page and Metaverse Object Properties.](media/mim-privacy-compliance/mim-privacy-compliance.PNG)
 
 ### Service and Portal / PAM
 If you have an instance of the Service and Portal or PAM installed being able to search for users is important. 
@@ -154,7 +154,7 @@ Synchronization Service as many ways to handle data or delete data depending on 
 
 It is recommended for the Service & Portal that you keep the default 30 days system resource retention configuration. This tells the service when it will delete,  not only request data but also any object that needs to be cleared from the system. Once the process occurs, all data linked to this object is deleted this includes all SSPR registration data. This plays into the object deletion configuration above. We do have one table were we store the guid of the objects. To reduce the overall size of the table in build 4.4.1459 we added a process called FIM_DeleteExpiredSystemObjectsJob details on this process can be found [here](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
 
-![mim-privacy-compliance-srrc.PNG](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
+![Screenshot showing the System Resource Retention Configuration screen.](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
 
 ### BHOLD
@@ -162,7 +162,7 @@ It is recommended for the Service & Portal that you keep the default 30 days sys
 Bhold like most systems connected to the synchronization service can be configured to delete once the source object like HR is removed. This is configured on the management agent. and controlled by the Object Deletion rules as described under the synchronizations service features.
 
 Another option is to remove the user object right from the BHOLD Core User interface. Depending on setup this could work fine but note provisioning logic could re-create this user if not deleted at the source.
-![mim-privacy-compliance-bholdr.PNG](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
+![Screenshot showing the BHOLD Core User interface.](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
 
 
 ### Certificate Management
@@ -178,12 +178,12 @@ Previous builds FIM/MIM used to collects anonymized telemetry about each deploym
 
 To disable data collection in previous version run change mode and deselect the following prompt:
 
-![mim-privacy-compliance-ceip.PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
+![Screenshot showing the opt-out screen for Microsoft Identify Management Customer Experience Improvement Program.](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
 
 or edit the registry and set the value to 0: (Component)CEIP
 HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
 
-![mim-privacy-compliance-ceip2.PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
+![Screenshot showing the Registry Editor.](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## Next Steps 
 - [For SQL Related privacy Guidance](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
