@@ -507,7 +507,7 @@ first indicator. For example, if you expect new objects to be staged in a
 connector space, but the import statistics returns no “Adds,” there is obviously
 something in your environment that does not work as expected.
 
-![Synchronization statistics](media/how-provision-users-adds/image024.jpg)
+![Screenshot of synchronization statistics.](media/how-provision-users-adds/image024.jpg)
 
 While the synchronization statistics can give you a first indication of whether
 your scenario works as expected, you should use the Search Connector Space and
@@ -555,7 +555,7 @@ perform several operations:
     Britta Simon object and the related ExpectedRuleEntry object are updated
     with attribute values that are a result of the projection.
 
-![Synchronization statistics](media/how-provision-users-adds/image026.jpg)
+![Screenshot of the Connector Space Object Properties window.](media/how-provision-users-adds/image026.jpg)
 
 As already indicated by the synchronization statistics, a provisioning activity
 has taken place on the connector space of the Fabrikam ADMA. When you review the
