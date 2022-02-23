@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get pending PAM requests | Microsoft Docs
-description:
+description: Using the PAM REST API GET command to list pending requests.
 keywords:
 author: billmath
 ms.author: billmath

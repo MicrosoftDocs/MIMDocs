@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get smart card proposed PIN | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to retrieve the server-generated user PIN.
 keywords:
 author: billmath
 ms.author: billmath

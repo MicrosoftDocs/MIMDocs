@@ -2,7 +2,7 @@
 # required metadata
 
 title: Update smart card status | Microsoft Docs
-description:
+description: Updating smart card status from the MIM CM REST API.
 keywords:
 author: billmath
 ms.author: billmath

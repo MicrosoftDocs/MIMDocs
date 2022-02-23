@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager 2016 developer reference | Microsoft Docs
-description:
+description: List of MIM developer references by component.
 keywords:
 author: billmath
 ms.author: billmath
@@ -52,4 +52,4 @@ The developer documentation for Microsoft Identity Manager 2016 is organized by 
  
 ## Next Steps
 
-- [Microsoft Identity Manager (MIM) cmdlets reference](https://docs.microsoft.com/powershell/identitymanager/)
+- [Microsoft Identity Manager (MIM) cmdlets reference](/powershell/identitymanager/)

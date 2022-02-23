@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get user certificates | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to list the certificates associated with a specified user.
 keywords:
 author: billmath
 ms.author: billmath

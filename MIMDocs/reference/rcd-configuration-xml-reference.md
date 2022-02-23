@@ -2,7 +2,7 @@
 # required metadata
 
 title: Resource control display configuration XML reference | Microsoft Docs
-description:
+description: Using RCDC to control how MIM resources appear in the UI.
 keywords:
 author: billmath
 ms.author: billmath

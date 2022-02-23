@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get workflow policy | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to find a workflow's profile template policy
 keywords:
 author: billmath
 ms.author: billmath

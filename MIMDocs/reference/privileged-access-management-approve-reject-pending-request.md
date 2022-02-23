@@ -2,7 +2,7 @@
 # required metadata
 
 title: Approve or reject a pending PAM request | Microsoft Docs
-description:
+description: Using the PAM REST API POST command to respond to pending PAM role requests.
 keywords:
 author: billmath
 ms.author: billmath

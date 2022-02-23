@@ -2,7 +2,7 @@
 # required metadata
 
 title: Policy operations | Microsoft Docs
-description:
+description: Articles related to MIM CM REST API policy operations.
 keywords:
 author: billmath
 ms.author: billmath

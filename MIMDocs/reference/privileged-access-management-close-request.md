@@ -2,7 +2,7 @@
 # required metadata
 
 title: Close PAM request | Microsoft Docs
-description:
+description: Using the PAM REST API POST command to close a request to elevate a role.
 keywords:
 author: billmath
 ms.author: billmath

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get smart card or profile certificates | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to list certificates associated with a smart card or software profile.
 keywords:
 author: billmath
 ms.author: billmath
