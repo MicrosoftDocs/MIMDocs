@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install the Microsoft Identity Manager Sync Service | Microsoft Docs
-description: Get started with the MIM 2016 components by installing and configuring the Synchronization Service.
+description: Installing and configuring the MIM Synchronization Service.
 keywords:
 author: billmath
 ms.author: billmath

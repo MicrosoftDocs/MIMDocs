@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get profile state operations | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to list the operations available to a current user.
 keywords:
 author: billmath
 ms.author: billmath

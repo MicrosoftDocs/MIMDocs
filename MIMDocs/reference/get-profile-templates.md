@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get profile templates | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to list profile templates available to a specified user.
 keywords:
 author: billmath
 ms.author: billmath
