@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get certificate responses | Microsoft Docs
-description:
+description: Description of MIM CM REST API POST request and response parameters.
 keywords:
 author: billmath
 ms.author: billmath

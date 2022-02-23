@@ -2,7 +2,7 @@
 # required metadata
 
 title: Certificate Management REST API service details | Microsoft Docs
-description:
+description: MIM CM REST API descriptions and examples.
 keywords:
 author: billmath
 ms.author: billmath

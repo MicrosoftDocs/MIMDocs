@@ -24,7 +24,7 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 When configuring a PAM role, you can choose how to authorize users that request to activate the role. The choices that the PAM authorization activity implements are:
 
 - Role owner approval
-- [Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Azure MFA](/azure/multi-factor-authentication/multi-factor-authentication)
 
 If neither check is enabled, candidate users are automatically activated for their role.
 
@@ -66,11 +66,11 @@ See [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md
 
 7. Copy the values from the LICENSE\_KEY, GROUP\_KEY, and CERT\_PASSWORD parameters in the pf\_auth.cs file into their respective xml elements in the MfaSettings.xml file.
 
-8. In the **<CertFilePath>** XML element, specify the full path name of the cert\_key.p12 file extracted earlier.
+8. In the **\<CertFilePath\>** XML element, specify the full path name of the cert\_key.p12 file extracted earlier.
 
-9. In the **<username>** element enter any username.
+9. In the **\<username\>** element enter any username.
 
-10. In the **<DefaultCountryCode>** element enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
+10. In the **\<DefaultCountryCode\>** element enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
 
 11. Save and overwrite the **MfaSettings.xml** file in the MIM Service folder ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 
@@ -111,4 +111,4 @@ The following events can be found in the Privileged Access Management event log:
 
 ## Next Steps
 
-- [What is Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [What is Azure MFA](/azure/multi-factor-authentication/multi-factor-authentication)

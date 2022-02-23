@@ -2,7 +2,7 @@
 # required metadata
 
 title: Certificate operations | Microsoft Docs
-description:
+description: Articles related to certificate operations in the MIM CM REST API.
 keywords:
 author: billmath
 ms.author: billmath

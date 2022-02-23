@@ -245,7 +245,7 @@ Add export workflows by following these steps in the Web Service Configuration T
 
 1. Select the export workflow to configure. Under **Export**, select **Add**. The **Arguments** and **Imports** are already defined and are specific to the activities. See the following screens for reference.
 
-    ![Add](media/microsoft-identity-manager-2016-ma-ws-soap/add.png)
+    ![Screenshot showing Add in the navigation panel.](media/microsoft-identity-manager-2016-ma-ws-soap/add.png)
 
 2. Add a **Sequence** activity. Drag the **Sequence** activity designer from the **Toolbox** and drop it on to the Windows Workflow Designer surface. The [Sequence](https://msdn.microsoft.com/library/system.activities.statements.sequence.aspx) activity contains an ordered collection of child activities that it executes in order. Select **Create Variable**. Assign the values to the variables that you're going to use for your logic.
 
@@ -258,19 +258,19 @@ Add export workflows by following these steps in the Web Service Configuration T
 
 4. Select **Properties** and set the **Values** as per below screen. Here **objectToExport** is argument.
 
-    ![Set the properties for the ForEach activity](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-sequence.png)
+    ![Screenshot showing the values set for the ForEach activity.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-sequence.png)
 
 5. Set **DisplayName** as **ForEach\<AnchorAttribute\>**
 
-   ![Set the display name](media/microsoft-identity-manager-2016-ma-ws-soap/add-sequence.png)
+   ![Screenshot showing set DisplayName.](media/microsoft-identity-manager-2016-ma-ws-soap/add-sequence.png)
 
 6. Set **TypeArgument** as `Microsoft.MetadirectoryServices.AnchorAttribute`.
 
-   ![Set the type argument](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-anchor.png)
+   ![Screenshot showing set TypeArgument.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-anchor.png)
 
 7. Add a **Switch** activity within the **ForEach** body of the **AnchorAttribute**.
 
-   ![Add a Switch activity](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-types.png)
+   ![Screenshot showing how to add a Switch activity within the ForEach body of the AnchorAttribute.](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-types.png)
 
 8. Add an expression as per below screen.
 
@@ -278,11 +278,11 @@ Add export workflows by following these steps in the Web Service Configuration T
 
 9. Select **Add a new case** and enter a value for the **EmployeeId**. Drag a **Sequence** activity and within it add an **Assign** activity.
 
-    ![Add a new case and assign it to the sequence](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-employeeid.png)
+    ![Screenshot showing how to add a new case for Employee I d.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-employeeid.png)
 
 10. Assign the **To** and **Value** properties for the **Assign** activity.
 
-    ![Assign the To and Value properties](media/microsoft-identity-manager-2016-ma-ws-soap/anchor-attribute-name.png)
+    ![Screenshot showing the To and Value properties for this activity.](media/microsoft-identity-manager-2016-ma-ws-soap/anchor-attribute-name.png)
 
 11. The **ForEach** activity is used for anchor values. Add another **ForEach** activity to assign non-anchor values. In this example, the **AttributeChange** anchor is used.
 
@@ -306,7 +306,7 @@ Add export workflows by following these steps in the Web Service Configuration T
 
 16. Under **Common**, drag a **WebServiceCallActivity** and set **Values** for its **Arguments**.
 
-    ![Add a Web Service call activity and set the values](media/microsoft-identity-manager-2016-ma-ws-soap/add-employee-attribute.png)
+    ![Screenshot section showing Web Service call activity and setting the values.](media/microsoft-identity-manager-2016-ma-ws-soap/add-employee-attribute.png)
 
     >[!IMPORTANT]
     >Do not change the **Name**, **Direction**, or **Type** for an argument by using this dialog. If any of these values are changed, the activity becomes invalid. Only set the **Value** for the argument. As shown in this figure, the value *wsResponse* is set.
@@ -338,19 +338,19 @@ Delete export workflows by following these steps in the Web Service Configuratio
 
 4. Select **Properties** and set the **Values** per below screen. Here **objectToExport** is argument.
 
-   ![Set the properties for the ForEach activity](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-object-to-export.png)
+   ![Screenshot showing how to set the properties for the ForEach activity.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-object-to-export.png)
 
 5. Set the **DisplayName** as `ForEach\<AnchorAttribute\>`:
 
-   ![Set the display name](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-anchor-type.png)
+   ![Screenshot showing how to set the display name.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-anchor-type.png)
 
 6. Set the **TypeArgument** as `Microsoft.MetadirectoryServices.AnchorAttribute`: 
 
-   ![Set the type argument](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-type-argument.png)
+   ![Screenshot showing how to set the type argument.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-type-argument.png)
 
 7. Add a **Switch** activity within the **ForEach** body of the **AnchorAttribute**.
 
-   ![Add a Switch activity](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-type.png)
+   ![Screenshot showing adding a Switch activity.](media/microsoft-identity-manager-2016-ma-ws-soap/select-net-type.png)
 
 8. Add an expression as per below screen.
 
@@ -358,15 +358,15 @@ Delete export workflows by following these steps in the Web Service Configuratio
 
 9. Select **Add a new case** and enter a value for the **EmployeeId**. Drag a **Sequence** activity and within it add an **Assign** activity.
 
-   ![Add a new case and assign it to the sequence](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-default.png)
+   ![Screenshot showing adding a new case and assigning it to the sequence.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-default.png)
 
 10. Assign the **To** and **Value** properties for the **Assign** activity.
 
-    ![Assign the To and Value properties](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-attribute-flow.png)
+    ![Screenshot showing how to assign the To and Value properties for the assign activities.](media/microsoft-identity-manager-2016-ma-ws-soap/foreach-attribute-flow.png)
 
 11. Under **Common**, drag a **WebServiceCallActivity** and set **Values** for its **Arguments**.
 
-    ![Add a Web Service call activity and set the values](media/microsoft-identity-manager-2016-ma-ws-soap/delete-employee.png)
+    ![Screenshot and call out showing arguments values for adding a Web Service call activity.](media/microsoft-identity-manager-2016-ma-ws-soap/delete-employee.png)
 
     >[!IMPORTANT]
     >Do not change the **Name**, **Direction**, or **Type** for an argument by using this dialog. If any of these values are changed, the activity becomes invalid. Only set the **Value** for the argument. As shown in this figure, the value *employeeID* is set.
@@ -401,7 +401,7 @@ Replace export workflows by following these steps in the Web Service Configurati
 
 6. Under **Common**, drag a **WebServiceCallActivity** and set **Values** for its **Arguments**.
 
-   ![Add a Web Service call activity and set the values](media/microsoft-identity-manager-2016-ma-ws-soap/wsresponse.png)
+   ![Screenshot showing values for adding a Web Service call activity.](media/microsoft-identity-manager-2016-ma-ws-soap/wsresponse.png)
 
    >[!IMPORTANT]
    >Do not change the **Name**, **Direction**, or **Type** for an argument by using this dialog. If any of these values are changed, the activity becomes invalid. Only set the **Value** for the argument. As shown in this figure, the value *employee* is set.

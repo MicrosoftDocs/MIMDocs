@@ -2,7 +2,7 @@
 # required metadata
 
 title: Management agent run error codes | Microsoft Docs
-description:
+description: Error codes for the MIM Synchronization Service Manager user interface.
 keywords:
 author: billmath
 ms.author: billmath
@@ -68,7 +68,7 @@ The following tables list the error codes for the Synchronization Service Manage
 |----|----|  
 | extension&#8209;dll&#8209;exception  | This error occurs if a rules extension causes an exception. If you encounter this error, look at the \<exception-error-info\> element to examine the call stack of the exception. In some cases, the `<rule-error-info>` is present and provides additional information about what rule was being processed when the error occurred.        |
 | extension&#8209;dll&#8209;crash | This error occurs when the process executing the rules extension unexpectedly terminated. This error can only occur when a rule extension is being executed out-of-process. A possible cause for this error value is the rules extension is calling code that causes an access violation. |
-| extension&#8209;dll&#8209;timeout                          | This error occurs if the customer has configured an extension timeout and the call on a single customer extension code entry point exceeds the configured timeout. The `<exception-error-info>` gives contextual information about what entry point was being called when it timed out. In some cases, the `<rule-error-info> is present and provides additional information about which rule was being processed when the error occurred.<br/>**Note**: When debugging the process that's executing the extension, timeouts aren't enforced.  |              
+| extension&#8209;dll&#8209;timeout                          | This error occurs if the customer has configured an extension timeout and the call on a single customer extension code entry point exceeds the configured timeout. The `<exception-error-info>` gives contextual information about what entry point was being called when it timed out. In some cases, the `\<rule-error-info\> is present and provides additional information about which rule was being processed when the error occurred.<br/>**Note**: When debugging the process that's executing the extension, timeouts aren't enforced.  |              
 | extension&#8209;projection&#8209;object&#8209;type&#8209;not&#8209;set        | This error occurs The implementation of the **IMASynchronization.ShouldProjectToMV** method in the rules extension does not specify the metaverse object type.  |
 | extension&#8209;projection&#8209;invalid&#8209;object&#8209;type        | This error occurs when the implementation of the **IMASynchronization.ShouldProjectToMV** method in the rules extension sets the value of the outbound metaverse object type to a value that is not listed in Metaverse Designer of Synchronization Service Manager. Check that the method uses one of the specified object type values.  |
 | extension&#8209;join&#8209;resolution&#8209;invalid&#8209;object&#8209;type   | This error occurs when the implementation of the **IMASynchronization.ResolveJoinSearch** method in the rules extension sets the value of the outbound metaverse object type to a value that is not listed in Metaverse Designer of Synchronization Service Manager. Check that the method sets the value of the outbound metaverse object type to one of the listed object type values.   |

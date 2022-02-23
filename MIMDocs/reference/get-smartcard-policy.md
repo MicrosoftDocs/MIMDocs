@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get smart card policy | Microsoft Docs
-description:
+description: Using the MIM CM REST API GET command to find the profile template policy for a specified workflow.
 keywords:
 author: billmath
 ms.author: billmath

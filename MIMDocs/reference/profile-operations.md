@@ -2,7 +2,7 @@
 # required metadata
 
 title: Profile operations | Microsoft Docs
-description:
+description: Articles related to profile operations in the MIM CM REST API.
 keywords:
 author: billmath
 ms.author: billmath

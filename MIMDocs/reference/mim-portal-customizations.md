@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager 2016 portal customizations | Microsoft Docs
-description:
+description: Using MIM to customize elements of password portals.
 keywords:
 author: billmath
 ms.author: billmath

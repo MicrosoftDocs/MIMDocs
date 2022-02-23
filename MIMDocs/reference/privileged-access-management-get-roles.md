@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get PAM roles | Microsoft Docs
-description:
+description: Using the PAM REST API GET command to list PAM roles.
 keywords:
 author: billmath
 ms.author: billmath

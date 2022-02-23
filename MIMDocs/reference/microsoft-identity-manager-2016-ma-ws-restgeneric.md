@@ -102,7 +102,7 @@ The following steps show you how to create a new project for your data source in
 
 9. For the GETALL method, no queries are required. Leave the parameter values blank. When exporting or importing the REST API, you must define the Sample Request /or Response depending on function. Copy and paste the JSON return when navigating to this sample.
 
-   ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-samples.png)
+   ![Screenshot of the REST Method page in the Web Service Configuration tool.](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-samples.png)
 
 10. Select **Save**. Save the project to `C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions`. 
 
@@ -115,21 +115,21 @@ The following steps show you how to configure object types for your data source 
 
 1. Next step is to define the connector space schema. This is achieved by creating the Object Type and defining their object types. Click **Object Types** in left pane and click **Add** button. Doing this opens below screen. Add a new object type and provide a name. Click the **OK** button.
 
-   ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/object-types.png)
+   ![Screenshot showing the dialogue box to create an object type.](media/microsoft-identity-manager-2016-ma-ws-restgeneric/object-types.png)
 
 2. Adding an object type provides below screen.
 
-   ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/object-type-employee.png)
+   ![Screenshot showing a new object type added.](media/microsoft-identity-manager-2016-ma-ws-restgeneric/object-type-employee.png)
 
 3. The right pane corresponding to object type allows you to maintain the attributes and their properties for the selected object type. Clicking Add button provides below screen where one can add attributes.
 
-   ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employeeid-string.png)
+   ![Screenshot showing the page on which to add attributes to an object type.](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employeeid-string.png)
 
-   ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-id-string.png)
+   ![Screenshot showing the attribute fields for Name and Type.](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-id-string.png)
 
 4. Below screen appears after adding all required attributes.
 
-   ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-object-type-02.png)
+   ![Screenshot showing the completed attributes for an object type.](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-object-type-02.png)
 
 5. Object type and attributes once created, provides blank workflows that cater to the operations performed in Microsoft Identity Manager (MIM).
 

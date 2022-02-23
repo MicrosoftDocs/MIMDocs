@@ -2,7 +2,7 @@
 # required metadata
 
 title: Privileged Access Management REST API reference | Microsoft Docs
-description:
+description: List of resources for using the MIM PAM REST API to manage privileged user accounts.
 keywords:
 author: billmath
 ms.author: billmath

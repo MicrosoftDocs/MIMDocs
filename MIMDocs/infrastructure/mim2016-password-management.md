@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Identity Manager 2016 Password Management| Microsoft Docs
-description:
+description: Using Microsoft Identity Manager to manage passwords in an enterprise environment.
 keywords:
 author: billmath
 ms.author: billmath
