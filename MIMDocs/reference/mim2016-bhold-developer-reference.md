@@ -57,7 +57,7 @@ myScriptProcessor.Initializae("CORP\\b1user");
 myScriptProcessor.GetInfo("OrgUnit", "1");
 ```
 
-Likewise, the **BScript** object can also be accessed via the web service `b1scriptservice`. This is done by adding a web reference to you project using http://<server>:5151/BHOLD/Core/b1scriptservice.asmx where <server> is the server with the BHOLD binaries installed. For more information, see [Adding a web service reference to a Visual Studio project](https://msdn.microsoft.com/library/d9w023sx(v=vs.71).aspx).
+Likewise, the **BScript** object can also be accessed via the web service `b1scriptservice`. This is done by adding a web reference to you project using http://\<server\>:5151/BHOLD/Core/b1scriptservice.asmx where \<server\> is the server with the BHOLD binaries installed. For more information, see [Adding a web service reference to a Visual Studio project](https://msdn.microsoft.com/library/d9w023sx(v=vs.71).aspx).
 
 The following example shows how to use the **GetInfo** function from a web service. This code retrieves the Organizational Unit that has an OrgID of 1 and then displays the name of that Organizational Unit on the screen.
 
@@ -275,8 +275,8 @@ The command script contains a list of functions that are executed by the BHOLD s
 |   parameterName    |                    A valid parameter name.                    |
 |   parameterValue   |                      @variable@ \| value                      |
 |       value        |                   A valid parameter value.                    |
-|   parameterList    |          <parameters> {parameterItem}  </parameters>          |
-|   parameterItem    | <parameter name="parameterName"> parameterValue </parameter>  |
+|   parameterList    |          \<parameters\> {parameterItem}  \</parameters\>          |
+|   parameterItem    | \<parameter name="parameterName"\> parameterValue \</parameter\>  |
 |       return       |                      return="@variable@"                      |
 |      variable      |                    A custom variable name.                    |
 
