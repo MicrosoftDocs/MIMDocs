@@ -64,8 +64,8 @@ The Microsoft MIM Service and Portal Language Pack support the following languag
 ## Certificate Management 
 The Microsoft Certificate Management  supports the following 9 languages. 
 
-|Language|FIM(4.3.x.x)/MIM(4.4.xx)|New MIM(4.5.x.x)
-|-----|-----|-----|-----|
+|Language|FIM(4.3.x.x)/MIM(4.4.xx)|New MIM(4.5.x.x)|
+|-----|-----|-----|
 |Chinese (Simplified)|zh-CN|zh-hans|
 |Chinese (Taiwan)|zh-TW|zh-hant|
 |Dutch|nl-NL|nl|
@@ -79,8 +79,8 @@ The Microsoft Certificate Management  supports the following 9 languages.
 ## Certificate Management Modern Application  
 The Microsoft Certificate Management Modern Application supports the following 33 languages. 
 
-|Language | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
-|-----|-----|-----|-----|
+|Language | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) |New MIM(4.5.x.x) |
+|-----|-----|-----|
 |Dutch|nl-NL|nl|
 |Chinese (Simplified)|zh-CN|zh-hans|
 |Chinese (Taiwan)|zh-TW|zh-hant|

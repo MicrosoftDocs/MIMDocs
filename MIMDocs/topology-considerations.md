@@ -47,10 +47,10 @@ The following table shows the options for hosting each of the MIM components. Th
 
 | | MIM Portal | MIM Service | MIM Sync Service | SQL Server |
 | --- | --- | --- | --- | --- |
-| Same computer | Yes | Yes | Yes | Yes |
-| Separate server | Yes | Yes | Yes | Yes |
-| Network Load Balancing cluster | Yes | Yes | | |
-| Server cluster | | | | Yes |
+| **Same computer** | Yes | Yes | Yes | Yes |
+| **Separate server** | Yes | Yes | Yes | Yes |
+| **Network Load Balancing cluster** | Yes | Yes | | |
+| **Server cluster** | | | | Yes |
 
 
 ## Multitier topology
