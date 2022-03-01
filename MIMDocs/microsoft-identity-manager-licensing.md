@@ -53,10 +53,10 @@ Before starting a new install of MIM or an upgrade from an earlier version, ensu
 If you are starting a fresh install, you will need to download the installation files for each MIM component that is relevant to your scenario. Then, download any updates for those files, and then download any additional components that are separate downloads from the Download Center.
 
 
-| Scenario | Component | Required for scenario? | DVD ISO folder name | Comments |
-|:----------|:-----------|:---------------------   |:-------------------|:----------|:--------------|
-|Synchronization| Sync Service (including connector to AD) | Yes | `Synchronization Service` | |
-| Synchronization | PCNS | No | `Password Change Notification Service` |  To be installed on domain controllers |
+| Scenario       | Component | Required for scenario? | DVD ISO folder name | Comments |
+|:---------------|:-----------------------------------------|:----|:--------------------------|:----------|
+| Synchronization | Sync Service (including connector to AD) | Yes | `Synchronization Service` | |
+| Synchronization | PCNS                                     | No  | `Password Change Notification Service` |  To be installed on domain controllers |
 | Synchronization | Connectors for LDAP, SQL, Web Services, PowerShell, Lotus Domino, Graph | No | N/A | Distributed via Download Center |
 | Privileged Access Management | MIM Service | Yes | `Service and Portal` | |
 | Self-service | MIM Service, MIM Portal | Yes | `Service and Portal` | |
@@ -64,10 +64,10 @@ If you are starting a fresh install, you will need to download the installation 
 | Self-service | SCSM Reporting | No | `Data Warehouse Support Scripts` | |
 | Self-service | Hybrid reporting agent | No | N/A | Distributed via Download Center |
 | Self-service | Language packs | No | `LANGUAGE Packs` | |
-| Certificate Management | CM | Yes | `Certificate Management` | |
-| Certificate Management | CM Bulk Client | No | `CM Bulk Client` | |
-| Certificate Management | CM Client | No | `CM Client`  | |
-| Certificate Management | CM App for Windows | No | `FIMCMModernApp*` | | |
+| Certificate Management | CM                 | Yes | `Certificate Management` | |
+| Certificate Management | CM Bulk Client     | No  | `CM Bulk Client`         | |
+| Certificate Management | CM Client          | No  | `CM Client`              | |
+| Certificate Management | CM App for Windows | No  | `FIMCMModernApp*`        | |
 
 ### Obtaining Windows installer packages
 
@@ -86,15 +86,15 @@ Check the [Identity Manager version release history](./reference/version-history
 To determine which update files are necessary, this table lists the components and the name of the corresponding patch (MSP) file in an update.
 
 | Scenario | Component | DVD ISO folder name | Corresponding update patch file name |
-|:----------|:-----------|:-   |:-------------------|:----------|:--------------|
+|:----------|:-----------|:-------------------|:----------|
 |Synchronization| Sync Service | `Synchronization Service` | `MIMSyncService_x64*.msp` |
-| Self-service | MIM Service, MIM Portal | `Service and Portal` | `MIMService_x64*msp` |
-| Self-service | Add-ins and extensions | `Add-ins and extensions` | `MIMAddinsExtensions*msp` |
-| Self-service | Language packs | `LANGUAGE Packs` | `LANGUAGE Packs.zip` |
-| Access management (BHOLD) | BHOLD | `BHOLD` | `AccessManagementConnector.msi`, `BHOLD*.msi` |
-| Certificate Management | CM |  `Certificate Management` | `MIMCM*.msp` |
-| Certificate Management | CM Bulk Client |  `CM Bulk Client` |`MIMCMBulkClient*msp` |
-| Certificate Management | CM Client | `CM Client` |`MIMCMClient*msp` |
+| Self-service | MIM Service, MIM Portal | `Service and Portal`     | `MIMService_x64*msp` |
+| Self-service | Add-ins and extensions  | `Add-ins and extensions` | `MIMAddinsExtensions*msp` |
+| Self-service | Language packs          | `LANGUAGE Packs`         | `LANGUAGE Packs.zip` |
+| Access management (BHOLD) | BHOLD          | `BHOLD`                   | `AccessManagementConnector.msi`, `BHOLD*.msi` |
+| Certificate Management    | CM             |  `Certificate Management` | `MIMCM*.msp` |
+| Certificate Management    | CM Bulk Client |  `CM Bulk Client`         |`MIMCMBulkClient*msp` |
+| Certificate Management    | CM Client      | `CM Client`               |`MIMCMClient*msp` |
 
 Be sure to read any release notes associated with the update prior to installing the MSP file.
 

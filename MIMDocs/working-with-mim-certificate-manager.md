@@ -119,7 +119,7 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 3. Open the Custom,data file and modify the parameters as necessary.
 
 
-   |                     |                                                                                                                                                                                                          |
+   |Parameter                     |Description                                                                                                                                                                                                         |
    |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |      MIMCM URL      |                                              The FQDN of the portal you used to configure CM. For example, https://mimcmServerAddress/certificatemanagement                                              |
    |      ADFS URL       | If you will be using AD FS, insert your AD FS URL. For example, `https://adfsServerSame/adfs` </br> If ADFS isn’t used, configure this setting with an empty string.  For example,  ```<ADFS URL=""/>``` |

@@ -125,10 +125,10 @@ You can run all components on one computer.
 The following table lists the components that are a part of the scenario in this
 guide.
 
-| ![Organizational Unit](media/how-provision-users-adds/image005.jpg)   | Organizational unit                | MIM objects – Organizational unit (OU) that is used as a target for the provisioned users.                                                       |
+|Icon|Component|Description|
 |----------------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![User accounts](media/how-provision-users-adds/image006.jpg)   | User accounts                      | &#183; **ADMA** – Active Directory user account with sufficient rights to connect to AD DS.<br/> &#183; **FIMMA** - Active Directory user account with sufficient rights to connect to MIM.
-                                                                 |
+| ![Organizational Unit](media/how-provision-users-adds/image005.jpg)   | Organizational unit                | MIM objects – Organizational unit (OU) that is used as a target for the provisioned users.                        |
+| ![User accounts](media/how-provision-users-adds/image006.jpg)   | User accounts                      | &#183; **ADMA** – Active Directory user account with sufficient rights to connect to AD DS.<br/> &#183; **FIMMA** - Active Directory user account with sufficient rights to connect to MIM.|
 | ![Management agents and run profiles](media/how-provision-users-adds/image007.jpg)  | Management agents and run profiles | &#183; **Fabrikam ADMA** – Management agent that exchanges data with AD DS. <br/> &#183; Fabrikam FIMMA - Management agent that exchanges data with MIM.                                                                                 |
 | ![Synchronization rules](media/how-provision-users-adds/image008.jpg)  | Synchronization rules              | Fabrikam Group Outbound Synchronization Rule – Outbound synchronization rule that provisions users to AD DS.                                     |
 | ![Sets](media/how-provision-users-adds/image009.jpg)   | Sets                               | All Contractors – Set with dynamic membership for all objects with an EmployeeType attribute value of Contractor.                                |
@@ -283,13 +283,13 @@ in this guide.
 | Management agent  | Run profile     |
 |-------------------|--------------------------------------|
 | Fabrikam ADMA     | 1. Full import  <br/> 2. Full synchronization <br/> 3. Delta import <br/> 4. Delta synchronization <br/> 5. Export                                                                    |
-| Fabrikam FIMMA   | 1. Full import <br> 2. Full synchronization <br/> 3. Delta Import <br/> 4. Delta synchronization <br/> 5. Export|                                                                                                                                                                                   
+| Fabrikam FIMMA   | 1. Full import <br> 2. Full synchronization <br/> 3. Delta Import <br/> 4. Delta synchronization <br/> 5. Export|
 
 Create run profiles for each management agent according to the previous table.
 
 
 > [!Note]
-> For more information, see the Create a Management Agent Run Profile in MIM Help.                                                                                                                  
+> For more information, see the Create a Management Agent Run Profile in MIM Help.
 > 
 > 
 > [!Important]
@@ -319,72 +319,66 @@ verify your configuration, you should run the script in [Using Windows PowerShel
 The following tables show the configuration of the required Fabrikam
 Provisioning synchronization rule. Create the synchronization rule according to the data in the following tables.
 
-| Synchronization rule configuration                                                                         |                                                                             |                                                           
-|------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
-| Name                                                                                                       | Active Directory User Outbound Synchronization Rule                         |                                                          
-| Description                                                                                               |                                                                             |                                                           
-| Precedence                                                                                                | 2                                                                           |                                                           
-| Data Flow Direction   | Outbound             |       
-| Dependency       |         |                                         
+| Synchronization rule configuration     |   Setting   |
+|----------------------------------------|---------------------------------------------------------------|
+| Name                                   | Active Directory User Outbound Synchronization Rule  |
+| Description                            |           |
+| Precedence                             | 2         |
+| Data Flow Direction                    | Outbound  |
+| Dependency                             |           |
 
 
-| Scope |                                                                             |                                                           
-|--------|-------|
-| Metaverse Resource Type | person |                                                         
-| External System                   |Fabrikam ADMA                                                               |                                                       
-| External System Resource Type                                                                              | user      
+| Scope                             |   Setting        |
+|-----------------------------------|---------------|
+| Metaverse Resource Type           | person        |
+| External System                   |Fabrikam ADMA  |
+| External System Resource Type     | user          |
 
+| Relationship                       | Setting    |
+|------------------------------------|---------|
+| Create Resource In External System | True    |
+| Enable Deprovisioning              | False   |
 
+| Relationship criteria |Setting |
+|-----------------------|---------------------------|
+| ILM Attribute         | Data Source Attribute     |
+| Data Source Attribute | sAMAccountName            |
 
-| Relationship ||
-|------------|---------|
-| Create Resource In External System                                                                         | True                                                                        |                                                           
-| Enable Deprovisioning                                                                                      | False                                                                       |                                                           
+| Initial outbound attribute flows        |Setting 1                  |        Setting 2      |
+|-----------------------------------------|----------------------|------------------------------|
+| Allow nulls                 | Destination                      | Source                       |
+| false                       | dn         | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com")  |
+| false                       | userAccountControl     | **Constant:** 512                              |
+| false                       | unicodePwd                    | Constant: P\@\$\$W0rd                   |
 
-| Relationship criteria                                                                                      | |
-|------------|----------|
-| ILM Attribute     | Data Source Attribute                                                       |
-| Data Source Attribute         | sAMAccountName    |
-
-| Initial outbound attribute flows        | |                                                             |
-|-------------------|---------------------- |---------------|
-| Allow nulls                 | Destination                                                                 | Source                                                    |
-| false                       | dn                                                                          | \+("CN=",displayName,",OU=MIMObjects,DC=fabrikam,DC=com") |
-| false                       | userAccountControl                                                          | **Constant:** 512                                         |
-| false                                                                     | unicodePwd                    | Constant: P\@\$\$W0rd                                    |
-
-| Persistent outbound attribute flows  |                                                                     |                                                           |
+| Persistent outbound attribute flows  |  Setting 1             |  Setting 2        |
 |--------------------------------------|---------------------------------------------------------------------|-----------------------------------------------------------|
-| Allow nulls                                                                                                | Destination                                                                 | Source                                                    |
-| false                                                                                                      | sAMAccountName                                                              | accountName                                               |
-| false                                                                                                      | displayName                                                                 | displayName                                               |
-| false                                                                                                      | givenName                                                                   | firstName                                                 |
-| false                                                                                                      | sn                                                                          | lastName                                                  |
-
+| Allow nulls                          | Destination       | Source                                          |
+| false                                | sAMAccountName    | accountName                                     |
+| false                                | displayName       | displayName                                     |
+| false                                | givenName         | firstName                                       |
+| false                                | sn                | lastName                                        |
 
 
 > [!NOTE]
->  Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.                                                                          
+>  Important Verify that you have selected Initial Flow Only for the attribute flow that has the DN as the destination.
 
 ### Step 7: Create the workflow
 
 The objective of the AD Provisioning Workflow is to add the Fabrikam Provisioning synchronization rule to a resource. The following tables show the
 configuration.  Create a workflow according to the data in the tables below.
 
-| Workflow configuration               |                                                                 |
+| Workflow configuration               |   Setting                                                        |
 |--------------------------------------|-----------------------------------------------------------------|
 | Name                                 | Active Directory User Provisioning Workflow                     |
 | Description                          |                                                                 |
 | Workflow Type                        | Action                                                          |
 | Run On Policy Update                 | False                                                           |
 
-| Synchronization rule                 |                                                                 |
+| Synchronization rule                 |   Setting                                                        |
 |--------------------------------------|-----------------------------------------------------------------|
 | Name                                 | Active Directory User Outbound Synchronization Rule             |
 | Action                               | Add                                                             |
-
-
-
 
 ### Step 8: Create the MPR
 
@@ -392,7 +386,7 @@ The required MPR is of type Set Transition and triggers when a resource becomes
 a member of the All Contractors set. The following tables show the
 configuration.  Create an MPR according to the data in the tables below.
 
-| MPR configuration                    |                                                             |
+| MPR configuration                    |  Setting                                                     |
 |--------------------------------------|-------------------------------------------------------------|
 | Name                                 | AD User Provisioning Management Policy Rule                 |
 | Description                          |                                                             |
@@ -400,21 +394,17 @@ configuration.  Create an MPR according to the data in the tables below.
 | Grants Permissions                   | False                                                       |
 | Disabled                             | False                                                       |
 
-| Transition definition                |                                                             |
+| Transition definition                |  Setting                                                     |
 |--------------------------------------|-------------------------------------------------------------|
 | Transition Type                      | Transition In                                               |
 | Transition Set                       | All Contractors                                             |
 
-| Policy workflows                     |                                                             |
+| Policy workflows                     |  Setting                                                     |
 |--------------------------------------|-------------------------------------------------------------|
 | Type                                 | Action                                                      |
 | Display Name                         | Active Directory User Provisioning Workflow                 |
 
-
-
-
 ## Initializing your Environment
-
 
 The objectives of the initialization phase are as follows:
 
@@ -428,17 +418,14 @@ The objectives of the initialization phase are as follows:
 The following table lists the run profiles that are part of the initialization
 phase.  Run the run profiles according to the table below.
 
-| Run                                                                                                           | Management agent                                      | Run profile          |
+| Run                       | Management agent                                      | Run profile          |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|----------------------|
-| 1                                                                                                             | Fabrikam FIMMA                                        | Full import          |
-| 2                                                                                                             |                                                       | Full synchronization |
-| 3                                                                                                             |                                                       | Export               |
-| 4                                                                                                             |                                                       | Delta import         |
-|                                                                                                               |                                                       |                      |
-| 5                                                                                                             | Fabrikam ADMA                                         | Full import          |
-| 6                                                                                                             |                                                       | Full synchronization |
-
-
+| 1                         | Fabrikam FIMMA                                        | Full import          |
+| 2                         |                                                       | Full synchronization |
+| 3                         |                                                       | Export               |
+| 4                         |                                                       | Delta import         |
+| 5                         | Fabrikam ADMA                                         | Full import          |
+| 6                         |                                                       | Full synchronization |
 
 > [!NOTE]
 > You should verify that your outbound synchronization rule has been successfully projected into the metaverse.
@@ -470,8 +457,6 @@ The following table lists the properties of the sample user. Create a sample use
 | Account Name                           | BSimon                                                         |
 | Domain                                 | Fabrikam                                                       |
 | Employee Type                          | Contractor                                                     |
-
-
 
 ### Verify the provisioning requisites of the sample user
 
