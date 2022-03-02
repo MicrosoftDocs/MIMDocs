@@ -31,7 +31,7 @@ The initial scenario for the Microsoft Identity Manager connector for Microsoft 
 management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
-To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 SP1 with Azure Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
+To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 and the Azure AD Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
 
 ### Other identity management scenarios
 
@@ -126,7 +126,7 @@ Picture 5. Connectivity page
 
 The connectivity page (Picture 5) contains the Graph API version that is used
 and tenant name. The Client ID and Client Secret represent the Application ID and
-Key value of the WebAPI application that must be created in Azure AD.
+Key value of the application that was previously created in Azure AD.
 
 The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you will need to change your configuration to use the [endpoints for the national cloud](https://docs.microsoft.com/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
@@ -141,7 +141,7 @@ Global parameters page contains the following settings:
 - DateTime format – format that is used for any attribute with Edm.DateTimeOffset type. All dates are converted to string by using that format during the import. Set format is applied for any attribute, which
 saves date.
 
- - HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP call to WebAPI application.
+ - HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP call to Graph.
 
  - Force change password for created user at next sign – this option is used for new user that will be created during the export. If option is enabled, then [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) property will be set to true, otherwise it will be false.
 
@@ -162,7 +162,7 @@ saves date.
 
     -   Export (Add, Update, Delete)
 
-Additional object types may be visible when the Graph beta endpoint is configured to be used.
+Additional object types may be visible when you configure the connector to use the Graph beta endpoint.
 
 The list of attribute types that are supported:
 
@@ -179,7 +179,7 @@ The list of attribute types that are supported:
 
 Multivalued attributes (Collection) are also supported for any of a type from the list above.
 
-The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename is not needed, because Graph API does not allow an object to change its ‘id’ attribute.
+The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename is not needed, because Graph API does not allow an object to change its `id` attribute.
 
 
 ## Access token lifetime
