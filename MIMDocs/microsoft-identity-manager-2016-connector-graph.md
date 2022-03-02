@@ -58,7 +58,7 @@ The connector can be used for other specific identity management scenarios invol
 
     Picture 2. Application ID
 
-3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select needful Duration. Save changes. A secret value will not be available after leaving the page.
+3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value will not be available to view again after leaving the page.
 
     ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
@@ -99,9 +99,9 @@ The connector can be used for other specific identity management scenarios invol
 6.  Before you install the Connector, make sure you have the following on the synchronization server: 
 
  - Microsoft .NET 4.5.2 Framework or later
- - Microsoft Identity Manager 2016 SP1, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
+ - Microsoft Identity Manager 2016 SP2, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
 
-7. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP1, is available as a download from the
+7. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP2, is available as a download from the
 [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=51495).
 
 8.  Restart MIM Synchronization Service.
@@ -128,6 +128,8 @@ The connectivity page (Picture 5) contains the Graph API version that is used
 and tenant name. The Client ID and Client Secret represent the Application ID and
 Key value of the WebAPI application that must be created in Azure AD.
 
+The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you will need to change your configuration to use the [endpoints for the national cloud](https://docs.microsoft.com/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
+
 11. Make any necessary changes on the Global Parameters page:
 
 ![Global parameters page image](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
@@ -146,7 +148,7 @@ saves date.
 ## Configuring the connector schema and operations
 
 
-12.   Configure the schema.  The connector supports the following list of object types:
+12.   Configure the schema.  The connector supports the following list of object types when used with the Graph v1.0 endpoint:
 
 -   User
 
@@ -160,6 +162,7 @@ saves date.
 
     -   Export (Add, Update, Delete)
 
+Additional object types may be visible when the Graph beta endpoint is configured to be used.
 
 The list of attribute types that are supported:
 
@@ -266,5 +269,6 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 
 - [Graph Explorer, great for troubleshooting HTTP call issues]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Versioning, support, and breaking change policies for Microsoft Graph](https://docs.microsoft.com/graph/versioning-and-support)
+- [National cloud deployments of Microsoft Graph](https://docs.microsoft.com/graph/deployments)
 - [Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
 [MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
