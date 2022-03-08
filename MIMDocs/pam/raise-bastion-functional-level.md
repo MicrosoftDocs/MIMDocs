@@ -13,7 +13,7 @@ ms.prod: microsoft-identity-manager
 ---
 # Raise the bastion forest functional level to use Active Directory PAM features
 
-Microsoft Identity Manager (Identity Manager) privileged access management (PAM) in Identity Manager 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 Active Directory functional level of the bastion forest.
+Microsoft Identity Manager privileged access management (PAM) in Identity Manager 2016 was originally designed to operate with either the Windows Server 2012 R2 or Windows Server 2016 Active Directory functional level of the bastion forest.
 
 For Identity Manager to use Windows Server 2012 R2, it contained a "just in time" evaluation engine in the Identity Manager PAM component service that could remove members from groups. With Windows Server 2016, PAM features of time-limited group memberships and shadow principal groups are built into Windows Server Active Directory. For more information, see [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services).
 
