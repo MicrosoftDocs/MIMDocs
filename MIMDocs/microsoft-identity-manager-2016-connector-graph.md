@@ -31,7 +31,7 @@ The initial scenario for the Microsoft Identity Manager connector for Microsoft 
 management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
-To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 SP1 with Azure Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
+To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 and the Azure AD Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
 
 ### Other identity management scenarios
 
@@ -58,7 +58,7 @@ The connector can be used for other specific identity management scenarios invol
 
     Picture 2. Application ID
 
-3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select needful Duration. Save changes. A secret value will not be available after leaving the page.
+3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value will not be available to view again after leaving the page.
 
     ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
@@ -99,9 +99,9 @@ The connector can be used for other specific identity management scenarios invol
 6.  Before you install the Connector, make sure you have the following on the synchronization server: 
 
  - Microsoft .NET 4.5.2 Framework or later
- - Microsoft Identity Manager 2016 SP1, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
+ - Microsoft Identity Manager 2016 SP2, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
 
-7. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP1, is available as a download from the
+7. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP2, is available as a download from the
 [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=51495).
 
 8.  Restart MIM Synchronization Service.
@@ -126,7 +126,9 @@ Picture 5. Connectivity page
 
 The connectivity page (Picture 5) contains the Graph API version that is used
 and tenant name. The Client ID and Client Secret represent the Application ID and
-Key value of the WebAPI application that must be created in Azure AD.
+Key value of the application that was previously created in Azure AD.
+
+The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you will need to change your configuration to use the [endpoints for the national cloud](https://docs.microsoft.com/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
 11. Make any necessary changes on the Global Parameters page:
 
@@ -139,14 +141,14 @@ Global parameters page contains the following settings:
 - DateTime format – format that is used for any attribute with Edm.DateTimeOffset type. All dates are converted to string by using that format during the import. Set format is applied for any attribute, which
 saves date.
 
- - HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP call to WebAPI application.
+ - HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP call to Graph.
 
  - Force change password for created user at next sign – this option is used for new user that will be created during the export. If option is enabled, then [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) property will be set to true, otherwise it will be false.
 
 ## Configuring the connector schema and operations
 
 
-12.   Configure the schema.  The connector supports the following list of object types:
+12.   Configure the schema.  The connector supports the following list of object types when used with the Graph v1.0 endpoint:
 
 -   User
 
@@ -160,6 +162,7 @@ saves date.
 
     -   Export (Add, Update, Delete)
 
+Additional object types may be visible when you configure the connector to use the Graph beta endpoint.
 
 The list of attribute types that are supported:
 
@@ -176,7 +179,7 @@ The list of attribute types that are supported:
 
 Multivalued attributes (Collection) are also supported for any of a type from the list above.
 
-The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename is not needed, because Graph API does not allow an object to change its ‘id’ attribute.
+The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename is not needed, because Graph API does not allow an object to change its `id` attribute.
 
 
 ## Access token lifetime
@@ -266,5 +269,6 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 
 - [Graph Explorer, great for troubleshooting HTTP call issues]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Versioning, support, and breaking change policies for Microsoft Graph](https://docs.microsoft.com/graph/versioning-and-support)
+- [National cloud deployments of Microsoft Graph](https://docs.microsoft.com/graph/deployments)
 - [Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
 [MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
