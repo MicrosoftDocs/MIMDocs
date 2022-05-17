@@ -50,7 +50,7 @@ Hybrid reporting undergoes the following process:
 ## Next steps
 Learn more about:
 - [Working with Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
-- [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- [Reporting retention policies](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
-- [Microsoft Azure log integration (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
-- [Azure Active Directory reporting API](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
+- [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs)
+- [Reporting retention policies](/azure/active-directory/reports-monitoring/reference-reports-data-retention)
+- [Microsoft Azure log integration (SIEM)](/previous-versions/azure/security/fundamentals/azure-log-integration-overview)
+- [Azure Active Directory reporting API](/azure/active-directory/reports-monitoring/concept-reporting-api)

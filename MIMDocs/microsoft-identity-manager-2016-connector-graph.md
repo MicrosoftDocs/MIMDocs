@@ -28,7 +28,7 @@ The [Microsoft Identity Manager connector for Microsoft Graph](https://go.micros
 
 
 The initial scenario for the Microsoft Identity Manager connector for Microsoft Graph is as a connector to help automate AD DS account lifecycle
-management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish)
+management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
 To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 and the Azure AD Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
@@ -84,7 +84,7 @@ The connector can be used for other specific identity management scenarios invol
     | Import Group          | `Group.Read.All` or `Group.ReadWrite.All`                                                | Application     |
     | Import User           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All` | Application     |
 
-    More details about required permissions could be found in the [permissions reference](https://docs.microsoft.com/graph/permissions-reference).
+    More details about required permissions could be found in the [permissions reference](/graph/permissions-reference).
 
 >[!NOTE]
 >**Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
@@ -128,7 +128,7 @@ The connectivity page (Picture 5) contains the Graph API version that is used
 and tenant name. The Client ID and Client Secret represent the Application ID and
 Key value of the application that was previously created in Azure AD.
 
-The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you will need to change your configuration to use the [endpoints for the national cloud](https://docs.microsoft.com/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
+The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you will need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
 11. Make any necessary changes on the Global Parameters page:
 
@@ -216,7 +216,7 @@ Make sure that the attribute used in filter expression is selected in connector 
 ![Connector settings page image with a displayName attribute selected](media/microsoft-identity-manager-2016-ma-graph/connector-attributes-selected.png)
 
 
-For more information about *$filter* query parameter usage, see this article: [Use query parameters to customize responses](https://docs.microsoft.com/graph/query-parameters#filter-parameter).
+For more information about *$filter* query parameter usage, see this article: [Use query parameters to customize responses](/graph/query-parameters#filter-parameter).
 
 >[!NOTE]
 >Delta query endpoint currently does not offer filtering capabilities, therefore usage of filters is limited to full import only. You will get an error trying to start delta import run with query filters enabled.
@@ -254,7 +254,7 @@ expired.”:
 Picture 7. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, the access token expires after 1 hour. To increase expiration time, see [this article](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
+Azure side. By default, the access token expires after 1 hour. To increase expiration time, see [this article](/azure/active-directory/develop/active-directory-configurable-token-lifetimes).
 
 Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 
@@ -268,7 +268,7 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1,
 ## Next steps
 
 - [Graph Explorer, great for troubleshooting HTTP call issues]( https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Versioning, support, and breaking change policies for Microsoft Graph](https://docs.microsoft.com/graph/versioning-and-support)
-- [National cloud deployments of Microsoft Graph](https://docs.microsoft.com/graph/deployments)
+- [Versioning, support, and breaking change policies for Microsoft Graph](/graph/versioning-and-support)
+- [National cloud deployments of Microsoft Graph](/graph/deployments)
 - [Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
 [MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)

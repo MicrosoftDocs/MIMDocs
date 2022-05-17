@@ -67,22 +67,22 @@ If you installed the Portal, you can use the UI to search on any attribute or qu
 
 If you only have the service server(without Portal UI) installed you can run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx).
 
-PAM can use the same syntax above or you can use the [MIMPAM Module](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser cmdlet to search for the user within the PAM environment.
+PAM can use the same syntax above or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser cmdlet to search for the user within the PAM environment.
 
 Other reporting options to search on available data is in the service and portal.
-- [Hybrid Reporting](https://docs.microsoft.com/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
-- [Reporting with SCSM](https://docs.microsoft.com/previous-versions/mim/jj133853%28v%3dws.10%29)
+- [Hybrid Reporting](/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
+- [Reporting with SCSM](/previous-versions/mim/jj133853%28v%3dws.10%29)
 
 ### BHOLD
 Bhold Core service has a UI that allows you to search for a user or attributes. 
 
 ![bhold search](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
 
-If you are synchronizing BHOLD with [access management connector](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-access-management-connector-install) for synchronization service you will be able to see the connected user objects and the attributes your sending to BHOLD core.
+If you are synchronizing BHOLD with [access management connector](/microsoft-identity-manager/bhold/bhold-access-management-connector-install) for synchronization service you will be able to see the connected user objects and the attributes your sending to BHOLD core.
 
 Also you can load the BHOLD Reporting module.
 
-- [BHOLD Reporting](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
+- [BHOLD Reporting](/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
 
 ### Certificate Management
 Certificate management service search is built into the UI. The administrator will launch and select the 'Find user and view or manage their information'  
@@ -97,9 +97,9 @@ Synchronization services for exporting data simply select the data from the sear
 
 
 ### Service and Portal / PAM
-Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) and pipe it to [csv](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6).
+Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) and pipe it to [csv](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
 
-PAM can use the same syntax above or you can use the [MIMPAM Module](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
+PAM can use the same syntax above or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
 
 - [Example Querying The MIM Service Using PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
 
@@ -115,14 +115,14 @@ Personal data about users or objects in MIM Solutions typically is derived from 
 
 ### Synchronization Service
 
-In order to perform management operations, administrators must be part of synchronization operations or admin defined [here](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
+In order to perform management operations, administrators must be part of synchronization operations or admin defined [here](/previous-versions/mim/jj590183(v%3dws.10)).
 
 Updating of data is done by defining rules from the source of authority. Management console helps identify the source of authority to update it at the source. Another option is create sync rule or rule extention to control the data updating if source like HR data still needs to remain. These are available supported options.
 
 For more information on different ways to update attribute, see below. 
 
 - [Using Rules Extensions](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
-- [Understanding Data Synchronization with External Systems](https://docs.microsoft.com/previous-versions/mim/jj133850(v%3dws.10))
+- [Understanding Data Synchronization with External Systems](/previous-versions/mim/jj133850(v%3dws.10))
 
 ### Service and Portal / PAM
 
@@ -148,7 +148,7 @@ Synchronization Service as many ways to handle data or delete data depending on 
 
 - [Understanding Deprovisioning](https://social.technet.microsoft.com/wiki/contents/articles/1270.understanding-deprovisioning-in-fim.aspx)
 - [Using Rules Extensions](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
-- [MIM Best Practices](https://docs.microsoft.com/microsoft-identity-manager/mim-best-practices)
+- [MIM Best Practices](/microsoft-identity-manager/mim-best-practices)
 
 ### Service and Portal / PAM
 
@@ -186,6 +186,6 @@ HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
 ![Screenshot showing the Registry Editor.](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## Next Steps 
-- [For SQL Related privacy Guidance](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
+- [For SQL Related privacy Guidance](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-2017)
 - [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
 - [FIM 2010 Archive: Ramp Up - Implementing Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)

@@ -58,5 +58,4 @@ For Azure AD Premium customers, standard support continues to be available for c
 
 Learn more on scenarios added in MIM 2016 and earlier at [Microsoft Identity manager 2016](microsoft-identity-manager-2016.md).
 
-Read more documentation on deploying MIM and the latest version at the [MIM Documentation Roadmap](https://docs.microsoft.com/microsoft-identity-manager/).
-
+Read more documentation on deploying MIM and the latest version at the [MIM Documentation Roadmap](/microsoft-identity-manager/).

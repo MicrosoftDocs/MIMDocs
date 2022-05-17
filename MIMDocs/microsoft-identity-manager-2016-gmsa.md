@@ -16,7 +16,7 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
 
 ## Prerequisites
 
-- Download and install the following required hotfix: [Microsoft Identity Manager 4.5.26.0 or later](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history).
+- Download and install the following required hotfix: [Microsoft Identity Manager 4.5.26.0 or later](/microsoft-identity-manager/reference/version-history).
 
     Supported services:
 
@@ -29,15 +29,15 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
 
     Unsupported services:
 
-    -   The Microsoft Identity Manager portal is not supported. It is part of the SharePoint environment, and you would need to deploy it in farm mode and [Configure automatic password change in SharePoint Server](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change).
+    -   The Microsoft Identity Manager portal is not supported. It is part of the SharePoint environment, and you would need to deploy it in farm mode and [Configure automatic password change in SharePoint Server](/sharepoint/administration/configure-automatic-password-change).
     -   All management agents except the Microsoft Identity Manager Service management agent
     -   Microsoft Certificate Management
     -   BHOLD
 
 - For background and general reference information about setting up your environment, see: 
 
-    -   [Group Managed Service Accounts overview](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)  
-    -   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2019-ps)
+    -   [Group Managed Service Accounts overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)  
+    -   [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2019-ps)
 
 - Before you begin, [create the Key Distribution Services root key](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx) on your Windows domain controller. Keep in mind the following information:  
 
@@ -88,7 +88,7 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
 
    ![The Microsoft Identity Manager Synchronization Service installation progress window](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
-1. Install [hotfix 4.5.2.6.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) or later.
+1. Install [hotfix 4.5.2.6.0](/microsoft-identity-manager/reference/version-history) or later.
 
 1. After the patch is installed, stop FIM Synchronization Service by doing the following:
 
