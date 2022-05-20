@@ -25,8 +25,7 @@ management.   In this scenario, an organization has invited guests into their Az
 A few assumptions made in the configuration of B2B with MIM and Azure AD
 Application Proxy:
 
--   You have already deployed an on-premises AD, and Microsoft Identity Manager is installed and basic configuration of MIM Service, MIM Portal, Active Directory Management Agent (AD MA) and FIM Management Agent (FIM MA).
-    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
+-   You have already deployed an on-premises AD, and Microsoft Identity Manager is installed and basic configuration of MIM Service, MIM Portal, Active Directory Management Agent (AD MA) and FIM Management Agent (FIM MA). For more information, see [Deploy Microsoft Identity Manager 2016 SP2](./microsoft-identity-manager-deploy.md).
 
 -   You have already followed the instructions in the article on how to download and install the [Graph connector](microsoft-identity-manager-2016-connector-graph.md).
 
@@ -34,12 +33,9 @@ Application Proxy:
 
 -   You have already set up Application Proxy connectors and connector groups. If not, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Azure Active Directory](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#install-and-register-a-connector) to install and configure.
 
--   You have already published one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Azure AD App Proxy
+-   You have already published one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Azure AD App Proxy.
 
--   You have invited or you invite one or more guests, that have resulted in one or more users being created in Azure AD
-    <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
-
-
+-   You have invited or you invite one or more guests, that have resulted in one or more users being created in Azure AD. For more information, see [Self-service for Azure AD B2B collaboration sign-up](/azure/active-directory/active-directory-b2b-self-service-portal).
 
 ## B2B End to End Deployment Example scenario
 
