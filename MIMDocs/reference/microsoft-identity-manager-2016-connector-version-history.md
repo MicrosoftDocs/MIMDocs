@@ -45,7 +45,7 @@ Related links:
 ### Enhancements
 
 * Generic LDAP Connector
-  * Added support for custom 'EntryUUID' OpenLDAP anchors
+  * Added support for custom *EntryUUID* OpenLDAP anchor
   > [!NOTE]
   > Requires MIM Synchronization Service build version 4.6.607.0 or later and the following registry key configured: *HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Synchronization Service\IgnoreMissingObjectTypeForGLDAP = 1* (DWORD)
   * Added support for Unicode characters in password hashes sent to OpenLDAP
@@ -60,7 +60,7 @@ Related links:
   * Added support for PostgreSQL database
   * Added support for case sensitive table and column names
   > [!NOTE]
-  > Generic SQL connector no longer automatically converts table names and column names to upper case characters.   If upgrading, and your database was case sensitive and table or column names were in upper case, after installing this version check your configuration to ensure the table and column names in the connector configuration match that of the database.
+  > Generic SQL connector no longer automatically converts table names and column names to upper case characters. If upgrading, and your database was case sensitive and table or column names were in upper case, after installing this version check your configuration to ensure the table and column names in the connector configuration match that of the database.
 
 ### Fixed issues
 
