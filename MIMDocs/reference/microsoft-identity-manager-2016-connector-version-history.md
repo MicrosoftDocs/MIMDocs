@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 9/6/2021
+ms.date: 5/25/2022
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -259,7 +259,7 @@ Related links:
   * Fixed an issue with connector crashing on delta import when local cache file is corrupted
   * Fixed several issues with incorrect export of empty values or when only attribute value case has changed
   * Connector now handles delete/add operations for the same attribute during export run correctly
-  * Fixed several issues with long-running imports and exports when access tokens were expiring during connector un. Connector now renews access tokens when needed without failure
+  * Fixed several issues with long-running imports and exports when access tokens were expiring during connector run. Connector now renews access tokens when needed without failure
   * Fixed an issue with last member of a group not being deleted
 
 ### Enhancements
