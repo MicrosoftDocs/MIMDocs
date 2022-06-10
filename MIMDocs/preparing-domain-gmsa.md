@@ -49,16 +49,16 @@ Group Managed Service Accounts eliminate the need to periodically change service
 
 The following MIM components do not support running as gMSA accounts:
 
--   MIM Portal. This is because MIM Portal is part of the SharePoint environment. Instead, you can deploy SharePoint in farm mode and [Configure automatic password change in SharePoint Server](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change).
+-   MIM Portal. This is because MIM Portal is part of the SharePoint environment. Instead, you can deploy SharePoint in farm mode and [Configure automatic password change in SharePoint Server](/sharepoint/administration/configure-automatic-password-change).
 -   All Management Agents
 -   Microsoft Certificate Management
 -   BHOLD
 
 
 More information about gMSA can be found in these articles:
--   [Group Managed Service Accounts Overview](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
+-   [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
--   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2019-ps)
+-   [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2019-ps)
 
 -   [Create the Key Distribution Services KDS Root Key](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx)
 

@@ -54,7 +54,7 @@ This table does not include the software on which MIM itself is deployed; see th
 | [Generic SQL Connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [The Connector is supported with all 64-bit ODBC drivers](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) including Microsoft SQL Server & SQL Azure, IBM DB2 10.x, IBM DB2 9.x, Oracle 10 & 11g, Oracle 12c & 18c, MySQL 5.x|
 | [Connector for Lotus Domino](reference/microsoft-identity-manager-2016-connector-domino.md) | IBM Domino Release v9.0.x |
 | [SharePoint Services Connector UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint server 2013 - 2019 with User Profile service application (UPA) |
-| [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 or 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 and other SOAP and REST APIs](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
+| [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 or 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 and other SOAP and REST APIs](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [Attribute-Value Pair text file](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Attribute-value pair text files |
 | [Delimited text file](https://technet.microsoft.com/library/cc720612(v=ws.10).aspx) | Delimited text files |
 | [Directory Services Mark-up Language (DSML)](https://technet.microsoft.com/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |
