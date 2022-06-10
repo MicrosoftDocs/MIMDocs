@@ -19,7 +19,7 @@ ms.prod: microsoft-identity-manager
 
 MIM customers have two options for multi-factor authentication in the SSPR and PAM scenarios:
 
- - Use a custom one-time-password delivery provider, which is applicable only in the MIM SSPR scenario and documented in guide to [Configure Self-Service Password Reset with OTP SMS Gate](https://docs.microsoft.com/previous-versions/mim/hh824692(v=ws.10))
+ - Use a custom one-time-password delivery provider, which is applicable only in the MIM SSPR scenario and documented in guide to [Configure Self-Service Password Reset with OTP SMS Gate](/previous-versions/mim/hh824692(v=ws.10))
  - Use a custom multi-factor authentication telephony provider. This is applicable in both the MIM SSPR and PAM scenarios, described in this article
 
 This article outlines how to use MIM with a custom multi-factor authentication provider, via an API and an integration SDK developed by the customer.  
@@ -153,6 +153,6 @@ After the service has restarted, use SSPR and/or PAM to validate functionality w
 
 ## Next Steps
 
-- [Getting started with the Azure MFA Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
-- [What is Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Getting started with the Azure MFA Server](/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [What is Azure MFA](/azure/active-directory/authentication/concept-mfa-howitworks)
 - [MIM version release history](./reference/version-history.md)

@@ -78,4 +78,4 @@ There are several upgrade options available. If you're already running MIM 2016,
 > [!NOTE]
 > Language Packs updates after MIM 2016 SP2 will be distributed as hotfixes (.msp files), eliminating the need to uninstall/reinstall Language Packs.
 
-More detailed information about the upgrade and databases backup procedures could be found in the [Upgrade to FIM 2010 R2](https://docs.microsoft.com/previous-versions/mim/jj134291%28v%3dws.10%29) article, that is applicable to any FIM or MIM upgrade process.
+More detailed information about the upgrade and databases backup procedures could be found in the [Upgrade to FIM 2010 R2](/previous-versions/mim/jj134291%28v%3dws.10%29) article, that is applicable to any FIM or MIM upgrade process.

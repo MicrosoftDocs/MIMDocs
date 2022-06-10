@@ -18,28 +18,24 @@ Azure AD business-to-business (B2B) collaboration with Microsoft Identity Manage
 ============================================================================================================================
 
 The initial scenario is external user AD account lifecycle
-management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
+management.   In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application) or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
 
 ## Scenario-Specific Guidance
 
 A few assumptions made in the configuration of B2B with MIM and Azure AD
 Application Proxy:
 
--   You have already deployed an on-premises AD, and Microsoft Identity Manager is installed and basic configuration of MIM Service, MIM Portal, Active Directory Management Agent (AD MA) and FIM Management Agent (FIM MA).
-    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
+-   You have already deployed an on-premises AD, and Microsoft Identity Manager is installed and basic configuration of MIM Service, MIM Portal, Active Directory Management Agent (AD MA) and FIM Management Agent (FIM MA). For more information, see [Deploy Microsoft Identity Manager 2016 SP2](./microsoft-identity-manager-deploy.md).
 
 -   You have already followed the instructions in the article on how to download and install the [Graph connector](microsoft-identity-manager-2016-connector-graph.md).
 
 -   You have Azure AD Connect configured for synchronizing users and groups to Azure AD.
 
--   You have already set up Application Proxy connectors and connector groups, if not you can visit [here](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) to install and configure
+-   You have already set up Application Proxy connectors and connector groups. If not, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Azure Active Directory](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#install-and-register-a-connector) to install and configure.
 
--   You have already published one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Azure AD App Proxy
+-   You have already published one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Azure AD App Proxy.
 
--   You have invited or you invite one or more guests, that have resulted in one or more users being created in Azure AD
-    <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
-
-
+-   You have invited or you invite one or more guests, that have resulted in one or more users being created in Azure AD. For more information, see [Self-service for Azure AD B2B collaboration sign-up](/azure/active-directory/active-directory-b2b-self-service-portal).
 
 ## B2B End to End Deployment Example scenario
 
@@ -67,11 +63,9 @@ By default, Azure AD Connect will assume that non-admin users in Active Director
 Therefore, the users brought into AD DS by MIM from Azure AD need to be stored in a way that Azure AD will not attempt to synchronize those users back to Azure AD.
 One way to do this is to create a new organizational unit in AD DS, and configure Azure AD Connect to exclude that organizational unit.  
 
-More information can be found in [Azure AD Connect sync: Configure filtering](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
- 
+For more information, see [Azure AD Connect sync: Configure filtering](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering).
 
 ## Create the Azure AD application 
-
 
 Note: Before creating in MIM Sync the management agent for the graph connector, make sure you have reviewed the guide to deploying the [Graph Connector](microsoft-identity-manager-2016-connector-graph.md), and created an application with a client ID and secret.
 Ensure that the application has been authorized for least one of these permissions: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All`. 
@@ -330,6 +324,6 @@ Next Steps
 
 [Functions Reference for FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[How to provide secure remote access to on-premises applications](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+[How to provide secure remote access to on-premises applications](/azure/active-directory/app-proxy/application-proxy)
 
 [Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
