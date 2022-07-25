@@ -29,7 +29,7 @@ ms.suite: ems
 
 Applies to: Azure AD Premium, Microsoft Identity Manager (MIM)
 
-For Azure AD Premium customers, standard support is available from June 2020 onward, continuing after January 2021, for specific components of [Microsoft Identity Manager 2016 Service Pack 2](/microsoft-identity-manager/microsoft-identity-manager-2016), or later service packs, that enable Azure AD integration. This is in addition to the existing support for Microsoft Identity Manager already provided through the [fixed lifecycle policy](//lifecycle/policies/fixed) and plans for [support for businesses](https://support.microsoft.com/help/4341255).
+For Azure AD Premium customers, standard support is available from June 2020 onward, continuing after January 2021, for specific components of [Microsoft Identity Manager 2016 Service Pack 2](/microsoft-identity-manager/microsoft-identity-manager-2016), or later service packs, that enable Azure AD integration. This is in addition to the existing support for Microsoft Identity Manager already provided through the [fixed lifecycle policy](/lifecycle/policies/fixed) and plans for [support for businesses](https://support.microsoft.com/help/4341255).
 
 The MIM components for which standard support is available include:
 - MIM Synchronization Service and Password Change Notification Service (PCNS)
