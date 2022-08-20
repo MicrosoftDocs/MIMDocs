@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: # Migrate an Azure AD provisioning scenario from the FIM Connector for Azure AD to Azure AD Connect or MIM Graph connector | Microsoft Docs
-description: This article documents options for customers that had been using the FIM Connector for Azure AD.
+title: Migrate an Azure AD provisioning scenario from the FIM Connector for Azure AD to Azure AD Connect or MIM Graph connector | Microsoft Docs
+description: This article documents how customers that had been using the FIM Connector for Azure AD could instead use a more recent sync technology or connector.
 keywords:
 author: markwahl-msft
 ms.author: mwahl
@@ -27,17 +27,19 @@ Three options to use in place of this connector are:
 
 Once you've updated your FIM or MIM deployment to one of these options, then the FIM Connector for Azure AD should be removed from your FIM or MIM sync engine.  
 
-## Migrating to Azure AD Connect cloud sync or Azure AD Connect sync
+## Migrating to Azure AD Connect cloud sync
 
-In this approach, MIM would use the AD MA or Generic LDAP Connector to provision users or groups into an on-premises directory, and rely upon other synchronization agents to bring those objects from that directory into Azure AD.  If FIM or MIM was solely being used to provision from an on-premises directory to Azure AD, then the sync engine might no longer be needed after that agent is deployed.
+In this approach, you would use MIM sync with the AD MA to provision users or groups into Active Directory, and rely upon Azure AD Connect cloud sync to bring those objects from that directory into Azure AD.  This is because the easiest way to make objects in Active Directory forests available in Azure AD is through [Azure AD Connect cloud sync](/active-directory/cloud-sync/what-is-cloud-sync) reading from those forests.  If your forests are in one of the [Azure AD Connect cloud sync supported topologies](/azure/active-directory/cloud-sync/plan-cloud-sync-topologies), then you can [pilot](/azure/active-directory/cloud-sync/tutorial-pilot-aadc-aadccp) a deployment of Azure AD Connect cloud sync for a subset of users in one of those domains.
 
-The easiest way to make objects in Active Directory forests available in Azure AD is through [Azure AD Connect cloud sync](/active-directory/cloud-sync/what-is-cloud-sync) reading from those forests.  If your forests are in one of the [Azure AD Connect cloud sync supported topologies](/azure/active-directory/cloud-sync/plan-cloud-sync-topologies), then you can [pilot](/azure/active-directory/cloud-sync/tutorial-pilot-aadc-aadccp) a deployment of Azure AD Connect cloud sync for a subset of users in one of those domains.
+Once you have completed the migration to Azure AD Connect cloud sync, if FIM or MIM was solely being used to provision from an on-premises directory to Azure AD, then the FIM or MIM sync engine might no longer be needed after that agent is deployed.
 
-If your directory topology is not one of those covered by Azure AD Connect cloud sync, then you could use [Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-install-roadmap) to bring those users from your directory into Azure AD.  Azure AD Connect sync has a different list of [supported topologies](/azure/active-directory/hybrid/plan-connect-topologies) and can be configured with a [non-AD LDAP directory](/azure/active-directory/fundamentals/sync-ldap) as a source.
+## Migrating to Azure AD Connect sync
+
+In this approach, you would use MIM sync with the AD MA or Generic LDAP Connector to provision users or groups into an on-premises directory, and rely upon[ Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-install-roadmap) to bring those objects from that directory into Azure AD. This approach is recommened only if your directory topology is not one of those covered by Azure AD Connect cloud sync. Azure AD Connect sync has a different list of [supported topologies](/azure/active-directory/hybrid/plan-connect-topologies) and can be configured with a [non-AD LDAP directory](/azure/active-directory/fundamentals/sync-ldap) as a source.
 
 ## Migrating to the Microsoft Graph Connector
 
-If your users and groups are not already provisioned into any on-premises directory, then you may wish to change to the [Microsoft Identity Manager connector for Microsoft Graph](microsoft-identity-manager-2016-connector-graph.md).  This connector enables additional integration scenarios for Azure AD Premium customers, for users and groups that are not in scope of Azure AD Connect cloud sync or Azure AD Connect sync.  This connector communicates with Azure AD via the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta.
+If your users and groups are not already provisioned into any on-premises directory, then you may wish to change your MIM sync deployment to use the [Microsoft Identity Manager connector for Microsoft Graph](microsoft-identity-manager-2016-connector-graph.md) instead.  This connector enables additional integration scenarios for Azure AD Premium customers, for users and groups that are not in scope of Azure AD Connect cloud sync or Azure AD Connect sync.  This connector communicates with Azure AD via the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta.
 
 ## Next steps
 
