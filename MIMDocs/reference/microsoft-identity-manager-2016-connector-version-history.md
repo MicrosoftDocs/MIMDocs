@@ -549,7 +549,7 @@ In addition to the connectors listed above, connectors for SharePoint, and a now
 
 The Forefront Identity Manager Connector for SharePoint User Profile Store helps you synchronize identity information to the User Profile Store in SharePoint 2013, SharePoint 2016 and SharePoint 2019.   Version 4.4.1800.1 of this connector, published 7/12/2019 can be downloaded from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=41164).
 
-More information could be found in this article: [Use a sample MIM solution in SharePoint Server 2016](/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server-2016).
+More information could be found in this article: [Use a sample MIM solution in SharePoint Server 2016](/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server).
 
 ### Forefront Identity Manager Connector for Windows Azure Active Directory (deprecated connector)
 
