@@ -9,7 +9,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: aashiman
-ms.date: 5/25/2022
+ms.date: 9/15/2022
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -39,6 +39,9 @@ Microsoft regularly delivers updates to MIM, including enhancements for customer
 MIM 2016 Service Pack 2 is a rollup of existing hotfixes since MIM 2016 SP1. It also introduces the option to configure use of Group Managed Service Accounts for MIM Synchronization Service and MIM Service, and enables MIM to be deployed with other updated platform software. More details could be found in [MIM 2016 Version Release History](./reference/version-history.md).
 
 ### Support update for Azure Active Directory Premium customers
+
+The end of support date for Microsoft Identity Manager 2016 has been extended from January 13, 2026 to January 9, 2029.
+
 For Azure AD Premium customers, standard support continues to be available for customers using the [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP) release, or the current MIM hotfix, to prepare data for AD that can then be sent to Azure AD. For more information, see the [Azure AD support process](support-update-for-azure-active-directory-premium-customers.md).
 
 ### Major new and updated scenarios
@@ -48,7 +51,7 @@ For Azure AD Premium customers, standard support continues to be available for c
 
 ### Recent software releases
 
-- [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP), last updated March 2021
+- [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP), last updated June 2021
 - [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated February 2022
 - [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated May 2022
 - [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated October 2018
@@ -56,6 +59,6 @@ For Azure AD Premium customers, standard support continues to be available for c
 
 ## Related topics
 
-Learn more on scenarios added in MIM 2016 and earlier at [Microsoft Identity manager 2016](microsoft-identity-manager-2016.md).
+Learn more about scenarios added in MIM 2016 and earlier at [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md).
 
 Read more documentation on deploying MIM and the latest version at the [MIM Documentation Roadmap](/microsoft-identity-manager/).
