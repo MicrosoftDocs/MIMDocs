@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Privileged Access Management for Active Directory Domain Services | Microsoft Docs
+title: Privileged Access Management for Active Directory Domain Services
 description: Learn about Privileged Access Management, and how it can help you manage and protect your Active Directory environment.
 keywords:
 author: billmath
