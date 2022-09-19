@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: MIM Deprecated Features And Planning For The Future | Microsoft Docs
+title: MIM Deprecated Features And Planning For The Future
 description: This article documents deprecated features of the MIM Identity Manager 2016 SP2.
 keywords:
 author: billmath
@@ -90,4 +90,3 @@ Learn more about:
 - Microsoft Identity Manager is still closely related to its predecessor, Forefront Identity Manager. If you still use FIM, or want to refer to additional documentation, take a look at the [FIM 2010 R2 Documentation Roadmap](https://technet.microsoft.com/library/jj133885.aspx).
 - [Topology considerations for deploying MIM](topology-considerations.md) This article introduces multiple deployment topologies that you may consider implementing.
 - [Capacity planning guide](capacity-planning-guide.md) You can use this guide, along with test environments, to understand the appropriate scope for your deployment.
-

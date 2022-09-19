@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Supported connectors | Microsoft Docs
+title: Supported connectors
 description: Use connectors to manage data transfer between MIM and your connected data sources.
 keywords:
 
