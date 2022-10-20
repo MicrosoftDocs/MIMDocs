@@ -40,11 +40,11 @@ Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2
 | Programmatic Configuration of sync | Web Service configuration interface(ma-data and mv-data) | The ability to configure the MIM synchronization service, through MIM service web service, may be removed in a future hotfix or service pack.
 |
 
-## Azure MFA integration
+## Azure AD Multi-Factor Authentication integration
 
 
 > [!IMPORTANT]
-> In September 2022, Microsoft announced deprecation of Azure AD Multi-Factor Authentication Server. Beginning September 30, 2024, Azure AD Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure MFA Server, for MIM SSPR or MIM PAM approvals, should plan to move before this date to instead use either custom MFA providers, or Windows Hello or smartcard-based authentication in AD.
+> In September 2022, Microsoft announced deprecation of Azure AD Multi-Factor Authentication Server. Beginning September 30, 2024, Azure AD Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure AD Multi-Factor Authentication Server, for MIM SSPR or MIM PAM approvals, should plan to move before this date to instead use either custom MFA providers, or Windows Hello or smartcard-based authentication in AD.
 
 ## Connectors and Management Agents
 

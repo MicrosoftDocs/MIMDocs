@@ -1,7 +1,7 @@
 ---
 
-title: Use Azure MFA Server to activate PAM or SSPR Scenarios | Microsoft Docs
-description: Set up Azure MFA Server as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
+title: Use Azure AD Multi-Factor Authentication Server to activate PAM or SSPR Scenarios | Microsoft Docs
+description: Set up Azure AD Multi-Factor Authentication Server as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
 keywords:
 author: billmath
 ms.author: billmath
@@ -12,41 +12,41 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 ---
-# Use Azure MFA Server to activate PAM or SSPR
-The following document describes how to setup the Azure MFA Server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
+# Use Azure AD Multi-Factor Authentication Server to activate PAM or SSPR
+The following document describes how to setup the Azure AD Multi-Factor Authentication Server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
 
 > [!IMPORTANT]
-> In September 2022, Microsoft announced deprecation of Azure AD Multi-Factor Authentication Server. Beginning September 30, 2024, Azure AD Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure MFA Server should plan to move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.  To use a different MFA provider, see the article on how to [use Custom Multi-Factor Authentication API](Working-with-custommfaserver-for-mim.md).
+> In September 2022, Microsoft announced deprecation of Azure AD Multi-Factor Authentication Server. Beginning September 30, 2024, Azure AD Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure AD Multi-Factor Authentication Server should plan to move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.  To use a different MFA provider, see the article on how to [use Custom Multi-Factor Authentication API](Working-with-custommfaserver-for-mim.md).
 
-The article below outlines the configuration update and steps to enable existing deployments of MIM moving from MIM using the Azure MFA SDK to MIM using the Azure MFA Server.
+The article below outlines the configuration update and steps to enable existing deployments of MIM moving from MIM using the previous SDK to MIM using the Azure AD Multi-Factor Authentication Server.
 
 ## Prerequisites
 
-In order to migrate to use Azure MFA Server with MIM, you need:
+In order to migrate to use Azure AD Multi-Factor Authentication Server with MIM, you need:
 
-- Internet access from each MIM Service or MFA Server providing PAM and SSPR, to contact the Azure MFA service
+- Internet access from each MIM Service or MFA Server providing PAM and SSPR, to contact the Azure AD Multi-Factor Authentication Service
 - An Azure subscription
-- Install is already using Azure MFA SDK from July 2019 or earlier
+- Install is already using SDK from July 2019 or earlier
 - Azure Active Directory Premium licenses for candidate users
 - Phone numbers for all candidate users
 - MIM hotfix 4.5. or greater see [version history](./reference/version-history.md) for announcements
 
-## Azure MFA Server Configuration
+## Azure AD Multi-Factor Authentication Server Configuration
 > [!NOTE] 
 > In the configuration you will need a valid SSL certificate installed for the SDK. 
 
-### Step 1: Download Azure MFA Server from the Azure portal
+### Step 1: Download Azure AD Multi-Factor Authentication Server from the Azure portal
 
 > [!IMPORTANT]
 > As of July 1, 2019, Microsoft no longer offers MFA Server for new deployments.
 
-Sign-in to the [Azure portal](https://portal.azure.com/) and follow the instructions in [Getting started with MFA Server](/azure/active-directory/authentication/howto-mfaserver-deploy) to download the Azure MFA server.
+Sign-in to the [Azure portal](https://portal.azure.com/) and follow the instructions in [Getting started with MFA Server](/azure/active-directory/authentication/howto-mfaserver-deploy) to download the Azure AD Multi-Factor Authentication Server.
 ![Azure portal Server settings](/azure/active-directory/authentication/media/howto-mfaserver-deploy/downloadportal.png)
 
 ### Step 2: Generate activation credentials
 Use the **Generate activation credentials to initiate use** link to generate activation credentials. Once generated, save for later use.
 
-### Step 3: Install the Azure MFA Server
+### Step 3: Install the Azure AD Multi-Factor Authentication Server
 Once you have downloaded the server, [install](/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) it.  Your activation credentials will be required.
 
 ### Step 4: Create your IIS Web Application that will host the SDK
@@ -59,7 +59,7 @@ Once you have downloaded the server, [install](/azure/active-directory/authentic
 4. Once wizard opens, click through config, and select "MIM MFASDK" and app pool.
 
 > [!NOTE] 
-> The wizard will require a admin group to be created. More information can be found on the Azure MFA Server documentation.
+> The wizard will require a admin group to be created. More information can be found on the Azure AD Multi-Factor Authentication Server documentation.
 
 5. Next, import the MIM Service account. In the console, select "Users".
 
@@ -75,7 +75,7 @@ Once you have downloaded the server, [install](/azure/active-directory/authentic
 1. Final Step: Add the MIM service account to the "PhoneFactor Admins"
 ![Add a user to an AD group](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)
 
-## Configuring the MIM Service for Azure MFA Server
+## Configuring the MIM Service for Azure AD Multi-Factor Authentication Server
 
 ### Step 1: Patch Server to 4.5.202.0
  
@@ -93,7 +93,7 @@ Once you have downloaded the server, [install](/azure/active-directory/authentic
 `<LOCMFA>true</LOCMFA>`<br>
 `<LOCMFASRV>https://CORPSERVICE.contoso.com:9999/MultiFactorAuthWebServiceSdk/PfWsSdk.asmx</LOCMFASRV>`
 
-3. Restart MIM Service and test Functionality with Azure MFA Server.
+3. Restart MIM Service and test Functionality with Azure AD Multi-Factor Authentication Server.
 
 > [!NOTE] 
 > To revert setting replace MfaSettings.xml with your backup file in step 2

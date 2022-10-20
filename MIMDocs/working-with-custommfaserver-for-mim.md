@@ -153,5 +153,4 @@ After the service has restarted, use SSPR and/or PAM to validate functionality w
 
 ## Next Steps
 
-- [What is Azure MFA](/azure/active-directory/authentication/concept-mfa-howitworks)
 - [MIM version release history](./reference/version-history.md)
