@@ -21,13 +21,11 @@ ms.assetid:
 
 If your organization uses MIM end user self-service features, through the MIM Portal or password reset portals, you may be required by the regulatory frameworks for your organization to include links for accessibility statements in some of the web experiences you provide to your end users.  As your MIM deployment may be customized, with changes that add new user interface elements to those portals, your accessibility statement for your customized MIM-derived user experiences might be specific to your deployment.
 
-This article illustrates how to add links for accessibility statements to the MIM portals.
+This article illustrates how to add links for accessibility statements to the home page of the MIM portal.
 
 ## Updating MIM Portal
 
-The [introduction to configuring and customizing the FIM Portal](/previous-versions/mim/ee534913(v=ws.10)) also applies to the MIM Portal as well.
-
-For example, to add a new item to the home page, follow these steps.
+You can choose where to add links on the MIM Portal. For example, to add a new item to the home page, follow these steps.
 
 1. From the MIM Portal home page, click on Administration.
 
@@ -51,7 +49,7 @@ For example, to add a new item to the home page, follow these steps.
 
 1. Click Next.
 
-1. In Navigation URL, paste the URL.  For example, if linking to the Microsoft accessibility statements for France, the URL would be `https://www.microsoft.com/fr-fr/accessibility/accessibilite/accessibility-statement`, and if linking to the Microsoft accessibility declarations for Italy, the URL would be `https://www.microsoft.com/it-it/accessibility/declarations`.
+1. In Navigation URL, paste the URL.  For example, if this is an unmodified MIM Portal and you are linking to the Microsoft accessibility statements for France, the URL would be `https://www.microsoft.com/fr-fr/accessibility/accessibilite/accessibility-statement`. If this is an unmodified MIM Portal and you are linking to the Microsoft accessibility declarations for Italy, the URL would be `https://www.microsoft.com/it-it/accessibility/declarations`.  If you have customized the MIM Portal with your own user interface elements, then provide a URL to your own organization's accessibility statement or declaration.
 
 1. In Localization, provide the localized text of the link.
 
@@ -65,6 +63,8 @@ For example, to add a new item to the home page, follow these steps.
 1. Refresh your browser cache and reload the home page of the MIM Portal.
 
    ![Updated MIM portal localized to Italian with additional link visible in the right column](media/update-portals-accessibility-links/mim-portal-10-completed-italian.png)
+
+For adding links to other areas of the MIM Portal, the [introduction to configuring and customizing the FIM Portal](/previous-versions/mim/ee534913(v=ws.10)) also applies to the MIM Portal as well.
 
 ## Self-Service Password Reset
 
