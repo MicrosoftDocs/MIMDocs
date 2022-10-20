@@ -49,7 +49,7 @@ You can choose where to add links on the MIM Portal. For example, to add a new i
 
 1. Click Next.
 
-1. In Navigation URL, paste the URL.  For example, if this is an unmodified MIM Portal and you are linking to the Microsoft accessibility statements for France, the URL would be `https://www.microsoft.com/fr-fr/accessibility/accessibilite/accessibility-statement`. If this is an unmodified MIM Portal and you are linking to the Microsoft accessibility declarations for Italy, the URL would be `https://www.microsoft.com/it-it/accessibility/declarations`.  If you have customized the MIM Portal with your own user interface elements, then provide a URL to your own organization's accessibility statement or declaration.
+1. In Navigation URL, paste the URL.  For example, if this is an unmodified MIM Portal and you're linking to the Microsoft accessibility statements for France, the URL would be `https://www.microsoft.com/fr-fr/accessibility/accessibilite/accessibility-statement`. If this is an unmodified MIM Portal and you're linking to the Microsoft accessibility declarations for Italy, the URL would be `https://www.microsoft.com/it-it/accessibility/declarations`.  If you've customized the MIM Portal with your own user interface elements, then provide a URL that links to your own organization's accessibility statement or declaration.
 
 1. In Localization, provide the localized text of the link.
 
