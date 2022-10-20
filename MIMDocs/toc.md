@@ -41,6 +41,7 @@
 ## [Configuring the Graph Connector for B2B](microsoft-identity-manager-2016-graph-b2b-scenario.md)
 ## [Using a custom MFA provider in PAM or SSPR](working-with-custommfaserver-for-mim.md)
 ## [Migrate from the FIM Connector for Azure AD](migrate-from-the-fim-connector-for-azure-active-directory.md)
+## [Add links to accessibility statements](update-portals-accessibility-links.md)
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [Enroll smartcards](certificate-manager-for-non-administrators.md)
 ### [Create software certificates](certificate-manager-for-software-certificates.md)
