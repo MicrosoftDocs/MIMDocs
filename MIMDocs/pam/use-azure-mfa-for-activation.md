@@ -16,9 +16,7 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 # Using Azure MFA for activation in MIM PAM
 
 > [!IMPORTANT]
-> This article is provided for guidance for existing deployments.  Previous versions of MIM used the Azure MFA Software Development Kit (SDK) to integrate with Azure MFA.  Due to the deprecation of Azure MFA SDK and Azure MFA Server, customers can no longer download Azure MFA SDK anymore, and new customers cannot download Azure MFA Server. Customers who had previously been using Azure MFA SDK can upgrade from Azure MFA SDK to Azure MFA Server; see [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md).  New customers should not deploy Azure MFA Server, and instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.
-
-
+> In September 2022, Microsoft announced deprecation of Azure AD Multi-Factor Authentication Server. Beginning September 30, 2024, Azure AD Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure MFA Server should plan to move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.
 
 
 When configuring a PAM role, you can choose how to authorize users that request to activate the role. The choices that the PAM authorization activity implements are:
