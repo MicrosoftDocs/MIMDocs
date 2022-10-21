@@ -45,11 +45,11 @@ There are several upgrade options available. If you're already running MIM 2016,
     1. Export Synchronization Service encryption keys.
     1. Backup miisserver.exe.config, Synchronization Server 'Extensions' folder, Microsoft.ResourceManagement.Service.exe.config as MIM installer might overwrite custom changes made to config files.
     1. Uninstall **all** FIM components, including Language Packs (to be uninstalled first).
-    1. *Optional:* Move FIM databases to another SQL server. It is recommended to create SQL aliases on MIM servers and use these aliases instead of real SQL server name to ease MIM DBs migration in future.
+    1. *Optional:* Move FIM databases to another SQL server. It is recommended to create SQL aliases on MIM servers and use these aliases instead of real SQL server name to ease MIM database migration in future.
     1. Install MIM 2016 SP2 from the .iso installation media on the same or on another server following [MIM deployment guide](microsoft-identity-manager-deploy.md), choose to use existing databases when prompted, provide previously exported Synchronization Service encryption keys.
-    1. Review miisserver.exe.config and Microsoft.ResourceManagement.Service.exe.config files for missing .net redirects or any custom sections you added.
+    1. Review miisserver.exe.config and Microsoft.ResourceManagement.Service.exe.config files for missing .NET redirects or any custom sections you added.
     1. Install MIM 2016 SP2 Language Packs if needed.
-    1. Re-submit customizations to RCDC objects and RCDC resource strings and localizations if needed.
+    1. Resubmit customizations to RCDC objects and RCDC resource strings and localizations if needed.
     1. Upgrade FIM Add-ons and Password Reset clients, provide new MIM Service server name if MIM Service server name changed.
     
 ## Upgrade from previous MIM 2016 builds
@@ -62,20 +62,20 @@ There are several upgrade options available. If you're already running MIM 2016,
 1. **Option 1: In-place upgrade - hotfix installation**
     1. Apply MIM 2016 SP2 Synchronization Service [hotfix](https://www.microsoft.com/download/details.aspx?id=100412)
     1. Apply MIM 2016 SP2 Service [hotfix](https://www.microsoft.com/download/details.aspx?id=100412)
-    1. Review miisserver.exe.config and Microsoft.ResourceManagement.Service.exe.config files for missing .net redirects or any custom sections that must be added.
+    1. Review miisserver.exe.config and Microsoft.ResourceManagement.Service.exe.config files for missing .NET redirects or any custom sections that must be added.
     1. Install MIM 2016 SP2 Language Packs if needed.
-    1. Re-submit customizations to RCDC objects and RCDC resource strings and localizations if needed.
+    1. Resubmit customizations to RCDC objects and RCDC resource strings and localizations if needed.
     1. Upgrade MIM 2016 Add-ons and Password Reset clients.
 1. **Option 2: Full installation using existing databases**
     1. Uninstall **all** MIM components.
-    1. *Optional:* Move FIM databases to another SQL server. It is recommended to create SQL aliases on MIM servers and use these aliases instead of real SQL server name to ease MIM DBs migration in future.
+    1. *Optional:* Move FIM databases to another SQL server. It is recommended to create SQL aliases on MIM servers and use these aliases instead of real SQL server name to ease MIM database migration in future.
     1. Install MIM 2016 SP2 from the .iso installation media on the same or on another server following [MIM deployment guide](microsoft-identity-manager-deploy.md), choose to use existing databases when prompted, provide previously exported Synchronization Service encryption keys.
-    1. Review miisserver.exe.config and Microsoft.ResourceManagement.Service.exe.config files for missing .net redirects or any custom sections that must be added.
+    1. Review miisserver.exe.config and Microsoft.ResourceManagement.Service.exe.config files for missing .NET redirects or any custom sections that must be added.
     1. Install MIM 2016 SP2 Language Packs if needed.
-    1. Re-submit customizations to RCDC objects and RCDC resource strings and localizations if needed.
+    1. Resubmit customizations to RCDC objects and RCDC resource strings and localizations if needed.
     1. Upgrade MIM 2016 Add-ons and Password Reset clients, provide new MIM Service server name if MIM Service server name changed.
 
 > [!NOTE]
 > Language Packs updates after MIM 2016 SP2 will be distributed as hotfixes (.msp files), eliminating the need to uninstall/reinstall Language Packs.
 
-More detailed information about the upgrade and databases backup procedures could be found in the [Upgrade to FIM 2010 R2](/previous-versions/mim/jj134291%28v%3dws.10%29) article, that is applicable to any FIM or MIM upgrade process.
+More detailed information about the upgrade and databases backup procedures could be found in the [Upgrade to FIM 2010 R2](/previous-versions/mim/jj134291%28v%3dws.10%29) article, applicable to any FIM or MIM upgrade process.
