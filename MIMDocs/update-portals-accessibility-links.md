@@ -65,7 +65,7 @@ You can choose where to add links on the MIM Portal. For example, to add a new i
 
 For adding links to other areas of the MIM Portal, the [introduction to configuring and customizing the FIM Portal](/previous-versions/mim/ee534913(v=ws.10)) also applies to the MIM Portal as well.
 
-## Updating the self-Service password reset portals
+## Updating the self-service password reset portals
 
 For customers that are [licensed for Azure Active Directory Premium](/azure/active-directory/authentication/concept-sspr-licensing), we recommend using [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks) (SSPR) to provide the end-user experience.  Azure AD self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM.
 
