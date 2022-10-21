@@ -55,7 +55,7 @@ You can choose where to add links on the MIM Portal. For example, to add a new i
 
 1. Click Finish, and then click Submit.
 
- ![Screenshot of a MIM portal localized to Italian illustrating home page resource to be created.](media/update-portals-accessibility-links/mim-portal-09-confirmation-italian.png)
+   ![Screenshot of a MIM portal localized to Italian illustrating home page resource to be created.](media/update-portals-accessibility-links/mim-portal-09-confirmation-italian.png)
 
 1. Click Start, click Run, and then type `iisreset`.
 
