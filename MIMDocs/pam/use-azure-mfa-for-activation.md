@@ -29,7 +29,7 @@ If neither check is enabled, candidate users are automatically activated for the
 Microsoft Azure AD Multi-Factor Authentication is an authentication service that requires users to verify their sign-in attempts by using a mobile app, phone call, or text message.
 
 > [!NOTE]
-> The PAM approach with a bastion environment provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments.  As Azure AD Multi-Factor Authentication is an Internet service, this guidance is provided solely for existing MIM PAM customers or those in environments where this configuration is required by regulation. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
+> The PAM approach with a bastion environment provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments.  As Azure AD Multi-Factor Authentication is an Internet service, this guidance is provided solely for existing MIM PAM customers or those in environments where this configuration is required by regulation. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) on where to start.
 
 ## Prerequisites
 
@@ -66,9 +66,9 @@ See [Using Azure AD Multi-Factor Authentication Server in PAM or SSPR](../workin
 
 8. In the **\<CertFilePath\>** XML element, specify the full path name of the cert\_key.p12 file extracted earlier.
 
-9. In the **\<username\>** element enter any username.
+9. In the **\<username\>** element, enter any username.
 
-10. In the **\<DefaultCountryCode\>** element enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
+10. In the **\<DefaultCountryCode\>** element, enter the country code for dialing your users, such as 1 for the United States and Canada. This value is used in case users are registered with telephone numbers that do not have a country code. If a user’s phone number has an international country code distinct from that configured for the organization, then that country code must be included in the phone number that will be registered.
 
 11. Save and overwrite the **MfaSettings.xml** file in the MIM Service folder ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 

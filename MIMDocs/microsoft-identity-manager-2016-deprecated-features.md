@@ -87,7 +87,7 @@ The MIM CM bulk client is not recommended for new deployments.
 
 ## MIM PAM
 
-The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. PAM is not recommended as a starting point in deployments of Active Directory with Internet connectivity.  If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) for more information on where to start.
+The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. PAM is not recommended as a starting point in deployments of Active Directory with Internet connectivity.  If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) on where to start.
 
 Deploying MIM for Privileged Access Management with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with Windows Server 2016 functional level, for your PRIV forest domain.  The Windows Server 2012 R2 functional level is still permitted for a CORP forest's domain.
 
