@@ -13,7 +13,7 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 ---
 # Use Azure AD Multi-Factor Authentication Server to activate PAM or SSPR
-The following document describes how to setup the Azure AD Multi-Factor Authentication Server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
+The following document describes how to set up the Azure AD Multi-Factor Authentication Server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
 
 > [!IMPORTANT]
 > In September 2022, Microsoft announced deprecation of Azure AD Multi-Factor Authentication Server. Beginning September 30, 2024, Azure AD Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure AD Multi-Factor Authentication Server should plan to move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.  To use a different MFA provider, see the article on how to [use Custom Multi-Factor Authentication API](Working-with-custommfaserver-for-mim.md).
@@ -47,7 +47,7 @@ Sign-in to the [Azure portal](https://portal.azure.com/) and follow the instruct
 Use the **Generate activation credentials to initiate use** link to generate activation credentials. Once generated, save for later use.
 
 ### Step 3: Install the Azure AD Multi-Factor Authentication Server
-Once you have downloaded the server, [install](/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) it.  Your activation credentials will be required.
+Once you've downloaded the server, [install](/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) it.  Your activation credentials will be required.
 
 ### Step 4: Create your IIS Web Application that will host the SDK
 1. Open IIS Manager
@@ -70,7 +70,7 @@ Once you have downloaded the server, [install](/azure/active-directory/authentic
    ![importing users from Azure AD in the MFA console](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG)
 6. Edit the MIM Service account to enable it.
 ![Editing a user in the MFA console](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG)
-1. Update the IIS authentication on the "MIM MFASDK" website. First, we will disable the "Anonymous Authentication", then enable Windows Authentication".
+1. Update the IIS authentication on the "MIM MFASDK" website. First, disable the "Anonymous Authentication", then enable "Windows Authentication".
 ![Changing authentication in IIS Manager](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG)
 1. Final Step: Add the MIM service account to the "PhoneFactor Admins"
 ![Add a user to an AD group](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)

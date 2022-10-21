@@ -19,7 +19,7 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 > [!IMPORTANT]
 > In September 2022, Microsoft announced deprecation of Azure AD Multi-Factor Authentication Server. Beginning September 30, 2024, Azure AD Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure AD Multi-Factor Authentication Server should plan to move to instead use either custom MFA providers with MIM SSPR, or Azure AD SSPR instead of MIM SSPR.
 
-For new customers who are [licensed for Azure Active Directory Premium](/azure/active-directory/authentication/concept-sspr-licensing), we recommend using [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks) to provide the end-user experience.  Azure AD self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM, including alternate email and Q&A gates.  When deploying Azure AD self-service password reset, Azure AD Connect supports [writing back the new passwords to AD DS](/azure/active-directory/authentication/concept-sspr-writeback), and MIM [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md) can be used to forward the passwords to other systems, such as another vendor's directory server, as well.  Deploying MIM for [password management](infrastructure/mim2016-password-management.md) does not require the MIM Service or the MIM self-service password reset or registration portals to be deployed.  Instead, you can follow these steps:
+For new customers who are [licensed for Azure Active Directory Premium](/azure/active-directory/authentication/concept-sspr-licensing), we recommend using [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks) to provide the end-user experience.  Azure AD self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM, including alternate email and Q&A gates.  When deploying Azure AD self-service password reset, you can configure Azure AD Connect to [write back the new passwords to AD DS](/azure/active-directory/authentication/concept-sspr-writeback), and MIM [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md) can be used to forward the passwords to other systems, such as another vendor's directory server.  Deploying MIM for [password management](infrastructure/mim2016-password-management.md) does not require the MIM Service or the MIM self-service password reset or registration portals to be deployed.  Instead, you can follow these steps:
 
 - First, if you need to send passwords to directories other than Azure AD and AD DS, deploy MIM Sync with connectors to Active Directory Domain Services and any additional target systems, configure MIM for [password management](infrastructure/mim2016-password-management.md) and deploy the [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md).
 - Then, if you need to send passwords to directories other than Azure AD, configure Azure AD Connect for [writing back the new passwords to AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
@@ -33,13 +33,13 @@ For customers, which have not yet deployed Azure AD self-service password reset 
 - The MIM Self-Service Password Reset portal and Windows login screen  let users unlock their accounts without changing their passwords.
 - A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Azure AD Multi-Factor Authentication Service.
 
-MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download a SDK that has been deprecated, and existing deployments should move to either using MIM SSPR with a custom MFA provider, or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). New deployments should use either a custom MFA provider or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
+MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download an SDK that has been deprecated, and existing deployments should move to either using MIM SSPR with a custom MFA provider, or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). New deployments should use either a custom MFA provider or [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
 
 ## Deploying MIM Self-Service Password Reset Portal using a custom provider for multi-factor authentication
 
 The following section describes how to deploy MIM self-service password reset portal, using a provider for multi-factor authentication.  These steps are only necessary for customers who are not using Azure AD self-service password reset for their users.
 
-When using MFA, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
+With MFA, users authenticate via the external provider in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
 
 ## Prerequisites to set up self-service account unlock and password reset using MFA
 
@@ -83,7 +83,8 @@ Configure MIM Sync to Support Password Reset and Account Unlock Functionality. F
 
 4.  Select **Phone Gate** or  **One-Time Password SMS Gate** click **Select** and then **OK**.
 
-Note: if using another provider which generates the one-time password itself, ensure the length field configured above is the same length as that generated by the MFA provider.  This length must be 6 for Azure AD Multi-Factor Authentication Server.  Azure AD Multi-Factor Authentication Server also generates its own message text so the SMS text message is ignored.
+    > [!NOTE]
+    > If using another provider which generates the one-time password itself, ensure the length field configured above is the same length as that generated by the MFA provider.  This length must be 6 for Azure AD Multi-Factor Authentication Server.  Azure AD Multi-Factor Authentication Server also generates its own message text so the SMS text message is ignored.
 
 Users in your organization can now register for password reset.  During this process, they will enter their work phone number or mobile phone number so the system knows how to call them (or send them SMS messages).
 
@@ -144,7 +145,7 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
     > [!NOTE]
     > If the user is impatient and clicks **Next** before pressing the pound key #, authentication fails.
 
-3.  The user will have to choose if they want to reset their password or unlock their account. If they chooses to unlock their account, the account will be unlocked.
+3.  The user will have to choose if they want to reset their password or unlock their account. If they choose to unlock their account, the account will be unlocked.
 
     ![MIM Login Assistant Account Unlock image](media/MIM-SSPR-accountUnlock.JPG)
 
