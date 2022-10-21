@@ -38,7 +38,7 @@ This table does not include the software on which MIM itself is deployed; see th
 
 | Connector name | Supported versions of the connected data source & Technical links |
 | ---- | ----------------------------------------------- |
-| Active Directory Domain Services | Active Directory in Windows Server 2012 - 2019 |
+| Active Directory Domain Services | Active Directory in Windows Server 2012 - 2022 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Active Directory Global Address List (GAL) | Active Directory Global Address List (GAL) in Exchange 2013 - 2019 |
 | Extensible Connectivity 2.0 | Any call-based or file-based data source |

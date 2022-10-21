@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure Windows Server 2016 or 2019 for MIM 2016 SP2 | Microsoft Docs
-description: Get the steps and minimum requirements to prepare Windows Server 2016 or 2019 to work with MIM 2016 SP2.
+title: Configure Windows Server 2016 or later versions for MIM 2016 SP2 | Microsoft Docs
+description: Get the steps and minimum requirements to prepare Windows Server 2016 or later versions to work with MIM 2016 SP2.
 keywords:
 author: billmath
 ms.author: billmath
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Set up an identity management server: Windows Server 2016 or 2019
+# Set up an identity management server: Windows Server 2016 or later versions
 
 > [!div class="step-by-step"]
 > [« Preparing a domain](preparing-domain.md)
