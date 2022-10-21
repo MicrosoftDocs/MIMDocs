@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Update MIM Portals with links to accessibility statements | Microsoft Docs
-description: This article documents how customers that are subject to accessibility requirements can add links to their existing MIM Portal, SSPR registration and reset web sites.
+title: Update MIM portals with links to accessibility statements | Microsoft Docs
+description: This article documents how customers that are subject to accessibility requirements can add links to their existing MIM portal, SSPR registration and reset web sites.
 keywords:
 author: markwahl-msft
 ms.author: mwahl
@@ -23,7 +23,7 @@ If your organization uses MIM end user self-service features, through the MIM Po
 
 This article illustrates how to add links for accessibility statements to the home page of the MIM portal.
 
-## Updating MIM Portal
+## Updating the MIM portal
 
 You can choose where to add links on the MIM Portal. For example, to add a new item to the home page, follow these steps.
 
@@ -31,7 +31,7 @@ You can choose where to add links on the MIM Portal. For example, to add a new i
 
 1. Click on Home Page Resources.
 
-   ![MIM Portal localized to Italian Home Page Resources list](media/update-portals-accessibility-links/mim-portal-03-homepage-italian.png)
+   ![Screenshot of a MIM portal localized to Italian with the Home Page Resources list.](media/update-portals-accessibility-links/mim-portal-03-homepage-italian.png)
 
 1. Click New.
 
@@ -55,18 +55,17 @@ You can choose where to add links on the MIM Portal. For example, to add a new i
 
 1. Click Finish, and then click Submit.
 
- ![MIM portal localized to Italian illustrating home page resource to be created](media/update-portals-accessibility-links/mim-portal-09-confirmation-italian.png)
-
+ ![Screenshot of a MIM portal localized to Italian illustrating home page resource to be created.](media/update-portals-accessibility-links/mim-portal-09-confirmation-italian.png)
 
 1. Click Start, click Run, and then type `iisreset`.
 
 1. Refresh your browser cache and reload the home page of the MIM Portal.
 
-   ![Updated MIM portal localized to Italian with additional link visible in the right column](media/update-portals-accessibility-links/mim-portal-10-completed-italian.png)
+   ![Screenshot of an updated MIM portal localized to Italian with additional link visible in the right column.](media/update-portals-accessibility-links/mim-portal-10-completed-italian.png)
 
 For adding links to other areas of the MIM Portal, the [introduction to configuring and customizing the FIM Portal](/previous-versions/mim/ee534913(v=ws.10)) also applies to the MIM Portal as well.
 
-## Self-Service Password Reset
+## Updating the self-Service password reset portals
 
 For customers that are [licensed for Azure Active Directory Premium](/azure/active-directory/authentication/concept-sspr-licensing), we recommend using [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks) (SSPR) to provide the end-user experience.  Azure AD self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM.
 
