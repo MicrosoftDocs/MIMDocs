@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Upgrade from FIM 2010 R2 and MIM 2016 SP2 to Microsoft Identity Manager 2016 Service Pack 2 | Microsoft Docs
-description: Learn how to upgrade your FIM 2010 R2 or MIM 2016 SP2 components, and then install the components that are new in MIM 2016.
+title: Upgrade from FIM 2010 R2 and MIM 2016 to Microsoft Identity Manager 2016 Service Pack 2 | Microsoft Docs
+description: Learn how to upgrade your FIM 2010 R2 or MIM 2016 components, and then install the components that are new in MIM 2016 SP2.
 keywords:
 author: EugeneSergeev
 ms.author: esergeev
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# MIM 2016 SP2 upgrade  from Forefront Identity  or Microsoft Identity Manager
+# MIM 2016 SP2 upgrade  from Forefront Identity Manager or Microsoft Identity Manager
 
 Organizations can upgrade to Microsoft Identity Manager 2016 SP2 from earlier versions of Microsoft Identity Manager or Forefront Identity Manager.  Each section of this article covers a supported upgrade path.
 
