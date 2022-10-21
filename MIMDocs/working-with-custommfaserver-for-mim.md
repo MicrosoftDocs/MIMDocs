@@ -46,7 +46,7 @@ The DLL must include a class, which implements three methods:
 - `GetCallStatus`: If an earlier call to `initiateCall` returned `Pending`, the MIM Service will invoke this method. This method also returns `PhoneCallStatus` value of `Pending`, `Success` or `Failed`.
 - `GetFailureMessage`: If a previous invocation of `InitiateCall` or `GetCallStatus` returned `Failed`, the MIM Service will invoke this method. This method returns a diagnostic message.
 
-The implementations of these methods must be thread safe, and furthermore the implementation of the `GetCallStatus` and `GetFailureMessage` must not assume that they will be called by the same thread as an earlier call to `InitiateCall`.
+The implementations of these methods must be thread safe, and furthermore the implementation of the `GetCallStatus` and `GetFailureMessage` must not assume that they'll be called by the same thread as an earlier call to `InitiateCall`.
 
 Store the DLL in the `C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\` directory.
 
@@ -132,7 +132,9 @@ namespace CustomPhoneGate
     }
 }
 ```
-### Step 3: Backup the MfaSettings.xml located in the "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
+### Step 3: Save the existing MfaSettings
+
+Back up the MfaSettings.xml located in the "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service" folder.
 
 ### Step 4: Edit the MfaSettings.xml file
 
@@ -153,6 +155,4 @@ After the service has restarted, use SSPR and/or PAM to validate functionality w
 
 ## Next Steps
 
-- [Getting started with the Azure MFA Server](/azure/active-directory/authentication/howto-mfaserver-deploy)
-- [What is Azure MFA](/azure/active-directory/authentication/concept-mfa-howitworks)
 - [MIM version release history](./reference/version-history.md)
