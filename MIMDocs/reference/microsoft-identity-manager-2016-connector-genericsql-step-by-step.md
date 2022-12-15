@@ -13,12 +13,15 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.date: 04/02/2018
+ms.date: 12/15/2022
 ms.author: billmath
 
 ---
 # Generic SQL Connector step-by-step
 This topic is a step-by-step guide. It creates a simple sample HR database and use it for importing some users and their group membership.
+
+[!NOTE]
+> *The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/tutorial-ecma-sql-connector).
 
 ## Prepare the sample database
 On a server running SQL Server, run the SQL script found in [Appendix A](#appendix-a). This script creates a sample database with the name GSQLDEMO. The object model for the created database looks like this picture:  
