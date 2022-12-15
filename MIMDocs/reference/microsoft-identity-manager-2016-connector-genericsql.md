@@ -28,6 +28,9 @@ For MIM2016 and FIM2010R2, the Connector is available as a download from the [Mi
 
 To see this Connector in action, see the [Generic SQL Connector step-by-step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) article.
 
+> [!NOTE]
+> *The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/tutorial-ecma-sql-connector).
+
 ## Overview of the Generic SQL Connector
 The Generic SQL Connector enables you to integrate the synchronization service with a database system that offers ODBC connectivity.  
 
