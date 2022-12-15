@@ -29,7 +29,7 @@ For MIM2016 and FIM2010R2, the Connector is available as a download from the [Mi
 When referring to IETF RFCs, this document is using the format (RFC [RFC number]/[section in RFC document]), for example (RFC 4512/4.3).
 You can find more information at [https://tools.ietf.org/](https://tools.ietf.org/). In the left panel, enter an RFC number in the **Doc fetch** dialog box and test it to make sure it is valid.
 
-[!NOTE]
+> [!NOTE]
 > *The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into an LDAP v3 server, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/en-us/azure/active-directory/app-provisioning/on-premises-ldap-connector-configure).
 
 ## Overview of the Generic LDAP Connector
