@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.date: 06/26/2018
+ms.date: 12/20/2022
 ms.author: billmath
 ---
 
@@ -29,10 +29,13 @@ For MIM2016 and FIM2010R2, the Connector is available as a download from the [Mi
 When referring to IETF RFCs, this document is using the format (RFC [RFC number]/[section in RFC document]), for example (RFC 4512/4.3).
 You can find more information at [https://tools.ietf.org/](https://tools.ietf.org/). In the left panel, enter an RFC number in the **Doc fetch** dialog box and test it to make sure it is valid.
 
+> [!NOTE]
+> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into an LDAP v3 server, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-ldap-connector-configure).
+
 ## Overview of the Generic LDAP Connector
 The Generic LDAP Connector enables you to integrate the synchronization service with an LDAP v3 server.
 
-Certain operations and schema elements, such as those needed to perform delta import, are not specified in the IETF RFCs. For these operations, only LDAP directories explicitly specified are supported.
+Certain operations and schema elements, such as those needed to perform delta import, aren't specified in the IETF RFCs. For these operations, only LDAP directories explicitly specified are supported.
 
 For connecting to the directories, we test using the root/admin account.  To use a different account to apply more granular permissions, you may need to review with your LDAP directory team.
 
@@ -58,7 +61,7 @@ Supported Directories for Delta import and Password management:
   * Supports all operations for delta import
   * Supports Set Password and Change Password
 * Apache Directory Server
-  * Does not support delta import since this directory does not have a persistent change log
+  * Doesn't support delta import since this directory Doesn't have a persistent change log
   * Supports Set Password
 * IBM Tivoli DS
   * Supports all operations for delta import
@@ -68,7 +71,7 @@ Supported Directories for Delta import and Password management:
   * Supports Set Password and Change Password
 * Novell eDirectory and NetIQ eDirectory
   * Supports Add, Update, and Rename operations for delta import
-  * Does not support Delete operations for delta import
+  * Doesn't support Delete operations for delta import
   * Supports Set Password and Change Password
 * Open DJ
   * Supports all operations for delta import
@@ -79,7 +82,7 @@ Supported Directories for Delta import and Password management:
 * Open LDAP (openldap.org)
   * Supports all operations for delta import
   * Supports Set Password
-  * Does not support change password
+  * Doesn't support change password
 * Oracle (previously Sun) Directory Server Enterprise Edition
   * Supports all operations for delta import
   * Supports Set Password and Change Password
@@ -107,7 +110,7 @@ To perform import and export operations on the objects in the connected director
 ### Ports and protocols
 The connector uses the port number specified in the configuration, which by default is 389 for LDAP and 636 for LDAPS.
 
-For LDAPS, you must use SSL 3.0 or TLS. SSL 2.0 is not supported and cannot be activated.
+For LDAPS, you must use SSL 3.0 or TLS. SSL 2.0 isn't supported and cannot be activated.
 
 ### Required controls and features
 The following LDAP controls/features must be available on the LDAP server for the connector to work properly:  
@@ -140,11 +143,11 @@ Delta import is only available when a directory that supports it has been detect
 
 * LDAP Accesslog. See [http://www.openldap.org/doc/admin24/overlays.html#Access Logging](http://www.openldap.org/doc/admin24/overlays.html#Access%20Logging)
 * LDAP Changelog. See [http://tools.ietf.org/html/draft-good-ldap-changelog-04](http://tools.ietf.org/html/draft-good-ldap-changelog-04)
-* TimeStamp. For Novell/NetIQ eDirectory, the Connector uses last date/time to get created and updated objects. Novell/NetIQ eDirectory does not provide an equivalent means to retrieve deleted objects. This option can also be used if no other delta import method is active on the LDAP server. This option is not able to import deleted objects.
+* TimeStamp. For Novell/NetIQ eDirectory, the Connector uses last date/time to get created and updated objects. Novell/NetIQ eDirectory doesn't provide an equivalent means to retrieve deleted objects. This option can also be used if no other delta import method is active on the LDAP server. This option isn't able to import deleted objects.
 * USNChanged. See: [https://msdn.microsoft.com/library/ms677627.aspx](https://msdn.microsoft.com/library/ms677627.aspx)
 
 ### Not supported
-The following LDAP features are not supported:
+The following LDAP features aren't supported:
 
 * LDAP referrals between servers (RFC 4511/4.1.10)
 
@@ -180,7 +183,7 @@ On the Global Parameters page, you configure the DN to the delta change log and 
 
 ![MIM Sync connector configuration global parameters page](./media/microsoft-identity-manager-2016-connector-genericldap/globalparameters.png)
 
-The top section shows information provided by the server itself, such as the name of the server. The Connector also verifies that the mandatory controls are present in the Root DSE. If these controls are not listed, a warning is presented. Some LDAP directories do not list all features in the Root DSE and it is possible that the Connector works without issues even if a warning is present.
+The top section shows information provided by the server itself, such as the name of the server. The Connector also verifies that the mandatory controls are present in the Root DSE. If these controls aren't listed, a warning is presented. Some LDAP directories do not list all features in the Root DSE and it is possible that the Connector works without issues even if a warning is present.
 
 The **supported controls** checkboxes control the behavior for certain operations:
 
@@ -218,7 +221,7 @@ This page is used to map the DN component, for example OU, to the object type th
 
 ![Provisioning Hierarchy](./media/microsoft-identity-manager-2016-connector-genericldap/provisioninghierarchy.png)
 
-By configuring provisioning hierarchy, you can configure the Connector to automatically create a structure when needed. For example, if there is a namespace dc=contoso,dc=com and a new object cn=Joe, ou=Seattle, c=US, dc=contoso, dc=com is provisioned, then the Connector can create an object of type country for US and an organizationalUnit for Seattle if those are not already present in the directory.
+By configuring provisioning hierarchy, you can configure the Connector to automatically create a structure when needed. For example, if there is a namespace dc=contoso,dc=com and a new object cn=Joe, ou=Seattle, c=US, dc=contoso, dc=com is provisioned, then the Connector can create an object of type country for US and an organizationalUnit for Seattle if those aren't already present in the directory.
 
 ### Configure Partitions and Hierarchies
 On the partitions and hierarchies page, select all namespaces with objects you plan to import and export.
@@ -264,7 +267,7 @@ This section provides information of aspects that are specific to this Connector
 ### Delta import
 The delta watermark in Open LDAP is UTC date/time. For this reason, the clocks between FIM Synchronization Service and the Open LDAP must be synchronized. If not, some entries in the delta change log might be omitted.
 
-For Novell eDirectory, the delta import is not detecting any object deletes. For this reason, it is necessary to run a full import periodically to find all deleted objects.
+For Novell eDirectory, the delta import isn't detecting any object deletes. For this reason, it is necessary to run a full import periodically to find all deleted objects.
 
 For directories with a delta change log that is based on date/time, it is highly recommended to run a full import at periodic times. This process allows the sync engine to find and dissimilarities between the LDAP server and what is currently in the connector space.
 
