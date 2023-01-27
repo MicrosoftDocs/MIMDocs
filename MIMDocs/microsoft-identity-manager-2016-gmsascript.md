@@ -4,7 +4,7 @@ description: Topic describing the basic steps to configure gMSA.
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 06/27/2018
+ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
