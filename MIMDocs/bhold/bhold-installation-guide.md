@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 05/14/2021
+ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -81,7 +81,7 @@ If you are deploying BHOLD in a large organization, it is highly recommended tha
 - If you are using RAID to provide storage redundancy, use RAID level 10 (1+0). Do not use RAID level 5.
 - Be sure to configure the correct settings when using more than 2 GB of physical memory for the server running SQL Server.
 
-For more information about SQL Server best practices, see [Storage Top 10 Best Practices](https://www.microsoft.com/technet/prodtechnol/sql/bestpractice/storage-top-10.mspx) in the Microsoft TechNet Library.
+For more information about SQL Server best practices, see [Storage Top 10 Best Practices](/previous-versions/sql/sql-server-2005/administrator/cc966534(v=technet.10)?redirectedfrom=MSDN) in the Microsoft TechNet Library.
 
 ### Trusted certificates list update
 

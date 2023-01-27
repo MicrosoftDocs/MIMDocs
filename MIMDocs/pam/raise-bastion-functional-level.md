@@ -6,7 +6,7 @@ description: Raise a privileged access management deployment that started with W
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 02/14/2022
+ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager
 

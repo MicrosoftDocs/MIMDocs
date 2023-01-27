@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.date: 12/20/2022
+ms.date: 01/27/2023
 ms.author: billmath
 
 ---
