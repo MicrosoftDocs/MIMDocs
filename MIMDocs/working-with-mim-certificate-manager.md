@@ -269,7 +269,7 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 
 ## Deploy the app
 
-When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), or [Intune](https://technet.microsoft.com/library/dn613839.aspx) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.
+When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), or [Intune](/previous-versions/windows/it-pro/windows-8.1-and-8/dn613839(v=ws.11)) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.
 
 ## Next steps
 
