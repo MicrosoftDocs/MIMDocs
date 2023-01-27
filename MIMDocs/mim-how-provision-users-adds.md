@@ -6,8 +6,8 @@ description: Go over the process of creating users in ADDS using Microsoft Ident
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 08/18/2017
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager
 
@@ -39,7 +39,7 @@ information.
 In this section, you will find information about the scope of this document. In
 general, "How Do I" guides are targeted at readers who already have basic
 experience with the process of synchronizing objects with MIM as covered in the
-related [Getting Started Guides](https://go.microsoft.com/FWLink/p/?LinkId=190486).
+related [Getting Started Guides](/previous-versions/mim/ff575965(v=ws.10)).
 
 ### Audience
 
@@ -171,7 +171,7 @@ For the scenario in this guide, you need two Active Directory user accounts:
 
 In both cases, it is sufficient to create regular user accounts. More
 information about the specific requirements of both accounts is found later in
-this document. For more information about creating users, see [Create a New User Account](https://go.microsoft.com/FWLink/p/?LinkId=189656).
+this document. For more information about creating users, see [Create a New User Account](/previous-versions/windows/it-pro/windows-server-2003/cc784390(v=ws.10)).
 
 
 ## Configuring the FIM Synchronization Service
