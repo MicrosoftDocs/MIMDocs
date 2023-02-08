@@ -1,4 +1,3 @@
-manager: amycolannino
 # [Understand and Explore](../microsoft-identity-manager-2016.md)
 ## [What is MIM 2016?](../microsoft-identity-manager-2016.md)
 
