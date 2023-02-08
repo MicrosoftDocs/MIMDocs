@@ -6,7 +6,7 @@ description: This article documents how customers that are subject to accessibil
 keywords:
 author: markwahl-msft
 ms.author: mwahl
-manager: billmath
+manager: amycolannino
 ms.date: 10/20/2022
 ms.topic: reference
 ms.prod: microsoft-identity-manager

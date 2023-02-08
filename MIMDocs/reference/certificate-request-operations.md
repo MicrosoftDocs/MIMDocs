@@ -6,7 +6,7 @@ description: Articles related to certificate request operations in the MIM CM RE
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: reference
 ms.prod: microsoft-identity-manager

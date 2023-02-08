@@ -6,7 +6,7 @@ description: This article documents how customers that had been using the FIM Co
 keywords:
 author: markwahl-msft
 ms.author: mwahl
-manager: billmath
+manager: amycolannino
 ms.date: 8/16/2022
 ms.topic: reference
 ms.prod: microsoft-identity-manager

@@ -5,7 +5,7 @@ keywords:
 author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
-manager: aashiman
+manager: amycolannino
 ms.date: 5/24/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager

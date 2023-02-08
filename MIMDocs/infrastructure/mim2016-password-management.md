@@ -6,7 +6,7 @@ description: Using Microsoft Identity Manager to manage passwords in an enterpri
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: reference
 ms.prod: microsoft-identity-manager

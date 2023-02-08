@@ -6,7 +6,7 @@ description: Set up Group Managed Service Accounts in a domain for Microsoft Ide
 keywords:
 author: EugeneSergeev
 ms.author: esergeev
-manager: daveba
+manager: amycolannino
 ms.date: 1/7/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager

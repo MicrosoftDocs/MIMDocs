@@ -9,7 +9,7 @@ keywords: MIM
 author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
-manager: aashiman
+manager: amycolannino
 ms.date: 03/18/2021
 ms.devlang: na
 ms.topic: article

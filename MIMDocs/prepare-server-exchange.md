@@ -6,7 +6,7 @@ description: As an optional step, deploy Exchange Server to enable MIM 2016 to s
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

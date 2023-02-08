@@ -5,7 +5,7 @@ author: billmath
 description: Microsoft Graph connector is external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager
