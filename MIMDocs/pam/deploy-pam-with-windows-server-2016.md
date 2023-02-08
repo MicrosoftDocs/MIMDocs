@@ -6,7 +6,7 @@ description: Learn about deploying Privileged Access Management with server 2016
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager

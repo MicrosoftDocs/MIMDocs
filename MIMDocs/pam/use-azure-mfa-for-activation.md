@@ -5,7 +5,7 @@ keywords:
 author: billmath
 ms.author: billmath
 ms.reviewer: fimguy
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager

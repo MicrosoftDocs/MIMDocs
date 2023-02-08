@@ -5,7 +5,7 @@ description: Set up Azure AD Multi-Factor Authentication Server as a second laye
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager

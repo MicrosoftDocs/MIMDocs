@@ -6,7 +6,7 @@ description: Using the PAM REST API GET command to list previously posted PAM re
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: reference
 ms.prod: microsoft-identity-manager

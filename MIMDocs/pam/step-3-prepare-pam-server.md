@@ -6,7 +6,7 @@ description: Prepare a PAM server that will host both SQL and SharePoint for you
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager

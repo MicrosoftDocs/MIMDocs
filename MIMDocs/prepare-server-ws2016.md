@@ -6,7 +6,7 @@ description: Get the steps and minimum requirements to prepare Windows Server 20
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

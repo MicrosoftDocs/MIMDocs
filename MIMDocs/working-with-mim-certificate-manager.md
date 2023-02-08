@@ -6,7 +6,7 @@ description: Learn how to deploy the Certificate Manager app to enable your user
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager
