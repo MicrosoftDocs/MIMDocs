@@ -6,7 +6,7 @@ description: Guide helping you implement a sample REST JSON server in Azure
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager

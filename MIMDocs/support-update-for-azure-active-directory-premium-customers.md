@@ -6,7 +6,7 @@ description: This article describes how Azure AD Premium customers can get suppo
 keywords:
 author: EugeneSergeev
 ms.author: esergeev
-manager: aashiman
+manager: amycolannino
 ms.date: 6/9/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager

@@ -6,7 +6,7 @@ description: The BHOLD connector module supports initial and ongoing synchroniza
 keywords:
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager

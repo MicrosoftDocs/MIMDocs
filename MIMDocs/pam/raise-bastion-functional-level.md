@@ -5,7 +5,7 @@ title: Raise the bastion forest functional level for Identity Manager to use Act
 description: Raise a privileged access management deployment that started with Windows Server 2012 R2 functional level to the Windows Server 2016 functional level.
 author: billmath
 ms.author: billmath
-manager: daveba
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.prod: microsoft-identity-manager

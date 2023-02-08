@@ -1,3 +1,4 @@
+manager: amycolannino
 # [Overview](microsoft-identity-manager-2016.md)
 ## [What is MIM 2016?](microsoft-identity-manager-2016.md)
 ## [Learn about PAM](./pam/privileged-identity-management-for-active-directory-domain-services.md)
