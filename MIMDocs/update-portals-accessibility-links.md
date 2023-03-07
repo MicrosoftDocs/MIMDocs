@@ -69,7 +69,7 @@ For adding links to other areas of the MIM Portal, the [introduction to configur
 
 For customers that are [licensed for Azure Active Directory Premium](/azure/active-directory/authentication/concept-sspr-licensing), we recommend using [Azure AD self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks) (SSPR) to provide the end-user experience.  Azure AD self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM.
 
-For customers that haven't yet deployed Azure AD self-service password reset for their users, and are still using the MIM password reset and registration portals, the [self-service password reset portal customization guide](/reference/mim-portal-customizations) lists the strings and CSS that can be changed. The [test lab guide for Password Registration and Reset Portal Customization](/previous-versions/mim/hh877809(v=ws.10)) from FIM 2010 R2 also applies to customizing MIM 2016 deployments of the password reset and registration portals as well.
+For customers that haven't yet deployed Azure AD self-service password reset for their users, and are still using the MIM password reset and registration portals, the [self-service password reset portal customization guide](reference/mim-portal-customizations.md) lists the strings and CSS that can be changed. The [test lab guide for Password Registration and Reset Portal Customization](/previous-versions/mim/hh877809(v=ws.10)) from FIM 2010 R2 also applies to customizing MIM 2016 deployments of the password reset and registration portals as well.
 
 ## Next steps
 
