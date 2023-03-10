@@ -83,7 +83,7 @@
 ### [Configuring profile templates](https://technet.microsoft.com/library/cc708656)
 ### [Using the certificate management web site](https://technet.microsoft.com/library/cc720560)
 ### [Managing smart card applications](https://technet.microsoft.com/library/cc708681)
-### [Backup and restore](https://technet.microsoft.com/library/dd883245)
+### [Backup and restore](/previous-versions/mim/dd883245\(v=ws.10\))
 ## Self service password reset
 ### [Programmatic user registration](https://technet.microsoft.com/library/jj134294)
 ### [Portal customizations](./reference/mim-portal-customizations.md)
