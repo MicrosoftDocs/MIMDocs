@@ -10,7 +10,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: benyim
-ms.date: 4/21/2024
+ms.date: 4/21/2023
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
