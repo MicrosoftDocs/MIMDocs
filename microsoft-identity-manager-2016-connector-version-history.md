@@ -45,16 +45,16 @@ Related links:
 ### Enhancements
 
 * Generic SQL Connector
-  * Added support for DB2 databases running on Linux
+  * Added support for DB2 databases running on Linux.
 
 ### Fixed issues
 
 * Generic LDAP Connector
-  * Improved handling of duplicate entries in OpenLDAP access log
+  * Improved handling of duplicate entries in OpenLDAP access log.
 
 * Generic SQL Connector
-  * Fixed a regression with Member Type column not populated on export
-  * Minor fixes for MySQL table-based import and export strategies
+  * Fixed a issue with the Member Type column not populating on export.
+  * Improved error handling for MySQL table-based import and export strategies.
 
 ## 1.1.2005.0 (May 2022)
 
@@ -194,7 +194,7 @@ Related links:
 * Generic SQL Connector
   * Fixed a bug with query-based export strategy and multi-valued attributes updates
 * Lotus Notes Connector
-  * Groups from secondary Notes Address Books are no longer deleted by *AdminP* process. Direct delete operation is used now
+  * The *AdminP* process no longer deles the Groups from secondary Notes Address Books. Direct delete operations are used now instead.
 * Generic LDAP Connector
   * Fixed a bug with LDAP directory operations attributes, for example, *pwdUpdateTime*, not visible in schema
 
@@ -387,19 +387,9 @@ Related links:
 ### Enhancements
 
 * Generic SQL:
-  * The ability to configure the mode for execute stored procedure with named
-    parameters or not named is added in a configuration window of the Generic
-    SQL management agent in the page 'Global Parameters'. In the page
-    'Global Parameters', there's check box with the label 'Use named parameters
-    to execute a stored procedure', which is responsible for mode for execute
-    stored procedure with named parameters or not.
-    * Currently, the ability to execute stored procedure with named parameters
-    works only for databases IBM DB2 and MSSQL. For databases Oracle and MySQL
-    this approach doesn't work: 
-      * The SQL syntax of MySQL doesn't support named parameters in stored
-        procedures.
-      * The ODBC driver for the Oracle doesn't support named parameters for
-        named parameters in stored procedures)
+  * The ability to configure the mode of execution for stored procedures with named or unnamed parameters has been added. 
+    * On the 'Global Parameters' page, there is now a check box with the label 'Use named parameters' to execute a stored procedure.
+    * NOTE: The ability to execute stored procedure with named parameters works only for IBM DB2 and MSSQL databases and not for Oracle and MySQL because neither MySQL nor the ODBC driver for Oracle supports the use of named parameters in stored procedures.
 
 ## 1.1.604.0 (AADConnect 1.1.614.0)
 
@@ -408,7 +398,7 @@ Related links:
 * Generic Web Services:
   * Fixed an issue preventing a SOAP project from being created when there were two or more endpoints.
 * Generic SQL:
-  * In the operation of import the GSQL was not converting time correctly, when saved to connector space. The default date and time format for connector space of the GSQL was changed from 'yyyy-MM-dd hh:mm:ssZ' to 'yyyy-MM-dd HH:mm:ssZ'.
+  * In import operations, the GSQL was not converting time correctly when saving it to the connector space. The default date and time format for the GSQL connector space was changed from 'yyyy-MM-dd hh:mm:ssZ' to 'yyyy-MM-dd HH:mm:ssZ.'
 
 ## 1.1.551.0 (AADConnect 1.1.553.0)
 
