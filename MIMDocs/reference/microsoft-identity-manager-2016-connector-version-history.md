@@ -1,10 +1,10 @@
 ---
 title: Connector Version Release History
-description: This topic lists all releases of the Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM)
+description: This document lists all releases of the Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM)
 services: active-directory
 documentationcenter: ''
 author: EugeneSergeev
-manager: amycolannino
+manager: benyim
 editor: ''
 reviewer: markwahl-msft
 
@@ -14,7 +14,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 5/25/2022
+ms.date: 8/14/2023
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -25,9 +25,9 @@ ms.suite: ems
 Connectors link specific connected data sources to Microsoft Identity Manager (MIM) and Azure AD Connect. (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation and the installation package of Azure AD Connect. In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
 
 > [!NOTE]
-> This topic is primarily for MIM Connectors only. Unless explicitly called out below, these Connectors are not supported for install on Azure AD Connect.
+> This document is primarily for MIM Connectors only. Unless explicitly called out in this document, these Connectors are not supported for install on Azure AD Connect.
 
-This topic lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
+This document lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
 
 Related links:
 
@@ -39,6 +39,22 @@ Related links:
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
+
+## 1.1.2025.0 (August 2023)
+
+### Enhancements
+
+* Generic SQL Connector
+  * Added support for DB2 databases running on Linux.
+
+### Fixed issues
+
+* Generic LDAP Connector
+  * Improved handling of duplicate entries in OpenLDAP access log.
+
+* Generic SQL Connector
+  * Fixed a issue with the Member Type column not populating on export.
+  * Improved error handling for MySQL table-based import and export strategies.
 
 ## 1.1.2005.0 (May 2022)
 
@@ -78,7 +94,7 @@ Related links:
 * PowerShell Connector
   * Added a timeout value in connector properties to stop long-running scripts and prevent connector freezes
 * Generic SQL Connector
-  * Added support for query-based export strategies for [additional types of data sources](microsoft-identity-manager-2016-connector-genericsql.md), e.g. PostgreSQL
+  * Added support for query-based export strategies for [other types of data sources](microsoft-identity-manager-2016-connector-genericsql.md), for example, PostgreSQL
 
 ### Fixed issues
 
@@ -86,7 +102,7 @@ Related links:
   * Fixed an issue with non-printable characters left after deletion of multi-valued string attributes
 
 * Generic LDAP Connector
-  * Fixed an issue with Kerberos authentication by enabling 3-part SPN authentication for LDAP connections
+  * Fixed an issue with Kerberos authentication by enabling three-part SPN authentication for LDAP connections
   * Fixed an issue with a drop-down menu that enables hashing of OpenLDAP passwords
   * Improved LDAP schema classes processing, inherited classes are now processed when parent class is in scope
 
@@ -94,7 +110,7 @@ Related links:
 
 ### Updates
 
-* Forefront Identity Manager Connector for Windows Azure Active Directory
+* Forefront Identity Manager Connector for Microsoft Azure Active Directory
   * Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md).
 
 ## 1.1.1431.0 (March 2021)
@@ -131,7 +147,7 @@ Related links:
 * Graph Connector
   * Fixed an issue with local connector cache corruption causing delta import run failures
   * Fixed an issue with duplicated entries reported by connector during full import run causing discovery errors
-  * Fixed an issue with incorrect import of complex data types, e.g. *employeeOrgData*
+  * Fixed an issue with incorrect import of complex data types, for example,  *employeeOrgData*
 * Generic SQL Connector
   * Fixed an issue with SQL native authentication failure due to DSN connection string property *TrustedConnection* set to *false* 
 * Generic LDAP Connector
@@ -159,15 +175,15 @@ Related links:
 * Graph Connector
   * Added support for reading and writing values of custom directory extension attributes
   * Added support for reading *Service Principal* members of groups in the */beta* endpoint 
-  * Performance improvements for delta import runs related to schema discovery
+  * Performance improvements for delta import run related to schema discovery
   * Graph connector can now invite external member users
 
   > [!NOTE]
   > If you have been using guest invite in build 1.1.1170.0 of the connector, please update your sync rules with the following logic:
 
   * Outbound flows
-    * A user is invited when exporting the creation of the user, and the export includes a *Mail* attribute but not a *UserPrincipalName attribute*.  If the *UserPrincipalName* is supplied, then a user will be created rather than invited
-    * *UserType* attribute only defines whether a user will become a *Member* or a *Guest* (defaults to *Member* if not set)
+    * A user is invited when exporting the creation of the user, and the export includes a *Mail* attribute but not a *UserPrincipalName attribute*.  If the *UserPrincipalName* is supplied, then a user is created rather than invited
+    * *UserType* attribute only defines whether a user becomes a *Member* or a *Guest* (defaults to *Member* if not set)
   * Inbound flows
     * *UserPrincipalName* attribute values of external users are rendered 'as-is'
 
@@ -178,14 +194,14 @@ Related links:
 * Generic SQL Connector
   * Fixed a bug with query-based export strategy and multi-valued attributes updates
 * Lotus Notes Connector
-  * Groups from secondary Notes Address Books are no longer deleted by *AdminP* process. Direct delete operation is used now
+  * The *AdminP* process no longer deles the Groups from secondary Notes Address Books. Direct delete operations are used now instead.
 * Generic LDAP Connector
-  * Fixed a bug with LDAP directory operations attributes, e.g. *pwdUpdateTime*, not visible in schema
+  * Fixed a bug with LDAP directory operations attributes, for example, *pwdUpdateTime*, not visible in schema
 
 ### Enhancements
 
 * Graph Connector
-  * UPNs of external guest users are no longer rendered 'as-is', instead they are shown in connector space to look like emails
+  * UPNs of external guest users are no longer rendered 'as-is', instead they're shown in connector space to look like emails
   * Added support for B2B guest users provisioning
 
    To invite B2B guest users, you need to:
@@ -223,7 +239,7 @@ Related links:
   * Full import no longer fails with 'Null reference errors'
   * Fixed a bug with Notes mailbox deletion when ACL is set
   * Empty group names no longer cause delta import failures
-  * Fixed a bug with non-printing characters left in attributes after string values deletions
+  * Fixed a bug with non-printable characters left in attributes after string values deletions
 
 * Generic LDAP Connector
   * Delta import no longer shows 'replace' literal value when no value is set in the source changelog
@@ -231,7 +247,7 @@ Related links:
 ### Enhancements
 
 * Graph Connector
-  * Added support for sovereign clouds and ability to configure Login and Graph Resource URLs
+  * Added support for sovereign clouds and ability to configure Sign in and Graph Resource URLs
   * Unsupported attributes are filtered out and hidden in connector properties after schema discovery
 
 ## 4.4.1800.1 (July 2019)
@@ -270,8 +286,8 @@ Related links:
   * Added multi-threaded group membership full import strategy to improve import performance. Delta import remains single-threaded operation
   * Added support for complex schema types resulting attributes like OnPremisesExtentionAttributes.* being available now
   * Added support for export_password attribute to avoid export-change-not-reimported errors and do not show initial password in the connector space. Behavior is similar to other ECMA2 connectors
-  * Added a handler to support HTTP requests throttling. When Azure AD replica receives too many requests from a client, it might respond with Retry-After instruction. Connector will pause and retry instead of failing
-  * Delta import profile will no longer start if query filters are defined. If you want to import only specific objects from Azure AD, for example, users having last name that starts with A*, then delta import functionality will be blocked
+  * Added a handler to support HTTP requests throttling. When Azure AD replica receives too many requests from a client, it might respond with Retry-After instruction. Connector pauses and retries instead of failing
+  * Delta import profile no longer starts if query filters are defined. If you want to import only specific objects from Azure AD, for example, users having last name that starts with A*, then delta import functionality is blocked
 
 ## 1.1.913.0 (January 2019)
 
@@ -297,7 +313,7 @@ Related links:
 >
 > Compared to the previous connector release, it contains no improvements or updates for MIM customers.
 
-* Updates the non-standard connectors (for example, Generic LDAP Connector and Generic SQL Connector) shipped with Azure AD Connect.  
+* Updates the non standard connectors (for example, Generic LDAP Connector and Generic SQL Connector) shipped with Azure AD Connect.  
 
 ## 1.1.861.0
 
@@ -316,8 +332,8 @@ Related links:
 
 * Generic SQL:
   * Export Binary Attribute
-  * Object types cannot be substrings of each other
-  * Changes in multi-valued table are not tracked in the operation of "Delta import", if "Delta Strategy" is "Change Tracking"
+  * Object types can't be substrings of each other
+  * Changes in multi-valued table aren't tracked in the operation of "Delta import", if "Delta Strategy" is "Change Tracking"
 
 * Graph Connector(Public Preview)
   * Error on Group Deletes
@@ -332,23 +348,23 @@ Related links:
 
 * Graph Connector(Public Preview)
     *Password attribute is filtered on Import to eliminate "Export-not-reimported".
-    *Add support of $filter query parameter -Limited to operations with all filters that work in delta query, will also work in the connector
+    *Add support of $filter query parameter -Limited to operations with all filters that work in delta query, also works in the connector
     *Updated to use nextLink directly instead of extracting skipToken for paging detail [here](https://developer.microsoft.com/en-us/graph/docs/concepts/paging)
 
 ## 1.1.830.0
 
 ### Fixed issues
 
-* Resolved ConnectorsLog System.Diagnostics.EventLogInternal.InternalWriteEvent(Message: A device attached to the system is not functioning)
-* In this release of connectors you will need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
+* Resolved ConnectorsLog System.Diagnostics.EventLogInternal.InternalWriteEvent("Message: A device attached to the system is not functioning")
+* In this release of connectors you need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
 
 * Generic Web Services:
-  * Resolved Valid JSON response could not be saved in configuration tool
+  * Resolved Valid JSON response couldn't be saved in configuration tool
 
 * Generic SQL:
   * Export always generates only update query for the operation of deleting. Added to generate a delete query
-  * The SQL query, which gets objects for the operation of Delta Import,  if 'Delta Strategy' is 'Change Tracking' was fixed. In this implementation known limitation:  Delta Import with 'Change Tracking' mode does not track changes in multi-valued attributes
-  * Added possibility to generate a delete query for case, when it is necessary to delete the last value of multivalued attribute and this row does not contain any other data except value, which it is necessary to delete.
+  * The SQL query, which gets objects for the operation of Delta Import,  if 'Delta Strategy' is 'Change Tracking' was fixed. In this implementation known limitation:  Delta Import with 'Change Tracking' mode doesn't track changes in multi-valued attributes
+  * Added possibility to generate a delete query for case, when it's necessary to delete the last value of multivalued attribute and this row doesn't contain any other data except value, which it's necessary to delete.
   * System.ArgumentException handling when implemented OUTPUT parameters by SP
   * Incorrect query to make the operation of export into field, that has varbinary(max) type
     * Issue with parameterList variable was initialized twice (in the functions ExportAttributes and GetQueryForMultiValue)
@@ -371,19 +387,9 @@ Related links:
 ### Enhancements
 
 * Generic SQL:
-  * The ability to configure the mode for execute stored procedure with named
-    parameters or not named is added in a configuration window of the Generic
-    SQL management agent in the page 'Global Parameters'. In the page
-    'Global Parameters', there is check box with the label 'Use named parameters
-    to execute a stored procedure', which is responsible for mode for execute
-    stored procedure with named parameters or not.
-    * Currently, the ability to execute stored procedure with named parameters
-    works only for databases IBM DB2 and MSSQL. For databases Oracle and MySQL
-    this approach doesn't work: 
-      * The SQL syntax of MySQL doesn't support named parameters in stored
-        procedures.
-      * The ODBC driver for the Oracle doesn't support named parameters for
-        named parameters in stored procedures)
+  * The ability to configure the mode of execution for stored procedures with named or unnamed parameters has been added. 
+    * On the 'Global Parameters' page, there is now a check box with the label 'Use named parameters' to execute a stored procedure.
+    * NOTE: The ability to execute stored procedure with named parameters works only for IBM DB2 and MSSQL databases and not for Oracle and MySQL because neither MySQL nor the ODBC driver for Oracle supports the use of named parameters in stored procedures.
 
 ## 1.1.604.0 (AADConnect 1.1.614.0)
 
@@ -392,7 +398,7 @@ Related links:
 * Generic Web Services:
   * Fixed an issue preventing a SOAP project from being created when there were two or more endpoints.
 * Generic SQL:
-  * In the operation of import the GSQL was not converting time correctly, when saved to connector space. The default date and time format for connector space of the GSQL was changed from 'yyyy-MM-dd hh:mm:ssZ' to 'yyyy-MM-dd HH:mm:ssZ'.
+  * In import operations, the GSQL was not converting time correctly when saving it to the connector space. The default date and time format for the GSQL connector space was changed from 'yyyy-MM-dd hh:mm:ssZ' to 'yyyy-MM-dd HH:mm:ssZ.'
 
 ## 1.1.551.0 (AADConnect 1.1.553.0)
 

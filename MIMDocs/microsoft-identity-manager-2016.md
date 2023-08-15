@@ -9,7 +9,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: benyim
-ms.date: 4/21/2023
+ms.date: 8/14/2023
 ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -59,7 +59,7 @@ For Azure AD Premium customers, standard support continues to be available for c
 
 - [MIM for Azure AD Premium customers](https://aka.ms/MIMforAADP), last updated June 2021
 - [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated April 2023
-- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated May 2022
+- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated August 2023
 - [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated October 2018
 
 
