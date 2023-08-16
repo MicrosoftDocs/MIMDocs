@@ -40,7 +40,7 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
-## 1.1.2025.0 (August 2023)
+## 1.1.2026.0 (August 2023)
 
 ### Enhancements
 
