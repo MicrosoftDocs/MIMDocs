@@ -29,7 +29,7 @@ For MIM2016 and FIM2010R2, the Connector is available as a download from the [Mi
 To see this Connector in action, see the [Generic SQL Connector step-by-step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) article.
 
 > [!NOTE]
-> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> The [Azure AD provisioning](/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic SQL Connector
 The Generic SQL Connector enables you to integrate the synchronization service with a database system that offers ODBC connectivity.  
@@ -38,13 +38,10 @@ From a high-level perspective, the following features are supported by the curre
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>Oracle 12c and 18c</li><li>MySQL 5.x</li> |
+| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>Oracle 12c and 18c</li><li>MySQL 5.x</li><li>MySQL 8.x</li><li>Postgres</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Password Management</li> |
 | Operations |<li>Full Import and Delta Import, Export</li><li>For Export: Add, Delete, Update, and Replace</li><li>Set Password, Change Password</li> |
 | Schema |<li>Dynamic discovery of objects and attributes</li> |
-
-> [!NOTE]
-> *Connections to data sources not listed above, e.g. PostgreSQL, are currently limited to query-based import and export strategies.
 
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
