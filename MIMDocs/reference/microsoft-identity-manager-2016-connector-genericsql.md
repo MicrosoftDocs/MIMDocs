@@ -38,13 +38,10 @@ From a high-level perspective, the following features are supported by the curre
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>Oracle 12c and 18c</li><li>MySQL 5.x</li> |
+| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>Oracle 12c and 18c</li><li>MySQL 5.x</li><li>Postgres</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Password Management</li> |
 | Operations |<li>Full Import and Delta Import, Export</li><li>For Export: Add, Delete, Update, and Replace</li><li>Set Password, Change Password</li> |
 | Schema |<li>Dynamic discovery of objects and attributes</li> |
-
-> [!NOTE]
-> *Connections to data sources not listed above, e.g. PostgreSQL, are currently limited to query-based import and export strategies.
 
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
