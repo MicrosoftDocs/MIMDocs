@@ -29,7 +29,7 @@ The [Microsoft Identity Manager connector for Microsoft Graph](https://go.micros
 
 
 The initial scenario for the Microsoft Identity Manager connector for Microsoft Graph is as a connector to help automate AD DS account lifecycle
-management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application)
+management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which isn't in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application)
 or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
 To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 and the Azure AD Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
@@ -37,7 +37,7 @@ To learn how to configure MIM sync to automatically create and maintain AD DS ac
 ### Other identity management scenarios
 
 
-The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Azure AD, beyond user and group synchronization to Azure AD. When evaluating potential scenarios, please keep in mind: this connector cannot be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with an Azure AD Connect deployment.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.  Azure AD Connect has many more synchronization features and enables scenarios such as password and device writeback, which are not possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it is excluded from Azure AD Connect attempting to match those objects back to the Azure AD directory.  Nor can this connector be used to make changes to Azure AD objects, which were created by Azure AD Connect.
+The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Azure AD, beyond user and group synchronization to Azure AD. When evaluating potential scenarios, please keep in mind: this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with an Azure AD Connect deployment.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.  Azure AD Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Azure AD Connect attempting to match those objects back to the Azure AD directory.  Nor can this connector be used to make changes to Azure AD objects, which were created by Azure AD Connect.
 
 
 
@@ -59,7 +59,7 @@ The connector can be used for other specific identity management scenarios invol
 
     Picture 2. Application ID
 
-3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value will not be available to view again after leaving the page.
+3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value won't be available to view again after leaving the page.
 
     ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
@@ -129,7 +129,7 @@ The connectivity page (Picture 5) contains the Graph API version that is used
 and tenant name. The Client ID and Client Secret represent the Application ID and
 Key value of the application that was previously created in Azure AD.
 
-The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you will need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
+The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you'll need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
 11. Make any necessary changes on the Global Parameters page:
 
@@ -180,7 +180,7 @@ The list of attribute types that are supported:
 
 Multivalued attributes (Collection) are also supported for any of a type from the list above.
 
-The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename is not needed, because Graph API does not allow an object to change its `id` attribute.
+The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename isn't needed, because Graph API doesn't allow an object to change its `id` attribute.
 
 
 ## Access token lifetime
@@ -220,7 +220,7 @@ Make sure that the attribute used in filter expression is selected in connector 
 For more information about *$filter* query parameter usage, see this article: [Use query parameters to customize responses](/graph/query-parameters#filter-parameter).
 
 >[!NOTE]
->Delta query endpoint currently does not offer filtering capabilities, therefore usage of filters is limited to full import only. You will get an error trying to start delta import run with query filters enabled.
+>Delta query endpoint currently doesn't offer filtering capabilities, therefore usage of filters is limited to full import only. you'll get an error trying to start delta import run with query filters enabled.
 
 ## Troubleshooting
 
