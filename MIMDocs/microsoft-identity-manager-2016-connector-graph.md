@@ -236,7 +236,7 @@ If there are any issues in Graph, then logs could be used to localize the proble
 type="System.Diagnostics.EventLogTraceListener, System, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=b77a5c561934e089"
 name="ConnectorsLogListener" traceOutputOptions="LogicalOperationStack,
-DateTime, Timestamp, Call stack" />
+DateTime, Timestamp, Callstack" />
 <remove name="Default" />
 </listeners>
 </source>
