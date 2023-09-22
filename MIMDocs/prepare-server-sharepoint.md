@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 09/14/2023
+ms.date: 09/22/2023
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 
@@ -138,6 +138,17 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
    $contentService.Update();
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
+
+    > [!IMPORTANT]
+    > If deploying on SharePoint 2019 or 2016 with September 2023 updates or later, the following commands must also be manually executed from the SharePoint Management Shell.
+
+    ```PowerShell
+    $f = get-spfarm
+    $f.AddGenericAllowedListValue("WebPartSupportedBoundPropertyNames","data-title-text")
+    $f.AddGenericAllowedListValue("WebPartSupportedBoundPropertyNames","data-link-to-tab-text")
+    $f.update() 
+    iisreset
+    ```
 
 4. On your identity management server, open a new web browser tab, navigate to `http://mim.contoso.com/` and login as *contoso\miminstall*.  An empty SharePoint site named *MIM Portal* will be shown.
 
