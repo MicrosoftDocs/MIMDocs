@@ -68,6 +68,9 @@ Perform the install as described in the [Getting started guide](privileged-ident
     -   Configuring the registry settings needed for SID history migration (item #8) is **not required when the PRIV domain is Windows Server 2016 domain functional level**.
 
     -   After configuring delegation, and before restarting the server, enable the Privileged Access Management features in Windows Server 2016 Active Directory by launching a PowerShell window as administrator and typing the following commands.
+ 
+>[!Note]
+>In Windows Server 2016-2022, enabling the Privileged Access Management feature incurs some additional CPU overhead on the domain controllers in the forest where the feature is enabled. For most workloads in most environments, this CPU overhead is typically less than 1-2%. However, group member enumeration of very large security groups (for example, groups with more than 10,000 members) can become significantly (2-3 times) more expensive. For example, enumerating the group members of a security group with 20,000 members may take 200 milliseconds before enabling the PAM feature, and 400 milliseconds after enabling the PAM feature, depending on group size, the domain controller's hardware, etc.
 
     ```
     $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
