@@ -62,7 +62,7 @@ This table does not include the software on which MIM itself is deployed; see th
 | [LDAP Data Interchange Format (LDIF)](https://technet.microsoft.com/library/cc708662(v=ws.10).aspx) | LDAP Data Interchange Format (LDIF) |
 | [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md) | Microsoft Graph |
 
-The Microsoft Azure Active Directory Connector is deprecated and not recommended for new deployments; use [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect) sync, Azure AD Connect cloud provisioning, or [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md) instead.
+The Microsoft Entra Connector is deprecated and not recommended for new deployments; use [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect) sync, Microsoft Entra Connect cloud provisioning, or [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md) instead.
 
 ## Related topics
 
