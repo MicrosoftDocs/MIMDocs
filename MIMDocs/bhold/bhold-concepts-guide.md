@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft BHOLD Suite Concepts Guide | Microsoft Docs
+title: Microsoft BHOLD Suite Concepts Guide
 description: Understand how Microsoft BHOLD Suite works with Microsoft Identity Manager.
 keywords:
 author: billmath
@@ -34,7 +34,7 @@ This guide helps you understand how BHOLD Suite works with MIM and covers the fo
 - Reporting
 - Access Management Connector
 
-BHOLD is not recommended for new deployments.  Azure AD now provides [access reviews](/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
+BHOLD is not recommended for new deployments. Microsoft Entra ID now provides [access reviews](/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## Role-based access control
 

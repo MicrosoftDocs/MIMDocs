@@ -1,5 +1,5 @@
 ---
-title: Generic SQL Connector | Microsoft Docs
+title: Generic SQL Connector
 description: This article describes how to configure Microsoft's Generic SQL Connector.
 services: active-directory
 documentationcenter: ''
@@ -29,7 +29,7 @@ For MIM2016 and FIM2010R2, the Connector is available as a download from the [Mi
 To see this Connector in action, see the [Generic SQL Connector step-by-step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) article.
 
 > [!NOTE]
-> The [Azure AD provisioning](/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> The [Microsoft Entra provisioning](/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic SQL Connector
 The Generic SQL Connector enables you to integrate the synchronization service with a database system that offers ODBC connectivity.  
@@ -83,7 +83,7 @@ The database should support one of these authentication methods:
 
 * **Windows authentication**: The authenticating database uses the Windows credentials to verify the user. The user name/password specified is used to authenticate with the database. This account needs permissions to the database.
 * **SQL authentication**: The authenticating database uses the user name/password defined one the Connectivity screen to connect to the database. If you store the user name/pasword in the DSN file, the credentials provided on the Connectivity screen have precedence.
-* **Azure SQL Database authentication**: For more information, see [Connect to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication-configure).
+* **Azure SQL Database authentication**: For more information, see [Connect to SQL Database via Microsoft Entra authentication](/azure/sql-database/sql-database-aad-authentication-configure).
 
 **DN is Anchor**: If you select this option, the DN is also used as the anchor attribute. It can be used for a simple implementation but also has the following limitation:
 

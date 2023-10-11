@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Steps required to deploy Microsoft Identity Manager 2016 | Microsoft Docs
+title: Steps required to deploy Microsoft Identity Manager 2016
 description: Get the full list of steps involved in deploying Microsoft Identity Manager 2016, from preparing the environment to configuring the portals.
 services: active-directory
 documentationcenter: ''
@@ -53,5 +53,5 @@ For more information on supported platforms, see [Supported platforms for MIM 20
 Once you have set up the domain and server, you're ready to install the MIM components and configure them to sync with AD.
 - [MIM Synchronization Service](install-mim-sync.md)
 - [MIM Service and Portal](install-mim-service-portal.md) or
-- [MIM Service and Portal for Azure AD Premium customers](install-mim-service-portal-azure-ad-premium.md)
+- [MIM Service and Portal for Microsoft Entra ID P1 or P2 customers](install-mim-service-portal-azure-ad-premium.md)
 - [Synchronize Active Directory and MIM Service databases](install-mim-sync-ad-service.md)

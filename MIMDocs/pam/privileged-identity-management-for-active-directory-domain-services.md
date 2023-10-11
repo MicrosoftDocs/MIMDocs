@@ -35,7 +35,7 @@ Privileged Access Management accomplishes two goals:
 - Isolate the use of privileged accounts to reduce the risk of those credentials being stolen.
 
 > [!NOTE]
-> MIM PAM is distinct from [Azure Active Directory Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM). MIM PAM is intended for isolated on-premises AD environments. Azure AD PIM is a service in Azure AD that enables you to manage, control, and monitor access to resources in Azure AD, Azure, and other Microsoft Online Services such as Microsoft 365 or Microsoft Intune. For guidance on on-premises Internet-connected environments and hybrid environments, see [securing privileged access](/security/compass/overview) for more information.
+> MIM PAM is distinct from [Microsoft Entra Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM). MIM PAM is intended for isolated on-premises AD environments. Microsoft Entra PIM is a service in Microsoft Entra ID that enables you to manage, control, and monitor access to resources in Microsoft Entra ID, Azure, and other Microsoft Online Services such as Microsoft 365 or Microsoft Intune. For guidance on on-premises Internet-connected environments and hybrid environments, see [securing privileged access](/security/compass/overview) for more information.
 
 ## What problems does MIM PAM help solve?
 
