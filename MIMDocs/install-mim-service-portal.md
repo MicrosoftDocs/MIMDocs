@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Microsoft Identity Manager Service and Portal | Microsoft Docs
+title: Install Microsoft Identity Manager Service and Portal
 description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016
 services: active-directory
 documentationcenter: ''
@@ -38,7 +38,7 @@ ms.suite: ems
 
 ## Before you begin
 
-- This guide is intended for installing Volume License edition of MIM. If your organization has Azure AD Premium subscription or is using Azure AD, then you will need to instead follow [the guide for MIM Service in organizations licensed for Azure AD Premium](install-mim-service-portal-azure-ad-premium.md).
+- This guide is intended for installing Volume License edition of MIM. If your organization has Microsoft Entra ID P1 or P2 subscription or is using Microsoft Entra ID, then you will need to instead follow [the guide for MIM Service in organizations licensed for Microsoft Entra ID P1 or P2](install-mim-service-portal-azure-ad-premium.md).
 
 ## Configure MIM Service and Portal for installation
 
@@ -85,17 +85,19 @@ ms.suite: ems
 
 13. Specify `http://mim.contoso.com` as the SharePoint site collection URL.
 
-14. If not using Azure AD for password reset, specify `http://passwordregistration.contoso.com` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
+14. If not using Microsoft Entra ID for password reset, specify `http://passwordregistration.contoso.com` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
 
-15. If not using Azure AD for password reset, specify `http://passwordreset.contoso.com` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
+15. If not using Microsoft Entra ID for password reset, specify `http://passwordreset.contoso.com` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
 
 16. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to MIM Portal.
 
-## Configure MIM Password Registration Portal (optional, if not using Azure AD for SSPR)
+<a name='configure-mim-password-registration-portal-optional-if-not-using-azure-ad-for-sspr'></a>
+
+## Configure MIM Password Registration Portal (optional, if not using Microsoft Entra ID for SSPR)
 
 1. Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to <em>Pass@word1</em>.
 
-2. Specify  *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
+2. Specify *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
 
    ![Enter configuration information used by password registration web site image](media/install-mim-service-portal/MIM_Install14.png)
 
