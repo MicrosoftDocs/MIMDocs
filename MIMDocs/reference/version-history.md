@@ -39,7 +39,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 
 - Status: October 3, 2023
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=105628)
-- [KB article 5012051](https://support.microsoft.com/help/5018333)
+- [KB article 5018333](https://support.microsoft.com/help/5018333)
 
 This hotfix contains updates for the MIM PAM components, MIM, and also contains cumulative updates to MIM components from the previous hotfixes for MIM 2016 SP2.
 
