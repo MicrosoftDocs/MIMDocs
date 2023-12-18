@@ -38,11 +38,11 @@ Certain operations and schema elements, such as those needed to perform delta im
 
 For connecting to the directories, we test using the root/admin account.  To use a different account to apply more granular permissions, you may need to review with your LDAP directory team.
 
-From a high-level perspective, the following features are supported by the current release of the connector:
+The current release of the connector supports these features:
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all LDAP v3 servers (RFC 4510 compliant). It has been tested with the following: <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Microsoft Active Directory Global Catalog (AD GC)</li><li>389 Directory Server</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (previously Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>For most scenarios, you must use the built-in Active Directory Connector instead as some features may not work</li></ul>**Notable known directories or features not supported:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Password Change Notification Service(PCNS)</li><li>Exchange provisioning</li><li>Delete of Active Sync Devices</li><li>Support for nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
+| Connected data source |The Connector is supported with all LDAP v3 servers (RFC 4510 compliant), except where called out as unsupported. It has been tested with these directory servers: <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Microsoft Active Directory Global Catalog (AD GC)</li><li>389 Directory Server</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (previously Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>For most scenarios, you must use the built-in Active Directory Connector instead as some features may not work</li></ul>**Notable known directories or features not supported:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Password Change Notification Service(PCNS)</li><li>Exchange provisioning</li><li>Delete of Active Sync Devices</li><li>Support for nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Group Management</li><li>Password Management</li> |
 | Operations |The following operations are supported on all LDAP directories: <li>Full Import</li><li>Export</li>The following operations are only supported on specified directories:<li>Delta import</li><li>Set Password, Change Password</li> |
 | Schema |<li>Schema is detected from the LDAP schema (RFC3673 and RFC4512/4.2)</li><li>Supports structural classes, aux classes, and extensibleObject object class (RFC4512/4.3)</li> |
@@ -117,7 +117,7 @@ The following LDAP controls/features must be available on the LDAP server for th
 
 The True/False filter is frequently not reported as supported by LDAP directories and might show up on the **Global Page** under **Mandatory Features Not Found**. It is used to create **OR** filters in LDAP queries, for example when importing multiple object types. If you can import more than one object type, then your LDAP server supports this feature.
 
-If you use a directory where a unique identifier is the anchor the following must also be available (For more information, see the [Configure Anchors](#configure-anchors) section):  
+If you use a directory where a unique identifier is the anchor the following feature must also be available (For more information, see the [Configure Anchors](#configure-anchors) section):  
 `1.3.6.1.4.1.4203.1.5.1` All operational attributes
 
 If the directory has more objects than what can fit in one call to the directory, then it is recommended to use paging. For paging to work, you need one of the following options:
@@ -165,11 +165,11 @@ On the Connectivity page, you must specify the Host, Port, and Binding informati
 * For other bindings, enter information either in username / password or select a certificate.
 * If you are using Kerberos to authenticate, then also provide the Realm/Domain of the user.
 
-The **attribute aliases** text box is used for attributes defined in the schema with RFC4522 syntax. These attributes cannot be detected during schema detection and the Connector needs help to identify those attributes. For example the following must be entered in the attribute aliases box to correctly identify the userCertificate attribute as a binary attribute:
+The **attribute aliases** text box is used for attributes defined in the schema with RFC4522 syntax. These attributes cannot be detected during schema detection and the Connector needs those attributes to be configured separately. For example the following string must be entered in the attribute aliases box to correctly identify the userCertificate attribute as a binary attribute:
 
 `userCertificate;binary`
 
-The following is an example for how this configuration could look like:
+The following table is an example for how this configuration could look like:
 
 ![MIM Sync connector configuration Connectivity page with attributes](./media/microsoft-identity-manager-2016-connector-genericldap/connectivityattributes.png)
 
@@ -194,7 +194,7 @@ The **supported controls** checkboxes control the behavior for certain operation
 
 The change log DN is the naming context used by the delta change log, for example **cn=changelog**. This value must be specified to be able to do delta import.
 
-The following is a list of default change log DNs:
+The following table is a list of default change log DNs:
 
 | Directory | Delta change log |
 | --- | --- |
@@ -239,12 +239,12 @@ When performing a search this is done across all containers in the partition. In
 ![Search only selected containers](./media/microsoft-identity-manager-2016-connector-genericldap/partitions-only-selected-containers.png)
 
 ### Configure Anchors
-This page always have a preconfigured value and cannot be changed. If the server vendor has been identified, then the anchor might be populated with an immutable attribute, for example the GUID for an object. If it has not been detected or is known to not have an immutable attribute, then the connector uses dn (distinguished name) as the anchor.
+This page always has a preconfigured value and cannot be changed. If the server vendor has been identified, then the anchor might be populated with an immutable attribute, for example the GUID for an object. If it has not been detected or is known to not have an immutable attribute, then the connector uses dn (distinguished name) as the anchor.
 
 ![MIM Sync connector configuration anchors page](./media/microsoft-identity-manager-2016-connector-genericldap/anchors.png)
 
 
-The following is a list of LDAP servers and the anchor being used:
+The following table is a list of LDAP servers and the anchor being used:
 
 | Directory | Anchor attribute |
 | --- | --- |
