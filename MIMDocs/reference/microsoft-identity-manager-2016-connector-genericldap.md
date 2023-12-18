@@ -21,16 +21,15 @@ ms.author: billmath
 This article describes the Generic LDAP Connector. The article applies to the following products:
 
 * Microsoft Identity Manager 2016 (MIM2016)
-* Forefront Identity Manager 2010 R2 (FIM2010R2)
-  * Must use hotfix 4.1.3671.0 or later.
+* [Microsoft Entra ID](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-ldap-connector-configure)
 
-For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
+For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 When referring to IETF RFCs, this document is using the format (RFC [RFC number]/[section in RFC document]), for example (RFC 4512/4.3).
 You can find more information at [https://tools.ietf.org/](https://tools.ietf.org/). In the left panel, enter an RFC number in the **Doc fetch** dialog box and test it to make sure it is valid.
 
 > [!NOTE]
-> The [Microsoft Entra provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into an LDAP v3 server, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-ldap-connector-configure).
+> [Microsoft Entra ID](/entra/identity/app-provisioning/user-provisioning) now provides a lightweight agent based solution for provisioning users into an LDAPv3 server, without needing a MIM sync deployment. We recommend using it for outbound user provisioning. [Learn more](/entra/identity/app-provisioning/on-premises-ldap-connector-configure).
 
 ## Overview of the Generic LDAP Connector
 The Generic LDAP Connector enables you to integrate the synchronization service with an LDAP v3 server.

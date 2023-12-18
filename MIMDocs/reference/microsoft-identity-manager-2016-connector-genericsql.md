@@ -21,15 +21,14 @@ ms.author: billmath
 This article describes the Generic SQL Connector. The article applies to the following products:
 
 * Microsoft Identity Manager 2016 (MIM2016)
-* Forefront Identity Manager 2010 R2 (FIM2010R2)
-  * Must use hotfix 4.1.3671.0 or later.
+* [Microsoft Entra ID](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-sql-connector-configure)
 
-For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
+For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 To see this Connector in action, see the [Generic SQL Connector step-by-step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) article.
 
 > [!NOTE]
-> The [Microsoft Entra provisioning](/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> [Microsoft Entra ID](/entra/identity/app-provisioning/user-provisioning) now provides a lightweight agent based solution for provisioning users into a SQL database, without needing a MIM sync deployment. We recommend using it for outbound user provisioning. [Learn more](/entra/identity/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic SQL Connector
 The Generic SQL Connector enables you to integrate the synchronization service with a database system that offers ODBC connectivity.  
