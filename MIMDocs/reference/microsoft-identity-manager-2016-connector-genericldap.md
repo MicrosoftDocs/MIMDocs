@@ -21,7 +21,7 @@ ms.author: billmath
 This article describes the Generic LDAP Connector. The article applies to the following products:
 
 * Microsoft Identity Manager 2016 (MIM2016)
-* [Microsoft Entra ID](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-ldap-connector-configure)
+* [Microsoft Entra ID](/entra/identity/app-provisioning/on-premises-ldap-connector-configure)
 
 For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
