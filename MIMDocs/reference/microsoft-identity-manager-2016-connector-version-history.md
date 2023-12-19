@@ -22,10 +22,10 @@ ms.suite: ems
 ---
 # Connector Version Release History
 
-Connectors link specific connected data sources to Microsoft Identity Manager (MIM) and Azure AD Connect. (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation and the installation package of Azure AD Connect. In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
+Connectors link specific connected data sources to Microsoft Identity Manager (MIM), and Microsoft Entra Connect Sync, and the Microsoft Entra provisioning agent. (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation and the installation package of Microsoft Entra Connect Sync. In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
 
 > [!NOTE]
-> This document is primarily for MIM Connectors only. Unless explicitly called out in this document, these Connectors are not supported for install on Azure AD Connect.
+> This document is primarily for MIM Connectors only. Unless explicitly called out in this document, these Connectors are not supported for install on Microsoft Entra Connect Sync.
 
 This document lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
 
@@ -53,7 +53,7 @@ Related links:
   * Improved handling of duplicate entries in OpenLDAP access log.
 
 * Generic SQL Connector
-  * Fixed a issue with the Member Type column not populating on export.
+  * Fixed an issue with the Member Type column not populating on export.
   * Improved error handling for MySQL table-based import and export strategies.
 
 ## 1.1.2005.0 (May 2022)
@@ -110,7 +110,7 @@ Related links:
 
 ### Updates
 
-* Forefront Identity Manager Connector for Microsoft Azure Active Directory
+* Forefront Identity Manager Connector for Microsoft Azure Active Directory deprecated
   * Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md).
 
 ## 1.1.1431.0 (March 2021)
@@ -194,7 +194,7 @@ Related links:
 * Generic SQL Connector
   * Fixed a bug with query-based export strategy and multi-valued attributes updates
 * Lotus Notes Connector
-  * The *AdminP* process no longer deles the Groups from secondary Notes Address Books. Direct delete operations are used now instead.
+  * The *AdminP* process no longer deletes the Groups from secondary Notes Address Books. Direct delete operations are used now instead.
 * Generic LDAP Connector
   * Fixed a bug with LDAP directory operations attributes, for example, *pwdUpdateTime*, not visible in schema
 
@@ -366,7 +366,7 @@ Related links:
   * The SQL query, which gets objects for the operation of Delta Import,  if 'Delta Strategy' is 'Change Tracking' was fixed. In this implementation known limitation:  Delta Import with 'Change Tracking' mode doesn't track changes in multi-valued attributes
   * Added possibility to generate a delete query for case, when it's necessary to delete the last value of multivalued attribute and this row doesn't contain any other data except value, which it's necessary to delete.
   * System.ArgumentException handling when implemented OUTPUT parameters by SP
-  * Incorrect query to make the operation of export into field, that has varbinary(max) type
+  * Incorrect query to make the operation of export into field that has varbinary(max) type
     * Issue with parameterList variable was initialized twice (in the functions ExportAttributes and GetQueryForMultiValue)
 
 ## 1.1.649.0 (AADConnect 1.1.649.0)
@@ -382,7 +382,7 @@ Related links:
 
 * Generic SQL:
   * Fixed export into field, that has varbinary(max) type.
-  * When adding binary data from a data source to CSEntry object, The DataTypeConversion function failed on zero bytes. Fixed DataTypeConversion function of the CSEntryOperationBase class.
+  * When binary data is added from a data source to a CSEntry object, the DataTypeConversion function failed on zero bytes. Fixed DataTypeConversion function of the CSEntryOperationBase class.
 
 ### Enhancements
 

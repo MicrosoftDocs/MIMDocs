@@ -25,9 +25,9 @@ This article describes the deprecated features of Microsoft Identity Manager 201
 
 ## BHOLD
 
-Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. Existing deployments of BHOLD for role-based provisioning will continue to be supported, except where the underlying component is no longer supported.
+Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. For some modules, the underlying component is no longer supported.
 
-The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules have a dependency on Microsoft Silverlight. Microsoft Silverlight will reach its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).  Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules that require Silverlight. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers by October 2021. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
+The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules have a dependency on Microsoft Silverlight. Microsoft Silverlight reached its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).  Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules that require Silverlight. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
 
 Microsoft Entra ID now provides [access reviews](/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
@@ -46,14 +46,14 @@ Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2
 
 
 > [!IMPORTANT]
-> In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure Multi-Factor Authentication Server, for MIM SSPR or MIM PAM approvals, should plan to move before this date to instead use either custom MFA providers, or Windows Hello or smartcard-based authentication in AD.
+> In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure Multi-Factor Authentication Server, for MIM SSPR or MIM PAM approvals, must move before this date to instead use either custom MFA providers, or Windows Hello or smartcard-based authentication in AD.
 
 ## Connectors and Management Agents
 
-The following MAs have been removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs have been replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
+The following MAs were removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs were replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
 
 > [!IMPORTANT]
-> The Windows Azure AD Connector for FIM is deprecated. The solution of using FIM and the Microsoft Entra Connector has been superseded.  Existing deployments should migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Microsoft Entra Connector for FIM are being removed from Microsoft Entra ID, and at a future date, the Windows Azure AD Connector will no longer be able to connect with Microsoft Entra ID.
+> The Windows Azure AD Connector for FIM is deprecated. The solution of using FIM and this connector for Microsoft Entra has been superseded.  Existing deployments should migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Windows Azure AD Connector for FIM are being removed from Microsoft Entra ID, and the Windows Azure AD Connector will no longer be able to connect with Microsoft Entra ID.
 
 ## Synchronization Service
 
@@ -96,6 +96,6 @@ Deploying MIM for Privileged Access Management with a Windows Server 2012 R2 dom
 ## Next steps
 Learn more about:
 
-- Microsoft Identity Manager is still closely related to its predecessor, Forefront Identity Manager. If you still use FIM, or want to refer to additional documentation, take a look at the [FIM 2010 R2 Documentation Roadmap](https://technet.microsoft.com/library/jj133885.aspx).
+- Microsoft Identity Manager is still closely related to its predecessor, Forefront Identity Manager. Additional documentation is in the [FIM 2010 R2 Documentation Roadmap](https://technet.microsoft.com/library/jj133885.aspx).
 - [Topology considerations for deploying MIM](topology-considerations.md) This article introduces multiple deployment topologies that you may consider implementing.
 - [Capacity planning guide](capacity-planning-guide.md) You can use this guide, along with test environments, to understand the appropriate scope for your deployment.

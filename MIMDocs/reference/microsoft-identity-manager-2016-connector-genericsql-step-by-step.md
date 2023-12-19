@@ -21,7 +21,8 @@ ms.author: billmath
 This topic is a step-by-step guide. It creates a simple sample HR database and use it for importing some users and their group membership.
 
 > [!NOTE]
-> The [Microsoft Entra provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> [Microsoft Entra ID](/entra/identity/app-provisioning/user-provisioning) now provides a lightweight agent based solution for provisioning users into a SQL database, without needing a MIM sync deployment. We recommend using it for outbound user provisioning. [Learn more](/entra/identity/app-provisioning/on-premises-sql-connector-configure).
+
 
 ## Prepare the sample database
 On a server running SQL Server, run the SQL script found in [Appendix A](#appendix-a). This script creates a sample database with the name GSQLDEMO. The object model for the created database looks like this picture:  
