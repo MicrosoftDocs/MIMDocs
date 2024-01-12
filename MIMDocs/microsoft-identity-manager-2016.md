@@ -12,7 +12,7 @@ manager: benyim
 ms.date: 10/23/2023
 ms.devlang: na
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
 

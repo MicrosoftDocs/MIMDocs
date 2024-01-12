@@ -9,7 +9,7 @@ manager: amycolannino
 ms.date: 5/24/2021
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ---
