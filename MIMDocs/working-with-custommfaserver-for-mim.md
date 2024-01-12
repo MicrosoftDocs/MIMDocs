@@ -9,7 +9,7 @@ ms.reviewer: fimguy
 manager: amycolannino
 ms.date: 09/14/2023
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 
 

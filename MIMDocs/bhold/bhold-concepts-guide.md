@@ -10,7 +10,7 @@ manager: amycolannino
 ms.date: 09/14/2023
 ms.topic: conceptual
 ms.assetid: 
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 # optional metadata
 

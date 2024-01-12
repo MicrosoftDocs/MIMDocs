@@ -9,7 +9,7 @@ ms.author: billmath
 manager: amycolannino
 ms.date: 09/14/2023
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: c015ffc7-5c94-427e-a3b3-870ec8ab92b6
 
