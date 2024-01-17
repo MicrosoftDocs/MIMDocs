@@ -9,7 +9,7 @@ ms.author: mwahl
 manager: amycolannino
 ms.date: 10/20/2022
 ms.topic: reference
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid:
 
