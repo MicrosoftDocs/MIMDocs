@@ -9,7 +9,7 @@ ms.author: esergeev
 manager: amycolannino
 ms.date: 6/9/2020
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 ms.assetid: 
 
 # optional metadata

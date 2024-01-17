@@ -9,7 +9,7 @@ ms.author: esergeev
 manager: amycolannino
 ms.date: 3/27/2020
 ms.topic: conceptual
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 ms.reviewer: markwahl-msft
 ms.assetid: 
 ---

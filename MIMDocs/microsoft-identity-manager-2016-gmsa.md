@@ -6,7 +6,7 @@ ms.author: esergeev
 manager: amycolannino
 ms.date: 03/10/2020
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ---
 
