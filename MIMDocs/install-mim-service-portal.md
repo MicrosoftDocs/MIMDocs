@@ -13,7 +13,7 @@ manager: amycolannino
 ms.date: 03/18/2021
 ms.devlang: na
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
 
