@@ -7,7 +7,7 @@ ms.author: billmath
 manager: amycolannino
 ms.date: 09/14/2023
 ms.topic: conceptual
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ---

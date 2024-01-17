@@ -8,7 +8,7 @@ ms.reviewer: fimguy
 manager: amycolannino
 ms.date: 09/14/2023
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ---
