@@ -65,7 +65,7 @@ If you have an instance of the Service and Portal or PAM installed being able to
 
 If you installed the Portal, you can use the UI to search on any attribute or query for a particular user.
 
-If you only have the service server(without Portal UI) installed you can run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx).
+If you only have the service server(without Portal UI) installed you can run a search syntax based on the [FIMAutomation PSSnapin].
 
 PAM can use the same syntax above or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser cmdlet to search for the user within the PAM environment.
 
@@ -97,7 +97,7 @@ Synchronization services for exporting data simply select the data from the sear
 
 
 ### Service and Portal / PAM
-Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) and pipe it to [csv](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
+Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](/archive/technet-wiki/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager) and pipe it to [csv](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
 
 PAM can use the same syntax above or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
 
@@ -146,7 +146,7 @@ Data in MIM is synced and always updated from its connected data source. When an
 ### Synchronization Service
 Synchronization Service as many ways to handle data or delete data depending on business processes. To help understand, below are some articles to help understand options on deleting and updating attributes: 
 
-- [Understanding Deprovisioning](https://social.technet.microsoft.com/wiki/contents/articles/1270.understanding-deprovisioning-in-fim.aspx)
+- [Understanding Deprovisioning](/archive/technet-wiki/1270.understanding-deprovisioning-in-fim)
 - [Using Rules Extensions](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
 - [MIM Best Practices](/microsoft-identity-manager/mim-best-practices)
 
@@ -188,4 +188,4 @@ HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
 ## Next Steps 
 - [For SQL Related privacy Guidance](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-2017)
 - [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
-- [FIM 2010 Archive: Ramp Up - Implementing Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)
+
