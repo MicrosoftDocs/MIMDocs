@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 09/14/2023
+ms.date: 2/6/2024
 ms.topic: reference
 ms.service: microsoft-identity-manager
 
@@ -53,11 +53,11 @@ Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2
 The following MAs were removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs were replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
 
 > [!IMPORTANT]
-> The Windows Azure AD Connector for FIM is deprecated. The solution of using FIM and this connector for Microsoft Entra has been superseded.  Existing deployments should migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Windows Azure AD Connector for FIM are being removed from Microsoft Entra ID, and the Windows Azure AD Connector will no longer be able to connect with Microsoft Entra ID.
+> The Windows Azure AD Connector for FIM is deprecated. The solution of using FIM and this connector for Microsoft Entra has been superseded.  Existing deployments must migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Windows Azure AD Connector for FIM are being removed from Microsoft Entra ID, and the Windows Azure AD Connector will no longer be able to connect with Microsoft Entra ID as of April 2024.
 
 ## Synchronization Service
 
-Deploying MIM Sync on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.
+Deploying MIM Sync on Windows Server 2008 R2, Windows Server 2012 or Windows Server 2012 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.
 
 The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating existing ECMA1 management agents with ECMA2.0 connectors is required.
 
