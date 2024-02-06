@@ -143,7 +143,7 @@ This article is a guide for configuring supported Microsoft Identity Manager ser
     >
     > The command starts Microsoft Key Distribution Service when the network is on (typically early in the boot cycle).
     >
-    > For a discussion about a similar issue, see [AD FS Windows 2012 R2: adfssrv hangs in starting mode](https://social.technet.microsoft.com/Forums/en-US/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS).
+    > For a discussion about a similar issue, see [AD FS Windows 2012 R2: adfssrv hangs in starting mode](/archive/msdn-technet-forums/a290c5c0-3112-409f-8cb0-ff23e083e5d1).
 
 1.  Run Elevated MSI of Microsoft Identity Manager Service, and select **Change**.
 
