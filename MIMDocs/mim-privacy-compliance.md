@@ -27,18 +27,18 @@ ms.suite: ems
 
 This article provides guidance on how organizations can make decisions that can be applied across many connected data sources.  This can be achieved through the search, delete, update, and report operations.  Before deciding on your approach of deleting or updating, an understanding of the current design and configuration of your identity manager system (MIM) is critical. 
 
-Organizations will need to consider and answer the following questions: 
+Organizations need to consider and answer the following questions: 
 
 - What data do you need for your identity management to help with business process?
 - Where is current data going to be stored in MIM?
-- How do will you use this data in the system?
+- How will you use this data in the system?
 - Are you sharing this data with any external partners data sources(Exporting)
 - What is the Authoritative source for the data and the processing of it?
 - What will your data retention and data deletion plan in place?
 - Have you identified all the technology you need to process and manage data?
 
 To help you understand a current MIM environment you can utilize the following tool to document your MIM environment, or defer to your implementation design documents.
-- [MIM Documentor - Allows to export current configuration](https://github.com/Microsoft/MIMConfigDocumenter)
+- [MIM Documenter - Allows to export current configuration](https://github.com/Microsoft/MIMConfigDocumenter)
 
 ## Searching for and identifying personal data
 Searching data within MIM will be dependent on the configuration and setup. Most environments are interconnected but for clarity we broke them out by high-level component.
@@ -67,14 +67,14 @@ If you installed the Portal, you can use the UI to search on any attribute or qu
 
 If you only have the service server(without Portal UI) installed you can run a search syntax based on the [FIMAutomation PSSnapin].
 
-PAM can use the same syntax above or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser cmdlet to search for the user within the PAM environment.
+PAM can use the same syntax or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser cmdlet to search for the user within the PAM environment.
 
 Other reporting options to search on available data is in the service and portal.
 - [Hybrid Reporting](/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
 - [Reporting with SCSM](/previous-versions/mim/jj133853%28v%3dws.10%29)
 
 ### BHOLD
-Bhold Core service has a UI that allows you to search for a user or attributes. 
+BHOLD Core service has a UI that allows you to search for a user or attributes. 
 
 ![bhold search](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
 
@@ -99,7 +99,7 @@ Synchronization services for exporting data simply select the data from the sear
 ### Service and Portal / PAM
 Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](/archive/technet-wiki/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager) and pipe it to [csv](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
 
-PAM can use the same syntax above or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
+PAM can use the same syntax or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
 
 ### BHOLD
 BHOLD data can be exported using the BHOLD reporting module to your preferred format.
@@ -117,7 +117,7 @@ In order to perform management operations, administrators must be part of synchr
 
 Updating of data is done by defining rules from the source of authority. Management console helps identify the source of authority to update it at the source. Another option is create sync rule or rule extension to control the data updating if source like HR data still needs to remain. 
 
-For more information on different ways to update attributes, see below. 
+For more information on different ways to update attributes, see the following links. 
 
 - [Using Rules Extensions](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
 - [Understanding Data Synchronization with External Systems](/previous-versions/mim/jj133850(v%3dws.10))
@@ -150,7 +150,9 @@ Synchronization Service as many ways to handle data or delete data depending on 
 
 ### Service and Portal / PAM
 
-It is recommended for the Service & Portal that you keep the default 30 days system resource retention configuration. This tells the service when it will delete,  not only request data but also any object that needs to be cleared from the system. Once the process occurs, all data linked to this object is deleted this includes all SSPR registration data. This plays into the object deletion configuration above. There is one table where MIM store the guid of the objects. To reduce the overall size of the table, in build 4.4.1459 we added a process called FIM_DeleteExpiredSystemObjectsJob; details on this process can be found [here](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
+It is recommended for the Service & Portal that you keep the default 30 days system resource retention configuration. This tells the service when it will delete,  not only request data but also any object that needs to be cleared from the system. Once the process occurs, all data linked to this object is deleted. This includes all SSPR registration data.
+
+There is one table where MIM stores the guid of the objects. To reduce the overall size of the table, in build 4.4.1459 we added a process called FIM_DeleteExpiredSystemObjectsJob; details on this process can be found [here](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
 
 ![Screenshot showing the System Resource Retention Configuration screen.](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
@@ -184,6 +186,6 @@ HKLM\SOFTWARE\Microsoft\Forefront Identity Manager\2010
 ![Screenshot showing the Registry Editor.](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## Next Steps 
-- [For SQL Related privacy Guidance](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-2017)
+- [SQL related privacy guidance](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-2017)
 - [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
 
