@@ -27,7 +27,7 @@ Connectors link specific connected data sources to Microsoft Identity Manager (M
 > [!NOTE]
 > This document is primarily for MIM Connectors only. Unless explicitly called out in this document, these Connectors are not supported for install on Microsoft Entra Connect Sync.
 
-This document lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-mim-2016-management-agents-from-partners.aspx).
+This document lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](/archive/technet-wiki/1589.fim-2010-mim-2016-management-agents-from-partners).
 
 Related links:
 

@@ -30,7 +30,7 @@ Connectors link specific connected data sources to Microsoft Identity Manager (M
 
 In Forefront Identity Manager, connectors were known as management agents. That term is still used in some articles or parts of the product, but know that both terms refer to the same concept.
 
-This article covers the connectors that are included & supported in MIM, but the connector for Extensible Connectivity 2.0 makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
+This article covers the connectors that are included & supported in MIM, but the connector for Extensible Connectivity 2.0 makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](/archive/technet-wiki/1589.fim-2010-mim-2016-management-agents-from-partners).
 
 This table does not include the software on which MIM itself is deployed; see the [supported platforms](microsoft-identity-manager-2016-supported-platforms.md) list for more information.
 
@@ -62,7 +62,7 @@ This table does not include the software on which MIM itself is deployed; see th
 | [LDAP Data Interchange Format (LDIF)](https://technet.microsoft.com/library/cc708662(v=ws.10).aspx) | LDAP Data Interchange Format (LDIF) |
 | [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md) | Microsoft Graph |
 
-The Windows Azure AD Connector for FIM is deprecated; use [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect) sync, Microsoft Entra Connect cloud provisioning, or [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md) instead.
+The Windows Azure AD Connector for FIM was deprecated; use [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect) sync, Microsoft Entra Connect cloud provisioning, or [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md) instead as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Windows Azure AD Connector for FIM are being removed from Microsoft Entra ID, and the Windows Azure AD Connector will no longer be able to connect with Microsoft Entra ID as of April 2024.
 
 ## Related topics
 
