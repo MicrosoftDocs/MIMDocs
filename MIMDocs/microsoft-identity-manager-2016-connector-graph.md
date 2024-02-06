@@ -229,7 +229,7 @@ For more information about *$filter* query parameter usage, see this article: [U
 
 **Enable logs**
 
-If there are any issues in Graph, then logs could be used to localize the problem. So, traces could be enabled in [the same way like for Generic connectors](/archive/technet-wiki/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors). Or just by adding the following to `miiserver.exe.config` (inside `system.diagnostics/sources` section):
+If there are any issues in Graph, then logs could be used to localize the problem. So, traces could be enabled in [the same way like for Generic connectors](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Or just by adding the following to `miiserver.exe.config` (inside `system.diagnostics/sources` section):
 
 ```XML
 <source name="ConnectorsLog" switchValue="Verbose">

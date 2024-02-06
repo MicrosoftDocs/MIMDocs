@@ -419,8 +419,7 @@ Save this project at the location `%FIM_INSTALL_FOLDER%\Synchronization Service\
 The following custom activities are available to help debug the workflow template.
 
 ### Log activity
-The **Log** activity is used to write text messages to the log file. For more information, see [Logging](/archive/technet-wiki/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors).
-
+The **Log** activity is used to write text messages to the log file. For more information, see [Logging](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx).
 
 >[!NOTE]
 >If you aren't able to easily debug your workflow, try debugging the workflow in the production environment.  
