@@ -37,11 +37,8 @@ Organizations need to consider and answer the following questions:
 - What will your data retention and data deletion plan in place?
 - Have you identified all the technology you need to process and manage data?
 
-To help you understand a current MIM environment you can utilize the following tool to document your MIM environment, or defer to your implementation design documents.
-- [MIM Documenter - Allows to export current configuration](https://github.com/Microsoft/MIMConfigDocumenter)
-
 ## Searching for and identifying personal data
-Searching data within MIM will be dependent on the configuration and setup. Most environments are interconnected but for clarity we broke them out by high-level component.
+Searching data within MIM will be dependent on the configuration and setup. Most environments are interconnected but for clarity these are broken out by high-level component.
 
 ### Synchronization Service
 
@@ -56,7 +53,7 @@ If you're not sure the source of authority you can track this user from the MIM 
         - Using the metaverse search allows you to search on any object and attribute within the database
 ![Screenshot of the Synchronization Service Manager showing the Metaverse search.](media/mim-privacy-compliance/mim-privacy-compliance_2.PNG)
  
-After finding the object, clicking on the object will open the user profile page. The object details provide you with the comprehensive details about the object, its attributes, last modified and source of authority, and related connected data source derived from management agent configuration example below.
+After finding the object, clicking on the object will open the user profile page. The object details provide you with the comprehensive details about the object, its attributes, last modified and source of authority, and related connected data source derived from management agent configuration.
 
 ![Screenshot of the Synchronization Service Manager showing a user profile page and Metaverse Object Properties.](media/mim-privacy-compliance/mim-privacy-compliance.PNG)
 
@@ -65,9 +62,9 @@ If you have an instance of the Service and Portal or PAM installed being able to
 
 If you installed the Portal, you can use the UI to search on any attribute or query for a particular user.
 
-If you only have the service server(without Portal UI) installed you can run a search syntax based on the [FIMAutomation PSSnapin].
+If you only have the service server, without Portal UI, installed you can run a search using the cmdlets in the `FIMAutomation` PSSnapin.
 
-PAM can use the same syntax or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser cmdlet to search for the user within the PAM environment.
+PAM can use the same cmdlets, or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), specifically the get-pamuser cmdlet, to search for the user within the PAM environment.
 
 Other reporting options to search on available data is in the service and portal.
 - [Hybrid Reporting](/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
@@ -78,28 +75,28 @@ BHOLD Core service has a UI that allows you to search for a user or attributes.
 
 ![bhold search](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
 
-If you are synchronizing BHOLD with [access management connector](/microsoft-identity-manager/bhold/bhold-access-management-connector-install) for synchronization service you will be able to see the connected user objects and the attributes your sending to BHOLD core.
+If you are synchronizing BHOLD with [access management connector](/microsoft-identity-manager/bhold/bhold-access-management-connector-install) for synchronization service you will be able to see the connected user objects and the attributes you are sending to BHOLD core.
 
 Also you can load the BHOLD Reporting module.
 
 - [BHOLD Reporting](/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
 
 ### Certificate Management
-Certificate management service search is built into the UI. The administrator will launch and select the 'Find user and view or manage their information'  
+Certificate management service search is built into the UI. The administrator can launch its UI and select `Find user and view or manage their information`. 
 
 ![cm search](media/mim-privacy-compliance/mim-privacy-compliance-cm.PNG)
 
 ## Exporting personal data
-Because the data related to entities in MIM is derived from multiple sources, most data is stored in the Synchronization Service database. For this reason, you should export object-related data from MIM Sync or you can determine the owner of this data.
+Because the data related to entities in MIM is derived from multiple sources, most data is stored in the Synchronization Service database. For this reason, you should export object-related data from MIM Sync so you can determine the owner of this data.
 
 ### Synchronization Service
-Synchronization services for exporting data simply select the data from the search UI and copy and paste into a csv or preferred format. Another way to export this data is to create a File-based MA to drop current data needed about a flagged user of interest. An exmaple of using file-based MA can be found [here](https://blogs.msdn.microsoft.com/connector_space/2016/11/17/management-agent-configuration-part-4-delimited-text-file-management-agent/).
+Exporting data from Synchronization service can be done from the search UI; copy and paste into a CSV or preferred format. 
 
 
 ### Service and Portal / PAM
-Service and portal along with PAM you can export this data run a search syntax based on the [FIMAutomation PSSnapin], Example found [here](/archive/technet-wiki/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager) and pipe it to [csv](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
+Exporting data from MIM Service and portal, along with PAM, can be done by running a search cmdlet based on the `FIMAutomation PSSnapin`. An example can be found [here](/archive/technet-wiki/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager); pipe the output to [csv](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
 
-PAM can use the same syntax or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
+PAM can use the same cmdlet or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
 
 ### BHOLD
 BHOLD data can be exported using the BHOLD reporting module to your preferred format.
@@ -124,7 +121,7 @@ For more information on different ways to update attributes, see the following l
 
 ### Service and Portal / PAM
 
-Service and Portal to include PAM data can be updated using the FIMAutomation or PAM cmdlets. If you have the Portal, you can also directly update by searching and modify the object. One thing to note and depending on configuration simply updating from the portal doesn't mean it will remain. As source of authority is highly dependent on overall configuration.
+Service and Portal to include PAM data can be updated using the FIMAutomation or PAM cmdlets. If you have the Portal, you can also directly update data originating in MIM Service by searching and modify the object. 
 
 ### BHOLD
 
@@ -132,7 +129,7 @@ Users can be directly updated with BHOLD Core user interface or the access manag
 
 ### Certificate Management
 
-Users in the certificate management service are all a reflection from active directory. To update use Active Directory to change object details.
+Users in the certificate management service are all a reflection from Active Directory. To update, use Active Directory to change object details.
 
 ## Deleting personal data
 
@@ -142,7 +139,7 @@ Users in the certificate management service are all a reflection from active dir
 Data in MIM is synced and always updated from its connected data source. When an object is deleted in target, the object's data in MIM can be maintained for purposes of security investigation. Object Deletion is configured per connected data source rules or rule extension(code) and/or Object deletion rules.
 
 ### Synchronization Service
-Synchronization Service as many ways to handle data or delete data depending on business processes. To help understand, below are some articles to help understand options on deleting and updating attributes: 
+Synchronization Service has many ways to handle data or delete data depending on business processes. For more information on options for deleting and updating attributes, see:
 
 - [Understanding Deprovisioning](/archive/technet-wiki/1270.understanding-deprovisioning-in-fim)
 - [Using Rules Extensions](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
@@ -152,7 +149,7 @@ Synchronization Service as many ways to handle data or delete data depending on 
 
 It is recommended for the Service & Portal that you keep the default 30 days system resource retention configuration. This tells the service when it will delete,  not only request data but also any object that needs to be cleared from the system. Once the process occurs, all data linked to this object is deleted. This includes all SSPR registration data.
 
-There is one table where MIM stores the guid of the objects. To reduce the overall size of the table, in build 4.4.1459 we added a process called FIM_DeleteExpiredSystemObjectsJob; details on this process can be found [here](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
+There is one table where MIM stores the guid of the objects. To reduce the overall size of the table, build 4.4.1459 added a process called FIM_DeleteExpiredSystemObjectsJob; details on this process can be found [here](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
 
 ![Screenshot showing the System Resource Retention Configuration screen.](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
@@ -166,9 +163,9 @@ Another option is to remove the user object right from the BHOLD Core User inter
 
 
 ### Certificate Management
-To remove a user from CM, delete the user is in active directory.
+To remove a user from Certificate Management, delete the user is in Active Directory.
 
-Certificate management as it will only store the profile uid from certificate services with domain sAMAccountName. Once the user is deleted from AD the user cache is only present for the certificates which they have enrolled. We do not recommend deleting anything in the database as this can cause overall harm to the operation of the environment.
+Certificate management will only store the profile uid from Certificate Services with domain and sAMAccountName. Once the user is deleted from AD, the user cache is only present for the certificates which they have enrolled. Deleting from the MIM CM database is not supported as this can cause overall harm to the operation of the environment.
 
 ## Opt-out of telemetry
 Previous builds FIM/MIM used to collect anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data was used by Microsoft to help improve future versions of FIM/MIM in the past.
