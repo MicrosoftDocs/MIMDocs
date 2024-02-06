@@ -189,7 +189,7 @@ use a regular user account. However, to import data from AD DS, the account must
 have the right to poll changes from the DirSync control. If you want your
 management agent to export data to AD DS, you need to grant the account
 sufficient rights on the target OUs. For more information about this topic, see
-[Configuring the ADMA Account](https://go.microsoft.com/FWLink/p/?LinkId=189657).
+[Configuring the ADMA Account](/archive/technet-wiki/330.fim2010-how-to-configure-the-adma-account).
 
 To create a user in AD DS, you are required to flow out the object's DN. In
 addition to this, it is a good practice to flow the first name, last name, and
@@ -209,7 +209,7 @@ attribute in your export logic.
 When you set a password for AD DS accounts, you also need to create an account
 as an enabled account. You accomplish this by setting the userAccountControl
 attribute. For more information about the userAccountControl attribute, see
-[Using FIM to Enable or Disable Accounts in Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189658).
+[Using FIM to Enable or Disable Accounts in Active Directory](/archive/technet-wiki/22114.fim-reference-how-to-enabledisable-an-ad-account-and-set-other-uac-flags-in-a-declarative-sync-rule).
 
 The following table lists the most important scenario-specific settings that you
 need to configure.
@@ -602,8 +602,6 @@ When you test your configuration, it is very likely that you delete and recreate
 new test objects. For objects with a
 
 populated ExpectedRulesList attribute, this can result in orphaned ERE objects.
-For a description of how you can remove these objects from your test
-environment, see [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment](https://go.microsoft.com/FWLink/p/?LinkId=189667).
 
 In a typical synchronization scenario that includes AD DS as a synchronization
 target, MIM is not authoritative for all attributes of an object. For example,
