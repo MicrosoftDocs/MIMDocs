@@ -627,18 +627,8 @@ find more information about attribute flow precedence in the article [About Attr
 
 ## Next Steps
 
-[Using FIM to Enable or Disable Accounts in Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189670)
-
-[Understanding Reference Attributes Processing](https://go.microsoft.com/FWLink/p/?LinkId=189671)
-
-[How to Manage the FIM MA Account](https://go.microsoft.com/FWLink/p/?LinkId=189672)
-
 [Detecting Non-authoritative Accounts – Part 1: Envisioning](https://go.microsoft.com/FWLink/p/?LinkId=189673)
-
-[How to Detect Connectors](https://go.microsoft.com/FWLink/p/?LinkId=189674)
-
-[How to configure the ADMA Account](https://go.microsoft.com/FWLink/p/?LinkId=189657)
 
 [About Attribute Flow Precedence](https://go.microsoft.com/FWLink/p/?LinkId=189675)
 
-[Understanding Exports](https://social.technet.microsoft.com/wiki/contents/articles/1861.understanding-exports-in-ilm-2007.aspx)
+[Understanding Exports](/archive/technet-wiki/1861.understanding-exports-in-ilm-2007)
