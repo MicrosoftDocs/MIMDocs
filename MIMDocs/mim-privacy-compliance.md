@@ -38,7 +38,7 @@ Organizations need to consider and answer the following questions:
 - Have you identified all the technology you need to process and manage data?
 
 ## Searching for and identifying personal data
-Searching data within MIM will be dependent on the configuration and setup. Most environments are interconnected but for clarity these are broken out by high-level component.
+Searching data within MIM will be dependent on the configuration and setup. Most environments are interconnected, but for clarity the scenarios are broken out by high-level component.
 
 ### Synchronization Service
 
@@ -64,27 +64,21 @@ If you installed the Portal, you can use the UI to search on any attribute or qu
 
 If you only have the service server, without Portal UI, installed you can run a search using the cmdlets in the `FIMAutomation` PSSnapin.
 
-PAM can use the same cmdlets, or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), specifically the get-pamuser cmdlet, to search for the user within the PAM environment.
-
-Other reporting options to search on available data is in the service and portal.
-- [Hybrid Reporting](/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
-- [Reporting with SCSM](/previous-versions/mim/jj133853%28v%3dws.10%29)
+PAM can use the same cmdlets, or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), specifically the `get-pamuser` cmdlet, to search for the user within the PAM environment.
 
 ### BHOLD
-BHOLD Core service has a UI that allows you to search for a user or attributes. 
+BHOLD Core service has a UI that allows you to search for a user or attributes.
 
-![bhold search](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
+![Screenshot showing the BHOLD Core search.](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
 
 If you are synchronizing BHOLD with [access management connector](/microsoft-identity-manager/bhold/bhold-access-management-connector-install) for synchronization service you will be able to see the connected user objects and the attributes you are sending to BHOLD core.
 
-Also you can load the BHOLD Reporting module.
-
-- [BHOLD Reporting](/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
+Also you can load the [BHOLD Reporting](/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting) module.
 
 ### Certificate Management
-Certificate management service search is built into the UI. The administrator can launch its UI and select `Find user and view or manage their information`. 
+Certificate management service search is built into the UI. The administrator can launch its UI and select `Find user and view or manage their information`.
 
-![cm search](media/mim-privacy-compliance/mim-privacy-compliance-cm.PNG)
+![Screenshot showing the CM search UI.](media/mim-privacy-compliance/mim-privacy-compliance-cm.PNG)
 
 ## Exporting personal data
 Because the data related to entities in MIM is derived from multiple sources, most data is stored in the Synchronization Service database. For this reason, you should export object-related data from MIM Sync so you can determine the owner of this data.
@@ -94,9 +88,9 @@ Exporting data from Synchronization service can be done from the search UI; copy
 
 
 ### Service and Portal / PAM
-Exporting data from MIM Service and portal, along with PAM, can be done by running a search cmdlet based on the `FIMAutomation PSSnapin`. An example can be found [here](/archive/technet-wiki/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager); pipe the output to [csv](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
+Exporting data from MIM Service and portal, along with PAM, can be done by running a search cmdlet based on the `FIMAutomation PSSnapin`. An example can be found [here](/archive/technet-wiki/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager); export the output to [CSV](/powershell/module/microsoft.powershell.utility/export-csv?viewFallbackFrom=powershell-6&view=powershell-7.2).
 
-PAM can use the same cmdlet or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
+PAM can use the same cmdlet or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), specifically the `get-pamuser` cmdlet, to search for the user within the PAM environment and export it to a CSV file.
 
 ### BHOLD
 BHOLD data can be exported using the BHOLD reporting module to your preferred format.
@@ -106,7 +100,7 @@ Certificate management data related to personal data is connected to active dire
 
 ## Updating personal data
 
-Personal data about users or objects in MIM Solutions typically is derived from the user's object in your organization's connected data sources. Because any changes made to the user profile in HR source, or another authoritative system of record, such as AD are then reflected in MIM Synchronization Service.
+Personal data about users or objects in MIM Solutions typically is derived from the user's object in your organization's connected data sources. Because any changes made to the user profile in HR source, or another authoritative system of record such as AD, are then reflected in MIM Synchronization Service.
 
 ### Synchronization Service
 
@@ -121,7 +115,7 @@ For more information on different ways to update attributes, see the following l
 
 ### Service and Portal / PAM
 
-Service and Portal to include PAM data can be updated using the FIMAutomation or PAM cmdlets. If you have the Portal, you can also directly update data originating in MIM Service by searching and modify the object. 
+Service and Portal to include PAM data can be updated using the FIMAutomation or MIMPAM cmdlets. If you have the Portal, you can also directly update data originating in MIM Service by searching and modify the object. 
 
 ### BHOLD
 
@@ -134,9 +128,9 @@ Users in the certificate management service are all a reflection from Active Dir
 ## Deleting personal data
 
 >[!Note] 
-> This article provides guidance on ways to delete personal data from Microsoft Identity Manager and can be used to support your obligations under the GDPR. If you’re looking for general info about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> This article provides guidance on ways to delete personal data from Microsoft Identity Manager and can be used to support your obligations under the GDPR. If you’re looking for general info about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/viewpage/GDPR).
 
-Data in MIM is synced and always updated from its connected data source. When an object is deleted in target, the object's data in MIM can be maintained for purposes of security investigation. Object Deletion is configured per connected data source rules or rule extension(code) and/or Object deletion rules.
+Data in MIM is synced and always updated from its connected data source. When an object is deleted in target, the object's data in MIM can be maintained for purposes of security investigation. Object Deletion is configured per connected data source rules, rule extension code or Object deletion rules.
 
 ### Synchronization Service
 Synchronization Service has many ways to handle data or delete data depending on business processes. For more information on options for deleting and updating attributes, see:
@@ -156,9 +150,9 @@ There is one table where MIM stores the guid of the objects. To reduce the overa
 
 ### BHOLD
 
-BHOLD like most systems connected to the synchronization service can be configured to delete once the source object like HR is removed. This is configured on the management agent. and controlled by the Object Deletion rules as described under the synchronizations service features.
+BHOLD like most systems connected to the synchronization service can be configured to delete once the source object like HR is removed. This is configured on the management agent, and controlled by the Object Deletion rules as described under the synchronizations service features.
 
-Another option is to remove the user object right from the BHOLD Core User interface. Depending on setup this could work fine but note provisioning logic could re-create this user if not deleted at the source.
+Another option is to remove the user object right from the BHOLD Core User interface. Depending on setup, this could work fine, but note provisioning logic could re-create this user if not deleted at the source.
 ![Screenshot showing the BHOLD Core User interface.](media/mim-privacy-compliance/mim-privacy-compliance-bholdr.PNG)
 
 
@@ -168,12 +162,12 @@ To remove a user from Certificate Management, delete the user is in Active Direc
 Certificate management will only store the profile uid from Certificate Services with domain and sAMAccountName. Once the user is deleted from AD, the user cache is only present for the certificates which they have enrolled. Deleting from the MIM CM database is not supported as this can cause overall harm to the operation of the environment.
 
 ## Opt-out of telemetry
-Previous builds FIM/MIM used to collect anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data was used by Microsoft to help improve future versions of FIM/MIM in the past.
+Previous builds of FIM and MIM used to collect anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data was used by Microsoft to help improve versions of FIM/MIM in the past.
 
 >[!Note] 
 > In later releases of 4.5.x.x or greater data collection will be disabled.
 
-To disable data collection in previous version run change mode and deselect the following prompt:
+To disable data collection in previous versions, run change mode and deselect the following prompt:
 
 ![Screenshot showing the opt-out screen for Microsoft Identify Management Customer Experience Improvement Program.](media/mim-privacy-compliance/mim-privacy-compliance-ceip.PNG)
 
