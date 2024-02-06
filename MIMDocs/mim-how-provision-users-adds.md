@@ -81,13 +81,6 @@ The procedures in this document require 90 to 120 minutes to complete.
 These time estimates assume that the testing environment is already configured
 and does not include the time required to set up the test environment.
 
-### Getting support
-
-
-If you have questions regarding the content of this document or if you have
-general feedback you would like to discuss, feel free to post a message to the
-[Forefront Identity Manager 2010 forum](https://go.microsoft.com/FWLink/p/?LinkId=189654).
-
 ## Scenario Description
 
 
