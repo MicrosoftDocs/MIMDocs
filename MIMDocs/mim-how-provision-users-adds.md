@@ -641,4 +641,4 @@ find more information about attribute flow precedence in the article [About Attr
 
 [About Attribute Flow Precedence](https://go.microsoft.com/FWLink/p/?LinkId=189675)
 
-[Understanding Exports](https://social.technet.microsoft.com/wiki/contents/articles/1861.understanding-exports-in-ilm-2007.aspx)
+[Understanding Exports](/archive/technet-wiki/1861.understanding-exports-in-ilm-2007.aspx)

@@ -243,7 +243,7 @@ Using PowerShell on PRIVDC, configure DNS name forwarding in order for the PRIV 
    ```
 
 > [!NOTE]
-> The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
+> The next steps of this document describe how to install MIM 2016 server components on a single computer. If you plan to add another server for high availability, then you will need additional Kerberos configuration as described in [FIM 2010: Kerberos Authentication Setup](/archive/technet-wiki/3385.fim-2010-kerberos-authentication-setup).
 
 ### Configure delegation to give MIM service accounts access
 

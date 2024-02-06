@@ -638,7 +638,7 @@ Avoid using activities that modify the MIM resources, such as the Function Evalu
 
 The objective of MIM is to process requests that can be initiated by various MIM clients such as the FIM synchronization service and the self-service components according to your configured business policies. By design, each FIM service instance belongs to a logical group that consists of one or more FIM service instances, which is also known as FIM service partition. If you have only one FIM service instance deployed to handle the all requests, it is possible that you experience processing latencies. Some operations can even exceed the default timeout values that are appropriate for self-service operations. FIM service partitions can help you to address this issue.
 
-For additional information see [Understanding FIM Service Partitions](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx).
+For additional information see [Understanding FIM Service Partitions](/archive/technet-wiki/2363.understanding-fim-service-partitions).
 
 ## Next steps
 - [FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864)
