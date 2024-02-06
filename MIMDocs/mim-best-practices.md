@@ -167,7 +167,7 @@ We recommend that you disable Microsoft Office SharePoint® indexing. There are 
 
 ## MIM 2016 Initial Data Load
 
-This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It is important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. This is a one-time operation and is not a continuous synchronization.
+This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It is important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. Those steps are for a one-time operation and not a continuous synchronization.
 
 > [!NOTE]
 > For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](https://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
@@ -225,7 +225,7 @@ Depending on your scenarios, this step may include the creation of additional se
 
 ### Step 5: Reconfigure SQL to previous settings
 
-Remember to change the SQL setting to its normal settings. This includes:
+Remember to change the SQL setting to its normal settings. Those changes include:
 
 -   Turning on the full-text search
 
@@ -246,7 +246,7 @@ If you have to switch to Simple recovery mode, ensure that you reconfigure your 
 
 ### Avoid changing display names
 
-For many object types such as MPRs, the syncproduction.ps1 script uses the display name as the only anchor attribute between two systems. Consequently, a change to an existing MPR’s display name results in the deletion of the existing MPR, followed by the creation of a new MPR. This result occurs because the migration process cannot successfully join MPRs whose join criteria have changed. To avoid this issue, you can bind a custom attribute to all configuration object types and use that attribute as the join criteria. This enables you to modify display names without affecting the migration process.
+For many object types such as MPRs, the syncproduction.ps1 script uses the display name as the only anchor attribute between two systems. Consequently, a change to an existing MPR’s display name results in the deletion of the existing MPR, followed by the creation of a new MPR. This result occurs because the migration process cannot successfully join MPRs whose join criteria have changed. To avoid this issue, you can bind a custom attribute to all configuration object types and use that attribute as the join criteria. This process enables you to modify display names without affecting the migration process.
 
 ### Avoid changing the content of intermediate files
 
@@ -254,7 +254,7 @@ While the file format and application programming interface (API) of the low-lev
 
 ### Ensure that the version number is correct in pilot.xml when migrating across versions
 
-While migrations across version numbers are not recommended or supported, you can often do this by replacing the pilot version number with the production version number in pilot.xml. Specifically, WorkflowDefinition and
+While migrations across version numbers are not recommended or supported, you can often do this migration by replacing the pilot version number with the production version number in pilot.xml. Specifically, WorkflowDefinition and
 
 ActivityInformationConfiguration objects require the version number to refer precisely to workflow activities in the production environment. Failing to replace the version number results in the Compare-FIMConfig cmdlet identifying differences between the Extensible Object Markup Language (XOML) attributes on WorkflowDefinitions and migrating the pilot’s version number. The production FIM Service may fail to start workflow activities with the incorrect version number.
 
@@ -348,7 +348,7 @@ To implement SSL:
 
 21. Select https.
 
-22. For certificate, select the one that has the same name as the server (this is the certificate that you just imported).
+22. For certificate, select the one that has the same name as the server, the certificate that you just imported.
 
 23. Click OK.
 
@@ -374,7 +374,7 @@ For optimal performance configuration:
 
 -   Apply the SQL setup best practices as described in the SQL setup section in this document.
 
--   Turn off SharePoint Indexing on the MIM Portal site. For more information, see the Disable SharePoint indexing section in this document.
+-   Turn off SharePoint Indexing on the MIM Portal site. For more information, see the [Disable SharePoint indexing](#disable-sharepoint-indexing) section.
 
 ## Feature Specific Best Practices 
 
@@ -391,13 +391,13 @@ MIM provides two types of MPRs, Request and Set Transition:
 
 - Request MPR (RMPR)
 
-  - Used to define the access control policy (authentication, authorization, and action) for Create, Read, Update, or Delete (CRUD) operations against resources.
-  - Applied when a CRUD operation is issued against a target resource in MIM.
+  - Used to define the access control policy (authentication, authorization, and action) for Create, Read, Update, or Delete (CRUD) operations against resources,
+  - Applied when a CRUD operation is issued against a target resource in MIM, and
   - Scoped by the matching criteria defined in the rule, that is, to which CRUD requests the rule applies.
 
 - Set Transition MPR (TMPR)
   - Use to define policies regardless of how the object entered the current state represented by the Transition Set. Use TMPR to model entitlement policies.
-  - Applied when a resource enters or leaves an associated set.
+  - Applied when a resource enters or leaves an associated set, and
   - Scoped to the members of the set.
 
 > [!NOTE]
@@ -408,7 +408,7 @@ MIM provides two types of MPRs, Request and Set Transition:
 Use the principle of least privilege when applying your configuration. MPRs control the access policy to your MIM deployment. Enable only those features used by most of your users. For example, not all users use MIM for group management, so associated group management MPRs should be disabled. By default, MIM ships with most non-administrator permissions disabled.
 
 #### Duplicate built-in MPRs instead of directly modifying
-When needing to modify the built-in MPRs, you should create a new MPR with the required configuration and turn off the built-in MPR. This ensures that any future changes to the built-in MPRs that are introduced through the upgrade process do not negatively impact your system configuration.
+When needing to modify the built-in MPRs, you should create a new MPR with the required configuration and turn off the built-in MPR. Creating this new MPR ensures that any future changes to the built-in MPRs that are introduced through the upgrade process do not negatively impact your system configuration.
 
 #### End-user permissions should use explicit attribute lists scoped to users business needs
 Using explicit attribute lists helps to prevent the accidental granting of permissions to non-privileged users when attributes are added to objects. Administrators should explicitly need to grant access to new attributes instead of trying to remove access.
@@ -424,7 +424,7 @@ When explicitly listing attributes in MPRs, the attributes required for Create a
 
 #### Create permissions should be separate from Modify permissions when using explicit attributes in rules
 
-The Create operation requires that the user select the objectType as part of its operation. This is a core system attribute that cannot be modified after a Create operation.
+The Create operation requires that the user select the objectType as part of its operation. This attribute is a core system attribute that cannot be modified after a Create operation.
 
 #### Use one request MPR for all attributes with the same access requirements
 
@@ -453,11 +453,11 @@ Deprovisioning workflows should first check to determine if the target resource 
 
 #### Select Run On Policy Update for TMPRs
 
-This ensures that the correct provisioning behavior applies when policy updates are implemented and use the RunOn Policy update flag on action workflows associated with the TMPRs. This ensures that changes in the policy definitions apply the action workflows to new members of the Transition Set.
+This setting ensures that the correct provisioning behavior applies when policy updates are implemented and use the RunOn Policy update flag on action workflows associated with the TMPRs, and that changes in the policy definitions apply the action workflows to new members of the Transition Set.
 
 #### Avoid associating the same entitlement with two different Transition Sets
 
-Associating the same entitlement with two different Transition Sets can cause an unnecessary revoking and re-granting of entitlements if the resource moves from one set to the other. As a best practice, ensure that one set contains all resources that require the associated entitlement. This ensures a one-to-one relationship between the Transition Set and the entitlement granting the workflow.
+Associating the same entitlement with two different Transition Sets can cause an unnecessary revoking and re-granting of entitlements if the resource moves from one set to the other. As a best practice, ensure that one set contains all resources that require the associated entitlement. This procedure ensures a one-to-one relationship between the Transition Set and the entitlement granting the workflow.
 
 #### Use an appropriate sequence of operations when removing entitlements in the system
 
@@ -465,7 +465,7 @@ The order of the steps performed when removing entitlements in the system can re
 
 To remove an entitlement from the system (and revoke it from all members currently holding the entitlement):
 
-1.  Disable the T-In MPR. This avoids new grants.
+1.  Disable the T-In MPR. This change avoids new grants.
 
 2.  Delete the T-Set filter or change it so that the set is empty. This causes all existing members to transition out and applies the transition out policy, including the configured deprovision workflows associated with the entitlement.
 
@@ -473,7 +473,7 @@ To remove an entitlement from the system (and revoke it from all members current
 
 To remove an entitlement but leave the current members alone (for example, stop using MIM to manage the entitlement):
 
-1.  Disable the T-In MPR. This avoids new grants.
+1.  Disable the T-In MPR. This change avoids new grants.
 
 2.  Disable the T-Out MPR.
 
@@ -582,7 +582,7 @@ You should not delete your schema resources while you still have auditing requir
 
 #### Making regular expressions case insensitive
 
-In MIM, it can be helpful to make some regular expressions case insensitive. You can ignore case within a group by using ?!:. For example, for Employee Type, use
+In MIM, it can be helpful to make some regular expressions case insensitive. You can ignore case within a group by using `?!:`. For example, for Employee Type, use
 
 `\^(?!:contractor\|full time employee)%.`
 
