@@ -25,11 +25,11 @@ ms.suite: ems
 ---
 # Microsoft Identity Manager data handling 
 
-This article will provide guidance on how organizations can make decisions that can be applied across many connected data sources.  This can be achieved through the search, delete, update, and report operations.  Before deciding on your approach of deleting or updating, an understanding of the current design and configuration of your identity manager system (MIM) is critical. 
+This article provides guidance on how organizations can make decisions that can be applied across many connected data sources.  This can be achieved through the search, delete, update, and report operations.  Before deciding on your approach of deleting or updating, an understanding of the current design and configuration of your identity manager system (MIM) is critical. 
 
-Below are a few scenarios customers will need to consider and answer the following questions: 
+Organizations will need to consider and answer the following questions: 
 
-- What data do you need for you identity management to help with business process?
+- What data do you need for your identity management to help with business process?
 - Where is current data going to be stored in MIM?
 - How do will you use this data in the system?
 - Are you sharing this data with any external partners data sources(Exporting)
@@ -101,10 +101,8 @@ Service and portal along with PAM you can export this data run a search syntax b
 
 PAM can use the same syntax above or you can use the [MIMPAM Module](/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1) specifically the get-pamuser to search for the user within the PAM environment and pipe it to a csv.
 
-- [Example Querying The MIM Service Using PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
-
 ### BHOLD
-Bhold data can be exported using the Bhold reporting module to your preferred format.
+BHOLD data can be exported using the BHOLD reporting module to your preferred format.
 
 ### Certificate Management
 Certificate management data related to personal data is connected to active directory. An administrator can export this data using Active Directory PowerShell.
@@ -152,7 +150,7 @@ Synchronization Service as many ways to handle data or delete data depending on 
 
 ### Service and Portal / PAM
 
-It is recommended for the Service & Portal that you keep the default 30 days system resource retention configuration. This tells the service when it will delete,  not only request data but also any object that needs to be cleared from the system. Once the process occurs, all data linked to this object is deleted this includes all SSPR registration data. This plays into the object deletion configuration above. We do have one table were we store the guid of the objects. To reduce the overall size of the table in build 4.4.1459 we added a process called FIM_DeleteExpiredSystemObjectsJob details on this process can be found [here](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
+It is recommended for the Service & Portal that you keep the default 30 days system resource retention configuration. This tells the service when it will delete,  not only request data but also any object that needs to be cleared from the system. Once the process occurs, all data linked to this object is deleted this includes all SSPR registration data. This plays into the object deletion configuration above. THere is one table where MIM store the guid of the objects. To reduce the overall size of the table in build 4.4.1459 we added a process called FIM_DeleteExpiredSystemObjectsJob details on this process can be found [here](https://support.microsoft.com/en-us/help/4012498/hotfix-rollup-package-build-4-4-1459-0-is-available-for-microsoft-iden).
 
 ![Screenshot showing the System Resource Retention Configuration screen.](media/mim-privacy-compliance/mim-privacy-compliance-srrc.PNG)
 
@@ -171,7 +169,7 @@ To remove a user from CM, delete the user is in active directory.
 Certificate management as it will only store the profile uid from certificate services with domain sAMAccountName. Once the user is deleted from AD the user cache is only present for the certificates which they have enrolled. We do not recommend deleting anything in the database as this can cause overall harm to the operation of the environment.
 
 ## Opt-out of telemetry
-Previous builds FIM/MIM used to collects anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data was used by Microsoft to help improve future versions of FIM/MIM in the past.
+Previous builds FIM/MIM used to collect anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data was used by Microsoft to help improve future versions of FIM/MIM in the past.
 
 >[!Note] 
 > In later releases of 4.5.x.x or greater data collection will be disabled.
