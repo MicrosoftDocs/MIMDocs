@@ -169,8 +169,6 @@ We recommend that you disable Microsoft Office SharePoint® indexing. There are 
 
 This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It is important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. Those steps are for a one-time operation and not a continuous synchronization.
 
-> [!NOTE]
-> For more information about synchronizing users between MIM and Active Directory Domain Services (AD DS), see [How do I Synchronize Users from Active Directory to FIM](https://go.microsoft.com/fwlink/?LinkID=188277) in the FIM documentation.
 > 
 > [!IMPORTANT]
 > Ensure that you have applied the best practices covered in the SQL setup section of this guide. 
@@ -642,5 +640,4 @@ For more information, see [Understanding FIM Service Partitions](/archive/techne
 
 ## Next steps
 - [FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864)
-- [How do I Synchronize Users from Active Directory to FIM](https://go.microsoft.com/fwlink/?LinkID=188277) 
 - [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370).
