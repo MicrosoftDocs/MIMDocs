@@ -46,9 +46,9 @@ On another new virtual machine with no software installed, install Windows Serve
 
 3. Since the disk will be empty, select **Custom: Install Windows only** and use the uninitialized disk space.
 
-4. After installing the operating system version, sign in to this new computer as the new administrator. Use Control Panel to set the computer name to *PRIVDC*. In network settings, give it a static IP address on the virtual network, and configure the DNS server to be that of the domain controller installed in the previous step. This will require a server restart.
+4. After installing the operating system version, sign in to this new computer as the new administrator. Use Control Panel to set the computer name to *PRIVDC*. In network settings, give it a static IP address on the virtual network, and configure the DNS server to be that of the domain controller installed in the previous step. You will need to restart the server.
 
-5. After the server has restarted, sign in as the administrator. Using Control Panel, configure the computer to check for updates, and install any updates needed. This may require a server restart.
+5. After the server has restarted, sign in as the administrator. Using Control Panel, configure the computer to check for updates, and install any updates needed. Installing updates may require a server restart.
 
 ### Add roles
 
@@ -80,7 +80,7 @@ In this guide, the name priv.contoso.local is used as the domain name of the new
 
 ### Create a domain and forest
 
-1. In a PowerShell window, type the following commands to create the new domain.  This will also create a DNS delegation in a superior domain (contoso.local), which was created in a previous step.  If you intend to configure DNS later, then omit the `CreateDNSDelegation -DNSDelegationCredential $ca` parameters.
+1. In a PowerShell window, type the following commands to create the new domain.  These commands will also create a DNS delegation in a superior domain (contoso.local), which was created in a previous step.  If you intend to configure DNS later, then omit the `CreateDNSDelegation -DNSDelegationCredential $ca` parameters.
 
    ```PowerShell
    $ca= get-credential
@@ -252,7 +252,7 @@ Perform the following steps on PRIVDC as a domain administrator.
 1. Launch **Active Directory Users and Computers**.
 2. Right-click on the domain **priv.contoso.local** and select **Delegate Control**.
 3. On the Selected Users and Groups tab, click **Add**.
-4. On the Select Users, Computers, or Groups window, type *mimcomponent; mimmonitor; mimservice* and click **Check Names**. After the names are underlined, click **OK** then **Next**.
+4. On the Select Users, Computers, or Groups window, type `mimcomponent; mimmonitor; mimservice` and click **Check Names**. After the names are underlined, click **OK** then **Next**.
 5. In the list of common tasks, select **Create, delete, and manage user accounts** and **Modify the membership of a group**, then click **Next** and **Finish**.
 
 6. Again, right click on domain **priv.contoso.local** and select **Delegate Control**.
@@ -328,7 +328,7 @@ Next, authorize the MIM administrators and MIM Service account to create and upd
 
 ## Prepare a PRIV workstation
 
-Follow these instructions to prepare a workstation.  This will be joined to the PRIV domain for performing maintenance of PRIV resources (such as MIM).
+Follow these instructions to prepare a workstation.  This workstation will be joined to the PRIV domain for performing maintenance of PRIV resources (such as MIM).
 
 ### Install Windows 10 Enterprise
 
@@ -340,7 +340,7 @@ On another new virtual machine with no software installed, install Windows 10 En
 
 3. Using the Control Panel, give this computer a static IP address on the virtual network, and set the interface’s preferred DNS server to be that of the PRIVDC server.
 
-4. Using the Control Panel, domain join the PRIVWKSTN computer to the priv.contoso.local domain. This will require providing the PRIV domain administrator credentials. When this completes, restart the computer PRIVWKSTN.
+4. Using the Control Panel, domain join the PRIVWKSTN computer to the priv.contoso.local domain. This step will require providing the PRIV domain administrator credentials. When this completes, restart the computer PRIVWKSTN.
 
 5. Install the [Visual C++ 2013 Redistributable Packages](https://www.microsoft.com/download/details.aspx?id=40784) for 64-bit Windows.
 

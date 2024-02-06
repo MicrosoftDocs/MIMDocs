@@ -48,7 +48,7 @@ Do not rely on autogrow. Instead, manage the growth of these files manually. You
 
 ### Isolate log from data files
 
-Follow the SQL server best practices to isolate the transaction and data log files for the databases onto separate physical disks.
+Follow the SQL server best practices to isolate the transaction and data log files for the databases on to separate physical disks.
 
 Create additional tempdb files
 
@@ -64,11 +64,11 @@ For optimal performance, we recommend that you create one data file per CPU core
 
 ### Ensure adequate space for Log files
 
-It is important to understand your recovery model’s disk requirements. Simple recovery mode may be appropriate during the initial system load to limit the use of your disk space, but the data created after your most recent backup is exposed to data loss. When using Full recovery mode, you need to manage the disk usage through backups which include frequent backups of the transaction log to prevent high disk space usage. For more information, see [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370).
+It is important to understand your recovery model’s disk requirements. Simple recovery mode may be appropriate during the initial system load to limit the use of your disk space, but the data created after your most recent backup is exposed to data loss. When using Full recovery mode, you need to manage the disk usage through backups that include frequent backups of the transaction log to prevent high disk space usage. For more information, see [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370).
 
 ### Limit SQL server memory
 
-Depending on how much memory you have on your SQL server and if you share the SQL server with other services (that is, MIM 2016 Service and MIM 2016 Synchronization Service), you might want to restrict the memory consumption of SQL. You can do this through the following steps.
+Depending on how much memory you have on your SQL server and if you share the SQL server with other services (that is, MIM 2016 Service and MIM 2016 Synchronization Service), you might want to restrict the memory consumption of SQL. You can set this restriction through the following steps.
 
 1. Start SQL Server Enterprise Manager.
 
@@ -135,7 +135,7 @@ The following are best practices for configuring Microsoft Exchange Server for t
 
 3.  Select the **Require that all senders are authenticated** check box.
 
-For further information, see [Configure Message Delivery Restrictions](https://go.microsoft.com/fwlink/?LinkID=183625).
+For more information, see [Configure Message Delivery Restrictions](https://go.microsoft.com/fwlink/?LinkID=183625).
 
 -   Configure the service account so that it rejects mail with sizes greater than 1 MB. Follow the best practice to [Configure Message Size Limits](https://go.microsoft.com/fwlink/?LinkID=183626) for a Mailbox or a Mail-Enabled Public Folder.
 
@@ -146,7 +146,7 @@ For further information, see [Configure Message Delivery Restrictions](https://g
 
 ### Disable SharePoint indexing
 
-We recommend that you disable Microsoft Office SharePoint® indexing. There are no documents that need to be indexed. Indexing causes many error log entries and potential performance problems in MIM. To disable SharePoint indexing perform the steps below:
+We recommend that you disable Microsoft Office SharePoint® indexing. There are no documents that need to be indexed. Indexing causes many error log entries and potential performance problems in MIM. To disable SharePoint indexing, perform these steps:
 
 1.  On the server that hosts the MIM 2016 Portal, click Start.
 
@@ -200,7 +200,7 @@ During the initial load process, you should only apply the minimum configuration
 
 ### Step 3: Configure and populate the FIM Service with external identity data
 
-At this point you should follow the procedures described in the How Do I Synchronize Users from Active Directory Domain Services to FIM guide to configure and synchronize your system with users from Active Directory. If you need to synchronize Group information, the procedures for that process are described in the [How Do I Synchronize Groups from Active Directory Domain Services to FIM](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx) guide.
+At this point, you should follow the procedures described in the How Do I Synchronize Users from Active Directory Domain Services to FIM guide to configure and synchronize your system with users from Active Directory. If you need to synchronize Group information, the procedures for that process are described in the [How Do I Synchronize Groups from Active Directory Domain Services to FIM](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx) guide.
 
 #### Synchronization and export sequences
 
@@ -221,7 +221,7 @@ For each source management agent that is part of your initialization cycle, perf
 
 Once your initial data load is completed, you should apply the full MIM configuration for your deployment.
 
-Depending on your scenarios, this may include the creation of additional sets, MPRs, and workflows. For any policies that you need to apply retroactively to all existing objects in the system, use the run-on policy update setting on action workflows to apply those policies retroactively on the loaded data.
+Depending on your scenarios, this step may include the creation of additional sets, MPRs, and workflows. For any policies that you need to apply retroactively to all existing objects in the system, use the run-on policy update setting on action workflows to apply those policies retroactively on the loaded data.
 
 ### Step 5: Reconfigure SQL to previous settings
 
@@ -298,7 +298,7 @@ The FIM Synchronization Service service account should not be a member of the se
 
 ### Password reset deployed to kiosk-like computers should set local security to clear virtual memory pagefile
 
-When deploying FIM password reset on a workstation intended to be a kiosk, we recommend that the Shutdown: Clear virtual memory pagefile local security policy setting be turned on to ensure that sensitive information from process memory is not available to unauthorized users.
+When deploying FIM password reset on a workstation intended to be a kiosk, we recommend that the `Shutdown: Clear virtual memory pagefile` local security policy setting be turned on to ensure that sensitive information from process memory is not available to unauthorized users.
 
 ### Implementing SSL for the FIM Portal
 
@@ -401,7 +401,7 @@ MIM provides two types of MPRs, Request and Set Transition:
   - Scoped to the members of the set.
 
 > [!NOTE]
-> For additional details, see [Designing Business Policy Rules](https://go.microsoft.com/fwlink/?LinkID=183691).
+> For more information, see [Designing Business Policy Rules](https://go.microsoft.com/fwlink/?LinkID=183691).
 
 #### Only enable MPRs as necessary
 
@@ -416,7 +416,7 @@ Using explicit attribute lists helps to prevent the accidental granting of permi
 Access to data should be scoped to the business needs of the users. For example, group members should not have access to the filter attribute of the group they are a member of. The filter can inadvertently reveal organizational data that the user would not normally have access to.
 
 #### MPRs should reflect effective permissions in the system
-Avoid granting permissions to attributes that the user can never use. For example, you should not grant permission to modify core resource attributes such as objectType. Despite the MPR, any attempt to modify a resource's type after it is created is denied by the system.
+Avoid granting permissions to attributes that the user can never use. For example, you should not grant permission to modify core resource attributes such as objectType. Despite the MPR, any attempt to modify a resource's type after the resource is created will be denied by the system.
 
 #### Read permissions should be separate from Modify and Create permissions when using explicit attributes in MPRs
 
@@ -592,7 +592,7 @@ The Member attribute exposed to the synchronization engine is actually mapped to
 
 #### Leading and trailing spaces in strings are ignored
 
-In MIM, you can enter strings with leading and trailing spaces, but the MIM system ignores those spaces. If you submit a string with a leading and trailing space, the synchronization engine and Web services ignores those spaces.
+In MIM, you can enter strings with leading and trailing spaces, but the MIM system ignores those spaces. If you submit a string with a leading and trailing space, the synchronization engine and Web services ignore those spaces.
 
 #### Empty strings do not equal null
 
@@ -638,7 +638,7 @@ Avoid using activities that modify the MIM resources, such as the Function Evalu
 
 The objective of MIM is to process requests that can be initiated by various MIM clients such as the FIM synchronization service and the self-service components according to your configured business policies. By design, each FIM service instance belongs to a logical group that consists of one or more FIM service instances, which is also known as FIM service partition. If you have only one FIM service instance deployed to handle the all requests, it is possible that you experience processing latencies. Some operations can even exceed the default timeout values that are appropriate for self-service operations. FIM service partitions can help you to address this issue.
 
-For additional information see [Understanding FIM Service Partitions](/archive/technet-wiki/2363.understanding-fim-service-partitions).
+For more information, see [Understanding FIM Service Partitions](/archive/technet-wiki/2363.understanding-fim-service-partitions).
 
 ## Next steps
 - [FIM Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864)
