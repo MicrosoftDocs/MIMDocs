@@ -27,7 +27,8 @@ ms.suite: ems
 # MIM PAM test lab environment overview
 
 > [!NOTE]
-> The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. If your Active Directory is part of an Internet-connected environment, see instead [securing privileged access](/security/compass/overview) for more information on where to start.
+> The PAM approach provided by MIM PAM is not recommended for new deployments in Internet-connected environments.  MIM PAM is intended to be used in a custom architecture for isolated AD environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. MIM PAM is distinct from [Microsoft Entra Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM). Microsoft Entra PIM is a service that enables you to manage, control, and monitor access to resources in Microsoft Entra ID, Azure, and other Microsoft Online Services such as Microsoft 365 or Microsoft Intune. For guidance on on-premises Internet-connected environments and hybrid environments, see [securing privileged access](/security/compass/overview) for more information.
+
 
 To set up a test lab of MIM PAM, you can install the software on virtual machines.
 Privileged Access Management works with virtual machines (VMs) with separate drives that are connected to each other on a shared network. These virtual machines can be hosted by Windows Server or other operating system platforms.
