@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.date: 09/14/2023
-ms.author: billmath
+ms.date: 2/12/2024
+ms.author: esergeev
 
 ---
 # Generic SQL Connector technical reference
