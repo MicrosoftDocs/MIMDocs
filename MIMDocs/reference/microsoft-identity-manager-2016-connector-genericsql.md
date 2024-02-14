@@ -13,8 +13,8 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.date: 09/14/2023
-ms.author: billmath
+ms.date: 2/13/2024
+ms.author: esergeev
 
 ---
 # Generic SQL Connector technical reference
@@ -37,7 +37,7 @@ From a high-level perspective, the following features are supported by the curre
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>Oracle 12c and 18c</li><li>MySQL 5.x</li><li>MySQL 8.x</li><li>Postgres</li> |
+| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 11.5.8</li><li>Oracle 11g</li><li>Oracle 12c and 18c</li><li>Oracle 21c and 23c</li><li>MySQL 5.x</li><li>MySQL 8.x</li><li>Postgres</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Password Management</li> |
 | Operations |<li>Full Import and Delta Import, Export</li><li>For Export: Add, Delete, Update, and Replace</li><li>Set Password, Change Password</li> |
 | Schema |<li>Dynamic discovery of objects and attributes</li> |
@@ -48,7 +48,8 @@ Before you use the Connector, make sure you have the following on the synchroniz
 * Microsoft .NET 4.5.2 Framework or later
 * 64-bit ODBC client drivers
 * If you are using the connector to communicate with Oracle 12c, this requires Oracle Instant Client 12.2.0.1 or newer with the ODBC package.
-* If you are using the connector to communicate with Oracle 18c, this requires Oracle Instant Client 18.3.0.0 or newer with ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters.
+* If you are using the connector to communicate with Oracle 18c-23c, this requires Oracle Instant Client 18-23 or newer with the ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters, e.g. NLS_LANG=AMERICAN_AMERICA.AL32UTF8.
+* This connector uses SQL prepared statements and multiple statements per transaction. Some RDBM systems may have issues in their ODBC drivers related to transaction handling, server-side prepared SQL statements and multiple statements within the same transaction. Please configure your DSN connection options accordingly to ensure those statements are correctly sent to your database., For example, MySQL ODBC Driver version 8.0.32 needs options NO_SSPS=1 and MULTI_STATEMENTS=1. Other options like 'autocommit' or 'commit on successful operations only' may affect how batch exports are handled; consult your database administrator for details. To troubleshoot issues during export, set export batch size to 1 and enable connector verbose logging.
 
 Deploying this connector may require changes to the configuration of the database as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party database server in a production environment, we recommend customers work with their database vendor, or a deployment partner for help, guidance, and support for this integration.
 
