@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.date: 2/12/2024
+ms.date: 2/13/2024
 ms.author: esergeev
 
 ---
@@ -48,8 +48,8 @@ Before you use the Connector, make sure you have the following on the synchroniz
 * Microsoft .NET 4.5.2 Framework or later
 * 64-bit ODBC client drivers
 * If you are using the connector to communicate with Oracle 12c, this requires Oracle Instant Client 12.2.0.1 or newer with the ODBC package.
-* If you are using the connector to communicate with Oracle 18c-23c, this requires Oracle Instant Client 18-23 or newer with ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters, e.g. NLS_LANG=AMERICAN_AMERICA.AL32UTF8.
-* This connector uses SQL prepared statements and multiple statements per transaction. Some RDBM systems may have bugs in their ODBC Drivers related to transaction handling, server-side prepared SQL statements and multiple statements within the same transaction. Please, configure your DSN connection options accordingly, e.g. MySQL ODBC Driver version 8.0.32 needs options NO_SSPS=1 and MULTI_STATEMENTS=1. Consult your database administrator for details. Other options like 'autocommit' or 'commit on successful operations only' may affect how batch exports are handled. To troubleshoot your export issues set export batch size to 1 and enable connector verbose logging.
+* If you are using the connector to communicate with Oracle 18c-23c, this requires Oracle Instant Client 18-23 or newer with the ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters, e.g. NLS_LANG=AMERICAN_AMERICA.AL32UTF8.
+* This connector uses SQL prepared statements and multiple statements per transaction. Some RDBM systems may have issues in their ODBC drivers related to transaction handling, server-side prepared SQL statements and multiple statements within the same transaction. Please configure your DSN connection options accordingly to ensure those statements are correctly sent to your database., For example, MySQL ODBC Driver version 8.0.32 needs options NO_SSPS=1 and MULTI_STATEMENTS=1. Other options like 'autocommit' or 'commit on successful operations only' may affect how batch exports are handled; consult your database administrator for details. To troubleshoot issues during export, set export batch size to 1 and enable connector verbose logging.
 
 Deploying this connector may require changes to the configuration of the database as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party database server in a production environment, we recommend customers work with their database vendor, or a deployment partner for help, guidance, and support for this integration.
 
