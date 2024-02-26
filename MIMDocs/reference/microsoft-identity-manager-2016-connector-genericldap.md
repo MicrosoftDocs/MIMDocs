@@ -10,7 +10,6 @@ ms.assetid: 984beeb0-4d91-4908-ad81-c19797c4891b
 ms.reviewer: davidste
 ms.workload: identity
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.date: 09/14/2023
