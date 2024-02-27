@@ -309,7 +309,7 @@ Read access to the following file system folders:
 Substitute the name of the Windows PowerShell connector for the {ConnectorName} placeholder.
 
 ## Troubleshooting
-* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
+* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](/archive/technet-wiki/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors).
 
 <!--Reference style links - using these makes the source content way more readable than using inline links-->
 [cpp]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.configparameterpage.aspx
