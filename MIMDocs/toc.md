@@ -10,6 +10,7 @@
 ## [Capacity planning](capacity-planning-guide.md)
 ## [Deployment topology](topology-considerations.md)
 ## [Best practices](mim-best-practices.md)
+## [Migrate to Entra ID](migrate-entra-id.md)
 ## [Plan your PAM deployment](./pam/environment-overview.md)
 # [Deploy and Use](microsoft-identity-manager-deploy.md)
 ## [Deprecated features](microsoft-identity-manager-2016-deprecated-features.md)
