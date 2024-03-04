@@ -10,7 +10,6 @@ ms.author: esergeev
 reviewer: markwahl-msft
 manager: benyim
 ms.date: 10/23/2023
-ms.devlang: na
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na

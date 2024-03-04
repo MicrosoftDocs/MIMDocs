@@ -11,9 +11,7 @@ manager: amycolannino
 editor: ''
 reviewer: markwahl-msft
 
-ms.devlang: na
 ms.topic: article
-
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
