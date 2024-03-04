@@ -9,7 +9,6 @@ editor: ''
 reviewer: markwahl-msft
 
 ms.assetid: 6a0c66ab-55df-4669-a0c7-1fe1a091a7f9
-ms.devlang: na
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
