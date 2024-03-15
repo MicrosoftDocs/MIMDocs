@@ -3,7 +3,7 @@ title: Generic CSV Connector | Microsoft Docs
 description: This article describes how to configure Microsoft's Generic CSV Connector.
 services: active-directory
 documentationcenter: ''
-author: erichkarch
+author: erkarc
 manager: esergeev
 editor: ''
 
@@ -25,7 +25,7 @@ This article describes the Generic SQL Connector. The article applies to the fol
 
 For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
-> (!) NOTE
+>[!NOTE]
 > The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into an SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic CSV Connector
@@ -43,7 +43,7 @@ The following table lists the features that the current release of the connector
 | CSV Files Supported | This connector supports the management of user (required) and groups (optional), through the configuration of up to three CSV files: <li>Users CSV File (ex. Users.csv)</li><li>Groups CSV File (ex. Groups.csv)</li><li>Group Members CSV File (ex. Members.csv)</li> |
 | Pre/Post Operation Processing with PowerShell | This connector supports the configuration of up to four (4) PowerShell Scripts to facilitate pre-or-post processing operations.<br/>Script Execution Opportunities:<li>Before Import (ex. PreImport.ps1)</li><li>After Import (ex. PostImport.ps1)</li><li>Before Export (ex. PreExport.ps1)</li><li>After Export (ex. PostExport.ps1)</li> |
 | CSV File Encoding Supported | The connector supports all default (or installed) server encoding types: (ex. Unicode, UTF-8, UTF-7, ASCII, etc.) |
-| CSV Field Data Types Supported | The connector supports the following attribute data types: <li>Binary – (as 64-base strings)</li><li>Boolean – (as True/False)</li><li>Integers</li><li>Strings / Multivalued Strings</li><li>Reference / Multvalued References</li> |
+| CSV Field Data Types Supported | The connector supports the following attribute data types: <li>Binary – (as base64 strings)</li><li>Boolean – (as True/False)</li><li>Integers</li><li>Strings / Multivalued Strings</li><li>Reference / Multvalued References</li> |
 | CSV Field Delimitation | Support for commas (,) or any printable alphameric character to qualify the beginning and end of any string value. |
 | String Qualification Support | Support for double-quotes (“) or any printable alphameric character to qualify the beginning and end of any string value. |
 | Multivalued String & Reference Support | Support for multivalued strings and references fields |
@@ -332,8 +332,8 @@ E004,"Perez, Juan",
 ```
 ### Example: Binary Fields
 
-To express binary values in CSV files, they must be converted to base 64 strings that use the same encoding type as the CSV file. 
-The following section PowerShell function demonstrates how to encode a string value into its base 64 encoded string in Unicode:
+To express binary values in CSV files, they must be converted to base64 strings that use the same encoding type as the CSV file. 
+The following section PowerShell function demonstrates how to encode a string value into its base64 encoded string in Unicode:
 
 ~~~PowerShell
 function ConvertTo-Base64([string]$text) 
