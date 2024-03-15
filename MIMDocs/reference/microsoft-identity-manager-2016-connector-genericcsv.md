@@ -17,7 +17,7 @@ ms.date: 03/13/2024
 ms.author: erkarc
 
 ---
-# Generic CSV Connector technical reference (Preview)
+# Generic CSV Connector Technical Reference (Preview)
 This article describes the Generic SQL Connector. The article applies to the following  products:
 
 * [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
@@ -25,8 +25,8 @@ This article describes the Generic SQL Connector. The article applies to the fol
 
 For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
->[!NOTE]
-> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into an SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> [!NOTE]
+> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic CSV Connector
 The Generic CSV Connector lets you integrate User and Group identity data maintained in CSV files with Microsoft products, such as the Microsoft Entra Connect Provisioning Agent (ECMA2Host) and Microsoft Identity Manager 2016 (MIM2016).  
@@ -365,4 +365,4 @@ E003,Perez, Juan",false
 ```
 
 ## Troubleshooting
-* For information on how to enable logging to troubleshoot the connector, see the How to Enable ETW Tracing for Connectors.
+* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
