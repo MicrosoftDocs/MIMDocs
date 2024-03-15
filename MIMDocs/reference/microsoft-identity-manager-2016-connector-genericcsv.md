@@ -17,7 +17,7 @@ ms.date: 03/13/2024
 ms.author: erkarc
 
 ---
-# Generic CSV Connector technical reference
+# Generic CSV Connector technical reference (Preview)
 This article describes the Generic SQL Connector. The article applies to the following  products:
 
 * [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
@@ -43,7 +43,7 @@ The following table lists the features that the current release of the connector
 | CSV Files Supported | This connector supports the management of user (required) and groups (optional), through the configuration of up to three CSV files: <li>Users CSV File (ex. Users.csv)</li><li>Groups CSV File (ex. Groups.csv)</li><li>Group Members CSV File (ex. Members.csv)</li> |
 | Pre/Post Operation Processing with PowerShell | This connector supports the configuration of up to four (4) PowerShell Scripts to facilitate pre-or-post processing operations.<br/>Script Execution Opportunities:<li>Before Import (ex. PreImport.ps1)</li><li>After Import (ex. PostImport.ps1)</li><li>Before Export (ex. PreExport.ps1)</li><li>After Export (ex. PostExport.ps1)</li> |
 | CSV File Encoding Supported | The connector supports all default (or installed) server encoding types: (ex. Unicode, UTF-8, UTF-7, ASCII, etc.) |
-| CSV Field Data Types Supported | The connector supports the following attribute data types: <li>Binary – (as base64 strings)</li><li>Boolean – (as True/False)</li><li>Integers</li><li>Strings / Multivalued Strings</li><li>Reference / Multvalued References</li> |
+| CSV Field Data Types Supported | The connector supports the following attribute data types: <li>Binary – (as base64 strings)</li><li>Boolean – (as True/False)</li><li>Integers</li><li>Strings / Multivalued Strings</li><li>Reference</li> |
 | CSV Field Delimitation | Support for commas (,) or any printable alphameric character to qualify the beginning and end of any string value. |
 | String Qualification Support | Support for double-quotes (“) or any printable alphameric character to qualify the beginning and end of any string value. |
 | Multivalued String & Reference Support | Support for multivalued strings and references fields |
@@ -71,7 +71,7 @@ Before you use the connector, make sure you have the following on the synchroniz
 ## Create a new Connector
 
 To use the Generic CSV Connector in MIM 2016, the MIM administrator needs to perform the following steps:
-* Create a management agent (MA) using the ECMA2Host extension.
+* Open the create new management agent (MA) window from the MIM Sync Service Manager.
 * Select the Generic CSV Connector as the connector type.
 * Provide the file path and name of the CSV file to be imported or exported.
 * Specify the file encoding, value separator, multi-value separator, and text qualifier for the CSV file.
@@ -87,7 +87,7 @@ To Create a Generic SQL connector, in **Synchronization Service** select **Manag
 
 ### Connectivity
 
-The Connectivity page contains the file locations of the User, Groups, and Group Members CSV files. 
+The Connectivity page contains the file locations of the Users, Groups, and Group Members CSV files. 
 
 The following image is an example of the Connectivity page. 
 
@@ -116,20 +116,20 @@ The following section lists of the individual configurations and their meanings:
 
 *	**Object Confirmation (Normal)**: Normally, the sync engine assumes that it can retrieve the object again in a subsequent delta import after an export. This is how the sync engine usually works. But not all connected connected system do this. This setting of Normal  ensures that there is no exported-change-not-reimported warning in the follow-up import.
  
-* **Export Type (MultivaluedReferenceUpdateAdd)**: The export type specifies how objects are formatted and sent to the target system during synchronization.
+* **Export Type (MultivaluedReferenceAttributeUpdate)**: The export type specifies how objects are formatted and sent to the target system during synchronization.
 *MultivaluedReferenceAttributeUpdate is an export type designed to work with Entra ID. It only sends the attributes that have changed. For non-reference attributes, it uses AttributeReplace and for reference attributes, it uses AttributeUpdate. 
-* **Normalization (None)**: Normalizations refer to standardizing data to a consistent format. None means that no specific normalization rules are applied. Data remains as-is without any additional transformations by the connector.
+* **Normalizations (None)**: Normalizations refer to standardizing data to a consistent format. None means that no specific normalization rules are applied. Data remains as-is without any additional transformations by the connector.
 
 
-### Schema 1 (File Configurations)
+### Schema 1 (CSV File Format Configurations)
 
 The GCSV Connector utilizes three kinds of separators (or delimiters) to delimit and parse CSV fields and their values. 
 
 This page contains the character value settings for these separators and the encoding type that was used to create the file as CSV. 
 
-The following image is an image of the Schema 1 (File Configurations) page.
+The following image is an image of the Schema 1 (CSV File Format Configurations) page.
 
-![Schema 1 (File Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
+![Schema 1 (CSV File Format Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
 The following section is a list of the individual configurations:
 * **Use headers for schema discovery**: When this option is selected, it instructs the connector to ignore the first record of each CSV file as a data record and use it as a header record (that is, that has the names of each field.) If this option isn't selected, the connector gives a generic name to each field (for example, Attribute1, Attribute2, etc.)  and use the first row as a data record.  
@@ -147,15 +147,15 @@ The following section is a list of the individual configurations:
 > If you are not sure about the encoding type of your CSV files, you should try to use the default Unicode encoding type. Unicode is a common standard that supports many characters and symbols, making it a good option for encoding text data across most languages or character set is used.
 
 
-### Schema 2 (Anchor Configurations)
+### Schema 2 (Identity and Reference Field Configurations)
 
 The anchor value is a unique identifier for a record in a CSV file. It differentiates one record from the others. The GCSV Connector also uses this value to create the distinguished name (DN) that identifies the related connector space object. 
 
 On this page, the anchor attribute settings are set up for each of the CSV files that are listed on the Connectivity page. 
 
-The following image is an example of the Schema 2 (Anchor Configurations) page.
+The following image is an example of the Schema 2 (Identity and Reference Field Configurations) page.
 
-![Schema 2 (Anchor Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
+![Schema 2 (Identity and Reference Field Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
 
 The following section is a list of the individual configurations on this page:
 * **User**
@@ -172,12 +172,12 @@ The following section is a list of the individual configurations on this page:
 >[!IMPORTANT]
 >The names of the attributes designated to be used as anchors must be unique across all object type schemas. This includes the anchors specified in the Group Members file.
 
-### Schema 3 (User File Attribute Configurations)
+### Schema 3 (Users File Attribute Schema Configurations)
 This page is for specifying and explaining the data type of each of the fields that are identified in the schema of the Users CSV file and whether they can have more than one value. 
 
-The following image is an example of the Schema 3 (User File Attribute Configurations) page.
+The following image is an example of the Schema 3 (Users File Attribute Schema Configurations) page.
 
-![Schema 3 (User File Attribute Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
+![Schema 3 (Users File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
 The following section lists considerations when making attribute data type assignments.
 
@@ -198,14 +198,14 @@ The connector supports use of multivalued attributes for only the following data
 > **Note**
 > If the schema of both the User and Group objects both have an (non-anchor) attribute by the same name, differing datatypes may not be assigned between them. They both must share the same data type.
 
-### Schema 4 (Group File Attribute Configuration)
+### Schema 4 (Groups File Attribute Schema Configurations)
 This page is for specifying and explaining the data type of each of the fields that are identified in the schema of the Groups CSV file and whether they can have more than one value. 
 
-The following image is an example of the Schema 4 (Group File Attribute Configuration) page. 
+The following image is an example of the Schema 4 (Groups File Attribute Schema Configurations) page. 
 
-![Group File Attribute Configuration) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
+![Groups File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
-When providing configurations on this page, please refer to the considerations offered in the Schema 3 (User File Attribute Configurations) 
+When providing configurations on this page, please refer to the considerations offered in the Schema 3 (Users File Attribute Configurations) 
 
 After the running an initial full import operation, the connector space will look similar to the image the following image: 
 
@@ -217,7 +217,7 @@ This page allows for the configuration of PowerShell scripts that will run befor
 
 The following image is an example of the Global Parameters page. 
 
-![ Global Parameters page image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
+![Global Parameters page image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
 
 The following section lists the individual configuration settings on this page:
 
