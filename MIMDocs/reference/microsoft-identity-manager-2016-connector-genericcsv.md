@@ -65,7 +65,7 @@ Before you use the connector, make sure you have the following on the synchroniz
   * Post-Export – This script is executed after an export operation is run.
 
 #### MIM Synchronization Service Account Permissions
-> **(!) IMPORTANT**
+>[!IMPORTANT]
 > The MIM 2016 Synchronization service account is the security context that performs the file operations to CSV files and runs the pre/post-processing PowerShell scripts. This service account needs Read/Write permissions for all the CSV and PowerShell files that are configured. It also needs the appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4) to run any scripts that are configured.  
 
 ## Create a new Connector
@@ -98,7 +98,7 @@ On this page is where you specify the locations of the CSV files:
 * **Groups File**: The fully qualified path of the CSV file that contains the group records. This file is optional. 
 * **Members File**: The fully qualified path of the CSV file that contains group member reference records. 
 
-> **(!) IMPORTANT**
+>[!IMPORTANT]
 >The MIM Sync service account must have **read** and **write** permissions to all the designated CSV files. As mentioned previously, the group and member files are not necessary if only users are configured.
 
 The Connectivity screen is the first when you create a new Generic SQL Connector. You first need to provide The following section information:
@@ -171,7 +171,7 @@ The following section is a list of the individual configurations on this page:
   * **Member ID**: The field in the Group Members file that has the same (anchor) value as in the  Users or Groups CSV file. The second column found on the member file is selected by default.
 * **Member Object Type**: The field that contains either a User or Group string value, to indicate object type of the member. This field is only required if the Member file contains more than two fields. The Object Type field must only contain either a **User** or a **Group** (string) value. If this field is missing, the connector will assume that record refers to a User object. The third column found on the member file is selected by default. 
 
-> **(!) IMPORTANT**
+>[!IMPORTANT]
 >The names of the attributes designated to be used as anchors must be unique across all object type schemas. This includes the anchors specified in the Group Members file.
 
 ### Schema 3 (User File Attribute Configurations)
@@ -239,7 +239,7 @@ The connector passes one input parameter into each script named OperationType. T
 
 This parameter value can be used within the logic of the PowerShell scripts to determine the appropriate pre/post processing operation or action to take. 
 
-> **(!) IMPORTANT**
+>[!IMPORTANT]
 > Additionally, the dynamic creation of CSV files before import or export operations is not supported. The all the CSV files must be present before any for Run Profiles will execute.
  
 ### Provisioning Hierarchy
@@ -275,7 +275,7 @@ The following image is an example of the Attributes page.
 
 ![Attributes image](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
 
-> **Note** 
+>[!NOTE]
 > The Member attribute will only exist if Groups are selected and will contain the references to objects maintained in the group members CSV files.
 
 ### Anchors
@@ -365,7 +365,6 @@ E001,"Smith, John",true
 E002,"Doe, Jane",true
 E003,Perez, Juan",false
 ```
- 
 
 ## Troubleshooting
 * For information on how to enable logging to troubleshoot the connector, see the How to Enable ETW Tracing for Connectors.
