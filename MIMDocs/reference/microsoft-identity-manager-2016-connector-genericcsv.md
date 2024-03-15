@@ -3,7 +3,7 @@ title: Generic CSV Connector | Microsoft Docs
 description: This article describes how to configure Microsoft's Generic CSV Connector.
 services: active-directory
 documentationcenter: ''
-author: erkarc
+author: erichkarch
 manager: esergeev
 editor: ''
 
@@ -14,14 +14,14 @@ ms.devlang: na
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 03/13/2024
-ms.author: erichkarch
+ms.author: erkarc
 
 ---
 # Generic CSV Connector technical reference
 This article describes the Generic SQL Connector. The article applies to the following  products:
 
-* [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
-* [Microsoft Identity Manager 2016 (MIM2016)](https://learn.microsoft.com/en-us/microsoft-identity-manager)
+* [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
+* [Microsoft Identity Manager 2016 (MIM2016)](https://learn.microsoft.com/microsoft-identity-manager)
 
 For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
@@ -66,7 +66,7 @@ Before you use the connector, make sure you have the following on the synchroniz
 
 #### MIM Synchronization Service Account Permissions
 >[!IMPORTANT]
-> The MIM 2016 Synchronization service account is the security context that performs the file operations to CSV files and runs the pre/post-processing PowerShell scripts. This service account needs Read/Write permissions for all the CSV and PowerShell files that are configured. It also needs the appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4) to run any scripts that are configured.  
+> The MIM 2016 Synchronization service account is the security context that performs the file operations to CSV files and runs the pre/post-processing PowerShell scripts. This service account needs Read/Write permissions for all the CSV and PowerShell files that are configured. It also needs the appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4) to run any scripts that are configured.  
 
 ## Create a new Connector
 
@@ -83,7 +83,7 @@ To use the Generic CSV Connector in MIM 2016, the MIM administrator needs to per
 
 To Create a Generic SQL connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Generic CSV (Microsoft)** Connector.
 
-![CreateConnector page 1](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
+![Create Connector page 1mage](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
 
 ### Connectivity
 
@@ -91,7 +91,7 @@ The Connectivity page contains the file locations of the User, Groups, and Group
 
 The following image is an example of the Connectivity page. 
 
-![CreateConnector page 2](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
+![Connectivity page image](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
 
 On this page is where you specify the locations of the CSV files:  
 * **Users File**: The fully qualified path of the CSV file that contains the user records and their attribute values. This file is required.
@@ -109,15 +109,13 @@ This page describes the connector’s capabilities. Connector capabilities are f
 
 The following image is an example of the Capabilities page. 
 
-![Capablities image](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
+![Capablities page image](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
 
 The following section lists of the individual configurations and their meanings:
 *	**Distinguished Name Style (LDAP)**: The GCSV Connector uses the LDAP (Lightweight Directory Access Protocol) syntax to construct the DN (distinguished name) to uniquely identify each User or Group object in its connector space. All DN values are expressed in the following format: **CN=[ANCHOR_VALUE],Object=[User|Group],O=CSV**
 
-*	**Object Conformation (Normal)**: Object conformation determines how the connector presents objects to the export script. When an attribute changes, the export process needs to decide which values to include for a multivalued attribute. In this case, the normal conformation means that the connector follows standard behavior:
-    * When an attribute changes, it includes the full set of values for that attribute.
-    * All existing values are replaced with the new ones.
-  
+*	**Object Confirmation (Normal)**: Normally, the sync engine assumes that it can retrieve the object again in a subsequent delta import after an export. This is how the sync engine usually works. But not all connected connected system do this. This setting of Normal  ensures that there is no exported-change-not-reimported warning in the follow-up import.
+ 
 * **Export Type (MultivaluedReferenceUpdateAdd)**: The export type specifies how objects are formatted and sent to the target system during synchronization.
 *MultivaluedReferenceAttributeUpdate is an export type designed to work with Entra ID. It only sends the attributes that have changed. For non-reference attributes, it uses AttributeReplace and for reference attributes, it uses AttributeUpdate. 
 * **Normalization (None)**: Normalizations refer to standardizing data to a consistent format. None means that no specific normalization rules are applied. Data remains as-is without any additional transformations by the connector.
@@ -131,7 +129,7 @@ This page contains the character value settings for these separators and the enc
 
 The following image is an image of the Schema 1 (File Configurations) page.
 
-![Schema1 image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
+![Schema 1 (File Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
 The following section is a list of the individual configurations:
 * **Use headers for schema discovery**: When this option is selected, it instructs the connector to ignore the first record of each CSV file as a data record and use it as a header record (that is, that has the names of each field.) If this option isn't selected, the connector gives a generic name to each field (for example, Attribute1, Attribute2, etc.)  and use the first row as a data record.  
@@ -157,7 +155,7 @@ On this page, the anchor attribute settings are set up for each of the CSV files
 
 The following image is an example of the Schema 2 (Anchor Configurations) page.
 
-![Schema2 image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
+![Schema 2 (Anchor Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
 
 The following section is a list of the individual configurations on this page:
 * **User**
@@ -179,7 +177,7 @@ This page is for specifying and explaining the data type of each of the fields t
 
 The following image is an example of the Schema 3 (User File Attribute Configurations) page.
 
-![Schema3 image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
+![Schema 3 (User File Attribute Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
 The following section lists considerations when making attribute data type assignments.
 
@@ -205,13 +203,13 @@ This page is for specifying and explaining the data type of each of the fields t
 
 The following image is an example of the Schema 4 (Group File Attribute Configuration) page. 
 
-![Schema4a image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
+![Group File Attribute Configuration) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
 When providing configurations on this page, please refer to the considerations offered in the Schema 3 (User File Attribute Configurations) 
 
 After the running an initial full import operation, the connector space will look similar to the image the following image: 
 
-![Schema4a image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4b.png)
+![Connector Space image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4b.png)
 
 ### Global Parameters (PowerShell Scripts Configuration)
 
@@ -219,7 +217,7 @@ This page allows for the configuration of PowerShell scripts that will run befor
 
 The following image is an example of the Global Parameters page. 
 
-![GlobalParams image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
+![ Global Parameters page image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
 
 The following section lists the individual configuration settings on this page:
 
@@ -248,7 +246,7 @@ Because CSV files do not store information in a hierarchical structure; the Gene
 
 The following image is an example of the Provisioning Hierarchy page.
 
-![Provisioning image](./media/microsoft-identity-manager-2016-connector-genericcsv/provisioning.png)
+![Provisioning Hierarchy page image](./media/microsoft-identity-manager-2016-connector-genericcsv/provisioning.png)
 
 ### Partitions and Hierarchies
 
@@ -257,7 +255,7 @@ CN=[ANCHOR_VALUE],Object=[User/Group],O=CSV
 
 The following image is an example of the Partitions and Hierarchies page.
 
-![Partitions image](./media/microsoft-identity-manager-2016-connector-genericcsv/partitions.png)
+![Partitions and Hierarchies page image](./media/microsoft-identity-manager-2016-connector-genericcsv/partitions.png)
 
 ### Object Types
 
@@ -265,7 +263,7 @@ The Generic CSV connector requires that at least the User object type be specifi
 
 The following image is an example of the Object Types page.
 
-![ObjectTypes image](./media/microsoft-identity-manager-2016-connector-genericcsv/objecttypes.png)
+![Object Types page image](./media/microsoft-identity-manager-2016-connector-genericcsv/objecttypes.png)
 
 ### Attributes
 
@@ -273,7 +271,7 @@ This page displays a normalized list of all attributes across all selected objec
 
 The following image is an example of the Attributes page.
 
-![Attributes image](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
+![Attributes page image](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
 
 >[!NOTE]
 > The Member attribute will only exist if Groups are selected and will contain the references to objects maintained in the group members CSV files.
@@ -286,7 +284,7 @@ To change anchor designations displayed on this page, return to Schema 2 (Anchor
 
 The following image is an example of the Anchors page.
  
-![Anchors image](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
+![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
 
 
 ## CSV Field Formatting Examples
