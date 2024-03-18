@@ -1,6 +1,6 @@
 ---
-title: Generic CSV Connector | Microsoft Docs
-description: This article describes how to configure Microsoft's Generic CSV Connector.
+title: Generic CSV Connector - Technical Reference Guide (Preview) | Microsoft Docs
+description: This article provides the technical specifications of the Microsoft's Generic CSV Connector.
 services: active-directory
 documentationcenter: ''
 author: erichkarch
@@ -17,19 +17,22 @@ ms.date: 03/13/2024
 ms.author: erkarc
 
 ---
-# Generic CSV Connector Technical Reference (Preview)
-This article describes the Generic SQL Connector. The article applies to the following  products:
+# Generic CSV Connector - Technical Reference Guide (Preview)
+This article describes the Generic CSV (GCSV) Connector. The article applies to the following products:
 
 * [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
 * [Microsoft Identity Manager 2016 (MIM2016)](https://learn.microsoft.com/microsoft-identity-manager)
 
-For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
+For MIM 2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
+
+To see this Connector in action, see the [Generic SQL Connector step-by-step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) article.
 
 > [!NOTE]
-> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into CSV files, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic CSV Connector
-The Generic CSV Connector lets you integrate User and Group identity data maintained in CSV files with Microsoft products, such as the Microsoft Entra Connect Provisioning Agent (ECMA2Host) and Microsoft Identity Manager 2016 (MIM2016).  
+
+The Generic CSV (GCSV) Connector lets you integrate User and Group identity data maintained in CSV files with Microsoft products, such as the Microsoft Entra Connect Provisioning Agent (ECMA2Host) and Microsoft Identity Manager 2016 (MIM2016).  
 
 It has various features, such as the ability to orchestrate the use of PowerShell to manage identity data before-or-after imports or exports operations. It offers support for multiple datatypes including binary and references, support for qualified-string values, and multivalued attribute types.  
 
@@ -70,9 +73,10 @@ Before you use the connector, make sure you have the following on the synchroniz
 
 ## Create a new Connector
 
-To use the Generic CSV Connector in MIM 2016, the MIM administrator needs to perform the following steps:
-* Open the create new management agent (MA) window from the MIM Sync Service Manager.
-* Select the Generic CSV Connector as the connector type.
+The following is a high-level overview of the steps outlined in this guide. In order to being, an account with the *MIM Syncs Admin* role will need to be used to perform these tasks:
+
+* Open the *Create New Management Agent (MA)* window from the *MIM Sync Service Manager*.
+* Select the *Generic CSV Connector* as the connector type.
 * Provide the file path and name of the CSV file to be imported or exported.
 * Specify the file encoding, value separator, multi-value separator, and text qualifier for the CSV file.
 * Choose whether to use the values in the first row as header fields or not.
@@ -81,7 +85,7 @@ To use the Generic CSV Connector in MIM 2016, the MIM administrator needs to per
 * Provide the script paths and parameters for the PowerShell scripts, if any.
 * Run the MA to perform the import, sync, or export operations.
 
-To Create a Generic SQL connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Generic CSV (Microsoft)** Connector.
+To Create a Generic CSV connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Generic CSV (Microsoft)** Connector.
 
 ![Create Connector page 1mage](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
 
@@ -120,7 +124,6 @@ The following section lists of the individual configurations and their meanings:
 *MultivaluedReferenceAttributeUpdate is an export type designed to work with Entra ID. It only sends the attributes that have changed. For non-reference attributes, it uses AttributeReplace and for reference attributes, it uses AttributeUpdate. 
 * **Normalizations (None)**: Normalizations refer to standardizing data to a consistent format. None means that no specific normalization rules are applied. Data remains as-is without any additional transformations by the connector.
 
-
 ### Schema 1 (CSV File Format Configurations)
 
 The GCSV Connector utilizes three kinds of separators (or delimiters) to delimit and parse CSV fields and their values. 
@@ -133,19 +136,17 @@ The following image is an image of the Schema 1 (CSV File Format Configurations)
 
 The following section is a list of the individual configurations:
 * **Use headers for schema discovery**: When this option is selected, it instructs the connector to ignore the first record of each CSV file as a data record and use it as a header record (that is, that has the names of each field.) If this option isn't selected, the connector gives a generic name to each field (for example, Attribute1, Attribute2, etc.)  and use the first row as a data record.  
-
 * **Values separator**: This character separates the fields (that is, values) of the CSV records. The comma (,) is the default, but any alphanumeric character that can be printed is allowed.  
 * **Multivalue separator**: This type of separator is used to delimit the individual values of a multi–valued string (for example, proxy addresses) or reference attributes (for example, subordinates.) The default is a semi-colon (;) but any printable alphanumeric character is acceptable.
 * **Text qualifier**: When a string value contains characters that would otherwise be interpreted as delimiters (for example, such as commas), it requires that the value be qualified so that the CSV parser can correctly interpret the string as a single field. The double quotes (") are the default, but any alphanumeric character that can be printed is allowed.
 
->**Note**
+>[!NOTE]
 >Although the schemas of CSV files may not contain any multivalued fields or may not contain any values that require string qualification, the designation of a unique printable character for each separator type is required.
 
 * **File encoding**: This setting indicates the encoding used on the CSV files added in the Connectivity tab. Ensure that it matches the encoding of your CSV files.
 
->**Note**
+>[!NOTE]
 > If you are not sure about the encoding type of your CSV files, you should try to use the default Unicode encoding type. Unicode is a common standard that supports many characters and symbols, making it a good option for encoding text data across most languages or character set is used.
-
 
 ### Schema 2 (Identity and Reference Field Configurations)
 
@@ -182,7 +183,7 @@ The following image is an example of the Schema 3 (Users File Attribute Schema C
 The following section lists considerations when making attribute data type assignments.
 
 #### Supported Data Types
-The Generic CSV connector supports the use of The following section data types: 
+The GCSV Connector supports the use of The following section data types: 
 
 * **Boolean**: a value that can be either true or false.
 * **Binary**: a value that is stored as a sequence of bytes, typically used to store data such as images or other files.
@@ -195,7 +196,7 @@ The connector supports use of multivalued attributes for only the following data
 * String
 * Reference
 
-> **Note**
+>[!NOTE]
 > If the schema of both the User and Group objects both have an (non-anchor) attribute by the same name, differing datatypes may not be assigned between them. They both must share the same data type.
 
 ### Schema 4 (Groups File Attribute Schema Configurations)
@@ -232,17 +233,21 @@ The following section lists the individual configuration settings on this page:
 The GCSV connector executes each of the configured PowerShell scripts in its own session and does not support the passing of parameters between stages isn't supported. 
 
 The connector passes one input parameter into each script named OperationType. The value of this parameter varies depending on the Run Profile operation that is performed, and it can be one of three values: 
-* Full – this value is provided during Full Import or Full Export operations.
-* Delta – this value is provided during Export operations.
-
-This parameter value can be used within the logic of the PowerShell scripts to determine the appropriate pre/post processing operation or action to take. 
 
 >[!IMPORTANT]
-> Additionally, the dynamic creation of CSV files before import or export operations is not supported. The all the CSV files must be present before any for Run Profiles will execute.
+> The dynamic creation of CSV files before import or export operations is not supported. The all the CSV files must be present before any for Run Profiles will execute.
+
+#### PowerShell Input Parameter: OperationType 
+Although the use of input parameters is not supported, the GCSV connector does pass one input parameter into execution of every PowerShell script: `OperationType`. 
+
+* **Full** – this value is provided during Full Import or Full Export operations.
+* **Delta** – this value is provided during Export operations.
+
+This parameter value can be used within the logic of the PowerShell scripts to determine the appropriate pre/post processing operation or action to take. 
  
 ### Provisioning Hierarchy
 
-Because CSV files do not store information in a hierarchical structure; the Generic CSV connector does not support any hierarchical provisioning configurations. 
+Because CSV files do not store information in a hierarchical structure, the GCSV Connector does not support any hierarchical provisioning configurations. 
 
 The following image is an example of the Provisioning Hierarchy page.
 
@@ -250,8 +255,9 @@ The following image is an example of the Provisioning Hierarchy page.
 
 ### Partitions and Hierarchies
 
-The Generic CSV Connector will build a distinct distinguished name (DN) for every user and group record in its connector space, following this LDAP format: 
-CN=[ANCHOR_VALUE],Object=[User/Group],O=CSV
+The GCSV Connector will build a distinct distinguished name (DN) for every user and group record in its connector space, following this LDAP format: 
+
+`CN=[ANCHOR_VALUE],Object=User|Group,O=CSV`
 
 The following image is an example of the Partitions and Hierarchies page.
 
@@ -259,7 +265,7 @@ The following image is an example of the Partitions and Hierarchies page.
 
 ### Object Types
 
-The Generic CSV connector requires that at least the User object type be specified. The choice of the Group object type is optional. 
+The GCSV Connector requires that at least the User object type be specified. The choice of the Group object type is optional. 
 
 The following image is an example of the Object Types page.
 
@@ -278,7 +284,7 @@ The following image is an example of the Attributes page.
 
 ### Anchors
 
-The Generic CSV Connector does not support the use of complex anchors nor anchor attribute configurations that differ from their corresponding CSV file’s anchor ID fields. 
+The GCSV Connector does not support the use of complex anchors nor anchor attribute configurations that differ from their corresponding CSV file’s anchor ID fields. 
 
 To change anchor designations displayed on this page, return to Schema 2 (Anchor Configurations). 
 
@@ -286,10 +292,23 @@ The following image is an example of the Anchors page.
  
 ![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
 
+## Provisioning new CSV Records
+In order for the GCSV connector to add new User or Group objects into their corresponding CSV files a new Connector Space Object must be provisioned for it. 
+
+Whether using either [MIM 2016 Declarative Provisioning](https://learn.microsoft.com/microsoft-identity-manager/mim-how-provision-users-adds) or writing your own [MIM Synchronization Rules Extensions](https://learn.microsoft.com/previous-versions/windows/desktop/identity-lifecycle-manager/ms698375(v=vs.85)), new Connector Space objects must have a DN constructed using the following format:
+
+`CN=[ANCHOR_VALUE],Object=User|Group,O=CSV`
+
+Below are additional details on each of the these componet values: 
+|Component | Notes |
+|---|---|
+| CN=[ANCHOR VALUE] | The Common Name (CN) must be a unique value to and will be written in the CSV file's designated anchor field. |
+| Object=User/Group | This component indicates the object type of this connector, either **User** or **Group** only. |
+| O=CSV | This is the root component commont to all GCSV connector space objects. |
 
 ## CSV Field Formatting Examples
 
-The following sections list examples of how to format different datatypes in CSV files. All the examples The following section  assume the use of the connector’s default field delimiter settings:
+The following sections list examples of how to format different datatypes in CSV files. All the examples The following section assume the use of the connector’s default field delimiter settings:
 * Value separate: Comma (,)
 * Multivalue separator: Semi-Colon (;)
 * Text qualifier: Double quotes (")
@@ -315,8 +334,8 @@ E001,"Smith, John",SMTP:john.smith@contoso.com;smtp:js001@contoso.com
 E002,"Doe, Jane",SMTP:jane.doe@contoso.com;smtp:jd002@contoso.com
 ```
 
-> **Note**
-> Multivalued String also support the use of string qualified values.
+>[!NOTE]
+> Multivalued String also support the use of string qualified values. Text qualified values may be delimited by multivalued separators.
 
 ### Example: Reference Fields
 To specify a reference value in a CSV file, populate its field with the anchor value of the referred user object. In The following section CSV example, the Manager field contains the anchor value of the user record to which it refers: 
