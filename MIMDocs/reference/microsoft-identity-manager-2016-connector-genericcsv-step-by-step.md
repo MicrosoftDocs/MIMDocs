@@ -447,11 +447,11 @@ Opening the log reveals:
 
 These two records indicate that both the Pre-Import and Post-Import PowerShell scripts ran successfully. Note the Type field indicates that these PowerShell scripts were run during a Full Import. It obtains these values from OperationType PowerShell input parameter that indicates whether the script was run during a Full or Delta operation. 
 
-# Appendix A - Sample CSV Files
+## Appendix A - Sample CSV Files
 
 The following sections contain the CSV Files used in this guide
 
-## Sample Users CSV File
+### Sample Users CSV File
 In the configuration of the conenctor, this guide assumes the file name of **USERS.CSV**.
 
 ```CSV
@@ -461,7 +461,7 @@ E002,"Doe, Jane",JD003,1,E001,SMTP:jane.doe@contoso.com;smtp:jd002@contoso.com,T
 E003,"Perez, Juan",JP003,1,E001,SMTP:juan.perez@contoso.com;smtp:jp003@contoso.com,False,SgBEADAAMAAyAA==
 ```
 
-## Sample Groups CSV File
+### Sample Groups CSV File
 In the configuration of the conenctor, this guide assumes the file name of **GROUPS.CSV**.
 
 ```CSV
@@ -470,7 +470,7 @@ G001,Test Group (G001),"This group is for teams A, B, and C",E002
 G002,Test Group (G002),"This group is for teams D, E, and F",E003
 ```
 
-## Sample Members CSV File
+### Sample Members CSV File
 In the configuration of the conenctor, this guide assumes the file name of **MEMBERS.CSV**.
 
 ```CSV
@@ -488,14 +488,14 @@ G003,E003,USER
 G003,G001,GROUP
 ```
 
-# Appendix B - Sample PowerShell Files
+## Appendix B - Sample PowerShell Files
 
 Contained within this appendix is the set of sample PowerShell scripts used in this guide. The following sections detail some of the considerations that should be made when
 
 >[!Important]
 >any use of ``write-host``commands in the PowerShell scripts will cause the script's exection to fail. 
 
-## Sample Pre-Import PowerShell Script
+### Sample Pre-Import PowerShell Script
 In the configuration of the connector, this guide assumes the file name of **PRE-IMPORT.PS1**.
 
 ~~~PowerShell
@@ -517,7 +517,7 @@ $record = [PSCustomObject]@{
 $record | Export-Csv -Path $FilePath -NoTypeInformation -Append
 ~~~
 
-## Sample Post-Import PowerShell Script
+### Sample Post-Import PowerShell Script
 
 In the configuration of the conenctor, this guide assumes the file name of **POST-IMPORT.PS1**.
 
@@ -540,7 +540,7 @@ $record = [PSCustomObject]@{
 $record | Export-Csv -Path $FilePath -NoTypeInformation -Append
 ~~~
 
-## Sample Pre-Export PowerShell Script
+### Sample Pre-Export PowerShell Script
 
 In the configuration of the conenctor, this guide assumes the file name of **PRE-EXPORT.PS1**.
 
@@ -563,7 +563,7 @@ $record = [PSCustomObject]@{
 $record | Export-Csv -Path $FilePath -NoTypeInformation -Append
 ~~~
 
-## Sample Post-Export PowerShell Script
+### Sample Post-Export PowerShell Script
 
 In the configuration of the conenctor, this guide assumes the file name of **POST-EXPORT.PS1**.
 
@@ -585,5 +585,3 @@ $record = [PSCustomObject]@{
 
 $record | Export-Csv -Path $FilePath -NoTypeInformation -Append
 ~~~
-
-
