@@ -10,9 +10,10 @@ editor: ''
 ms.assetid: f2a1c6b0-3e7d-4e8e-9a8b-5a6d3f2e1b9d
 ms.workload: identity
 ms.tgt_pltfrm: na
-ms.devlang: na
+ms.devlang: powershell
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: entra-id-governance
+ms.subservice: ''
 ms.date: 03/13/2024
 ms.author: erkarc
 
