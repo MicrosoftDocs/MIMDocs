@@ -10,10 +10,10 @@ reviewer: markwahl-msft
 
 ms.assetid: 6a0c66ab-55df-4669-a0c7-1fe1a091a7f9
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.tgt_pltfrm: na
+ms.service: entra-id-governance
+ms.subservice: ''
 ms.workload: identity
-ms.date: 8/14/2023
+ms.date: 3/16/2024
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -21,30 +21,46 @@ ms.suite: ems
 ---
 # Connector Version Release History
 
-Connectors link specific connected data sources to Microsoft Identity Manager (MIM), and Microsoft Entra Connect Sync, and the Microsoft Entra provisioning agent. (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors, such as connectors to provision users into Active Directory, are delivered as part of the MIM Synchronization Service installation and the installation package of Microsoft Entra Connect Sync. In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
+Connectors link specific connected data sources to Microsoft Identity Manager (MIM) and Microsoft Entra Connect. (In Forefront Identity Manager, connectors were known as management agents.) Many of the connectors are including in the installation of the *MIM Synchronization Service*  and in the installation of Microsoft Entra Connect. In addition, more connectors, such as to third-party directory servers, are shipped as a separate download so they can be more frequently updated to add support for connecting to MIM updated versions of third-party target systems.  
 
 > [!NOTE]
-> This document is primarily for MIM Connectors only. Unless explicitly called out in this document, these Connectors are not supported for install on Microsoft Entra Connect Sync.
+> This document is primarily for MIM Connectors only. Unless explicitly called out in this document, these Connectors are not supported for install on Microsoft Entra Connect.
 
-This document lists all versions of the generic connectors package that have been released separately from MIM.  For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).  Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010 and MIM 2016: Management Agents from Partners](/archive/technet-wiki/1589.fim-2010-mim-2016-management-agents-from-partners).
+This document lists all versions of the released generic connectors package for MIM. For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).
+
 
 Related links:
 
 * [Download Latest Connectors](https://go.microsoft.com/fwlink/?LinkId=717495)
 * [Graph Connector](../microsoft-identity-manager-2016-connector-graph.md) reference documentation
+* [Generic CSV Connector](microsoft-identity-manager-2016-connector-genericcsv.md) reference documentation
+  * [Generic CSV Connector Step-by-Step](microsoft-identity-manager-2016-connector-genericcsv-step-by-step.md) reference documentation
 * [Generic LDAP Connector](microsoft-identity-manager-2016-connector-genericldap.md) reference documentation
 * [Generic SQL Connector](microsoft-identity-manager-2016-connector-genericsql.md) reference documentation
+  * [Generic SQL Connector Step-by-Step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) reference documentation
 * [Web Services Connector](microsoft-identity-manager-2016-ma-ws.md) reference documentation
 * [PowerShell Connector](microsoft-identity-manager-2016-connector-powershell.md) reference documentation
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
-## 1.1.2026.0 (August 2023)
+## 1.1.2031.0 (March 2024)
+
+### **New Connector**  
+* Initial release of the [***Generic CSV Connector (Preview)***](microsoft-identity-manager-2016-connector-genericcsv.md).
+  * CSV Files Supported - This connector supports the management of user (required) and groups (optional), through the configuration of three CSV files: 
+    * Users CSV File
+    * Groups CSV File
+    * Group Members CSV File
+  * Pre/Post Operation Processing User and Group data with PowerShell - This connector supports the configuration of up to four (4) PowerShell Scripts to facilitate pre-or-post processing of User and/r Group identity data before and/or after imports or exports.
+  * CSV File Encoding Supported - The connector supports all default (or installed) server encoding types: (ex. Unicode, UTF-8, UTF-7, ASCII, etc.)
+  * CSV Field Data Types Supported - The connector supports the following attribute data types: binaries (as base64 strings), booleans (as True/False), Integers, strings and multivalued strings, and references.
+  * Support for CSV field delimitation, text qualification, and multivalued string and reference attributes.
+
+## 1.1.2025.0 (August 2023)
+
 
 ### Enhancements
 
-* Generic SQL Connector
-  * Added support for DB2 databases running on Linux.
 
 ### Fixed issues
 
@@ -98,7 +114,7 @@ Related links:
 ### Fixed issues
 
 * Lotus Notes Connector
-  * Fixed an issue with non-printable characters left after deletion of multi-valued string attributes
+  * Fixed an issue with nonprintable characters left after deletion of multi-valued string attributes
 
 * Generic LDAP Connector
   * Fixed an issue with Kerberos authentication by enabling three-part SPN authentication for LDAP connections
@@ -117,7 +133,7 @@ Related links:
 ### Enhancements
 
 * Generic LDAP Connector
-  * Added option to hash passwords prior to sending to OpenLDAP
+  * Added option to hash passwords before sending to OpenLDAP
   * Improved Oracle Unified Directory delta import entries processing
 * Webservices Connector
   * Added support for TLS 1.2
@@ -204,7 +220,7 @@ Related links:
   * Added support for B2B guest users provisioning
 
    To invite B2B guest users, you need to:
-  * Grant permissions to invite guests to your Azure AD application associated with Graph connector
+  * Grant permissions to invite guests to your Microsoft Entra ID application associated with Graph connector
   * Complete connector configuration section for inviting external users: set Invite Redirect URL (mandatory) and choose whether to send invitation emails
   * Set mandatory attributes in your outbound synchronization rule:
     * "Guest"=>*userType* (initial flow only)
@@ -217,7 +233,7 @@ Related links:
 ### Fixed issues
 
 * Graph Connector
-  * Export no longer fails when trying to add a member into a group that has been already added
+  * Export no longer fails when trying to add a member into a group that is already added
   * 'export_password' virtual attribute support is fixed, no need to set up 'password' attribute flow anymore
   * Fixed export flow of multi-valued string attributes
   * Fixed several bugs affecting delta import
@@ -268,11 +284,11 @@ Related links:
   * Fixed an issue with table/view import strategy when reading from MS SQL resulting in only the first page be imported
 
 * Graph Connector:
-  * Organizational contacts are now handled correctly, email is no longer missing
-  * Fixed an issue with manager attribute import and export operations. Connector no longer fails when manager is empty. Manager value is updated correctly in Azure AD
-  * Fixed an issue with delta import of empty values
+  * Organizational contacts are now handled correctly. Email is no longer missing.
+  * Fixed an issue with manager attribute import and export operations. Connector no longer fails when manager is empty. Manager value is updated correctly in Microsoft Entra ID
+  * Fixed an issue with delta import of empty values.
   * Fixed an issue with connector crashing on delta import when local cache file is corrupted
-  * Fixed several issues with incorrect export of empty values or when only attribute value case has changed
+  * Fixed several issues with incorrect export of empty values or when only attribute value changes.
   * Connector now handles delete/add operations for the same attribute during export run correctly
   * Fixed several issues with long-running imports and exports when access tokens were expiring during connector run. Connector now renews access tokens when needed without failure
   * Fixed an issue with last member of a group not being deleted
@@ -284,16 +300,16 @@ Related links:
 * Graph Connector:
   * Added multi-threaded group membership full import strategy to improve import performance. Delta import remains single-threaded operation
   * Added support for complex schema types resulting attributes like OnPremisesExtentionAttributes.* being available now
-  * Added support for export_password attribute to avoid export-change-not-reimported errors and do not show initial password in the connector space. Behavior is similar to other ECMA2 connectors
-  * Added a handler to support HTTP requests throttling. When Azure AD replica receives too many requests from a client, it might respond with Retry-After instruction. Connector pauses and retries instead of failing
-  * Delta import profile no longer starts if query filters are defined. If you want to import only specific objects from Azure AD, for example, users having last name that starts with A*, then delta import functionality is blocked
+  * Added support for export_password attribute to avoid export-change-not-reimported errors and don't show initial password in the connector space. Behavior is similar to other ECMA2 connectors
+  * Added a handler to support HTTP requests throttling. When Microsoft Entra ID replica receives too many requests from a client, it might respond with Retry-After instruction. Connector pauses and retries instead of failing
+  * Delta import profile no longer starts if query filters are defined. If you want to import only specific objects from Microsoft Entra ID, for example, users having last name that starts with A*, then delta import functionality is blocked
 
 ## 1.1.913.0 (January 2019)
 
 ### Fixed issues
 
 * Generic SQL:
-  * Fixed a regression bug on the Generic SQL Connector where it was only reading the first 5000 objects.
+  * Fixed a regression bug on the Generic SQL Connector where it was only reading the first 5,000 objects.
 * Graph Connector:
   * Fixed an issue where the Graph API Connector failed to read/write from a tenant or create a new connector when the beta option is selected on connectivity.
 
@@ -303,16 +319,16 @@ Related links:
   * Set the TLS 1.2 protocol as the default for the Graph connector.
 
 * Generic SQL Connector:
-  * Generic SQL Connector has been tested with Oracle 12c and Oracle 18c.
+  * Generic SQL Connector is now supported for use with Oracle 12c and Oracle 18c.
 
 ## 1.1.911.0
 
 > [!NOTE]  
-> This connector build version is only for use within Azure AD Connect deployments, and is not provided for use in MIM deployments.
+> This connector build version is only for use within Microsoft Entra Connect deployments, and is not provided for use in MIM deployments.
 >
 > Compared to the previous connector release, it contains no improvements or updates for MIM customers.
 
-* Updates the non standard connectors (for example, Generic LDAP Connector and Generic SQL Connector) shipped with Azure AD Connect.  
+* Updates the non standard connectors (for example, Generic LDAP Connector and Generic SQL Connector) shipped with Microsoft Entra Connect.  
 
 ## 1.1.861.0
 
@@ -336,7 +352,7 @@ Related links:
 
 * Graph Connector(Public Preview)
   * Error on Group Deletes
-  * Update User-Agent to http header
+  * Updated *User-Agent* to *http header*
   * Connector doesn't validate Client ID and Client Secret
   * Tenant name filed should be trimmed
 
@@ -346,7 +362,7 @@ Related links:
     *Add the ability to increase timeout through UI
 
 * Graph Connector(Public Preview)
-    *Password attribute is filtered on Import to eliminate "Export-not-reimported".
+    *Password attribute is filtered on Import to eliminate `Export-not-reimported.
     *Add support of $filter query parameter -Limited to operations with all filters that work in delta query, also works in the connector
     *Updated to use nextLink directly instead of extracting skipToken for paging detail [here](https://developer.microsoft.com/en-us/graph/docs/concepts/paging)
 
@@ -354,8 +370,8 @@ Related links:
 
 ### Fixed issues
 
-* Resolved ConnectorsLog System.Diagnostics.EventLogInternal.InternalWriteEvent("Message: A device attached to the system is not functioning")
-* In this release of connectors you need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
+* Resolved ConnectorsLog System.Diagnostics.EventLogInternal.InternalWriteEvent("Message: A device attached to the system isn't functioning")
+* In this release of connectors, you need to update binding redirect from 3.3.0.0-4.1.3.0 to 4.1.4.0 in miiserver.exe.config
 
 * Generic Web Services:
   * Resolved Valid JSON response couldn't be saved in configuration tool
@@ -363,10 +379,9 @@ Related links:
 * Generic SQL:
   * Export always generates only update query for the operation of deleting. Added to generate a delete query
   * The SQL query, which gets objects for the operation of Delta Import,  if 'Delta Strategy' is 'Change Tracking' was fixed. In this implementation known limitation:  Delta Import with 'Change Tracking' mode doesn't track changes in multi-valued attributes
-  * Added possibility to generate a delete query for case, when it's necessary to delete the last value of multivalued attribute and this row doesn't contain any other data except value, which it's necessary to delete.
   * System.ArgumentException handling when implemented OUTPUT parameters by SP
-  * Incorrect query to make the operation of export into field that has varbinary(max) type
-    * Issue with parameterList variable was initialized twice (in the functions ExportAttributes and GetQueryForMultiValue)
+  * Incorrect query to make the operation of export into field of the *varbinary(max)* type
+  * Issue with parameterList variable was initialized twice (in the functions ExportAttributes and GetQueryForMultiValue)
 
 ## 1.1.649.0 (AADConnect 1.1.649.0)
 
@@ -380,15 +395,15 @@ Related links:
   * OpenLDAP Directory uses DN as anchor rather than entryUUI. New option to GLDAP connector, which allows to modify anchor
 
 * Generic SQL:
-  * Fixed export into field, that has varbinary(max) type.
-  * When binary data is added from a data source to a CSEntry object, the DataTypeConversion function failed on zero bytes. Fixed DataTypeConversion function of the CSEntryOperationBase class.
+  * Fixed export into field of a *varbinary(max)* type.
+  * When adding binary data from a data source to CSEntry object, The DataTypeConversion function failed on zero bytes. Fixed DataTypeConversion function of the CSEntryOperationBase class.
 
 ### Enhancements
 
 * Generic SQL:
   * The ability to configure the mode of execution for stored procedures with named or unnamed parameters has been added. 
     * On the 'Global Parameters' page, there is now a check box with the label 'Use named parameters' to execute a stored procedure.
-    * NOTE: The ability to execute stored procedure with named parameters works only for IBM DB2 and MSSQL databases and not for Oracle and MySQL because neither MySQL nor the ODBC driver for Oracle supports the use of named parameters in stored procedures.
+    * NOTE: The ability to execute stored procedure with named parameters works only for IBM DB2 and MSSQL databases and not for Oracle and MySQL because MySQL or the ODBC driver for Oracle doesn't supports the use of named parameters in stored procedures.
 
 ## 1.1.604.0 (AADConnect 1.1.614.0)
 
@@ -404,8 +419,8 @@ Related links:
 ### Fixed issues
 
 * Generic Web Services:
-  * The WSconfig tool did not convert correctly the Json array from "sample request" for the REST service method. This caused problems with serialization this Json array for the REST request.
-  * Web Service Connector Configuration Tool does not support usage of space symbols in JSON attribute names 
+  * The SConfig tool didn't convert correctly the Json array from "sample request" for the REST service method. This caused problems with serialization this Json array for the REST request.
+  * Web Service Connector Configuration Tool doesn't support usage of space symbols in JSON attribute names 
     * A Substitution pattern can be added manually to the WSConfigTool.exe.config file, for example,  ```<appSettings> <add key="JSONSpaceNamePattern" value="__" /> </appSettings>```
       > [!NOTE]
       > JSONSpaceNamePattern key is required as for export you will recieve the following error: Message: Empty name is not legal.
@@ -473,15 +488,15 @@ Released: 2017 March
 ### Fixed issues
 
 * Generic Web Services:
-  * When changing the service URL in Default SAP WSconfig projects through WebService Configuration Tool then the following error happens:
+  * When changing the service URL in Default SAP WSconfig projects through WebService Configuration Tool, then the following error happens:
   Could not find a part of the path
 
       ``'C:\Users\cstpopovaz\AppData\Local\Temp\2\e2c9d9b0-0d8a-4409-b059-dceeb900a2b3\b9bedcc0-88ac-454c-8c69-7d6ea1c41d17\cfg.config\cloneconfig.xml'. ``
 
 * Generic LDAP:
-  * GLDAP Connector does not see all attributes in AD LDS
+  * GLDAP Connector doesn't see all attributes in AD LDS
   * Wizard breaks when no UPN attributes are detected from the LDAP directory schema
-  * Delta Imports Failing with discovery errors not present during full import, when "objectclass" attribute is not selected
+  * Delta Imports Failing with discovery errors not present during full import, when "objectclass" attribute isn't selected
   * A "Configure Partitions and Hierarchies" configuration page, doesn't show any objects which type is equal to the partition for Novel servers in the Generic  
   LDAP MA. They showed only objects from RootDSE partition.
 
@@ -492,8 +507,8 @@ Released: 2017 March
 * Lotus Notes:
   * A specific field "Full Name" is shown in the metaverse correctly however when exporting to Notes the value for the attribute is Null or Empty.
   * Fix for duplicate Certifier error
-  * When the Object without any data is selected on the Lotus Domino Connector with other objects then we receive the Discovery error while performing Full-Import.
-  * When Delta Import is being running on the Lotus Domino Connector, at the end of that run, the Microsoft.IdentityManagement.MA.LotusDomino.Service.exe service sometimes returns an Application Error.
+  * If the Object without any data is selected on the Lotus Domino Connector with other objects then we receive the Discovery error while performing Full-Import.
+  * If Delta Import is being running on the Lotus Domino Connector, at the end of that run, the Microsoft.IdentityManagement.MA.LotusDomino.Service.exe service sometimes returns an Application Error.
   * Group membership overall works fine and is maintained, except when running the export to try to remove a user from membership it shows as successful with an update, but the user doesn't actually get removed from membership in Lotus Notes.
   * An opportunity to choose mode of export as "Append Item at bottom" was added in configuration GUI of Lotus MA to append new items at bottom during the export for multi-valued attributes.
   * Connector will add the needed logic to delete the file from the Mail Folder and ID Vault.
@@ -535,7 +550,7 @@ Initial release of the [Generic SQL Connector](microsoft-identity-manager-2016-c
 > [!NOTE]
 > When updating Microsoft Identity Manager or AADConnect with use of any of ECMA2 connectors. 
 
-You must refresh the connector definition upon upgrade to match or you will receive the following error in the application event log start to report warning ID 6947: "Assembly version in AAD Connector configuration ("X.X.XXX.X") is earlier than the actual version ("X.X.XXX.X") of "C:\Program Files\Microsoft Azure AD Sync\Extensions\Microsoft.IAM.Connector.GenericLdap.dll".
+You must refresh the connector definition upon upgrade to match or you will receive the following error in the application event log start to report warning ID 6947: "Assembly version in AAD Connector configuration ("X.X.XXX.X") is earlier than the actual version ("X.X.XXX.X") of "C:\Program Files\Microsoft Microsoft Entra ID Sync\Extensions\Microsoft.IAM.Connector.GenericLdap.dll".
 
 To refresh the definition:
 
@@ -548,7 +563,7 @@ To refresh the definition:
 
 ## Other connectors
 
-In addition to the connectors listed above, connectors for SharePoint, and a now-deprecated connector for Windows Azure Active Directory, were also distributed separately from MIM.
+In addition to the connectors listed above, connectors for SharePoint, and a now-deprecated connector for Windows Microsoft Entra ID, were also distributed separately from MIM.
 
 ### SharePoint User Profile
 
@@ -556,9 +571,9 @@ The Forefront Identity Manager Connector for SharePoint User Profile Store helps
 
 More information could be found in this article: [Use a sample MIM solution in SharePoint Server 2016](/SharePoint/administration/use-a-sample-mim-solution-in-sharepoint-server).
 
-### Forefront Identity Manager Connector for Windows Azure Active Directory (deprecated connector)
+### Forefront Identity Manager Connector for Windows Microsoft Entra ID (deprecated connector)
 
-The Azure AD Connector for FIM was an early technology for synchronizing identity information to Azure Active Directory. The Azure AD Connector for FIM, version 1.0.6635.0069 from February 19, 2014, is at feature freeze and deprecated. The solution of using FIM and the Azure AD Connector has been superseded.  Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md). Do not begin a new deployment using the Forefront Identity Manager Connector for Windows Azure AD.
+The Microsoft Entra Connector for FIM was an early technology for synchronizing identity information to Microsoft Entra ID. The Microsoft Entra Connector for FIM, version 1.0.6635.0069 from February 19, 2014, is at feature freeze and deprecated. The solution of using FIM and the Microsoft Entra Connector has been superseded.  Existing deployments should migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md). Do not begin a new deployment using the Forefront Identity Manager Connector for Windows Microsoft Entra ID.
 
 ## Next steps
 

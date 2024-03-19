@@ -158,9 +158,11 @@
 ## Connectors
 ### [Graph](microsoft-identity-manager-2016-connector-graph.md)
 ### [Lotus Notes](./reference/microsoft-identity-manager-2016-connector-domino.md)
+### [Generic CSV](./reference/microsoft-identity-manager-2016-connector-genericcsv.md)
+#### [Generic CSV step-by-step](./reference/microsoft-identity-manager-2016-connector-genericcsv-step-by-step.md)
 ### [Generic LDAP](./reference/microsoft-identity-manager-2016-connector-genericldap.md)
 ### [Generic SQL](./reference/microsoft-identity-manager-2016-connector-genericsql.md)
-### [Generic SQL step-by-step](./reference/microsoft-identity-manager-2016-connector-genericsql-step-by-step.md)
+#### [Generic SQL step-by-step](./reference/microsoft-identity-manager-2016-connector-genericsql-step-by-step.md)
 ### [Web Services](./reference/microsoft-identity-manager-2016-ma-ws.md)
 ### [PowerShell](./reference/microsoft-identity-manager-2016-connector-powershell.md)
 ### [Connector Version Release History](./reference/microsoft-identity-manager-2016-connector-version-history.md)
