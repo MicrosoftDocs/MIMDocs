@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Install Microsoft Identity Manager Service and Portal for Azure AD Premium customers | Microsoft Docs
-description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016 SP2 in organizations licensed for Azure AD Premium
+title: Install Microsoft Identity Manager Service and Portal for Microsoft Entra ID P1 or P2 customers
+description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016 SP2 in organizations licensed for Microsoft Entra ID P1 or P2
 services: active-directory
 documentationcenter: ''
 keywords: MIM
@@ -11,9 +11,8 @@ ms.author: esergeev
 reviewer: markwahl-msft
 manager: amycolannino
 ms.date: 03/18/2021
-ms.devlang: na
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
 
@@ -23,7 +22,7 @@ ms.reviewer: mwahl
 ms.suite: ems
 
 ---
-# Install MIM 2016 with SP2: MIM Service and Portal for Azure AD Premium customers
+# Install MIM 2016 with SP2: MIM Service and Portal for Microsoft Entra ID P1 or P2 customers
 
 > [!div class="step-by-step"]
 > [« MIM Synchronization Service](install-mim-sync.md)
@@ -39,9 +38,9 @@ ms.suite: ems
 
 ## Before you begin
 
-- This guide is intended for installing MIM Service in organizations licensed for Azure AD Premium. If your organization does not have Azure AD Premium or is not using Azure AD, then you will need to instead follow [installation guide for Volume License edition of MIM](install-mim-service-portal.md).
-- Ensure you have Azure AD user credentials with enough permissions to validate that your tenant subscription includes Azure AD Premium and can create app registrations.
-- If you plan to use Office 365 application context authentication, you will need to run a script to register the MIM Service application in Azure AD and grant the MIM Service permissions to access a MIM Service mailbox in Office 365. Save the script output as you will need the resulting application ID and secret later during the installation.
+- This guide is intended for installing MIM Service in organizations licensed for Microsoft Entra ID P1 or P2. If your organization does not have Microsoft Entra ID P1 or P2 or is not using Microsoft Entra ID, then you will need to instead follow [installation guide for Volume License edition of MIM](install-mim-service-portal.md).
+- Ensure you have Microsoft Entra user credentials with enough permissions to validate that your tenant subscription includes Microsoft Entra ID P1 or P2 and can create app registrations.
+- If you plan to use Office 365 application context authentication, you will need to run a script to register the MIM Service application in Microsoft Entra ID and grant the MIM Service permissions to access a MIM Service mailbox in Office 365. Save the script output as you will need the resulting application ID and secret later during the installation.
 
 ## Deployment options
 
@@ -69,12 +68,14 @@ Available deployment options:
 
 Starting from build 4.6.421.0, in addition to basic authentication, the MIM Service supports application context authentication to Office 365 mailboxes. End of support for basic authentication was announced on 20 September 2019, therefore it is recommended to use application context authentication for sending notifications and collecting approval responses.
 
-Application context authentication scenario requires you to register an application in Azure AD, create a client secret to be used instead of a password and grant this application permission to access the MIM Service mailbox. The MIM Service will be using this application ID and this secret to access its mailbox in Office 365. You can register your application in Azure AD either using a script (recommended) or manually.
+Application context authentication scenario requires you to register an application in Microsoft Entra ID, create a client secret to be used instead of a password and grant this application permission to access the MIM Service mailbox. The MIM Service will be using this application ID and this secret to access its mailbox in Office 365. You can register your application in Microsoft Entra ID either using a script (recommended) or manually.
 
-### Registering application using Azure AD portal
+<a name='registering-application-using-azure-ad-portal'></a>
 
-1. Sign in to [Azure AD portal](https://portal.azure.com) with Global Administrator role.
-1. Navigate to Azure AD blade and copy your Tenant ID from *Overview* section and save it.
+### Registering application using Microsoft Entra admin center
+
+1. Sign in to [Microsoft Entra admin center](https://portal.azure.com) with Global Administrator role.
+1. Navigate to Microsoft Entra blade and copy your Tenant ID from *Overview* section and save it.
 1. Navigate to *App registrations* section and click **New Registration** button.
 1. Give your application a name, for example, *MIM Service mailbox client access*, and click **Register**.
 1. After your application is registered, copy the *Application (client) ID* value and save it.
@@ -104,7 +105,7 @@ From a PowerShell window start Create-MIMMailboxApp.ps1 with -MailboxAccountEmai
 ./Create-MIMMailboxApp.ps1 -MailboxAccountEmail <MIM Service email>
 ```
 
-When asked for credentials, provide your Azure AD Global Administrator credentials to register an application in Azure.
+When asked for credentials, provide your Microsoft Entra Global Administrator credentials to register an application in Azure.
 
 Once the application is registered, another popup will ask for Exchange Online Administrator credentials to create an application access policy.
 
@@ -112,7 +113,7 @@ After successful application registration your script output should look like th
 
 ![PowerShell script output image](media/install-mim-service-portal-azure-ad-premium/powershell-script-output.png)
 
-There is a 30-second delay after the application is registered and a browser window is opened to avoid replication issues. Provide your Azure AD Tenant Administrator credentials and accept a request to grant your application access to the MIM Service mailbox. The popup window should look like this:
+There is a 30-second delay after the application is registered and a browser window is opened to avoid replication issues. Provide your Microsoft Entra tenant administrator credentials and accept a request to grant your application access to the MIM Service mailbox. The popup window should look like this:
 
 ![Admin consent screen image](media/install-mim-service-portal-azure-ad-premium/admin-consent-screen.png)
 
@@ -127,10 +128,13 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 ### Common deployment steps
 
 1. Create a temporary directory to keep installer logs in, for example, c:\miminstall.
-1. Start elevated command prompt, navigate to MIM Service installer binaries folder and run
+
+1. Start elevated command prompt, navigate to MIM Service installer binaries folder and run:
+
    ```cmd
    msiexec /i "Service and Portal.msi" /lvxi* c:\miminstall\log.txt
    ```
+
    In the welcome screen, click **Next**.
 
    ![Welcome screen image](media/install-mim-service-portal-azure-ad-premium/welcome-screen.png)
@@ -143,11 +147,11 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![Azure instance selection screen image](media/install-mim-service-portal-azure-ad-premium/azure-ad-instance-selection.png)
 
-   Organizations which are not using a national or government cloud should select the global instance, Azure AD.
+   Organizations which are not using a national or government cloud should select the global instance, Microsoft Entra ID.
 
    ![Azure instance selected screen image](media/install-mim-service-portal-azure-ad-premium/azure-ad-instance-selected.png)
 
-1. After selecting the appropriate cloud, the installer will ask you to authenticate to that tenant. In the popup window, provide Azure AD user credentials of a user in that tenant to validate your tenant subscription level. Type your Azure AD username and click **Next**.
+1. After selecting the appropriate cloud, the installer will ask you to authenticate to that tenant. In the popup window, provide Microsoft Entra user credentials of a user in that tenant to validate your tenant subscription level. Type your Microsoft Entra username and click **Next**.
 
    ![Sign-in popup window account name image](media/install-mim-service-portal-azure-ad-premium/sign-in-popup-window-name.png)
 
@@ -155,7 +159,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![Sign-in popup window password image](media/install-mim-service-portal-azure-ad-premium/sign-in-popup-window-password.png)
 
-   If the installer is unable to locate a subscription to Azure AD Premium P1 or another subscription, which includes Azure AD Premium, you will see a popup error. Check that the username is for the correct tenant and look at the installer log file for more information.
+   If the installer is unable to locate a subscription to Microsoft Entra ID P1 or another subscription, which includes Microsoft Entra ID P1 or P2, you will see a popup error. Check that the username is for the correct tenant and look at the installer log file for more information.
 
 1. Once the license check is complete, select MIM Service and Portal components to install and click **Next**.
 
@@ -214,7 +218,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![Certificate selection screen image - option B](media/install-mim-service-portal-azure-ad-premium/certificate-selection.png)
 
-1. Type MIM Service account name and password, domain name, MIM Service’s Office 365 mailbox SMTP address and MIM Service mailbox Azure AD password. Click **Next**.
+1. Type MIM Service account name and password, domain name, MIM Service’s Office 365 mailbox SMTP address and MIM Service mailbox Microsoft Entra password. Click **Next**.
 
     ![Configure the MIM service account image - option B](media/install-mim-service-portal-azure-ad-premium/option-b-account-details.png)
 
@@ -228,9 +232,9 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![SCSM server name screen image - option C](media/install-mim-service-portal-azure-ad-premium/system-center-service-manager-details.png)
 
-1. Provide the Azure AD Application ID, Tenant ID and Client Secret, that were generated by a script earlier. Click **Next**.
+1. Provide the Microsoft Entra Application ID, Tenant ID and Client Secret, that were generated by a script earlier. Click **Next**.
 
-   ![Azure AD Application ID, Tenant ID and client secret screen image - option C](media/install-mim-service-portal-azure-ad-premium/option-c-application-details.png)
+   ![Microsoft Entra Application ID, Tenant ID, and client secret screen image - option C](media/install-mim-service-portal-azure-ad-premium/option-c-application-details.png)
 
    If installer fails to validate the Application ID or Tenant ID, an error appears:
 
@@ -316,7 +320,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![Certificate selection screen image - option G](media/install-mim-service-portal-azure-ad-premium/certificate-selection.png)
 
-1. Type MIM Service group-managed service account name, domain name, MIM Service’s Office 365 mailbox SMTP address and the MIM Service account’s Azure AD password. Click **Next**.
+1. Type MIM Service group-managed service account name, domain name, MIM Service’s Office 365 mailbox SMTP address and the MIM Service account’s Microsoft Entra password. Click **Next**.
 
     ![Configure the MIM service account image - option G](media/install-mim-service-portal-azure-ad-premium/option-g-account-details.png)
 
@@ -330,9 +334,9 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![SCSM server name screen image](media/install-mim-service-portal-azure-ad-premium/system-center-service-manager-details.png)
 
-1. Provide the Azure AD Application ID, Tenant ID and Client Secret, that were generated by a script earlier. Click **Next**.
+1. Provide the Microsoft Entra Application ID, Tenant ID and Client Secret, that were generated by a script earlier. Click **Next**.
 
-   ![Azure AD Application ID, Tenant ID and client secret screen image - option H](media/install-mim-service-portal-azure-ad-premium/option-c-application-details.png)
+   ![Microsoft Entra Application ID, Tenant ID and client secret screen image - option H](media/install-mim-service-portal-azure-ad-premium/option-c-application-details.png)
 
    If installer fails to validate the Application ID or Tenant ID, an error appears:
 
@@ -390,7 +394,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
     ![SharePoint Timer warning message screen image](media/install-mim-service-portal-azure-ad-premium/sharepoint-timer-warning.png)
 
-1. If installing Self-Service Password Registration website (not needed if you are using Azure AD for password reset), specify a URL MIM clients will be redirected to after logon. Click **Next**.
+1. If installing Self-Service Password Registration website (not needed if you are using Microsoft Entra ID for password reset), specify a URL MIM clients will be redirected to after logon. Click **Next**.
 
     ![Self-Service Password Registration URL screen image](media/install-mim-service-portal-azure-ad-premium/registration-portal-url.png)
 
@@ -398,7 +402,7 @@ Copy ApplicationId, TenantId, and ClientSecret values as they will be needed by 
 
    ![Firewall configuration screen image](media/install-mim-service-portal-azure-ad-premium/firewall-configuration.png)
 
-1. If installing Self-Service Password Registration website (not needed if you are using Azure AD for password reset), set the application pool account name and its password, the host name and the port for the website. Enable the *Open port in firewall* option if needed. Click **Next**.
+1. If installing Self-Service Password Registration website (not needed if you are using Microsoft Entra ID for password reset), set the application pool account name and its password, the host name and the port for the website. Enable the *Open port in firewall* option if needed. Click **Next**.
 
    ![Password registration portal configuration screen image](media/install-mim-service-portal-azure-ad-premium/password-registration-portal-details.png)
 

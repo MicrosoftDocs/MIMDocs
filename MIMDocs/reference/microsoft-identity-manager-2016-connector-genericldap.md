@@ -1,5 +1,5 @@
 ---
-title: Generic LDAP Connector | Microsoft Docs
+title: Generic LDAP Connector
 description: This article describes how to configure Microsoft's Generic LDAP Connector.
 services: active-directory
 documentationcenter: ''
@@ -10,10 +10,9 @@ ms.assetid: 984beeb0-4d91-4908-ad81-c19797c4891b
 ms.reviewer: davidste
 ms.workload: identity
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
-ms.prod: microsoft-identity-manager
-ms.date: 01/27/2023
+ms.service: microsoft-identity-manager
+ms.date: 09/14/2023
 ms.author: billmath
 ---
 
@@ -21,16 +20,15 @@ ms.author: billmath
 This article describes the Generic LDAP Connector. The article applies to the following products:
 
 * Microsoft Identity Manager 2016 (MIM2016)
-* Forefront Identity Manager 2010 R2 (FIM2010R2)
-  * Must use hotfix 4.1.3671.0 or later.
+* [Microsoft Entra ID](/entra/identity/app-provisioning/on-premises-ldap-connector-configure)
 
-For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
+For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 When referring to IETF RFCs, this document is using the format (RFC [RFC number]/[section in RFC document]), for example (RFC 4512/4.3).
 You can find more information at [https://tools.ietf.org/](https://tools.ietf.org/). In the left panel, enter an RFC number in the **Doc fetch** dialog box and test it to make sure it is valid.
 
 > [!NOTE]
-> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into an LDAP v3 server, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-ldap-connector-configure).
+> [Microsoft Entra ID](/entra/identity/app-provisioning/user-provisioning) now provides a lightweight agent based solution for provisioning users into an LDAPv3 server, without needing a MIM sync deployment. We recommend using it for outbound user provisioning. [Learn more](/entra/identity/app-provisioning/on-premises-ldap-connector-configure).
 
 ## Overview of the Generic LDAP Connector
 The Generic LDAP Connector enables you to integrate the synchronization service with an LDAP v3 server.
@@ -39,11 +37,11 @@ Certain operations and schema elements, such as those needed to perform delta im
 
 For connecting to the directories, we test using the root/admin account.  To use a different account to apply more granular permissions, you may need to review with your LDAP directory team.
 
-From a high-level perspective, the following features are supported by the current release of the connector:
+The current release of the connector supports these features:
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all LDAP v3 servers (RFC 4510 compliant). It has been tested with the following: <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Microsoft Active Directory Global Catalog (AD GC)</li><li>389 Directory Server</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (previously Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>For most scenarios, you must use the built-in Active Directory Connector instead as some features may not work</li></ul>**Notable known directories or features not supported:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Password Change Notification Service(PCNS)</li><li>Exchange provisioning</li><li>Delete of Active Sync Devices</li><li>Support for nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
+| Connected data source |The Connector is supported with all LDAP v3 servers (RFC 4510 compliant), except where called out as unsupported. It has been tested with these directory servers: <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Microsoft Active Directory Global Catalog (AD GC)</li><li>389 Directory Server</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (previously Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>For most scenarios, you must use the built-in Active Directory Connector instead as some features may not work</li></ul>**Notable known directories or features not supported:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Password Change Notification Service(PCNS)</li><li>Exchange provisioning</li><li>Delete of Active Sync Devices</li><li>Support for nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Group Management</li><li>Password Management</li> |
 | Operations |The following operations are supported on all LDAP directories: <li>Full Import</li><li>Export</li>The following operations are only supported on specified directories:<li>Delta import</li><li>Set Password, Change Password</li> |
 | Schema |<li>Schema is detected from the LDAP schema (RFC3673 and RFC4512/4.2)</li><li>Supports structural classes, aux classes, and extensibleObject object class (RFC4512/4.3)</li> |
@@ -118,7 +116,7 @@ The following LDAP controls/features must be available on the LDAP server for th
 
 The True/False filter is frequently not reported as supported by LDAP directories and might show up on the **Global Page** under **Mandatory Features Not Found**. It is used to create **OR** filters in LDAP queries, for example when importing multiple object types. If you can import more than one object type, then your LDAP server supports this feature.
 
-If you use a directory where a unique identifier is the anchor the following must also be available (For more information, see the [Configure Anchors](#configure-anchors) section):  
+If you use a directory where a unique identifier is the anchor the following feature must also be available (For more information, see the [Configure Anchors](#configure-anchors) section):  
 `1.3.6.1.4.1.4203.1.5.1` All operational attributes
 
 If the directory has more objects than what can fit in one call to the directory, then it is recommended to use paging. For paging to work, you need one of the following options:
@@ -166,11 +164,11 @@ On the Connectivity page, you must specify the Host, Port, and Binding informati
 * For other bindings, enter information either in username / password or select a certificate.
 * If you are using Kerberos to authenticate, then also provide the Realm/Domain of the user.
 
-The **attribute aliases** text box is used for attributes defined in the schema with RFC4522 syntax. These attributes cannot be detected during schema detection and the Connector needs help to identify those attributes. For example the following must be entered in the attribute aliases box to correctly identify the userCertificate attribute as a binary attribute:
+The **attribute aliases** text box is used for attributes defined in the schema with RFC4522 syntax. These attributes cannot be detected during schema detection and the Connector needs those attributes to be configured separately. For example the following string must be entered in the attribute aliases box to correctly identify the userCertificate attribute as a binary attribute:
 
 `userCertificate;binary`
 
-The following is an example for how this configuration could look like:
+The following table is an example for how this configuration could look like:
 
 ![MIM Sync connector configuration Connectivity page with attributes](./media/microsoft-identity-manager-2016-connector-genericldap/connectivityattributes.png)
 
@@ -195,7 +193,7 @@ The **supported controls** checkboxes control the behavior for certain operation
 
 The change log DN is the naming context used by the delta change log, for example **cn=changelog**. This value must be specified to be able to do delta import.
 
-The following is a list of default change log DNs:
+The following table is a list of default change log DNs:
 
 | Directory | Delta change log |
 | --- | --- |
@@ -240,12 +238,12 @@ When performing a search this is done across all containers in the partition. In
 ![Search only selected containers](./media/microsoft-identity-manager-2016-connector-genericldap/partitions-only-selected-containers.png)
 
 ### Configure Anchors
-This page always have a preconfigured value and cannot be changed. If the server vendor has been identified, then the anchor might be populated with an immutable attribute, for example the GUID for an object. If it has not been detected or is known to not have an immutable attribute, then the connector uses dn (distinguished name) as the anchor.
+This page always has a preconfigured value and cannot be changed. If the server vendor has been identified, then the anchor might be populated with an immutable attribute, for example the GUID for an object. If it has not been detected or is known to not have an immutable attribute, then the connector uses dn (distinguished name) as the anchor.
 
 ![MIM Sync connector configuration anchors page](./media/microsoft-identity-manager-2016-connector-genericldap/anchors.png)
 
 
-The following is a list of LDAP servers and the anchor being used:
+The following table is a list of LDAP servers and the anchor being used:
 
 | Directory | Anchor attribute |
 | --- | --- |
@@ -272,4 +270,4 @@ For Novell eDirectory, the delta import isn't detecting any object deletes. For 
 For directories with a delta change log that is based on date/time, it is highly recommended to run a full import at periodic times. This process allows the sync engine to find and dissimilarities between the LDAP server and what is currently in the connector space.
 
 ## Troubleshooting
-* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
+* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](/archive/technet-wiki/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors).

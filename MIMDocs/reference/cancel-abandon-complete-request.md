@@ -7,9 +7,9 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: e29e0068-7602-455e-8a3a-690da9ca8eb5
 

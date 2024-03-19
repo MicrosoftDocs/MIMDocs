@@ -1,6 +1,6 @@
 ---
 title: "The Microsoft Identity Manager connector for Microsoft Graph | Microsoft Docs"
-description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Azure AD directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
+description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Microsoft Entra directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
 author: EugeneSergeev
 ms.author: esergeev
@@ -8,7 +8,8 @@ reviewer: markwahl-msft
 manager: amycolannino
 ms.date: 5/24/2021
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.custom: has-azure-ad-ps-ref
+ms.service: microsoft-identity-manager
 
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ---
@@ -19,7 +20,7 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 
 
 The [Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
- enables additional integration scenarios for Azure AD Premium customers.  It surfaces in the MIM sync metaverse additional objects obtained from the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta.
+ enables additional integration scenarios for Microsoft Entra ID P1 or P2 customers.  It surfaces in the MIM sync metaverse additional objects obtained from the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 and beta.
 
 ## Scenarios covered
 
@@ -28,24 +29,26 @@ The [Microsoft Identity Manager connector for Microsoft Graph](https://go.micros
 
 
 The initial scenario for the Microsoft Identity Manager connector for Microsoft Graph is as a connector to help automate AD DS account lifecycle
-management for external users. In this scenario, an organization is synchronizing employees to Azure AD from AD DS using Azure AD Connect, and has also invited guests into their Azure AD directory. Inviting a guest results in an external user object being in that organization's Azure AD directory, which is not in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Azure AD application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application)
-or other gateway mechanisms. The Azure AD application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
+management for external users. In this scenario, an organization is synchronizing employees to Microsoft Entra ID from AD DS using Microsoft Entra Connect, and has also invited guests into their Microsoft Entra directory. Inviting a guest results in an external user object being in that organization's Microsoft Entra directory, which isn't in that organization's AD DS. Then the organization wishes to give those guests access to on-premises Windows Integrated Authentication or Kerberos-based applications, via the [Microsoft Entra application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application)
+or other gateway mechanisms. The Microsoft Entra application proxy requires each user to have their own AD DS account, for identification and delegation purposes.  
 
-To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Azure AD business-to-business (B2B) collaboration with MIM 2016 and the Azure AD Application Proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
+To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Microsoft Entra business-to-business (B2B) collaboration with MIM 2016 and the Microsoft Entra application proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
 
 ### Other identity management scenarios
 
 
-The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Azure AD, beyond user and group synchronization to Azure AD. When evaluating potential scenarios, please keep in mind: this connector cannot be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with an Azure AD Connect deployment.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Azure AD, by synchronizing users and groups from on-premises directories to Azure AD.  Azure AD Connect has many more synchronization features and enables scenarios such as password and device writeback, which are not possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it is excluded from Azure AD Connect attempting to match those objects back to the Azure AD directory.  Nor can this connector be used to make changes to Azure AD objects, which were created by Azure AD Connect.
+The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Microsoft Entra ID, beyond user and group synchronization to Microsoft Entra ID. When evaluating potential scenarios, please keep in mind: this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with a Microsoft Entra Connect deployment.  [Microsoft Entra Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Microsoft Entra ID, by synchronizing users and groups from on-premises directories to Microsoft Entra ID.  Microsoft Entra Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Microsoft Entra Connect attempting to match those objects back to the Microsoft Entra directory.  Nor can this connector be used to make changes to Microsoft Entra objects, which were created by Microsoft Entra Connect.
 
 
 
 ## Preparing to use the Connector for Microsoft Graph
 
-### Authorizing the connector to retrieve or manage objects in your Azure AD directory
+<a name='authorizing-the-connector-to-retrieve-or-manage-objects-in-your-azure-ad-directory'></a>
+
+### Authorizing the connector to retrieve or manage objects in your Microsoft Entra directory
 
 
-1.  The connector requires a Web app / API application to be created in Azure AD, so that it can be authorized with appropriate permissions to operate on Azure AD objects through Microsoft Graph.
+1.  The connector requires a Web app / API application to be created in Microsoft Entra ID, so that it can be authorized with appropriate permissions to operate on Microsoft Entra objects through Microsoft Graph.
 
     ![Image of new application registration button](media/microsoft-identity-manager-2016-ma-graph/new-application-registration-button.png)
     ![Image of application registration](media/microsoft-identity-manager-2016-ma-graph/new-application-registration.png)
@@ -58,7 +61,7 @@ The connector can be used for other specific identity management scenarios invol
 
     Picture 2. Application ID
 
-3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value will not be available to view again after leaving the page.
+3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value won't be available to view again after leaving the page.
 
     ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
@@ -116,7 +119,7 @@ Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 ![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 
-10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Azure AD to avoid running import in parallel for the same application.
+10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID to avoid running import in parallel for the same application.
 
 
 ![Connector settings image with connectivity details](media/microsoft-identity-manager-2016-ma-graph/connector-settings-connectivity.png)
@@ -126,9 +129,9 @@ Picture 5. Connectivity page
 
 The connectivity page (Picture 5) contains the Graph API version that is used
 and tenant name. The Client ID and Client Secret represent the Application ID and
-Key value of the application that was previously created in Azure AD.
+Key value of the application that was previously created in Microsoft Entra ID.
 
-The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you will need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
+The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you'll need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
 11. Make any necessary changes on the Global Parameters page:
 
@@ -179,7 +182,7 @@ The list of attribute types that are supported:
 
 Multivalued attributes (Collection) are also supported for any of a type from the list above.
 
-The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename is not needed, because Graph API does not allow an object to change its `id` attribute.
+The connector uses the ‘`id`’ attribute for anchor and DN for all objects.  Therefore, rename isn't needed, because Graph API doesn't allow an object to change its `id` attribute.
 
 
 ## Access token lifetime
@@ -189,7 +192,7 @@ A Graph application requires an access token for accessing the Graph API. A conn
 will request a new access token for each import iteration (import iteration depends on
 page size). For example:
 
--   Azure AD contains 10000 objects
+-   Microsoft Entra ID contains 10000 objects
 
 -   Page size configured in connector is 5000
 
@@ -219,14 +222,14 @@ Make sure that the attribute used in filter expression is selected in connector 
 For more information about *$filter* query parameter usage, see this article: [Use query parameters to customize responses](/graph/query-parameters#filter-parameter).
 
 >[!NOTE]
->Delta query endpoint currently does not offer filtering capabilities, therefore usage of filters is limited to full import only. You will get an error trying to start delta import run with query filters enabled.
+>Delta query endpoint currently doesn't offer filtering capabilities, therefore usage of filters is limited to full import only. you'll get an error trying to start delta import run with query filters enabled.
 
 ## Troubleshooting
 
 
 **Enable logs**
 
-If there are any issues in Graph, then logs could be used to localize the problem. So, traces could be enabled in [the same way like for Generic connectors](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Or just by adding the following to `miiserver.exe.config` (inside `system.diagnostics/sources` section):
+If there are any issues in Graph, then logs could be used to localize the problem. So, traces could be enabled in [the same way like for Generic connectors](/archive/technet-wiki/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors). Or just by adding the following to `miiserver.exe.config` (inside `system.diagnostics/sources` section):
 
 ```XML
 <source name="ConnectorsLog" switchValue="Verbose">
@@ -235,7 +238,7 @@ If there are any issues in Graph, then logs could be used to localize the proble
 type="System.Diagnostics.EventLogTraceListener, System, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=b77a5c561934e089"
 name="ConnectorsLogListener" traceOutputOptions="LogicalOperationStack,
-DateTime, Timestamp, Call stack" />
+DateTime, Timestamp, Callstack" />
 <remove name="Default" />
 </listeners>
 </source>

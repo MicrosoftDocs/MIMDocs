@@ -9,7 +9,7 @@ ms.author: esergeev
 manager: amycolannino
 ms.date: 09/16/2019
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 

@@ -7,9 +7,9 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 09/14/2023
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 
@@ -35,7 +35,7 @@ Privileged Access Management accomplishes two goals:
 - Isolate the use of privileged accounts to reduce the risk of those credentials being stolen.
 
 > [!NOTE]
-> MIM PAM is distinct from [Azure Active Directory Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM). MIM PAM is intended for isolated on-premises AD environments. Azure AD PIM is a service in Azure AD that enables you to manage, control, and monitor access to resources in Azure AD, Azure, and other Microsoft Online Services such as Microsoft 365 or Microsoft Intune. For guidance on on-premises Internet-connected environments and hybrid environments, see [securing privileged access](/security/compass/overview) for more information.
+> The PAM approach provided by MIM PAM is not recommended for new deployments in Internet-connected environments. MIM PAM is intended to be used in a custom architecture for isolated AD environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. MIM PAM is distinct from [Microsoft Entra Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM). Microsoft Entra PIM is a service that enables you to manage, control, and monitor access to resources in Microsoft Entra ID, Azure, and other Microsoft Online Services such as Microsoft 365 or Microsoft Intune. For guidance on on-premises Internet-connected environments and hybrid environments, see [securing privileged access](/security/compass/overview) for more information.
 
 ## What problems does MIM PAM help solve?
 

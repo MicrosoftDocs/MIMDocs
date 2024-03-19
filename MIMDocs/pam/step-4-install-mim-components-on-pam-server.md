@@ -7,9 +7,9 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 09/14/2023
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 
@@ -110,7 +110,7 @@ If you installed the MIM Portal, skip to the next section.
 
 2. Launch PowerShell, and type `add-pssnapin fimautomation` to load the MIM Service configuration PowerShell cmdlets.
 
-3. Download the script [How to Use PowerShell to Enable an MPR](https://social.technet.microsoft.com/wiki/contents/articles/2080.how-to-use-powershell-to-enable-an-mpr.aspx) and save it locally.
+3. Download the script [How to Use PowerShell to Enable an MPR](/archive/technet-wiki/2080.how-to-use-powershell-to-enable-an-mpr) and save it locally.
 
 4. Use the script to enable the MPR named **User management: Users can read attributes of their own**.  When complete, it will display the message **MPR enabled successfully**.
 

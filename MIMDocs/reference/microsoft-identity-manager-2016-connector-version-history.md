@@ -28,6 +28,7 @@ Connectors link specific connected data sources to Microsoft Identity Manager (M
 
 This document lists all versions of the released generic connectors package for MIM. For a list of connectors that are supported with MIM, see [supported connectors in MIM 2016 SP2](../supported-management-agents.md).
 
+
 Related links:
 
 * [Download Latest Connectors](https://go.microsoft.com/fwlink/?LinkId=717495)
@@ -42,7 +43,6 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
-
 ## 1.1.2031.0 (March 2024)
 
 ### **New Connector**  
@@ -56,9 +56,8 @@ Related links:
   * CSV Field Data Types Supported - The connector supports the following attribute data types: binaries (as base64 strings), booleans (as True/False), Integers, strings and multivalued strings, and references.
   * Support for CSV field delimitation, text qualification, and multivalued string and reference attributes.
 
-
-
 ## 1.1.2025.0 (August 2023)
+
 
 ### Enhancements
 
@@ -69,7 +68,7 @@ Related links:
   * Improved handling of duplicate entries in OpenLDAP access log.
 
 * Generic SQL Connector
-  * Fixed a issue with the Member Type column not populating on export.
+  * Fixed an issue with the Member Type column not populating on export.
   * Improved error handling for MySQL table-based import and export strategies.
 
 ## 1.1.2005.0 (May 2022)
@@ -126,8 +125,8 @@ Related links:
 
 ### Updates
 
-* Forefront Identity Manager Connector for Microsoft Microsoft Entra ID
-  * Existing deployments should migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md).
+* Forefront Identity Manager Connector for Microsoft Azure Active Directory deprecated
+  * Existing deployments should migrate to [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Azure AD Connect Sync, or the [Microsoft Graph Connector](../microsoft-identity-manager-2016-connector-graph.md).
 
 ## 1.1.1431.0 (March 2021)
 
@@ -382,7 +381,7 @@ Related links:
   * The SQL query, which gets objects for the operation of Delta Import,  if 'Delta Strategy' is 'Change Tracking' was fixed. In this implementation known limitation:  Delta Import with 'Change Tracking' mode doesn't track changes in multi-valued attributes
   * System.ArgumentException handling when implemented OUTPUT parameters by SP
   * Incorrect query to make the operation of export into field of the *varbinary(max)* type
-    * Issue with parameterList variable was initialized twice (in the functions ExportAttributes and GetQueryForMultiValue)
+  * Issue with parameterList variable was initialized twice (in the functions ExportAttributes and GetQueryForMultiValue)
 
 ## 1.1.649.0 (AADConnect 1.1.649.0)
 

@@ -4,12 +4,12 @@
 title: Configure SharePoint for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Install and configure SharePoint Foundation so that it can host the MIM Portal page.
 keywords:
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 01/27/2023
+author: EugeneSergeev
+ms.author: esergeev
+manager: benyim
+ms.date: 10/23/2023
 ms.topic: conceptual
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 
@@ -138,6 +138,17 @@ Follow the steps lined out in the **SharePoint Products Configuration Wizard** t
    $contentService.Update();
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
+
+    > [!IMPORTANT]
+    > Applicable to MIM builds prior to 4.6.673.0 only. If deploying on SharePoint 2019 or 2016 with September 2023 updates or later, the following commands must also be manually executed from the SharePoint Management Shell.
+
+    ```PowerShell
+    $f = get-spfarm
+    $f.AddGenericAllowedListValue("WebPartSupportedBoundPropertyNames","data-title-text")
+    $f.AddGenericAllowedListValue("WebPartSupportedBoundPropertyNames","data-link-to-tab-text")
+    $f.update() 
+    iisreset
+    ```
 
 4. On your identity management server, open a new web browser tab, navigate to `http://mim.contoso.com/` and login as *contoso\miminstall*.  An empty SharePoint site named *MIM Portal* will be shown.
 

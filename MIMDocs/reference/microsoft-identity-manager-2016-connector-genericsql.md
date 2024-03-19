@@ -1,5 +1,5 @@
 ---
-title: Generic SQL Connector | Microsoft Docs
+title: Generic SQL Connector
 description: This article describes how to configure Microsoft's Generic SQL Connector.
 services: active-directory
 documentationcenter: ''
@@ -10,26 +10,24 @@ editor: ''
 ms.assetid: fd8ccef3-6605-47ba-9219-e0c74ffc0ec9
 ms.workload: identity
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
-ms.prod: microsoft-identity-manager
-ms.date: 01/27/2023
-ms.author: billmath
+ms.service: microsoft-identity-manager
+ms.date: 2/13/2024
+ms.author: esergeev
 
 ---
 # Generic SQL Connector technical reference
 This article describes the Generic SQL Connector. The article applies to the following products:
 
 * Microsoft Identity Manager 2016 (MIM2016)
-* Forefront Identity Manager 2010 R2 (FIM2010R2)
-  * Must use hotfix 4.1.3671.0 or later.
+* [Microsoft Entra ID](/entra/identity/app-provisioning/on-premises-sql-connector-configure)
 
-For MIM2016 and FIM2010R2, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
+For MIM2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 To see this Connector in action, see the [Generic SQL Connector step-by-step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) article.
 
 > [!NOTE]
-> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into a SQL database, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> [Microsoft Entra ID](/entra/identity/app-provisioning/user-provisioning) now provides a lightweight agent based solution for provisioning users into a SQL database, without needing a MIM sync deployment. We recommend using it for outbound user provisioning. [Learn more](/entra/identity/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic SQL Connector
 The Generic SQL Connector enables you to integrate the synchronization service with a database system that offers ODBC connectivity.  
@@ -38,13 +36,10 @@ From a high-level perspective, the following features are supported by the curre
 
 | Feature | Support |
 | --- | --- |
-| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 10.x</li><li>IBM DB2 9.x</li><li>Oracle 10 & 11g</li><li>Oracle 12c and 18c</li><li>MySQL 5.x</li> |
+| Connected data source |The Connector is supported with all 64-bit ODBC drivers*. It has been tested with the following: <li>Microsoft SQL Server & SQL Azure</li><li>IBM DB2 11.5.8</li><li>Oracle 11g</li><li>Oracle 12c and 18c</li><li>Oracle 21c and 23c</li><li>MySQL 5.x</li><li>MySQL 8.x</li><li>Postgres</li> |
 | Scenarios |<li>Object Lifecycle Management</li><li>Password Management</li> |
 | Operations |<li>Full Import and Delta Import, Export</li><li>For Export: Add, Delete, Update, and Replace</li><li>Set Password, Change Password</li> |
 | Schema |<li>Dynamic discovery of objects and attributes</li> |
-
-> [!NOTE]
-> *Connections to data sources not listed above, e.g. PostgreSQL, are currently limited to query-based import and export strategies.
 
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
@@ -52,7 +47,8 @@ Before you use the Connector, make sure you have the following on the synchroniz
 * Microsoft .NET 4.5.2 Framework or later
 * 64-bit ODBC client drivers
 * If you are using the connector to communicate with Oracle 12c, this requires Oracle Instant Client 12.2.0.1 or newer with the ODBC package.
-* If you are using the connector to communicate with Oracle 18c, this requires Oracle Instant Client 18.3.0.0 or newer with ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters.
+* If you are using the connector to communicate with Oracle 18c-23c, this requires Oracle Instant Client 18-23 or newer with the ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters, e.g. NLS_LANG=AMERICAN_AMERICA.AL32UTF8.
+* This connector uses SQL prepared statements and multiple statements per transaction. Some RDBM systems may have issues in their ODBC drivers related to transaction handling, server-side prepared SQL statements and multiple statements within the same transaction. Please configure your DSN connection options accordingly to ensure those statements are correctly sent to your database., For example, MySQL ODBC Driver version 8.0.32 needs options NO_SSPS=1 and MULTI_STATEMENTS=1. Other options like 'autocommit' or 'commit on successful operations only' may affect how batch exports are handled; consult your database administrator for details. To troubleshoot issues during export, set export batch size to 1 and enable connector verbose logging.
 
 Deploying this connector may require changes to the configuration of the database as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party database server in a production environment, we recommend customers work with their database vendor, or a deployment partner for help, guidance, and support for this integration.
 
@@ -86,7 +82,7 @@ The database should support one of these authentication methods:
 
 * **Windows authentication**: The authenticating database uses the Windows credentials to verify the user. The user name/password specified is used to authenticate with the database. This account needs permissions to the database.
 * **SQL authentication**: The authenticating database uses the user name/password defined one the Connectivity screen to connect to the database. If you store the user name/pasword in the DSN file, the credentials provided on the Connectivity screen have precedence.
-* **Azure SQL Database authentication**: For more information, see [Connect to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication-configure).
+* **Azure SQL Database authentication**: For more information, see [Connect to SQL Database via Microsoft Entra authentication](/azure/sql-database/sql-database-aad-authentication-configure).
 
 **DN is Anchor**: If you select this option, the DN is also used as the anchor attribute. It can be used for a simple implementation but also has the following limitation:
 
@@ -344,4 +340,4 @@ insert into ChangeLog VALUES (@BUSINESSENTITYID)
 ```
 
 ## Troubleshooting
-* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
+* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](/archive/technet-wiki/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors).

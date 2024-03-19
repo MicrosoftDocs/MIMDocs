@@ -5,9 +5,9 @@ description: Enable MIM service dynamic logging without having to restart the ma
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 09/14/2023
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 ---
 
 

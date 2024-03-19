@@ -10,10 +10,9 @@ editor: ''
 ms.assetid: e07fd469-d862-470f-a3c6-3ed2a8d745bf
 ms.workload: identity
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
-ms.prod: microsoft-identity-manager
-ms.date: 01/27/2023
+ms.service: microsoft-identity-manager
+ms.date: 09/14/2023
 ms.author: billmath
 
 ---
@@ -492,4 +491,4 @@ There are several ways in Domino to extend the schema so it appears as a custom 
 8. An ExtensibleObjectClass is created for respective default object class with extended attributes.
 
 ## Troubleshooting
-* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
+* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](/archive/technet-wiki/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors).

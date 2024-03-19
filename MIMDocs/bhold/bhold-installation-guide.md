@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: BHOLD SP1 Installation | Microsoft Docs
+title: BHOLD SP1 Installation
 description: BHOLD SP1 installation documentation
 keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 09/14/2023
 ms.topic: article
-ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
 
 ms.assetid:
 
@@ -28,7 +28,7 @@ Microsoft® BHOLD Suite  is a collection of applications that, when used with Mi
 > [!NOTE]
 > **Applies To**: Microsoft Identity Manager 2016 SP2 or later.  The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules will be removed from BHOLD, as these modules have a dependency on Microsoft Silverlight, which will reach the [end of support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) on October 12, 2021.
 
-BHOLD is not recommended for new deployments.  Azure AD now provides [access reviews](/azure/active-directory/governance/access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
+BHOLD is not recommended for new deployments. Microsoft Entra ID now provides [access reviews](/azure/active-directory/governance/access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## What this document covers
 
