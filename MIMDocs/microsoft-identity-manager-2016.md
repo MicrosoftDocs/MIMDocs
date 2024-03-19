@@ -9,17 +9,14 @@ keywords: MIM
 author: EugeneSergeev
 reviewer: markwahl-msft
 manager: benyim
-ms.date: 10/23/2023
-ms.topic: article
-ms.service: microsoft-identity-manager
-ms.tgt_pltfrm: na
-ms.workload: identity
 
 ms.assetid: b0b39631-66df-4c5f-90c9-a1774346f816
+ms.tgt_pltfrm: na
+ms.workload: identity
+ms.date: 03/16/2024
 ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
-ms.workload: identity
 ms.date: 3/16/2024
 ms.author: esergeev
 ms.reviewer: mwahl
