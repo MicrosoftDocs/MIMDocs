@@ -36,7 +36,7 @@ To see this Connector in action, see the [Generic SQL Connector step-by-step](mi
 
 The Generic CSV (GCSV) Connector lets you integrate User and Group identity data maintained in CSV files with Microsoft products, such as the Microsoft Entra Connect Provisioning Agent (ECMA2Host) and Microsoft Identity Manager 2016 (MIM2016).  
 
-It has various features, such as the ability to orchestrate the use of PowerShell to manage identity data before-or-after imports or exports operations. It offers support for multiple datatypes including binary and references, support for qualified-string values, and multivalued attribute types.  
+It has various features, such as the ability to orchestrate the use of PowerShell to manage identity data before-or-after imports or exports operations. It offers support for multiple datatypes including binary and references, support for qualified-string values, and multivalued strings.  
 
 This article describes the features and functions of the Generic CSV Connector, and how to configure it for MIM 2016.  
 
@@ -51,7 +51,7 @@ The following table lists the features that the current release of the connector
 | CSV Field Data Types Supported | The connector supports the following attribute data types: <li>Binary – (as base64 strings)</li><li>Boolean – (as True/False)</li><li>Integers</li><li>Strings / Multivalued Strings</li><li>Reference</li> |
 | CSV Field Delimitation | Support for commas (,) or any printable alphameric character to qualify the beginning and end of any string value. |
 | String Qualification Support | Support for double-quotes (“) or any printable alphameric character to qualify the beginning and end of any string value. |
-| Multivalued String & Reference Support | Support for multivalued strings and references fields |
+| Multivalued String Support | Support for multivalued strings |
 | Supported Connector Operations | The connector supports the following operations: <li>Full Import</li><li>Export</li><li>Full Export</li> |
 | Schema | <p>Schema discovery is dynamic, but requires manual configuration for completion.</p><p>Fields are dynamically identified based upon a specified delimiter (or known as a "Value Separator.") </p><p>Field datatypes are manually designated during configuration.<p> |
 
