@@ -289,53 +289,53 @@ After verifying that the settings match the provided values, click the **Next** 
 
 ### Anchors
 
-The Generic CSV Connector doesn't support the use of complex anchors nor anchor attribute configurations that differ from their corresponding CSV file’s anchor ID fields. 
+The Generic CSV Connector doesn't support the use of complex anchors or anchor attribute configurations that differ from their corresponding object's CSV file’s anchor ID field designation. This is why the anchor selection fields are locked. To make a change in anchor attribute designation, return to the [Schema 2 (Identity and Reference Field Configurations)](./microsoft-identity-manager-2016-connector-genericcsv-step-by-step.md#schema-2-identity-and-reference-field-configurations) page
 
 The following image is an example of the *Anchors* page.
 
 ![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
 
-After verifying that the settings match the provided values, click the **Next** button.
+After reviewing the default settings on the page, click the **Next** button.
 
 ### Connector Filters
 
-The GCSV Connector doesn't support the use of connector filters. 
+This guide we will not be making use of any connector filter configurations. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Connector Filters* page.
 
 ![Connector Filters page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/filters.png)
 
-After verifying that the settings match the provided values, click the **Next** button.
+After reviewing the default settings on the page, click the **Next** button.
 
 ### Join and Projection Rules
 
-The GCSV Connector doesn't support the use of join and projection rules. 
+This guide will not be making use of any join and projection rules configurations. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Join and Projection Rules* page.
 
 ![Join and Projection Rules page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/joinprojects.png)
 
-After verifying that the settings match the provided values, click the **Next** button.
+After reviewing the default settings on the page, click the **Next** button.
 
 ### Attribute Flow
 
-The GCSV Connector doesn't support the use of attribute flow configurations. 
+This guide will not be making use of any attribute flow rules configurations. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Attribute Flow* page.
 
 ![Attribute Flow page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/flows.png)
 
-After verifying that the settings match the provided values, click the **Next** button.
+After verifying that the settings match the default values, click the **Next** button.
 
 ### Deprovisioning
 
-The GCSV Connector doesn't support the use of deprovisioning configurations. 
+This guide we will not be changing the default deprovisioning settings of this connector. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Deprovisioning* page.
 
 ![Deprovisioning page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/deprovisioning.png)
 
-After verifying that the settings match the provided values, click the **Next** button.
+After verifying that the settings match the default values, click the **Next** button.
 
 ## Create a Full Import Run Profile
 
