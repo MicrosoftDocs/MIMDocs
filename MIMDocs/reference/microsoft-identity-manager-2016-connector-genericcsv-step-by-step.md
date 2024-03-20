@@ -14,7 +14,7 @@ ms.devlang: powershell
 ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.author: erkarc
 
 ---
@@ -32,6 +32,7 @@ For MIM 2016, the Connector is available as a download from the [Microsoft Downl
 On a server running the MIM Synchronization Server, create the folder ***C:\GCSV*** and copy the following CSV files found in [Appendix A – Sample CSV Files](#appendix-a---sample-csv-files) into it. Be sure to grant the MIM Synchronization Service account both read-and-write permissions to that folder.
 
 Copy the following CSV into the ***C:\GCSV\SCRIPTS*** folder:
+
 * Sample Users CSV File (*Users.csv*)
 * Sample Groups CSV File (*Groups.csv*)
 * Sample Members CSV File (*Members.csv*)
@@ -161,6 +162,7 @@ The following image is an example of the *Schema 3* (Users File Attribute Schema
 ![Schema 3 (Users File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
 In the folowing table are the individual values that should be assigned to each of the settings on this page:
+
 | Setting Name | Setting Value | Notes |
 | --- | --- | --- |
 | *DisplayName attribute type* | **String** | Examples of qualified strings are in this field | 
@@ -174,7 +176,7 @@ In the folowing table are the individual values that should be assigned to each 
 | *ProxyAddresses attribute type* | **String** | |
 | *ProxyAddresses is multivalued* | **TRUE** | Contains examples of how to delimit multivalued strings |
 | *IsActive attribute type* | **Boolean** | |	
-| *IsActive is multivalued* | **false** |	|
+| *IsActive is multivalued* | **false** | |
 | *ProfilePic attribute type* | **Binary** | |
 | *ProfilePic is multivalued* | **false** | | 
 
@@ -189,6 +191,7 @@ The following image is an example of the *Schema 4* (Groups File Attribute Schem
 ![Schema 4 (Groups File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
 In the table below are the individual values that should be assigned to each of the settings on this page:
+
 | Setting Name | Setting Value | Notes |
 | --- | --- | --- |
 | *DisplayName attribute type* | **String** | | 
@@ -339,6 +342,7 @@ After verifying that the settings match the provided values, click the **Next** 
 A Full Import Run Profile is required to import User and Group identity data from the CSV records into Connector Space objects. 
 
 The use following steps to a create a new Full Import Run Profile:
+
 * Go back to the *Synchronization Service Manager*.
 * Select the GCSV management agent.
 * Right-click on it and choose **Configure Run Profiles**.
@@ -360,8 +364,7 @@ After verifying that the settings match the provided values, click the **Next** 
 
 In the Configure Step page, select the Type: **Full Import**.
 
-The
-Connector filtering operates the same in the GCSV Connector as in any other ECMA connector. 
+The Connector filtering operates the same in the GCSV Connector as in any other ECMA connector. 
 
 The following image is an example of the *Connector Filter* page.
 
@@ -384,6 +387,7 @@ This section details the steps necessary to validate the results of the creating
 ### Run Full Import
 
 After creating the Run profile, use following steps to a run this new Full Import Run Profile:
+
 * Go back to the *Synchronization Service Manager*.
 * Select the GCSV management agent.
 * Right-click on it and choose **Run**.
@@ -400,6 +404,7 @@ The following image is an example of the results of successfully importing the c
 ### Examine the GCSV Connector Space
 
 After creating the Run profile, use following steps to a run this new Full Import Run Profile:
+
 * Go back to the *Synchronization Service Manager*.
 * Select the *GCSV Connctor* management agent.
 * Right-click on it and choose Search Connector Space.
@@ -437,7 +442,9 @@ Clicking on the button within the *Member* entry reveals how the associated reco
 The sample PowerShell scripts provided in this guide are designed to add a CSV entry to a central log to demonstrate their successful execution. 
 
 The default location for this log is C:\GCSV\PS_Run_Ledger.csv
+
 Opening the log reveals: 
+
 ```CSV
 "DateTime","Stage","Name","Type","Description"
 
@@ -452,6 +459,7 @@ These two records indicate that both the Pre-Import and Post-Import PowerShell s
 The following sections contain the CSV Files used in this guide
 
 ### Sample Users CSV File
+
 In the configuration of the conenctor, this guide assumes the file name of **USERS.CSV**.
 
 ```CSV
@@ -462,6 +470,7 @@ E003,"Perez, Juan",JP003,1,E001,SMTP:juan.perez@contoso.com;smtp:jp003@contoso.c
 ```
 
 ### Sample Groups CSV File
+
 In the configuration of the conenctor, this guide assumes the file name of **GROUPS.CSV**.
 
 ```CSV
@@ -471,6 +480,7 @@ G002,Test Group (G002),"This group is for teams D, E, and F",E003
 ```
 
 ### Sample Members CSV File
+
 In the configuration of the conenctor, this guide assumes the file name of **MEMBERS.CSV**.
 
 ```CSV
@@ -496,6 +506,7 @@ Contained within this appendix is the set of sample PowerShell scripts used in t
 >any use of ``write-host``commands in the PowerShell scripts will cause the script's exection to fail. 
 
 ### Sample Pre-Import PowerShell Script
+
 In the configuration of the connector, this guide assumes the file name of **PRE-IMPORT.PS1**.
 
 ~~~PowerShell

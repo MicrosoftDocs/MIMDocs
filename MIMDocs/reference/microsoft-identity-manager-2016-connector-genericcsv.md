@@ -14,11 +14,12 @@ ms.devlang: powershell
 ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.author: erkarc
 
 ---
 # Generic CSV Connector - Technical Reference Guide (Preview)
+
 This article describes the Generic CSV (GCSV) Connector. The article applies to the following products:
 
 * [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
@@ -69,6 +70,7 @@ Before you use the connector, make sure you have the following on the synchroniz
   * Post-Export – This script is executed after an export operation is run.
 
 #### MIM Synchronization Service Account Permissions
+
 >[!IMPORTANT]
 > The MIM 2016 Synchronization service account is the security context that performs the file operations to CSV files and runs the pre/post-processing PowerShell scripts. This service account needs Read/Write permissions for all the CSV and PowerShell files that are configured. It also needs the appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) to run any scripts that are configured.  
 
@@ -94,11 +96,12 @@ To Create a Generic CSV connector, in **Synchronization Service** select **Manag
 
 The Connectivity page contains the file locations of the Users, Groups, and Group Members CSV files. 
 
-The following image is an example of the Connectivity page. 
+The following image is an example of the *Connectivity* page. 
 
 ![Connectivity page image](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
 
-On this page is where you specify the locations of the CSV files:  
+On this page is where you specify the locations of the CSV files:
+
 * **Users File**: The fully qualified path of the CSV file that contains the user records and their attribute values. This file is required.
 * **Groups File**: The fully qualified path of the CSV file that contains the group records. This file is optional. 
 * **Members File**: The fully qualified path of the CSV file that contains group member reference records. 
@@ -112,17 +115,15 @@ The Connectivity screen is the first when you create a new Generic SQL Connector
 
 This page describes the connector’s capabilities. Connector capabilities are fixed and cannot be changed, but they are explained here to provide information on how the connector operates. 
 
-The following image is an example of the Capabilities page. 
+The following image is an example of the *Capabilities* page. 
 
 ![Capablities page image](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
 
 The following section lists of the individual configurations and their meanings:
-*	**Distinguished Name Style (LDAP)**: The GCSV Connector uses the LDAP (Lightweight Directory Access Protocol) syntax to construct the DN (distinguished name) to uniquely identify each User or Group object in its connector space. All DN values are expressed in the following format: **CN=[ANCHOR_VALUE],Object=[User|Group],O=CSV**
 
+*	**Distinguished Name Style (LDAP)**: The GCSV Connector uses the LDAP (Lightweight Directory Access Protocol) syntax to construct the DN (distinguished name) to uniquely identify each User or Group object in its connector space. All DN values are expressed in the following format: **CN=[ANCHOR_VALUE],Object=[User|Group],O=CSV**
 *	**Object Confirmation (Normal)**: Normally, the sync engine assumes that it can retrieve the object again in a subsequent delta import after an export. This is how the sync engine usually works. But not all connected connected system do this. This setting of Normal  ensures that there is no exported-change-not-reimported warning in the follow-up import.
- 
-* **Export Type (MultivaluedReferenceAttributeUpdate)**: The export type specifies how objects are formatted and sent to the target system during synchronization.
-*MultivaluedReferenceAttributeUpdate is an export type designed to work with Entra ID. It only sends the attributes that have changed. For non-reference attributes, it uses AttributeReplace and for reference attributes, it uses AttributeUpdate. 
+* **Export Type (MultivaluedReferenceAttributeUpdate)**: The export type specifies how objects are formatted and sent to the target system during synchronization. *MultivaluedReferenceAttributeUpdate* is an export type designed to work with Entra ID. It only sends the attributes that have changed. For non-reference attributes, it uses AttributeReplace and for reference attributes, it uses AttributeUpdate. 
 * **Normalizations (None)**: Normalizations refer to standardizing data to a consistent format. None means that no specific normalization rules are applied. Data remains as-is without any additional transformations by the connector.
 
 ### Schema 1 (CSV File Format Configurations)
@@ -131,11 +132,12 @@ The GCSV Connector utilizes three kinds of separators (or delimiters) to delimit
 
 This page contains the character value settings for these separators and the encoding type that was used to create the file as CSV. 
 
-The following image is an image of the Schema 1 (CSV File Format Configurations) page.
+The following image is an image of the *Schema 1 (CSV File Format Configurations)* page.
 
 ![Schema 1 (CSV File Format Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
 The following section is a list of the individual configurations:
+
 * **Use headers for schema discovery**: When this option is selected, it instructs the connector to ignore the first record of each CSV file as a data record and use it as a header record (that is, that has the names of each field.) If this option isn't selected, the connector gives a generic name to each field (for example, Attribute1, Attribute2, etc.)  and use the first row as a data record.  
 * **Values separator**: This character separates the fields (that is, values) of the CSV records. The comma (,) is the default, but any alphanumeric character that can be printed is allowed.  
 * **Multivalue separator**: This type of separator is used to delimit the individual values of a multi–valued string (for example, proxy addresses) or reference attributes (for example, subordinates.) The default is a semi-colon (;) but any printable alphanumeric character is acceptable.
@@ -155,11 +157,12 @@ The anchor value is a unique identifier for a record in a CSV file. It different
 
 On this page, the anchor attribute settings are set up for each of the CSV files that are listed on the Connectivity page. 
 
-The following image is an example of the Schema 2 (Identity and Reference Field Configurations) page.
+The following image is an example of the *Schema 2 (Identity and Reference Field Configurations)* page.
 
 ![Schema 2 (Identity and Reference Field Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
 
 The following section is a list of the individual configurations on this page:
+
 * **User**
   * **User Anchor**: The field in the Users file that serves as the anchor value for the user record. The first header column in the users file is the default choice.
   * **User Anchor attribute type**: This is the attribute type of the anchor selected. 
@@ -175,15 +178,17 @@ The following section is a list of the individual configurations on this page:
 >The names of the attributes designated to be used as anchors must be unique across all object type schemas. This includes the anchors specified in the Group Members file.
 
 ### Schema 3 (Users File Attribute Schema Configurations)
+
 This page is for specifying and explaining the data type of each of the fields that are identified in the schema of the Users CSV file and whether they can have more than one value. 
 
-The following image is an example of the Schema 3 (Users File Attribute Schema Configurations) page.
+The following image is an example of the *Schema 3 (Users File Attribute Schema Configurations)* page.
 
 ![Schema 3 (Users File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
 The following section lists considerations when making attribute data type assignments.
 
 #### Supported Data Types
+
 The GCSV Connector supports the use of The following section data types: 
 
 * **Boolean**: a value that can be either true or false.
@@ -193,9 +198,10 @@ The GCSV Connector supports the use of The following section data types:
 * **Reference**: a value that is a reference to another user object. To specify a reference value in a CSV file, populate its field with the anchor value of the referred user object.
 
 #### Supported Multiple-Value Data Types
+
 The connector supports use of multivalued attributes for only the following data types:
+
 * String
-* Reference
 
 >[!NOTE]
 > If the schema of both the User and Group objects both have an (non-anchor) attribute by the same name, differing datatypes may not be assigned between them. They both must share the same data type.
@@ -203,7 +209,7 @@ The connector supports use of multivalued attributes for only the following data
 ### Schema 4 (Groups File Attribute Schema Configurations)
 This page is for specifying and explaining the data type of each of the fields that are identified in the schema of the Groups CSV file and whether they can have more than one value. 
 
-The following image is an example of the Schema 4 (Groups File Attribute Schema Configurations) page. 
+The following image is an example of the *Schema 4 (Groups File Attribute Schema Configurations)* page. 
 
 ![Groups File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
@@ -217,7 +223,7 @@ After the running an initial full import operation, the connector space will loo
 
 This page allows for the configuration of PowerShell scripts that will run before and/or after import and/or export operations. This provides an opportunity to perform a wide variety of pre-and-post processing actions on your identity user and group records.
 
-The following image is an example of the Global Parameters page. 
+The following image is an example of the *Global Parameters* page. 
 
 ![Global Parameters page image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
 
@@ -239,6 +245,7 @@ The connector passes one input parameter into each script named OperationType. T
 > The dynamic creation of CSV files before import or export operations is not supported. The all the CSV files must be present before any for Run Profiles will execute.
 
 #### PowerShell Input Parameter: OperationType 
+
 Although the use of input parameters is not supported, the GCSV connector does pass one input parameter into execution of every PowerShell script: `OperationType`. 
 
 * **Full** – this value is provided during Full Import or Full Export operations.
@@ -250,7 +257,7 @@ This parameter value can be used within the logic of the PowerShell scripts to d
 
 Because CSV files do not store information in a hierarchical structure, the GCSV Connector does not support any hierarchical provisioning configurations. 
 
-The following image is an example of the Provisioning Hierarchy page.
+The following image is an example of the *Provisioning Hierarchy* page.
 
 ![Provisioning Hierarchy page image](./media/microsoft-identity-manager-2016-connector-genericcsv/provisioning.png)
 
@@ -260,7 +267,7 @@ The GCSV Connector will build a distinct distinguished name (DN) for every user 
 
 `CN=[ANCHOR_VALUE],Object=User|Group,O=CSV`
 
-The following image is an example of the Partitions and Hierarchies page.
+The following image is an example of the *Partitions and Hierarchies* page.
 
 ![Partitions and Hierarchies page image](./media/microsoft-identity-manager-2016-connector-genericcsv/partitions.png)
 
@@ -268,7 +275,7 @@ The following image is an example of the Partitions and Hierarchies page.
 
 The GCSV Connector requires that at least the User object type be specified. The choice of the Group object type is optional. 
 
-The following image is an example of the Object Types page.
+The following image is an example of the *Object Types* page.
 
 ![Object Types page image](./media/microsoft-identity-manager-2016-connector-genericcsv/objecttypes.png)
 
@@ -276,7 +283,7 @@ The following image is an example of the Object Types page.
 
 This page displays a normalized list of all attributes across all selected object type schemas. 
 
-The following image is an example of the Attributes page.
+The following image is an example of the *Attributes* page.
 
 ![Attributes page image](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
 
@@ -289,32 +296,76 @@ The GCSV Connector does not support the use of complex anchors nor anchor attrib
 
 To change anchor designations displayed on this page, return to Schema 2 (Anchor Configurations). 
 
-The following image is an example of the Anchors page.
+The following image is an example of the *Anchors* page.
  
 ![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
 
-## Provisioning new CSV Records
+## Provisioning CSV Records
+
 In order for the GCSV connector to add new User or Group objects into their corresponding CSV files a new Connector Space Object must be provisioned for it. 
 
 Whether using either [MIM 2016 Declarative Provisioning](https://learn.microsoft.com/microsoft-identity-manager/mim-how-provision-users-adds) or writing your own [MIM Synchronization Rules Extensions](https://learn.microsoft.com/previous-versions/windows/desktop/identity-lifecycle-manager/ms698375(v=vs.85)), new Connector Space objects must have a DN constructed using the following format:
 
-`CN=[ANCHOR_VALUE],Object=User|Group,O=CSV`
+**CN=[ANCHOR_VALUE],Object=User|Group,O=CSV**
 
-Below are additional details on each of the these componet values: 
+The following table provides details on each of the these component values: 
+
 |Component | Notes |
 |---|---|
 | CN=[ANCHOR VALUE] | The Common Name (CN) must be a unique value to and will be written in the CSV file's designated anchor field. |
-| Object=User/Group | This component indicates the object type of this connector, either **User** or **Group** only. |
-| O=CSV | This is the root component commont to all GCSV connector space objects. |
+| Object=User/Group | This component indicates the object type of this connector. Supports "**User**" or "**Group**" only. |
+| O=CSV | This is the root component common to all GCSV connector space objects. |
+
+The following image is a *Synchronization Rule* that demonstrates how to constuct a DN properly when provisioning a new User object into a GCSV Connector: 
+
+![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/syncrule4.png)
+
+The following code demonstrates the equivalent provisioning logic using [Metaverse Rules Extensions](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/forefront-2010/ms695371(v=vs.100)).
+
+```C#
+void IMVSynchronization.Provision(MVEntry mventry)
+{
+	if (mventry["employeeID"].IsPresent)
+	{
+		ConnectedMA GCSVConnector = = mventry.ConnectedMAs["Generic CSV Conenctor"];
+
+		if (GCSVConnector.Connectors.Count == 0)
+		{
+			CSEntry csentry = GCSVConnector.Connectors.StartNewConnector("user");
+
+			//Sets DN to "CN=[ANCHOR_VALUE],OBJECT=[User|Group],O=CSV"
+			csentry.DN = GCSVConnector.EscapeDNComponent("CN=" + mventry["employeeID"].Value).Concat("OBJECT=User,O=CSV");
+
+			csentry["AccountName"].StringValue = mventry["accountName"].StringValue;
+			csentry["CountryCode"].IntegerValue = 1;
+			csentry["DisplayName"].Value = mventry["displayName"].Value;
+			csentry["ProxyAddresses"].Value = mventry["proxyAddressCollection"].Value;
+			csentry["IsActive"].BooleanValue = true;
+			csentry["Manager"].Value = mventry["manager"].Value;
+			csentry["ProfilePic"].Value = mventry["pic"].Value;
+
+			csentry.CommitNewConnector();
+		}
+	}
+}
+```
+
+In the previous image, please note the use of the `EcapeDNComponent()` function to ensure that the anchor value is properly escaped to be compliant with its LDAP syntax. 
+
+>[!IMPORTANT] 
+> Improperly escaping the anchor value when constructing a DN will results in an `invalid‑dn` error. 
+
 
 ## CSV Field Formatting Examples
 
 The following sections list examples of how to format different datatypes in CSV files. All the examples The following section assume the use of the connector’s default field delimiter settings:
+
 * Value separate: Comma (,)
 * Multivalue separator: Semi-Colon (;)
 * Text qualifier: Double quotes (")
 
 ### Example: Text Qualification
+
 If a string value contains characters that would otherwise be interpreted as delimiters (i.e., such as commas), it requires that the value be qualified so that the CSV parser can correctly interpret the string as a single field. 
 
 The following section CSV example show how the DisplayName field has values that are formatted as qualified text:
@@ -327,6 +378,7 @@ E003,"Perez, Juan"
 ```
 
 ### Example: Delimiting Multivalued Strings
+
 To provide multiple string values within one string field, simply delimit the values with the Multivalue separator. The following section CSV example shows how the ProxyAddress field with  multiple values:
 
 ```CSV
@@ -339,6 +391,7 @@ E002,"Doe, Jane",SMTP:jane.doe@contoso.com;smtp:jd002@contoso.com
 > Multivalued String also support the use of string qualified values. Text qualified values may be delimited by multivalued separators.
 
 ### Example: Reference Fields
+
 To specify a reference value in a CSV file, populate its field with the anchor value of the referred user object. In The following section CSV example, the Manager field contains the anchor value of the user record to which it refers: 
 
 ```CSV
@@ -385,4 +438,5 @@ E003,Perez, Juan",false
 ```
 
 ## Troubleshooting
+
 * For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
