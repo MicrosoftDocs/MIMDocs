@@ -16,7 +16,6 @@ ms.date: 03/20/2024
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 3/15/2024
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems

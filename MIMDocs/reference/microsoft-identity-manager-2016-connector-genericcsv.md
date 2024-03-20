@@ -320,7 +320,7 @@ The following image is a *Synchronization Rule* that demonstrates how to constuc
 
 ![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/syncrule4.png)
 
-The following code demonstrates the equivalent provisioning logic using [Metaverse Rules Extensions](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/forefront-2010/ms695371(v=vs.100)).
+The following code demonstrates the equivalent provisioning logic using [Metaverse Rules Extensions](https://learn.microsoft.com/previous-versions/windows/desktop/forefront-2010/ms695371(v=vs.100)).
 
 ```C#
 void IMVSynchronization.Provision(MVEntry mventry)
