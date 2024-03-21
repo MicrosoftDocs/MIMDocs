@@ -28,7 +28,7 @@ For MIM 2016, the Connector is available as a download from the [Microsoft Downl
 > [!NOTE]
 > The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into CSV files, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
-## Prepare the sample CSV files
+## Prepare the Sample CSV files
 On a server running the MIM Synchronization Server, create the folder ***C:\GCSV*** and copy the following CSV files found in [Appendix A – Sample CSV Files](#appendix-a---sample-csv-files) into it. Be sure to grant the MIM Synchronization Service account both read-and-write permissions to that folder.
 
 Copy the following CSV into the ***C:\GCSV\SCRIPTS*** folder:
@@ -38,9 +38,9 @@ Copy the following CSV into the ***C:\GCSV\SCRIPTS*** folder:
 * Sample Members CSV File (*Members.csv*)
 
 > [!NOTE]
-> This guide assumes that the CSV files are in the following path on your MIM Synchronization server: C:\GCSV and that they are saved using the file names indicated. If you install them in a different location or rename these files, you will need to make the appropriate changes through the reset of this guide. 
+> This guide assumes that the CSV files are in the following path on your MIM Synchronization server: **C:\GCSV** and that they are saved using the file names indicated. If you install them in a different location or rename these files, you will need to make the appropriate changes through the reset of this guide. 
 
-## Prepare the sample PowerShell scripts
+## Prepare the Sample PowerShell Scripts
 
 On a server running the MIM Synchronization Server, create the folder ***C:\GCSV\SCRIPTS*** and copy the sample PowerShell scripts located in [Appendix B - Sample PowerShell Files](#appendix-b---sample-powershell-files) into it. 
 Be sure that the MIM Synchronization service account has appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) in order to execute the scripts.
@@ -58,9 +58,9 @@ Copy the following PowerShell scripts into the ***C:\GCSV\SCRIPTS*** folder:
 > [!IMPORTANT]
 >The MIM Synchronization Service account requires the appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) on the MIM Synchronization server in order execute the sample PowerShell scripts. 
 
-## Create a new Connector
+## Create a New Connector
 
-The following is a high-level overview of the steps outlined in this guide. In order to being, an account with the *MIM Syncs Admin* role will need to be used to perform these tasks:
+The following list is a high-level overview of the steps outlined in this guide. In order to being, an account with the *MIM Syncs Admin* role needs to be used to perform these tasks:
 
 * Open the *Create New Management Agent (MA)* window from the *MIM Sync Service Manager*.
 * Select the *Generic CSV Connector* as the connector type.
@@ -71,7 +71,7 @@ The following is a high-level overview of the steps outlined in this guide. In o
 * Configure the partition, run profile, and mapping details for the MA.
 * Provide the script paths and parameters for the PowerShell scripts, if any.
 * Run the MA to perform the import, sync, or export operations.
-* Evaulate the results.
+* Evaluate the results.
 
 Let's Begin! 
 
@@ -82,9 +82,9 @@ To Create a Generic CSV connector, in *MIM Synchronization Service Manager* sele
 Probide the name for the connector (for example: **Generic CSV**) and click the **Next** button.
 
 ## Connectivity
-The Connectivity page contains the file pathes where the connector can locate the User, Groups, and Group Members CSV files. 
+The Connectivity page contains the file paths where the connector can locate the User, Groups, and Group Members CSV files. 
 
-The following image is an example image of the *Connectivity* page: 
+The following image is an example of the *Connectivity* page: 
 
 ![Connectivity page image](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
 
@@ -101,7 +101,7 @@ After verifying that the settings match the provided values, click the **Next** 
 ## Capabilities
 This page describes the connector’s capabilities. The GCSV Connector capabilities are fixed and can't be modified. 
 
-Below is an example image of the Capabilities page: 
+The following image is an example of the *Capabilities* page: 
 
 ![Capablities page image](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
 
@@ -113,9 +113,9 @@ After reviewing the configurations about, click the **Next** button.
 
 The Generic CSV (GCSV) Connector utilizes three kinds of separators (or delimiters) to delimit and parse CSV fields and their values: *Value Separators*, *Multivalued separators*, and *Text qualifiers*. For a more details explanation of these delimiter types, see the [Generic CSV Connector – Technical Reference Guide](microsoft-identity-manager-2016-connector-genericcsv.md)
 
-This page contains the character value settings for these delimiter and the encoding type that was used to create the file as CSV. 
+This page contains the character value settings for these delimiters and the encoding type that was used to create the file as CSV. 
 
-The following image is an image of the *Schema 1* (CSV File Format Configurations) page:
+The following image is an example of the *Schema 1* (CSV File Format Configurations) page:
 
 ![Schema 1 (CSV File Format Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
@@ -139,7 +139,7 @@ The following image is an example of the *Schema 2* (Identity and Reference Fiel
 
 ![Schema 2 (Identity and Reference Field Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
 
-Below is a list of the values that should be provided in the settings on this page:
+In the following table are the individual values that should be assigned to each of the settings on this page:
 
 | Setting Name | Setting Value | 
 | --- | --- |
@@ -161,24 +161,24 @@ The following image is an example of the *Schema 3* (Users File Attribute Schema
 
 ![Schema 3 (Users File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
-In the folowing table are the individual values that should be assigned to each of the settings on this page:
+In the following table are the individual values that should be assigned to each of the settings on this page:
 
 | Setting Name | Setting Value | Notes |
 | --- | --- | --- |
 | *DisplayName attribute type* | **String** | Examples of qualified strings are in this field | 
-| *DisplayName is multivalued* | **false** | |	
-| *AccountName attribute type* | **String** | |
-| *AccountName is multivalued* | **false** | |
-| *CountryCode attribute type* | **Integer** | |	
-| *CountryCode is multivalued* | **false** | |	
-| *Manager attribute type* | **Reference** | Contains the anchor attribute values of their assigned managers user record (e.g. E001) |
-| *Manager is multivalued* | **false** | |
-| *ProxyAddresses attribute type* | **String** | |
+| *DisplayName is multivalued* | **false** | -- |	
+| *AccountName attribute type* | **String** | -- |
+| *AccountName is multivalued* | **false** | -- |
+| *CountryCode attribute type* | **Integer** | -- |	
+| *CountryCode is multivalued* | **false** | -- |	
+| *Manager attribute type* | **Reference** | Contains the anchor attribute values of their assigned managers user record (for example, *E001*) |
+| *Manager is multivalued* | **false** | -- |
+| *ProxyAddresses attribute type* | **String** | -- |
 | *ProxyAddresses is multivalued* | **TRUE** | Contains examples of how to delimit multivalued strings |
-| *IsActive attribute type* | **Boolean** | |	
-| *IsActive is multivalued* | **false** | |
-| *ProfilePic attribute type* | **Binary** | |
-| *ProfilePic is multivalued* | **false** | | 
+| *IsActive attribute type* | **Boolean** | -- |	
+| *IsActive is multivalued* | **false** | -- |
+| *ProfilePic attribute type* | **Binary** | -- |
+| *ProfilePic is multivalued* | **false** | -- | 
 
 After verifying that the settings match the provided values, click the **Next** button.
 
@@ -190,56 +190,56 @@ The following image is an example of the *Schema 4* (Groups File Attribute Schem
 
 ![Schema 4 (Groups File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
-In the table below are the individual values that should be assigned to each of the settings on this page:
+In the following table are the individual values that should be assigned to each of the settings on this page:
 
 | Setting Name | Setting Value | Notes |
 | --- | --- | --- |
-| *DisplayName attribute type* | **String** | | 
+| *DisplayName attribute type* | **String** | -- | 
 | *DisplayName is multivalued* | **false** | Provides an example of qualified string values. |	
-| *Description attribute type* | **String** | |
-| *Description is multivalued* | **false** | |
+| *Description attribute type* | **String** | -- |
+| *Description is multivalued* | **false** | -- |
 | *Owner attribute type* | **Reference** | Provides an example of reference values.|	
-| *Owner is multivalued* | **false** | |	
+| *Owner is multivalued* | **false** | -- |	
 
 After verifying that the settings match the provided values, click the **Next** button.
 
 ### Global Parameters (PowerShell Scripts Configuration)
 
-This page allows for the configuration of PowerShell scripts that will run before and/or after import and/or export operations. The value of this input parametere provides an opportunity to perform a wide variety of pre-and-post processing actions on your identity user and group records.
+This page allows for the configuration of PowerShell scripts that will run before and/or after import and/or export operations. The value of this input parameters provides an opportunity to perform a wide variety of pre-and-post processing actions on your identity user and group records.
 
 The following image is an example of the *Global Parameters* page. 
 
 ![Global Parameters page image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
 
-The following section lists the individual configuration settings on this page:
+In the following table are the individual values that should be assigned to each of the settings on this page:
 
 | Setting Name | Setting Value | Notes |
 | --- | --- | --- |
 | *Pre-Import File* | **C:\GCSV\SCRIPTS\PRE-IMPORT.CSV** | This script executes before a full import |
 | *Post-Import File* | **C:\GCSV\SCRIPTS\PRE-IMPORT.CSV** | This script executes after a full import |
 | *Pre-Export File* | **C:\GCSV\SCRIPTS\PRE-EXPORT.CSV** | This script executes before a full export or (delta) export |
-| *Post-Export File* | **C:\GCSV\SCRIPTS\POST-EXPORT.CSV** | This script execute before a full export or (delta) export |
+| *Post-Export File* | **C:\GCSV\SCRIPTS\POST-EXPORT.CSV** | This script executes before a full export or (delta) export |
 
 After verifying that the settings match the provided values, click the **Next** button.
 
 #### PowerShell Script Execution 
 The GCSV Connector runs each configured PowerShell script in its own session and doesn't provide support for passing variables between the execution of scripts. 
 
-Moreover, the GCSV Connector executes the PowerShell script inside the files, not as a cmdlet. This means that input parameters can't be passed into scripts by adding them to the end of their path statements. Doing this will cause the execution of the script to fail. 
+Moreover, the GCSV Connector executes the PowerShell script inside the files, not as a cmdlet. This means that input parameters can't be passed into scripts by adding them to the end of their path statements. Doing this causes the execution of the script to fail. 
 
 >[!Important]
 >The GCSV Connector does not support the use of passing input parameters in the execution of the PowerShell scripts.
 
 If a pre-import or pre-export script execution throws an exception, to prevent the importing or exporting of improperly processed User or Group records, the GCSV Connector will abort and stop the whole run profile’s execution. 
 
-Similarly, if a post-import or post-export operation encounters an exception, it will cause the operation status to fail. 
+Similarly, if a post-import or post-export operation encounters an exception, it causes the operation status to fail. 
 
 Errors encountered during PowerShell script execution will be logged into the MIM Synchronization server’s *Event *Log. 
 
 #### PowerShell Input Parameter: OperationType 
 Although the use of input parameters is not supported, the GCSV Connector does pass one input parameter into execution of every PowerShell script: `OperationType`. 
 
-The input variable `OperationType` will have the value ***Full*** or ***Delta*** to show the kind of operation (for example, Full Import, Delta Import, Full Export, (Delta) Export) that is running with the script. This allows the scripts to check if they're running under a full or delta import/export context and do their pre- or post-processing tasks accordingly.
+The input variable `OperationType` will have the value ***Full*** or ***Delta*** to show the kind of operation (for example, Full Import, Delta Import, Full Export, (Delta) Export) that is running with the script. This value allows scripts to check if they're running under a full or delta import/export context and do their pre- or post-processing tasks accordingly.
 
 
 ## Provisioning Hierarchy
@@ -289,7 +289,7 @@ After verifying that the settings match the provided values, click the **Next** 
 
 ### Anchors
 
-The Generic CSV Connector doesn't support the use of complex anchors or anchor attribute configurations that differ from their corresponding object's CSV file’s anchor ID field designation. This is why the anchor selection fields are locked. To make a change in anchor attribute designation, return to the [Schema 2 (Identity and Reference Field Configurations)](./microsoft-identity-manager-2016-connector-genericcsv-step-by-step.md#schema-2-identity-and-reference-field-configurations) page
+The Generic CSV Connector doesn't support the use of complex anchors or anchor attribute configurations that differ from their corresponding object's CSV file’s anchor ID field designation. This is why the anchor selection fields are locked. To make a change in anchor attribute designation, return to the [Schema 2 (Identity and Reference Field Configurations)](./microsoft-identity-manager-2016-connector-genericcsv-step-by-step.md#schema-2-identity-and-reference-field-configurations) page.
 
 The following image is an example of the *Anchors* page.
 
@@ -299,7 +299,7 @@ After reviewing the default settings on the page, click the **Next** button.
 
 ### Connector Filters
 
-This guide we will not be making use of any connector filter configurations. This section is here to provide continuity in the guide. 
+This guide won't be making use of any connector filter configurations. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Connector Filters* page.
 
@@ -309,7 +309,7 @@ After reviewing the default settings on the page, click the **Next** button.
 
 ### Join and Projection Rules
 
-This guide will not be making use of any join and projection rules configurations. This section is here to provide continuity in the guide. 
+This guide won't be making use of any join and projection rules configurations. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Join and Projection Rules* page.
 
@@ -319,7 +319,7 @@ After reviewing the default settings on the page, click the **Next** button.
 
 ### Attribute Flow
 
-This guide will not be making use of any attribute flow rules configurations. This section is here to provide continuity in the guide. 
+This guide won't be making use of any attribute flow rules configurations. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Attribute Flow* page.
 
@@ -329,7 +329,7 @@ After verifying that the settings match the default values, click the **Next** b
 
 ### Deprovisioning
 
-This guide we will not be changing the default deprovisioning settings of this connector. This section is here to provide continuity in the guide. 
+This guide we won't be changing the default deprovisioning settings of this connector. This section is here to provide continuity in the guide. 
 
 The following image is an example of the *Deprovisioning* page.
 
@@ -374,7 +374,7 @@ After verifying that the settings match the provided values, click the **Next** 
 
 ### Management Agent Configuration Type
 
-On the Management Agent Configuration Type page, ensure the ***O=CSV*** partition is selection is selection.
+On the Management Agent Configuration Type page, ensure the ***O=CSV*** partition is selection.
 
 ![Create Run Profile page 3 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/runprofile3.png)
 
@@ -406,17 +406,17 @@ The following image is an example of the results of successfully importing the c
 After creating the Run profile, use following steps to a run this new Full Import Run Profile:
 
 * Go back to the *Synchronization Service Manager*.
-* Select the *GCSV Connctor* management agent.
+* Select the *GCSV Connector* management agent.
 * Right-click on it and choose Search Connector Space.
 * Leave the scope to its default value of *Subtree* and click the **Search** button.
 
-The image below is the *Search Connector Space* window that will appear. 
+The following image is an example of the *Search Connector Space* window that will appear. 
 
 ![Search Connector Space page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/connectorspace.png)
 
 #### Validate User Object
 
-By selecting one of the user objects for inspecting, the following image demonstrate the user object’s representation in the GCSV Connector space:
+Select one of the user objects for inspection. The following image is an example of the user object’s representation in the GCSV Connector space:
 
 ![Validate User Object page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user1.png)
 
@@ -424,12 +424,11 @@ Examination of the *DisplayName* field shows how a qualified string was properly
 
 Clicking on the button within the *ProxyAddresses* entry reveals that the multivalued string was also properly parsed:
 
-
 ![Validate User Object page 2 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user2.png)
 
 #### Validate Group Object
 
-By selecting one of the group objects for inspecting, the following image demonstrate the group object’s representation in the GCSV Connector space:
+Selecting one of the group objects for inspection. The following image is an example of the group object’s representation in the GCSV Connector space:
 
 ![Validate Group Object page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/group1.png)
 
@@ -441,7 +440,7 @@ Clicking on the button within the *Member* entry reveals how the associated reco
 
 The sample PowerShell scripts provided in this guide are designed to add a CSV entry to a central log to demonstrate their successful execution. 
 
-The default location for this log is C:\GCSV\PS_Run_Ledger.csv
+The default location for this log is **C:\GCSV\PS_Run_Ledger.csv**.
 
 Opening the log reveals: 
 
@@ -456,11 +455,11 @@ These two records indicate that both the Pre-Import and Post-Import PowerShell s
 
 ## Appendix A - Sample CSV Files
 
-The following sections contain the CSV Files used in this guide
+The following sections contain the CSV Files used in this guide.
 
 ### Sample Users CSV File
 
-In the configuration of the conenctor, this guide assumes the file name of **USERS.CSV**.
+In the configuration of the connector, this guide assumes the file name of **USERS.CSV**.
 
 ```CSV
 EmployeeID,DisplayName,AccountName,CountryCode,Manager,ProxyAddresses,IsActive,ProfilePic
@@ -471,7 +470,7 @@ E003,"Perez, Juan",JP003,1,E001,SMTP:juan.perez@contoso.com;smtp:jp003@contoso.c
 
 ### Sample Groups CSV File
 
-In the configuration of the conenctor, this guide assumes the file name of **GROUPS.CSV**.
+In the configuration of the connector, this guide assumes the file name of **GROUPS.CSV**.
 
 ```CSV
 GroupID,DisplayName,Description,Owner
@@ -481,7 +480,7 @@ G002,Test Group (G002),"This group is for teams D, E, and F",E003
 
 ### Sample Members CSV File
 
-In the configuration of the conenctor, this guide assumes the file name of **MEMBERS.CSV**.
+In the configuration of the connector, this guide assumes the file name of **MEMBERS.CSV**.
 
 ```CSV
 ParentID,MemberID,ObjectType
@@ -530,7 +529,7 @@ $record | Export-Csv -Path $FilePath -NoTypeInformation -Append
 
 ### Sample Post-Import PowerShell Script
 
-In the configuration of the conenctor, this guide assumes the file name of **POST-IMPORT.PS1**.
+In the configuration of the connector, this guide assumes the file name of **POST-IMPORT.PS1**.
 
 ~~~PowerShell
 param ([string]$OperationType)
@@ -553,7 +552,7 @@ $record | Export-Csv -Path $FilePath -NoTypeInformation -Append
 
 ### Sample Pre-Export PowerShell Script
 
-In the configuration of the conenctor, this guide assumes the file name of **PRE-EXPORT.PS1**.
+In the configuration of the connector, this guide assumes the file name of **PRE-EXPORT.PS1**.
 
 ~~~PowerShell
 param ([string]$OperationType)
@@ -576,7 +575,7 @@ $record | Export-Csv -Path $FilePath -NoTypeInformation -Append
 
 ### Sample Post-Export PowerShell Script
 
-In the configuration of the conenctor, this guide assumes the file name of **POST-EXPORT.PS1**.
+In the configuration of the connector, this guide assumes the file name of **POST-EXPORT.PS1**.
 
 ~~~PowerShell
 param ([string]$OperationType)
