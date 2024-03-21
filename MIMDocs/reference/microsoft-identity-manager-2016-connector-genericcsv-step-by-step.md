@@ -416,19 +416,19 @@ The following image is an example of the *Search Connector Space* window that wi
 
 #### Validate User Object
 
-Select one of the user objects for inspection. The following image is an example of the user object’s representation in the GCSV Connector space:
+Select one of the user objects for inspection. The following image is an example of a user’s GCSV connector space object:
 
 ![Validate User Object page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user1.png)
 
 Examination of the *DisplayName* field shows how a qualified string was properly parsed. 
 
-Clicking on the button within the *ProxyAddresses* entry reveals that the multivalued string was also properly parsed:
+Clicking on the button within the *ProxyAddresses* entry reveals that the multivalued string was also properly parsed innto individual values:
 
 ![Validate User Object page 2 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user2.png)
 
 #### Validate Group Object
 
-Selecting one of the group objects for inspection. The following image is an example of the group object’s representation in the GCSV Connector space:
+Selecting one of the group objects for inspection. The following image is an example of a group’s GCSV connector space object:
 
 ![Validate Group Object page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/group1.png)
 

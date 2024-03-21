@@ -46,7 +46,7 @@ The following table lists the features that the current release of the connector
 | --- | --- |
 | Multiple Product Support | Use of this connector is supported with the following Microsoft products: <li>Microsoft Entra Connect Provisioning Agent (ECMA2Host)</li><li>Microsoft Identity Manager 2016 (MIM2016)</li> |
 | CSV Files Supported | This connector supports the management of user (required) and groups (optional), through the configuration of up to three CSV files: <li>Users CSV File (ex. Users.csv)</li><li>Groups CSV File (ex. Groups.csv)</li><li>Group Members CSV File (ex. Members.csv)</li> |
-| Pre/Post Operation Processing with PowerShell | This connector supports the configuration of up to four (4) PowerShell Scripts to facilitate pre-or-post processing operations.<br/>Script Execution Opportunities:<li>Before Import (ex. PreImport.ps1)</li><li>After Import (ex. PostImport.ps1)</li><li>Before Export (ex. PreExport.ps1)</li><li>After Export (ex. PostExport.ps1)</li> |
+| Pre/Post Operation Processing with PowerShell | This connector supports the configuration of up to four (4) PowerShell Scripts to facilitate pre-or-post processing of User and Group identity data before or after imports or exports. |
 | CSV File Encoding Supported | The connector supports all default (or installed) server encoding types: (ex. Unicode, UTF-8, UTF-7, ASCII, etc.) |
 | CSV Field Data Types Supported | The connector supports the following attribute data types: <li>Binary – (as base64 strings)</li><li>Boolean – (as True/False)</li><li>Integers</li><li>Strings / Multivalued Strings</li><li>Reference</li> |
 | CSV Field Delimitation | Support for commas (,) or any printable alphameric character to qualify the beginning and end of any string value. |
@@ -196,6 +196,9 @@ The GCSV Connector supports the use of The following section data types:
 * **Integer**: a value that is a whole number, without any decimal places.
 * **String**: a value that is a sequence of characters, typically used to store text data.
 * **Reference**: a value that is a reference to another user object. To specify a reference value in a CSV file, populate its field with the anchor value of the referred user object.
+
+>[!IMPORTANT]
+>User or Group reference attributes can only be used to refer to user objects. This does not apply to the *Member* attribute of Group objects, which can contain both user or group references so long as the object type field is specified.
 
 #### Supported Multiple-Value Data Types
 

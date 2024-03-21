@@ -51,7 +51,7 @@ Related links:
     * Users CSV File
     * Groups CSV File
     * Group Members CSV File
-  * Pre/Post Operation Processing User and Group data with PowerShell - This connector supports the configuration of up to four (4) PowerShell Scripts to facilitate pre-or-post processing of User and/r Group identity data before and/or after imports or exports.
+  * Pre/Post Operation Processing with PowerShell - This connector supports the configuration of up to four (4) PowerShell scripts to facilitate pre-or-post processing of User and Group identity data before or after imports or exports.
   * CSV File Encoding Supported - The connector supports all default (or installed) server encoding types: (ex. Unicode, UTF-8, UTF-7, ASCII, etc.)
   * CSV Field Data Types Supported - The connector supports the following attribute data types: binaries (as base64 strings), booleans (as True/False), Integers, strings and multivalued strings, and references.
   * Support for CSV field delimitation, text qualification, and multivalued string and reference attributes.
