@@ -422,7 +422,7 @@ Select one of the user objects for inspection. The following image is an example
 
 Examination of the *DisplayName* field shows how a qualified string was properly parsed. 
 
-Clicking on the button within the *ProxyAddresses* entry reveals that the multivalued string was also properly parsed innto individual values:
+Clicking on the button within the *ProxyAddresses* entry reveals that the multivalued string was also properly parsed into individual values:
 
 ![Validate User Object page 2 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user2.png)
 
