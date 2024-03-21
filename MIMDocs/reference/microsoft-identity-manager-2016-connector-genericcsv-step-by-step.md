@@ -77,7 +77,7 @@ Let's Begin!
 
 To Create a Generic CSV connector, in *MIM Synchronization Service Manager* select *Management Agent* and *Create*. Select the **Generic CSV (Microsoft)** Connector.
 
-![Screenshot of Screenshot of Create Connector page](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
+![Screenshot of Create Connector page](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
 
 Probide the name for the connector (for example: **Generic CSV**) and click the **Next** button.
 
@@ -86,7 +86,7 @@ The Connectivity page contains the file paths where the connector can locate the
 
 The following image is an example of the *Connectivity* page: 
 
-![Screenshot of Screenshot of Connectivity page](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
+![Screenshot of Connectivity page](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
 
 The following is a list of the values that should be provided for the settings on this page:
 
@@ -103,7 +103,7 @@ This page describes the connector’s capabilities. The GCSV Connector capabilit
 
 The following image is an example of the *Capabilities* page: 
 
-![Screenshot of Screenshot of Capablities page](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
+![Screenshot of Capablities page](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
 
 For a detailed description of these capabilities settings, refer to the [Generic CSV Connector – Technical Reference Guide](microsoft-identity-manager-2016-connector-genericcsv.md).
 
@@ -117,7 +117,7 @@ This page contains the character value settings for these delimiters and the enc
 
 The following image is an example of the *Schema 1* (CSV File Format Configurations) page:
 
-![Screenshot of Screenshot of Schema 1 (CSV File Format Configurations)](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
+![Screenshot of Schema 1 (CSV File Format Configurations)](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
 The following section is a list of the individual configurations:
 * **Use headers for schema discovery**: If this option is selected, it instructs the connector to ignore the first record of each CSV file as a data record and use it as a header record (that is, that has the names of each field.) If this option isn't selected, the connector gives a generic name to each field (for example, Attribute1, Attribute2, etc.)  and use the first row as a data record.  
@@ -137,7 +137,7 @@ On this page, the anchor attribute settings are set up for each of the CSV files
 
 The following image is an example of the *Schema 2* (Identity and Reference Field Configurations) page.
 
-![Screenshot of Screenshot of Schema 2 (Identity and Reference Field Configurations)](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
+![Screenshot of Schema 2 (Identity and Reference Field Configurations)](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
@@ -159,7 +159,7 @@ This page is used to assign a data type for each attribute in the Users CSV file
 
 The following image is an example of the *Schema 3* (Users File Attribute Schema Configurations) page.
 
-![Screenshot of Screenshot of Schema 3 (Users File Attribute Schema Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
+![Screenshot of Schema 3 (Users File Attribute Schema Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
@@ -188,7 +188,7 @@ This page is used to assign a data type for each attribute in the Groups CSV fil
 
 The following image is an example of the *Schema 4* (Groups File Attribute Schema Configurations) page. 
 
-![Screenshot of Screenshot of Schema 4 (Groups File Attribute Schema Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
+![Screenshot of Schema 4 (Groups File Attribute Schema Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
@@ -209,7 +209,7 @@ This page allows for the configuration of PowerShell scripts that will run befor
 
 The following image is an example of the *Global Parameters* page. 
 
-![Screenshot of Screenshot of Global Parameters page](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
+![Screenshot of Global Parameters page](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
