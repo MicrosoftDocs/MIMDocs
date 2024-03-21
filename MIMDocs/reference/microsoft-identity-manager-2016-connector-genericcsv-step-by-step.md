@@ -77,7 +77,7 @@ Let's Begin!
 
 To Create a Generic CSV connector, in *MIM Synchronization Service Manager* select *Management Agent* and *Create*. Select the **Generic CSV (Microsoft)** Connector.
 
-![Create Connector page image](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
+![Screenshot of Screenshot of Create Connector page](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
 
 Probide the name for the connector (for example: **Generic CSV**) and click the **Next** button.
 
@@ -86,7 +86,7 @@ The Connectivity page contains the file paths where the connector can locate the
 
 The following image is an example of the *Connectivity* page: 
 
-![Connectivity page image](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
+![Screenshot of Screenshot of Connectivity page](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
 
 The following is a list of the values that should be provided for the settings on this page:
 
@@ -103,7 +103,7 @@ This page describes the connector’s capabilities. The GCSV Connector capabilit
 
 The following image is an example of the *Capabilities* page: 
 
-![Capablities page image](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
+![Screenshot of Screenshot of Capablities page](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
 
 For a detailed description of these capabilities settings, refer to the [Generic CSV Connector – Technical Reference Guide](microsoft-identity-manager-2016-connector-genericcsv.md).
 
@@ -117,7 +117,7 @@ This page contains the character value settings for these delimiters and the enc
 
 The following image is an example of the *Schema 1* (CSV File Format Configurations) page:
 
-![Schema 1 (CSV File Format Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
+![Screenshot of Screenshot of Schema 1 (CSV File Format Configurations)](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
 The following section is a list of the individual configurations:
 * **Use headers for schema discovery**: If this option is selected, it instructs the connector to ignore the first record of each CSV file as a data record and use it as a header record (that is, that has the names of each field.) If this option isn't selected, the connector gives a generic name to each field (for example, Attribute1, Attribute2, etc.)  and use the first row as a data record.  
@@ -137,7 +137,7 @@ On this page, the anchor attribute settings are set up for each of the CSV files
 
 The following image is an example of the *Schema 2* (Identity and Reference Field Configurations) page.
 
-![Schema 2 (Identity and Reference Field Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
+![Screenshot of Screenshot of Schema 2 (Identity and Reference Field Configurations)](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
@@ -159,7 +159,7 @@ This page is used to assign a data type for each attribute in the Users CSV file
 
 The following image is an example of the *Schema 3* (Users File Attribute Schema Configurations) page.
 
-![Schema 3 (Users File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
+![Screenshot of Screenshot of Schema 3 (Users File Attribute Schema Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
@@ -188,7 +188,7 @@ This page is used to assign a data type for each attribute in the Groups CSV fil
 
 The following image is an example of the *Schema 4* (Groups File Attribute Schema Configurations) page. 
 
-![Schema 4 (Groups File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
+![Screenshot of Screenshot of Schema 4 (Groups File Attribute Schema Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
@@ -209,7 +209,7 @@ This page allows for the configuration of PowerShell scripts that will run befor
 
 The following image is an example of the *Global Parameters* page. 
 
-![Global Parameters page image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
+![Screenshot of Screenshot of Global Parameters page](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
 
 In the following table are the individual values that should be assigned to each of the settings on this page:
 
@@ -237,10 +237,10 @@ Similarly, if a post-import or post-export operation encounters an exception, it
 Errors encountered during PowerShell script execution will be logged into the MIM Synchronization server’s *Event *Log. 
 
 #### PowerShell Input Parameter: OperationType 
+
 Although the use of input parameters is not supported, the GCSV Connector does pass one input parameter into execution of every PowerShell script: `OperationType`. 
 
 The input variable `OperationType` will have the value ***Full*** or ***Delta*** to show the kind of operation (for example, Full Import, Delta Import, Full Export, (Delta) Export) that is running with the script. This value allows scripts to check if they're running under a full or delta import/export context and do their pre- or post-processing tasks accordingly.
-
 
 ## Provisioning Hierarchy
 
@@ -248,7 +248,7 @@ Because CSV files don't store information in a hierarchical structure; the Gener
 
 The following image is an example of the *Provisioning Hierarchy* page.
 
-![Provisioning Hierarchy page image](./media/microsoft-identity-manager-2016-connector-genericcsv/provisioning.png)
+![Screenshot of Provisioning Hierarchy page](./media/microsoft-identity-manager-2016-connector-genericcsv/provisioning.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
@@ -260,7 +260,7 @@ The Generic CSV Connector builds a distinct distinguished name (DN) for every us
 
 The following image is an example of the *Partitions and Hierarchies* page.
 
-![Partitions and Hierarchies page image](./media/microsoft-identity-manager-2016-connector-genericcsv/partitions.png)
+![Screenshot of Partitions and Hierarchies page](./media/microsoft-identity-manager-2016-connector-genericcsv/partitions.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
@@ -270,7 +270,7 @@ The Generic CSV connector requires that at least the User object type be specifi
 
 The following image is an example of the *Object Types* page.
 
-![Object Types page image](./media/microsoft-identity-manager-2016-connector-genericcsv/objecttypes.png)
+![Screenshot of Object Types page](./media/microsoft-identity-manager-2016-connector-genericcsv/objecttypes.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
@@ -280,7 +280,7 @@ This page displays a normalized list of all attributes across all selected objec
 
 The following image is an example of the *Attributes* page.
 
-![Attributes page image](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
+![Screenshot of Attributes page](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
@@ -293,7 +293,7 @@ The Generic CSV Connector doesn't support the use of complex anchors or anchor a
 
 The following image is an example of the *Anchors* page.
 
-![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
+![Screenshot of Anchors page](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
 
 After reviewing the default settings on the page, click the **Next** button.
 
@@ -303,7 +303,7 @@ This guide won't be making use of any connector filter configurations. This sect
 
 The following image is an example of the *Connector Filters* page.
 
-![Connector Filters page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/filters.png)
+![Screenshot of Connector Filters page](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/filters.png)
 
 After reviewing the default settings on the page, click the **Next** button.
 
@@ -313,7 +313,7 @@ This guide won't be making use of any join and projection rules configurations. 
 
 The following image is an example of the *Join and Projection Rules* page.
 
-![Join and Projection Rules page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/joinprojects.png)
+![Screenshot of Join and Projection Rules page](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/joinprojects.png)
 
 After reviewing the default settings on the page, click the **Next** button.
 
@@ -323,7 +323,7 @@ This guide won't be making use of any attribute flow rules configurations. This 
 
 The following image is an example of the *Attribute Flow* page.
 
-![Attribute Flow page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/flows.png)
+![Screenshot of Attribute Flow page](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/flows.png)
 
 After verifying that the settings match the default values, click the **Next** button.
 
@@ -333,7 +333,7 @@ This guide we won't be changing the default deprovisioning settings of this conn
 
 The following image is an example of the *Deprovisioning* page.
 
-![Deprovisioning page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/deprovisioning.png)
+![Screenshot of Deprovisioning page](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/deprovisioning.png)
 
 After verifying that the settings match the default values, click the **Next** button.
 
@@ -356,7 +356,7 @@ In the Profile Name page, enter then name **Full Import**
 
 The following image is an example of the Profile page. 
 
-![Configure Run Profile page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/runprofile1.png)
+![Screenshot of Configure Run Profile page 1](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/runprofile1.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
@@ -368,7 +368,7 @@ The Connector filtering operates the same in the GCSV Connector as in any other 
 
 The following image is an example of the *Connector Filter* page.
 
-![Configure Run Profile page 2 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/filters.png)
+![Screenshot of Configure Run Profile page 2](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/filters.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
@@ -376,7 +376,7 @@ After verifying that the settings match the provided values, click the **Next** 
 
 On the Management Agent Configuration Type page, ensure the ***O=CSV*** partition is selection.
 
-![Create Run Profile page 3 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/runprofile3.png)
+![Screenshot of Create Run Profile page 3](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/runprofile3.png)
 
 Leave the rest of the settings in their default values. Clicking the **Finish** button will create the Run Profile.
 
@@ -399,7 +399,7 @@ There ought to be five (5) Adds based upon contents of the Sample CSV Files:
 
 The following image is an example of the results of successfully importing the contents of the sample CSV files:
 
-![Validate Full Import page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/validate1.png)
+![Screenshot of Validate Full Import page 1](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/validate1.png)
 
 ### Examine the GCSV Connector Space
 
@@ -412,29 +412,29 @@ After creating the Run profile, use following steps to a run this new Full Impor
 
 The following image is an example of the *Search Connector Space* window that will appear. 
 
-![Search Connector Space page image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/connectorspace.png)
+![Screenshot of Search Connector Space page](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/connectorspace.png)
 
 #### Validate User Object
 
 Select one of the user objects for inspection. The following image is an example of a user’s GCSV connector space object:
 
-![Validate User Object page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user1.png)
+![Screenshot of Validate User Object page 1](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user1.png)
 
 Examination of the *DisplayName* field shows how a qualified string was properly parsed. 
 
 Clicking on the button within the *ProxyAddresses* entry reveals that the multivalued string was also properly parsed into individual values:
 
-![Validate User Object page 2 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user2.png)
+![Screenshot of Validate User Object page 2](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/user2.png)
 
 #### Validate Group Object
 
 Selecting one of the group objects for inspection. The following image is an example of a group’s GCSV connector space object:
 
-![Validate Group Object page 1 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/group1.png)
+![Screenshot of Validate Group Object page 1](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/group1.png)
 
 Clicking on the button within the *Member* entry reveals how the associated records group file member records withing the Members file has been properly loaded as members:
 
-![Validate Group Object page 2 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/group2.png)
+![Screenshot of Validate Group Object page 2](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/group2.png)
 
 ### Validate PowerShell Execution Logs
 

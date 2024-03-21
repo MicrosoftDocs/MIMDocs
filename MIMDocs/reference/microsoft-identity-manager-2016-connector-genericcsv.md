@@ -90,7 +90,7 @@ The following list is a high-level overview of the steps outlined in this guide.
 
 To Create a Generic CSV connector, in **Synchronization Service** select **Management Agent** and **Create**. Select the **Generic CSV (Microsoft)** Connector.
 
-![Create Connector page 1mage](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
+![Screenshot of Create Connector page 1](./media/microsoft-identity-manager-2016-connector-genericcsv/createconnector.png)
 
 ### Connectivity
 
@@ -98,7 +98,7 @@ The Connectivity page contains the file locations of the Users, Groups, and Grou
 
 The following image is an example of the *Connectivity* page. 
 
-![Connectivity page image](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
+![Screenshot of Connectivity page](./media/microsoft-identity-manager-2016-connector-genericcsv/connectivity.png)
 
 The locations of the following CSV files are specified on this page:
 
@@ -134,7 +134,7 @@ This page contains the character value settings for these separators and the enc
 
 The following image is an image of the *Schema 1 (CSV File Format Configurations)* page.
 
-![Screenshot of Sync Rule page 4 (CSV File Format Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
+![Screenshot of Sync Rule page 4 (CSV File Format Configurations)](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
 The following section is a list of the individual configurations:
 
@@ -228,7 +228,7 @@ This page allows for the configuration of PowerShell scripts that will run befor
 
 The following image is an example of the *Global Parameters* page. 
 
-![Global Parameters page image](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
+![Screenshot of Global Parameters page](./media/microsoft-identity-manager-2016-connector-genericcsv/globalparams.png)
 
 The following section lists the individual configuration settings on this page:
 
@@ -262,7 +262,7 @@ Because CSV files don't store information in a hierarchical structure, the GCSV 
 
 The following image is an example of the *Provisioning Hierarchy* page.
 
-![Provisioning Hierarchy page image](./media/microsoft-identity-manager-2016-connector-genericcsv/provisioning.png)
+![Screenshot of Provisioning Hierarchy page](./media/microsoft-identity-manager-2016-connector-genericcsv/provisioning.png)
 
 ### Partitions and Hierarchies
 
@@ -272,7 +272,7 @@ The GCSV Connector builds a distinct distinguished name (DN) for every user and 
 
 The following image is an example of the *Partitions and Hierarchies* page.
 
-![Partitions and Hierarchies page image](./media/microsoft-identity-manager-2016-connector-genericcsv/partitions.png)
+![Screenshot of Partitions and Hierarchies page](./media/microsoft-identity-manager-2016-connector-genericcsv/partitions.png)
 
 ### Object Types
 
@@ -280,7 +280,7 @@ The GCSV Connector requires that at least the User object type be selected. The 
 
 The following image is an example of the *Object Types* page.
 
-![Object Types page image](./media/microsoft-identity-manager-2016-connector-genericcsv/objecttypes.png)
+![Screenshot of Object Types page](./media/microsoft-identity-manager-2016-connector-genericcsv/objecttypes.png)
 
 ### Attributes
 
@@ -288,7 +288,7 @@ This page displays a normalized list of all attributes across all selected objec
 
 The following image is an example of the *Attributes* page.
 
-![Attributes page image](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
+![Screenshot of Attributes page](./media/microsoft-identity-manager-2016-connector-genericcsv/attributes.png)
 
 >[!NOTE]
 > The Member attribute will only exist if Groups are selected and will contain the references to objects maintained in the group members CSV files.
@@ -301,7 +301,7 @@ To change anchor designations displayed on this page, return to Schema 2 (Anchor
 
 The following image is an example of the *Anchors* page.
  
-![Anchors page image](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
+![Screenshot of Anchors page](./media/microsoft-identity-manager-2016-connector-genericcsv/anchors.png)
 
 ## Provisioning CSV Records
 
@@ -321,7 +321,7 @@ The following table provides details on each of the component values:
 
 The following image is a *Synchronization Rule* that demonstrates how to construct a DN properly when provisioning a new User object into a GCSV Connector: 
 
-![Screenshot of Sync Rule page 4.](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/syncrule4.png)
+![Screenshot of Sync Rule page 4](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/syncrule4.png)
 
 The following code demonstrates the equivalent provisioning logic using [Metaverse Rules Extensions](https://learn.microsoft.com/previous-versions/windows/desktop/forefront-2010/ms695371(v=vs.100)).
 
@@ -446,18 +446,10 @@ The following list contains the known limitations of the GCSV connector.
   * Multivalued reference attributes are not supported.
   * Reference value must refer to user objects. References to group objects is not supported. 
 * **Anchors**
-  * Duplicate anchor values between user and group objects is not supported. 
-  * The names of the anchor attributes must be unique across the user and group schemas.
+  * Duplicate anchor values between user and group objects are not supported. 
+  * The names of the anchor attributes must be unique across user and group schemas.
 * **PowerShell**
   * The passing of input variables into PowerShell scripts is not supported. 
-
-
-
-
-
-
-
-
 
 ## Troubleshooting
 
