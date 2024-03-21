@@ -117,7 +117,7 @@ This page describes the connector’s capabilities. Connector capabilities are f
 
 The following image is an example of the *Capabilities* page. 
 
-![Capablities page image](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
+![Screenshot of Capablities page](./media/microsoft-identity-manager-2016-connector-genericcsv/capablities.png)
 
 The following section lists of the individual configurations and their meanings:
 
@@ -134,7 +134,7 @@ This page contains the character value settings for these separators and the enc
 
 The following image is an image of the *Schema 1 (CSV File Format Configurations)* page.
 
-![Schema 1 (CSV File Format Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
+![Screenshot of Sync Rule page 4 (CSV File Format Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema1.png)
 
 The following section is a list of the individual configurations:
 
@@ -159,7 +159,7 @@ On this page, the anchor attribute settings are set up for each of the CSV files
 
 The following image is an example of the *Schema 2 (Identity and Reference Field Configurations)* page.
 
-![Schema 2 (Identity and Reference Field Configurations) image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
+![Screenshot of Schema 2 (Identity and Reference Field Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema2.png)
 
 The following section is a list of the individual configurations on this page:
 
@@ -183,7 +183,7 @@ This page is for specifying and explaining the data type of each of the fields t
 
 The following image is an example of the *Schema 3 (Users File Attribute Schema Configurations)* page.
 
-![Schema 3 (Users File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
+![Screenshot of Schema 3 (Users File Attribute Schema Configurations) page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema3.png)
 
 The following section lists considerations when making attribute data type assignments.
 
@@ -214,13 +214,13 @@ This page is for specifying and explaining the data type of each of the fields t
 
 The following image is an example of the *Schema 4 (Groups File Attribute Schema Configurations)* page. 
 
-![Groups File Attribute Schema Configurations) page image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
+![Screenshot of Groups File Attribute Schema Configurations page](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4a.png)
 
 The guidance offered in [Schema 3 (Users File Attribute Configurations](./microsoft-identity-manager-2016-connector-genericcsv-step-by-step.md#schema-3-users-file-attribute-schema-configurations) applies to this section as well. .
 
 After the running an initial full import operation, the connector space will look similar to the image the following image: 
 
-![Connector Space image](./media/microsoft-identity-manager-2016-connector-genericcsv/schema4b.png)
+![Screenshot of Connector Space](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/connectorspace.png)
 
 ### Global Parameters (PowerShell Scripts Configuration)
 
@@ -321,7 +321,7 @@ The following table provides details on each of the component values:
 
 The following image is a *Synchronization Rule* that demonstrates how to construct a DN properly when provisioning a new User object into a GCSV Connector: 
 
-![Sync Rule page 4 image](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/syncrule4.png)
+![Screenshot of Sync Rule page 4.](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/syncrule4.png)
 
 The following code demonstrates the equivalent provisioning logic using [Metaverse Rules Extensions](https://learn.microsoft.com/previous-versions/windows/desktop/forefront-2010/ms695371(v=vs.100)).
 
@@ -439,6 +439,25 @@ E001,"Smith, John",true
 E002,"Doe, Jane",true
 E003,Perez, Juan",false
 ```
+
+## Known Limitations
+The following list contains the known limitations of the GCSV connector.
+* **Reference Attributes**
+  * Multivalued reference attributes are not supported.
+  * Reference value must refer to user objects. References to group objects is not supported. 
+* **Anchors**
+  * Duplicate anchor values between user and group objects is not supported. 
+  * The names of the anchor attributes must be unique across the user and group schemas.
+* **PowerShell**
+  * The passing of input variables into PowerShell scripts is not supported. 
+
+
+
+
+
+
+
+
 
 ## Troubleshooting
 

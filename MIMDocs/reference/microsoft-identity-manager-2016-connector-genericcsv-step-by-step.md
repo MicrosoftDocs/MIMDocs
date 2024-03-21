@@ -341,7 +341,7 @@ After verifying that the settings match the default values, click the **Next** b
 
 A Full Import Run Profile is required to import User and Group identity data from the CSV records into Connector Space objects. 
 
-The use following steps to a create a new Full Import Run Profile:
+Use the following steps to create a new Full Import Run Profile:
 
 * Go back to the *Synchronization Service Manager*.
 * Select the GCSV management agent.
