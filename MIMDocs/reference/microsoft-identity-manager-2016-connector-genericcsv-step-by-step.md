@@ -368,7 +368,7 @@ The Connector filtering operates the same in the GCSV Connector as in any other 
 
 The following image is an example of the *Connector Filter* page.
 
-![Screenshot of Configure Run Profile page 2](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/filters.png)
+![Screenshot of Configure Run Profile page 2](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/runprofile2.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
