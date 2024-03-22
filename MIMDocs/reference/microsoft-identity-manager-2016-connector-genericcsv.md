@@ -437,20 +437,16 @@ CSV Files that contain Boolean fields should use either the True or False text t
 EmployeeID,DisplayName,IsActive
 E001,"Smith, John",true
 E002,"Doe, Jane",true
-E003,Perez, Juan",false
+E003,"Perez, Juan",false
 ```
 
 ## Known Limitations
 The following list contains the known limitations of the GCSV connector.
 * **Reference Attributes**
-  * Multivalued reference attributes are not supported.
+  * Other than the group *Member* attribute, multivalued reference attributes are not supported.
   * Reference value must refer to user objects. References to group objects is not supported. 
 * **Anchors**
   * Duplicate anchor values between user and group objects are not supported. 
   * The names of the anchor attributes must be unique across user and group schemas.
 * **PowerShell**
   * The passing of input variables into PowerShell scripts is not supported. 
-
-## Troubleshooting
-
-* For information on how to enable logging to troubleshoot the connector, see the [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).

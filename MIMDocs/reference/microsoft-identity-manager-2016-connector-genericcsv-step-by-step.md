@@ -216,7 +216,7 @@ In the following table are the individual values that should be assigned to each
 | Setting Name | Setting Value | Notes |
 | --- | --- | --- |
 | *Pre-Import File* | **C:\GCSV\SCRIPTS\PRE-IMPORT.CSV** | This script executes before a full import |
-| *Post-Import File* | **C:\GCSV\SCRIPTS\PRE-IMPORT.CSV** | This script executes after a full import |
+| *Post-Import File* | **C:\GCSV\SCRIPTS\POST-IMPORT.CSV** | This script executes after a full import |
 | *Pre-Export File* | **C:\GCSV\SCRIPTS\PRE-EXPORT.CSV** | This script executes before a full export or (delta) export |
 | *Post-Export File* | **C:\GCSV\SCRIPTS\POST-EXPORT.CSV** | This script executes before a full export or (delta) export |
 
@@ -368,7 +368,7 @@ The Connector filtering operates the same in the GCSV Connector as in any other 
 
 The following image is an example of the *Connector Filter* page.
 
-![Screenshot of Configure Run Profile page 2](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/filters.png)
+![Screenshot of Configure Run Profile page 2](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/runprofile2.png)
 
 After verifying that the settings match the provided values, click the **Next** button.
 
