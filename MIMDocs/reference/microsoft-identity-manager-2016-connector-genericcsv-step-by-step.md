@@ -216,7 +216,7 @@ In the following table are the individual values that should be assigned to each
 | Setting Name | Setting Value | Notes |
 | --- | --- | --- |
 | *Pre-Import File* | **C:\GCSV\SCRIPTS\PRE-IMPORT.CSV** | This script executes before a full import |
-| *Post-Import File* | **C:\GCSV\SCRIPTS\PRE-IMPORT.CSV** | This script executes after a full import |
+| *Post-Import File* | **C:\GCSV\SCRIPTS\POST-IMPORT.CSV** | This script executes after a full import |
 | *Pre-Export File* | **C:\GCSV\SCRIPTS\PRE-EXPORT.CSV** | This script executes before a full export or (delta) export |
 | *Post-Export File* | **C:\GCSV\SCRIPTS\POST-EXPORT.CSV** | This script executes before a full export or (delta) export |
 
