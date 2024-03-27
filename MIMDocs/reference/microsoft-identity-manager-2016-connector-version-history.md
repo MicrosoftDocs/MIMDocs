@@ -13,7 +13,7 @@ ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
 ms.workload: identity
-ms.date: 3/16/2024
+ms.date: 3/26/2024
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -43,6 +43,14 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
+## 1.1.2036.0 (March 2024)
+
+### Fixed issues
+
+* Generic CSV Connector (Preview)
+  * Fixed an issue with encoding types selected during export operations.
+  * Fixed an issue with imported distinguished names of referred objects.
+
 ## 1.1.2031.0 (March 2024)
 
 ### **New Connector**  
@@ -58,9 +66,7 @@ Related links:
 
 ## 1.1.2025.0 (August 2023)
 
-
 ### Enhancements
-
 
 ### Fixed issues
 
