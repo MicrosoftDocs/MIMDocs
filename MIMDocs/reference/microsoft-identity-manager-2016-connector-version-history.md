@@ -48,7 +48,7 @@ Related links:
 ### Fixed issues
 
 * Generic CSV Connector (Preview)
-  * Fixed an issue with encoding type selected during export operations.
+  * Fixed an issue with encoding types selected during export operations.
   * Fixed an issue with imported distinguished names of referred objects.
 
 ## 1.1.2031.0 (March 2024)
