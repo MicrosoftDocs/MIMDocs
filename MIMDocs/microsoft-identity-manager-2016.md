@@ -16,7 +16,7 @@ ms.workload: identity
 ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
-ms.date: 3/16/2024
+ms.date: 3/28/2024
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -64,7 +64,7 @@ For Microsoft Entra ID Premium customers, standard support continues to be avail
 
 - [MIM for Microsoft Entra ID P1 or P2 customers](https://aka.ms/MIMforAADP), last updated June 2021
 - [MIM Sync, Service, Portal, CM, Add-ins and client releases](./reference/version-history.md) last updated October 2023
-- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated August 2023
+- [MIM Connector releases](./reference/microsoft-identity-manager-2016-connector-version-history.md), last updated March 2024
 - [MIM BHOLD modules releases](./reference/version-bhold-history.md) last updated October 2018
 
 
