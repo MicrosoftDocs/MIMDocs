@@ -48,7 +48,7 @@ Related links:
 ### Fixed issues
 
 * Generic CSV Connector (Preview)
-  * Fixed an conflict with Generic LDAP connector installer.
+  * Fixed a conflict with Generic LDAP connector installer.
 
 ### Enhancements
 
