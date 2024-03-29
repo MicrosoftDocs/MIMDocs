@@ -12,7 +12,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.date: 09/14/2023
+ms.date: 03/29/2024
 ms.author: billmath
 ---
 
@@ -95,7 +95,7 @@ Supported Directories for Delta import and Password management:
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
 
-* Microsoft .NET 4.5.2 Framework or later
+* Microsoft .NET 4.6.2 Framework or later
 
 Deploying this connector may require changes to the configuration of the directory server as well as configuration changes to MIM.  For deployments involving integrating MIM with a third-party directory server in a production environment, we recommend customers work with their directory server vendor, or a deployment partner for help, guidance, and support for this integration.
 

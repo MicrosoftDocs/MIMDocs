@@ -6,7 +6,7 @@ author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
 manager: amycolannino
-ms.date: 5/24/2021
+ms.date: 3/29/2024
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref
 ms.service: microsoft-identity-manager
@@ -101,7 +101,7 @@ The connector can be used for other specific identity management scenarios invol
 
 6.  Before you install the Connector, make sure you have the following on the synchronization server: 
 
- - Microsoft .NET 4.5.2 Framework or later
+ - Microsoft .NET 4.6.2 Framework or later
  - Microsoft Identity Manager 2016 SP2, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
 
 7. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP2, is available as a download from the
