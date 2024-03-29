@@ -12,7 +12,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.date: 2/13/2024
+ms.date: 3/29/2024
 ms.author: esergeev
 
 ---
@@ -44,7 +44,7 @@ From a high-level perspective, the following features are supported by the curre
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
 
-* Microsoft .NET 4.5.2 Framework or later
+* Microsoft .NET 4.6.2 Framework or later
 * 64-bit ODBC client drivers
 * If you are using the connector to communicate with Oracle 12c, this requires Oracle Instant Client 12.2.0.1 or newer with the ODBC package.
 * If you are using the connector to communicate with Oracle 18c-23c, this requires Oracle Instant Client 18-23 or newer with the ODBC Package, and the NLS_LANG system variable to be set to support UTF8 characters, e.g. NLS_LANG=AMERICAN_AMERICA.AL32UTF8.

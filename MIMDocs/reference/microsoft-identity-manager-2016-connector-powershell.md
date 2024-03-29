@@ -12,7 +12,7 @@ ms.workload: identity
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.date: 09/14/2023
+ms.date: 03/29/2024
 ms.author: billmath
 
 ---
@@ -29,7 +29,7 @@ The PowerShell Connector enables you to integrate the synchronization service wi
 ### Prerequisites
 Before you use the Connector, make sure you have the following on the synchronization server:
 
-* Microsoft .NET 4.5.2 Framework or later
+* Microsoft .NET 4.6.2 Framework or later
 * Windows PowerShell 2.0, 3.0, or 4.0
 
 The execution policy on the Synchronization Service server must be configured to allow the connector to run Windows PowerShell scripts. Unless the scripts the connector runs are digitally signed, configure the execution policy by running this command:  
