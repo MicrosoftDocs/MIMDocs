@@ -50,16 +50,20 @@ Related links:
 * Generic CSV Connector (Preview)
   * Fixed a conflict with Generic LDAP connector installer.
 
-### Enhancements
+### Engineering updates
 
 * All connectors
-  * Migration to .NET 4.6.2 
-
+  * Migration to .NET 4.6.2.
+                            
 * Graph Connector
   * Improved delta import strategy for filtered out objects
+  * Migration to MSAL authentication library.
 
 * Web Services Connector
   * Enforced Certification Revocation List validation for HTTPS connections
+
+* Lotus Domino Connector
+  * Migration to VC++ 14 runtime (you need to install both [x86](https://aka.ms/vs/17/release/vc_redist.x86.exe) and [x64](https://aka.ms/vs/17/release/vc_redist.x64.exe) versions of VC++ Redistributable)
 
 ## 1.1.2036.0 (March 2024)
 
