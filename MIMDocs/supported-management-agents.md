@@ -28,7 +28,7 @@ Connectors link specific connected data sources to Microsoft Identity Manager (M
 
 In *Microsoft Identity Manager (MIM)*, formerly known as *Forefront Identity Manager (MIM)*, connectors were known as *management agents*. That term is still used in some articles or parts of the product, but know that both terms refer to the same concept.
 
-This article covers the connectors that are included & supported in MIM, but the connector for [Extensible Connectivity 2.0](https://learn.microsoft.com/previous-versions/windows/desktop/forefront-2010/hh859557(v=vs.100)) makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
+This article covers the connectors that are included & supported in MIM, but the connector for [Extensible Connectivity 2.0](/previous-versions/windows/desktop/forefront-2010/hh859557(v=vs.100)) makes it possible to connect with even more data sources. Some partners have created their own connectors in this way, and a full list is available in the wiki [FIM 2010: Management Agents from Partners](/microsoft-identity-manager/mim-best-practices).
 
 This table doesn't include the software on which MIM itself is deployed; see the [supported platforms](microsoft-identity-manager-2016-supported-platforms.md) list for more information.
 
