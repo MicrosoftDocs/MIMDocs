@@ -60,13 +60,11 @@
   "notification_subscribers": [
     "OPBuild@microsoft.com"
   ],
-  "sync_notification_subscribers": null,
-  "branches_to_filter": null,
+  "sync_notification_subscribers": [],
+  "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/MIMDocs",
-  "git_repository_branch_open_to_public_contributors": "master",
-  "skip_source_output_uploading": false,
+  "git_repository_branch_open_to_public_contributors": "main",
   "need_preview_pull_request": true,
-  "contribution_branch_mappings": null,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -75,11 +73,12 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": null,
+  "branch_target_mapping": {},
+  "targets": {},
+  "docs_build_engine": {},
+  "skip_source_output_uploading": false,
+  "contribution_branch_mappings": null,
   "need_generate_pdf_url_template": false,
   "need_generate_pdf": false,
-  "need_generate_intellisense": false,
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+  "need_generate_intellisense": false
 }
