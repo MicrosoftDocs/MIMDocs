@@ -6,11 +6,11 @@ description: Learn about the tier model that segregates your system based on vul
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 
 # optional metadata
@@ -24,16 +24,18 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Tier model for partitioning administrative privileges
 
-In today’s threat environment, it's not a question of if an attacker will gain access to your systems, but when. That means that internal security is just as important as a strong perimeter defense. This article describes a security model intended to protect against elevation of privilege by segregating high-privilege activities from high-risk zones. This model provides a good user experience while still adhering to best practices and security principles.
+This article describes a security model intended to protect against elevation of privilege by segregating high-privilege activities from high-risk zones.
+
+> [!IMPORTANT]
+> The model in this article is intended only for isolated Active Directory environments using MIM PAM.  For hybrid environments, see instead the guidance in the [enterprise access model](/security/compass/privileged-access-access-model).
 
 ## Elevation of Privilege in Active Directory forests
 
-Users, services, or applications accounts that are granted permanent administrative privileges to Windows Server Active Directory (AD) forests introduce a significant amount of risk to the organization’s mission and business. These accounts are often targeted by attackers because if they are compromised, the attacker then has privilege to connect to other servers or applications in the domain.
+Users, services, or applications accounts that are granted permanent administrative privileges to Windows Server Active Directory (AD) forests introduce a significant amount of risk to the organization’s mission and business. These accounts are often targeted by attackers because if they are compromised, the attacker has rights to connect to other servers or applications in the domain.
 
-The tier model creates divisions between administrators based on what resources they manage. Admins with control over user workstations are separated from those that control applications, or manage enterprise identities. Learn about this model in the [Securing privileged access reference material](http://aka.ms/tiermodel).
+The tier model creates divisions between administrators based on what resources they manage. Admins with control over user workstations are separated from those that control applications, or manage enterprise identities.
 
 ## Restricting credential exposure with logon restrictions
 
@@ -55,13 +57,16 @@ Logon restrictions should be enforced to ensure that highly privileged accounts 
 
 Logon restrictions can be enforced with:
 
-- Group Policy Logon Rights Restrictions, including:  
-    - Deny access to this computer from the network  
-    - Deny logon as a batch job  
-    - Deny logon as a service  
-    - Deny logon locally  
+- Group Policy Logon Rights Restrictions, including:
+    - Deny access to this computer from the network
+    - Deny logon as a batch job
+    - Deny logon as a service
+    - Deny logon locally
     - Deny logon through Remote Desktop settings  
 - Authentication policies and silos, if using Windows Server 2012 or later
 - Selective authentication, if the account is in a dedicated admin forest
 
-The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
+## Next steps
+
+- The next article, [Planning a bastion environment](planning-bastion-environment.md), describes how to add a dedicated administrative forest for Microsoft Identity Manager to establish the administrative accounts.
+- Securing devices provide a dedicated operating system for sensitive tasks that is protected from Internet attacks and threat vectors.

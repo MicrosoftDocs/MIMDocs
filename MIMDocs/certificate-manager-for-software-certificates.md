@@ -6,11 +6,11 @@ description: Learn how to use Certificate Manager to create and renew software c
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 
 # optional metadata

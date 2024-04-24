@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Get Certificate Request Generation Options | Microsoft Docs
-description:
+title: Get certificate request generation options | Microsoft Docs
+description: Description of MIM CM REST API GET request and response parameters.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 36bd1fc9-3443-4028-90e7-a24fef0ec0ae
 
 # optional metadata
@@ -26,31 +25,35 @@ ms.suite: ems
 
 ---
 
-# Get Certificate Request Generation Options
-
+# Get certificate request generation options
 Gets parameters for client-side certificate request generation.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
-Method  |Request URL  
----------|---------
-GET     |/CertificateManagement/api/v1.0/requests/{requestid}/certificaterequestgenerationoptions
+| Method |                                       Request URL                                        |
+|--------|------------------------------------------------------------------------------------------|
+|  GET   | /CertificateManagement/api/v1.0/requests/{requestid}/certificaterequestgenerationoptions |
 
-###URL Parameters
+### URL parameters
+
 Parameter | Description
 --------|--------------
 requestid| Required. The GUID identifier of the MIM CM request for which the certificate request generation parameters are to be retrieved.
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-none.
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
+### Request body
+None.
 
-##Response
-###Response Codes
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK
@@ -58,10 +61,11 @@ Code  |Description
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
-On success, returns list of CertificateRequestGenerationOptions objects. Each CertificateRequestGenerationOptions object corresponds to a single certificate request that the client has to generate and has the following properties:
+### Response headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
+On success, returns a list of CertificateRequestGenerationOptions objects. Each CertificateRequestGenerationOptions object corresponds to a single certificate request that the client has to generate. Each object has the following properties:
 
 Property| Description
 --------|-----------
@@ -71,20 +75,25 @@ HashAlgorithmName | The hash algorithm used when creating the certificate reques
 KeyAlgorithmName | The public key algorithm.
 KeyProtectionLevel | The level of strong key protection.
 KeySize | The size, in bits, of the private key to be generated.
-KeyStorageProviderNames | A list of acceptable key storage providers (KSPs) that can be used to generate the private key. In the case that the first KSP cannot be used to generate the cert request, any of the specified KSPs may be used until one succeeds.
+KeyStorageProviderNames | A list of acceptable key storage providers (KSPs) that can be used to generate the private key. When the first KSP can't be used to generate the certificate request, any of the specified KSPs can be used until one succeeds.
 KeyUsages | The operation that can be performed by the private key created for this certificate request. The default value is Signing.
 Subject | The subject name.
 
-**Note**: More information about these properties is available in the [Windows.Security.Cryptography.Certificates.CertificateRequestProperties class](https://msdn.microsoft.com/library/windows/apps/br212079.aspx) description, but be aware that there is not a one-to-one correspondence between this class and CertificateRequestGenerationOptions objects.
+>[!NOTE]
+>More information about these properties is available in the [Windows.Security.Cryptography.Certificates.CertificateRequestProperties class](https://msdn.microsoft.com/library/windows/apps/br212079.aspx) description. Keep in mind that there's not a one-to-one correspondence between this class and CertificateRequestGenerationOptions objects.
+>
 
-##Example
+## Example
+This section provides an example to get the generation options for a certificate request.
 
-###Request
+### Example: Request
+
 ```
 GET /certificatemanagement/api/v1.0/requests/a9b4b42c-cc50-4c9b-89d1-bbc0bcd5a099/certificaterequestgenerationoptions HTTP/1.1
-
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 
@@ -103,4 +112,4 @@ HTTP/1.1 200 OK
         "KeyUsages":3
     }
 ]
-```       
+```  

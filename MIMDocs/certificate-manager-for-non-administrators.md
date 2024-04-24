@@ -6,11 +6,11 @@ description: Learn how to enroll smart cards for users without administrator acc
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 
 # optional metadata
@@ -32,7 +32,7 @@ If a user isn’t a local administrator on their computer, they won’t be able 
 
 1.  **Unpack the appx file**
 
-    Obtain a signing certificate. Follow the steps to [Sign Windows 8 applications using an internal PKI](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop when you get to “Sign the Application”. Name the exported pfx file. Export to a .cer file as well, and import it to the client using the cer file of the new signing certificate.
+    Obtain a signing certificate. Follow the steps to [Sign Windows 8 applications using an internal PKI](https://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Stop when you get to “Sign the Application”. Name the exported pfx file. Export to a .cer file as well, and import it to the client using the cer file of the new signing certificate.
 
     Run the following to unpack the appx file:
 

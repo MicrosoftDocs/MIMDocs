@@ -6,11 +6,11 @@ description: Decide which privileged roles should be managed, and define the man
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 
 # optional metadata
@@ -24,14 +24,21 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Define roles for Privileged Access Management
 
 With Privileged Access Management, you can assign users to privileged roles that they can activate as needed for just-in-time access. These roles are defined manually and established in the bastion environment. This article walks you through the process of deciding which roles to manage through PAM, and how to define them with appropriate permissions and restrictions.
 
+> [!IMPORTANT]
+> The model in this article is intended only for isolated Active Directory environments using MIM PAM.  For hybrid environments, see instead the guidance in the [enterprise access model](/security/compass/privileged-access-access-model).
+
+
 A straightforward approach to defining roles for privileged access management is to compile all the information in a spreadsheet. List the roles in the roles, and use the columns to identify governance requirements and permissions.
 
-The governance requirements will vary depending on existing identity and access policies or compliance requirements. The parameters to identify for each role might include the owner of the role, the candidate users who can be in that role, and what authentication, approval, or notification controls should be associated with the use of the role.
+The governance requirements vary depending on existing identity and access policies or compliance requirements. The parameters to identify for each role might include:
+
+- The owner of the role.
+- The candidate users who can be in that role
+- The authentication, approval, or notification controls that should be associated with the use of the role.
 
 The role permissions depend on the applications being managed. This article uses Active Directory as an example application, dividing the permissions into two categories:
 
@@ -45,9 +52,9 @@ Start by identifying all the roles that you might want to manage with PAM. On th
 
 To find the appropriate roles, consider each application in scope for management:
 
-- Is the application in tier 0, tier 1 or tier 2?  
-- What are the privileges that impact the confidentiality, integrity or availability of the application?  
-- Does the application have dependencies on other components of the system, such as databases, network or security infrastructure, or the virtualization or hosting platform?
+- Is the application in tier 0, tier 1 or tier 2?
+- What are the privileges that impact the confidentiality, integrity or availability of the application?
+- Does the application have dependencies on other components of the system? For example,  does it have dependencies on databases, networking, security infrastructure, virtualization or hosting platform?
 
 Determine how to group those app considerations. You want roles that have clear boundaries, and give only enough permissions to complete common administrative tasks within the app.
 
@@ -87,38 +94,37 @@ As you identify candidate roles, start to fill out the spreadsheet. Create colum
 
 ## Select an access method
 
-There may be multiple roles in a privileged access management system with the same permissions assigned to them, if different communities of users have distinct access governance requirements. For example, an organization may apply different policies for their full-time employees than for outsourced IT employees of another organization.
+There may be multiple roles in a privileged access management system with the same permissions assigned to them. This can happen if different communities of users have distinct access governance requirements. For example, an organization may apply different policies for their full-time employees than for outsourced IT employees of another organization.
 
-In some cases, a user may be permanently assigned to a role, and so they do not need to request or activate a role assignment. Examples of permanent assignment scenarios include:
+In some cases, a user may be permanently assigned to a role. In that case, they do not need to request or activate a role assignment. Examples of permanent assignment scenarios include:
 
 - A managed service account in existing forest
 
-- A user account in the existing forest, with a credential managed outside of PAM (for example, a "break glass" account, in which a role such as "Domain / DC maintenance" needed to fix trust and DC health problems is permanently assigned to the account, with a physically secured password)
+- A user account in the existing forest, with a credential managed outside of PAM. This could be a "break glass" account. The break glass account could need a role such as "Domain / DC maintenance" to fix issues such as trust and DC health problems. As a break glass account it would  have the role permanently assigned with a physically secured password)
 
-- A user account in the administrative forest who authenticates with a password (for example, a user who needs permanent 24x7 administrative permissions and logs on from a device which cannot support strong authentication)
+- A user account in the administrative forest who authenticates with a password. This could be, a user who needs permanent 24x7 administrative permissions and logs on from a device which cannot support strong authentication.
 
 - A user account in the administrative forest, with a smartcard or virtual smartcard (for example, an account with an offline smartcard, needed for rare maintenance tasks)
 
-For organizations concerned about the potential for credential theft or misuse, the [Using Azure MFA for activation](use-azure-mfa-for-activation.md) guide includes instructions for how to configure MIM to require an additional out of band check at the time of role activation.
-
 ## Delegate Active Directory permissions
 
-Windows Server automatically creates default groups such as "Domain Admins" when new domains are created. These groups simplify getting started and may be suitable for smaller organizations. However, larger organizations, or those requiring more isolation of administrative privileges, should empty groups like Domain Admins and replace them with groups that provide fine-grained permissions.
+Windows Server automatically creates default groups such as "Domain Admins" when new domains are created. These groups simplify getting started and may be suitable for smaller organizations. Larger organizations, or those requiring more isolation of administrative privileges, should empty those groups and replace them with groups that provide fine-grained permissions.
 
-One limitation of the Domain Admins group is that it cannot have members from an external domain. Another limitation is that it grants permissions for three separate functions:  
-- Managing the Active Directory service itself  
-- Managing the data held in Active Directory  
+One limitation of the Domain Admins group is that it cannot have members from an external domain. Another limitation is that it grants permissions for three separate functions:
+
+- Managing the Active Directory service itself
+- Managing the data held in Active Directory
 - Enabling remote logon onto domain joined computers.
 
-In place of default groups like Domain Admins, create new security groups that provide only the necessary permissions, and use MIM to dynamically provide administrator accounts with those group memberships.
+In place of default groups like Domain Admins, create new security groups that provide only the necessary permissions. You should then use MIM to dynamically provide administrator accounts with those group memberships.
 
-### Service management permissions
+### Service Management permissions
 
 The following table gives examples of permissions which would be relevant to include in roles for managing AD.
 
 | Role | Description |
 | ---- | ---- |
-| Domain/DC Maintenance | Membership in the Domain\Administrators group that allows for troubleshooting and altering the domain controller operating system, promoting a new domain controller into an existing domain in the forest and AD role delegation.
+| Domain/DC Maintenance | Membership in the Domain\Administrators group allows for troubleshooting and altering the domain controller operating system. Operations like promoting a new domain controller into an existing domain in the forest and AD role delegation.
 |Manage Virtual DCs | Manage domain controller (DC) virtual machines (VMs) using the virtualization management software. This privilege may be granted via full control of all virtual machines in the management tool or Role-based access control (RBAC) functionality. |
 | Extend Schema | Manage the schema, including adding new object definitions, altering permissions to schema objects, and altering schema default permissions for object types |
 | Backup Active Directory Database | Take a backup copy of the Active Directory Database in its entirety, including all secrets entrusted to the DC and the Domain. |
@@ -130,7 +136,7 @@ The following table gives examples of permissions which would be relevant to inc
 
 ### data management permissions
 
-The following table gives examples of permissions which would be relevant to include in roles for managing or using the data held in AD.
+The following table gives examples of permissions that would be relevant to include in roles for managing or using the data held in AD.
 
 | Role | Description |
 | ---- | ---- |
@@ -146,7 +152,7 @@ The following table gives examples of permissions which would be relevant to inc
 
 ## Example role definitions
 
-The choice of role definitions will depend upon the tier of servers being managed by the privileged accounts. It will also depend upon the choice of applications being managed, since applications like Exchange or third party enterprise products such as SAP will often bring their own additional role definitions for delegated administration.
+The choice of role definitions depends on the tier of servers being managed. This also depends on the choice of applications being managed. Applications like Exchange or third party enterprise products such as SAP will often bring their own additional role definitions for delegated administration.
 
 The following sections give examples for typical enterprise scenarios.
 
@@ -172,7 +178,7 @@ Roles suitable for managing the tier 0 production forest accounts and resources 
 - Storage admins
 - Anti-Malware admins for Tier 0 servers
 - SCCM admins for Tier 0 SCCM
-- SCOM Admins for Tier 0 SCOM
+- System Center Operations Manager Admins for Tier 0 Operations Manager
 - Backup admins for Tier 0
 - Users of out-of-band and baseboard management controllers (for KVM or lights-out management) connected to Tier 0 hosts
 
@@ -185,7 +191,7 @@ Roles for management and backup of servers in Tier 1 might include:
 - Security Scanner Account
 - Anti-Malware admins for Tier 1 servers
 - SCCM admins for Tier 1 SCCM
-- SCOM admins for Tier 1 SCOM
+- System Center Operations Manager admins for Tier 1 Operations Manager
 - Backup admins for Tier 1 servers
 - Users of out-of-band and baseboard management controllers (for KVM or lights-out management) to Tier 1 hosts
 
@@ -206,3 +212,8 @@ Roles for non-administrative user and computer management might include:
 - Helpdesk
 - Security group admins
 - Workstation deskside support
+
+## Next steps
+
+- [enterprise access model](/security/compass/privileged-access-access-model)
+

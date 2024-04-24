@@ -6,11 +6,11 @@ description: Learn how to deploy the Certificate Manager app to enable your user
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 
 # optional metadata
@@ -24,37 +24,40 @@ ms.suite: ems
 #ms.custom:
 
 ---
+# MIM Certificate Manager Windows store application deployment
 
-# Working with the MIM Certificate Manager
-After you have MIM 2016 and Certificate Manager up and running, you can deploy the MIM Certificate Manager Windows store application so that your users can easily manage their physical smart cards, virtual smart cards and software certificates. The steps to deploy MIM CM  app are as follows:
+After you have MIM 2016 and Certificate Manager up and running, you can deploy the MIM Certificate Manager Windows store application. The windows store application allows your users to manage their physical smart cards, virtual smart cards, and software certificates. The steps to deploy MIM CM  app are as follows:
 
-1.  Create a certificate template.
+1. Create a certificate template.
 
-2.  Create a profile template.
+2. Create a profile template.
 
-3.  Prepare the app.
+3. Prepare the app.
 
-4.  Deploy the app via SCCM or Intune.
+4. Deploy the app via SCCM or Intune.
 
 ## Create a certificate template
+
 You create a certificate template for the CM  app the same way you ordinarily would, except that you have to make sure that the certificate template is version 3 and up.
 
-1.  Log into the server running AD CS (the certificate server).
+1. Log in to the server running AD CS (the certificate server).
 
-2.  Open the MMC.
+2. Open the MMC.
 
-3.  Click **File &gt; Add/Remove Snap-in**.;
+3. Click **File &gt; Add/Remove Snap-in**.
 
-4.  In the Available snap-ins list, click **Certificate Templates** and then click **Add**.
+4. In the Available snap-ins list, click **Certificate Templates** and then click **Add**.
 
-5.  You will now see **Certificate Templates** under **Console Root** in the MMC. Double click it to view all the available certificate templates.
+5. You will now see **Certificate Templates** under **Console Root** in the MMC. Double click it to view all the available certificate templates.
 
-6.  Right-click the **Smartcard Logon** template and click **Duplicate Template**.
+6. Right-click the **Smartcard Logon** template and click **Duplicate Template**.
 
-7.  On the Compatibility tab, under Certification Authority select Windows Server 2008 and under Certificate Recipient select Windows 8.1/Windows Server 2012 R2.
-    This step is crucial because it makes sure that you have a version 3 (or higher) certificate template, and only version 3 works with the certificate manager app. Because the version is set the first time you create and save the certificate template, if you didn’t create the certificate template in this way there is no way to modify it to the correct version and you should create a new one before proceeding.
+7. On the Compatibility tab, under Certification Authority select Windows Server 2008. Under Certificate Recipient select Windows 8.1/Windows Server 2012 R2. The version template version is set the first time you create and save the certificate template. If you didn’t create the certificate template this way there is no way to modify it to the correct version.
 
-8.  On the **General** tab, in the **Display Name** field, type the name you want to appear in the app's UI, such as **Virtual Smart Card Logon**.
+   > [!NOTE]
+   >  This step is crucial because it makes sure that you have a version 3 (or higher) certificate template. Only version 3 templates work with the certificate manager app.
+
+8. On the **General** tab, in the **Display Name** field, type the name you want to appear in the app's UI, such as **Virtual Smart Card Logon**.
 
 9. On the **Request Handling** tab, set the **Purpose** to **Signature and encryption** and under **Do the following…** select **Prompt the user during enrollment**.
 
@@ -76,11 +79,12 @@ You create a certificate template for the CM  app the same way you ordinarily wo
 16. From the list select the new template you created and click **OK**.
 
 ## Create a profile template
+
 Make sure when you create a profile template to set it to create/destroy the vSC and to remove the data collection. The CM app cannot handle collected data, so it’s important to disable it, as follows.
 
 1.  Log into the CM portal as a user with administrative privileges.
 
-2.  Go to Administration &gt; Manage Profile templates and make sure that the box is checked next to MIM CM Sample Smart Card Logon Profile Template and then click on Copy a selected profile template.
+2.  Go to Administration &gt; Manage Profile templates. Make sure that the box is checked next to **MIM CM Sample Smart Card Log on Profile Template** and then click on Copy a selected profile template.
 
 3.  Type the name of the profile template and click **OK**.
 
@@ -98,53 +102,56 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 
 10. In the left pane, click **Renew Policy &gt; Change general settings**. Select **Reuse card on renew** and click **OK**.
 
-11. You have to disable data collection items for each and every policy by clicking on the policy in the left pane, and then checking the box next to **Sample data item** and then click **Delete data collection items**. Then click **OK**.
+11. You have to disable data collection items for every policy by clicking on the policy in the left pane. You then need to check the box next to **Sample data item** click **Delete data collection items** and then click **OK**.
 
 ## Prepare the CM app for deployment
 
-1.  In the command prompt, run the following command to unpack the app and extract the content into a new subfolder named appx and create a copy so that you don’t modify the original file.
+1. In the command prompt, run the following command to unpack the app. The command will extract the content into a new subfolder named appx and create a copy so that you don’t modify the original file.
 
-    ```
+    ```cmd
     makeappx unpack /l /p <app package name>.appx /d ./appx
     ren <app package name>.appx <app package name>.appx.original
     cd appx
     ```
 
-2.  In the appx folder, change the name of the file called CustomDataExample.xml to Custom.data
+2. In the appx folder, change the name of the file called CustomDataExample.xml to Custom.data
 
-3.  Open the Custom,data file and modify the parameters as necessary.
+3. Open the Custom,data file and modify the parameters as necessary.
 
-    |||
-    |-|-|
-    |MIMCM URL|The FQDN of the portal you used to configure CM. For example, https://mimcmServerAddress/certificatemanagement|
-    |ADFS URL|If you will be using AD FS, insert your AD FS URL. For example, https://adfsServerSame/adfs|
-    |PrivacyUrl|You can include an URL to a web page explaining what you do with the user details collected for certificate enrollment.|
-    |SupportMail|You can include an email address for support issues.|
-    |LobComplianceEnable|You can set this to true or false. By default it's set to true.|
-    |MinimumPinLength|By default it's set to 6.|
-    |NonAdmin|You can set this to true or false. By default it's set to false. Only modify this if you want users who are not admins on their computers to be able enroll and renew certificates.|
 
-4.  Save the file and exit the editor.
+   |Parameter                     |Description                                                                                                                                                                                                         |
+   |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |      MIMCM URL      |                                              The FQDN of the portal you used to configure CM. For example, https://mimcmServerAddress/certificatemanagement                                              |
+   |      ADFS URL       | If you will be using AD FS, insert your AD FS URL. For example, `https://adfsServerSame/adfs` </br> If ADFS isn’t used, configure this setting with an empty string.  For example,  ```<ADFS URL=""/>``` |
+   |     PrivacyUrl      |                                         You can include an URL to a web page explaining what you do with the user details collected for certificate enrollment.                                          |
+   |     SupportMail     |                                                                           You can include an email address for support issues.                                                                           |
+   | LobComplianceEnable |                                                                     You can set this to true or false. By default it's set to true.                                                                      |
+   |  MinimumPinLength   |                                                                                        By default it's set to 6.                                                                                         |
+   |      NonAdmin       |           You can set this to true or false. By default it's set to false. Only modify this if you want users who are not admins on their computers to be able enroll and renew certificates.            |
 
-5.  Signing the package creates a signing file, so you have to delete the original signing file named AppxSignature.p7x.
+   > [!IMPORTANT]
+   > A value must be specified for the ADFS URL. If no value is specified the Modern App will error out on first usage.
+4. Save the file and exit the editor.
 
-6.  The AppxManifest.xml file specifies the subject name of the signing certificate. Open this file to edit it.
+5. Signing the package creates a signing file, so you have to delete the original signing file named AppxSignature.p7x.
 
-7.  You need to obtain a signing certificate before starting this section. See below, Enabling smartcard renewal for non-admins in MIM 2016 Certificate Manager, step 1.
+6. The AppxManifest.xml file specifies the subject name of the signing certificate. Open this file to edit it.
 
-8.  In the &lt;Identity&gt; element, modify the value of the Publisher attribute to be identical to the subject listed in your signing certificate, for example “CN=SUBJECT”.
+7. You need to obtain a signing certificate before starting this section. See below, Enabling smartcard renewal for non-admins in MIM 2016 Certificate Manager, step 1.
+
+8. In the &lt;Identity&gt; element, modify the value of the Publisher attribute to be identical to the subject listed in your signing certificate, for example “CN=SUBJECT”.
 
 9. Save the file and exit the editor.
 
 10. In the command prompt, run the following command to repack and sign the .appx file.
 
-    ```
+    ```cmd
     cd ..
     makeappx pack /l /d .\appx /p <app package name>.appx
     ```
     where app package name is the same name you used when you created the copy.
 
-    ```
+    ```cmd
     signtool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.ap
     px
     ```
@@ -152,110 +159,119 @@ Make sure when you create a profile template to set it to create/destroy the vSC
 
 11. To work with AD FS Authentication:
 
-    -   Open the Virtual Smart Card application. This makes it easier for you to find the values needed for the next step.
+    - Open the Virtual Smart Card application. This makes it easier for you to find the values needed for the next step.
 
-    -   To add the application as a client onto the AD FS server and configure CM on the server, on the AD FS server, open Windows PowerShell and run the command `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    - To add the application as a client onto the AD FS server and configure CM on the server, on the AD FS server, open Windows PowerShell and run the command `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
 
-        The following is the ConfigureMimCMClientAndRelyingParty.ps1 script:
+       The following is the ConfigureMimCMClientAndRelyingParty.ps1 script:
 
-        ```
-        # HELP
+      ```PowerShell
+       # HELP
 
-        <#
-        .SYNOPSIS
-                        Configure ADFS for CM client app and server.
-        .DESCRIPTION
-           What the Script does:
-                                        a. Registers the MIM CM client app on the ADFS server.
-                                        b. Registers the MIM CM server relying party (Tells the ADFS server that it issues tokens for the CM server).
-                        For parameter information, see 'get-help -detailed'
-        .PARAMETER redirectUri
-                        The redirectUri for CM client app. Will be added to ADFS server.
-                        It can be found as follows:
-                        1. Open the settings panel. Under settings, there is a "Redirect Uri" text box (an ADFS server address must be configured in order for the text to display).
-                        2. Open MIM CM client app. Navigate to 'C:\Users\<your_username>\AppData\Local\Packages\CmModernAppv.<version>\LocalState', and open 'Logs_Virtual Smart Card Certificate Manager_<version>'. Search for "Redirect URI".
-        .PARAMETER serverFqdn
-                        Your deployed MIM CM server’s FQDN.
-        .EXAMPLE
-           .\ConfigureMimCMClientAndRelyingParty.ps1 -redirectUri ms-app://s-1-15-2-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789/ -serverFqdn WIN-TRUR24L4CFS.corp.cmteam.com
-        #>
+       <#
+       .SYNOPSIS
+                       Configure ADFS for CM client app and server.
+       .DESCRIPTION
+          What the Script does:
+                                       a. Registers the MIM CM client app on the ADFS server.
+                                       b. Registers the MIM CM server relying party (Tells the ADFS server that it issues tokens for the CM server).
+                       For parameter information, see 'get-help -detailed'
+       .PARAMETER redirectUri
+                       The redirectUri for CM client app. Will be added to ADFS server.
+                       It can be found as follows:
+                       1. Open the settings panel. Under settings, there is a "Redirect Uri" text box (an ADFS server address must be configured in order for the text to display).
+                       2. Open MIM CM client app. Navigate to 'C:\Users\<your_username>\AppData\Local\Packages\CmModernAppv.<version>\LocalState', and open 'Logs_Virtual Smart Card Certificate Manager_<version>'. Search for "Redirect URI".
+       .PARAMETER serverFqdn
+                       Your deployed MIM CM server’s FQDN.
+       .EXAMPLE
+          .\ConfigureMimCMClientAndRelyingParty.ps1 -redirectUri ms-app://s-1-15-2-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789/ -serverFqdn WIN-TRUR24L4CFS.corp.cmteam.com
+       #>
 
-        # Parameter declaration
-        [CmdletBinding()]
-        Param(
+       # Parameter declaration
+       [CmdletBinding()]
+       Param(
+         [Parameter(Mandatory=$True)]
+          [string]$redirectUri,
+
           [Parameter(Mandatory=$True)]
-           [string]$redirectUri,
+          [string]$serverFqdn
+       )
 
-           [Parameter(Mandatory=$True)]
-           [string]$serverFqdn
-        )
+       Write-Host "Configuring ADFS Objects for OAuth.."
 
-        Write-Host "Configuring ADFS Objects for OAuth.."
+       #Configure SSO to get persistent sign on cookie
+       Set-ADFSProperties -SsoLifetime 2880
 
-        #Configure SSO to get persistent sign on cookie
-        Set-ADFSProperties -SsoLifetime 2880
+       #Configure Authentication Policy
+       #Intranet to use Kerberos
+       #Extranet to use U/P
 
-        #Configure Authentication Policy
-        #Intranet to use Kerberos
-        #Extranet to use U/P
+       #Create Client Objects
 
-        #Create Client Objects
+       Write-Host "Creating Client Objects..."
 
-        Write-Host "Creating Client Objects..."
+       $existingClient = Get-ADFSClient -Name "MIM CM Modern App"
 
-        $existingClient = Get-ADFSClient -Name "MIM CM Modern App"
+       if ($existingClient -ne $null)
+       {
+           Write-Host "Found existing instance of the MIM CM Modern App, removing"
+           Remove-ADFSClient -TargetName "MIM CM Modern App"
+           Write-Host "Client object removed"
+       }
 
-        if ($existingClient -ne $null)
-        {
-            Write-Host "Found existing instance of the MIM CM Modern App, removing"
-            Remove-ADFSClient -TargetName "MIM CM Modern App"
-            Write-Host "Client object removed"
-        }
+       Write-Host "Adding Client Object for MIM CM Modern App client"
+       Add-ADFSClient -Name "MIM CM Modern App" -ClientId "70A8B8B1-862C-4473-80AB-4E55BAE45B4F" -RedirectUri $redirectUri
+       Write-Host "Client Object for MIM CM Modern App client Created"
 
-        Write-Host "Adding Client Object for MIM CM Modern App client"
-        Add-ADFSClient -Name "MIM CM Modern App" -ClientId "70A8B8B1-862C-4473-80AB-4E55BAE45B4F" -RedirectUri $redirectUri
-        Write-Host "Client Object for MIM CM Modern App client Created"
+       #Create Relying Parties
+       Write-Host "Creating Relying Party Objects"
 
-        #Create Relying Parties
-        Write-Host "Creating Relying Party Objects"
+       $existingRp = Get-ADFSRelyingPartyTrust -Name "MIM CM Service"
+       if ($existingRp -ne $null)
+       {
+           Write-Host "Found existing instance of the MIM CM Service RP, removing"
+           Remove-ADFSRelyingPartyTrust -TargetName "MIM CM Service"
+           Write-Host "RP object Removed"
+       }
 
-        $existingRp = Get-ADFSRelyingPartyTrust -Name "MIM CM Service"
-        if ($existingRp -ne $null)
-        {
-            Write-Host "Found existing instance of the MIM CM Service RP, removing"
-            Remove-ADFSRelyingPartyTrust -TargetName "MIM CM Service"
-            Write-Host "RP object Removed"
-        }
+       $authorizationRules =
+       "@RuleTemplate = `"AllowAllAuthzRule`"
+       => issue(Type = `"http://schemas.microsoft.com/authorization/claims/permit`", Value = `"true`");"
 
-        $authorizationRules =
-        "@RuleTemplate = `"AllowAllAuthzRule`"
-        => issue(Type = `"http://schemas.microsoft.com/authorization/claims/permit`", Value = `"true`");"
+       $issuanceRules =
+       "@RuleTemplate = `"LdapClaims`"
+       @RuleName = `"Emit UPN and common name`"
+       c:[Type == `"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`", Issuer == `"AD AUTHORITY`"]
+       => issue(store = `"Active Directory`", types =
+       (`"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`",
+       `"http://schemas.xmlsoap.org/claims/CommonName`"), query =
+       `";userPrincipalName,cn;{0}`", param = c.Value);
 
-        $issuanceRules =
-        "@RuleTemplate = `"LdapClaims`"
-        @RuleName = `"Emit UPN and common name`"
-        c:[Type == `"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`", Issuer == `"AD AUTHORITY`"]
-        => issue(store = `"Active Directory`", types =
-        (`"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`",
-        `"http://schemas.xmlsoap.org/claims/CommonName`"), query =
-        `";userPrincipalName,cn;{0}`", param = c.Value);
+       @RuleTemplate = `"PassThroughClaims`"
+       @RuleName = `"Pass through Windows Account Name`"
+       c:[Type ==`"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`"] => issue(claim = c);"
 
-        @RuleTemplate = `"PassThroughClaims`"
-        @RuleName = `"Pass through Windows Account Name`"
-        c:[Type ==`"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`"] => issue(claim = c);"
+       Write-Host "Creating RP Trust for MIM CM Service"
+       Add-ADFSRelyingPartyTrust -Name "MIM CM Service" -Identifier ("https://"+$serverFqdn+"/certificatemanagement") -IssuanceAuthorizationRules $authorizationRules -IssuanceTransformRules $issuanceRules
+       Write-Host "RP Trust for MIM CM Service has been created"
+       ```
 
-        Write-Host "Creating RP Trust for MIM CM Service"
-        Add-ADFSRelyingPartyTrust -Name "MIM CM Service" -Identifier ("https://"+$serverFqdn+"/certificatemanagement") -IssuanceAuthorizationRules $authorizationRules -IssuanceTransformRules $issuanceRules
-        Write-Host "RP Trust for MIM CM Service has been created"
-        ```
+    - Update the values of redirectUri and serverFQDN.
 
-    -   Update the values of redirectUri and serverFQDN.
+    - To find the redirectUri, in the Virtual Smart Card application, open the application settings panel, click **Settings**, and the redirect URI should be listed under the AD FS server address bar. The URI will only appear if an ADFS server address is configured.
 
-    -   To find the redirectUri, in the Virtual Smart Card application, open the application settings panel, click **Settings**, and the redirect URI should be listed under the AD FS server address bar. The URI will only appear if an ADFS server address is configured.
+    - The serverFQDN, is the MIMCM server full computer name only.
 
-    -   The serverFQDN, is the MIMCM server full computer name only.
-
-    -   For help with the **ConfigureMIimCMClientAndRelyingParty.ps1** script, run `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    - For help with the **ConfigureMIimCMClientAndRelyingParty.ps1** script, run: </br> 
+      ```Powershell
+      get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
+      ```
 
 ## Deploy the app
-When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), or [Intune](https://technet.microsoft.com/library/dn613839.aspx) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.
+
+When you set up the CM app, in the Download Center, download the file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip and extract all its contents. The .appx file is the installer. You can deploy it in any way you ordinarily deploy Windows store apps, using [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), or [Intune](/previous-versions/windows/it-pro/windows-8.1-and-8/dn613839(v=ws.11)) to sideload the app so that users will have to access it through the Company Portal or will get it pushed directly to their machines.
+
+## Next steps
+
+- [Configuring Profile Templates](https://technet.microsoft.com/library/cc708656)
+- [Managing Smart Card Applications](https://technet.microsoft.com/library/cc708681)

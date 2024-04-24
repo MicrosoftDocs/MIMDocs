@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Request Operations | Microsoft Docs
-description:
+title: Request operations | Microsoft Docs
+description: Articles related to request operations in the MIM CM REST API.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 114c725e-8779-443b-bf1e-4fba8ee2be9d
 
 # optional metadata
@@ -26,10 +25,9 @@ ms.suite: ems
 
 ---
 
-# Request Operations
+# Request operations
+The following sections describe the request operations in the Microsoft Identity Manager (MIM) Certificate Management (CM) REST API:
 
-##In This Section
-
-- [Create Request](create-request.md)
-- [Get Request](get-request.md)
-- [Cancel, Abandon, or Complete a Request](cancel-abandon-complete-request.md)
+- [Create request](create-request.md)
+- [Get request](get-request.md)
+- [Cancel, abandon, or complete a request](cancel-abandon-complete-request.md)

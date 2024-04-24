@@ -2,13 +2,13 @@
 title: Step 8 PAM deployment verification
 description: The scripted deployment of PAM includes verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
-ms.date: 01/10/2017
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata
@@ -25,18 +25,18 @@ ms.suite: ems
 
 # Step 8 Pam deployment verification
 
->[!div class="step-by-step"]
-[« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Addendum »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Addendum »](sp1-pam-deployment-addendum.md)
 
 The Deployment package comes with verification scripts that can execute a PAM scenario to validate the PAM deployment is working as expected.
-To use the Deployment Verification, modify the PAMDeploymentConfig.xml section called <PamValidation/> .
+To use the Deployment Verification, modify the PAMDeploymentConfig.xml section called \<PamValidation/\> .
 
 >[!NOTE]
 >Validation requires a Client machine domain joined to the CORP Domain with the PAM client side components installed. Please see Addendum for scripts on how to install a client.
 
-The client machine name must be updated in the <PAMValidationClient/> tag of the PAMDeploymentConfig.xml
-The rest of the data in the <PAMValidation/> node needs to be edited only if it conflicts with existing users/groups, as this validation will attempt to create them.
+The client machine name must be updated in the \<PAMValidationClient/\> tag of the PAMDeploymentConfig.xml
+The rest of the data in the \<PAMValidation/\> node needs to be edited only if it conflicts with existing users/groups, as this validation will attempt to create them.
 Use the following steps to perform validation:
 
 Step 1:
@@ -70,7 +70,7 @@ Step 3:
 
 This step will prompt you for the CORPAdmin credential. Once provided, it will add the required users to the ‘Remote Desktop Users’ and ‘Remote Management Users’ groups.
 On the CORP Client, use the following command to open PowerShell as the PRIV user you are validating. </br></br>
-**Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+`Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe`  </br></br>
 From the PowerShell window, type:
 
 1. cd $env:SYSTEMDRIVE\PAM
@@ -82,6 +82,6 @@ From the PowerShell window, type:
   Initially the user will not have access to the resource. After the user is Just-In-Time added to the role, the user is granted access. Once the request duration expires, the user again will not have access.
   The script uses the default (11 minutes) for the request to expire.
 
->[!div class="step-by-step"]
-[« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Addendum »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Step 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Addendum »](sp1-pam-deployment-addendum.md)

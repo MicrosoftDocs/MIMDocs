@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Cancel, Abandon, or Complete a Request | Microsoft Docs
-description:
+title: Cancel, abandon, or complete a request | Microsoft Docs
+description: Changing the status of a MIM CM request.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: e29e0068-7602-455e-8a3a-690da9ca8eb5
 
 # optional metadata
@@ -26,46 +25,53 @@ ms.suite: ems
 
 ---
 
-# Cancel, Abandon, or Complete a Request
-Mark a MIM CM request as completed, canceled, or abandoned.
+# Cancel, abandon, or complete a request
+Mark a Microsoft Identity Manager (MIM) Certificate Management (CM) request as completed, canceled, or abandoned.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 PUT     |/CertificateManagement/api/v1.0/requests/{id}
 
-###URL Parameters
+### URL parameters
+
 Property| Description
 ---------|--------
 id| Required. The GUID of the request to complete.
 
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-The request body contains the following properties.
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Request body
+The request body contains the following properties:
 
 Property | Description
 ---------|-----------
-status | The status to set the request to. Possible values are: "Completed", "Canceled", or "Abandoned".
+status | The status to set the request to. The possible values are "Completed," "Canceled," or "Abandoned."
 
 
-##Response
-###Response Codes
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
-200     | OK
+200 | OK
 204 | No Content
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
-On success, returns a [Microsoft.Clm.Shared.Requests.Request](https://msdn.microsoft.com/library/microsoft.clm.shared.requests.request.aspx) object with the following properties that describes the MIM CM request that has been marked as completed:
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
+On success, returns a [Microsoft.Clm.Shared.Requests.Request](https://msdn.microsoft.com/library/microsoft.clm.shared.requests.request.aspx) object. The object describes the MIM CM request that has been marked as completed. The object contains the following properties:
 
 Name | Description
 -----|------------
@@ -81,7 +87,7 @@ NewProfileUuid | The identity of the new software profile that is produced by th
 NewSmartcardUuid | The identity of the new smart card that is assigned by the MIM CM request.
 OldProfileUuid | The identity of the software profile for which the MIM CM request was created.
 OldSmartcardUuid | The identity of the smart card for which the MIM CM request was created.
-OriginatorUserUuid | The identity of the user who originated the MIM CM request
+OriginatorUserUuid | The identity of the user who originated the MIM CM request.
 Priority | The MIM CM request's priority.
 ProfileTemplateUuid | The identity of the profile template for which the MIM CM request was created.
 RequestType | The type of the MIM CM request.
@@ -91,18 +97,22 @@ Submitted | The time that the MIM CM request was submitted.
 TargetUserUuid | The identity of the target user for the MIM CM request.
 Uuid | The identifier for the MIM CM request.
 
-##Example
+## Example
+This section provides an example to mark a request as completed.
 
-###Request
+### Example: Request
+
 ```
 PUT /certificatemanagement/api/v1.0/requests/a9b4b42c-cc50-4c9b-89d1-bbc0bcd5a099 HTTP/1.1
 
 
 {
-    “status”:”Completed”
+    "status":"Completed"
 }
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 
@@ -131,8 +141,9 @@ HTTP/1.1 200 OK
     "IsEnrollmentAgent":false,
     "IsDataCollectionComplete":false
 }
-```       
-##See Also
+```
 
-- [Microsoft.Clm.Provision.ExecuteOperations.Complete Method](https://msdn.microsoft.com/library/microsoft.clm.provision.executeoperations.complete.aspx)
-- [Microsoft.Clm.Shared.Requests.Request](https://msdn.microsoft.com/library/microsoft.clm.shared.requests.request.aspx)
+## See also
+
+- [Microsoft.Clm.Provision.ExecuteOperations.Complete method](https://msdn.microsoft.com/library/microsoft.clm.provision.executeoperations.complete.aspx)
+- [Microsoft.Clm.Shared.Requests.Request class](https://msdn.microsoft.com/library/microsoft.clm.shared.requests.request.aspx)

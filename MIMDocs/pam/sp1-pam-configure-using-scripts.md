@@ -4,13 +4,13 @@
 title: Configure PAM using Scripts
 description: This article is part of the series for configuring PAM using scripts. It covers the modification of the XML file that will be used by the PAM deployment scripts.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
-ms.date: 01/10/2017
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata
@@ -33,16 +33,16 @@ The steps below assume that a PRIV Domain is already setup, for instructions to 
 
 steps:
 
-1. Unzip the compressed file “PAMDeploymentScripts.zip” to the %SYSTEMDRIVE%\PAM folder on all machines.
-2. On any one of the machines, open the **PAMDeploymentConfig.xml** file and update the details using the chart below or guidance within the XML file itself. If the CORP and PRIV forests are already setup, all you need to update are the **DNSName** and the **NetbiosName.**
-3. In the Roles section, update the **service account**, **machine details**, and the **location of the installation binaries** for SQL, SharePoint and MIM roles.
+1. Download [the PAM deployment scripts](https://www.microsoft.com/download/details.aspx?id=53941)
+2. Unzip the compressed file “PAMDeploymentScripts.zip” to the %SYSTEMDRIVE%\PAM folder on all machines.
+3. On any one of the machines, open the **PAMDeploymentConfig.xml** file and update the details using the chart below or guidance within the XML file itself. If the CORP and PRIV forests are already setup, all you need to update are the **DNSName** and the **NetbiosName.**
+4. In the Roles section, update the **service account**, **machine details**, and the **location of the installation binaries** for SQL, SharePoint and MIM roles.
     1. The MIM binary location must point to the directory containing the “Service and Portal” folder. The Client binary location must point to the directory containing the “Add-ins and Extensions.msi”.
 
-4. If this is a PRIVOnly environment, the PRIVOnly tag must be set to True.
+5. If this is a PRIVOnly environment, in which there is no CORP forest, then the PRIVOnly tag must be set to True.
     1. For PRIVOnly environments, update the **DNSName** and **NetbiosName** of the PRIV Domain to match the CORP domain. Make sure the machine suffixes are correct for the machines where SQL, SharePoint, and MIM will be installed, as the default template file assumes a CORP and PRIV configuration.
-    2. Click here for more details about PRIVOnly environments.
 
-5. Copy the same PAMDeploymentConfig.xml to %SYSTEMDRIVE%\PAM folder on all the machines, CORPDC, PRIVDC, PAM Server, SQL Server, and SharePoint servers.
+6. Copy the same PAMDeploymentConfig.xml to %SYSTEMDRIVE%\PAM folder on all the machines, CORPDC, PRIVDC, PAM Server, SQL Server, and SharePoint servers.
 
 
 ## Deployment worksheet
@@ -69,8 +69,8 @@ Before you proceed update the PAMDeploymentConfig.xml and place the updated copy
 | CORPDC  | CORP Domain Admin   | Import-module .\PAMValidation.psm1 ; Create-PAMValidationCORPDCConfig   |
 | PAMServer   | MIMAdmin  | Import-module .\PAMValidation.psm1 ; Move-PAMValidationUsersToPAM  |
 | CORPClient  | CORP User (local admin)   |   Import-module .\PAMValidation.psm1 ; Enable-PAMUsersCORPClientRemote |
-|  CORPClient | <PRIV>\PRIV.pamRequestor user and in the case of PRIVOnly : <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+|  CORPClient | `<PRIV>\PRIV.pamRequestor` user and in the case of PRIVOnly : `<CORP>\pamrequestor`   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
 
 
->[!div class="step-by-step"]
-[Start »](sp1-step1-configuring-priv-domain.md)
+> [!div class="step-by-step"]
+> [Start »](sp1-step1-configuring-priv-domain.md)

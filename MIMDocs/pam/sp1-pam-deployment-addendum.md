@@ -2,13 +2,13 @@
 title: Addendum
 description: This is the Addendum to the documents covering the scripted deployment of PAM. It covers configuring the PRIV and CORP domains as well as a setting up a client to do the validation and information for how to request assistance.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
-ms.date: 01/10/2017
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata
@@ -26,13 +26,13 @@ ms.suite: ems
 
 ## Addendum 1 Setting up the PRIV domain
 
-After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Please update the DNSName, the NetbiosName, the DC name, the Database/Log Path & Sysvol Path. Also update the Domain & ForestMode. If you are testing Windows Server Technical Preview 5, please set the DomainMode & ForestMode to WinThreshold.
+After unzipping the compressed file into the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml to provide details of the PRIV forest. Update the DNSName, the NetbiosName, the DC name, the Database/Log Path & sysvol folder Path. Also update the Domain & ForestMode to Windows Server 2016 (WinThreshold).
 
-1. Login to the PRIV domain DC as Administrator
+1. Log in to the PRIV domain DC as Administrator
 2. Run PowerShell as Administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
-5. select menu option 9 (Priv Forest setup)
+5. select menu option 9 (PRIV Forest setup)
 
 
 The DC will reboot automatically after completion. The directory Services Restore Mode (DSRM) administrator password must match the following criteria:
@@ -44,9 +44,9 @@ The DC will reboot automatically after completion. The directory Services Restor
 
 ## Addendum 2 Setting up the CORP domain
 
-If you are just starting off with PAM, and want to setup a test environment, the script also allows configuration of a CORP Domain. After unzipping the compressed file to the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml adding the details of the CORP forest. Update the DNSName, NetbiosName, DC name, Database/Log Path, and Sysvol Path. The functional level should be at least Windows Server 2012 R2.
+If you are just starting off with PAM, and want to set up a test environment, the script also allows configuration of a CORP Domain. After unzipping the compressed file to the $env:SYSTEMDRIVE\PAM folder, edit the PAMDeploymentConfig.xml adding the details of the CORP forest. Update the DNSName, NetbiosName, DC name, Database/Log Path, and sysvol folder Path. The functional level should be at least Windows Server 2012 R2.
 
-1. Login to the CORP domain DC as Administrator
+1. Log in to the CORP domain DC as Administrator
 2. Run PowerShell as Administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. import-module .\PAMDeployment.ps1
@@ -57,14 +57,14 @@ The domain controller will reboot automatically upon completion
 ## Addendum 3 Setting up a CORP client to do the validation
 
 The ClientBinaryLocation in the config file must point to the location where setup.exe is located.
-Login to the client as a local administrator and run the following commands in an elevated PowerShell window:
+Log in to the client as a local administrator and run the following commands in an elevated PowerShell window:
 
 1. cd $env:SYSTEMDRIVE\PAM
 2. Import-module .\PAMDeployment.ps1
 3. Select Menu Option 7 (MIM PAM Client Setup)
 
 
-If the machine is not domain joined, it will prompt for CORP admin credentials to perform domain join. The machine must be rebooted after domain join. Login to the client again as local administrator and run the following commands from an elevated PowerShell window:
+If the machine is not domain joined, it will prompt for CORP admin credentials to perform domain join. The machine must be rebooted after domain join. Log in to the client again as local administrator and run the following commands from an elevated PowerShell window:
 
 1. cd $env:SYSTEMDRIVE\PAM
 2. Import-module .\PAMDeployment.ps1
@@ -74,4 +74,4 @@ Proceed with Step 8 provided above.
 
 ## Addendum 4 if something goes wrong
 
-All script logs are saved in %AppData%\MIMPAMInstall. Please compress the folder into a Zip file and email it to [mim2016@microsoft.com](mailto:mim2016@microsoft.com) along with details of the operation and the error.
+All script logs are saved in %AppData%\MIMPAMInstall. If needed by support, compress the folder into a Zip file along with details of the operation and the error.

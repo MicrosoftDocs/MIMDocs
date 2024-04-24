@@ -1,14 +1,14 @@
 ---
 title: Step 5 Installing/Configuring PAM
-description: This is step 5 of configuring Privileged Identity Manager using scripts and it covers the deployment steps on the PAM server.
+description: This is step 5 of configuring Microsoft Identity Manager using scripts and it covers the deployment steps on the PAM server.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
-ms.date: 01/10/2017
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata
@@ -24,9 +24,9 @@ ms.suite: ems
 ---
 # Step 5 Installing/configuring PAM
 
->[!div class="step-by-step"]
-[« Step 4](sp1-step4-configuring-sharepoint.md)
-[Step 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Step 4](sp1-step4-configuring-sharepoint.md)
+> [Step 6 »](sp1-step6-setup-pam-trust.md)
 
 For a domain joined PAMServer, login as MIMAdmin, otherwise login as a local administrator.
 1. Run PowerShell as Administrator
@@ -44,9 +44,9 @@ After the PAMServer reboots, log back into the machine with the MIMAdmin account
 3. .\PAMDeployment.ps1
 4. select menu option 5 (MIM PAM Setup)
 
-  When prompted, enter the password the MIM Monitor Account, MIM Component Account, MIM MA Account, MIM Service Account, MIM Admin Account and the SharePoint Account.
-  Once installation completes, the machine will reboot.
+   When prompted, enter the password the MIM Monitor Account, MIM Component Account, MIM MA Account, MIM Service Account, MIM Admin Account and the SharePoint Account.
+   Once installation completes, the machine will reboot.
 
->[!div class="step-by-step"]
-[« Step 4](sp1-step4-configuring-sharepoint.md)
-[Step 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Step 4](sp1-step4-configuring-sharepoint.md)
+> [Step 6 »](sp1-step6-setup-pam-trust.md)

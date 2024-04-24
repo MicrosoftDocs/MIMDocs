@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Certificate Operations | Microsoft Docs
-description:
+title: Certificate operations | Microsoft Docs
+description: Articles related to certificate operations in the MIM CM REST API.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 8935263a-4399-407f-8032-abeddbe6c5b0
 
 # optional metadata
@@ -26,8 +25,8 @@ ms.suite: ems
 
 ---
 
-# Certificate Operations
-##In This Section
+# Certificate operations
+The following sections describe the certificate operations in the Microsoft Identity Manager (MIM) Certificate Management (CM) REST API:
 
-- [Get Smartcard or Profile Certificates](get-smartcard-profile-certificates.md)
-- [Get User Certificates](get-user-certificates.md)
+- [Get smart card or profile certificates](get-smartcard-profile-certificates.md)
+- [Get user certificates](get-user-certificates.md)

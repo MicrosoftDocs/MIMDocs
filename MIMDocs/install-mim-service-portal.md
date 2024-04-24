@@ -1,45 +1,43 @@
 ---
 # required metadata
 
-title: Install Microsoft Identity Manager Service and Portal | Microsoft Docs
+title: Install Microsoft Identity Manager Service and Portal
 description: Get the steps to configure and install MIM Service and Portal for Microsoft Identity Manager 2016
-keywords:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
-ms.topic: get-started-article
+services: active-directory
+documentationcenter: ''
+keywords: MIM
+author: EugeneSergeev
+ms.author: esergeev
+reviewer: markwahl-msft
+manager: amycolannino
+ms.date: 03/18/2021
+ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: security
+ms.tgt_pltfrm: na
+ms.workload: identity
+
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
-
 # Install MIM 2016: MIM Service and Portal
 
->[!div class="step-by-step"]
-[« MIM Synchronization Service](install-mim-sync.md)
-[Synchronize databases »](install-mim-sync-ad-service.md)
-
+> [!div class="step-by-step"]
+> [« MIM Synchronization Service](install-mim-sync.md)
+> [Synchronize databases »](install-mim-sync-ad-service.md)
+ 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **mimservername**
 > - Domain name - **contoso**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 > - Service account name - **MIMService**
 
-If you didn't set up the MIM installation package in the last step, go back and install the Microsoft Identity Manager 2016 components before continuing.
+## Before you begin
 
+- This guide is intended for installing Volume License edition of MIM. If your organization has Microsoft Entra ID P1 or P2 subscription or is using Microsoft Entra ID, then you will need to instead follow [the guide for MIM Service in organizations licensed for Microsoft Entra ID P1 or P2](install-mim-service-portal-azure-ad-premium.md).
 
 ## Configure MIM Service and Portal for installation
 
@@ -55,103 +53,95 @@ If you didn't set up the MIM installation package in the last step, go back and 
 
 6. On the **Configure the MIM database connection** page, choose **Create a new database**.
 
-    ![Configure the MIM database connection image](media/MIM-Install10.png)
+    ![Configure the MIM database connection image](media/install-mim-service-portal/MIM_Install10.png)
 
-7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server**. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
+7. On the **Configure mail server connection**, enter the name of your Exchange server as **Mail Server** or you can use **O365 Mailbox**. If you do not have a mail server configured, use **localhost** as the mail server name and uncheck the top two checkboxes. Click **Next**.
+    >[!NOTE]
+    >MIM 2016 SP2 and later: if you are using Group Managed Service Accounts, you must check **Use different user for Exchange** checkbox even if you do not plan to use Exchange.
+    
+    >[!NOTE]
+    >When **Use Exchange Online** option is selected, in order to enable MIM Service to process approval responses from the MIM Outlook Add-On, you need to set the registry key HKLM\SYSTEM\CurrentControlSet\Services\FIMService value of PollExchangeEnabled to 1 after installation.
 
-    ![Configure mail server connection image](media/MIM-Install11.png)
+    ![Configure mail server connection image](media/install-mim-service-portal/MIM_Install11.png)
 
 8. Specify that you want to generate a new self-signed certificate, or select the relevant certificate.
 
-9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example *Pass@word1*, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
+9. Specify the Service Account name to use, for example *MIMService*, and the Service Account password, for example <em>Pass@word1</em>, your Service Account domain, for example *contoso* and the Service Email Account, for example *contoso*.
+    >[!NOTE]
+    >MIM 2016 SP2 and later: if you are using Group Managed Service Accounts, you will need to ensure the  the **$** character is at the end of the Service Account Name, e.g. MIMService$, and leave the Service Account Password field empty.
 
-    ![Configure the MIM service account image](media/MIM-Install12.png)
+    ![Configure the MIM service account image](media/install-mim-service-portal/MIM_Install12.png)
 
 10. Note that a warning may appear that the Service Account is not secure in its current configuration.
 
-11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMsync*.
+11. Accept the defaults for the Synchronization Server location, and specify the MIM Management Agent account as *contoso\MIMMA*.
+    >[!NOTE]
+    >MIM 2016 SP2 and later: if you plan to use MIM Synchronization Service Group Managed Service Account in MIM Sync, and enable 'Use MIM Sync account' feature, then enter MIM Synchronization Service gMSA name as the MIM MA account, e.g. *contoso\MIMSync$*.
 
-    ![Configure the MIM Service and Portal image](media/MIM-Install13.png)
+    ![Configure the MIM Service and Portal image](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Specify *CORPIDM* (this computer's name) as MIM Service server address for the MIM Portal.
 
-13. Specify *http://CorpIDM.contoso.local:82* as the SharePoint site collection URL.
+13. Specify `http://mim.contoso.com` as the SharePoint site collection URL.
 
-14. Specify *http://CorpIDM.contoso.local:8080* as the Password Registration URL.
+14. If not using Microsoft Entra ID for password reset, specify `http://passwordregistration.contoso.com` as the Password Registration  URL port 80, recommend updating later with SSL cert on 443.
 
-15. Specify *http://CorpIDM.contoso.local:8088* as the Password Reset URL.
+15. If not using Microsoft Entra ID for password reset, specify `http://passwordreset.contoso.com` as the Password Reset URL port 80, recommend updating later with SSL cert on 443.
 
 16. Select the checkbox to open ports 5725 and 5726 in the firewall, and the checkbox to grant all authenticated users access to MIM Portal.
 
-## Configure MIM Password Registration Portal
+<a name='configure-mim-password-registration-portal-optional-if-not-using-azure-ad-for-sspr'></a>
 
-1.  Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to *Pass@word1*.
+## Configure MIM Password Registration Portal (optional, if not using Microsoft Entra ID for SSPR)
 
-2.  Specify  *CORPIDM* as the Host Name for MIM Password Registration, and set the port to **8080**. Enable the **Open port in firewall** option.
+1. Set the service account name for SSPR Registration to *contoso\MIMSSPR* and its password to <em>Pass@word1</em>.
 
-    ![Enter configuration information used by IIS image](media/MIM-Install14.png)
+2. Specify *passwordregistration.contoso.com* as the Host Name for MIM Password Registration, and set the port to **80**. Enable the **Open port in firewall** option.
 
-3.  A warning will appear – read it and click **Next**.
+   ![Enter configuration information used by password registration web site image](media/install-mim-service-portal/MIM_Install14.png)
 
-4. In the next MIM Password Registration Portal configuration screen, specify  *http://CorpIDM.contoso.local* as the MIM Service Server Address for the Password Registration Portal.
+3. A warning will appear – read it and click **Next**.
 
-## Configure MIM Password Reset Portal
+4. In the next MIM Password Registration Portal configuration screen, specify  *mim.contoso.com* as the MIM Service Server Address for the Password Registration Portal.
 
-1.  Set the service account name for SSPR Registration to *Contoso\MIMSSPRService* and its password to *Pass@word1*.
+## Configure MIM Password Reset Portal (optional)
 
-2.  Specify  *CORPIDM* as the Host Name for MIM Password Reset Portal, and set the port to **8088**. Enable the **Open port in firewall** option.
+1. Set the service account name for SSPR Registration to *Contoso\MIMSSPR* and its password to <em>Pass@word1</em>.
 
-    ![Enter configuration information used by IIS image](media/MIM-Install15.png)
+2. Specify  *passwordreset.contoso.com* as the Host Name for MIM Password Reset Portal, and set the port to **80**. Enable the **Open port in firewall** option.
 
-3.  A warning will appear – read it and click **Next**.
+   ![Enter configuration information used by password reset web site](media/install-mim-service-portal/MIM_Install15.png)
 
-4. In the next MIM Password Registration Portal configuration screen, specify *CorpIDname  http://CorpIDname.domain.local* as the MIM Service Server Address for the Password Reset Portal.
+3. A warning will appear – read it and click **Next**.
+
+4. In the next MIM Password Registration Portal configuration screen, specify *mim.contoso.com* as the MIM Service Server Address for the Password Reset Portal.
 
 ## Install MIM Service and Portal
 
 When all pre-installation definitions are ready, click **Install** to begin installing the selected **Service and Portal** components.
+   ![MIM Service and Portal installation screen image - final](media/install-mim-service-portal-azure-ad-premium/install-screen.png)
+
+## Post-installation tasks
 
 After installation completes, verify that the MIM Portal is active.
 
-1. Launch Internet Explorer and connect to the MIM Portal on  *http://corpidm.contoso.local:82/identitymanagement*. Note that there may be a short delay on the first visit to this page.
+1. Launch Internet Explorer and connect to the MIM Portal on `http://mim.contoso.com/identitymanagement`. Note, that there may be a short delay on the first visit to this page.
+    - If necessary, authenticate as a user, that installed MIM Service and Portal, to Internet Explorer.
 
-    - If necessary, authenticate as *contoso\Administrator* to Internet Explorer.
+1. In Internet Explorer, open the **Internet Options**, change to the **Security** tab, and add the site to the **Local intranet** zone if it is not already there. Close the **Internet Options** dialog.
 
-2. In Internet Explorer, open the **Internet Options**, change to the **security** tab, and add the site to the **Local intranet** zone if it is not already there.  Close the **Internet Options** dialog.
+1. In Internet Explorer, open the **Settings**, change to the **Compatibility view settings** tab, and uncheck **Display Intranet Sites in Compatibility view** checkbox. Close **Compatibility View** dialog.
 
-3. Enable users to view their own entry in MIM.
+1. Enable non-administrators to access MIM Portal.
 
-    1.  Using Internet Explorer, in **MIM Portal**, click on **Management Policy Rules**.
-
-    2.  Search for the management policy rule, **User management: Users can read attributes of their own**.
-
-    3.  Select this management policy rule, uncheck **Policy is disabled**.
-
-    4.  Click **OK** and then click **Submit**.
-
-4.  Verify that the firewall allows incoming connections to TCP port 5725 and 5726.
-
-    1.  Launch **Administrative Tools » Windows Firewall** with **Advanced Security**.
-
-    2.  Click on **Inbound Rules**.
-
-    3.  Verify that the two following rules appear:
-
-        -   Forefront Identity Manager Service (STS).
-
-        -   Forefront Identity Manager Service (Webservice).
-
-    4.  Complete the wizard and close the **Windows Firewall** application.
-
-    5.  Launch **Control Panel » Network and Internet » View network status and tasks**.
-
-    6.  Verify that there is an active Network listed as contoso.local as a Domain network.
-
-    7.  Close **Control Panel**.
+   1. Using Internet Explorer, in **MIM Portal**, click on **Management Policy Rules**.
+   1. Search for the management policy rule, **User management: Users can read attributes of their own**.
+   1. Select this management policy rule, uncheck **Policy is disabled**.
+   1. Click **OK** and then click **Submit**.
 
 > [!NOTE]
-> Optional: At this point you can install MIM add-ins and extensions.
+> Optional: At this point you can install MIM add-ins and extensions and language packs.
 
->[!div class="step-by-step"]  
-[« MIM Synchronization Service](install-mim-sync.md)
-[Synchronize databases »](install-mim-sync-ad-service.md)
+> [!div class="step-by-step"]  
+> [« MIM Synchronization Service](install-mim-sync.md)
+> [Synchronize databases »](install-mim-sync-ad-service.md)

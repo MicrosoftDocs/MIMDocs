@@ -2,13 +2,13 @@
 title: Step 6 Setup the PAM trust
 description: Step 6 of configuring PAM using scripts. This section covers setting up the necessary trust between the corp and priv domains
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
-ms.date: 01/10/2017
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata
@@ -25,9 +25,9 @@ ms.suite: ems
 
 # Step 6 Set up the PAM trust
 
->[!div class="step-by-step"]
-[« Step 5](sp1-step5-configuring-pam.md)
-[Step 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [!div class="step-by-step"]
+> [« Step 5](sp1-step5-configuring-pam.md)
+> [Step 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 **This is not required for a PRIV only environment**
 Login to the PAMServer with the MIMAdmin account.
@@ -38,8 +38,8 @@ Login to the PAMServer with the MIMAdmin account.
 4. .\PAMDeployment.ps1
 5. select Menu option 6 (PAM trust setup)
 
-  When prompted, enter the credentials for the CORP admin account. After providing credentials, the trust will be established and the configuration is complete.
+   When prompted, enter the credentials for the CORP admin account. After providing credentials, the trust will be established and the configuration is complete.
 
->[!div class="step-by-step"]
-[« Step 5](sp1-step5-configuring-pam.md)
-[Step 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [!div class="step-by-step"]
+> [« Step 5](sp1-step5-configuring-pam.md)
+> [Step 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)

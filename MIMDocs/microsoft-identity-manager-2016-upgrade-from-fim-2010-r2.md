@@ -4,13 +4,13 @@
 title: Upgrade from FIM 2010 R2 to Microsoft Identity Manager 2016 | Microsoft Docs
 description: Learn how to upgrade your FIM 2010 R2 components, and then install the components that are new in MIM 2016.
 keywords:
-author: fimguy
+author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 02/13/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 
 # optional metadata
@@ -48,7 +48,7 @@ This guide assumes that you have the following already set up:
 
 2.  On each server where FIM 2010 R2 components are installed – e.g. *CORPIDM* – log in as Contoso\Administrator. In this  deployment example, Administrative rights are needed to upgrade FIM 2010 R2 to **MIM**.
 
-3.  Download or unpack the MIM software.
+3.  Download or unpack the MIM software.  If you do not have this software, see [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md).
 
 ## Upgrade the Synchronization Service
 
@@ -58,7 +58,7 @@ This guide assumes that you have the following already set up:
 
 3.  Open the **Services** console, locate **Forefront Identity Manager Synchronization Service**, and stop it.
 
-    ![Services console image](media/MIM-UpgFIM1.PNG)
+    ![Screenshot of the services console showing the Forefront Identity Manager Synchronization Service.](media/MIM-UpgFIM1.PNG)
 
 4.  Run the **MIM Synchronization Service installer**. The installer will detect the existing Sync version and suggest an upgrade. Click on the **Update** button to proceed.
 
@@ -94,7 +94,7 @@ This guide assumes that you have the following already set up:
 
 2.  Open the **Services** console, locate **Forefront Identity Manager Service**, and stop it.
 
-    ![Services console image](media/MIM-UpgFIM9.PNG)
+    ![Screenshot of the services console showing Forefront Identity Manager Service.](media/MIM-UpgFIM9.PNG)
 
 3.  Run the MIM Service and Portal installer. Click on the **Install** button to proceed.
 

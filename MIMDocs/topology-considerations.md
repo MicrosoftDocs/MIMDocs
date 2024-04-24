@@ -6,11 +6,11 @@ description: Understand the MIM 2016 components, and get suggestions for how to 
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/21/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 
 # optional metadata
@@ -29,6 +29,11 @@ ms.suite: ems
 # Topology considerations
 You can deploy Microsoft Identity Manager (MIM) components on the same server or among multiple servers in multiple configurations. The topology that you select for your deployment affects the performance that you can achieve from MIM. This article introduces multiple deployment topologies that you may consider implementing.
 
+
+> [!NOTE]
+> These options are applicable to deployments using solely MIM Sync, MIM Service and MIM Portal for identity management.  Deployments using MIM CM, MIM BHOLD Suite, or for privileged access management have different deployment options.
+
+
 ## MIM components
 When designing your deployment topology, it's important to know what each component does and how they all interact.
 
@@ -41,10 +46,10 @@ The following table shows the options for hosting each of the MIM components. Th
 
 | | MIM Portal | MIM Service | MIM Sync Service | SQL Server |
 | --- | --- | --- | --- | --- |
-| Same computer | Yes | Yes | Yes | Yes |
-| Separate server | Yes | Yes | Yes | Yes |
-| Network Load Balancing cluster | Yes | Yes | | |
-| Server cluster | | | | Yes |
+| **Same computer** | Yes | Yes | Yes | Yes |
+| **Separate server** | Yes | Yes | Yes | Yes |
+| **Network Load Balancing cluster** | Yes | Yes | | |
+| **Server cluster** | | | | Yes |
 
 
 ## Multitier topology
@@ -67,4 +72,5 @@ As with the standard multitier topology, you can increase MIM Portal performance
 The computers running SQL Server that host the MIM Synchronization Service and the MIM Service database will dramatically influence the overall performance of your MIM deployment. Therefore, follow the recommendations in SQL Server documentation for optimizing database performance. See the following documents for more information:
 
 ## See also
-- The downloadable [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) goes into more detail about a test build and performance testing results.
+
+- The downloadable [Forefront Identity Manager (FIM) 2010 Capacity Planning Guide](https://www.microsoft.com/en-us/download/details.aspx?id=7437) goes into more detail about a test build and performance testing results.

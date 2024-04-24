@@ -6,11 +6,11 @@ description: Use management agents and the MIM Sync Service to sync your Active 
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
-ms.topic: get-started-article
+manager: amycolannino
+ms.date: 09/14/2023
+ms.topic: conceptual
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 
 # optional metadata
@@ -27,14 +27,14 @@ ms.suite: ems
 
 # Install MIM 2016: Synchronize Active Directory and MIM Service
 
->[!div class="step-by-step"]
-[« MIM Service and Portal](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« MIM Service and Portal](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > This walkthrough uses sample names and values from a company called Contoso. Replace these with your own. For example:
 > - Domain controller name - **mimservername**
 > - Domain name - **contoso**
-> - Password - **Pass@word1**
+> - Password - <strong>Pass@word1</strong>
 
 By default, MIM Synchronization Service (Sync) does not have any connectors configured.  A typical first step is to use MIM Sync to populate the MIM Service database with existing Active Directory accounts. For this, you will use the MIM Sync Service application.
 
@@ -44,9 +44,9 @@ The MIM management agent (MA) is a connector for MIM Sync to the MIM Service. To
 When you configure a MIM management agent, you need to specify a user account. This document uses **MIMMA** as the name for this account.
 
 > [!NOTE]
-> The account you use for your MIM management agent must be the same account as the one you have specified during the installation of MIM Service.
+> The account you use for your MIM management agent must be the same account as the one you have specified during the installation of MIM Service. If you plan to enable 'Use MIMSync account' feature then MIM Synchronization Service must be installed using Group Managed Service Account.
 
-###To create the MIM MA
+### To create the MIM MA
 
 1.  Open the Synchronization Service Manager.
 
@@ -59,7 +59,6 @@ When you configure a MIM management agent, you need to specify a user account. T
     -   Name: MIMMA
 
 4.  On the **Connect to Database** page, provide the following settings, and then click **Next**
-
     -   Server: localhost
 
     -   Database: FIMService
@@ -436,5 +435,5 @@ Follow these steps to run each of the three run profiles.
     - Select the run profile you want to run from the **Run profiles** list.
     - Click **OK** to start the run profile.
 
->[!div class="step-by-step"]
-[« MIM Service and Portal](install-mim-service-portal.md)
+> [!div class="step-by-step"]
+> [« MIM Service and Portal](install-mim-service-portal.md)

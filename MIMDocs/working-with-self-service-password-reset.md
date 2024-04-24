@@ -1,48 +1,52 @@
 ---
-# required metadata
 
-title: Working with the Self-Service Password Reset portal | Microsoft Docs
-description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multi-factor authentication.
+title: Working with Self-Service Password Reset | Microsoft Docs
+description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multifactor authentication.
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: mwahl
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
-# Working with Self-Service Password Reset
-Microsoft Identity Manager 2016 provides additional functionality to the Self Service Password Reset feature. This functionality has been enhanced with several important features:
+# Self-Service Password Reset deployment options
 
--   The Self-Service Password Reset portal and Windows Log In screen now let users unlock their accounts without changing their passwords or calling support administrators. Users can get locked out of their accounts for many legitimate reasons, like if they enter an old password, use bilingual computers and have the keyboard set to the wrong language, or attempt to log into a shared workstation already open to someone else's account.
+> [!IMPORTANT]
+> In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure Multi-Factor Authentication Server should plan to move to instead use either custom MFA providers with MIM SSPR, or Microsoft Entra SSPR instead of MIM SSPR.
 
--   A new authentication gate,  Phone Gate, was added. This enables user authentication via telephone call.
+For new customers who are [licensed for Microsoft Entra ID P1 or P2](/azure/active-directory/authentication/concept-sspr-licensing), we recommend using [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks) to provide the end-user experience.  Microsoft Entra self-service password reset provides both a web-based and Windows-integrated experience for a user to reset their own password, and supports many of the same capabilities as MIM, including alternate email and Q&A gates.  When deploying Microsoft Entra self-service password reset, you can configure Microsoft Entra Connect to [write back the new passwords to AD DS](/azure/active-directory/authentication/concept-sspr-writeback), and MIM [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md) can be used to forward the passwords to other systems, such as another vendor's directory server.  Deploying MIM for [password management](infrastructure/mim2016-password-management.md) does not require the MIM Service or the MIM self-service password reset or registration portals to be deployed.  Instead, you can follow these steps:
 
--   Support has been added for Microsoft Azure Multi-Factor Authentication (MFA) service. This can be used for either the existing SMS One-Time-Password Gate or the new Phone Gate.
+- First, if you need to send passwords to directories other than Microsoft Entra ID and AD DS, deploy MIM Sync with connectors to Active Directory Domain Services and any additional target systems, configure MIM for [password management](infrastructure/mim2016-password-management.md) and deploy the [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md).
+- Then, if you need to send passwords to directories other than Microsoft Entra ID, configure Microsoft Entra Connect for [writing back the new passwords to AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
+- Optionally, [pre-register users](/azure/active-directory/authentication/howto-sspr-authenticationdata).
+- Finally, [roll out Microsoft Entra self-service password reset to your end users](/azure/active-directory/authentication/howto-sspr-deployment).
 
-## Azure for Multi-Factor Authentication
-Microsoft Azure Multi-Factor Authentication is an authentication service that requires users to verify their sign-in attempts with a mobile app, phone call, or text message. It is available to use with Microsoft Azure Active Directory, and as a service for cloud and on-prem enterprise applications.
+For existing customers who had previously deployed Forefront Identity Manager (FIM) for self-service password reset and are licensed for Microsoft Entra ID P1 or P2, we recommend planning to transition to Microsoft Entra self-service password reset.  You can transition end users to Microsoft Entra self-service password reset without needing them to re-register, by [synchronizing or setting through PowerShell a user's alternate email address or mobile phone number](/azure/active-directory/authentication/howto-sspr-authenticationdata). After users are registered for Microsoft Entra self-service password reset, the FIM password reset portal can be decommissioned.
 
-Azure MFA provides an additional authentication mechanism that can reinforce existing authentication processes, such as the one carried out by MIM for self-service login assistance.
+For customers, which have not yet deployed Microsoft Entra self-service password reset for their users, MIM also provides self-service password reset portals.  Compared to FIM, MIM 2016 includes the following changes:
 
-When using Azure MFA, users authenticate with the system in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
+- The MIM Self-Service Password Reset portal and Windows login screen  let users unlock their accounts without changing their passwords.
+
+- A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Entra multifactor authentication Service.
+
+MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download an SDK that has been deprecated, and existing deployments should move to either using MIM SSPR with a custom MFA provider, or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). New deployments should use either a custom MFA provider or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
+
+<a name='deploying-mim-self-service-password-reset-portal-using-a-custom-provider-for-multi-factor-authentication'></a>
+
+## Deploying MIM Self-Service Password Reset Portal using a custom provider for multifactor authentication
+
+The following section describes how to deploy MIM self-service password reset portal, using a provider for multifactor authentication.  These steps are only necessary for customers who are not using Microsoft Entra self-service password reset for their users.
+
+With MFA, users authenticate via the external provider in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
 
 ## Prerequisites to set up self-service account unlock and password reset using MFA
-This section assumes that you have downloaded and completed the deployment of the Microsoft Identity Manager 2016, including the following components and services:
+
+This section assumes that you have downloaded and completed the deployment of the Microsoft Identity Manager 2016 [MIM Sync, MIM Service and MIM Portal components](microsoft-identity-manager-deploy.md), including the following components and services:
 
 -   A Windows Server 2008 R2 or later has been set up as an Active Directory server including AD Domain Services and Domain Controller with a designated domain (a “corporate” domain)
 
@@ -62,44 +66,10 @@ This section assumes that you have downloaded and completed the deployment of th
 
 -   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client is deployed on the server or on a separate client computer.
 
-## Prepare MIM to work with multi-factor authentication
+If you are using Microsoft Entra multifactor authentication, this scenario requires you to have MIM CALs for your users as well as subscription for Microsoft Entra multifactor authentication.
+
+## Prepare MIM to work with MFA
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
-
-In the next section, you will set up your Azure MFA provider in Microsoft Azure Active Directory. As part of this, you’ll generate a file that includes the authentication material which MFA requires to be able to contact Azure MFA.  In order to proceed, you will need an Azure subscription.
-
-### Register your multi-factor authentication provider in Azure
-
-1.  Create an [MFA provider](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
-
-2. Open a support case and request the direct SDK for ASP.net 2.0 C#. The SDK will only be provided to current users of MIM with MFA because the direct SDK has been deprecated. New customers should adopt the next version of MIM that will integrate with MFA server.
-
-3. Copy the resulting ZIP file to each system where MIM Service is installed.  Please be aware that the ZIP file contains keying material which is used to authenticate to the Azure MFA service.
-
-### Update the configuration file
-
-1. Sign into the computer where MIM Service is installed, as the user who installed MIM.
-
-2. Create a new directory folder located below the directory where the MIM Service was installed, such as **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts**.
-
-3. Using Windows Explorer, navigate into the **\pf\certs** folder of the ZIP file downloaded in the previous section, and copy the file **cert_key.p12** to the new directory.
-
-4.  In the SDK zip file, in the folder **\pf**, open the file **pf_auth.cs**.
-
-5.  Find these three parameters: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
-
-    ![pf_auth.cs code image](media/MIM-SSPR-pFile.png)
-
-6.  In **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**, open the file: **MfaSettings**.xml.
-
-7.  Copy the values from the `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` parameters in the pf_aut.cs file into their respective xml elements in the MfaSettings.xml file.
-
-8.  In the SDK zip file, under \pf\certs, extract the file **cert_key.p12** and enter the full path to it in the MfaSettings.xml file into the `<CertFilePath>` xml element.
-
-9. In the `<username>` element enter any username.
-
-10. In the `<DefaultCountryCode>` element enter your default country code. In case phone-numbers are registered for users without a country code, this is the country code they will get. In case a user has an international country code, it has to be included in the registered phone number.
-
-11. Save the MfaSettings.xml file with the same name in the same location.
 
 #### Configure the Phone gate or the One-Time Password SMS Gate
 
@@ -115,11 +85,14 @@ In the next section, you will set up your Azure MFA provider in Microsoft Azure 
 
 4.  Select **Phone Gate** or  **One-Time Password SMS Gate** click **Select** and then **OK**.
 
+    > [!NOTE]
+    > If using another provider which generates the one-time password itself, ensure the length field configured above is the same length as that generated by the MFA provider.  This length must be 6 for Azure Multi-Factor Authentication Server.  Azure Multi-Factor Authentication Server also generates its own message text so the SMS text message is ignored.
+
 Users in your organization can now register for password reset.  During this process, they will enter their work phone number or mobile phone number so the system knows how to call them (or send them SMS messages).
 
 #### Register users for password reset
 
-1.  A user will launch a web browser a navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
+1.  A user will launch a web browser and navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
 
     They need to enter the Password Registration Portal and authenticate using their username and password.
 
@@ -148,9 +121,9 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 2.  The user will be directed to authenticate. If MFA was configured, the user will receive a phone call.
 
-3.  In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when he signed up for the service.
+3.  In the background, what’s happening is that the MFA provider then places a phone call to the number the user gave when that user signed up for the service.
 
-4.  When a user answers the phone, they will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
+4.  When a user answers the phone, they may be asked to interact, for example, to press the pound key # on the phone. Then the user clicks **Next** in the portal.
 
     If you set up other gates as well, the user will be asked to provide more information in subsequent screens.
 
@@ -165,23 +138,22 @@ By installing the MIM Add-ins and Extensions on a domain joined computer connect
 
 1.  Users can open a web browser, navigate to the **Password Reset Portal** and enter their username and click **Next**.
 
-    If MFA was configured, the user will receive a phone call. In the background, what’s happening is that Azure MFA then places a phone call to the number the user gave when he signed up for the service.
+    If MFA was configured, the user will receive a phone call. In the background, what’s happening is that Microsoft Entra multifactor authentication then places a phone call to the number the user gave when they signed up for the service.
 
-    When a user answers the phone, he will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
+    When a user answers the phone, they will be asked to press the pound key # on the phone. Then the user clicks **Next** in the portal.
 
 2.  If you set up other gates as well, the user will be asked to provide more information in subsequent screens.
 
     > [!NOTE]
     > If the user is impatient and clicks **Next** before pressing the pound key #, authentication fails.
 
-3.  The user will have to choose if he wants to reset his password or unlock his account. If he chooses to unlock his account, the account will be unlocked.
+3.  The user will have to choose if they want to reset their password or unlock their account. If they choose to unlock their account, the account will be unlocked.
 
     ![MIM Login Assistant Account Unlock image](media/MIM-SSPR-accountUnlock.JPG)
 
-4.  After successful authentication, the user will be given two options, either to keep his current password or to set a new password.
+4.  After successful authentication, the user will be given two options, either to keep their current password or to set a new password.
 
     ![MIM account unlocked success image](media/MIM-SSPR-account-unlock.JPG)
 
-5.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
+6.  If the user chooses to reset their password, they will have to type in a new password twice and click **Next** to change the password.
 
-    ![MIM Login Assistant Password Reset image](media/MIM-SSPR-PR1.JPG)

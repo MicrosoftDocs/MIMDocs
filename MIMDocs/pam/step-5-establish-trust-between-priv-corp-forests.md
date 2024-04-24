@@ -6,11 +6,11 @@ description: Establish trust between the PRIV and CORP forests so that privilege
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 
 # optional metadata
@@ -24,13 +24,11 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Step 5 – Establish trust between PRIV and CORP forests
 
->[!div class="step-by-step"]
-[« Step 4](step-4-install-mim-components-on-pam-server.md)
-[Step 6 »](step-6-transition-group-to-pam.md)
-
+> [!div class="step-by-step"]
+> [« Step 4](step-4-install-mim-components-on-pam-server.md)
+> [Step 6 »](step-6-transition-group-to-pam.md)
 
 For each CORP domain such as contoso.local, the PRIV and CONTOSO domain controllers need to be bound by a trust. This lets users in the PRIV domain to access resources on the CORP domain.
 
@@ -43,7 +41,7 @@ Before establishing trust, each domain controller must be configured for DNS nam
 
 2.  Verify that each existing CORP domain controller is able to route names to the PRIV forest. On each domain controller outside of the PRIV forest, such as CORPDC, launch PowerShell, and type the following command:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Check that the output indicates a nameserver record for the PRIV domain with the correct IP address.
@@ -62,40 +60,44 @@ On PAMSRV, establish one-way trust with each domain such as CORPDC so that the C
 
 3.  Type the following PowerShell commands for each existing forest. Enter the credential for the CORP domain administrator (CONTOSO\Administrator) when prompted.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
-4.  Type the following PowerShell commands for each domain in the existing forests. Enter the credential for the CORP domain administrator (CONTOSO\Administrator) when prompted.
+4.  Type the following commands for each domain in the existing forests.
 
-    ```
-    $ca = get-credential
-    New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
+    ```PowerShell
+    netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes /usero:contoso\administrator /passwordo:Pass@word1
+
+    netdom trust contoso.local /domain:priv.contoso.local /quarantine:no        /usero:contoso\administrator /passwordo:Pass@word1
+
+    netdom trust contoso.local /domain:priv.contoso.local /enablepimtrust:yes   /usero:contoso\administrator /passwordo:Pass@word1
     ```
 
-## Give forests read access to Active Directory
+## Give read access to existing Active Directory forests
 
 For each existing forest, enable read access to AD by PRIV administrators and the monitoring service.
 
-1.  Sign in to the existing CORP forest domain controller, (CORPDC), as a domain administrator for the top-level domain in that forest (Contoso\Administrator).  
-2.  Launch **Active Directory Users and Computers**.  
-3.  Right click on the domain **contoso.local** and select **Delegate Control**.  
-4.  On the Selected Users and Groups tab, click **Add**.  
-5.  On the Select Users, Computers, or Groups window, click **Locations** and change the location to *priv.contoso.local*.  On the object name, type *Domain Admins* and click **Check Names**. When a popup appears, enter the username *priv\administrator* and its password.  
-6.  After Domain Admins, add "*; MIMMonitor*". Once the names **Domain Admins** and **MIMMonitor** are underlined, click **OK**, then click **Next**.  
-7.  In the list of common tasks, select **Read all user information**, then click **Next** and **Finish**.  
-8.  Close Active Directory Users and Computers.
+1. Sign in to the existing CORP forest domain controller, (CORPDC), as a domain administrator for the top-level domain in that forest (Contoso\Administrator).  
+2. Launch **Active Directory Users and Computers**.  
+3. Right click on the domain **contoso.local** and select **Delegate Control**.  
+4. On the Selected Users and Groups tab, click **Add**.  
+5. On the Select Users, Computers, or Groups window, click **Locations** and change the location to *priv.contoso.local*.  On the object name, type *Domain Admins* and click **Check Names**. When a popup appears, enter the username *priv\administrator* and its password.  
+6. After Domain Admins, add "*; MIMMonitor*". Once the names **Domain Admins** and **MIMMonitor** are underlined, click **OK**, then click **Next**.  
+7. In the list of common tasks, select **Read all user information**, then click **Next** and **Finish**.  
+8. Close Active Directory Users and Computers.
 
-9.  Open a PowerShell window.  
-10.  Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:  
-    ```
-    netdom trust contoso.local /quarantine /domain priv.contoso.local
-    netdom trust contoso.local /enablesidhistory:yes /domain priv.contoso.local
+9. Open a PowerShell window.
+10. Use `netdom` to ensure SID history is enabled and SID filtering is disabled. Type:
+    ```cmd
+    netdom trust contoso.local /quarantine:no /domain priv.contoso.local
+    netdom trust /enablesidhistory:yes /domain priv.contoso.local
+
     ```
     The output should say either **Enabling SID history for this trust** or **SID history is already enabled for this trust**.
 
-    The output should also indicate that **SID filtering is not enabled for this trust**. See [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx)  for more information.
+    The output should also indicate that **SID filtering is not enabled for this trust**. See [Disable SID filter quarantining](https://technet.microsoft.com/library/cc772816.aspx)  for more information.
 
 ## Start the Monitoring and Component services
 
@@ -105,13 +107,13 @@ For each existing forest, enable read access to AD by PRIV administrators and th
 
 3.  Type the following PowerShell commands.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```
 
 In the next step, you will move a group to PAM.
 
->[!div class="step-by-step"]
-[« Step 4](step-4-install-mim-components-on-pam-server.md)
-[Step 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Step 4](step-4-install-mim-components-on-pam-server.md)
+> [Step 6 »](step-6-transition-group-to-pam.md)

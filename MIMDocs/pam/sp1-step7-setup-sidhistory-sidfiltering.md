@@ -1,14 +1,14 @@
 ---
 title: Step 7 Setup SID history/SID filtering
-description: This is Step 7 of configuring Privileged Identity Manager using scripts. This step covers setting up SID history/SID filtering.
+description: Step 7 of configuring Microsoft Identity Manager using scripts. This step covers setting up SID history/SID filtering.
 keywords:
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
-ms.date: 01/10/2017
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
+
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 
 # optional metadata
@@ -23,16 +23,16 @@ ms.suite: ems
 
 ---
 
-# Step 7 Set up SID history/SID filtering
+# Step 7 Setup SID history/SID filtering
 
->[!div class="step-by-step"]
-[« Step 6](sp1-step6-setup-pam-trust.md)
-[Step 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Step 6](sp1-step6-setup-pam-trust.md)
+> [Step 8 »](sp1-step8-pam-deployment-verification.md)
 
-**This is not required for a PRIV only environment**
-Login to the PAMServer with the MIMAdmin account.
+**The following commands are not required for a PRIV only environment**
+Log in to the PAMServer with the MIMAdmin account.
 
-1. Login to the CORP DC as administrator
+1. Log in to the CORP DC as administrator
 2. Run PowerShell as administrator
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -44,6 +44,6 @@ For SID filtering: <br/></br>
 For SID history: </br></br>
 “Enabling SID history for this trust” or “SID history is already enabled for this trust”.
 
->[!div class="step-by-step"]
-[« Step 6](sp1-step6-setup-pam-trust.md)
-[Step 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Step 6](sp1-step6-setup-pam-trust.md)
+> [Step 8 »](sp1-step8-pam-deployment-verification.md)

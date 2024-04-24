@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Get Request | Microsoft Docs
-description:
+title: Get request | Microsoft Docs
+description: Using the MIM CM REST API GET command to list MIM CM requests.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: dcacf36c-0670-44d7-9f40-388667235271
 
 # optional metadata
@@ -26,44 +25,53 @@ ms.suite: ems
 
 ---
 
-# Get Request
-Gets one or more specified MIM CM requests.
+# Get request
+Gets one or more specified Microsoft Identity Manager (MIM) Certificate Management (CM) requests.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/CertificateManagement/api/v1.0/requests/{id}
 
-###URL Parameters
+### URL parameters
+
 Property| Description
 ---------|--------
 id| Optional. The GUID of a request to retrieve.
-###Query Parameters
+
+### Query parameters
+
 Property| Description
 ---------|--------
-targetuser| Optional. The target user of the request. If no target is specified, all requests, regardless of the target user, will be returned. <br/> **Note**: Only “current” is currently supported.
-status| Optional. Indicates the status of the request to retrieve. Possible status types are: *Approved*, *Canceled*, *Completed*, *Denied*, *Executing*, *Failed*, *None*, and *Pending*. <br/>If no status is specified, all requests, regardless of status will be returned.
+targetuser| Optional. The target user of the request. If no target is specified, all requests, regardless of the target user are returned. <br/><br/>**Note**: Only the value "current" is currently supported.
+status| Optional. Indicates the status of the request to retrieve. The possible status types are "Approved," "Canceled," "Completed," "Denied," "Executing," "Failed," "None," and "Pending." <br/>If no status is specified, all requests, regardless of status are returned.
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-none
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
-200     | OK
+200 | OK
 204 | No content
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Response body
 On success, returns one or more [Request](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx) objects with the following properties:
 
 Name | Description
@@ -80,7 +88,7 @@ NewProfileUuid | The identity of the new software profile that is produced by th
 NewSmartcardUuid | The identity of the new smart card that is assigned by the MIM CM request.
 OldProfileUuid | The identity of the software profile for which the MIM CM request was created.
 OldSmartcardUuid | The identity of the smart card for which the MIM CM request was created.
-OriginatorUserUuid | The identity of the user who originated the MIM CM request
+OriginatorUserUuid | The identity of the user who originated the MIM CM request.
 Priority | The MIM CM request's priority.
 ProfileTemplateUuid | The identity of the profile template for which the MIM CM request was created.
 RequestType | The type of the MIM CM request.
@@ -90,14 +98,17 @@ Submitted | The time that the MIM CM request was submitted.
 TargetUserUuid | The identity of the target user for the MIM CM request.
 Uuid | The identifier for the MIM CM request.
 
-##Example
+## Example
+This section provides an example to get the specified MIM CM requests.
 
-###Request 1
+### Example: Request 1
+
 ```
 GET /certificatemanagement/api/v1.0/requests/a9b4b42c-cc50-4c9b-89d1-bbc0bcd5a099 HTTP/1.1
-
 ```
-###Response 1
+
+### Example: Response 1
+
 ```
 HTTP/1.1 200 OK
 
@@ -125,12 +136,17 @@ HTTP/1.1 200 OK
     "IsSmartcard":true,
     "IsEnrollmentAgent":false,
     "IsDataCollectionComplete":false
-}```       
-###Request 2
+}
+```
+
+### Example: Request 2
+
 ```
 GET /certificatemanagement/api/v1.0/requests/0c96d73f-967b-420e-854a-43ad2a1504bc HTTP/1.1
 ```
-###Response 2
+
+### Example: Response 2
+
 ```
 HTTP/1.1 200 OK
 
@@ -162,10 +178,10 @@ HTTP/1.1 200 OK
     "IsEnrollmentAgent":false,
     "IsDataCollectionComplete":false
 }
-```       
+```     
 
-##See Also
+## See also
 
-- [Microsoft.Clm.Provision.FindOperations.FindRequest Method](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
-- [Microsoft.Clm.Shared.RequestPermission Enumeration](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
-- [Microsoft.Clm.Shared.Requests.Request Class](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx)
+- [Microsoft.Clm.Provision.FindOperations.FindRequest method](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
+- [Microsoft.Clm.Shared.RequestPermission enumeration](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
+- [Microsoft.Clm.Shared.Requests.Request class](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx)

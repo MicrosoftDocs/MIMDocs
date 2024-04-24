@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Get Pending PAM Requests | Microsoft Docs
-description:
+title: Get pending PAM requests | Microsoft Docs
+description: Using the PAM REST API GET command to list pending requests.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 005dc8fd-d73e-4557-b485-5566f16537eb
 
 # optional metadata
@@ -26,29 +25,36 @@ ms.suite: ems
 
 ---
 
-# Get Pending PAM Requests
+# Get pending PAM requests
 Used by a privileged account to return a list of pending requests that need approval.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `http://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
+
+## Request
 
 Method  |Request URL  
 ---------|---------
 GET     |/api/pamresources/pamrequeststoapprove
 
-###Query Parameters
+### Query parameters
+
 Parameter | Description
 ----------|--------------
-$filter | Optional. Specify any of the Perding PAM Request properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#filtering)
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
+$filter | Optional. Specify any of the pending PAM request properties in a filter expression to return a filtered list of responses. For more information about supported operators, see [Filtering in PAM REST API service details](privileged-access-management-rest-api-service-details.md#filtering).
+v | Optional. The API version. If not included, the current (most recently released) version of the API is used. For more information, see [Versioning in PAM REST API service details](privileged-access-management-rest-api-service-details.md#versioning).
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Request Body
-none
+### Request headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK
@@ -58,10 +64,11 @@ Code  |Description
 500 | Internal Server Error
 503 | Service Unavailable
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Response Body
-A successful response contains a list of PAM request approval objects with the following properties.
+### Response headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
+
+### Response body
+A successful response contains a list of PAM request approval objects with the following properties:
 
 Property | Description
 ---------|-------------
@@ -71,17 +78,21 @@ Justification | The justification provided by the user.
 RequestedTTL | The requested expiration time in seconds.
 RequestedTime | The requested time for elevation.
 CreationTime | The creation time of the request.
-FIMRequestID | Contains a single element, "Value", with the unique identifier (GUID) of the PAM request.
-RequestorID | Contains a single element, "Value", with the unique identifier (GUID) for the Active Directory account that created the PAM request.
-ApprovalObjectID | Contains a single element, "Value", with the unique identifier (GUID) for the Approval Object.
+FIMRequestID | Contains a single element, "Value," with the unique identifier (GUID) of the PAM request.
+RequestorID | Contains a single element, "Value," with the unique identifier (GUID) for the Active Directory account that created the PAM request.
+ApprovalObjectID | Contains a single element, "Value," with the unique identifier (GUID) for the Approval Object.
 
-##Example
+## Example
+This section provides an example to get the pending PAM requests.
 
-###Request
+### Example: Request
+
 ```
 GET /api/pamresources/pamrequeststoapprove HTTP/1.1
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
 

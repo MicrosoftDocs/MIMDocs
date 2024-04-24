@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Close PAM Request | Microsoft Docs
-description:
+title: Close PAM request | Microsoft Docs
+description: Using the PAM REST API POST command to close a request to elevate a role.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: ca3a1a68-9a2b-47da-bfc1-eaa360cbe609
 
 # optional metadata
@@ -26,34 +25,41 @@ ms.suite: ems
 
 ---
 
-# Close PAM Request
-Used by a privileged account to close a request  that it initiated to elevate to a PAM role.
+# Close PAM request
+Used by a privileged account to close a request that it initiated to elevate to a PAM role.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `http://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 POST     |/api/pamresources/pamrequests({requestId)/Close
 
-###URL Parameters
+### URL parameters
+
 Parameter | Description
 ----------|-----------
-requestId | The identifier (GUID) of the PAM request to close, specified as follows: `guid'xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`
+requestId | The identifier (GUID) of the PAM request to close, specified as `guid'xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`.
 
-###Query Parameters
+### Query parameters
+
 Parameter | Description
 ----------|--------------
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
+v | Optional. The API version. If not included, the current (most recently released) version of the API is used. For more information, see [Versioning in PAM REST API service details](privileged-access-management-rest-api-service-details.md#versioning).
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Request Body
-none
+### Request Headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK
@@ -63,20 +69,23 @@ Code  |Description
 500 | Internal Server Error
 503 | Service Unavailable
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Response Body
-none
-##Example
+### Response headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
 
-###Request
+### Response body
+None.
+
+## Example
+This section provides an example to close a request.
+
+### Example: Request
+
 ```
 POST /api/pamresources/pamrequests(guid'5ec10e61-cdd1-404e-a18e-740467d87dbf')/Close HTTP/1.1
-
-
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
-
 ```       

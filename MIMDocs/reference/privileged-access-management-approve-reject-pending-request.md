@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Approve or Reject a Pending PAM Request | Microsoft Docs
-description:
+title: Approve or reject a pending PAM request | Microsoft Docs
+description: Using the PAM REST API POST command to respond to pending PAM role requests.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 0632656f-ecf4-4090-85a8-216d5638140a
 
 # optional metadata
@@ -26,35 +25,42 @@ ms.suite: ems
 
 ---
 
-# Approve or Reject a Pending PAM Request
+# Approve or reject a pending PAM request
 Used by a privileged account to approve, close, or reject a request to elevate to a PAM role.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `http://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 POST     |/api/pamresources/pamrequeststoapprove({approvalId)/Approve <br/>/api/pamresources/pamrequeststoapprove({approvalId)/Reject
 
-###URL Parameters
+### URL parameters
+
 Parameter | Description
 ----------|-----------
-approvalId | The identifier (GUID) of the approval object in PAM specified as follows `guid'xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`
+approvalId | The identifier (GUID) of the approval object in PAM, specified as `guid'xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`.
 
-###Query Parameters
+### Query parameters
+
 Parameter | Description
 ----------|--------------
-v | Optional. The API version. If not included, the current (most recently released) version of the API will be used. For more information, see [Versioning in PAM REST API Service Details](privileged-access-management-rest-api-service-details.md#versioning)
+v | Optional. The API version. If not included, the current (most recently released) version of the API is used. For more information, see [Versioning in PAM REST API service details](privileged-access-management-rest-api-service-details.md#versioning).
 
 
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Request Body
-none.
+### Request Headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
 
-##Response
-###Response Codes
+### Request body
+None.
+
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
 200 | OK
@@ -64,20 +70,23 @@ Code  |Description
 500 | Internal Server Error
 503 | Service Unavailable
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API Service Details*.
-###Response Body
-none
-##Example
+### Response headers
+For common request headers, see [HTTP request and response headers](privileged-access-management-rest-api-service-details.md#http-request-and-response-headers) in *PAM REST API service details*.
 
-###Request
+### Response body
+None.
+
+## Example
+This section provides an example to approve a request to elevate to a PAM role.
+
+### Example: Request
+
 ```
 POST /api/pamresources/pamrequeststoapprove(guid'5dbd9d0c-0a9d-4f75-8cbd-ff6ffdc00143')/Approve HTTP/1.1
-
-
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 200 OK
-
 ```       

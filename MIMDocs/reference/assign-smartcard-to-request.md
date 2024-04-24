@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Assign Smart card to a Request | Microsoft Docs
-description:
+title: Assign a smart card to a request | Microsoft Docs
+description: Binding a smart card to a specified request.
 keywords:
-author: msmbaldwin
-ms.author: mbaldwin
-manager: mbaldwin
-ms.date: 10/17/2016
+author: billmath
+ms.author: billmath
+manager: amycolannino
+ms.date: 09/14/2023
 ms.topic: reference
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
-ms.technology: security
+
 ms.assetid: 20f0bf6e-9ae0-4d21-8117-ed63e29315e6
 
 # optional metadata
@@ -26,47 +25,57 @@ ms.suite: ems
 
 ---
 
-# Assign Smart card to a Request
-Binds the specified smart card to the specified request. Once bound, the request can only be executed with this card.
+# Assign a smart card to a request
+Binds the specified smart card to the specified request. After a smart card is bound, the request can only be executed with the specified card.
 
-**Note**: URLs shown in this topic are relative to the hostname chosen during API deployment; for example: `https://api.contoso.com`.
-##Request
+>[!NOTE]
+>The URLs in this article are relative to the hostname that's chosen during API deployment, such as `https://api.contoso.com`.
 
+## Request
 
 Method  |Request URL  
 ---------|---------
 POST     |/CertificateManagement/api/v1.0/smartcards
 
-###URL Parameters
-none.
-###Request Headers
-For common request headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Request Body
-The request body contains the following properties.
+### URL parameters
+None.
+
+### Request headers
+For common request headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
+
+### Request body
+The request body contains the following properties:
 
 Property | Description
 ---------|-----------
-requestid | The ID of the request that the smart card should be bound to.
+requestid | The ID of the request to bind to the smart card.
 cardid | The cardid of the smart card.
 atr | The smart card answer-to-reset (ATR) string.
 
 
-##Response
-###Response Codes
+## Response
+This section describes the response.
+
+### Response codes
+
 Code  |Description  
 ---------|---------
-201     | Created
+201 | Created
 204 | No Content
 403 | Forbidden
 500 | Internal Error
 
-###Response Headers
-For common response headers, see [HTTP Request and Response Headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API Service Details*.
-###Response Body
-On success, returns a URI to the newly created smart card object.
-##Example
+### Response headers
+For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
-###Request
+### Response body
+On success, returns a URI to the newly created smart card object.
+
+## Example
+This section provides an example to bind a smart card.
+
+### Example: Request
+
 ```
 POST /CertificateManagement/api/v1.0/smartcards HTTP/1.1
 
@@ -75,14 +84,16 @@ POST /CertificateManagement/api/v1.0/smartcards HTTP/1.1
     "cardid":"bc88f13f-83ba-4037-8262-46eba1291c6e",
     "atr":"3b8d0180fba000000397425446590301c8"
 }
-
 ```
-###Response
+
+### Example: Response
+
 ```
 HTTP/1.1 201 Created
 
 "api/v1.0/smartcards/17cf063d-e337-4aa9-a822-346554ddd3c9"
-```       
-##See Also
+```
 
-- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard Method (String, String, Request)](https://msdn.microsoft.com/library/windows/desktop/bb456812.aspx)
+## See also
+
+- [Microsoft.Clm.Provision.RequestOperations.CreateSmartcard method (String, String, Request)](https://msdn.microsoft.com/library/windows/desktop/bb456812.aspx)
