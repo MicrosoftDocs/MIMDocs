@@ -30,7 +30,7 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [Windows Server »](prepare-server-ws2016.md)
 
-Microsoft Identity Manger (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.
+Microsoft Identity Manager (MIM) works with your Active Directory (AD) domain. You should already have AD installed, and make sure you have a domain controller in your environment for a domain that you are able to administer.
 
 This article walks you through the steps to prepare your domain to work alongside MIM.
 
@@ -53,6 +53,7 @@ All the components of your MIM deployment need their own identities in the domai
 
     ```PowerShell
     import-module activedirectory
+
     $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
     New-ADUser –SamAccountName MIMINSTALL –name MIMINSTALL
     Set-ADAccountPassword –identity MIMINSTALL –NewPassword $sp
@@ -81,9 +82,11 @@ All the components of your MIM deployment need their own identities in the domai
     New-ADUser –SamAccountName MIMpool –name MIMpool
     Set-ADAccountPassword –identity MIMPool –NewPassword $sp
     Set-ADUser –identity MIMPool –Enabled 1 -PasswordNeverExpires 1
+
     ```
 
 3.  Create security groups to all the groups.
+
 
     ```PowerShell
     New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncAdmins
@@ -91,6 +94,7 @@ All the components of your MIM deployment need their own identities in the domai
     New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
     New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncBrowse
     New-ADGroup –name MIMSyncPasswordSet –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordSet
+
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMInstall

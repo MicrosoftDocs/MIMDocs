@@ -44,9 +44,11 @@ GET     |/CertificateManagement/api/v1.0/smartcards/{id}/serverproposedpin
 
 Parameter | Description
 ---------|------------
+
 id | The smart card ID that's specific to Microsoft Identity Manager (MIM) Certificate Management (CM). The ID is obtained from the Microsft.Clm.Shared.Smartcard object.
 
 ### Query parameters
+
 
 Parameter | Description
 ---------|------------
@@ -72,6 +74,7 @@ Code  |Description
 403 | Forbidden
 500 | Internal Error
 
+
 ### Response headers
 For common response headers, see [HTTP request and response headers](certificate-management-rest-api-service-details.md#http-request-and-response-headers) in *CM REST API service details*.
 
@@ -83,11 +86,14 @@ This section provides an example to get the server-generated user PIN.
 
 ### Example: Request
 
+
 ```
-GET GET /CertificateManagement/api/v1.0/smartcards/C6BAD97C-F97F-4920-8947-BE980C98C6B5/serverproposedpin HTTP/1.1
+GET /CertificateManagement/api/v1.0/smartcards/C6BAD97C-F97F-4920-8947-BE980C98C6B5/serverproposedpin HTTP/1.1
 ```
 
+
 ### Example: Response
+
 
 ```
 HTTP/1.1 200 OK

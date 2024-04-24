@@ -63,6 +63,7 @@ This table doesn't include the software on which MIM itself is deployed; see the
 
 The Microsoft Azure Active Directory Connector is deprecated and not recommended for new deployments; use [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect) sync, Microsoft Entra Connect cloud provisioning, or [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md) instead.
 
+
 ## Related articles
 
 [Management agents in FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)

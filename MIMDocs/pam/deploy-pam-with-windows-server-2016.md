@@ -22,6 +22,7 @@ ms.assetid:
 
 This scenario enables MIM 2016 SP2 for the PAM scenario using features of Windows Server 2016 or later as the domain controller for the “PRIV” forest.  When this scenario is configured, a user’s Kerberos ticket will be time-limited to the remaining time of their role activations.
 
+
 ## Preparation
 
 A minimum of two VMs are required for the lab environment:
@@ -64,7 +65,9 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
   -   Configuring the registry settings needed for SID history migration (item #8) is **no longer required when the PRIV domain is Windows Server 2016 domain functional level**.
 
+
   -   After configuring delegation, and before restarting the server, enable the Privileged Access Management features in Windows Server 2016 Active Directory by launching a PowerShell window as administrator and typing the following commands.
+
 
   ```
   $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
@@ -91,6 +94,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
 
     a.  Launch an elevated **Command prompt** and type the following commands, substituting the name of your MIM administrator account for “mimadmin” in each of the four lines:
     ```
+
     dsacls "CN=AuthN Policies,CN=AuthN Policy
     Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
     mimadmin:RPWPRCWD;;msDS-AuthNPolicy /i:s
@@ -106,6 +110,7 @@ Perform the install as described in the [Getting started guide](privileged-ident
     dsacls "CN=AuthN Silos,CN=AuthN Policy
     Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
     mimadmin:CCDC;msDS-AuthNPolicySilo
+
     ```
 
 

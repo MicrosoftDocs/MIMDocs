@@ -93,6 +93,7 @@ For each existing forest, enable read access to AD by PRIV administrators and th
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
+
     ```
     The output should say either **Enabling SID history for this trust** or **SID history is already enabled for this trust**.
 

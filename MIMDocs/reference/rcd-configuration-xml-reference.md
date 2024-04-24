@@ -4,10 +4,12 @@
 title: Resource control display configuration XML reference | Microsoft Docs
 description: Using RCDC to control how MIM resources appear in the UI.
 keywords:
+
 author: billmath
 ms.author: billmath
 manager: amycolannino
 ms.date: 09/14/2023
+
 ms.topic: reference
 ms.service: microsoft-identity-manager
 
@@ -35,9 +37,9 @@ The XML data for an RCDC resource consists of a single **ObjectControlConfigurat
 The following is the XSD schema for the **ObjectControlConfiguration** element:
 
 ```XML
-<xsd:element name="ObjectControlConfiguration"\>
-  <xsd:complexType\>
-    <xsd:sequence\>
+<xsd:element name="ObjectControlConfiguration">
+  <xsd:complexType>
+    <xsd:sequence>
       <xsd:element ref="my:ObjectDataSource" minOccurs="0" maxOccurs="32"/>
       <xsd:element ref="my:XmlDataSource" minOccurs="0" maxOccurs="32"/>
       <xsd:element ref="my:Panel"/>
@@ -1020,6 +1022,7 @@ The following code segment produces the second **DateTime** control. If you have
 
 **Properties**:
 
+
 - All common properties: For information about these properties, see <a href="#common-properties">Common properties</a>.
 
 - **ValuePath**: The property to get the Value attribute from ItemSource. When ItemSource is specified as Custom, the value path is set to Value. It binds with the Value field from the Option element, as described in this section.
@@ -1031,6 +1034,7 @@ The following code segment produces the second **DateTime** control. If you have
 - **ItemSource**: A collection of ListControlItems that defines the choices in the list. The user can explicitly set this to Custom and use the Option element, as described in this section, to specify the string value.
 
 - **SelectedValue**: The value that is currently selected. This is a required, string-type property. This property is bound with string data from the data source.
+
 
 **Events**:
 
@@ -1142,6 +1146,7 @@ The following code segment generates a file download control:
 
 **Properties**:
 
+
 - All common properties: For information about these properties, see <a href="#common-properties">Common properties</a>.
 
 - **Value**: This is a required attribute. It specifies the schema attribute binding on the server to which the data is uploaded.
@@ -1153,6 +1158,7 @@ The following code segment generates a file download control:
 - **PromptedForNoValue**: This is an optional, string-type attribute. It defines the text that appears to the user when a file is not being uploaded.
 
 **Events**:
+
 
 - **FileUploaded**: This event is emitted when the file is successfully uploaded.
 
@@ -1660,6 +1666,7 @@ The following code segment generates a picture box control that binds a URL imag
 
 **Properties**:
 
+
 - All common properties: For information about these properties, see <a href="#common-properties">Common properties</a>.
 
 - **ValuePath**: The value path is set to Value. It binds with the Value field from the Option element, as described in this section.
@@ -1671,6 +1678,7 @@ The following code segment generates a picture box control that binds a URL imag
 - **SelectedValue**: The value that is currently selected. This is a required, string-type property. This property binds with string data from the data source.
 
 **Events**:
+
 
 - **SelectedIndexChanged**: The event occurs when the selected radio button changes.
 

@@ -35,7 +35,7 @@ Used by a privileged account to get the username of the account that is logged i
 
 Method  |Request URL  
 ---------|---------
-GET     |/api/session/sessioninfo
+GET     |/api/pamresources/sessioninfo
 
 ### Query parameters
 
@@ -79,7 +79,7 @@ This section provides an example to get the PAM session info.
 ### Example: Request 
 
 ```
-GET /api/session/sessioninfo/ HTTP/1.1
+GET /api/pamresources/sessioninfo/ HTTP/1.1
 ```
 
 ### Example: Response

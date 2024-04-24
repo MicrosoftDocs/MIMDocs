@@ -76,7 +76,7 @@ See [Using Azure Multi-Factor Authentication Server in PAM or SSPR](../working-w
 11. Save and overwrite the **MfaSettings.xml** file in the MIM Service folder ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 
 > [!NOTE]
-> At the end of the process, ensure that the file **MfaSettings.xml**, or any copies of it or the ZIP file are not publically readable.
+> At the end of the process, ensure that the file **MfaSettings.xml**, or any copies of it or the ZIP file are not publicly readable.
 
 <a name='configure-pam-users-for-azure-ad-multi-factor-authentication'></a>
 

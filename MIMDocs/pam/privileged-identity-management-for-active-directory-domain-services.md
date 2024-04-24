@@ -94,9 +94,9 @@ Get details about the [Privileged Access Management cmdlets](/powershell/identit
 
 ## What workflows and monitoring options are available?
 
+
 As an example, let's say a user was a member of an administrative group before PAM is set up. As part of PAM setup, the user is removed from the administrative group, and a policy is created in MIM. The policy specifies that if that user requests administrative privileges, the request is approved and a separate account for the user will be added to the privileged group in the bastion forest.
 
-Assuming the request is approved, the Action workflow communicates directly with bastion forest Active Directory to put a user in a group. For example, when Jen requests to administer the HR database, the administrative account for Jen is added to the privileged group in the bastion forest within seconds. Her administrative account's membership in that group will expire after a time limit. With Windows Server 2016 or later, that membership is associated in Active Directory with a time limit.
 
 > [!NOTE]
 > When you add a new member to a group, the change needs to replicate to other domain controllers (DCs) in the bastion forest. Replication latency can impact the ability for users to access resources. For more information about replication latency, see [How Active Directory Replication Topology Works](https://technet.microsoft.com/library/cc755994.aspx).

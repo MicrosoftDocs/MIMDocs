@@ -56,6 +56,7 @@ The first three Microsoft Identity Manager reports available in Microsoft Entra 
 * Outgoing internet connectivity from the Identity Manager server to Azure.
 
 ## Requirements
+
 The requirements for using Identity Manager hybrid reporting are listed in the following table:
 
 
@@ -69,6 +70,7 @@ The requirements for using Identity Manager hybrid reporting are listed in the f
 |                 SSL inspection for outbound traffic is filtered or disabled                 |                                                                                                                                                                                                               The agent registration step or data upload operations might fail if there is SSL inspection or termination for outbound traffic at the network layer.                                                                                                                                                                                                                |
 |                      Firewall ports on the server that runs the agent                       |                                                                                                                                                                                                          To communicate with the Azure service endpoints, the agent requires the following firewall ports to be open:<ul><li>TCP port 443</li><li>TCP port 5671</li></ul>                                                                                                                                                                                                          |
 |          Allow certain websites if Internet Explorer enhanced security is enabled           |                                                                                If Internet Explorer enhanced security is enabled, the following websites must be allowed on the server that has the agent installed:<ul><li><https://login.microsoftonline.com></li><li>`https://secure.aadcdn.microsoftonline-p.com`</li><li><https://login.windows.net></li><li>The federation server for your organization trusted by Microsoft Entra ID (for example, `https://sts.contoso.com`).</li></ul>                                                                                |
+
 
 </BR>
 
@@ -86,9 +88,11 @@ After Reporting Agent is installed, the data from Identity Manager activity is e
 
     b. Double-click the directory for which you are a global administrator and have a Microsoft Entra ID P1 or P2 subscription.
 
+
     c. Select **Configuration**, and then download Reporting Agent.
 
 3.  Install Reporting Agent by doing the following:
+
 
     a.  Download the [MIMHReportingAgentSetup.exe file](https://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) for the Identity Manager Service server.
 
@@ -100,7 +104,9 @@ After Reporting Agent is installed, the data from Identity Manager activity is e
 
     e.  Restart the Identity Manager service.
 
+
 4.  Verify that Identity Manager Reporting Agent is working in Azure.
+
 
     You can create report data by using the Identity Manager self-service password reset portal to reset a user’s password. Make sure that the password reset was completed successfully, and then check to ensure that the data is displayed in the Microsoft Entra management portal.
 
@@ -121,7 +127,9 @@ After Reporting Agent is installed, the data from Identity Manager activity is e
 
 ## Stop creating hybrid reports
 
+
 If you want to stop uploading reporting audit data from Identity Manager to Microsoft Entra ID, uninstall Hybrid Reporting Agent. Use the Windows Add or Remove Programs tool to uninstall Identity Manager hybrid reporting.
+
 
 ## Windows events used for hybrid reporting
 

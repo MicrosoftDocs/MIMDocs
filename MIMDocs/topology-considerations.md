@@ -38,7 +38,6 @@ You can deploy Microsoft Identity Manager (MIM) components on the same server or
 When designing your deployment topology, it's important to know what each component does and how they all interact.
 
 - **MIM Portal** - an interface for password resets, group management, and administrative operations.
-    -
 - **MIM Service** - a web service that implements MIM 2016 identity management functionality.
 - **MIM Synchronization Service** - Synchronizes data with other identity systems.
 - **Microsoft SQL Server** - MIM Service and MIM Sync Service both store their data in SQL databases.

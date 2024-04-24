@@ -62,12 +62,18 @@ In this section, you'll set up the new Windows Server to become a domain control
 
 2. Type the following commands.
 
-   ```PowoerShell
+
+   ```powershell
+
    import-module ServerManager
 
    Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
 
+
    Install-ADDSForest –DomainMode 7 –ForestMode 7 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
+
+
+
    ```
 
    This will prompt for a Safe Mode Administrator Password to use. Note that warning messages for DNS delegation and cryptography settings will appear. These are normal.
@@ -90,7 +96,9 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 2. Type the following commands, but replace "CONTOSO" with the NetBIOS name of your domain.
 
+
    ```PowerShell
+
    import-module activedirectory
 
    New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -111,7 +119,9 @@ We're going to create a security group named *CorpAdmins* and a user named *Jen*
 
 2. Type the following commands. Replace the password 'Pass@word1' with a different password string.
 
+
    ```PowerShell
+
    import-module activedirectory
 
    New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -149,7 +159,9 @@ For each domain, sign in to a domain controller as a domain administrator, and p
 
 8. Apply the audit settings by launching a PowerShell window and typing:
 
+
    ```cmd
+
    gpupdate /force /target:computer
    ```
 
@@ -163,8 +175,10 @@ In this section you'll configure the registry settings that are needed for sID H
 
 2. Type the following commands to configure the source domain to permit remote procedure call (RPC) access to the security accounts manager (SAM) database.
 
+
    ```PowerShell
    New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
+
 
    Restart-Computer
    ```
@@ -182,6 +196,7 @@ You'll need at least one resource in the domain for demonstrating the security g
    ```PowerShell
    mkdir c:\corpfs
 
+
    New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
 
    $acl = Get-Acl c:\corpfs
@@ -194,6 +209,7 @@ You'll need at least one resource in the domain for demonstrating the security g
    ```
 
 3. As the *PRIV* user will be connecting to this server from another forest, you may need to change your firewall configuration on this server to allow the user's computer to be able to connect to this server.
+
 
 In the next step, you'll prepare the PRIV domain controller.
 

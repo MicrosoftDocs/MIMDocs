@@ -50,6 +50,7 @@
     "dest": "MIMDocs",
     "template": "docs.html",
     "globalMetadata": {
+      "feedback_system": "Standard",
       "layout": "Conceptual",
       "breadcrumb_path": "/enterprise-mobility/toc.json",
       "feedback_system": "GitHub",
