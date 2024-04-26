@@ -76,9 +76,9 @@ Many of the cloud HR scenarios also involve using automated workflows. Some of t
 
 Using API-driven inbound provisioning, it's now possible to provision users directly to Microsoft Entra ID from your on-premises HR system. If you're currently using a MIM to import users from an HR system and then provision them to Microsoft Entra ID, you can now use build a custom API-driven inbound provisioning connector to accomplish this. The advantage of using the API-driven provisioning connector to achieve this over MIM, is that the API-driven provisioning connector has a lot less overhead and a lot smaller footprint on-premises, when compared with MIM. Also, with the API-driven provisioning connector, it can be managed from the cloud. See the following for more information on API-driven provisioning.
 
-- [API-driven inbound provisioning concepts (Public preview)](/entra/identity/app-provisioning/inbound-provisioning-api-concepts)
+- [API-driven inbound provisioning concepts](/entra/identity/app-provisioning/inbound-provisioning-api-concepts)
 - [Enable system integrators to build more connectors to systems of record](/entra/identity/app-provisioning/inbound-provisioning-api-concepts#scenario-3-enable-system-integrators-to-build-more-connectors-to-systems-of-record)
-- [Configure API-driven inbound provisioning app (Public preview)](/entra/identity/app-provisioning/inbound-provisioning-api-configure-app)
+- [Configure API-driven inbound provisioning app](/entra/identity/app-provisioning/inbound-provisioning-api-configure-app)
 
 These can also leverage lifecycle workflows as well.
 
