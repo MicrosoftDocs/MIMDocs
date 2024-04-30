@@ -17,7 +17,7 @@ ms.assetid:
 
 # Deprecated Features and planning for the future
 
-This article describes the deprecated features of Microsoft Identity Manager 2016 SP2. Where the feature is still present in Microsoft Identity Manager, it is still supported, except where the feature is dependent upon an underlying platform, interface or separate component that is no longer supported. Deprecated features are not recommended for new deployments, as they may be removed in a future hotfix or service pack release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
+This article describes the deprecated features of Microsoft Identity Manager 2016 SP2. Where the feature is still present in Microsoft Identity Manager, it is still supported, except where the feature is dependent upon an underlying platform, interface, or separate component that is no longer supported. Deprecated features are not recommended for new deployments, as they may be removed in a future hotfix or service pack release.  For developers, we recommend not utilizing deprecated features in any new applications or solutions.
 
 > [!NOTE]
 >
@@ -27,13 +27,13 @@ This article describes the deprecated features of Microsoft Identity Manager 201
 
 Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. For some modules, the underlying component is no longer supported.
 
-The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules have a dependency on Microsoft Silverlight. Microsoft Silverlight reached its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).  Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules that require Silverlight. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
+The BHOLD Model Generator, BHOLD Analytics and BHOLD FIM Integration modules have a dependency on Microsoft Silverlight. Microsoft Silverlight reached its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788). Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules that require Silverlight. Customers with an existing BHOLD deployment of one or more of those modules should plan to uninstall those modules from their BHOLD server computers. Also, they should plan to uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
 
 Microsoft Entra ID now provides [access reviews](/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## Service and Portal
 
-Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support.  Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
+Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support. Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
 
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
@@ -50,10 +50,10 @@ Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2
 
 ## Connectors and Management Agents
 
-The following MAs were removed in MIM 2016: </br> 1.  MA for FIM Certificate Management </br>2.  MA for Lotus Notes</br> 3.  MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs were replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
+The following MAs were removed in MIM 2016: </br> 1. MA for FIM Certificate Management </br>2. MA for Lotus Notes</br> 3. MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs were replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
 
 > [!IMPORTANT]
-> The Windows Azure AD Connector for FIM is deprecated. The solution of using FIM and this connector for Microsoft Entra has been superseded.  Existing deployments must migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Windows Azure AD Connector for FIM were removed from Microsoft Entra ID, and the Windows Azure AD Connector cannot connect with Microsoft Entra ID as of April 2024.
+> The Windows Azure AD Connector for FIM is deprecated. The solution of using FIM and this connector for Microsoft Entra has been superseded. Existing deployments must migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Windows Azure AD Connector for FIM were removed from Microsoft Entra ID, and the Windows Azure AD Connector cannot connect with Microsoft Entra ID as of April 2024.
 
 ## Synchronization Service
 
@@ -89,9 +89,9 @@ The MIM CM bulk client is not recommended for new deployments.
 
 ## MIM PAM
 
-The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. PAM is not recommended as a starting point in deployments of Active Directory with Internet connectivity.  If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) on where to start.
+The PAM approach provided by MIM is intended to be used in a custom architecture for isolated environments where Internet access is not available, where this configuration is required by regulation, or in high impact isolated environments like offline research laboratories and disconnected operational technology or supervisory control and data acquisition environments. PAM is not recommended as a starting point in deployments of Active Directory with Internet connectivity. If your Active Directory is part of an Internet-connected environment, see [securing privileged access](/security/compass/overview) on where to start.
 
-Deploying MIM for Privileged Access Management with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated.  Use Windows Server 2016 or later Active Directory, with Windows Server 2016 functional level, for your PRIV forest domain.  The Windows Server 2012 R2 functional level is still permitted for a CORP forest's domain.
+Deploying MIM for Privileged Access Management with a Windows Server 2012 R2 domain controller in the PRIV forest is deprecated. Use Windows Server 2016 or later Active Directory, with Windows Server 2016 functional level, for your PRIV forest domain. The Windows Server 2012 R2 functional level is still permitted for a CORP forest's domain.
 
 ## Next steps
 Learn more about:
