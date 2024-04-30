@@ -27,13 +27,13 @@ This article describes the deprecated features of Microsoft Identity Manager 201
 
 Microsoft does not recommend customers start new deployments of the Microsoft BHOLD Suite components. For some modules, the underlying component is no longer supported.
 
-The BHOLD Model Generator, BHOLD Analytics, and BHOLD FIM Integration modules have a dependency on Microsoft Silverlight. Microsoft Silverlight reached its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788). Users who haven't installed Microsoft Silverlight in their browser can't use the BHOLD Suite modules that require Silverlight. Customers with an existing BHOLD deployment of one or more of those modules should uninstall those modules from their BHOLD server computers. Also, they should uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
+The BHOLD Model Generator, BHOLD Analytics, and BHOLD FIM Integration modules have a dependency on Microsoft Silverlight. Microsoft Silverlight reached its end of support on October 12, 2021. For more information, see [Silverlight End of Support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788). Those BHOLD Suite modules that required Silverlight should no longer be used. Customers with an existing BHOLD deployment of one or more of those modules should uninstall those modules from their BHOLD server computers. Also, they should uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
 
 Microsoft Entra ID now provides [access reviews](/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), which replaces the BHOLD attestation campaign features, and entitlement management, which replaces the access assignment features.
 
 ## Service and Portal
 
-Deploying MIM Service or Portal on Windows Server 2008 R2, or using SQL Server 2008 R2 as the underlying database, is deprecated, as these platforms are no longer in mainstream support. Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
+Do not deploy MIM Service or Portal on Windows Server 2008 R2, or use SQL Server 2008 R2 as the underlying database, as these platforms are no longer in mainstream support. Deploying MIM Portal on SharePoint Foundation 2010 is deprecated.
 
 | **Category**                | **Deprecated Feature**              | **Comment**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
@@ -74,7 +74,7 @@ The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating ex
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Attribute Precedence | Multi- mastery/equal precedence                       | Equal precedence may be removed. You should configure manual precedence instead. You can continue to use this feature if your environment has a FIM Service management agent deployed. This management agent does not provide manual precedence to avoid export-not-precedent for declarative provisioning. |
 | Join Rules           | Join on "Any" object type                             | All join rules should explicitly define the metaverse object type they are trying to join to.       |
-| Attribute flows      | Unselect "allow nulls" for exported values            | “Allow Nulls” will always be selected, so make sure that you have "Allow Nulls" selected in your current environment.  |
+| Attribute flows      | Unselect "allow nulls" for exported values            | "Allow Nulls" will always be selected, so make sure that you have "Allow Nulls" selected in your current environment.  |
 | Attribute flows      | "Do not recall attributes"                            | Attributes will always be recalled, which is the best practice.  |
 | Rules Extension      | Running metaverse and ma rules extension out- of-proc | The metaverse and attribute flow rules will run in the same process as the synchronization engine.       |
 | Rules Extension      | Transaction properties                                | Avoid passing data between inbound, provisioning, and outbound synchronization using this utility class.  |
