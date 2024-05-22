@@ -72,13 +72,18 @@ Many of the cloud HR scenarios also involve using automated workflows. Some of t
 
 ### Provisioning users from on-premises HR systems to Microsoft Entra ID with join/leave workflows
 
- :::image type="content" source="media/migrate-entra-id/scenario-1-b.png" alt-text="Conceptual drawing of API-driven provisioning to Microsoft Entra ID." lightbox="media/migrate-entra-id/scenario-1-b.png":::
+Customers who use SAP Human Capital Management (HCM) and have SAP SuccessFactors can bring identities into Microsoft Entra ID by using SAP Integration Suite to synchronize lists of workers between SAP HCM and SAP SuccessFactors. From there, you can bring identities directly into Microsoft Entra ID or provision them into Active Directory Domain Services.
+
+![Diagram of SAP HR integrations.](/entra/id-governance/media/sap/sap-hr-no-MIM.png)
+
 
 Using API-driven inbound provisioning, it's now possible to provision users directly to Microsoft Entra ID from your on-premises HR system. If you're currently using a MIM to import users from an HR system and then provision them to Microsoft Entra ID, you can now use build a custom API-driven inbound provisioning connector to accomplish this. The advantage of using the API-driven provisioning connector to achieve this over MIM, is that the API-driven provisioning connector has a lot less overhead and a lot smaller footprint on-premises, when compared with MIM. Also, with the API-driven provisioning connector, it can be managed from the cloud. See the following for more information on API-driven provisioning.
 
 - [API-driven inbound provisioning concepts](/entra/identity/app-provisioning/inbound-provisioning-api-concepts)
 - [Enable system integrators to build more connectors to systems of record](/entra/identity/app-provisioning/inbound-provisioning-api-concepts#scenario-3-enable-system-integrators-to-build-more-connectors-to-systems-of-record)
 - [Configure API-driven inbound provisioning app](/entra/identity/app-provisioning/inbound-provisioning-api-configure-app)
+
+ :::image type="content" source="media/migrate-entra-id/scenario-1-b.png" alt-text="Conceptual drawing of API-driven provisioning to Microsoft Entra ID." lightbox="media/migrate-entra-id/scenario-1-b.png":::
 
 These can also leverage lifecycle workflows as well.
 
@@ -127,7 +132,7 @@ If you're using MIM for dynamic group membership, these groups can be migrated t
 ## Making groups available to AD-based applications
 Managing on-premises applications with Active Directory groups that are provisioned from and managed in the cloud used can now be accomplished with Microsoft Entra cloud sync. Now Microsoft Entra cloud sync allows you to fully govern application assignments in AD while taking advantage of Microsoft Entra ID Governance features to control and remediate any access related requests.
 
-For more information, see [Govern on-premises Active Directory based apps (Kerberos) using Microsoft Entra ID Governance (Preview)](/entra/identity/hybrid/cloud-sync/govern-on-premises-groups).
+For more information, see [Govern on-premises Active Directory based apps (Kerberos) using Microsoft Entra ID Governance](/entra/identity/hybrid/cloud-sync/govern-on-premises-groups).
 
 
 ## Self-service scenarios
