@@ -94,7 +94,7 @@ These can also leverage lifecycle workflows as well.
 ### Provisioning users from Microsoft Entra ID to on-premises apps
  :::image type="content" source="media/migrate-entra-id/scenario-1-c.png" alt-text="Conceptual drawing of provisioning to on-premises apps." lightbox="media/migrate-entra-id/scenario-1-c.png":::
 
- If you're using MIM to provision users to applications such as SQL or LDAP, you can now use on-premises application provisioning via the ECMA Connector Host to accomplish the same tasks. The ECMA Connector Host is part of a light-weight agent and allows you to reduce your MIM footprint. For more information, see the documentation below.
+ If you're using MIM to provision users to applications such as SAP ECC, to applications that have a SOAP or REST API, or to applications with an underlying SQL database or non-AD LDAP directory, you can now use on-premises application provisioning via the ECMA Connector Host to accomplish the same tasks. The ECMA Connector Host is part of a light-weight agent and allows you to reduce your MIM footprint. If you have custom connectors in your MIM environment, you can migrate their configuration to the agent. For more information, see the documentation below.
 
 - [On-premises provisioning application architecture](/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
 - [Provisioning users to SCIM-enabled apps](/entra/identity/app-provisioning/on-premises-scim-provisioning)
