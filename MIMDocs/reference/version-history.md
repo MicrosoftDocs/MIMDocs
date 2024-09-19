@@ -136,7 +136,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 * Corresponding BHOLD version number: 6.0.62.0
 - [Hotfix download](https://www.microsoft.com/download/details.aspx?id=100412)
 - [KB article 4512924](https://support.microsoft.com/help/4512924)
-- ISO file can be downloaded [from VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or via  [Visual Studio downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
+- ISO file can be downloaded [from Microsoft M365 admin center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or via  [Visual Studio downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202)
 
 > [!IMPORTANT]
 >- .NET Framework 4.6 is required<br>
