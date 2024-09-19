@@ -30,7 +30,7 @@ This article outlines the approaches for licensing Microsoft Identity Manager (M
 
 ## Licensing MIM for your organization
 
-Microsoft Identity Manager 2016 is licensed on a per-user basis.  The details on licensing are included in the Product Terms and related documents, which can be downloaded from the [licensing terms](https://www.microsoft.com/licensing/product-licensing/products.aspx) page.
+Microsoft Identity Manager 2016 is licensed on a per-user basis. The details on licensing are included in the Product Terms and related documents, which can be downloaded from the [licensing terms](https://www.microsoft.com/licensing/product-licensing/products.aspx) page.
 
 <a name='licensing-for-azure-ad-premium-customers'></a>
 
@@ -38,7 +38,7 @@ Microsoft Identity Manager 2016 is licensed on a per-user basis.  The details on
 
 Microsoft Identity Manager 2016 is included with Microsoft Entra ID P1 or P2 (P1 and P2), which is part of Enterprise Mobility + Security.
 
-Microsoft Entra ID P1 or P2 is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Microsoft 365 subscribers can also buy Microsoft Entra ID P1 and P2 online.  Read more at [Microsoft Entra pricing](https://www.microsoft.com/security/business/identity-access-management/azure-ad-pricing).
+Microsoft Entra ID P1 or P2 is available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), the [Open Volume License Program](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), and the [Cloud Solution Providers](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409) program. Azure and Microsoft 365 subscribers can also buy Microsoft Entra ID P1 and P2 online. Read more at [Microsoft Entra pricing](https://www.microsoft.com/security/business/identity-access-management/azure-ad-pricing).
 
 ### MIM CALs
 
@@ -46,7 +46,7 @@ If you do not have Microsoft Entra ID P1 or P2 subscriptions for your users, and
 
 ### Licenses for platform components
 
-A Windows Server license is required to use Microsoft Identity Manager 2016’s server software as a Windows Server add-on. And a MIM deployment also requires a SQL Server installation.  Windows Server and SQL Server licenses are not included with MIM.
+A Windows Server license is required to use Microsoft Identity Manager 2016’s server software as a Windows Server add-on. And a MIM deployment also requires a SQL Server installation. Windows Server and SQL Server licenses are not included with MIM.
 
 ## Obtaining MIM software
 
@@ -73,11 +73,11 @@ If you are starting a fresh install, you will need to download the installation 
 
 ### Obtaining Windows installer packages
 
-For a new installation, most organizations with Volume License agreements download the MIM installation packages from the [Microsoft M365 admin center](https://www.microsoft.com/licensing/servicecenter/default.aspx). The DVD ISO file contains one folder for each MIM component: `Synchronization Service`, `Service and Portal`, etc. If you are going to install the software on a different computer from which you downloaded it, be sure to copy either the entire ISO file or the folder for the component: do not merely copy just an MSI file out of a folder without the rest of the files and sub-folders.
+For a new installation, most organizations with Volume License agreements download the MIM installation packages from the [Microsoft 365 admin center](https://www.microsoft.com/licensing/servicecenter/default.aspx). The DVD ISO file contains one folder for each MIM component: `Synchronization Service`, `Service and Portal`, etc. If you are going to install the software on a different computer from which you downloaded it, be sure to copy either the entire ISO file or the folder for the component: do not merely copy just an MSI file out of a folder without the rest of the files and sub-folders.
 
 If you do not have Volume Licensing and have a subscription for Microsoft Entra ID P1 or P2, you can download the [Microsoft Entra ID P1 or P2 edition of MIM 2016](https://aka.ms/MIMforAADP). This edition includes the `Synchronization Service` and `Service and Portal` components of MIM 2016 SP2. All the changes from published hotfixes as of March 2021 are included in the installers. The MIM Service installer for the Microsoft Entra ID P1 or P2 edition, in order to validate your subscription, requires internet connectivity and will ask you to provide Microsoft Entra credentials with enough permissions to read subscribedSKUs.
 
-If you do not have Volume Licensing, customers with an appropriate developer subscription can also download MIM 2016 SP2 as an ISO file from [Visual Studio My Benefits Downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202&pgroup=).  Search for "Microsoft Identity Manager 2016 with Service pack 2".
+If you do not have Volume Licensing, customers with an appropriate developer subscription can also download MIM 2016 SP2 as an ISO file from [Visual Studio My Benefits Downloads](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202&pgroup=). Search for `Microsoft Identity Manager 2016 with Service pack 2`.
 
 ### Obtaining updates
 
@@ -102,11 +102,9 @@ Be sure to read any release notes associated with the update prior to installing
 
 Updates to [BHOLD](https://www.microsoft.com/download/details.aspx?id=55950) are not distributed as MSP files, only as MSI installers.
 
-### Additional downloads
+### Other downloads
 
 The following downloads may also be relevant:
-
-- [MIM Hybrid Reporting Agent](https://www.microsoft.com/download/details.aspx?id=55112)
 
 - [Generic LDAP Connector, Generic SQL Connector, Graph Connector, Lotus Domino Connector, PowerShell Connector, Web Services Connector](https://go.microsoft.com/fwlink/?LinkId=717495)
 
