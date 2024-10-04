@@ -34,7 +34,7 @@ In addition, organizations should plan a staged approach for scenario migration.
 | Provisioning from other on-premises HR sources| [provisioning from on-premises HR systems with join/leave lifecycle workflows](#provisioning-users-from-on-premises-hr-systems-to-microsoft-entra-id-with-joinleave-workflows)|
 | Provisioning to non-AD-based on-premises applications | [provisioning users from Microsoft Entra ID to on-premises apps](#provisioning-users-from-microsoft-entra-id-to-on-premises-apps) |
 | Global address list (GAL) management for distributed organizations | [synchronization of users from one Microsoft Entra ID tenant to another](/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-overview)|
-| AD security groups| [govern on-premises Active Directory based apps (Kerberos) using Microsoft Entra ID Governance (Preview)](/entra/identity/hybrid/cloud-sync/govern-on-premises-groups) |
+| AD security groups| [govern on-premises Active Directory based apps (Kerberos) using Microsoft Entra ID Governance](/entra/identity/hybrid/cloud-sync/govern-on-premises-groups) |
 | Dynamic groups | [rule-based Microsoft Entra ID security group and Microsoft 365 group memberships](#dynamic-groups)|
 | Self-service group management | [self-service Microsoft Entra ID security group, Microsoft 365 groups and Teams creation and membership management](#self-service-group-management)|
 | Self-service password management | [self-service password reset with writeback to AD](#self-service-password-reset) |
