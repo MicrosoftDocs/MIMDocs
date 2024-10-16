@@ -26,7 +26,7 @@ For new customers who are [licensed for Microsoft Entra ID P1 or P2](/azure/acti
 - Optionally, [pre-register users](/azure/active-directory/authentication/howto-sspr-authenticationdata).
 - Finally, [roll out Microsoft Entra self-service password reset to your end users](/azure/active-directory/authentication/howto-sspr-deployment).
 
-For existing customers who had previously deployed Forefront Identity Manager (FIM) for self-service password reset and are licensed for Microsoft Entra ID P1 or P2, we recommend planning to transition to Microsoft Entra self-service password reset. You can transition end users to Microsoft Entra self-service password reset without needing them to re-register, by [synchronizing or setting through PowerShell a user's alternate email address or mobile phone number](/azure/active-directory/authentication/howto-sspr-authenticationdata). After users are registered for Microsoft Entra self-service password reset, the FIM password reset portal can be decommissioned.
+For Forefront Identity Manager (FIM) or MIM customers licensed for Microsoft Entra ID P1 or P2, we recommend planning to transition to Microsoft Entra self-service password reset. You can transition end users to Microsoft Entra self-service password reset without needing them to re-register, by [synchronizing or setting through PowerShell a user's alternate email address or mobile phone number](/azure/active-directory/authentication/howto-sspr-authenticationdata). After users are registered for Microsoft Entra self-service password reset, the FIM password reset portal can be decommissioned.
 
 MIM 2016 deployments that were using Microsoft Entra MFA should move to either using MIM SSPR with a custom MFA provider, or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). New deployments should use either a custom MFA provider or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
 
@@ -42,7 +42,7 @@ With MFA, users authenticate via the external provider in order to verify their 
 
 This section assumes that you have downloaded and completed the deployment of the Microsoft Identity Manager 2016 [MIM Sync, MIM Service and MIM Portal components](microsoft-identity-manager-deploy.md), including the following components and services:
 
--   A Windows Server 2008 R2 or later has been set up as an Active Directory server including AD Domain Services and Domain Controller with a designated domain (a 'corporate' domain)
+-   An Active Directory Domain Controller with a designated domain (a 'corporate' domain)
 
 -   A Group Policy is defined for Account lockout
 
@@ -52,15 +52,13 @@ This section assumes that you have downloaded and completed the deployment of th
 
 -   MIM Sync is configured for AD-MIM identity synchronization, including:
 
-    -   Configuring the Active Directory Management Agent (ADMA) for connectivity to AD DS and capability to import identity data from and export it to Active Directory.
+    -   Configuring the Active Directory Management Agent (ADMA) for connectivity to AD DS and run profiles to import identity data from and export it to Active Directory.
 
-    -   Configuring the MIM Management Agent (MIM MA) for connectivity to FIM Service DB and capability to import identity data from and export it to the FIM database.
+    -   Configuring the MIM Management Agent (MIM MA) for connectivity to FIM Service database and run profiles to import identity data from and export it to the FIM database.
 
     -   Configuring Synchronization Rules in the MIM Portal to allow user data synchronization and facilitate sync-based activities in the MIM Service.
 
 -   MIM 2016 Add-ins &amp; Extensions including the SSPR Windows Login integrated client is deployed on the server or on a separate client computer.
-
-If you are using Microsoft Entra multifactor authentication, this scenario requires you to have MIM CALs for your users as well as subscription for Microsoft Entra multifactor authentication.
 
 ## Prepare MIM to work with MFA
 Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx), and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
