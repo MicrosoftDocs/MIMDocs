@@ -17,7 +17,7 @@ ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 The following document describes how to set up the Azure Multi-Factor Authentication Server as a second layer of security when your users activate roles in Privileged Access Management or Self-Service Password Reset.
 
 > [!IMPORTANT]
-> In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure Multi-Factor Authentication Server should plan to move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.  To use a different MFA provider, see the article on how to [use Custom multifactor authentication API](Working-with-custommfaserver-for-mim.md).
+> In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments no longer services multifactor authentication (MFA) requests.  Customers of Azure Multi-Factor Authentication Server must move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.  To use a different MFA provider, see the article on how to [use Custom multifactor authentication API](Working-with-custommfaserver-for-mim.md).
 
 The article below outlines the configuration update and steps to enable existing deployments of MIM moving from MIM using the previous SDK to MIM using the Azure Multi-Factor Authentication Server.
 
