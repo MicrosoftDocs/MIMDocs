@@ -16,7 +16,7 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 # Using Microsoft Entra multifactor authentication for activation in MIM PAM
 
 > [!IMPORTANT]
-> In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service multifactor authentication (MFA) requests.  Customers of Azure Multi-Factor Authentication Server should plan to move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.
+> In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments no longer service multifactor authentication (MFA) requests.  Customers of Azure Multi-Factor Authentication Server must move to instead use either custom MFA providers or Windows Hello or smartcard-based authentication in AD.
 
 When configuring a PAM role, you can choose how to authorize users that request to activate the role. The choices that the PAM authorization activity implements are:
 
