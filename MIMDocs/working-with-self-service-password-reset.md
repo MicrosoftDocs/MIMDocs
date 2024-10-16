@@ -1,7 +1,7 @@
 ---
 
 title: Working with Self-Service Password Reset | Microsoft Docs
-description: See what's new with Self-Service Password Reset in MIM 2016, including how SSPR works with multifactor authentication.
+description: See what's new with Self-Service Password Reset (SSPR) in MIM 2016, including how SSPR works with multifactor authentication.
 keywords:
 author: billmath
 ms.author: billmath
@@ -28,13 +28,7 @@ For new customers who are [licensed for Microsoft Entra ID P1 or P2](/azure/acti
 
 For existing customers who had previously deployed Forefront Identity Manager (FIM) for self-service password reset and are licensed for Microsoft Entra ID P1 or P2, we recommend planning to transition to Microsoft Entra self-service password reset. You can transition end users to Microsoft Entra self-service password reset without needing them to re-register, by [synchronizing or setting through PowerShell a user's alternate email address or mobile phone number](/azure/active-directory/authentication/howto-sspr-authenticationdata). After users are registered for Microsoft Entra self-service password reset, the FIM password reset portal can be decommissioned.
 
-For customers, which have not yet deployed Microsoft Entra self-service password reset for their users, MIM also provides self-service password reset portals. Compared to FIM, MIM 2016 includes the following changes:
-
-- The MIM Self-Service Password Reset portal and Windows login screen let users unlock their accounts without changing their passwords.
-
-- A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Entra multifactor authentication Service.
-
-MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to download an SDK that has been deprecated, and existing deployments should move to either using MIM SSPR with a custom MFA provider, or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). New deployments should use either a custom MFA provider or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
+MIM 2016 deployments that were using Microsoft Entra MFA should move to either using MIM SSPR with a custom MFA provider, or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks). New deployments should use either a custom MFA provider or [Microsoft Entra self-service password reset](/azure/active-directory/authentication/concept-sspr-howitworks).
 
 <a name='deploying-mim-self-service-password-reset-portal-using-a-custom-provider-for-multi-factor-authentication'></a>
 
@@ -48,7 +42,7 @@ With MFA, users authenticate via the external provider in order to verify their 
 
 This section assumes that you have downloaded and completed the deployment of the Microsoft Identity Manager 2016 [MIM Sync, MIM Service and MIM Portal components](microsoft-identity-manager-deploy.md), including the following components and services:
 
--   A Windows Server 2008 R2 or later has been set up as an Active Directory server including AD Domain Services and Domain Controller with a designated domain (a “corporate” domain)
+-   A Windows Server 2008 R2 or later has been set up as an Active Directory server including AD Domain Services and Domain Controller with a designated domain (a 'corporate' domain)
 
 -   A Group Policy is defined for Account lockout
 
@@ -69,7 +63,7 @@ This section assumes that you have downloaded and completed the deployment of th
 If you are using Microsoft Entra multifactor authentication, this scenario requires you to have MIM CALs for your users as well as subscription for Microsoft Entra multifactor authentication.
 
 ## Prepare MIM to work with MFA
-Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
+Configure MIM Sync to Support Password Reset and Account Unlock Functionality. For more information, see [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx), and [the SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx).
 
 #### Configure the Phone gate or the One-Time Password SMS Gate
 
@@ -86,7 +80,7 @@ Configure MIM Sync to Support Password Reset and Account Unlock Functionality. F
 4.  Select **Phone Gate** or  **One-Time Password SMS Gate** click **Select** and then **OK**.
 
     > [!NOTE]
-    > If using another provider which generates the one-time password itself, ensure the length field configured above is the same length as that generated by the MFA provider. This length must be 6 for Azure Multi-Factor Authentication Server. Azure Multi-Factor Authentication Server also generates its own message text so the SMS text message is ignored.
+    > If using another provider which generates the one-time password itself, ensure the length field configured is the same length as that generated by the MFA provider.
 
 Users in your organization can now register for password reset. During this process, they will enter their work phone number or mobile phone number so the system knows how to call them (or send them SMS messages).
 
@@ -107,7 +101,7 @@ Now that everything is configured and it’s running, you might want to know wha
 
 There are two ways a user can use the password reset and account unlock functionality, either from the Windows sign-in screen, or from the self-service portal.
 
-By installing the MIM Add-ins and Extensions on a domain joined computer connected over your organizational network to the MIM Service, users can recover from a forgotten password at the desktop login experience. The following steps will walk you through the process.
+By installing the MIM Add-ins and Extensions on a domain joined computer connected over your organizational network to the MIM Service, users can recover from a forgotten password at the desktop login experience. The following steps walk you through the process.
 
 #### Windows desktop login integrated password reset
 
