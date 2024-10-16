@@ -21,7 +21,6 @@
 ### [Step 6 - Create privileged accounts](step-6-transition-group-to-pam.md)
 ### [Step 7 - Elevate a user's access](step-7-elevate-user-access.md)
 ### [Deploy MIM PAM with Windows Server 2016](deploy-pam-with-windows-server-2016.md)
-### [Set up Azure MFA](use-azure-mfa-for-activation.md)
 ## [Configure PAM using scripts](sp1-pam-configure-using-scripts.md)
 ### [Step 1 Configuring the Priv domain](sp1-step1-configuring-priv-domain.md)
 ### [Step 2 Configuring the CORP domain](sp1-step2-configuring-corp-domain.md)

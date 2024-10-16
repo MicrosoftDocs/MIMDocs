@@ -73,7 +73,7 @@ MIM administration requires that the MIM and AD components of the bastion enviro
 
 When a user wishes to activate a privileged role, they must authenticate to the bastion environment domain, and submit a request to MIM.  MIM includes SOAP and REST APIs, as well as user interfaces in PowerShell and in a web page.
 
-Privileged role activation requires that the MIM and AD components of the bastion environment be online.  In addition, if MIM had been configured to use [Azure MFA for activation](use-azure-mfa-for-activation.md) of the selected role, then Internet access is required to contact the Azure MFA service.
+Privileged role activation requires that the MIM and AD components of the bastion environment be online.  
 
 ### Resource Management
 
