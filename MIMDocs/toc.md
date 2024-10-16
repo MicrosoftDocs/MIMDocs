@@ -15,7 +15,6 @@
 # [Deploy and Use](microsoft-identity-manager-deploy.md)
 ## [Deprecated features](microsoft-identity-manager-2016-deprecated-features.md)
 ### [Upgrade from Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
-### [Using Azure Multi-Factor Authentication Server in PAM or SSPR](working-with-mfaserver-for-mim.md)
 ### [BHOLD installation topics](./bhold/bhold-installation-guide.md)
 #### [BHOLD core installation](./bhold/bhold-core-installation.md)
 #### [BHOLD attestation installation](./bhold/bhold-attestation-installation.md)

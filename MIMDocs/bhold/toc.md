@@ -12,7 +12,6 @@
 ## [Plan your PAM deployment](../pam/environment-overview.md)
 # [Deploy and Use](../microsoft-identity-manager-deploy.md)
 ## [Deprecated features](../microsoft-identity-manager-2016-deprecated-features.md)
-### [Using Azure MFA Server in PAM or SSPR](../working-with-mfaserver-for-mim.md)
 ### [BHOLD installation topics](bhold-installation-guide.md)
 #### [BHOLD core installation](bhold-core-installation.md)
 #### [BHOLD attestation installation](bhold-attestation-installation.md)

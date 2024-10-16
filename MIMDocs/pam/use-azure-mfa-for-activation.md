@@ -40,13 +40,6 @@ In order to use Microsoft Entra multifactor authentication with MIM PAM, you nee
 - Microsoft Entra ID P1 or P2 licenses for candidate users
 - Phone numbers for all candidate users
 
-<a name='downloading-the-azure-ad-multi-factor-authentication-service-credentials'></a>
-
-## Downloading the Microsoft Entra multifactor authentication Service Credentials
-
-See [Using Azure Multi-Factor Authentication Server in PAM or SSPR](../working-with-mfaserver-for-mim.md) For information on using Azure Multi-Factor Authentication Server.
-
-
 <a name='configuring-the-mim-service-for-azure-ad-multi-factor-authentication'></a>
 
 ## Configuring the MIM Service for Microsoft Entra multifactor authentication
@@ -55,7 +48,7 @@ See [Using Azure Multi-Factor Authentication Server in PAM or SSPR](../working-w
 
 2.  Create a new directory folder under the directory where the MIM Service was installed, such as ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Using Windows Explorer, navigate into the ```pf\certs``` folder of the ZIP file downloaded in the previous section. Copy the file ```cert\_key.p12``` to the new directory.
+3.  Using Windows Explorer, navigate into the ```pf\certs``` folder of the ZIP file of MFA Server. Copy the file ```cert\_key.p12``` to the new directory.
 
 4.  Using Windows Explorer, navigate into the ```pf``` folder of the ZIP, and open the file ```pf\_auth.cs``` in a text editor like Notepad.
 
