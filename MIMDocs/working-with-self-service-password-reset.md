@@ -30,7 +30,7 @@ For existing customers who had previously deployed Forefront Identity Manager (F
 
 For customers, which have not yet deployed Microsoft Entra self-service password reset for their users, MIM also provides self-service password reset portals. Compared to FIM, MIM 2016 includes the following changes:
 
-- The MIM Self-Service Password Reset portal and Windows login screen  let users unlock their accounts without changing their passwords.
+- The MIM Self-Service Password Reset portal and Windows login screen let users unlock their accounts without changing their passwords.
 
 - A new authentication gate, Phone Gate, was added to MIM. This enables user authentication via telephone call via the Microsoft Entra multifactor authentication Service.
 
@@ -42,7 +42,7 @@ MIM 2016 release builds up to version 4.5.26.0 relied upon the customer to downl
 
 The following section describes how to deploy MIM self-service password reset portal, using a provider for multifactor authentication. These steps are only necessary for customers who are not using Microsoft Entra self-service password reset for their users.
 
-With MFA, users authenticate via the external provider in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call.   The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
+With MFA, users authenticate via the external provider in order to verify their identity while trying to regain access to their account and resources. Authentication can be via SMS or via telephone call. The stronger the authentication, the higher the confidence that the person trying to gain access is indeed the real user who owns the identity. Once authenticated, the user can choose a new password to replace the old one.
 
 ## Prerequisites to set up self-service account unlock and password reset using MFA
 
@@ -92,7 +92,7 @@ Users in your organization can now register for password reset. During this proc
 
 #### Register users for password reset
 
-1.  A user will launch a web browser and navigate to the MIM Password Reset Registration Portal.  (Typically this portal will be configured with Windows authentication).  Within the portal, they will provide their username and password again to confirm their identity.
+1.  A user will launch a web browser and navigate to the MIM Password Reset Registration Portal. (Typically this portal will be configured with Windows authentication). Within the portal, they will provide their username and password again to confirm their identity.
 
     They need to enter the Password Registration Portal and authenticate using their username and password.
 
