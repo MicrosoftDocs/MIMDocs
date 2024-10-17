@@ -112,7 +112,7 @@ An organization can select which functions in their bastion environment require 
 - SQL Server high availability with failover clusters requires at least two servers providing SQL Server, and these cannot be the same as a domain controller.
 - MIM Service should not be installed on the domain controller, in order to minimize the attack surface of each server.
 
-The smallest high availability topology for all functions in a bastion environment comprises at least four servers, and shared storage. Two of the servers must be configured as domain controllers, providing Active Directory Domain Services. The other two servers can be configured as a failover cluster providing SQL Server, and  provide the MIM Service.
+The smallest high availability topology for all functions in a bastion environment comprises at least four servers, and shared storage. Two of the servers must be configured as domain controllers, providing Active Directory Domain Services. The other two servers can be configured as a failover cluster providing SQL Server, and provide the MIM Service.
 
 In addition, a typical deployment of the bastion environment would also include a privileged administration workstation for management of these servers, as well as a monitoring component
 
@@ -120,7 +120,7 @@ The following diagram illustrates one possible architecture:
 
 ![bastion topology - diagram](media/bastion1.png)
 
-Additional servers can be configured for each of these functions, in order to provide higher performance under load conditions, or for geographic redundancy as described below.
+Additional servers can be configured for each of these functions, in order to provide higher performance under load conditions, or for geographic redundancy as described in the following sections.
 
 ### Deployments supporting multiple sites
 
@@ -157,17 +157,17 @@ Some organizations have also considered establishing the bastion environment sep
 - In order to protect against attacks originating from the existing domains, administration of the bastion environment must be isolated from the administrative accounts of the existing domain.
 - The bastion environment requires TCP/IP connectivity to the domain controllers in the existing domain. A list of ports can be found at [How to configure a firewall for domains and trusts](https://support.microsoft.com/kb/179442).
 - A virtualized deployment of Active Directory Domain Services requires specific features from the virtualization platform, as described in [Virtualized Domain Controller Deployment and Configuration](https://technet.microsoft.com/library/jj574223.aspx).
-- A high availability deployment of SQL Server for MIM Service requires specialized storage configuration, described in the section [SQL Server database storage](#sql-server-database-storage) below. Not all hosting providers may currently offer Windows Server hosting with disk configurations suitable for SQL Server failover clusters.
+- A high availability deployment of SQL Server for MIM Service requires specialized storage configuration, described in the section [SQL Server database storage](#sql-server-database-storage). Not all hosting providers may currently offer Windows Server hosting with disk configurations suitable for SQL Server failover clusters.
 
 ## Deployment preparation and recovery procedures
 
-Preparing for a high availability or disaster recovery-ready deployment of the bastion environment requires consideration for how to install Windows Server Active Directory, SQL Server and its database on shared storage, and the MIM Service and its PAM components.
+Preparing for a high availability or disaster recovery-ready deployment of the bastion environment requires consideration for how to install Windows Server Active Directory, SQL Server, its database on shared storage, and the MIM Service and its PAM components.
 
 ### Windows Server
 
 Windows Server contains a built-in feature for high availability, enabling multiple computers to work together as a failover cluster. The clustered servers are connected by physical cables and by software. If one or more of the cluster nodes fail, other nodes begin to provide service (a process known as failover). More details can be found at the [Failover Clustering overview](https://technet.microsoft.com/library/hh831579.aspx).
 
-Make sure the operating system and applications in the bastion environment receive updates for security issues. Some of these updates may require a server restart, so coordinate the times in which updates are applied across the servers to avoid extended outages. One approach is to use [Cluster-Aware Updating](https://technet.microsoft.com/library/hh831694.aspx)  for the servers in a Windows Server failover cluster.
+Make sure the operating system and applications in the bastion environment receive updates for security issues. Some of these updates may require a server restart, so coordinate the times in which updates are applied across the servers to avoid extended outages. One approach is to use [Cluster-Aware Updating](https://technet.microsoft.com/library/hh831694.aspx) for the servers in a Windows Server failover cluster.
 
 The servers in the bastion environment will be joined to a domain, and dependent on the domain services. Make sure that they are not inadvertently configured with a dependency on a particular domain controller for services such as DNS.
 
@@ -222,12 +222,12 @@ The MIM Service is required to process activation requests. In order that a comp
 It is recommended to deploy the MIM Service on multiple servers joined to the PRIV domain.
 For high availability, see the Windows Server documents for [Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx) and [Creating a Windows Server 2012 Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/creating-a-windows-server-2012-failover-cluster/ba-p/371763).
 
-For production deployment across multiple servers, you can use Network Load Balancing (NLB) to distribute the processing load. You should also have a single alias (for instance, A or CNAME records) so that one common name is exposed to the user.
+For production deployment across multiple servers, you can use Network Load Balancing (NLB) to distribute the processing load. You should also have a single alias (for instance, A, or CNAME records) so that one common name is exposed to the user.
 
 >[!IMPORTANT]
 > If you use a load-balancing technology other than the NLB feature in Windows Server 2012 R2 or later, make sure your solution will redirect one session to the same server and not to a random server.
 
-In a multi-server MIM deployment, each MIM Service has an external host name, a service name, and a service partition name. The default value of the service name is the computer's name, and the default value of the external hostname and service partition name are configured during MIM Service installation on the screen that asks for the MIM Service Server address. These three names are stored in file %ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config file as attributes `externalHostName`, `serviceName` and `servicePartitionName` of the `resourceManagementService` configuration node. 
+In a multi-server MIM deployment, each MIM Service has an external host name, a service name, and a service partition name. The default value of the service name is the computer's name, and the default value of the external hostname and service partition name are configured during MIM Service installation on the screen that asks for the MIM Service Server address. These three names are stored in file %ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config file as attributes `externalHostName`, `serviceName`, and `servicePartitionName` of the `resourceManagementService` configuration node. 
 
 When a MIM Service receives a request, the service partition name is stored as an attribute on that request. Subsequently, only other MIM Service installations that have the same service partition name are permitted to interact with that request. As a result, if the PAM scenario includes manual approvals or other long-lived request processing, ensure that each MIM Service has the same `servicePartitionName` attribute in that configuration file.
 
