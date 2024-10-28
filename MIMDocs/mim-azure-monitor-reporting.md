@@ -22,8 +22,8 @@ Setting up Azure Monitor with your MIM server consists of the following steps:
 
  1. [Join MIM to Azure with Azure Arc](#join-mim-server-to-azure-with-azure-arc)
  2. [Install the Azure Monitor extensions](#install-the-azure-monitor-extensions)
- 3. [Create a Data Collection Rule (DCR)](#create-a-data-collection-rule)
- 4. [Associate the DCR with a workspace](#associate-dcr-with-workspace)
+ 3. [Create a workspace](#create-a-data-collection-rule)
+ 4. [Create a Data Collection Rule (DCR)](#create-a-data-collection-rule)
  5. [Verify the MIM data](#verify-data)
 
 
