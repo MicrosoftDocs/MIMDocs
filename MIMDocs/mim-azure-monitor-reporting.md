@@ -35,12 +35,12 @@ You should make sure that you meet the Azure Arc and Azure Monitor prerequisites
 - [Azure Arc Prerequisties](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites)
 - [Collect Windows events with Azure Monitor Agent - Prerequisites](/azure/azure-monitor/agents/data-collection-windows-events#prerequisites)
 
-Also, a resource group in Azure is required before joining the server with Azure Arc.  If you do not have a resource group, you can [create one](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) prior to generating the Azure Arc installation script.
+Also, a resource group in Azure is required before joining the server with Azure Arc. If you do not have a resource group, you can [create one](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) prior to generating the Azure Arc installation script.
 
 ## Join MIM server to Azure with Azure Arc
 Azure Arc-enabled servers, enable you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure: on-premises, other cloud providers, and edge environments. This provides a consistent management experience across native Azure virtual machines and servers anywhere. When a non-Azure machine is Arc-enabled, it becomes a connected machine and is treated as a resource in Azure, with its own resource Id and projection in Azure. 
 
-To join your MIM server, you generate a script and run it locally on the MIM server.  Follow the prompts in the portal to create the script.  Download the script and run it on the MIM server.  This joins the server to Azure and places it into your resource group.
+To join your MIM server, you generate a script and run it locally on the MIM server. Follow the prompts in the portal to create the script. Download the script and run it on the MIM server. This joins the server to Azure and places it into your resource group.
 
 :::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-1.png" alt-text="Screenshot Azure Arc." lightbox="media/mim-azure-monitor-reporting/azure-monitor-1.png":::
  
@@ -51,12 +51,12 @@ For more information, see [Connect Windows Server machines to Azure mim-azure-mo
 ## Install the Azure Monitor extensions
 Azure Monitor supports multiple methods to install the Azure Monitor agent and connect your machine or server registered with Azure Arc-enabled servers to the service. Azure Arc-enabled servers support the Azure VM extension framework, which provides post-deployment configuration and automation tasks, enabling you to simplify management of your hybrid machines like you can with Azure VMs.
 
-After you have MIM joined to Azure, you can the Azure Monitor agent on the MIM server to beginning collecting Windows Event data.  To deploy Azure Monitor you can use the following PowerShell script.  Be sure to replace the variables with your information.  
+After you have MIM joined to Azure, you can the Azure Monitor agent on the MIM server to beginning collecting Windows Event data. To deploy Azure Monitor you can use the following PowerShell script. Be sure to replace the variables with your information. 
 
 ```PowerShell
 ## Install the Azure Monitor Agent
 Install-Module -Name Az.ConnectedMachine
-$subscriptionID = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"  
+$subscriptionID = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" 
 $tenantID = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 $resourcegroup = "MIM-resource-group"
 $MIMServer = "MIM"
@@ -70,18 +70,18 @@ For more information, see [Deployment options for Azure Monitor agent on Azure A
 ## Create a workspace 
 A Log Analytics workspace is a data store into which you can collect any type of log data from all of your Azure and non-Azure resources and applications.
 
-Before we create a data collection rule that collects the Windows Event log information, we need somewhere to send this information.  Follow the steps outline in [Create a workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal#create-a-workspace) to create a Log Analytics workspace.
+Before we create a data collection rule that collects the Windows Event log information, we need somewhere to send this information. Follow the steps outline in [Create a workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal#create-a-workspace) to create a Log Analytics workspace.
 
 ## Create a Data Collection Rule
 Data collection rules (DCRs) are part of an ETL-like data collection process that improves on legacy data collection methods for Azure Monitor. This process uses a common data ingestion pipeline, the Azure Monitor pipeline, for all data sources and a standard method of configuration that's more manageable and scalable than other methods.
 
-To create the data collection rule for the MIM server.  Use the following steps.
+To create the data collection rule for the MIM server. Use the following steps.
 
 1. On the Monitor home screen in the Azure portal, select **Settings** and **Data Collection Rules**.
 2. At the top, click **Create**
 3. Give your rule a name, associate it with your resource group, and the region your resource group is located in.
 4. Click **Next**
-5. On the resources tab, click **Add resources** and under your resource group, add the MIM server.  Click **Next**.
+5. On the resources tab, click **Add resources** and under your resource group, add the MIM server. Click **Next**.
 6. On **Collect and deliver** and the **Windows Event Logs** as the data source.
 7. On **Basic** you can add the basic Windows Event logs, System, Security, and Application.
 8. Click on **Custom**.
@@ -97,9 +97,9 @@ To create the data collection rule for the MIM server.  Use the following steps.
 
 10. Click **Next Destination** and click **Add Destination**
 11. Enter the following:
-    - Destination Type: Azure Monitor Logs
-    - Subscriptiong: Your subscription
-    - Destination Details: Your workgroup
+  - Destination Type: Azure Monitor Logs
+  - Subscriptiong: Your subscription
+  - Destination Details: Your workgroup
 
 12. Click **Add data source**
 13. Click **Review and Create**
