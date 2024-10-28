@@ -42,10 +42,10 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 
 To join your MIM server, you will need to generate a script.  Follow the prompts in the portal to create the script.  Download the script and run it on the MIM server.  This will join the server to Azure.
 
-:::image type="content" source="media/mim-azure-monitor-reporting/azure-reporting-1.png" alt-text="Screenshot Azure Arc." lightbox="media/mim-azure-monitor-reporting/azure-reporting-1.png":::
+:::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-reporting-1.png" alt-text="Screenshot Azure Arc." lightbox="media/mim-azure-monitor-reporting/azure-monitor-reporting-1.png":::
  
 
-For more information see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server)
+For more information see [Connect Windows Server machines to Azure mim-azure-monitor-reportingthrough Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server)
 
 
 ## Install the Azure Monitor extensions
@@ -93,7 +93,7 @@ To create the data collection rule for the MIM server.  Use the following steps.
 |Forefront Identity Manager Management Agent!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]|The MIM management agent log|
 |Forefront Identity Manager Synchronization%4Operational!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]|The operations log for the MIM synchronization engine|
 
-:::image type="content" source="media/mim-azure-monitor-reporting/azure-reporting-2.png" alt-text="Screenshot of data collection sources." lightbox="media/mim-azure-monitor-reporting/azure-reporting-2.png":::
+:::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-reporting-2.png" alt-text="Screenshot of data collection sources." lightbox="media/mim-azure-monitor-reporting/azure-monitor-reporting-2.png":::
 
 10. Click **Next Destination** and click **Add Destination**
 11. Enter the following:
@@ -114,5 +114,5 @@ To verify that you are collecting data, you can go to your workspace and run the
 2. Enter the following query: `Event | where TimeGenerated > ago(48h)`
 3. You should see your MIM data.
  
- :::image type="content" source="media/mim-azure-monitor-reporting/azure-reporting-3.png" alt-text="Screenshot of data collected." lightbox="media/mim-azure-monitor-reporting/azure-reporting-3.png":::
+ :::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-reporting-3.png" alt-text="Screenshot of data collected." lightbox="media/mim-azure-monitor-reporting/azure-monitor-reporting-3.png":::
 
