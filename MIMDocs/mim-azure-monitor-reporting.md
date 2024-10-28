@@ -1,3 +1,4 @@
+---
 title: Use Azure Monitor for Microsoft Identity Manager reporting
 description: Get the steps to configure Azure Monitor with MIM
 services: active-directory
@@ -12,6 +13,7 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
+---
 
 # Azure Monitor for Microsoft Identity Manager reporting
 The following document outlines how you can use Azure Monitor for reporting with Microsoft Identity Manager.
