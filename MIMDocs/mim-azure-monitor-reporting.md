@@ -15,7 +15,7 @@ ms.tgt_pltfrm: na
 ms.workload: identity
 ---
 
-# Azure Monitor for Microsoft Identity Manager reporting
+# Microsoft Identity Manager 2016 reporting with Azure Monitor
 The following document outlines how you can use Azure Monitor for reporting with Microsoft Identity Manager.
 
 Setting up Azure Monitor with your MIM server consists of the following steps:
