@@ -30,17 +30,17 @@ Setting up Azure Monitor with your MIM server consists of the following steps:
  The sections below describe each of the individual steps.
 
 ## Prerequisties
-You should make sure that you meet the Azure Arc and Azure Monitor prerequisites prior to attmepting the steps outlined below.
+You should make sure that you meet the Azure Arc and Azure Monitor prerequisites before attempting the steps outlined below.
 
-- [Azure Arc Prerequisties](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites)
+- [Azure Arc Prerequistes](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites)
 - [Collect Windows events with Azure Monitor Agent - Prerequisites](/azure/azure-monitor/agents/data-collection-windows-events#prerequisites)
 
-Also, a resource group in Azure is required before joining the server with Azure Arc. If you do not have a resource group, you can [create one](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) prior to generating the Azure Arc installation script.
+Also, a resource group in Azure is required before joining the server with Azure Arc. If you do not have a resource group, you can [create one](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) before generating the Azure Arc installation script.
 
 ## Join MIM server to Azure with Azure Arc
 Azure Arc-enabled servers, enable you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure: on-premises, other cloud providers, and edge environments. This provides a consistent management experience across native Azure virtual machines and servers anywhere. When a non-Azure machine is Arc-enabled, it becomes a connected machine and is treated as a resource in Azure, with its own resource Id and projection in Azure. 
 
-To join your MIM server, you generate a script and run it locally on the MIM server. Follow the prompts in the portal to create the script. Download the script and run it on the MIM server. This joins the server to Azure and places it into your resource group.
+To join your MIM server, you generate a script and run it locally on the MIM server. Follow the prompts in the portal to create the script. Download the script and run it on the MIM server. After the script has completed, the MIM server should appear under Azure Arc in the portal.
 
 :::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-1.png" alt-text="Screenshot Azure Arc." lightbox="media/mim-azure-monitor-reporting/azure-monitor-1.png":::
  
@@ -51,7 +51,7 @@ For more information, see [Connect Windows Server machines to Azure mim-azure-mo
 ## Install the Azure Monitor extensions
 Azure Monitor supports multiple methods to install the Azure Monitor agent and connect your machine or server registered with Azure Arc-enabled servers to the service. Azure Arc-enabled servers support the Azure VM extension framework, which provides post-deployment configuration and automation tasks, enabling you to simplify management of your hybrid machines like you can with Azure VMs.
 
-After you have MIM joined to Azure, you can the Azure Monitor agent on the MIM server to beginning collecting Windows Event data. To deploy Azure Monitor you can use the following PowerShell script. Be sure to replace the variables with your information. 
+After you have MIM joined to Azure, you can the Azure Monitor agent on the MIM server to beginning collecting Windows Event data. To install the Azure Monitor extensions you can use the following PowerShell script. Be sure to replace the variables with your information. 
 
 ```PowerShell
 ## Install the Azure Monitor Agent
@@ -87,7 +87,7 @@ To create the data collection rule for the MIM server. Use the following steps.
 8. Click on **Custom**.
 9. Enter the following in the box under **Use XPath queries to filter event logs and limit data collection**
 
-|Xpath que|Description|
+|Xpath query|Description|
 |-----|-----|
 |Forefront Identity Manager!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]| The MIM service log.
 |Forefront Identity Manager Management Agent!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]|The MIM management agent log|
@@ -98,14 +98,14 @@ To create the data collection rule for the MIM server. Use the following steps.
 10. Click **Next Destination** and click **Add Destination**
 11. Enter the following:
   - Destination Type: Azure Monitor Logs
-  - Subscriptiong: Your subscription
+  - Subscription: Your subscription
   - Destination Details: Your workgroup
 
 12. Click **Add data source**
 13. Click **Review and Create**
 14. Click **Create**
 
-Once this completes, event log information begins to flow from the MIM server.
+Once the DCR is created and deployed, event log information begins to flow from the MIM server.
 
 ## Verify data
 To verify that you are collecting data, you can go to your workspace and run the following query.
