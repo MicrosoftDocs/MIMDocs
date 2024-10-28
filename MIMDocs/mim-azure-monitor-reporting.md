@@ -25,7 +25,7 @@ Setting up Azure Monitor with your MIM server consists of the following steps:
  3. [Create a Data Collection Rule (DCR)](#create-a-data-collection-rule)
  4. [Associate the DCR with a workspace](#associate-dcr-with-workspace)
  5. [Verify the MIM data](#verify-data)
- 6. [Use the data to create workbooks and reports] 
+
 
  The sections below describe each of the individual steps.
 
