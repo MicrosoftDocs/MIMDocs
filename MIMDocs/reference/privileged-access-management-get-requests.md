@@ -108,7 +108,7 @@ HTTP/1.1 200 OK
             "CreationTime":"2015-06-23T11:34:38.58Z",
             "CreationMethod":"PAM Web API",
             "ExpirationTime":"2015-06-23T12:34:38.847Z",
-            "RoleId":"8f5cec1a-ecba-42ec-b76d-e6e0e4bf4c62",
+            "RoleId":"00000000-0000-0000-0000-000000000000",
             "RequestedTTL":"3600",
             "RequestedTime":"2015-06-23T11:34:36.417Z",
             "RequestStatus":"Expired"
@@ -120,7 +120,7 @@ HTTP/1.1 200 OK
             "CreationTime":"2015-07-12T04:35:14.433Z",
             "CreationMethod":"PAM Web API",
             "ExpirationTime":"2015-07-12T04:43:51.95Z",
-            "RoleId":"8f5cec1a-ecba-42ec-b76d-e6e0e4bf4c62",
+            "RoleId":"00000000-0000-0000-0000-000000000000",
             "RequestedTTL":"12960000",
             "RequestedTime":"2015-07-12T04:35:00Z",
             "RequestStatus":"Closed"
@@ -132,7 +132,7 @@ HTTP/1.1 200 OK
             "CreationTime":"2015-07-12T04:48:17.46Z",
             "CreationMethod":"PAM Web API",
             "ExpirationTime":"2015-07-12T05:48:17.853Z",
-            "RoleId":"8f5cec1a-ecba-42ec-b76d-e6e0e4bf4c62",
+            "RoleId":"00000000-0000-0000-0000-000000000000",
             "RequestedTTL":"3600",
             "RequestedTime":"2015-07-12T04:48:14.057Z",
             "RequestStatus":"Active"
@@ -144,7 +144,7 @@ HTTP/1.1 200 OK
             "CreationTime":"2015-06-30T07:01:13.147Z",
             "CreationMethod":"PAM Web API",
             "ExpirationTime":"0001-01-01T00:00:00",
-            "RoleId":"c28eab4a-95cf-4c08-a153-d5e8a9e660cd",
+            "RoleId":"00000000-0000-0000-0000-000000000000",
             "RequestedTTL":"3600",
             "RequestedTime":"2015-06-30T07:01:13.119Z",
             "RequestStatus":"Rejected"
@@ -156,7 +156,7 @@ HTTP/1.1 200 OK
             "CreationTime":"2015-07-12T04:49:09.963Z",
             "CreationMethod":"PAM Web API",
             "ExpirationTime":"0001-01-01T00:00:00",
-            "RoleId":"c28eab4a-95cf-4c08-a153-d5e8a9e660cd",
+            "RoleId":"00000000-0000-0000-0000-000000000000",
             "RequestedTTL":"12960000",
             "RequestedTime":"2015-07-12T04:50:00Z",
             "RequestStatus":"PendingApproval"

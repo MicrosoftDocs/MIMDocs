@@ -95,7 +95,7 @@ This section provides examples to create a PAM request.
 ### Example: Request 1
 
 ```
-POST /api/pamresources/pamrequests?Justification=Sample+Reason&RoleId=c28eab4a-95cf-4c08-a153-d5e8a9e660cd&RequestedTTL=7200&RequestedTime=2015%2F07%2F11+23%3A40 HTTP/1.1
+POST /api/pamresources/pamrequests?Justification=Sample+Reason&RoleId=00000000-0000-0000-0000-000000000000&RequestedTTL=7200&RequestedTime=2015%2F07%2F11+23%3A40 HTTP/1.1
 ```
 
 ### Example: Response 1
@@ -111,7 +111,7 @@ HTTP/1.1 201 Created
     "CreationTime":"2015-07-11T23:38:09.036164-07:00",
     "CreationMethod":"PAM Web API",
     "ExpirationTime":"0001-01-01T00:00:00",
-    "RoleId":"c28eab4a-95cf-4c08-a153-d5e8a9e660cd",
+    "RoleId":"00000000-0000-0000-0000-000000000000",
     "RequestedTTL":"7200",
     "RequestedTime":"2015-07-12T06:40:00Z",
     "RequestStatus":"PendingApproval"
@@ -121,7 +121,7 @@ HTTP/1.1 201 Created
 ### Example: Request 2
 
 ```
-POST /api/pamresources/pamrequests?Justification=&RoleId=c28eab4a-95cf-4c08-a153-d5e8a9e660cd&RequestedTTL=3600&RequestedTime= HTTP/1.1
+POST /api/pamresources/pamrequests?Justification=&RoleId=00000000-0000-0000-0000-000000000000&RequestedTTL=3600&RequestedTime= HTTP/1.1
 ```
 
 ### Example: Response 2
@@ -137,7 +137,7 @@ HTTP/1.1 201 Created
     "CreationTime":"2015-07-11T23:07:30.2200123-07:00",
     "CreationMethod":"PAM Web API",
     "ExpirationTime":"0001-01-01T00:00:00",
-    "RoleId":"c28eab4a-95cf-4c08-a153-d5e8a9e660cd",
+    "RoleId":"00000000-0000-0000-0000-000000000000",
     "RequestedTTL":"3600",
     "RequestedTime":"2015-07-12T06:07:27.7229894Z",
     "RequestStatus":"PendingApproval"

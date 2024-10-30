@@ -100,7 +100,7 @@ HTTP/1.1 200 OK
     "odata.metadata":"http://localhost:8086/api/pamresources/%24metadata#pamroles",
     "value":[
         {
-            "RoleId":"8f5cec1a-ecba-42ec-b76d-e6e0e4bf4c62",
+            "RoleId":"00000000-0000-0000-0000-000000000000",
             "DisplayName":"Allow AD Access ",
             "Description":null,
             "TTL":"3600",
@@ -111,7 +111,7 @@ HTTP/1.1 200 OK
             "AvailabilityWindowEnabled":false
         },
         {
-            "RoleId":"c28eab4a-95cf-4c08-a153-d5e8a9e660cd",
+            "RoleId":"00000000-0000-0000-0000-000000000000",
             "DisplayName":"ApprovalRole",
             "Description":null,
             "TTL":"3600",
