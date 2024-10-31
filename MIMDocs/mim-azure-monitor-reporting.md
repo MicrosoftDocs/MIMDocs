@@ -116,3 +116,7 @@ To verify that you are collecting data, you can go to your workspace and run the
  
  :::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-3.png" alt-text="Screenshot of data collected." lightbox="media/mim-azure-monitor-reporting/azure-monitor-3.png":::
 
+## Create a workbook for you data
+Workbooks provide a flexible canvas for data analysis and the creation of rich visual reports within the Azure portal. Now that the MIM data is in the portal, you can uses workbooks. Workbooks let you combine multiple kinds of visualizations and analyses, making them great for freeform exploration.
+
+For more information, see [Create or edit an Azure Workbook](/azure/azure-monitor/visualize/workbooks-create-workbook)
