@@ -1,6 +1,5 @@
 # [Understand and Explore](../microsoft-identity-manager-2016.md)
 ## [What is MIM 2016?](../microsoft-identity-manager-2016.md)
-
 ### [MIM2016 SP1 PAM deployment scripts](../sp1-deployment-scripts.md)
 ## [Learn about PAM](../pam/privileged-identity-management-for-active-directory-domain-services.md)
 # [Plan and Design](../microsoft-identity-manager-2016-supported-platforms.md)
