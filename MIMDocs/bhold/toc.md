@@ -3,7 +3,6 @@
 
 ### [MIM2016 SP1 PAM deployment scripts](../sp1-deployment-scripts.md)
 ## [Learn about PAM](../pam/privileged-identity-management-for-active-directory-domain-services.md)
-## [Hybrid reporting in Azure](../identity-manager-hybrid-reporting-azure.md)
 # [Plan and Design](../microsoft-identity-manager-2016-supported-platforms.md)
 ## [Supported platforms](../microsoft-identity-manager-2016-supported-platforms.md)
 ## [Connect to directories](../supported-management-agents.md)
