@@ -37,7 +37,7 @@
 ## [Install MIM certificate management](mim-cm-deploy.md)
 ## [Password Change Notification Service](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ## [Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md)
-## [Microsoft Identity Manager 2016 reporting with Azure Monitor](mim-azure-monitor-reporting.md)
+## [MIM reporting with Azure Monitor](mim-azure-monitor-reporting.md)
 ## [Self-Service Password Reset](working-with-self-service-password-reset.md)
 ## [Configuring the Graph Connector for B2B](microsoft-identity-manager-2016-graph-b2b-scenario.md)
 ## [Using a custom MFA provider in PAM or SSPR](working-with-custommfaserver-for-mim.md)
