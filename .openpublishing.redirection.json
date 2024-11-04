@@ -32,7 +32,7 @@
         },
         {
             "source_path": "MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md",
-            "redirect_url": "/microsoft-identity-manager/identity-manager-hybrid-reporting-azure",
+            "redirect_url": "/microsoft-identity-manager/working-with-identity-manager-hybrid-reporting",
             "redirect_document_id": false
         },
         {
@@ -183,6 +183,16 @@
         {
             "source_path": "MIMDocs/Understand/bhold-concepts-guide.md",
             "redirect_url": "/microsoft-identity-manager/bhold/bhold-concepts-guide",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "microsoft-identity-manager/identity-manager-hybrid-reporting-azure.md",
+            "redirect_url": "/microsoft-identity-manager/working-with-identity-manager-hybrid-reporting",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MIMDocs/identity-manager-hybrid-reporting-azure.md",
+            "redirect_url": "/microsoft-identity-manager/working-with-identity-manager-hybrid-reporting",
             "redirect_document_id": false
         },
         {
