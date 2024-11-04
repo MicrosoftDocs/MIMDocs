@@ -16,11 +16,11 @@ ms.workload: identity
 ---
 
 # Microsoft Identity Manager 2016 reporting with Azure Monitor
-The following document outlines how you can use Azure Monitor for reporting with Microsoft Identity Manager.
+[Azure Monitor](azure/azure-monitor/overview) is a monitoring solution for collecting, analyzing, and responding to monitoring data from your cloud and on-premises environments. MIM Synchronization Service writes to the event log for key events, and the MIM Service can be configured to add records to a Windows event log for requests it receives. These event logs are then transported by Azure Arc to Azure Monitor, and can be retained in an Azure Monitor workspace alongside the Microsoft Entra audit log, and logs from other [data sources](azure/azure-monitor/data-sources). You can then use [Azure Monitor workbooks](azure/azure-monitor/visualize/workbooks-overview) to format the MIM events in a report, and [alerts](azure/azure-monitor/alerts/alerts-overview) to monitor for specific events in MIM Service.
 
 Setting up Azure Monitor with your MIM server consists of the following steps:
 
- 1. [Join MIM to Azure with Azure Arc](#join-mim-server-to-azure-with-azure-arc)
+ 1. [Join MIM servers to Azure with Azure Arc](#join-mim-server-to-azure-with-azure-arc)
  2. [Install the Azure Monitor extensions](#install-the-azure-monitor-extensions)
  3. [Create a workspace](#create-a-data-collection-rule)
  4. [Create a Data Collection Rule (DCR)](#create-a-data-collection-rule)
@@ -38,7 +38,7 @@ You should make sure that you meet the Azure Arc and Azure Monitor prerequisites
 Also, a resource group in Azure is required before joining the server with Azure Arc. If you do not have a resource group, you can [create one](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) before generating the Azure Arc installation script.
 
 ## Join MIM server to Azure with Azure Arc
-Azure Arc-enabled servers, enable you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure: on-premises, other cloud providers, and edge environments. This provides a consistent management experience across native Azure virtual machines and servers anywhere. When a non-Azure machine is Arc-enabled, it becomes a connected machine and is treated as a resource in Azure, with its own resource Id and projection in Azure. 
+You will likely have one or more Windows Server machines that run MIM Sync or MIM Service in your environment, potentially located on-premises. To join any non-Azure hosted Windows Server to Azure, you generate a script and run it locally on each of those servers.This provides a consistent management experience across native Azure virtual machines and servers anywhere. When a non-Azure machine is Arc-enabled, it becomes a connected machine and is treated as a resource in Azure, with its own resource Id and projection in Azure. 
 
 To join your MIM server, you generate a script and run it locally on the MIM server. Follow the prompts in the portal to create the script. Download the script and run it on the MIM server. After the script has completed, the MIM server should appear under Azure Arc in the portal.
 
@@ -49,7 +49,7 @@ For more information, see [Connect Windows Server machines to Azure mim-azure-mo
 
 
 ## Install the Azure Monitor extensions
-Azure Monitor supports multiple methods to install the Azure Monitor agent and connect your machine or server registered with Azure Arc-enabled servers to the service. Azure Arc-enabled servers support the Azure VM extension framework, which provides post-deployment configuration and automation tasks, enabling you to simplify management of your hybrid machines like you can with Azure VMs.
+After you have joined the Windows Server machines, which have MIM Sync or MIM Service installed, to Azure, you can use the Azure Monitor agent on those servers to begin collecting Windows Event logs. Azure Arc-enabled servers support the Azure VM extension framework, which provides post-deployment configuration and automation tasks, enabling you to simplify management of your hybrid machines like you can with Azure VMs.
 
 After you have MIM joined to Azure, you can the Azure Monitor agent on the MIM server to beginning collecting Windows Event data. To install the Azure Monitor extensions you can use the following PowerShell script. Be sure to replace the variables with your information. 
 
@@ -73,7 +73,7 @@ A Log Analytics workspace is a data store into which you can collect any type of
 Before we create a data collection rule that collects the Windows Event log information, we need somewhere to send this information. Follow the steps outline in [Create a workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal#create-a-workspace) to create a Log Analytics workspace.
 
 ## Create a Data Collection Rule
-Data collection rules (DCRs) are part of an ETL-like data collection process that improves on legacy data collection methods for Azure Monitor. This process uses a common data ingestion pipeline, the Azure Monitor pipeline, for all data sources and a standard method of configuration that's more manageable and scalable than other methods.
+Data collection rules (DCRs) are part of an Extract, Transform and Load (ETL) data collection process that improves on legacy data collection methods for Azure Monitor. This process uses a common data ingestion pipeline, the Azure Monitor pipeline, for all data sources and a standard method of configuration that's more manageable and scalable than other methods.
 
 To create the data collection rule for the MIM server. Use the following steps.
 
