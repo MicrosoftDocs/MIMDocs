@@ -1,7 +1,6 @@
 # [Overview](microsoft-identity-manager-2016.md)
 ## [What is MIM 2016?](microsoft-identity-manager-2016.md)
 ## [Learn about PAM](./pam/privileged-identity-management-for-active-directory-domain-services.md)
-## [Hybrid reporting in Azure](identity-manager-hybrid-reporting-azure.md)
 ## [Microsoft Entra support process](support-update-for-azure-active-directory-premium-customers.md)
 # [Plan and Design](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Supported platforms](microsoft-identity-manager-2016-supported-platforms.md)
