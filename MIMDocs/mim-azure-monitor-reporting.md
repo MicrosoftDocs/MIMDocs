@@ -29,7 +29,7 @@ Setting up Azure Monitor with your MIM server consists of the following steps:
 
  The following sections describe each of the individual steps.
 
-## Prerequisties
+## Prerequisites
 You should make sure that you meet the Azure Arc and Azure Monitor prerequisites before attempting the steps outlined below.
 
 - [Azure Arc Prerequisites](/azure/azure-arc/servers/plan-at-scale-deployment#prerequisites)
@@ -45,7 +45,7 @@ To join your MIM server, you generate a script and run it locally on the MIM ser
 :::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-1.png" alt-text="Screenshot Azure Arc." lightbox="media/mim-azure-monitor-reporting/azure-monitor-1.png":::
  
 
-For more information, see [Connect Windows Server machines to Azure mim-azure-monitor-reportingthrough Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server)
+For more information, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
 
 
 ## Install the Azure Monitor extensions
@@ -89,9 +89,9 @@ To create the data collection rule for the MIM server. Use the following steps.
 
 |Xpath query|Description|
 |-----|-----|
-|Forefront Identity Manager!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]| The MIM service log.
-|Forefront Identity Manager Management Agent!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]|The MIM management agent log|
-|Forefront Identity Manager Synchronization%4Operational!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]|The operations log for the MIM synchronization engine|
+|`Forefront Identity Manager!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]`| The MIM service log|
+|`Forefront Identity Manager Management Agent!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]`|The MIM management agent log|
+|`Forefront Identity Manager Synchronization%4Operational!*[System[(Level=1 or Level=2 or Level=3 or Level=4 or Level=0 or Level=5)]]`|The operations log for the MIM synchronization engine|
 
 :::image type="content" source="media/mim-azure-monitor-reporting/azure-monitor-2.png" alt-text="Screenshot of data collection sources." lightbox="media/mim-azure-monitor-reporting/azure-monitor-2.png":::
 
@@ -101,9 +101,9 @@ To create the data collection rule for the MIM server. Use the following steps.
   - Subscription: Your subscription
   - Destination Details: Your workgroup
 
-12. Click **Add data source**
-13. Click **Review and Create**
-14. Click **Create**
+12. Click **Add data source**.
+13. Click **Review and Create**.
+14. Click **Create**.
 
 Once the DCR is created and deployed, event log information begins to flow from the MIM server.
 
@@ -119,4 +119,4 @@ To verify that you are collecting data, you can go to your workspace and run the
 ## Create a workbook for your data
 Workbooks provide a flexible canvas for data analysis and the creation of rich visual reports within the Azure portal. Now that the MIM data is in the portal, you can use workbooks. Workbooks let you combine multiple kinds of visualizations and analyses, making them great for freeform exploration.
 
-For more information, see [Create or edit an Azure Workbook](/azure/azure-monitor/visualize/workbooks-create-workbook)
+For more information, see [Create or edit an Azure Workbook](/azure/azure-monitor/visualize/workbooks-create-workbook).
