@@ -65,7 +65,7 @@ The ECMA1/XMA extensibility framework has been replaced by ECMA 2.0. Updating ex
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Management Agents           | Running Connectors out-of-proc      | The synchronization service will always call the connector in the same process. It is the responsibility of the connector to start and manage the other process. |
 | Management Agents           | Configure partition display name    | This option was only used to provide an alternative name for a partition in the WMI interfaces.                                                                                                                                                                       |
-| Run profiles                | Combined profiles                   | The combined profiles delta import/sync, full import/delta sync, and full import/sync may be removed. Use run profiles with two steps instead.
+| Run profiles                | Combined profiles                   | The combined profiles delta import/sync, full import/delta sync, and full import/sync are no longer supported.
 
 > [!NOTE]
 > You should keep combined run profiles only in environments where the performance would be impacted by a large number of existing disconnectors.
