@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 11/1/2024
+ms.date: 11/18/2024
 ms.topic: article
 ms.service: microsoft-identity-manager
 
@@ -28,8 +28,9 @@ ms.suite: ems
 
 This article discusses how to combine on-premises and cloud data into hybrid reports in Microsoft Entra, and how to manage and view these reports.
 
-> [!NOTE]
-> Microsoft has a newer recommended approach for hybrid reporting in Azure, using Azure Arc and Azure Monitor. For more information, see [Microsoft Identity Manager 2016 reporting with Azure Monitor](mim-azure-monitor-reporting.md).
+> [!IMPORTANT]
+> The MIM hybrid reporting feature, described in this article, is deprecated. This is replaced by using Azure Arc agent to send event logs to Azure Monitor, as this allows more flexible reports.  As of November 2025, the cloud endpoints used by the MIM hybrid reporting agent will no longer be available, and customers should transition to Azure Monitor or similar.
+> For more information, see [Microsoft Identity Manager 2016 reporting with Azure Monitor](mim-azure-monitor-reporting.md).
 
 ## Available hybrid reports
 
