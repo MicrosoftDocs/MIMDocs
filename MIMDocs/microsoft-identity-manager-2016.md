@@ -16,7 +16,7 @@ ms.workload: identity
 ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
-ms.date: 3/28/2024
+ms.date: 11/18/2024
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
@@ -48,9 +48,10 @@ For Microsoft Entra ID Premium customers, standard support continues to be avail
 
 ### Deprecations of other Microsoft components impacting MIM
 
- - The Azure AD Connector for FIM from 2014 is deprecated, and the Microsoft Entra ID internal interfaces used by that connector, are in the process of being removed. Existing deployments should migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md).
+ - The Azure AD Connector for FIM from 2014 is deprecated, and the Microsoft Entra ID internal interfaces used by that connector, are removed. Existing deployments must migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md).
  - Microsoft Entra Multifactor Authentication Server is deprecated, and beginning September 30, 2024, Microsoft Entra Multifactor Authentication Server deployments no longer services multifactor authentication (MFA) requests. Customers of Microsoft Entra Multifactor Authentication Server, for MIM SSPR or MIM PAM approvals, must move to instead use either custom MFA providers, or Windows Hello or smartcard-based authentication in AD.
  - Microsoft Silverlight is no longer available for download and is at [end of support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).  Customers with an existing BHOLD deployment of one or more of those modules with a Silverlight dependency should plan to uninstall those modules from their BHOLD server computers and uninstall Silverlight from any user computers that were previously interacting with that BHOLD deployment.
+ - The MIM hybrid reporting feature, introduced with Microsoft Identity Manager (MIM) 2016, is deprecated, and replaced by using Azure Arc agent to send  event logs to Azure Monitor, as this allows more flexible reports. As of November 2025, the cloud endpoints used by the MIM hybrid reporting agent will no longer be available, and customers should transition to Azure Monitor or similar. For more information, see [Microsoft Identity Manager 2016 reporting with Azure Monitor](mim-azure-monitor-reporting.md).
 
 
 ### Major new and updated scenarios in MIM

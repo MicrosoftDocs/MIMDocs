@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 4/30/2024
+ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-identity-manager
 
@@ -47,6 +47,12 @@ Do not deploy MIM Service or Portal on Windows Server 2008 R2, or use SQL Server
 
 > [!IMPORTANT]
 > In September 2022, Microsoft announced deprecation of Azure Multi-Factor Authentication Server. Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments no longer service multifactor authentication (MFA) requests. Customers of Azure Multi-Factor Authentication Server, for MIM SSPR or MIM PAM approvals, must move to instead use either custom MFA providers, or Windows Hello or smartcard-based authentication in AD.
+
+## Hybrid reporting
+
+The MIM hybrid reporting feature, introduced with Microsoft Identity Manager (MIM) 2016, is deprecated. This feature allowed the MIM hybrid reporting agent to send event logs from the MIM service to Microsoft Entra, enabling reports for password reset using self-service password reset (SSPR) and self-service group management (SSGM) in the Microsoft Entra audit log. This is replaced by using Azure Arc agent to send those event logs to Azure Monitor, as this allows more flexible reports. As of November 2025, the cloud endpoints used by the MIM hybrid reporting agent will no longer be available, and customers should transition to Azure Monitor or similar. Other MIM and Entra ID Connect Health capabilities are unaffected by this deprecation.
+
+For more information, see [Microsoft Identity Manager 2016 reporting with Azure Monitor](mim-azure-monitor-reporting.md).
 
 ## Connectors and Management Agents
 
