@@ -56,10 +56,15 @@ For more information, see [Microsoft Identity Manager 2016 reporting with Azure 
 
 ## Connectors and Management Agents
 
-The following MAs were removed in MIM 2016: </br> 1. MA for FIM Certificate Management </br>2. MA for Lotus Notes</br> 3. MA for SAP R/3 </br> The Lotus Notes and SAP R/3 MAs were replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
+The following MAs were removed in MIM 2016:
 
-> [!IMPORTANT]
-> The Windows Azure AD Connector for FIM is deprecated. The solution of using FIM and this connector for Microsoft Entra has been superseded. Existing deployments must migrate to [Microsoft Entra Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect), Microsoft Entra Connect Sync, or the [Microsoft Graph Connector](microsoft-identity-manager-2016-connector-graph.md), as described in [how to migrate from the FIM Connector](migrate-from-the-fim-connector-for-azure-active-directory.md). The internal interfaces used by the Windows Azure AD Connector for FIM were removed from Microsoft Entra ID, and the Windows Azure AD Connector cannot connect with Microsoft Entra ID as of April 2024.
+- MA for FIM Certificate Management
+- MA for Lotus Notes
+- MA for SAP R/3
+- The Windows Azure AD Connector for FIM
+
+The Lotus Notes and SAP R/3 MAs were replaced with new connectors. For more information, see [Latest Connector Version Release History & Download](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history).
+
 
 ## Synchronization Service
 
