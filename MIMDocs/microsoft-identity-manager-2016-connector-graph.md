@@ -57,20 +57,16 @@ The connector can be used for other specific identity management scenarios invol
 
 2.  In the Azure portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
 
-    ![Image of application registration details](media/microsoft-identity-manager-2016-ma-graph/new-application-id.png)
-
-    Picture 2. Application ID
-
 3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value won't be available to view again after leaving the page.
 
     ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
-    Picture 3. New Client Secret
+    Picture 2. New Client Secret
 
 4.  Grant proper 'Microsoft Graph' permissions to the application by opening "API Permissions"
 
     ![Image of add permissions button](media/microsoft-identity-manager-2016-ma-graph/add-permission-button.png)
-    Picture 4. Add new API
+    Picture 3. Add new API
 
     Select 'Microsoft Graph' Application permissions.
     ![Image of applications permissions](media/microsoft-identity-manager-2016-ma-graph/application-permissions.png)
@@ -121,13 +117,9 @@ Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 
 10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID to avoid running import in parallel for the same application.
 
+Picture 4. Connectivity page
 
-![Connector settings image with connectivity details](media/microsoft-identity-manager-2016-ma-graph/connector-settings-connectivity.png)
-
-
-Picture 5. Connectivity page
-
-The connectivity page (Picture 5) contains the Graph API version that is used
+The connectivity page (Picture 4) contains the Graph API version that is used
 and tenant name. The Client ID and Client Secret represent the Application ID and
 Key value of the application that was previously created in Microsoft Entra ID.
 
@@ -137,7 +129,7 @@ The connector defaults to the v1.0 and the login and graph endpoints of the Micr
 
 ![Global parameters page image](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
 
-Picture 6. Global Parameters page
+Picture 5. Global Parameters page
 
 Global parameters page contains the following settings:
 
@@ -254,7 +246,7 @@ expired.”:
 
 ![Error details image](media/microsoft-identity-manager-2016-ma-graph/ce9e23ffe17e3dac79b58bba31cb5a8d.png)
 
-Picture 7. “Access token has expired.” Error
+Picture 6. “Access token has expired.” Error
 
 The cause of this issue might be configuration of access token lifetime from the
 Azure side. By default, the access token expires after 1 hour. To increase expiration time, see [this article](/azure/active-directory/develop/active-directory-configurable-token-lifetimes).
