@@ -43,9 +43,10 @@ Related links:
 * [Lotus Domino Connector](microsoft-identity-manager-2016-connector-domino.md) reference documentation
 * [SharePoint User Profile Store Connector](https://go.microsoft.com/fwlink/?LinkID=331344) reference documentation
 
-## April 2024
-
-* Forefront Identity Manager Connector for Microsoft Azure Active Directory end of support; see [Migrate a Microsoft Entra provisioning scenario from the FIM Connector for Microsoft Entra ID to Microsoft Entra Connect or MIM Graph connector](../migrate-from-the-fim-connector-for-azure-active-directory.md).
+## 1.1.2057.0 (November 2024)
+### Fixed issues
+* Graph Connector 
+  * Performance enhancements for the graph connector during full and delta imports.
 
 ## 1.1.2038.0 (March 2024)
 
