@@ -19,6 +19,11 @@ ms.workload: identity
 # Migrating Identity and Access Management scenarios to Microsoft Entra from Microsoft Identity Manager
 Microsoft Identity Manager is Microsoft’s on-premises-hosted identity and access management product. It's based on technology introduced in 2003, continuously improved through today, and [supported along with Microsoft Entra cloud services](microsoft-identity-manager-2016.md?#support-update-for-microsoft-entra-id-p1-or-p2-customers). MIM has been a core part of many identity and access management strategies, augmenting Microsoft Entra ID's cloud-hosted services and other on-premises agents.
 
+>[!IMPORTANT]
+>We are seeking feedback from our customers on how they are planning their migration from Microsoft Identity Manager (MIM) before its end of life in January 2029.
+>
+>Please take the time to fill out a small survey here:  https://aka.ms/MIMMigrationFeedback 
+
 Many customers have expressed interest in moving the center of their identity and access management scenarios entirely to the cloud. Some customers will no longer have an on-premises environment, while others integrate the cloud-hosted identity and access management with their remaining on-premises applications, directories and databases. This document provides guidance on migration options and approaches for moving Identity and Access Management (IAM) scenarios from Microsoft Identity Manager to Microsoft Entra cloud-hosted services, and will be updated as new scenarios become available to migrate. Similar guidance is available for migration of other on-premises identity management technologies, including [migrating from ADFS](/entra/identity/enterprise-apps/migrate-ad-fs-application-howto).
 
 ## Migration overview
