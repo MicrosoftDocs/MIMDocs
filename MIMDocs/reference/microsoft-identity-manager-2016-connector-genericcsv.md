@@ -22,15 +22,15 @@ ms.author: erkarc
 
 This article describes the Generic CSV (GCSV) Connector. The article applies to the following products:
 
-* [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](https://learn.microsoft.com/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
-* [Microsoft Identity Manager 2016 (MIM2016)](https://learn.microsoft.com/microsoft-identity-manager)
+* [Microsoft Entra Connect Provisioning Agent (ECMA2Host)](/entra/identity/app-provisioning/on-premises-application-provisioning-architecture)
+* [Microsoft Identity Manager 2016 (MIM2016)](/microsoft-identity-manager)
 
 For MIM 2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 To see this Connector in action, see the [Generic SQL Connector step-by-step](microsoft-identity-manager-2016-connector-genericsql-step-by-step.md) article.
 
 > [!NOTE]
-> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into CSV files, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> The [Azure AD provisioning](/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into CSV files, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
 ## Overview of the Generic CSV Connector
 
@@ -72,7 +72,7 @@ Before you use the connector, make sure you have the following on the synchroniz
 #### MIM Synchronization Service Account Permissions
 
 >[!IMPORTANT]
-> The MIM 2016 Synchronization service account is the security context that performs the file operations to CSV files and runs the pre/post-processing PowerShell scripts. This service account needs Read/Write permissions for all the CSV and PowerShell files that are configured. It also needs the appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) to run any scripts that are configured.  
+> The MIM 2016 Synchronization service account is the security context that performs the file operations to CSV files and runs the pre/post-processing PowerShell scripts. This service account needs Read/Write permissions for all the CSV and PowerShell files that are configured. It also needs the appropriate [PowerShell ExecutePolicy permissions](/powershell/module/microsoft.powershell.core/about/about_execution_policies) to run any scripts that are configured.  
 
 ## Create a new Connector
 
@@ -307,7 +307,7 @@ The following image is an example of the *Anchors* page.
 
 In order for the GCSV connector to add new User or Group objects into their corresponding CSV files a new Connector Space Object must be provisioned for it. 
 
-Whether using either [MIM 2016 Declarative Provisioning](https://learn.microsoft.com/microsoft-identity-manager/mim-how-provision-users-adds) or writing your own [MIM Synchronization Rules Extensions](https://learn.microsoft.com/previous-versions/windows/desktop/identity-lifecycle-manager/ms698375(v=vs.85)), new Connector Space objects must have a DN constructed using the following format:
+Whether using either [MIM 2016 Declarative Provisioning](/microsoft-identity-manager/mim-how-provision-users-adds) or writing your own [MIM Synchronization Rules Extensions](/previous-versions/windows/desktop/identity-lifecycle-manager/ms698375(v=vs.85)), new Connector Space objects must have a DN constructed using the following format:
 
 **CN=[ANCHOR_VALUE],Object=User|Group,O=CSV**
 
@@ -323,7 +323,7 @@ The following image is a *Synchronization Rule* that demonstrates how to constru
 
 ![Screenshot of Sync Rule page 4](./media/microsoft-identity-manager-2016-connector-genericcsv-step-by-step/syncrule4.png)
 
-The following code demonstrates the equivalent provisioning logic using [Metaverse Rules Extensions](https://learn.microsoft.com/previous-versions/windows/desktop/forefront-2010/ms695371(v=vs.100)).
+The following code demonstrates the equivalent provisioning logic using [Metaverse Rules Extensions](/previous-versions/windows/desktop/forefront-2010/ms695371(v=vs.100)).
 
 ```C#
 void IMVSynchronization.Provision(MVEntry mventry)

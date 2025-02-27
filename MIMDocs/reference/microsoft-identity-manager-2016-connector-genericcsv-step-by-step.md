@@ -21,12 +21,12 @@ ms.author: erkarc
 # Generic CSV Connector - Step-by-Step Reference Guide (Preview)
 This article describes the Generic CSV Connector. The article applies to the following  products:
 
-* [Microsoft Identity Manager 2016 (MIM2016)](https://learn.microsoft.com/microsoft-identity-manager)
+* [Microsoft Identity Manager 2016 (MIM2016)](/microsoft-identity-manager)
 
 For MIM 2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 > [!NOTE]
-> The [Azure AD provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into CSV files, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](https://learn.microsoft.com/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
+> The [Azure AD provisioning](/azure/active-directory/app-provisioning/user-provisioning) service now provides a lightweight agent based solution for provisioning users into CSV files, without a full MIM sync deployment. We recommend evaluating if it meets your needs. [Learn more](/azure/active-directory/app-provisioning/on-premises-sql-connector-configure).
 
 ## Prepare the Sample CSV files
 On a server running the MIM Synchronization Server, create the folder ***C:\GCSV*** and copy the following CSV files found in [Appendix A – Sample CSV Files](#appendix-a---sample-csv-files) into it. Be sure to grant the MIM Synchronization Service account both read-and-write permissions to that folder.
@@ -43,7 +43,7 @@ Copy the following CSV into the ***C:\GCSV\SCRIPTS*** folder:
 ## Prepare the Sample PowerShell Scripts
 
 On a server running the MIM Synchronization Server, create the folder ***C:\GCSV\SCRIPTS*** and copy the sample PowerShell scripts located in [Appendix B - Sample PowerShell Files](#appendix-b---sample-powershell-files) into it. 
-Be sure that the MIM Synchronization service account has appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) in order to execute the scripts.
+Be sure that the MIM Synchronization service account has appropriate [PowerShell ExecutePolicy permissions](/powershell/module/microsoft.powershell.core/about/about_execution_policies) in order to execute the scripts.
 
 Copy the following PowerShell scripts into the ***C:\GCSV\SCRIPTS*** folder:
 
@@ -56,7 +56,7 @@ Copy the following PowerShell scripts into the ***C:\GCSV\SCRIPTS*** folder:
 > This guide assumes that the CSV files are in the following path on your MIM Synchronization server: C:\GCSV\SCRIPTS. If you install them in a different location, you will need to make the appropriate changes through the reset of this guide. 
 
 > [!IMPORTANT]
->The MIM Synchronization Service account requires the appropriate [PowerShell ExecutePolicy permissions](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) on the MIM Synchronization server in order execute the sample PowerShell scripts. 
+>The MIM Synchronization Service account requires the appropriate [PowerShell ExecutePolicy permissions](/powershell/module/microsoft.powershell.core/about/about_execution_policies) on the MIM Synchronization server in order execute the sample PowerShell scripts. 
 
 ## Create a New Connector
 
