@@ -21,7 +21,7 @@ ms.author: erkarc
 # Generic CSV Connector - Step-by-Step Reference Guide (Preview)
 This article describes the Generic CSV Connector. The article applies to the following  products:
 
-* [Microsoft Identity Manager 2016 (MIM2016)](https://learn.microsoft.com/microsoft-identity-manager)
+* [Microsoft Identity Manager 2016 (MIM2016)](/microsoft-identity-manager)
 
 For MIM 2016, the Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=717495).
 
