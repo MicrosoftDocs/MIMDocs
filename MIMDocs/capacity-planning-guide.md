@@ -6,7 +6,7 @@ description: Use this guide to understand the variables that should be considere
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 04/10/2024
 ms.topic: article
 ms.service: microsoft-identity-manager

@@ -6,7 +6,7 @@ description: Go over the process of creating users in ADDS using Microsoft Ident
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

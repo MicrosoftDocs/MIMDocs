@@ -6,7 +6,7 @@ description: Comprehensive list of terms that are referenced in Microsoft Identi
 keywords: Terminology
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: reference
 ms.service: microsoft-identity-manager

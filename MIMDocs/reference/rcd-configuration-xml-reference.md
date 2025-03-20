@@ -6,7 +6,7 @@ description: Using RCDC to control how MIM resources appear in the UI.
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: reference
 ms.service: microsoft-identity-manager

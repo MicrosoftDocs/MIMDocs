@@ -5,7 +5,7 @@ keywords:
 author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
-manager: amycolannino
+manager: femila
 ms.date: 3/29/2024
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref

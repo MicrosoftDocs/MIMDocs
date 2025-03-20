@@ -6,7 +6,7 @@ description: Migrate a group to the PRIV forest so that they can be managed with
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
