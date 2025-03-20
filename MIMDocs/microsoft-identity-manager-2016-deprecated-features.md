@@ -6,7 +6,7 @@ description: This article documents deprecated features of the MIM Identity Mana
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-identity-manager

@@ -4,7 +4,7 @@ description: This article describes how to configure Microsoft's Lotus Domino Co
 services: active-directory
 documentationcenter: ''
 author: billmath
-manager: amycolannino
+manager: femila
 editor: ''
 
 ms.assetid: e07fd469-d862-470f-a3c6-3ed2a8d745bf

@@ -7,7 +7,7 @@ keywords: MIM
 author: billmath
 ms.author: billmath
 reviewer: markwahl-msft
-manager: amycolannino
+manager: femila
 ms.date: 11/04/2024
 ms.topic: article
 ms.service: microsoft-identity-manager

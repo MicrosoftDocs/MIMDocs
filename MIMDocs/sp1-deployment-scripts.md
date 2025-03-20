@@ -6,7 +6,7 @@ description: This page is part of the series of articles about configuring Micro
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

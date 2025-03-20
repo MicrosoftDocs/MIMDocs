@@ -6,7 +6,7 @@ description: Install Microsoft Identity Manager 2016 Certificate Manager
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

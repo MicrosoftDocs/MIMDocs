@@ -6,7 +6,7 @@ description: Prepare the PRIV domain controller, which will provide the bastion 
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

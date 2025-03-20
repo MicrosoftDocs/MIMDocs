@@ -6,7 +6,7 @@ description: This article describes how Microsoft Entra ID P1 or P2 customers ca
 keywords:
 author: EugeneSergeev
 ms.author: esergeev
-manager: amycolannino
+manager: femila
 ms.date: 6/9/2020
 ms.topic: article
 ms.service: microsoft-identity-manager

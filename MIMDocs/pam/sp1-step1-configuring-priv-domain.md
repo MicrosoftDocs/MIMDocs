@@ -6,7 +6,7 @@ description: Prepare the PRIV domain with existing or new identities to be manag
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

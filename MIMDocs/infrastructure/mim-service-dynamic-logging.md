@@ -4,7 +4,7 @@ title: MIM Service Dynamic Logging | Microsoft Docs
 description: Enable MIM service dynamic logging without having to restart the management service
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
