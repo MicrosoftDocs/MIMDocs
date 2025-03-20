@@ -6,7 +6,7 @@ description: Understand the MIM 2016 components, and get suggestions for how to 
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

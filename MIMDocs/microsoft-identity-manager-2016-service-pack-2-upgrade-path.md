@@ -6,7 +6,7 @@ description: Learn how to upgrade your FIM 2010 R2 or MIM 2016 components, and t
 keywords:
 author: EugeneSergeev
 ms.author: esergeev
-manager: amycolannino
+manager: femila
 ms.date: 09/16/2019
 ms.topic: article
 ms.service: microsoft-identity-manager

@@ -9,7 +9,7 @@ keywords: MIM
 author: EugeneSergeev
 ms.author: esergeev
 reviewer: markwahl-msft
-manager: amycolannino
+manager: femila
 ms.date: 03/18/2021
 ms.topic: article
 ms.service: microsoft-identity-manager

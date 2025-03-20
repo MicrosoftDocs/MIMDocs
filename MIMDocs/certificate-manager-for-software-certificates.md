@@ -6,7 +6,7 @@ description: Learn how to use Certificate Manager to create and renew software c
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

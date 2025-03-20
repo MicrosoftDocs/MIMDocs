@@ -5,7 +5,7 @@ description: See what's new with Self-Service Password Reset (SSPR) in MIM 2016,
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager

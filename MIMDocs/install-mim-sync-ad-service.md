@@ -6,7 +6,7 @@ description: Use management agents and the MIM Sync Service to sync your Active 
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

@@ -5,7 +5,7 @@ description: Set up Azure Multi-Factor Authentication Server as a second layer o
 keywords:
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 09/14/2023
 ms.topic: article
 ms.service: microsoft-identity-manager
