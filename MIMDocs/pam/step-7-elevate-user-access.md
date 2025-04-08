@@ -6,7 +6,7 @@ description: As the final step, grant a privileged user access to demonstrate th
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/14/2023
+ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
 
