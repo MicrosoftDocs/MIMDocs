@@ -1,19 +1,13 @@
 ---
-# required metadata
-
 title: BHOLD FIM/MIM integration installation | Microsoft Docs
 description: BHOLD integration module adds self-service role management to MIM and FIM
-keywords:
 author: billmath
 ms.author: billmath
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
-
-ms.assetid:
-
-
 ---
+
 # BHOLD FIM/MIM Integration Installation
 
 

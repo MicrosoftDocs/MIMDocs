@@ -1,19 +1,13 @@
 ---
-# required metadata
-
 title: BHOLD core Installation | Microsoft Docs
 description: BHOLD suite installation core document
-keywords:
 author: billmath
 ms.author: billmath
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
-
-ms.assetid:
-
-
 ---
+
 # BHOLD Core installation
 
 The BHOLD Core module provides the key features of BHOLD Suite within your environment. The BHOLD Core module must be installed and configured on a server in your local area network before you can install other BHOLD Suite modules.
