@@ -6,7 +6,6 @@ description: This article covers the steps to install the Web Service Configurat
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

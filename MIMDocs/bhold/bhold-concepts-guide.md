@@ -6,7 +6,6 @@ description: Understand how Microsoft BHOLD Suite works with Microsoft Identity 
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.assetid: 

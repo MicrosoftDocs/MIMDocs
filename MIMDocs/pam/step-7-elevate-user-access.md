@@ -5,7 +5,6 @@ title: Deploy PAM step 7 – user access | Microsoft Docs
 description: As the final step, grant a privileged user access to demonstrate that your Privileged Access Management deployment was successful.
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

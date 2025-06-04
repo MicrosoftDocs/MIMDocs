@@ -6,7 +6,6 @@ description: Install SQL Server 2016 or 2017 in preparation for your MIM 2016 in
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

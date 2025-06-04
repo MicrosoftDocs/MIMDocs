@@ -6,7 +6,6 @@ description: This article covers how to deploy a REST API sample.
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

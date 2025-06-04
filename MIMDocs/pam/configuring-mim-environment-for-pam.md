@@ -6,7 +6,6 @@ description: The roadmap for installing and MIM and configuring it for Privilege
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

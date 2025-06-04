@@ -6,7 +6,6 @@ description: Learn how to upgrade your FIM 2010 R2 components, and then install 
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
