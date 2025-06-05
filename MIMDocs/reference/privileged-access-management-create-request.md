@@ -6,7 +6,6 @@ description: Using the PAM REST API POST command to create a request to elevate 
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

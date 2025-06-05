@@ -6,7 +6,6 @@ description: Articles related to request operations in the MIM CM REST API.
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

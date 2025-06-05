@@ -4,7 +4,6 @@ description: Step 6 of configuring PAM using scripts. This section covers settin
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

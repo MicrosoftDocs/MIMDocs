@@ -1,20 +1,13 @@
 ---
-# required metadata
-
 title: BHOLD SP1 Installation
 description: BHOLD SP1 installation documentation
-keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
-
-ms.assetid:
-
-
 ---
+
 # Microsoft BHOLD Suite Installation Guide
 
 Microsoft® BHOLD Suite  is a collection of applications that, when used with Microsoft Identity Manager 2016 SP2 (MIM), adds effective role management and attestation to MIM. Microsoft BHOLD Suite SP1 consists of the following modules:

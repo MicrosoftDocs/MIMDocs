@@ -6,8 +6,8 @@ description: This article documents the various changes made as part of updates 
 services: active-directory
 documentationcenter: ''
 keywords: MIM
-author: EugeneSergeev
-ms.author: esergeev
+author: billmath
+ms.author: billmath
 reviewer: markwahl-msft
 manager: benyim
 ms.date: 10/23/2023

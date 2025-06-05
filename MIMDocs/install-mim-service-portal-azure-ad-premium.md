@@ -6,10 +6,8 @@ description: Get the steps to configure and install MIM Service and Portal for M
 services: active-directory
 documentationcenter: ''
 keywords: MIM
-author: EugeneSergeev
-ms.author: esergeev
-reviewer: markwahl-msft
-manager: femila
+author: billmath
+ms.author: billmath
 ms.date: 03/18/2021
 ms.topic: article
 ms.service: microsoft-identity-manager

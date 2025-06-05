@@ -6,7 +6,6 @@ description: Find the hardware and software requirements for a successful deploy
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

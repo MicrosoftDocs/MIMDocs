@@ -6,7 +6,6 @@ description: Error codes for the MIM Synchronization Service Manager user interf
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

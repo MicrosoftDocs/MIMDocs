@@ -6,8 +6,8 @@ description: Use connectors to manage data transfer between MIM and your connect
 keywords:
 
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
-author: EugeneSergeev
-manager: femila
+author: billmath
+
 editor: ''
 reviewer: markwahl-msft
 
@@ -16,7 +16,7 @@ ms.date: 04/30/2024
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.author: esergeev
+ms.author: billmath
 ms.reviewer: mwahl
 ms.suite: ems
 

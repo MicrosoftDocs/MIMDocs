@@ -4,14 +4,13 @@
 title: Upgrade from FIM 2010 R2 and MIM 2016 to Microsoft Identity Manager 2016 Service Pack 2 | Microsoft Docs
 description: Learn how to upgrade your FIM 2010 R2 or MIM 2016 components, and then install the components that are new in MIM 2016 SP2.
 keywords:
-author: EugeneSergeev
-ms.author: esergeev
-manager: femila
+author: billmath
+ms.author: billmath
 ms.date: 09/16/2019
 ms.topic: article
 ms.service: microsoft-identity-manager
 
-ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
+
 
 # optional metadata
 

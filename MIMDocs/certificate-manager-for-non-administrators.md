@@ -6,7 +6,6 @@ description: Learn how to enroll smart cards for users without administrator acc
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

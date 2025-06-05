@@ -4,7 +4,6 @@ description: This is step 4 of configuring PAM with scripts. In this step you co
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

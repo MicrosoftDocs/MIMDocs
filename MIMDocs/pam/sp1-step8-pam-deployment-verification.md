@@ -4,7 +4,6 @@ description: The scripted deployment of PAM includes verification scripts that c
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

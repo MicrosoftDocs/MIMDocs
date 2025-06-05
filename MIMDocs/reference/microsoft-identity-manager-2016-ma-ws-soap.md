@@ -6,7 +6,6 @@ description: This article describes how to create a new project for your SOAP da
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager
