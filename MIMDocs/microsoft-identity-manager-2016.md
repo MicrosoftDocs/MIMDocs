@@ -6,7 +6,7 @@ description: MIM includes the access management capabilities of MIM 2016 and hel
 services: active-directory
 documentationcenter: ''
 keywords: MIM
-author: EugeneSergeev
+author: billmath
 reviewer: markwahl-msft
 manager: benyim
 
@@ -17,7 +17,7 @@ ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
 ms.date: 11/18/2024
-ms.author: esergeev
+ms.author: billmath
 ms.reviewer: mwahl
 ms.suite: ems
 ---

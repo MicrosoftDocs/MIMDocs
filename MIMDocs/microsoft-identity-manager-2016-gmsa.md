@@ -1,9 +1,9 @@
 ---
 title: "Convert Microsoft Identity Manager-specific services to gMSA | Microsoft Docs"
 description: This article presents the prerequisites and basic steps for configuring a group Managed Service Account (gMSA).
-author: EugeneSergeev
-ms.author: esergeev
-manager: femila
+author: billmath
+ms.author: billmath
+
 ms.date: 03/10/2020
 ms.topic: article
 ms.service: microsoft-identity-manager
