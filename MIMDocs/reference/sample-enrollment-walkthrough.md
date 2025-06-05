@@ -6,7 +6,6 @@ description: Virtual smart card self-service enrollment using the MIM CM REST AP
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

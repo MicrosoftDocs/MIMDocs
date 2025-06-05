@@ -1,19 +1,11 @@
 ---
-# required metadata
-
 title: BHOLD reporting Installation | Microsoft Docs
 description: BHOLD reporting module allows you to generate reports about roles and authorization policies
-keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
-
-ms.assetid:
-
-
 ---
 
 

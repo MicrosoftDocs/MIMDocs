@@ -6,7 +6,6 @@ description: Establish trust between the PRIV and CORP forests so that privilege
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

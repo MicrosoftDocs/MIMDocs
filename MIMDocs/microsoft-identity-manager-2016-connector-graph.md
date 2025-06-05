@@ -2,10 +2,8 @@
 title: "The Microsoft Identity Manager connector for Microsoft Graph | Microsoft Docs"
 description: Microsoft Identity Manager connector for Microsoft Graph enables external user AD account lifecycle management. In this scenario, an organization has invited guests into their Microsoft Entra directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications
 keywords:
-author: EugeneSergeev
-ms.author: esergeev
-reviewer: markwahl-msft
-manager: femila
+author: billmath
+ms.author: billmath
 ms.date: 3/29/2024
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref

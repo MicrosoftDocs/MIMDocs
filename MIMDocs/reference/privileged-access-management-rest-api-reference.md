@@ -6,7 +6,6 @@ description: List of resources for using the MIM PAM REST API to manage privileg
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

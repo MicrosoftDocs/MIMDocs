@@ -6,24 +6,11 @@ description: Use this guide to understand the variables that should be considere
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
-
-ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: mwahl
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
+
 # Capacity planning guide
 
 Microsoft Identity Manager (MIM) lets you create, update, and remove user accounts throughout your organization. It also gives end users the ability to manage their own accounts self-service features. Even in a small environment, all these actions can add up quickly.

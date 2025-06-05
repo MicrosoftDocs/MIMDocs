@@ -6,7 +6,6 @@ description: Using the MIM CM REST API GET command to find the profile template 
 keywords:
 author: billmath
 ms.author: billmath
-manager: femila
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
