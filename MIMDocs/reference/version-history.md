@@ -34,6 +34,14 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 >
 >The version history for the Generic LDAP, Generic SQL, web services, PowerShell, Graph and Lotus Domino connectors can be found at [Connector Version Release History](microsoft-identity-manager-2016-connector-version-history.md).
 
+## MIM Version 4.6.691.0
+
+- Status: MIM 2016 Service Pack 3 (SP2) of June, @025
+- Added support for Windows Server 2025, SQL Server 2022, Exchange Server 2019
+- Introduced ADFS claims-based authentication for MIM Portal
+- Support for Azure SQL with managed identity
+- SharePoint SE and System Center Data Warehouse 2022 compatibility
+
 ## MIM Version 4.6.673.0
 
 - Status: October 3, 2023
