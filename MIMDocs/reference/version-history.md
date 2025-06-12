@@ -10,7 +10,7 @@ author: billmath
 ms.author: billmath
 reviewer: markwahl-msft
 manager: benyim
-ms.date: 10/23/2023
+ms.date: 06/12/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
@@ -163,7 +163,7 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 - Added support for MIM Service and Portal to be installed on Windows Server 2019 and use SQL Server 2017, Exchange Server 2019, SharePoint 2019, System Center Service Manager Data Warehouse 2019
 - Enabled MIM Service and Portal installation in TLS 1.2 only environments.
 - Enabled installation for MIM Service, Password Reset, and Password Registration web sites, PAM Monitoring Service, PAM Component Service to use group managed service accounts.
-- Added ‘keepSQLjobs’ installer parameter.
+- Added 'keepSQLjobs' installer parameter.
 - MIM SQL Server Agent temporal jobs no longer start on secondary SQL Always-On Availability Group replicas.
 - ‘ExplicitMember.Add’ and ‘ExplicitMember.Remove’ virtual attributes enabled for custom object types on RCDC forms to work with delta changes.
 
@@ -171,10 +171,10 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 - Added support for MIM Synchronization Service to be installed on Windows Server 2019, and use SQL Server 2017, Exchange Server 2019
 - Enabled MIM Synchronization Service installation in TLS 1.2 only environments.
 - Enabled installation for MIM Synchronization Service to use a group managed service account.
-- Added ‘Use MIMSync account’ option for MIM classic deployment model Agent.
+- Added 'Use MIMSync account' option for MIM classic deployment model Agent.
  
 #### Privilege Access Management 
-- PowerShell cmdlet ‘Get-PAMRequest’ returns an additional property 'FIMRequestID'.
+- PowerShell cmdlet ‘Get-PAMRequest’ returns an another property 'FIMRequestID'.
 
 
 ## MIM Version 4.5.412.0
@@ -243,7 +243,7 @@ This hotfix contains updates for the MIM Service, MIM Portal, and PAM components
 
 #### Synchronization service
 - *Support for Group Managed Service Accounts
-- *Visual Studio Support (Visual Studio 2013, Visual Studio 2015,Visual Studio 2017)
+- *Visual Studio Support (Visual Studio 2013, Visual Studio 2015, Visual Studio 2017)
 - Updates to MIISACTIVATE.EXE, gMSA Support added 
     - non-gMSA: Miisactivate.exe c:\configBU\miiserver_01.bin “contoso\mimSyncService” *
     - gMSA: Miisactivate.exe c:\configBU\miiserver_01.bin “contoso\mimSyncService”
@@ -282,8 +282,8 @@ This hotfix contains updates for the MIM Service, MIM Portal, and PAM components
     - Remove-PAMSetMember
 - The warning (Exception: System.ObjectDisposedException: Can't access a disposed object) will no longer appear in the PAM event log
 - Set-PAMUser cmdlet is able to change the PrivAccountName without the delete
-- New-PamRole now validates that the “available to” date is greater than the “available from” date
-- The “Available From” and “Available To” values are returned by the Get-PAMRole PowerShell cmdlet
+- New-PamRole now validates that the 'available to' date is greater than the 'available from' date
+- The 'Available From' and 'Available To' values are returned by the Get-PAMRole PowerShell cmdlet
 - The Get-PamRequest cmdlet filter is now properly
 - *Set-PamGroup cmdlet is now able to update the Active Directory shadow principal group object
 - Remove-PamUser PowerShell cmdlet fails with an unclear error message, if the user is linked to a Role as a candidate. Now client-side validation was added to the cmdlet, and the exception returned was clarified
@@ -297,22 +297,22 @@ This hotfix contains updates for the MIM Service, MIM Portal, and PAM components
 - *Improved Language support to new defined standard
 - Identity Picker control, the control seems to dynamically grow its width rather than wrapping the text
 - Portal, popup dialogs aren’t displayed properly when viewing in Internet Explorer (IE) 10
-- Cyrillic symbols in the title bar text is displayed correctly
+- Cyrillic symbols in the title bar text are displayed correctly
 - Popup windows no longer have the extra scroll bar displaying, when viewed in Internet Explorer
-- Failed “Import Workflow Definition” properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition 
+- Failed 'Import Workflow Definition' properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition 
 - `<httpRuntime enableVersionHeader="false" />` added to default web.config
-- Special characters in the distinguishedName no longer prevents Self-Service Password Reset from resetting the user’s password in the Active Directory
+- Special characters in the distinguishedName no longer prevent Self-Service Password Reset from resetting the user’s password in the Active Directory
 - Improvements in the sentences are properly localized in the display
 - MIM Add-in for Outlook includes a copy of the missing Outlook interop binaries
 
 #### Certificate Management
 - Renewing a virtual smart card through the MIM CM Modern App, user receives Forbidden exception
 - *Improved Language support to new defined standard
-- PIN Utility “CLM has encountered an error while trying to change Smart Card PIN.  Wrong number of Arguments or Invalid Property Assignment.”
+- PIN Utility 'CLM has encountered an error while trying to change Smart Card PIN.  Wrong number of Arguments or Invalid Property Assignment.'
 - Update to the MIM Certificate Authority Modules from 4.4.1302.0 to a build later than 4.4.1459, the setup fails
 - Modern App for Renew, Enroll, and Replace operations, the request history doesn’t contain all request status items as are recorded
-- Online Update doesn’t complete and returns the exception “Record has been updated or deleted by another user.”  
-- The “Download Certificate” link in the Certificate Management Portal, the certificate download (.cer file) was too large
+- Online Update doesn’t complete and returns the exception 'Record has been updated or deleted by another user.'  
+- The 'Download Certificate' link in the Certificate Management Portal, the certificate download (.cer file) was too large
 - MIM Certificate Management Bulk Client works with both TLS 1.1 and TLS 1.2.  
 
  
@@ -354,7 +354,7 @@ The following issues have been fixed in MIM version 4.4.1749.0.
     - Empty space at the bottom of some pages and dialog boxes.
     - Missing popup overlays.
 
-- When you use the filter builder in various areas of the product (such as Advanced Search), the filter builder would get “stuck” if the OK button on a select value dialog box is clicked without an object selected in the add statement area.
+- When you use the filter builder in various areas of the product (such as Advanced Search), the filter builder would get 'stuck' if the OK button on a select value dialog box is clicked without an object selected in the add statement area.
 - The New Attribute flow popup in a Synchronization Rule edit dialog didn't work as expected in Chrome.
 - In an object management screen(such as Distribution Groups), if multiple objects are selected by using the check-box and the objects have long display names. Now dialog sizes vertically so that the control doesn’t extend past the end of the browser screen.
 - In an object management or list screen (such as Distribution Groups), the selected items control may move up the screen to be directly under the last object listed in the table lists.
@@ -362,7 +362,7 @@ The following issues have been fixed in MIM version 4.4.1749.0.
 - portal dialog boxes that display attribute values, the shorter words are distributed throughout the cell with lots of white space in between rather than being left-aligned. 
 - In some browser versions, the Selected Items isn't updated when the item selection is changed.
 - Dialog tabs and Copy to Clipboard highlight when navigated to by using the tab key.  
-- In Internet Explorer 10, when you view an object grid display (such as Distribution Groups), the “Find the distribution groups you want using the search above” banner overlays part of the button ribbon rather than displaying in the middle of the dialog box.  
+- In Internet Explorer 10, when you view an object grid display (such as Distribution Groups), the 'Find the distribution groups you want using the search above' banner overlays part of the button ribbon rather than displaying in the middle of the dialog box.  
 - After installing an update to the MIM Portal, the display of the Portal in Internet Explorer fails.
 - When you use the Advanced Search in the Firefox browser, pressing the enter key on an attribute value field returns an error.  
 
@@ -387,7 +387,7 @@ The following issues have been fixed in MIM version 4.4.1642.0.
 
 - Password reset routine fails when Synchronization server domain doesn't have trust relationship with target domain.
 - Declared import filter (checking distinguished name) doesn't work correctly when an object is moved from an organizational unit where it should be filtered to another where it shouldn't be because of using old name of a phantom object.
-- Management Agent  Designer hangs on “Configure Partitions and Hierarchies” page.
+- Management Agent  Designer hangs on 'Configure Partitions and Hierarchies' page.
 - Precedence doesn't transfer to the next object when the previous one with precedence is disconnected.
 - Sun One Management Agent Searching for child containers on the LDAP server using paging causes an error if the server doesn't support paging.
 - Metaverse object type is changed dynamically causing crash.
@@ -432,7 +432,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 
 #### MIM Service
 
-- Added retry in the longest request processing operations (Validation stage). It doesn't guarantee that request processing is completed, but makes requests more stable. The fix is disabled by default. To enable the fix you add alwaysOnRetryRequestProcessingTransaction="true" in resourceManagementService section of FIMService config file
+- Added retry in the longest request processing operations (Validation stage). It doesn't guarantee that request processing is completed, but makes requests more stable. The fix is disabled by default. To enable the fix, you add alwaysOnRetryRequestProcessingTransaction="true" in resourceManagementService section of FIMService config file
 
 #### Certificate Management
 
@@ -461,7 +461,7 @@ The following features and improvements have been added in MIM version 4.4.1642.
 
 #### MIM
 
-- **MIM Portal cross-browser compatibility for end-user self-service:** In this Service Pack we're introducing support for most major browsers. Users may now access and interact with the MIM Portal for self-service group and profile management from Edge, Chrome, and Safari.
+- **MIM Portal cross-browser compatibility for end-user self-service:** In this Service Pack, we're introducing support for most major browsers. Users may now access and interact with the MIM Portal for self-service group and profile management from Microsoft Edge, Chrome, and Safari.
 
 - **MIM Service support for Exchange Online:** The MIM Service has long supported sending and receiving emails for approvals and notifications. Prior to SP1 MIM only supported Exchange Server or SMTP. With service pack 1, the MIM Service can send and receive requests as well as email notifications using a Microsoft 365 Exchange online account.
 
@@ -495,7 +495,7 @@ Updated platform support information may be found in the document called [Suppor
 
 #### PAM
 - New-PAMGroup didn't create MIM objects for domain local groups in the PRIV forest
-- New-PAMDomainConfiguration would fail with a “netdom” error message
+- New-PAMDomainConfiguration would fail with a 'netdom' error message
 - PAM Monitoring Service logged warnings for groups in the PRIV forest
 
 
