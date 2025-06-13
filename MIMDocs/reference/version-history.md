@@ -171,7 +171,7 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 - Added support for MIM Synchronization Service to be installed on Windows Server 2019, and use SQL Server 2017, Exchange Server 2019
 - Enabled MIM Synchronization Service installation in TLS 1.2 only environments.
 - Enabled installation for MIM Synchronization Service to use a group managed service account.
-- Added 'Use MIMSync account' option for MIM classic deployment model Agent.
+- Added 'Use MIMSync account' option for MIM Service Management Agent.
  
 #### Privilege Access Management 
 - PowerShell cmdlet ‘Get-PAMRequest’ returns an another property 'FIMRequestID'.
