@@ -31,7 +31,7 @@ MIM works with Microsoft Entra cloud-hosted services to help your organization k
  - Integration of directory contents with HR systems and other sources of authority
  - Syncing identities between directories, databases, and on-premises apps through common APIs and protocols, Microsoft-delivered connectors, and partner-delivered connectors
 
-Microsoft regularly releases updates to MIM, including enhancements based on customer requests and bug fixes, through hotfixes and service packs. The current MIM releases, MIM 2016 Service Pack 3 (SP3), and later hotfixes are supported under both fixed and Azure support policies. See the [version history](./reference/version-history.md) for links to the most recent updates. If you're running FIM, MIM 2016 SP2, or earlier versions, we recommend installing the latest MIM SP3 version.
+Microsoft regularly releases updates to MIM, including enhancements based on customer requests and bug fixes, through hotfixes and service packs. The current MIM releases, MIM 2016 Service Pack 3 (SP3), and later hotfixes are supported under both fixed and Azure support policies. See the [version history](./reference/version-history.md) for links to the most recent updates. If you're running FIM, MIM 2016 SP2, or earlier versions, we recommend installing the latest MIM 2016 SP3 version.
 
 
 ## Updates in MIM 2016 SP3

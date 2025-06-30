@@ -42,6 +42,9 @@
 ## [Using a custom MFA provider in PAM or SSPR](working-with-custommfaserver-for-mim.md)
 ## [Migrate from the FIM Connector for Microsoft Entra ID](migrate-from-the-fim-connector-for-azure-active-directory.md)
 ## [Add links to accessibility statements](update-portals-accessibility-links.md)
+## [Integrate with ADFS]
+### [Prepare for ADFS Installation]()
+### [Install and Configure ADFS]()
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [Enroll smartcards](certificate-manager-for-non-administrators.md)
 ### [Create software certificates](certificate-manager-for-software-certificates.md)
