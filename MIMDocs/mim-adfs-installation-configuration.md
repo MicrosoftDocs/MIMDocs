@@ -1,5 +1,5 @@
 ---
-title: ADFS Installation and Configuration for MIM Server
+title: How to install and configure ADFS for MIM server
 description: ADFS for Microsoft Identity Manager - Step through installation, certificate management, and SharePoint integration using this guide.
 services: active-directory
 author: Dickson-Mwendia
@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.service: microsoft-identity-manager
 ---
 
-# ADFS installation and configuration for MIM server
+# How to install and configure ADFS for MIM server
 
 Active Directory Federation Services (ADFS) lets you set up secure identity federation and single sign-on for Microsoft Identity Manager (MIM) environments. This article gives step-by-step instructions to install and set up ADFS on a MIM server, including certificate management and SharePoint integration.
 
