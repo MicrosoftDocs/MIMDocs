@@ -18,23 +18,26 @@ Active Directory Federation Services (ADFS) lets you set up secure identity fede
 
 - Complete the steps in [How to set up ADFS claims-based authentication in MIM](mim-adfs-prepare-installation.md)
 
-## Set KDS root key
+## Set the Key Distribution Service (KDS) root key
 
-In this article, we use a group managed service account to manage ADFS. To use this account immediately, create a KDS root key. Open PowerShell as an admin and run the following command:
+This article uses a group managed service account to manage ADFS. To use this account right away, create a KDS root key.
+
+1. Open PowerShell as an admin.
+1. Run the following command:
 
 ```powershell
 Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
 ```
 
-## Enroll the MIM Server for the ADFS Certificate
+## Enroll the MIM server for the ADFS certificate
 
 1. Open the start menu, then select **Run**. In the dialog, enter *mmc* and select **OK**. The **Microsoft Management Console** opens.
 1. Select **File**, then select **Add/Remove Snap-in** to open the Snap-ins window.
 1. Select **Certificates**, then select **Add**. In the window that appears, select the **Computer account** radio button, then select **Next**.
 1. Select **Finish**, then select **OK**. The Certificates Snap-in is now available.
 1. Expand the Snap-in, then open the **Personal** folder. Select **All tasks > Request New Certificate**. The certificate enrollment wizard appears.
-1. Select **Next** after you read the getting started guide, then select **Next** again to start the enrollment process.
-1. On the Request certificates page, you should see the ADFS Certificate template with a "warning" link *More information is required to enroll for this certificate* Select the link.
+1. After you read the getting started guide, select **Next**, then select **Next** again to start the enrollment process.
+1. On the Request certificates page, you see the ADFS Certificate template with a "warning" link *More information is required to enroll for this certificate*. Select the link.
 1. Add the following certificate properties:
 
    - **a. Subject name**
@@ -44,76 +47,76 @@ Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
      - **Type:** DNS - **Value:** certauth.adfs.contoso.com
      - **Type:** DNS - **Value:** enterprisemanagement.contoso.com
 
-1. Select **Apply** then **OK**. Notice that the certificate template warning disappears.
-1. Choose the ADFS Certificate and select **Enroll**. Once this process is completed, select **Finish**. This dismisses the configuration wizard.
-1. Exit the Snap-in. Feel free to save it if prompted to.
+1. Select **Apply**, then select **OK**. The certificate template warning disappears.
+1. Choose the ADFS Certificate, then select **Enroll**. When the process is complete, select **Finish** to dismiss the configuration wizard.
+1. Exit the Snap-in. You can save it if you're prompted.
 
 ## Install and configure Active Directory Federation Services
 
-1. Launch your Server Manager and select **Add roles and Features** to launch the Add roles and features dialog.
-1. Skip the Before you Begin section, if need be, by selecting **Next**.
-1. Leave the **Role-based or feature-based installation** radio button selected and click **Next**.
-1. Leave the Select a server from the server pool radio button selected. Pick the server you want to install ADFS into (**Example:** mim.contoso.com) and select **Next**.
-1. Select Active Directory Federation Services from the list of roles and click **Next**.
-1. We won't be adding additional features so click **Next** on the **Features** page.
-1. On the information page, select **Next** then **Install**.
-1. Once this is complete, select the _Configure the federation service on this server_ link. The configuration wizard should pop up.
-1. Leave the default **Create the first federation server in a federation server farm** radio button selected and click **Next**.
-1. Select the account you want to administer ADFS then select **Next**.
-1. On the Specify Service Properties page, select the adfs certificate we just created `adfs.contoso.com` and give the federation service a memorable name e.g **Microsoft Identity Manager Portal** and then click **Next**.
-1. Create a GMSA account by leaving the default **Create a Group Managed Service Account** radio button checked and provide a name for the account e.g **adfsgmsa** then click **Next**.
-1. Leave the default **Create a database on this server using Windows Internal Database** radio button selected and click **Next**.
-1. Verify your selections then click **Next**.
-1. Verify that all prerequisite checks passed successfully. (You might encounter some warnings, but we recommend looking into the actual errors).
-1. Click **Configure**.
-1. Verify that you get notified on successful configuration. At this point don't worry if there are warnings around SSL and KDS Root Keys.
-1. Click **Close**, then **Close** again. Close the server manager and restart your server.
+1. Open Server Manager and select **Add roles and Features** to launch the Add roles and features dialog.
+1. If needed, skip the Before you Begin section by selecting **Next**.
+1. Leave the **Role-based or feature-based installation** radio button selected and select **Next**.
+1. Leave the Select a server from the server pool radio button checked. Select the server to install ADFS on (for example, mim.contoso.com), and select **Next**.
+1. Select Active Directory Federation Services from the list of roles and select **Next**.
+1. Don't add additional features. Select **Next** on the **Features** page.
+1. On the information page, select **Next**, and then select **Install**.
+1. When the installation finishes, select the  *Configure the federation service on this server* link. The configuration wizard opens.
+1. Leave the default **Create the first federation server in a federation server farm** radio button checked and select **Next**.
+1. Select the account to administer ADFS, and then select **Next**.
+1. On the Specify Service Properties page, select the ADFS certificate you created (`adfs.contoso.com`), enter a memorable federation service name (for example, Microsoft Identity Manager Portal), and then select **Next**.
+1. Leave the default **Create a Group Managed Service Account** radio button selected, enter a name for the account (for example, adfsgmsa), and then select **Next**.
+1. Leave the default **Create a database on this server using Windows Internal Database** radio button selected and select **Next**.
+1. Verify your selections, and then select **Next**.
+1. Check that all prerequisite checks pass. You might see some warnings, but focus on any errors.
+1. Select **Configure**.
+1. Check for a notification that configuration is successful. Don't worry if you see warnings about SSL or KDS Root Keys.
+1. Select **Close**, and then **Close** again. Close the Server Manager and restart your server.
 
 ## Install and export the ADFS token signing certificate
 
 1. Launch the ADFS Management tool.
-1. In the left-hand navigation pane, expand **Service** then click on **Certificates**. You should see three certificates in the main content area. We're interested in the Token-signing Certificate.
-1. Double click the Token-signing certificate. This launches the Certificate dialog.
+1. In the navigation pane, expand **Service**, then select **Certificates**. You see three certificates in the main content area. Focus on the token-signing certificate.
+1. Double-click the token-signing certificate. The certificate dialog opens.
 1. On the General tab, select **Install Certificate**.
-1. Select **Local Machine** then **Next**.
-1. Select **Place all certificates in the following store** then **Browse**.
-1. Select the **Trusted Root Certificate Authorities** store then click **OK** and then **Next**.
-1. Select **Finish**. Once the import is successful, click **OK** on the notification dialog.
-1. You can verify that this certificate is OK by selecting it once more, navigating to **Certification Path** and verifying that the status is **OK**.
+1. Select **Local Machine**, then select **Next**.
+1. Select **Place all certificates in the following store**, then select **Browse**.
+1. Select the **Trusted Root Certificate Authorities** store, then select **OK**, and then select **Next**.
+1. Select **Finish**. When the import is successful, select **OK** on the notification dialog.
+1. To verify that the certificate is OK, select it again, go to **Certification Path**, and verify that the status is **OK**.
 1. On the Certificate dialog, select **Details**.
-1. Select **Copy to file…** and then **Next** on the export wizard that pops up. 
-1. On the file format page, leave the default **DER encoded binary X.509 (.CER)** and select **Next**.
-1. Click on **Browse** and save this certificate somewhere in your file system. Take note of this location since we'll use it later. For example,`C:\\Users\\administrator.contoso\\Documents\\MIM\\ADFSSigningCertificate.cer`.
-1. Select **Next** then **Finish**. Once the export is successful, select **OK** to dismiss the dialog then **OK** to dismiss the certificate window.
+1. Select **Copy to file…**, then select **Next** in the export wizard that appears.
+1. On the file format page, keep the default **DER encoded binary X.509 (.CER)** option, then select **Next**.
+1. Select **Browse** and save this certificate somewhere in your file system. Take note of this location since we use it later. For example,`C:\\Users\\administrator.contoso\\Documents\\MIM\\ADFSSigningCertificate.cer`.
+1. Select **Next**, then select **Finish**. When the export is successful, select **OK** to close the dialog, then select **OK** to close the certificate window.
 
-## Integrate ADFS with SharePoint Site - MIM Server
+## Integrate ADFS with SharePoint site - MIM server
 
 ### Add a Relying Party Trust
 
-1. Launch the AD FS Management tool.
-1. On the left panel, click **Relying Party Trusts**.
-1. On the right panel, under **Actions**, click **Add Relying Party Trust…**. This launches the Add Relying Party Trust Wizard.
-1. Leave the **Claims aware** radio button selected and click **Start**.
-1. Select the **Enter data about the relying party manually** radio button and click **Next**.
-1. In the next section, give your relying party trust a name and a simple description. Take note of this name since we'll use it later.
+1. Open the AD FS Management tool.
+1. In the left panel, select **Relying Party Trusts**.
+1. In the right panel, under **Actions**, select **Add Relying Party Trust…**. The Add Relying Party Trust Wizard opens.
+1. Leave the **Claims aware** radio button checked and select **Start**.
+1. Select the **Enter data about the relying party manually** radio button, and select **Next**.
+1. In the next section, enter a name and a simple description for the relying party trust. Note this name because you use it later.
 1. On the token encryption page, select **Next**.
-1. Check the **Enable support for the WS-Federation Passive protocol option** and then provide the SharePoint site URL as the **Relying party WS-Federation Passive protocol URL** suffixed with `/_trust/`. The URL should be in the form  of `https://mim.contoso.com/_trust/`.
-1. Provide the string `urn:contoso:mim` as the identifier (realm) and select **Add** then **Next**.
-1. On the access policy page, select **Permit everyone** and then **Next**.
-1. On the next page, confirm your selections and then click **Next**.
-1. Leave the option to **Configure the claims issuance for this application** checked and select **Close**. This triggers a launch of the claim issuance policy dialog where we'll add our claims rule.
+1. Select the **Enable support for the WS-Federation Passive protocol option**, and enter the SharePoint site URL as the **Relying party WS-Federation Passive protocol URL** with `/_trust/` at the end. The URL is in the form `https://mim.contoso.com/_trust/`.
+1. Enter `urn:contoso:mim` as the identifier (realm), select **Add**, and then select **Next**.
+1. On the access policy page, select **Permit everyone**, and then select **Next**.
+1. On the next page, confirm your selections, and then select **Next**.
+1. Leave the option to **Configure the claims issuance for this application** checked, and select **Close**. The claim issuance policy dialog opens, where you add the claims rule.
 
-### Edit Claim Issuance Policy
+### Edit claim issuance policy
 
-1. On the claim issuance policy dialog, select **Add Rule**.
-1. Leave **Send LDAP Attributes as Claims** selected and click **Next**.
-1. Give your rule a name (for example, MIM Rule) and select **Active directory** as the directory store.
-1. On the mapping of LDAP attributes to outgoing claim types, select **User-Principal-Name** as the LDAP Attribute and map it to **UPN** as the Outgoing Claim Type.
-1. Select **Finish** > **Apply** > **OK**.
+1. In the claim issuance policy dialog, select **Add Rule**.
+1. Leave **Send LDAP Attributes as Claims** checked, and select **Next**.
+1. Enter a name for the rule (for example, MIM Rule), and select **Active directory** as the directory store.
+1. In the mapping of LDAP attributes to outgoing claim types, select **User-Principal-Name** as the LDAP attribute, and map it to **UPN** as the outgoing claim type.
+1. Select **Finish**, then **Apply**, then **OK**.
 
-### Configure SharePoint Site to Use ADFS
+### Configure SharePoint site to use ADFS
 
-1. Run PowerShell as an administrator and execute the following script. (Go through the commands to ensure you input your own values where appropriate):
+1. Run PowerShell as an admin, and run the following script. Replace the placeholder values with your own where needed.
 
    ```powershell
    $signingCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\\Users\\administrator.contoso\\Documents\\MIM\\ADFSSigningCertificate.cer")
@@ -142,13 +145,13 @@ Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
 
 1. Open the MIM Knowledge Base repository and download the latest version of Service and Portal.
 1. Download and extract the contents of the en-us folder into a location in your drive.
-1. You can then execute the Service and Portal installer using msiexec by running the following command:
+1. Run the service and portal installer using msiexec by running the following command:
 
    ```cmd
    msiexec /i "Service and Portal.msi" /lvx* log.txt
    ```
 
-Follow these steps after installation to finish setting up your SharePoint site:
+After installation, follow these steps to finish setting up your SharePoint site:
 
 1. Add the current signed-in user to the list of users under the default zone in SharePoint Administration, and grant Full Read access.
 1. Add the user with a UPN structure to the list of users under the default zone in SharePoint Administration, and grant Full Read access.
@@ -158,9 +161,9 @@ Follow these steps after installation to finish setting up your SharePoint site:
 
 In case you encounter the "Cannot reach this page" error, ensure that:
 
-    - You've set the proper bindings on IIS for your site.
-    - All your necessary AppPools are up and running.
-    - You've attached an SSL certificate.
+- You set the proper bindings on IIS for your site.
+- All your necessary AppPools are up and running.
+- You attach an SSL certificate.
 
 ## Related articles
 
