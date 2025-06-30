@@ -36,40 +36,40 @@ Microsoft regularly releases updates to MIM, including enhancements based on cus
 
 ## Updates in MIM 2016 SP3
 
-MIM Service Pack 3 introduces significant updates to the Microsoft Identity Manager ecosystem, including enhanced functionality and compatibility with more platforms and services. This section highlights the main improvements and deprecated features in this release. 
+MIM Service Pack 3 brings significant updates to the Microsoft Identity Manager ecosystem, including enhanced functionality and compatibility with more platforms and services. This section highlights the main improvements and deprecated features in this release.
 
 #### Feature improvements
 
 - **MIM Synchronization Service**
 
-This release lets you install MIM Synchronization Service on Windows Server 2025. The synchronization engine now works with SQL Server 2022 and Exchange Server 2019. You can also use Azure SQL as a backend database, with authentication using system-assigned or user-assigned managed identities. 
+This release lets you install MIM Synchronization Service on Windows Server 2025. The synchronization engine works with SQL Server 2022 and Exchange Server 2019. You can also use Azure SQL as a backend database, with authentication using system-assigned or user-assigned managed identities. 
 
 - **MIM Service and Portal**
 
-You can now deploy the MIM Service and Portal can on Windows Server 2025. This release includes compatibility with SQL Server 2022, Exchange Server 2019, SharePoint Server Subscription Edition (SE), and System Center Service Manager Data Warehouse 2022. MIM 2016 SP3 also supports Active Directory Federation Services (AD FS), enabling claims-based single sign-on (SSO) functionality. 
+The latest MIM 2016 SP3 release allows you to deploy the MIM Service and Portal on Windows Server 2025. This release includes compatibility with SQL Server 2022, Exchange Server 2019, SharePoint Server Subscription Edition (SE), and System Center Service Manager Data Warehouse 2022. [MIM 2016 SP3 also supports Active Directory Federation Services (ADFS)](mim-adfs-prepare-installation.md), enabling claims-based single sign-on (SSO) functionality. 
 
 - **Software prerequisites** 
 
-Before setup, ensure that you install Visual C++ 2013 Redistributable Packages and either .NET Framework 4.6 or 4.8. The MIM Synchronization Service requires Microsoft OLE DB Driver 19 on the server where you host it. The MIM Service component requires .NET Framework 3.5 on the host server. 
+Before setup, install Visual C++ 2013 Redistributable Packages and either .NET Framework 4.6 or 4.8. The MIM Synchronization Service requires Microsoft OLE DB Driver 19 on the server where you host it. The MIM Service component requires .NET Framework 3.5 on the host server. 
 
 #### Deprecated features
 
 - **ECMA1 management agent framework** 
 
-Microsoft doesn't recommend creating new management agents using the ECMA1 extensibility framework. This framework has been replaced by ECMA 2.0, which provides a more modern, robust, and supported foundation for building custom connectors. 
+Microsoft doesn't recommend creating new management agents using the ECMA1 extensibility framework. This framework is replaced by ECMA 2.0, which provides a more modern, robust, and supported foundation for building custom connectors. 
 
-Customers with existing ECMA1-based agents should begin planning a migration to ECMA2. ECMA2 supports modern .NET development, including asynchronous operations and improved error handling. ECMA1-based agents might stop working correctly with future releases or hotfixes. 
+If you use ECMA1-based agents, start planning a migration to ECMA2. ECMA2 supports modern .NET development, including asynchronous operations and improved error handling. ECMA1-based agents might stop working correctly with future releases or hotfixes. 
 
 - **Azure Multi-Factor Authentication Server**
 
-Deployments of Azure MFA Server no longer process MFA requests. Customers using Azure MFA Server with MIM, for example,  to secure self-service password reset (SSPR) or MIM PAM approvals must transition to supported alternatives such as Custom MFA providers, smartcard-based authentication, and Windows Hello for Business.
+Deployments of Azure MFA Server no longer process MFA requests. If you use Azure MFA Server with MIM, for example, to secure self-service password reset (SSPR) or MIM PAM approvals, transition to supported alternatives such as Custom MFA providers, smartcard-based authentication, and Windows Hello for Business.
 
-Cloud-based Azure AD MFA isn't directly integrated with MIM workflows but should be considered as part of broader identity modernization strategies. 
+Cloud-based Azure AD MFA isn't directly integrated with MIM workflows, but consider it as part of broader identity modernization strategies. 
 
 - **Connectors and Management Agents**
 
-    - Forefront Identity Manager Certificate Management (FIM CM) is deprecated. Use modern certificate lifecycle tools such as Microsoft Intune or Azure Key Vault. 
-    - Lotus Notes Management Agent (MA) is deprecated. Consider moving to a supported collaboration platform or developing a custom ECMA2 connector if continued use is required. 
+    - Forefront Identity Manager Certificate Management (FIM CM) is deprecated. Use modern certificate lifecycle tools like Microsoft Intune or Azure Key Vault.
+    - Lotus Notes Management Agent (MA) is deprecated. Consider moving to a supported collaboration platform or developing a custom ECMA2 connector if you need to continue using it.
     - SAP R/3—The SAP R/3 MA is deprecated. Use the SAP NetWeaver connector or ECMA2-based integration for S/4HANA and modern SAP environments. 
 
 ## Updates in MIM 2016 SP2
