@@ -19,6 +19,7 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 #ms.devlang:
 ms.reviewer: markwahl-msft
 ms.suite: ems
+ms.custom: sfi-image-nochange
 #ms.tgt_pltfrm:
 #ms.custom:
 

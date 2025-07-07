@@ -18,6 +18,9 @@ ms.assetid: b0b39631-66df-4c5f-90c9-a1774346f816
 
 ms.reviewer: mwahl
 ms.suite: ems
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 
 ---
 # Install MIM 2016 with SP2: MIM Service and Portal for Microsoft Entra ID P1 or P2 customers

@@ -9,6 +9,7 @@ ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
+ms.custom: sfi-image-nochange
 
 ---
 # Use Azure Multi-Factor Authentication Server to activate PAM or SSPR

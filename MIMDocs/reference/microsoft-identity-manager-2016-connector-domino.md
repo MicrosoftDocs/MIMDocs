@@ -14,6 +14,7 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.date: 04/08/2025
 ms.author: billmath
+ms.custom: sfi-image-nochange
 
 ---
 # Lotus Domino Connector technical reference

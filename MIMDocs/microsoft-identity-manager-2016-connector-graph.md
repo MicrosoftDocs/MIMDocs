@@ -6,10 +6,12 @@ author: billmath
 ms.author: billmath
 ms.date: 3/29/2024
 ms.topic: article
-ms.custom: has-azure-ad-ps-ref
 ms.service: microsoft-identity-manager
 
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
+ms.custom:
+  - has-azure-ad-ps-ref
+  - sfi-image-nochange
 ---
 # Microsoft Identity Manager connector for Microsoft Graph
 
