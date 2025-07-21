@@ -30,7 +30,7 @@ This article outlines the approaches for licensing Microsoft Identity Manager (M
 
 ## Licensing MIM for your organization
 
-Microsoft Identity Manager 2016 is licensed on a per-user basis. The details on licensing are included in the Product Terms and related documents, which can be downloaded from the [licensing terms](https://www.microsoft.com/licensing/product-licensing/products.aspx) page.
+Microsoft Identity Manager 2016 is licensed on a per-user basis. The details on licensing are included in the Product Terms and related documents, which can be downloaded from the [licensing terms](https://www.microsoft.com/licensing/docs/view/Product-Terms) page.
 
 <a name='licensing-for-azure-ad-premium-customers'></a>
 
