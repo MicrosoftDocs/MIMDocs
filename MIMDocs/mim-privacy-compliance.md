@@ -18,6 +18,7 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 #audience:
 #ms.devlang:
 ms.suite: ems
+ms.custom: sfi-image-nochange
 #ms.tgt_pltfrm:
 #ms.custom:
 

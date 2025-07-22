@@ -16,6 +16,7 @@ ms.service: entra-id-governance
 ms.subservice: ''
 ms.date: 03/20/2024
 ms.author: erkarc
+ms.custom: sfi-image-nochange
 
 ---
 # Generic CSV Connector - Step-by-Step Reference Guide (Preview)

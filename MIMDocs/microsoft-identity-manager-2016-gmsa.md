@@ -7,6 +7,7 @@ ms.author: billmath
 ms.date: 03/10/2020
 ms.topic: article
 ms.service: microsoft-identity-manager
+ms.custom: sfi-image-nochange
 
 ---
 
