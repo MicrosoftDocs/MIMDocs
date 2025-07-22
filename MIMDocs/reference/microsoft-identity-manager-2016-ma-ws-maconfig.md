@@ -12,6 +12,7 @@ ms.topic: conceptual
 ms.service: microsoft-identity-manager
 ms.reviewer: markwahl-msft
 ms.assetid: 
+ms.custom: sfi-image-nochange
 ---
 
 # Web Service Connector configuration options

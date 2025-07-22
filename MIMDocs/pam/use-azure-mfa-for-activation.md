@@ -11,6 +11,7 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
+ms.custom: sfi-image-nochange
 ---
 
 # Using custom multifactor authentication for activation in MIM PAM

@@ -11,6 +11,7 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 
 ms.assetid:
+ms.custom: sfi-image-nochange
 
 
 ---

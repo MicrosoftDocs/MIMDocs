@@ -19,6 +19,7 @@ ms.service: microsoft-identity-manager
 #ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
+ms.custom: sfi-image-nochange
 #ms.tgt_pltfrm:
 #ms.custom:
 

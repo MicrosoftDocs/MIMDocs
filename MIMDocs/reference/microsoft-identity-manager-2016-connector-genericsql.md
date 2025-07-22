@@ -14,6 +14,7 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.date: 3/29/2024
 ms.author: billmath
+ms.custom: sfi-image-nochange
 
 ---
 # Generic SQL Connector technical reference
