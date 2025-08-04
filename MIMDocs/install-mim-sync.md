@@ -73,9 +73,25 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
        ![Database connection image](media/install-mim-sync/MIM_Install3.png)
 
+        Skip to step 9 for **Local SQL Server** and **Remote SQL Server**
+
     3. *MIM 2016 SP2 and later*: Configure the MIM Synchronization Service Database name
 
-7. Configure the Sync Service Account according to the account you created earlier:
+7. Select the **Azure SQL authentication type**:
+
+    ![Azure SQL authentication type](media/install-mim-sync/azure_authentication_type.png)
+
+    Skip to section 9 for **System-assigned Managed Identity**
+
+8. Enter the Principal ID of the User-Assigned Managed Identity
+
+    ![User assigned authentication](media/install-mim-sync/user_assigned_authentication.png)
+
+9. Set the database name for synchronization service
+
+    ![Screenshot showing input for database name for synchronization service](media/install-mim-sync/synchronization_service.png)
+
+10. Configure the Sync Service Account according to the account you created earlier:
 
    1. Service account: *MIMSync*
 
@@ -88,7 +104,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![Service account image](media/install-mim-sync/MIM_Install4.png)
 
-8. Provide MIM Sync Service installer with the relevant security groups:
+11. Provide MIM Sync Service installer with the relevant security groups:
 
    1. Administrator = *contoso\MIMSyncAdmins*
 
@@ -102,9 +118,9 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
    ![Security groups image](media/install-mim-sync/MIM_Install5.png)
 
-9. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
+12. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
 
-10. Click **Install** to begin the installation of MIM Sync Service.
+13. Click **Install** to begin the installation of MIM Sync Service.
 
     1. A warning concerning the MIM Sync service account may appear – click **OK**.
 
