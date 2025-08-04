@@ -50,19 +50,19 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 1. In the unpacked MIM installation folder, navigate to the **Synchronization Service** folder.
 
-2. Run the **MIM Synchronization Service installer**. Follow the guidelines of the installer and complete the installation.
+1. Run the **MIM Synchronization Service installer**. Follow the guidelines of the installer and complete the installation.
 
-3. In the welcome screen – click **Next**.
+1. In the welcome screen – click **Next**.
 
     ![MIM installer wizard welcome image](media/install-mim-sync/MIM_Install1.png)
 
-4. Review the license terms and click **Next** to accept them.
+1. Review the license terms and click **Next** to accept them.
 
-5. On the **Custom Setup** screen click **Next**.
+1. On the **Custom Setup** screen click **Next**.
 
     ![Custom Setup image](media/install-mim-sync/MIM_Install2.png)
 
-6. In the Sync Service database configuration screen, select:
+1. In the Sync Service database configuration screen, select:
 
    1. The SQL Server is located on:
         1. **Local SQL Server** for installations with local SQL servers
@@ -77,50 +77,50 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     3. *MIM 2016 SP2 and later*: Configure the MIM Synchronization Service Database name
 
-7. Select the **Azure SQL authentication type**:
+1. Select the **Azure SQL authentication type**:
 
     ![Azure SQL authentication type](media/install-mim-sync/azure_authentication_type.png)
 
     Skip to section 9 for **System-assigned Managed Identity**
 
-8. Enter the Principal ID of the User-Assigned Managed Identity
+1. Enter the Principal ID of the User-Assigned Managed Identity
 
     ![User assigned authentication](media/install-mim-sync/user_assigned_authentication.png)
 
-9. Set the database name for synchronization service
+1. Set the database name for synchronization service and select **Next**:
 
     ![Screenshot showing input for database name for synchronization service](media/install-mim-sync/synchronization_service.png)
 
-10. Configure the Sync Service Account according to the account you created earlier:
+1. Configure the Sync Service Account according to the account you created earlier:
 
-   1. Service account: *MIMSync*
+    1. Service account: *MIMSync*
 
-   2. Password: <em>Pass@word1</em>
+    2. Password: <em>Pass@word1</em>
 
-   3. Service Account Domain or local computer name: *contoso*
+    3. Service Account Domain or local computer name: *contoso*
 
     >[!NOTE]
     >MIM 2016 SP2 and later: for Group Managed Service Accounts, ensure the **$** character is at the end of the Service Account Name, e.g. MIMSync$, and leave the Password field empty.
-
+    
     ![Service account image](media/install-mim-sync/MIM_Install4.png)
 
-11. Provide MIM Sync Service installer with the relevant security groups:
+1. Provide MIM Sync Service installer with the relevant security groups:
 
-   1. Administrator = *contoso\MIMSyncAdmins*
+    1. Administrator = *contoso\MIMSyncAdmins*
 
-   2. Operator= *contoso\MIMSyncOperators*
+    2. Operator= *contoso\MIMSyncOperators*
 
-   3. Joiner = *contoso\MIMSyncJoiners*
+    3. Joiner = *contoso\MIMSyncJoiners*
 
-   4. Connector Browse = *contoso\MIMSyncBrowse*
+    4. Connector Browse = *contoso\MIMSyncBrowse*
 
-   5. WMI Password Management= *contoso\MIMSyncPasswordReset*
+    5. WMI Password Management= *contoso\MIMSyncPasswordReset*
 
    ![Security groups image](media/install-mim-sync/MIM_Install5.png)
 
-12. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
+1. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
 
-13. Click **Install** to begin the installation of MIM Sync Service.
+1. Click **Install** to begin the installation of MIM Sync Service.
 
     1. A warning concerning the MIM Sync service account may appear – click **OK**.
 
