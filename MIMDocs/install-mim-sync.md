@@ -6,7 +6,7 @@ description: Installing and configuring the MIM Synchronization Service.
 keywords:
 author: billmath
 ms.author: billmath
-ms.date: 07/28/2025
+ms.date: 08/04/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager
 
@@ -46,7 +46,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 2. Unpack the MIM installation package or mount the MIM image DVD.  If you do not have this DVD, see [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md).
 
-## Install MIM 2016 SP1 or later Synchronization Service
+## Install MIM 2016 SP3 or later Synchronization Service
 
 1. In the unpacked MIM installation folder, navigate to the **Synchronization Service** folder.
 
@@ -64,11 +64,14 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 6. In the Sync Service database configuration screen, select:
 
-   1.  The SQL Server is located on: **A Remote machine** called **corpsql.contoso.com**.
+   1. The SQL Server is located on:
+        1. **Local SQL Server** for installations with local SQL servers
+        1. **Remote SQL Server** for installations with remote SQL servers and enter the **SQL Server Name**, for example **corpsql.contoso.com**
+        1. **Azure SQL Server** for installations with azure SQL servers and enter the **SQL Server Name**, for example **azuresqlserver.database.windows.net**
 
-   2.  The SQL Server instance is: **The default instance**
+    2. The SQL Server instance is: **The default instance**
 
-   ![Database connection image](media/install-mim-sync/MIM_Install3.png)
+       ![Database connection image](media/install-mim-sync/MIM_Install3.png)
 
     3. *MIM 2016 SP2 and later*: Configure the MIM Synchronization Service Database name
 
