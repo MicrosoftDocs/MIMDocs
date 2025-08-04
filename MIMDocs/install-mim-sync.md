@@ -52,13 +52,13 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 1. Run the **MIM Synchronization Service installer**. Follow the guidelines of the installer and complete the installation.
 
-1. In the welcome screen – click **Next**.
+1. In the welcome screen – select **Next**.
 
     ![MIM installer wizard welcome image](media/install-mim-sync/MIM_Install1.png)
 
-1. Review the license terms and click **Next** to accept them.
+1. Review the license terms and select **Next** to accept them.
 
-1. On the **Custom Setup** screen click **Next**.
+1. On the **Custom Setup** screen select **Next**.
 
     ![Custom Setup image](media/install-mim-sync/MIM_Install2.png)
 
@@ -79,17 +79,17 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 1. Select the **Azure SQL authentication type**:
 
-    ![Azure SQL authentication type](media/install-mim-sync/azure_authentication_type.png)
+    ![Azure SQL authentication type](media/install-mim-sync/azure-authentication-type.png)
 
     Skip to section 9 for **System-assigned Managed Identity**
 
 1. Enter the Principal ID of the User-Assigned Managed Identity
 
-    ![User assigned authentication](media/install-mim-sync/user_assigned_authentication.png)
+    ![User assigned authentication](media/install-mim-sync/user-assigned-authentication.png)
 
 1. Set the database name for synchronization service and select **Next**:
 
-    ![Screenshot showing input for database name for synchronization service](media/install-mim-sync/synchronization_service.png)
+    ![Screenshot showing input for database name for synchronization service](media/install-mim-sync/synchronization-service.png)
 
 1. Configure the Sync Service Account according to the account you created earlier:
 
@@ -118,21 +118,21 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
    ![Security groups image](media/install-mim-sync/MIM_Install5.png)
 
-1. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and click **Next**.
+1. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and select **Next**.
 
-1. Click **Install** to begin the installation of MIM Sync Service.
+1. Select **Install** to begin the installation of MIM Sync Service.
 
-    1. A warning concerning the MIM Sync service account may appear – click **OK**.
+    1. A warning concerning the MIM Sync service account may appear – select **OK**.
 
     2. MIM Sync Service will install.
 
-    3. A notice on creating a backup for the encryption key appears – click **OK**, then select a folder to store the encryption key backup.
+    3. A notice on creating a backup for the encryption key appears – select **OK**, then select a folder to store the encryption key backup.
 
         ![MIM Sync backup encryption key notice image](media/MIM-Install7.png)
 
-    4. When the installer successfully completes the installation, click **Finish**.
+    4. When the installer successfully completes the installation, select **Finish**.
 
-    5. You need to sign out and sign in for the group membership changes to take effect. Click **Yes** to sign out.
+    5. You need to sign out and sign in for the group membership changes to take effect. Select **Yes** to sign out.
 
 > [!div class="step-by-step"]  
 > > [« SharePoint](prepare-server-sharepoint.md)
