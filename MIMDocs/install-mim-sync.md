@@ -128,7 +128,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     3. A notice on creating a backup for the encryption key appears – click **OK**, then select a folder to store the encryption key backup.
 
-    ![MIM Sync backup encryption key notice image](media/MIM-Install7.png)
+        ![MIM Sync backup encryption key notice image](media/MIM-Install7.png)
 
     4. When the installer successfully completes the installation, click **Finish**.
 
