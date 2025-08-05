@@ -42,9 +42,9 @@ ms.custom: sfi-image-nochange
 
 To install Microsoft Identity Manager 2016 components, first set up the installation package.
 
-1. Sign in as *contoso\miminstall* to the server you are using for identity management synchronization server **corpsync**.
+1. Sign in as *contoso\miminstall* to the server you're using for identity management synchronization server **corpsync**.
 
-2. Unpack the MIM installation package or mount the MIM image DVD.  If you do not have this DVD, see [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md).
+2. Unpack the MIM installation package or mount the MIM image DVD. If you don't have this DVD, see [Microsoft Identity Manager licensing and downloads](microsoft-identity-manager-licensing.md).
 
 ## Install MIM 2016 SP3 or later Synchronization Service
 
@@ -56,11 +56,11 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![MIM installer wizard welcome image](media/install-mim-sync/MIM_Install1.png)
 
-1. Review the license terms and select **Next** to accept them.
+1. Review the license terms, select **I accept the terms in the License Agreement** check box > **Next** to accept them.
 
     ![Screenshot showing end user license agreement](media/install-mim-sync/terms.png)
 
-1. On the **Custom Setup** screen select **Next**.
+1. On the **Custom Setup** screen, select **Next**.
 
     ![Custom Setup image](media/install-mim-sync/MIM_Install2.png)
 
@@ -69,7 +69,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
    1. The SQL Server is located on:
         1. **Local SQL Server** for installations with local SQL servers
         1. **Remote SQL Server** for installations with remote SQL servers and enter the **SQL Server Name**, for example **corpsql.contoso.com**
-        1. **Azure SQL Server** for installations with azure SQL servers and enter the **SQL Server Name**, for example **azuresqlserver.database.windows.net**
+        1. **Azure SQL Server** for installations with Azure SQL servers and enter the **SQL Server Name**, for example **azuresqlserver.database.windows.net**
 
     2. The SQL Server instance is: **The default instance**
 
@@ -103,7 +103,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     >[!NOTE]
     >MIM 2016 SP2 and later: for Group Managed Service Accounts, ensure the **$** character is at the end of the Service Account Name, e.g. MIMSync$, and leave the Password field empty.
-    
+
     ![Service account image](media/install-mim-sync/MIM_Install4.png)
 
 1. Provide MIM Sync Service installer with the relevant security groups:
@@ -126,7 +126,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     1. A warning concerning the MIM Sync service account may appear – select **OK**.
 
-    2. MIM Sync Service will install.
+    2. MIM Sync Service installs.
 
     3. A notice on creating a backup for the encryption key appears – select **OK**, then select a folder to store the encryption key backup.
 
