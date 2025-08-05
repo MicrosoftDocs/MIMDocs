@@ -6,7 +6,7 @@ description: Installing and configuring the MIM Synchronization Service.
 keywords:
 author: billmath
 ms.author: billmath
-ms.date: 08/04/2025
+ms.date: 08/05/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager
 
@@ -89,7 +89,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![User assigned authentication](media/install-mim-sync/user-assigned-authentication.png)
 
-1. Set the database name for synchronization service and select **Next**:
+1. **Set the database name for synchronization service** and select **Next**:
 
     ![Screenshot showing input for database name for synchronization service](media/install-mim-sync/synchronization-service.png)
 
