@@ -56,7 +56,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![MIM installer wizard welcome image](media/install-mim-sync/MIM_Install1.png)
 
-1. Review the license terms, select **I accept the terms in the License Agreement** check box > **Next** to accept them.
+1. Review the license terms, select **I accept the terms in the License Agreement** check box to accept them, then select **Next**.
 
     ![Screenshot showing end user license agreement](media/install-mim-sync/terms.png)
 
