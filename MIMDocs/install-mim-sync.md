@@ -58,6 +58,8 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 1. Review the license terms and select **Next** to accept them.
 
+    ![Screenshot showing end user license agreement](media/install-mim-sync/terms.png)
+
 1. On the **Custom Setup** screen select **Next**.
 
     ![Custom Setup image](media/install-mim-sync/MIM_Install2.png)
@@ -81,7 +83,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![Azure SQL authentication type](media/install-mim-sync/azure-authentication-type.png)
 
-    Skip to section 9 for **System-assigned Managed Identity**
+    Skip to step 9 for **System-assigned Managed Identity**
 
 1. Enter the Principal ID of the User-Assigned Managed Identity
 
