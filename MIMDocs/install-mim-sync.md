@@ -56,7 +56,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
     ![MIM installer wizard welcome image](media/install-mim-sync/MIM_Install1.png)
 
-1. Review the license terms, select **I accept the terms in the License Agreement** check box to accept them, then select **Next**.
+1. Review the license terms, check **I accept the terms in the License Agreement** to accept them, then select **Next**.
 
     ![Screenshot showing end user license agreement](media/install-mim-sync/terms.png)
 
@@ -108,22 +108,24 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
 
 1. Provide MIM Sync Service installer with the relevant security groups:
 
-    1. Administrator = *contoso\MIMSyncAdmins*
+    1. **Administrator** = *contoso\MIMSyncAdmins*
 
-    2. Operator= *contoso\MIMSyncOperators*
+    2. **Operator** = *contoso\MIMSyncOperators*
 
-    3. Joiner = *contoso\MIMSyncJoiners*
+    3. **Joiner** = *contoso\MIMSyncJoiners*
 
-    4. Connector Browse = *contoso\MIMSyncBrowse*
+    4. **Connector Browse** = *contoso\MIMSyncBrowse*
 
-    5. WMI Password Management= *contoso\MIMSyncPasswordReset*
+    5. **WMI Password Management** = *contoso\MIMSyncPasswordReset*
 
    ![Security groups image](media/install-mim-sync/MIM_Install5.png)
 
 1. In the security settings screen, check **Enable firewall rules for inbound RPC communications**, and select **Next**.
 
-1. Select **Install** to begin the installation of MIM Sync Service.
+    ![Screenshot showing enable firewall rules for inbound RPC communications](media/install-mim-sync/enable-firewall.png)
 
+1. Select **Install** to begin the installation of MIM Sync Service.
+`
     1. A warning concerning the MIM Sync service account may appear – select **OK**.
 
     2. MIM Sync Service installs.
