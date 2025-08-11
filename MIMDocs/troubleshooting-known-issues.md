@@ -6,7 +6,7 @@ description: Learn about known issues MIM 2016.
 keywords:
 author: henrymbuguakiarie
 ms.author: henrymbugua
-ms.date: 04/08/2025
+ms.date: 08/11/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
 
