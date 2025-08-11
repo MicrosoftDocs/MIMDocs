@@ -27,11 +27,11 @@ ms.suite: ems
 
 # Known issues: Microsoft Identity Manager (MIM) 2016
 
-This article addresses a known issue affecting the MIM 2016 Portal after installation. It helps users identify the This article documents a known issue affecting Microsoft Identity Manager (MIM) 2016. It helps users recognize the problem, understand its underlying cause, and apply a validated solution where available.
+This article documents a known issue affecting Microsoft Identity Manager (MIM) 2016. It helps users recognize the problem, understand the underlying cause, and apply a validated solution where available.
 
-## Issue: MIM Portal fails after SharePoint Security Updates KB5002768 and KB5002754
+## Issue: MIM Portal fails after SharePoint security updates KB5002768 and KB5002754
 
-After applying SharePoint Server 2016 security updates KB5002768 and KB5002754, users may experience unresponsive or partially broken behavior in the MIM 2016 SP2 Portal. The Microsoft MIM Support team has received multiple reports of this issue.
+The MIM 2016 SP2 Portal may become partially broken or unresponsive after the installation of SharePoint Server 2016 security updates KB5002768 and KB5002754. The Microsoft MIM Support team has received multiple reports confirming this issue.
 
 These updates were released to address the following critical vulnerabilities:
 
@@ -48,8 +48,8 @@ $f.AddGenericAllowedListValue("WebPartSupportedBoundPropertyNames", "data-link-t
 $f.update() iisreset 
 ```
 
-This workaround aligns with guidance provided in [ASPX file cannot be displayed when you create a custom web part (KB5030804)](https://support.microsoft.com/topic/aspx-file-displayed-custom-web-part-kb5030804-4d8e1e49-dfc9-4261-9d67-cb62ad20e332), which addresses ASPX rendering issues in custom web parts.
+This workaround aligns with guidance provided in [ASPX file can't be displayed when you create a custom web part (KB5030804)](https://support.microsoft.com/topic/aspx-file-displayed-custom-web-part-kb5030804-4d8e1e49-dfc9-4261-9d67-cb62ad20e332), which addresses ASPX rendering issues in custom web parts.
 
 ### Possible causes
 
-The issue stems from changes introduced by the SharePoint security updates. These changes block certain properties used in custom web parts unless they are explicitly allowed, affecting MIM Portal rendering and responsiveness.
+The issue stems from changes introduced by the SharePoint security updates. These changes block certain properties used in custom web parts unless they're explicitly allowed, affecting MIM Portal rendering and responsiveness.
