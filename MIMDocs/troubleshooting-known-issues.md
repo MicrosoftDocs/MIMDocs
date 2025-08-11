@@ -53,7 +53,3 @@ This workaround aligns with guidance provided in [ASPX file cannot be displayed 
 ### Possible causes
 
 The issue stems from changes introduced by the SharePoint security updates. These changes block certain properties used in custom web parts unless they are explicitly allowed, affecting MIM Portal rendering and responsiveness.
-
-## Related content
-
-- [SharePoint Server 2016 security updates](https://support.microsoft.com/topic/sharepoint-server-2016-security-updates-0f8b1c2a-3d5e-4f7c-bb9d-2c1e0b8f3a4c)
