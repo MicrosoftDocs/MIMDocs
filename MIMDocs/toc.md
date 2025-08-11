@@ -45,6 +45,7 @@
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [Enroll smartcards](certificate-manager-for-non-administrators.md)
 ### [Create software certificates](certificate-manager-for-software-certificates.md)
+## [Known issues](troubleshooting-known-issues.md)
 # [Use Privileged Access Management](./pam/privileged-identity-management-for-active-directory-domain-services.md)
 ## [Understand the components](./pam/principles-of-operation.md)
 ### [Environment overview](./pam/environment-overview.md)
