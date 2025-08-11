@@ -17,7 +17,7 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: mwahl
+ms.reviewer: quievey
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Known issues: Microsoft Identity Manager (MIM) 2016
 
-This article documents a known issue affecting Microsoft Identity Manager (MIM) 2016. It helps users recognize the problem, understand the underlying cause, and apply a validated solution where available.
+This article documents known issues affecting Microsoft Identity Manager (MIM) 2016. It helps users recognize the problem, understand the underlying cause, and apply a validated solution where available.
 
 ## Issue: MIM Portal fails after SharePoint security updates KB5002768 and KB5002754
 
