@@ -228,6 +228,9 @@ All three of the above accounts will have elevated rights within your organizati
 
 8. In the **Cryptography Selection** dialog box, disable **Microsoft Enhanced Cryptographic Provider v1.0**, enable **Microsoft Enhanced RSA and AES Cryptographic Provider**, and then click **OK**.
 
+    >[!NOTE]
+    > Windows Server 2019 supports MIM CM. However, MIM CM does not support ECC/ECDSA.
+
 9. On the **Subject Name** tab, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
 
 10. On the **Extensions** tab, in the **Extensions included in this template** list, ensure that **Application Policies** is selected, and then click **Edit**.
