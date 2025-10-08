@@ -125,7 +125,7 @@ To install Microsoft Identity Manager 2016 components, first set up the installa
     ![Screenshot showing enable firewall rules for inbound RPC communications](media/install-mim-sync/enable-firewall.png)
 
 1. Select **Install** to begin the installation of MIM Sync Service.
-`
+
     1. A warning concerning the MIM Sync service account may appear – select **OK**.
 
     2. MIM Sync Service installs.
