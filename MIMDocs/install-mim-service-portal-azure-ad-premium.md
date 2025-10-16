@@ -95,7 +95,7 @@ Application context authentication scenario requires you to register an applicat
 
 ### Registering application using a PowerShell script
 
-*Create-MIMMailboxApp.ps1* script could be found either in *Scripts.zip/Scripts/Service and Portal* or in *Service and Portal.zip\Service and Portal\Program Files\Microsoft Forefront Identity Manager\2010\Service\Scripts*.
+*Create-MIMMailboxApp.ps1* script could be found either in *Scripts.zip/Scripts/Service and Portal* or in *Service and Portal.zip\Service and C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\Scripts*.
 
 Unless your MIM Service mailbox is hosted in a national or government cloud, the only parameter you need to pass to the script is MIM Service email, for example, MIMService@contoso.onmicrosoft.com.
 
