@@ -5,7 +5,7 @@ title: PAM REST API service details | Microsoft Docs
 description: MIM PAM REST API descriptions.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

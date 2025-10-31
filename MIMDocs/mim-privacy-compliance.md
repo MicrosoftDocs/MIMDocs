@@ -5,7 +5,7 @@ title: Microsoft Identity Manager data handling  | Microsoft Docs
 description: Understand Microsoft Identity Manager data handling to identify and report on data within the environment, take action in given system based on operational functions and requirement.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

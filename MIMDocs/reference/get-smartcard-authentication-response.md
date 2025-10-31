@@ -5,7 +5,7 @@ title: Get smart card authentication response | Microsoft Docs
 description: Using the MIM CM REST API GET command to retrieve the response to a base CSP authentication challenge.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

@@ -4,7 +4,7 @@
 title: Raise the bastion forest functional level for Identity Manager to use Active Directory PAM features| Microsoft Docs
 description: Raise a privileged access management deployment that started with Windows Server 2012 R2 functional level to the Windows Server 2016 functional level.
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

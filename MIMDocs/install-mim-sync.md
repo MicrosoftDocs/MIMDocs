@@ -5,7 +5,7 @@ title: Install the Microsoft Identity Manager Sync Service | Microsoft Docs
 description: Installing and configuring the MIM Synchronization Service.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 08/05/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

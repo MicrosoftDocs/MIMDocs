@@ -5,7 +5,7 @@ title: PAM environment tier model | Microsoft Docs
 description: Learn about the tier model that segregates your system based on vulnerability to risk.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

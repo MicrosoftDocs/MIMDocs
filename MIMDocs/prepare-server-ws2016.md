@@ -5,7 +5,7 @@ title: Configure Windows Server 2016 or later versions for MIM 2016 SP2 | Micros
 description: Get the steps and minimum requirements to prepare Windows Server 2016 or later versions to work with MIM 2016 SP2.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

@@ -4,7 +4,7 @@ title: Working with Self-Service Password Reset | Microsoft Docs
 description: See what's new with Self-Service Password Reset (SSPR) in MIM 2016, including how SSPR works with multifactor authentication.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

@@ -5,7 +5,7 @@ title: Planning Microsoft Identity Manager 2016 in TLS 1.2 environment | Microso
 description: Planning Microsoft Identity Manager 2016 in TLS 1.2 environment
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

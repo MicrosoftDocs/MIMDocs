@@ -5,7 +5,7 @@ title: Get smart card diversified admin key | Microsoft Docs
 description: Using the MIM CM REST API GET command to find the diversified admin key for a specified smart card.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

@@ -5,7 +5,7 @@ title: What is PAM for ADDS?
 description: Privileged Access Management (PAM) helps organizations restrict privileged access within an existing Active Directory environment.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

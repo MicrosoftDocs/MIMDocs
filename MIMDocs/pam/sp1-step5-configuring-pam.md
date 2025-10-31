@@ -3,7 +3,7 @@ title: Step 5 Installing/Configuring PAM
 description: This is step 5 of configuring Microsoft Identity Manager using scripts and it covers the deployment steps on the PAM server.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

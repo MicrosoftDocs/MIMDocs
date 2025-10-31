@@ -14,7 +14,7 @@ ms.service: entra-id-governance
 ms.subservice: ''
 ms.workload: identity
 ms.date: 4/30/2024
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.reviewer: mwahl
 ms.suite: ems
 

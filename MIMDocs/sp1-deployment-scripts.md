@@ -5,7 +5,7 @@ title: MIM PAM Deployment Scripts
 description: This page is part of the series of articles about configuring Microsoft Identity Manager using scripts. It includes a list of the assumptions about the environment.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

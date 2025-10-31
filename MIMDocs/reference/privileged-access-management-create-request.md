@@ -5,7 +5,7 @@ title: Create PAM request | Microsoft Docs
 description: Using the PAM REST API POST command to create a request to elevate a role.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

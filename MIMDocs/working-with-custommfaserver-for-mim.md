@@ -4,7 +4,7 @@ title: Use an MFA provider via an API to activate PAM or in SSPR scenario | Micr
 description: Set up Custom MFA API as a second layer of security when your users activate roles in Privileged Access Management and use Self Service Password Reset.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.reviewer: fimguy
 
 ms.date: 04/08/2025

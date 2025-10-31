@@ -17,7 +17,7 @@ ms.topic: article
 ms.service: entra-id-governance
 ms.subservice: ''
 ms.date: 06/30/2025
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.reviewer: mwahl, dmwendia, henrymbugua
 ms.suite: ems
 ---

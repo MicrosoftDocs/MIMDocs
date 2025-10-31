@@ -5,7 +5,7 @@ title: MIM Install the Web Service Cofiguration Tool | Microsoft Docs
 description: This article covers the steps to install the Web Service Configuration Tool.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

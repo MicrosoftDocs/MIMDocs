@@ -5,7 +5,7 @@ title: Get request | Microsoft Docs
 description: Using the MIM CM REST API GET command to list MIM CM requests.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

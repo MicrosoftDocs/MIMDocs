@@ -5,7 +5,7 @@ title: Planning a bastion environment | Microsoft Docs
 description: Planning and setting up a bastion environment with a dedicated administrative forest.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

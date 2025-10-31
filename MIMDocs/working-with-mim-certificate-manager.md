@@ -5,7 +5,7 @@ title: Deploy the MIM Certificate Manager Windows application | Microsoft Docs
 description: Learn how to deploy the Certificate Manager app to enable your users to manage their own access rights.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

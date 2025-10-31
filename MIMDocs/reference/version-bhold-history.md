@@ -5,7 +5,7 @@ title: Identity Manager BHOLD version history | Microsoft Docs
 description: This article documents the various changes made as part of updates to BHOLD within MIM 2016
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

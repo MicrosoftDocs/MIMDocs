@@ -4,7 +4,7 @@ title: Use Azure Multi-Factor Authentication Server to activate PAM or SSPR scen
 description: Set up Azure Multi-Factor Authentication Server as a second layer of security when your users activate roles in Privileged Access Management and Self Service Password Reset.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

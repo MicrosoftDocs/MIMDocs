@@ -5,7 +5,7 @@ title: Step 3 Configuring SQL
 description: This article is step 3 of the series of articles covering how to configure Microsoft Identity Manager using scripts and it discusses the SQL server configuration steps.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

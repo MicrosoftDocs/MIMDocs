@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.date: 3/29/2024
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.custom: sfi-image-nochange
 
 ---

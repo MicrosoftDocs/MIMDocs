@@ -5,7 +5,7 @@ title: Microsoft Identity Manager 2016 Best Practices| Microsoft Docs
 description: Best practices for deploying and operating MIM.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

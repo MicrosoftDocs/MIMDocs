@@ -5,7 +5,7 @@ title: Supported software platforms | Microsoft Docs
 description: Find the products and versions that are compatible with each of the MIM 2016 components
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 06/12/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

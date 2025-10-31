@@ -5,7 +5,7 @@ title: Deploy PAM step 2 - PRIV DC | Microsoft Docs
 description: Prepare the PRIV domain controller, which will provide the bastion environment where Privileged Access Management is isolated.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

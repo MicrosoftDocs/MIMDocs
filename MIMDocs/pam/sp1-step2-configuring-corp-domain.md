@@ -5,7 +5,7 @@ title: Step 2 Configuring the CORP domain
 description: This article describes the second step required to configure the corp domain which involves running a script after sids.txt is copied to the CORPDC
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

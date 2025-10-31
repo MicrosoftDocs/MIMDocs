@@ -5,7 +5,7 @@ title: Create request | Microsoft Docs
 description: Instructions and examples for creating a MIM CM request.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

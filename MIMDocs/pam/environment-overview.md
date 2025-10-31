@@ -5,7 +5,7 @@ title: PAM environment overview | Microsoft Docs
 description: Find the required number and configuration of virtual machines to successfully deploy Privileged Access Management.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

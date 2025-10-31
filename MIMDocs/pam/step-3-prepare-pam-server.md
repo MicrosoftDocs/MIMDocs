@@ -5,7 +5,7 @@ title: Deploy PAM step 3 – PAM server | Microsoft Docs
 description: Prepare a PAM server that will host both SQL and SharePoint for your Privileged Access Management deployment.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

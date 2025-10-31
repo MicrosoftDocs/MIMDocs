@@ -5,7 +5,7 @@ title: Topology guide for deployment | Microsoft Docs
 description: Understand the MIM 2016 components, and get suggestions for how to deploy them in your environment.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

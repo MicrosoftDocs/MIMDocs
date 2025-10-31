@@ -5,7 +5,7 @@ title: Get PAM session info | Microsoft Docs
 description: Using the PAM REST API GET command to find the username for the account logged in to a session.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

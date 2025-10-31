@@ -5,7 +5,7 @@ title: Sample enrollment walkthrough | Microsoft Docs
 description: Virtual smart card self-service enrollment using the MIM CM REST API.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

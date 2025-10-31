@@ -5,7 +5,7 @@ title: Deploy PAM step 5 – Forest link | Microsoft Docs
 description: Establish trust between the PRIV and CORP forests so that privileged users in PRIV can still access resources in CORP.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

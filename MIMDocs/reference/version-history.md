@@ -7,7 +7,7 @@ services: active-directory
 documentationcenter: ''
 keywords: MIM
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 reviewer: markwahl-msft
 manager: benyim
 ms.date: 06/12/2025

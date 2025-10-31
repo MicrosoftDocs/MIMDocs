@@ -5,7 +5,7 @@ title: Privileged Access Management REST API reference | Microsoft Docs
 description: List of resources for using the MIM PAM REST API to manage privileged user accounts.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

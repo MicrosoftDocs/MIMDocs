@@ -7,7 +7,7 @@ services: active-directory
 documentationcenter: ''
 keywords: MIM
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 03/18/2021
 ms.topic: article
 ms.service: microsoft-identity-manager

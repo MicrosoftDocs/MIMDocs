@@ -5,7 +5,7 @@ title: Certificate Management REST API service details | Microsoft Docs
 description: MIM CM REST API descriptions and examples.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

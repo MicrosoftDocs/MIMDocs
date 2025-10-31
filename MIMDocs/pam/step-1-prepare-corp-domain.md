@@ -5,7 +5,7 @@ title: Deploy PAM Step 1 - CORP domain | Microsoft Docs
 description: Prepare the CORP domain with existing or new identities to be managed by Microsoft Identity Manager
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

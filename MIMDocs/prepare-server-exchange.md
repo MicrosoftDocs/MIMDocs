@@ -5,7 +5,7 @@ title: Configure Exchange for MIM to email and create mailboxes | Microsoft Docs
 description: As an optional step, deploy Exchange Server to enable MIM 2016 to send mail and create mailboxes.
 keywords:
 author: henrymbuguakiarie
-ms.author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager
