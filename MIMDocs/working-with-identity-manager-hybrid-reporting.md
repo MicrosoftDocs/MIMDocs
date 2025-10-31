@@ -4,8 +4,8 @@
 title: Work with hybrid reporting in Microsoft Entra by using Identity Manager 2016 
 description: Learn how to combine on-premises and cloud data into hybrid reports in Microsoft Entra, and how to manage and view these reports.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

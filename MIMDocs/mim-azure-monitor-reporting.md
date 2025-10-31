@@ -4,8 +4,8 @@ description: Get the steps to configure Azure Monitor with MIM
 services: active-directory
 documentationcenter: ''
 keywords: MIM
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 reviewer: markwahl-msft
 
 ms.date: 04/08/2025

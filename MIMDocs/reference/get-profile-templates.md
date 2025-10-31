@@ -4,8 +4,8 @@
 title: Get profile templates | Microsoft Docs
 description: Using the MIM CM REST API GET command to list profile templates available to a specified user.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

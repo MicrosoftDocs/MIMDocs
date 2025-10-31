@@ -1,8 +1,8 @@
 ---
 title: BHOLD access management connector installation | Microsoft Docs
 description: The BHOLD connector module supports initial and ongoing synchronization of data
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

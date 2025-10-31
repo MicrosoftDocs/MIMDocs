@@ -4,8 +4,8 @@
 title: Smart card operations | Microsoft Docs
 description: Articles related to smart card operations in the MIM CM REST API.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

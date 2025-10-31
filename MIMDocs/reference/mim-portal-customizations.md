@@ -4,8 +4,8 @@
 title: Microsoft Identity Manager 2016 portal customizations | Microsoft Docs
 description: Using MIM to customize elements of password portals.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

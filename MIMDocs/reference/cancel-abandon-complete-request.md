@@ -4,8 +4,8 @@
 title: Cancel, abandon, or complete a request | Microsoft Docs
 description: Changing the status of a MIM CM request.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

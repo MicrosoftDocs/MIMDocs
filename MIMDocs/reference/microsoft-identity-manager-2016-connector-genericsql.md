@@ -3,7 +3,7 @@ title: Generic SQL Connector
 description: This article describes how to configure Microsoft's Generic SQL Connector.
 services: active-directory
 documentationcenter: ''
-author: billmath
+author: henrymbuguakiarie
 
 editor: ''
 
@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.date: 3/29/2024
-ms.author: billmath
+ms.author: henrymbuguakiarie
 ms.custom: sfi-image-nochange
 
 ---

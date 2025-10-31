@@ -1,8 +1,8 @@
 ---
 title: BHOLD core Installation | Microsoft Docs
 description: BHOLD suite installation core document
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

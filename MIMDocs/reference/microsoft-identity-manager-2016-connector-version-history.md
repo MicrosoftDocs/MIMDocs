@@ -3,7 +3,7 @@ title: Connector Version Release History
 description: This document lists all releases of the Connectors for Forefront Identity Manager (FIM) and Microsoft Identity Manager (MIM)
 services: active-directory
 documentationcenter: ''
-author: billmath
+author: henrymbuguakiarie
 manager: benyim
 editor: ''
 reviewer: markwahl-msft
@@ -14,7 +14,7 @@ ms.service: entra-id-governance
 ms.subservice: ''
 ms.workload: identity
 ms.date: 4/30/2024
-ms.author: billmath
+ms.author: henrymbuguakiarie
 ms.reviewer: mwahl
 ms.suite: ems
 

@@ -4,8 +4,8 @@
 title: Support update for Microsoft Entra ID P1 or P2 customers using Microsoft Identity Manager
 description: This article describes how Microsoft Entra ID P1 or P2 customers can get support after January 21, 2021.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 
 ms.date: 6/9/2020
 ms.topic: article

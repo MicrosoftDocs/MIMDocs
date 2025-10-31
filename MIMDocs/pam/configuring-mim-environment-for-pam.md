@@ -4,8 +4,8 @@
 title: Configure MIM 2016 for Privileged Access Management | Microsoft Docs
 description: The roadmap for installing and MIM and configuring it for Privileged Access Management.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

@@ -6,8 +6,8 @@ description: Get the full list of steps involved in deploying Microsoft Identity
 services: active-directory
 documentationcenter: ''
 keywords: MIM
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 03/18/2021
 ms.topic: article
 ms.service: microsoft-identity-manager

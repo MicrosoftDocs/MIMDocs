@@ -4,8 +4,8 @@
 title: Get PAM roles | Microsoft Docs
 description: Using the PAM REST API GET command to list PAM roles.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

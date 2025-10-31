@@ -4,8 +4,8 @@
 title: MIM Deprecated Features And Planning For The Future
 description: This article documents deprecated features of the MIM Identity Manager 2016 SP2.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

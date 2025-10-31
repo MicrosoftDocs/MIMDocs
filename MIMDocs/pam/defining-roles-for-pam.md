@@ -4,8 +4,8 @@
 title: Define privileged roles for PAM | Microsoft Docs
 description: Decide which privileged roles should be managed, and define the management policy for each.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

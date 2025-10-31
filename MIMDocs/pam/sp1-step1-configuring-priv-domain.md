@@ -4,8 +4,8 @@
 title: Step 1 Configuring the PRIV domain
 description: Prepare the PRIV domain with existing or new identities to be managed by Microsoft Identity Manager using scripts
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

@@ -4,8 +4,8 @@
 title: Get profile state operations | Microsoft Docs
 description: Using the MIM CM REST API GET command to list the operations available to a current user.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

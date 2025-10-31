@@ -4,8 +4,8 @@
 title: Management agent run error codes | Microsoft Docs
 description: Error codes for the MIM Synchronization Service Manager user interface.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

@@ -4,8 +4,8 @@
 title: Deploy PAM step 4 – Install MIM | Microsoft Docs
 description: Install and configure MIM Service and Portal on your Privileged Access Management server and workstations.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

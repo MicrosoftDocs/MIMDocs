@@ -2,8 +2,8 @@
 title: Use custom multifactor authentication to activate PAM
 description: Set up custom multifactor authentication as a second layer of security when your users activate roles in Privileged Access Management.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.reviewer: fimguy
 
 ms.date: 04/08/2025

@@ -2,8 +2,8 @@
 title: Step 4 Configuring SharePoint
 description: This is step 4 of configuring PAM with scripts. In this step you configure SharePoint so that it can be used as part of your PAM deployment.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

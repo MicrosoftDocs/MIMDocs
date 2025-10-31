@@ -4,8 +4,8 @@
 title: PAM software requirements | Microsoft Docs
 description: Find the hardware and software requirements for a successful deployment of Privileged Access Management
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbuguakiarie
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
