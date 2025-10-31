@@ -4,8 +4,8 @@
 title: Approve or reject a pending PAM request | Microsoft Docs
 description: Using the PAM REST API POST command to respond to pending PAM role requests.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager
