@@ -4,8 +4,8 @@
 title: Configure SQL Server for Microsoft Identity Manager 2016 SP2 | Microsoft Docs
 description: Install SQL Server 2016 or 2017 in preparation for your MIM 2016 installation.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager

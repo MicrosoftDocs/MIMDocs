@@ -4,8 +4,8 @@
 title: Get certificate responses | Microsoft Docs
 description: Description of MIM CM REST API POST request and response parameters.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

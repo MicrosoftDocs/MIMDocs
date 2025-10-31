@@ -4,8 +4,8 @@
 title: Policy operations | Microsoft Docs
 description: Articles related to MIM CM REST API policy operations.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: reference
 ms.service: microsoft-identity-manager

@@ -3,7 +3,7 @@ title: Lotus Domino Connector | Microsoft Docs
 description: This article describes how to configure Microsoft's Lotus Domino Connector.
 services: active-directory
 documentationcenter: ''
-author: billmath
+author: henrymbuguakiarie
 
 editor: ''
 
@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.date: 04/08/2025
-ms.author: billmath
+ms.author: henrymbugua
 ms.custom: sfi-image-nochange
 
 ---

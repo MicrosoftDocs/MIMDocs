@@ -5,8 +5,8 @@ description: This document describes migration options and approaches for moving
 services: active-directory
 documentationcenter: ''
 keywords: MIM
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 reviewer: markwahl-msft
 ms.date: 04/08/2025
 ms.topic: article

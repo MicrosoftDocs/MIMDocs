@@ -1,8 +1,8 @@
 ---
 title: Microsoft BHOLD Suite Concepts Guide
 description: Understand how Microsoft BHOLD Suite works with Microsoft Identity Manager.
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: conceptual
 ms.assetid: 

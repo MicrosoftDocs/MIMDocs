@@ -4,8 +4,8 @@
 title: Configure SharePoint for Microsoft Identity Manager 2016 | Microsoft Docs
 description: Install and configure SharePoint Foundation so that it can host the MIM Portal page.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 manager: benyim
 ms.date: 10/23/2023
 ms.topic: conceptual

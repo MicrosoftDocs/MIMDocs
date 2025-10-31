@@ -4,8 +4,8 @@
 title: Get smart card policy | Microsoft Docs
 description: Using the MIM CM REST API GET command to find the profile template policy for a specified workflow.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager

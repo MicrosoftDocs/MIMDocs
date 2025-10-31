@@ -2,8 +2,8 @@
 title: Addendum
 description: This is the Addendum to the documents covering the scripted deployment of PAM. It covers configuring the PRIV and CORP domains as well as a setting up a client to do the validation and information for how to request assistance.
 keywords:
-author: billmath
-ms.author: billmath
+author: henrymbuguakiarie
+ms.author: henrymbugua
 ms.date: 04/08/2025
 ms.topic: article
 ms.service: microsoft-identity-manager
