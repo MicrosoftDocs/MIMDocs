@@ -174,7 +174,7 @@ A Service Pack 2 (SP2) rollup package (build 4.6.34.0) is available for Microsof
 - Added 'Use MIMSync account' option for MIM Service Management Agent.
  
 #### Privilege Access Management 
-- PowerShell cmdlet ‘Get-PAMRequest’ returns an another property 'FIMRequestID'.
+- PowerShell cmdlet ‘Get-PAMRequest’ returns another property 'FIMRequestID'.
 
 
 ## MIM Version 4.5.412.0
@@ -275,7 +275,7 @@ This hotfix contains updates for the MIM Service, MIM Portal, and PAM components
 - *Improved Language support to new defined standard
 - Objects that use unmanaged resources aren't cleared on time.  these objects are  properly cleaned up
 - *New-PAMRole PowerShell cmdlet the  “-disableAutoApproveIfOwner”  deny self-approval for the role
-- * Get-PamRequest PowerShell cmdlet the  “-CreatedFrom” allows for the filtering od PAM specific request
+- * Get-PamRequest PowerShell cmdlet the  “-CreatedFrom” allows for the filtering of PAM specific request
 - *PAM Module Additions
     - Get-PAMSet
     - Add-PAMSetMember
