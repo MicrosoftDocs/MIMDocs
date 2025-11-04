@@ -37,7 +37,7 @@ The Microsoft Identity Manager team regularly releases updates. This article is 
 ## MIM Version 4.6.691.0
 
 - Status: MIM 2016 Service Pack 3 (SP3) of June  2025
-- Added support for Windows Server 2025, SQL Server 2022, Exchange Server 2019
+- Added support for Windows Server 2025 and SQL Server 2022
 - Introduced ADFS claims-based authentication for MIM Portal
 - Support for Azure SQL with managed identity
 - SharePoint SE and System Center Data Warehouse 2022 compatibility
