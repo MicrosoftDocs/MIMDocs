@@ -32,12 +32,12 @@
         },
         {
             "source_path": "MIMDocs/mim-adfs-installation-configuration.md",
-            "redirect_url": "/microsoft-identity-manager/mim-adfs-installation-configuration",
+            "redirect_url": "/microsoft-identity-manager/microsoft-identity-manager-deploy",
             "redirect_document_id": false
         },
         {
             "source_path": "MIMDocs/mim-adfs-prepare-installation.md",
-            "redirect_url": "/microsoft-identity-manager/mim-adfs-prepare-installation",
+            "redirect_url": "/microsoft-identity-manager/microsoft-identity-manager-deploy",
             "redirect_document_id": false
         },
         {
