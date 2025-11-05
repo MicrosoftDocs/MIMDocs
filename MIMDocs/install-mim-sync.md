@@ -6,7 +6,7 @@ description: Installing and configuring the MIM Synchronization Service.
 keywords:
 author: billmath
 ms.author: billmath
-ms.date: 04/08/2025
+ms.date: 11/05/2025
 ms.topic: conceptual
 ms.service: microsoft-identity-manager
 
