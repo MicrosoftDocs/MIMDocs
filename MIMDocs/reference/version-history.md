@@ -216,7 +216,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - PAM REST API could not be started because it could not load file or assembly
 
 #### Microsoft Identity Portal
-- Portal are displayed with an incorrect table length
+- Portal is displayed with an incorrect table length
 - Advanced Search dialog of the Portal, the scrollbars don’t display properly
 - Language Pack strong name signature verification failed
 
@@ -235,7 +235,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 
 #### Synchronization service
 - *Support for Group Managed Service Accounts
-- *Visual Studio Support (Visual Studio 2013,Visual Studio 2015,Visual Studio 2017)
+- *Visual Studio Support (Visual Studio 2013, Visual Studio 2015, Visual Studio 2017)
 - Updates to MIISACTIVATE.EXE, gMSA Support added 
     - non-gMSA: Miisactivate.exe c:\configBU\miiserver_01.bin “contoso\mimSyncService” *
     - gMSA: Miisactivate.exe c:\configBU\miiserver_01.bin “contoso\mimSyncService”
@@ -252,14 +252,14 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - *Improved Language support to new defined standard
 - *FIMAutomation Export-FIMConfig PowerShell cmdlet the “-PamConfig” argument is available to force the PAM configuration objects to be exported
 - *FIMAutomation Export-FIMConfig PowerShell cmdlet the “-request” parameter has been added
-- *Boolean attributes are always set to NULL upon binding creation , Previous Boolean before hotfix will not be updated
+- *Boolean attributes are always set to NULL upon binding creation, Previous Boolean before hotfix will not be updated
 > [!IMPORTANT]
->This can be a breaking change if preforming a configuration migration. Configuration should be evaluated and updated for new feature as configuration migration is considered a new 
+>This can be a breaking change if performing a configuration migration. Configuration should be evaluated and updated for new feature as configuration migration is considered a new 
     - Implemented initialization of new MIM Boolean attributes to false on creation new object
     - Implemented initialization of new MIM Boolean attributes to false on adding new Boolean attribute binding to the resource
 - Customer Experience Improvement Program setting is maintained to false 
 - MIM Service installation failed with Database Upgrade error: Cannot insert the value NULL into column 'Name' if not default database name is used
-- In hotfix cases the Microsoft 365 setting would be cleared , The encrypted password for the MIM Service’s Exchange Online mailbox is not changed
+- In hotfix cases the Microsoft 365 setting would be cleared, The encrypted password for the MIM Service’s Exchange Online mailbox is not changed
 - *There was no limit to the MIM Service log file created, Updated logging default setting and implemented circular logging capability
 
 #### Privileged Access Management 
@@ -289,7 +289,7 @@ This hotfix contains updates for the MIM Service, MIM Portal and PAM components.
 - *Improved Language support to new defined standard
 - Identity Picker control, the control seems to dynamically grow its width rather than wrapping the text
 - Portal, popup dialogs aren’t displayed properly when viewing in Internet Explorer (IE) 10
-- Cyrillic symbols in the title bar text is displayed correctly
+- Cyrillic symbols in the title bar text are displayed correctly
 - Popup windows no longer have the extra scroll bar displaying, when viewed in Internet Explorer
 - Failed “Import Workflow Definition” properly throws an exception and recovers, allowing a Synchronization Rule activity to be added to the workflow definition 
 - `<httpRuntime enableVersionHeader="false" />` added to default web.config
