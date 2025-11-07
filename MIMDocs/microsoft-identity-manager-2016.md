@@ -24,7 +24,7 @@ ms.suite: ems
 
 # Microsoft Identity Manager 2016 news and updates
 
-Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of Forefront Identity Manager (FIM) 2010 and predecessor technologies. MIM provides integration with heterogeneous platforms across the datacenter, including on-premises HR systems, directories and databases.
+Microsoft Identity Manager (MIM) 2016 builds on the identity and access management capabilities of Forefront Identity Manager (FIM) 2010 and predecessor technologies. MIM provides integration with heterogeneous platforms across the datacenter, including on-premises HR systems, directories, and databases.
 
 
 MIM augments Microsoft Entra cloud-hosted services by enabling the organization to have the right users in Active Directory for on-premises apps. Microsoft Entra Connect can then make them available in Microsoft Entra ID for Microsoft 365 and cloud-hosted apps. Common MIM scenarios include:
