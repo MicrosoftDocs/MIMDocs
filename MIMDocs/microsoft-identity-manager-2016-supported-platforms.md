@@ -33,9 +33,9 @@ This table describes the supported platforms and version for each component of M
 |-------------------|--------------|--------------|
 | **MIM Sync** | Windows Server | Windows Server 2016 (NR) *<br/>Windows Server 2019 **<br/>Windows Server 2022 **|
 | | Active Directory functional level for user provisioning, PCNS and GAL Sync | Windows Server 2016 *
-| | MIM Sync database | SQL Server 2012 ESU (NR)<br/>SQL Server 2016 SP3 * <br/>SQL Server 2017 ** <br/> SQL Server 2019 ** |
+| | MIM Sync database | SQL Server 2016 SP3 * <br/>SQL Server 2017 ** <br/> SQL Server 2019 ** |
 | | Active Directory for user provisioning, PCNS, and GAL Sync (optional)| Windows Server 2016 *<br/> Windows Server 2019 ** <br/> Windows Server 2022 **|
-| | Exchange for mailbox provisioning and GAL Sync (optional)|Exchange Server 2019 ** |
+| | Exchange for mailbox provisioning and GAL Sync (optional)| |
 | | Development environment (optional) | Visual Studio 2017 * |
 | | Additional connected system (optional) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SharePoint Server 2016 *<br/> SharePoint Server 2019 ** <br/> Other third-party products |
 | **MIM Service and Portal** | Windows Server | Windows Server 2016 (NR)*<br/> Windows Server 2019 ** <br/>Windows Server 2022 **|
@@ -44,7 +44,7 @@ This table describes the supported platforms and version for each component of M
 | |PAM Scenario: Active Directory for PAM scenario existing (CORP) forests | Windows Server 2016 * <br/> Windows Server 2019 ** <br/> Windows Server 2022 **|
 | | MIM Service database | SQL Server 2016 SP3 *<br/> SQL Server 2017 ** <br/> SQL Server 2019 ** |
 | | SharePoint | SharePoint Server 2016 *<br/> SharePoint Server 2019 ** |
-| | Mail server for MIM Service approval and group management emails (optional) | Exchange Server 2019 ** <br/> Exchange Online * (Notification only before build [4.4.1749.0](/microsoft-identity-manager/reference/version-history#version-4417490)) |
+| | Mail server for MIM Service approval and group management emails (optional) | Exchange Online * (Notification only before build [4.4.1749.0](/microsoft-identity-manager/reference/version-history#version-4417490)) |
 | | Browser | All major supported browsers * (Mobile devices limited)|
 | **MIM Service Reporting** | Windows Server |  Windows Server 2016 (NR)*<br/> Windows Server 2019 ** <br/> Windows Server 2022 **|
 | | Data warehouse | System Center 2016 Service Manager * (With 4.4.1459)<br/> System Center 2019 Service Manager ** |
