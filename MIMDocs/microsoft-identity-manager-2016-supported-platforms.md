@@ -28,6 +28,9 @@ ms.custom: mim
 
 This table describes the supported platforms and version for each component of Microsoft Identity Manager 2016. The versions marked with a * are only supported in MIM 2016 Service Pack 1, Service Pack 2 or a later hotfix. The versions marked with ** are only supported in MIM 2016 Service Pack 2 or a later hotfix. The versions marked with "NR", for not recommended, are not recommended if starting a fresh deployment of that platform for MIM.  Note that this table does not include all of versions of the connected systems, see [supported connectors](supported-management-agents.md) for more information on the MIM connectors.
 
+> [!IMPORTANT]
+> Updated platform support will be published with MIM 2016 Service Pack 3. Customers planning upgrades should target current Long-Term Servicing Channel (LTSC) Windows Server releases and Subscription Edition (SE) for SharePoint and Exchange.
+
 
 | **MIM component** | **Platform** | **Version** |
 |-------------------|--------------|--------------|
