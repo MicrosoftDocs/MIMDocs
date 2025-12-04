@@ -29,7 +29,7 @@ ms.custom: mim
 This table describes the supported platforms and version for each component of Microsoft Identity Manager 2016. The versions marked with a * are only supported in MIM 2016 Service Pack 1, Service Pack 2 or a later hotfix. The versions marked with ** are only supported in MIM 2016 Service Pack 2 or a later hotfix. The versions marked with "NR", for not recommended, are not recommended if starting a fresh deployment of that platform for MIM.  Note that this table does not include all of versions of the connected systems, see [supported connectors](supported-management-agents.md) for more information on the MIM connectors.
 
 > [!IMPORTANT]
-> Updated platform support will be published with MIM 2016 Service Pack 3. Customers planning upgrades should target current Long-Term Servicing Channel (LTSC) Windows Server releases and Subscription Edition (SE) for SharePoint and Exchange.
+> Updated platform support will be published with MIM 2016 Service Pack 3. Customers planning upgrades should target current Long-Term Servicing Channel (LTSC) Windows Server releases and Subscription Edition (SE) for SharePoint, Exchange SE and Outlook.
 
 
 | **MIM component** | **Platform** | **Version** |
@@ -53,14 +53,14 @@ This table describes the supported platforms and version for each component of M
 | | Data warehouse | System Center 2016 Service Manager * (With 4.4.1459)<br/> System Center 2019 Service Manager ** |
 | **MIM Password Reset and Registration Portals** | Windows Server | Windows Server 2016 (NR)*<br/> Windows Server 2019 **  <br/> Windows Server 2022 **|
 | | Web browser | All major supported browsers |
-| **MIM Add-ins and Extensions** | Windows | Windows 10 <br/> Windows 11 **|
-| | Outlook integration (optional) | Outlook 2016 (on Windows 10, except Click-To-Run) *<br/>Outlook for Microsoft 365 (on Windows 10, including Click-To-Run) ** |
-| | PAM PowerShell requestor cmdlets (optional) | Windows 10 <br/> Windows 11 **|
+| **MIM Add-ins and Extensions** | Windows | Windows 11 **|
+| | Outlook integration (optional) | Outlook for Microsoft 365 ** |
+| | PAM PowerShell requestor cmdlets (optional) | Windows 11 **|
 | **MIM Certificate Management** (Server and CA integration) | Windows server | Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Certificate authority | Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | MIM CM database | SQL Server 2016 SP3 *<br/> SQL Server 2017 ** |
-| **MIM Certificate Management** (Application) | Windows | Windows 10 |
-| **MIM Certificate Management** (Client ActiveX based smart card) | Windows | Windows 10 <br/> Internet Explorer (IE) mode in Microsoft Edge 78 or later (on Windows 11) **|
+| **MIM Certificate Management** (Application) | Windows |  |
+| **MIM Certificate Management** (Client ActiveX based smart card) | Windows | Internet Explorer (IE) mode in Microsoft Edge 78 or later (on Windows 11) **|
 | **MIM BHOLD Suite** | Windows Server | Windows Server 2016 (NR)* |
 | | BHOLD database | SQL Server 2016 SP3 * |
 | | Mail server (optional) |  |
