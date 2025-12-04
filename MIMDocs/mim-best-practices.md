@@ -17,11 +17,11 @@ ms.assetid:
 
 # Microsoft Identity Manager 2016 Best Practices
 
-This topic describes the best practices for deploying and operating Microsoft Identity Manager 2016 (MIM)
+This article describes the best practices for deploying and operating Microsoft Identity Manager 2016 (MIM)
 
 ## SQL setup
 > [!NOTE]
-> The following recommendations for setting up a server running SQL presume a SQL instance dedicated to the FIMService and a SQL instance dedicated to the FIMSynchronizationService database. If you are running the FIMService in a consolidated environment, you will have to make adjustments appropriate for your configuration.
+> The following recommendations for setting up a server running SQL presume a SQL instance dedicated to the FIMService and a SQL instance dedicated to the FIMSynchronizationService database. If you're running the FIMService in a consolidated environment, you'll have to make adjustments appropriate for your configuration.
 
 Configuration of the Structured Query Language (SQL) server is critical to optimal system performance. Achieving optimum MIM performance in large-scale implementations depends on the application of best practices for a server running SQL. For more information, see the following topics about SQL best practices:
 
@@ -35,7 +35,7 @@ Configuration of the Structured Query Language (SQL) server is critical to optim
 
 ### Presize data and log files
 
-Do not rely on autogrow. Instead, manage the growth of these files manually. You can leave autogrow on for safety reasons, but you should proactively manage the growth of the data files. For sample sizes of the MIM database, see the [FIM Capacity Planning Guide](https://go.microsoft.com/fwlink/?LinkID=185246).
+Don't rely on autogrow. Instead, manage the growth of these files manually. You can leave autogrow on for safety reasons, but you should proactively manage the growth of the data files. For sample sizes of the MIM database, see the [FIM Capacity Planning Guide](https://go.microsoft.com/fwlink/?LinkID=185246).
 
 ### To presize SQL data and log files
 
@@ -63,7 +63,7 @@ For optimal performance, we recommend that you create one data file per CPU core
 
 ### Ensure adequate space for Log files
 
-It is important to understand your recovery model’s disk requirements. Simple recovery mode may be appropriate during the initial system load to limit the use of your disk space, but the data created after your most recent backup is exposed to data loss. When using Full recovery mode, you need to manage the disk usage through backups that include frequent backups of the transaction log to prevent high disk space usage. For more information, see [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370).
+It's important to understand your recovery model’s disk requirements. Simple recovery mode may be appropriate during the initial system load to limit the use of your disk space, but the data created after your most recent backup is exposed to data loss. When using Full recovery mode, you need to manage the disk usage through backups that include frequent backups of the transaction log to prevent high disk space usage. For more information, see [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370).
 
 ### Limit SQL server memory
 
@@ -108,14 +108,14 @@ Depending on how much memory you have on your SQL server and if you share the SQ
 
 In general, you should work with your database administrator to design a backup and recovery strategy. Some recommendations include:
 - Perform database backups according to your organization’s backup policy. 
-- If incremental log backups are not planned, the database should be set to the Simple recovery mode. 
+- If incremental log backups aren't planned, the database should be set to the Simple recovery mode. 
 - Ensure that you understand the implications of the different recovery models before implementing your backup strategy. Learn the disk space requirements for these models. Full recovery model requires frequent log backups to avoid high disk space usage. 
 
 For more information, see [Recovery Model Overview](https://go.microsoft.com/fwlink/?LinkID=185370) and [FIM 2010 Backup and Restore Guide](https://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## Create a Backup Administrator account for the FIM Service after installation
 
-Members of the FIMService Administrators set have unique permissions critical to the operation of your MIM deployment. If you are unable to log on as part of the Administrators set, the only resolution is to roll back to a previous backup of the system. To mitigate this situation, we recommend that you add other users to the FIM Administrative set as part of your post-installation configuration.
+Members of the FIMService Administrators set have unique permissions critical to the operation of your MIM deployment. If you're unable to log on as part of the Administrators set, the only resolution is to roll back to a previous backup of the system. To mitigate this situation, we recommend that you add other users to the FIM Administrative set as part of your post-installation configuration.
 
 ## FIM Service
 
@@ -166,7 +166,7 @@ We recommend that you disable Microsoft Office SharePoint® indexing. There are 
 
 ## MIM 2016 Initial Data Load
 
-This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It is important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. Those steps are for a one-time operation and not a continuous synchronization.
+This section lists a series of steps to increase the performance of the initial data load from external system to MIM. It's important to understand that a number of these steps are only performed during the initial population of the system. They should be reset upon load completion. Those steps are for a one-time operation and not a continuous synchronization.
 
 > 
 > [!IMPORTANT]
@@ -243,27 +243,27 @@ If you have to switch to Simple recovery mode, ensure that you reconfigure your 
 
 ### Avoid changing display names
 
-For many object types such as MPRs, the syncproduction.ps1 script uses the display name as the only anchor attribute between two systems. Consequently, a change to an existing MPR’s display name results in the deletion of the existing MPR, followed by the creation of a new MPR. This result occurs because the migration process cannot successfully join MPRs whose join criteria have changed. To avoid this issue, you can bind a custom attribute to all configuration object types and use that attribute as the join criteria. This process enables you to modify display names without affecting the migration process.
+For many object types such as MPRs, the syncproduction.ps1 script uses the display name as the only anchor attribute between two systems. Consequently, a change to an existing MPR’s display name results in the deletion of the existing MPR, followed by the creation of a new MPR. This result occurs because the migration process can't successfully join MPRs whose join criteria have changed. To avoid this issue, you can bind a custom attribute to all configuration object types and use that attribute as the join criteria. This process enables you to modify display names without affecting the migration process.
 
 ### Avoid changing the content of intermediate files
 
-While the file format and application programming interface (API) of the low-level objects are public and manipulations are supported by developers, we do not recommend that you change the contents of the intermediate formats during the migration. However, it may be necessary to remove entire ImportObjects from changes.xml or to perform find and replace operations on pilot.xml to replace version numbers or pilot Domain Name System (DNS) information for production DNS information.
+While the file format and application programming interface (API) of the low-level objects are public and manipulations are supported by developers, we don't recommend that you change the contents of the intermediate formats during the migration. However, it may be necessary to remove entire ImportObjects from changes.xml or to perform find and replace operations on pilot.xml to replace version numbers or pilot Domain Name System (DNS) information for production DNS information.
 
 ### Ensure that the version number is correct in pilot.xml when migrating across versions
 
-While migrations across version numbers are not recommended or supported, you can often do this migration by replacing the pilot version number with the production version number in pilot.xml. Specifically, WorkflowDefinition and
+While migrations across version numbers aren't recommended or supported, you can often do this migration by replacing the pilot version number with the production version number in pilot.xml. Specifically, WorkflowDefinition and
 
 ActivityInformationConfiguration objects require the version number to refer precisely to workflow activities in the production environment. Failing to replace the version number results in the Compare-FIMConfig cmdlet identifying differences between the Extensible Object Markup Language (XOML) attributes on WorkflowDefinitions and migrating the pilot’s version number. The production FIM Service may fail to start workflow activities with the incorrect version number.
 
 ### Avoid cyclic references
 
-In general, cyclic references are not recommended in a MIM configuration. However, cycles sometimes occur when Set A refers to Set B and Set B also refers to Set A. To avoid issues with cyclic references, you should change the definition of Set A or Set B so that they both do not refer to each other. Then, restart the migration process. If you do have cyclic references and the Compare-FIMConfig cmdlet results in an error as a result, it is necessary to break the cycle manually. Because the Compare-FIMConfig cmdlet outputs a list of changes in order of precedence, it requires that no cycles exist among the references of configuration objects.
+In general, cyclic references aren't recommended in a MIM configuration. However, cycles sometimes occur when Set A refers to Set B and Set B also refers to Set A. To avoid issues with cyclic references, you should change the definition of Set A or Set B so that they both don't refer to each other. Then, restart the migration process. If you do have cyclic references and the Compare-FIMConfig cmdlet results in an error as a result, it's necessary to break the cycle manually. Because the Compare-FIMConfig cmdlet outputs a list of changes in order of precedence, it requires that no cycles exist among the references of configuration objects.
 
 ## Security
 
 ### MIM MA account
 
-The MIM MA account is not considered a service account and should be a regular user account. The accounts must be able to log on locally in order for the FIM Synchronization Service service account to be able to impersonate it.
+The MIM MA account isn't considered a service account and should be a regular user account. The accounts must be able to log on locally in order for the FIM Synchronization Service service account to be able to impersonate it.
 
 To enable the MIM MA account to log on locally
 
