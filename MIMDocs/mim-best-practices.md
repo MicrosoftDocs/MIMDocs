@@ -482,14 +482,17 @@ To remove an entitlement but leave the current members alone (for example, stop 
 When applying the best practices for sets, you need to consider the impact of the optimizations on the manageability and ease of future administration. Appropriate testing at expected production scale should be performed to identify the right balance between performance and manageability before applying these recommendations.
 
 >[!NOTE]
-> All the following guidelines apply to dynamic sets and dynamic groups.
-
+> All the following guidelines apply to criteria-based groups and criteria-based sets.
 
 #### Minimize the use of dynamic nesting
 
 This refers to the filter of a set referencing the ComputedMember attribute of another set. A common reason for nesting sets is to avoid duplicating a membership condition across many sets. While this approach may result in better manageability of the sets, there is a performance tradeoff. You can optimize for performance by duplicating the membership conditions of a nested set instead of nesting the set itself.
 
 You may encounter cases where you cannot avoid nesting sets to satisfy a functional requirement. These are the primary situations where you should nest sets. For example, to define the set of all the groups without Full-Time Employee owners, the nesting of sets must be used as follows: `/Group[not(Owner = /Set[ObjectID = ‘X’]/ComputedMember]`, where ‘X’ is the ObjectID of the set of All Full Time Employees.
+
+#### Filter condition limit
+
+We recommend limiting filter conditions to six or fewer because exceeding this number can cause performance issues and lead to potential UI errors. Keeping conditions within this limit ensures smoother operations and reduces the risk of system instability.
 
 #### Minimize the use of negative conditions
 
