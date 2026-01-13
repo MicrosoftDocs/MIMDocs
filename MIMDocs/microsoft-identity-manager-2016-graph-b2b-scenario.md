@@ -331,6 +331,6 @@ Next Steps
 
 [Functions Reference for FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[How to provide secure remote access to on-premises applications](/azure/active-directory/app-proxy/application-proxy)
+[How to provide secure remote access to on-premises applications](/entra/identity/app-proxy/overview-what-is-app-proxy)
 
 [Download Microsoft Identity Manager connector for Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
