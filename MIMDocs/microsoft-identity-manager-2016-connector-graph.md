@@ -36,7 +36,7 @@ To learn how to configure MIM sync to automatically create and maintain AD DS ac
 
 ### Migration of IAM from MIM to Microsoft Entra
 
-You can use the MIM Graph Connector as part of a migration strategy to move from MIM to Microsoft Entra. For example, if you have been managing groups in MIM using self-service, you could then provision those groups to Microsoft Entra as cloud groups.
+You can use the MIM Graph Connector as part of a migration strategy to move users and groups and their attributes from MIM to Microsoft Entra. For example, if you have been managing groups in MIM using the MIM Portal for self-service or dynamic group membership calculation, you could provision those groups from MIM Sync to Microsoft Entra as cloud groups, and then subsequently remove those groups from MIM.
 
 
 ### Other identity management scenarios
