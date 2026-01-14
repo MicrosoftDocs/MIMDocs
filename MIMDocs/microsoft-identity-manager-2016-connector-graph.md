@@ -42,7 +42,7 @@ You can use the MIM Graph Connector as part of a migration strategy to move user
 ### Other identity management scenarios
 
 
-The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Microsoft Entra ID, beyond user and group synchronization to Microsoft Entra ID. When evaluating potential scenarios, keep in mind that this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with a Microsoft Entra Connect deployment. [Microsoft Entra Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Microsoft Entra ID, by synchronizing users and groups from on-premises directories to Microsoft Entra ID. Microsoft Entra Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Microsoft Entra Connect attempting to match those objects back to the Microsoft Entra directory. Nor can this connector be used to make changes to Microsoft Entra objects, which were created by Microsoft Entra Connect.
+The connector can be used for other specific identity management scenarios involving create, read, update and delete operations of user, group and contact objects in Microsoft Entra ID, beyond user and group synchronization to Microsoft Entra ID. When evaluating potential scenarios, keep in mind that this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with a Microsoft Entra Connect deployment. [Microsoft Entra Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Microsoft Entra ID, by synchronizing users and groups from on-premises directories to Microsoft Entra ID. Microsoft Entra Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Microsoft Entra Connect attempting to match those objects back to the Microsoft Entra directory. Nor can this connector be used to make changes to Microsoft Entra objects, which were created by Microsoft Entra Connect.
 
 
 
@@ -90,8 +90,8 @@ The connector can be used for other specific identity management scenarios invol
 
     More details about required permissions could be found in the [permissions reference](/graph/permissions-reference).
 
->[!NOTE]
->**Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
+    >[!NOTE]
+    >**Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
 
 1. Grant admin consent for selected permissions.
     ![Image of granted admin consent](media/microsoft-identity-manager-2016-ma-graph/granted-admin-consent.png)
@@ -102,8 +102,8 @@ The connector can be used for other specific identity management scenarios invol
 
 1. Before you install the Connector, make sure you have the following on the synchronization server: 
 
- - Microsoft .NET 4.6.2 Framework or later
- - Microsoft Identity Manager 2016 SP2, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
+   - Microsoft .NET 4.6.2 Framework or later
+   - Microsoft Identity Manager 2016 SP2, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
 
 1. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP2, is available as a download from the
 [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=51495).
@@ -114,39 +114,38 @@ The connector can be used for other specific identity management scenarios invol
 
 
 
-1. In the Synchronization Service Manager UI, select **Connectors** and **Create**.
-Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
+1. In the Synchronization Service Manager UI, select **Connectors** and **Create**. Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 
-![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
+   ![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 
 1. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID, as you won't be able to run multiple imports in parallel for the same application.
 
-The connectivity page specifies the Graph API version that is to be used
-and the tenant domain name. The Client ID and Client Secret represent the Application ID and
-Key value of the application that was previously created in Microsoft Entra ID.
+   The connectivity page specifies the Graph API version that is to be used
+   and the tenant domain name. The Client ID and Client Secret represent the Application ID and
+   Key value of the application that was previously created in Microsoft Entra ID.
 
-The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you'll need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints). Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
+   The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you'll need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints). Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
 1. Make any necessary changes on the Global Parameters page:
 
-![Global parameters page image](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
+   ![Global parameters page image](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
 
-Picture 5. Global Parameters page
+   Picture 5. Global Parameters page
 
-Global parameters page contains the following settings:
+   Global parameters page contains the following settings:
 
-- DateTime format – format that is used for any attribute with Edm.DateTimeOffset type. All dates are converted to string by using that format during the import. Set format is applied for any attribute, which
+    - DateTime format – format that is used for any attribute with Edm.DateTimeOffset type. All dates are converted to string by using that format during the import. Set format is applied for any attribute, which
 saves date.
 
- - HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP call to Graph.
+    - HTTP timeout (seconds) – timeout in seconds that will be used during each HTTP call to Graph.
 
- - Force change password for created user at next sign – this option is used for new user that will be created during the export. If option is enabled, then [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) property will be set to true, otherwise it will be false.
+    - Force change password for created user at next sign – this option is used for new user that will be created during the export. If option is enabled, then [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) property will be set to true, otherwise it will be false.
 
 ## Configure the connector schema and operations
 
 
-1. Configure the schema. The connector supports the following list of object types when used with the Graph v1.0 endpoint:
+Next, configure the schema. The connector supports the following list of object types when used with the Graph v1.0 endpoint:
 
 -   User
 
@@ -203,11 +202,11 @@ In order to enable the use of query filters to improve full import performance c
 
 ![Connector settings page one image with Add objects filter checkbox checked](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-1.png)
 
-After that, on *Schema 2* page type an expression to be used to filter users, groups, contacts or service principals.
+After that, on *Schema 2* page type an expression to be used to filter users, groups, contacts, or service principals.
 
 ![Connector settings page two image with a sample filter startsWith(displayName,'J')](media/microsoft-identity-manager-2016-ma-graph/connector-settings-page-2.png)
 
-On the screenshot above, the filter *startsWith(displayName,'J')* is set to read only users whose displayName attribute value starts with 'J'.
+On the screenshot above, the filter `startsWith(displayName,'J')` is set to read only users whose `displayName` attribute value starts with `J`.
 
 Make sure that the attribute used in filter expression is selected in connector properties.
 
