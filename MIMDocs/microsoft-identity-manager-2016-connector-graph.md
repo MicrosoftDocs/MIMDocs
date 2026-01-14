@@ -34,6 +34,11 @@ or other gateway mechanisms. The Microsoft Entra application proxy requires each
 
 To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Microsoft Entra business-to-business (B2B) collaboration with MIM 2016 and the Microsoft Entra application proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  That article illustrates the sync rules needed for the connector.
 
+### Migration of IAM from MIM to Microsoft Entra
+
+You can use the MIM Graph Connector as part of a migration strategy to move from MIM to Microsoft Entra. For example, if you have been managing groups in MIM using self-service, you could then provision those groups to Microsoft Entra as cloud groups.
+
+
 ### Other identity management scenarios
 
 
@@ -48,22 +53,22 @@ The connector can be used for other specific identity management scenarios invol
 ### Authorizing the connector to retrieve or manage objects in your Microsoft Entra directory
 
 
-1.  The connector requires a Web app / API application to be created in Microsoft Entra ID, so that it can be authorized with appropriate permissions to operate on Microsoft Entra objects through Microsoft Graph.
+1.  The connector requires a service principal, a Web app / API application, to be created in Microsoft Entra ID, so that it can be authorized with appropriate permissions to operate on Microsoft Entra objects through Microsoft Graph.
 
     ![Image of new application registration button](media/microsoft-identity-manager-2016-ma-graph/new-application-registration-button.png)
     ![Image of application registration](media/microsoft-identity-manager-2016-ma-graph/new-application-registration.png)
 
     Picture 1. New application registration
 
-2.  In the Azure portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
+2.  In the Microsoft Entra portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
 
-3.  Generate new Client Secret by opening *Certificates & secrets*. Set some Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value won't be available to view again after leaving the page.
+3.  Generate a new Client Secret by opening *Certificates & secrets*. Set a Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value won't be available to view again after leaving the page.
 
     ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
     Picture 2. New Client Secret
 
-4.  Grant proper 'Microsoft Graph' permissions to the application by opening "API Permissions"
+4.  Grant the necessary 'Microsoft Graph' permissions for the scenario to the application by opening "API Permissions".
 
     ![Image of add permissions button](media/microsoft-identity-manager-2016-ma-graph/add-permission-button.png)
     Picture 3. Add new API
@@ -71,7 +76,7 @@ The connector can be used for other specific identity management scenarios invol
     Select 'Microsoft Graph' Application permissions.
     ![Image of applications permissions](media/microsoft-identity-manager-2016-ma-graph/application-permissions.png)
 
-    Revoke all unneeded permissions.
+    Revoke any already-existing unneeded permissions.
 
     ![Image of not granted applications permissions](media/microsoft-identity-manager-2016-ma-graph/not-granted-permissions.png)
 
@@ -115,7 +120,7 @@ Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 ![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 
-10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID to avoid running import in parallel for the same application.
+10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID, as you do will not be able to run multiple imports in parallel for the same application.
 
 Picture 4. Connectivity page
 
