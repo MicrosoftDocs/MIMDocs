@@ -34,7 +34,7 @@ or other gateway mechanisms. The Microsoft Entra application proxy requires each
 
 To learn how to configure MIM sync to automatically create and maintain AD DS accounts for guests, after reading the instructions in this article, continue reading in the article [Microsoft Entra business-to-business (B2B) collaboration with MIM 2016 and the Microsoft Entra application proxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md). That article illustrates the sync rules needed for the connector.
 
-### Migration of IAM from MIM to Microsoft Entra
+### Migration of identity attributes from MIM to Microsoft Entra
 
 You can use the MIM Graph Connector as part of a migration strategy to move users and groups and their attributes from MIM to Microsoft Entra. For example, if you have been managing groups in MIM using the MIM Portal for self-service or dynamic group membership calculation, you could provision those groups from MIM Sync to Microsoft Entra as cloud groups, and then subsequently remove those groups from MIM.
 
@@ -42,7 +42,7 @@ You can use the MIM Graph Connector as part of a migration strategy to move user
 ### Other identity management scenarios
 
 
-The connector can be used for other specific identity management scenarios involving create, read, update and delete operations of user, group and contact objects in Microsoft Entra ID, beyond user and group synchronization to Microsoft Entra ID. When evaluating potential scenarios, keep in mind that this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with a Microsoft Entra Connect deployment. [Microsoft Entra Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Microsoft Entra ID, by synchronizing users and groups from on-premises directories to Microsoft Entra ID. Microsoft Entra Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Microsoft Entra Connect attempting to match those objects back to the Microsoft Entra directory. Nor can this connector be used to make changes to Microsoft Entra objects, which were created by Microsoft Entra Connect.
+The connector can be used for other specific identity management scenarios for create, read, update and delete operations of user, group and contact objects in Microsoft Entra ID, beyond user and group synchronization to Microsoft Entra ID. When evaluating potential scenarios, keep in mind that this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with a Microsoft Entra Connect deployment. [Microsoft Entra Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Microsoft Entra ID, by synchronizing users and groups from on-premises directories to Microsoft Entra ID. Microsoft Entra Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Microsoft Entra Connect attempting to match those objects back to the Microsoft Entra directory. Nor can this connector be used to make changes to Microsoft Entra objects, which were created by Microsoft Entra Connect.
 
 
 
@@ -190,7 +190,7 @@ page size). For example:
 
 -   Page size configured in connector is 5000
 
-In this case there will be two iterations during the import, each of them will return 5000 objects to Sync. So, a new access token will be request twice.
+In this case there will be two iterations during the import, each of them will return 5000 objects to Sync. So, a new access token will be requested twice.
 
 During the export, a new access token will be requested for each object that must be added/updated/deleted.
 
