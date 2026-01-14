@@ -46,29 +46,29 @@ The connector can be used for other specific identity management scenarios invol
 
 
 
-## Preparing to use the Connector for Microsoft Graph
+## Prepare to use the Connector for Microsoft Graph
 
 <a name='authorizing-the-connector-to-retrieve-or-manage-objects-in-your-azure-ad-directory'></a>
 
-### Authorizing the connector to retrieve or manage objects in your Microsoft Entra directory
+### Authorize the connector to retrieve or manage objects in your Microsoft Entra directory
 
 
-1.  The connector requires a service principal, a Web app / API application, to be created in Microsoft Entra ID, so that it can be authorized with appropriate permissions to operate on Microsoft Entra objects through Microsoft Graph.
+1. The connector requires a service principal, a Web app / API application, to be created in Microsoft Entra ID, so that it can be authorized with appropriate permissions to operate on Microsoft Entra objects through Microsoft Graph.
 
     ![Image of new application registration button](media/microsoft-identity-manager-2016-ma-graph/new-application-registration-button.png)
     ![Image of application registration](media/microsoft-identity-manager-2016-ma-graph/new-application-registration.png)
 
     Picture 1. New application registration
 
-2.  In the Microsoft Entra portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
+1. In the Microsoft Entra portal, open the created application, and save the Application ID, as a Client ID to use later on the MA’s connectivity page:
 
-3.  Generate a new Client Secret by opening *Certificates & secrets*. Set a Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value won't be available to view again after leaving the page.
+1. Generate a new Client Secret by opening *Certificates & secrets*. Set a Key description and select the maximum duration. Save changes and retrieve the client secret. The client secret value won't be available to view again after leaving the page.
 
     ![Image of add new secret button](media/microsoft-identity-manager-2016-ma-graph/new-secret-button.png)
 
     Picture 2. New Client Secret
 
-4.  Grant the necessary 'Microsoft Graph' permissions for the scenario to the application by opening "API Permissions".
+1. Grant the necessary 'Microsoft Graph' permissions for the scenario to the application by opening "API Permissions".
 
     ![Image of add permissions button](media/microsoft-identity-manager-2016-ma-graph/add-permission-button.png)
     Picture 3. Add new API
@@ -93,34 +93,34 @@ The connector can be used for other specific identity management scenarios invol
 >[!NOTE]
 >**Application.Read.All** permission is mandatory for schema detection and must be granted regardless of the object type connector will be working with.
 
-5. Grant admin consent for selected permissions.
+1. Grant admin consent for selected permissions.
     ![Image of granted admin consent](media/microsoft-identity-manager-2016-ma-graph/granted-admin-consent.png)
 
 
-## Installing the connector
+## Install the connector
 
 
-6.  Before you install the Connector, make sure you have the following on the synchronization server: 
+1. Before you install the Connector, make sure you have the following on the synchronization server: 
 
  - Microsoft .NET 4.6.2 Framework or later
  - Microsoft Identity Manager 2016 SP2, and must use hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) or later.
 
-7. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP2, is available as a download from the
+1. The connector for Microsoft Graph, in addition to other connectors for Microsoft Identity Manager 2016 SP2, is available as a download from the
 [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=51495).
 
-8.  Restart MIM Synchronization Service.
+1. Restart MIM Synchronization Service.
  
-## Connector configuration
+## Configure the connector
 
 
 
-9.  In the Synchronization Service Manager UI, select **Connectors** and **Create**.
+1. In the Synchronization Service Manager UI, select **Connectors** and **Create**.
 Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 
 ![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 
-10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID, as you won't be able to run multiple imports in parallel for the same application.
+1. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID, as you won't be able to run multiple imports in parallel for the same application.
 
 The connectivity page specifies the Graph API version that is to be used
 and the tenant domain name. The Client ID and Client Secret represent the Application ID and
@@ -128,7 +128,7 @@ Key value of the application that was previously created in Microsoft Entra ID.
 
 The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you'll need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints). Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
-11. Make any necessary changes on the Global Parameters page:
+1. Make any necessary changes on the Global Parameters page:
 
 ![Global parameters page image](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
 
@@ -143,10 +143,10 @@ saves date.
 
  - Force change password for created user at next sign – this option is used for new user that will be created during the export. If option is enabled, then [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) property will be set to true, otherwise it will be false.
 
-## Configuring the connector schema and operations
+## Configure the connector schema and operations
 
 
-12.   Configure the schema. The connector supports the following list of object types when used with the Graph v1.0 endpoint:
+1. Configure the schema. The connector supports the following list of object types when used with the Graph v1.0 endpoint:
 
 -   User
 
@@ -180,7 +180,7 @@ Multivalued attributes (Collection) are also supported for any of a type from th
 The connector uses the `id` attribute for anchor and DN for all objects. Therefore, rename isn't needed, because Graph API doesn't allow an object to change its `id` attribute.
 
 
-## Access token lifetime
+## Plan for access token lifetime
 
 
 A Graph application requires an access token for accessing the Graph API. A connector
@@ -195,9 +195,9 @@ In this case there will be two iterations during the import, each of them will r
 
 During the export, a new access token will be requested for each object that must be added/updated/deleted.
 
-## Query filters
+## Configure Query filters
 
-Graph API endpoints offer an ability to limit amount of objects returned by GET queries by introducing *$filter* parameter. 
+Graph API endpoints offer an ability to limit the number of objects returned by GET queries by introducing the *$filter* parameter.
 
 In order to enable the use of query filters to improve full import performance cycle, on the *Schema 1* page of connector properties, enable **Add objects filter** checkbox.
 
