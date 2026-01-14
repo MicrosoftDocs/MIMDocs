@@ -42,7 +42,7 @@ You can use the MIM Graph Connector as part of a migration strategy to move from
 ### Other identity management scenarios
 
 
-The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Microsoft Entra ID, beyond user and group synchronization to Microsoft Entra ID. When evaluating potential scenarios, please keep in mind: this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with a Microsoft Entra Connect deployment.  [Microsoft Entra Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Microsoft Entra ID, by synchronizing users and groups from on-premises directories to Microsoft Entra ID. Microsoft Entra Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Microsoft Entra Connect attempting to match those objects back to the Microsoft Entra directory. Nor can this connector be used to make changes to Microsoft Entra objects, which were created by Microsoft Entra Connect.
+The connector can be used for other specific identity management scenarios involving create, read, update and delete of user, group and contact objects in Microsoft Entra ID, beyond user and group synchronization to Microsoft Entra ID. When evaluating potential scenarios, keep in mind that this connector can't be operated in a scenario, which would result in a data flow overlap, actual or potential synchronization conflict with a Microsoft Entra Connect deployment. [Microsoft Entra Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) is the recommended approach to integrate on-premises directories with Microsoft Entra ID, by synchronizing users and groups from on-premises directories to Microsoft Entra ID. Microsoft Entra Connect has many more synchronization features and enables scenarios such as password and device writeback, which aren't possible for objects created by MIM. If data is being brought into AD DS, for example, ensure that it's excluded from Microsoft Entra Connect attempting to match those objects back to the Microsoft Entra directory. Nor can this connector be used to make changes to Microsoft Entra objects, which were created by Microsoft Entra Connect.
 
 
 
@@ -80,7 +80,7 @@ The connector can be used for other specific identity management scenarios invol
 
     ![Image of not granted applications permissions](media/microsoft-identity-manager-2016-ma-graph/not-granted-permissions.png)
 
-    The following permission should be added to the application to allow it to use the “Microsoft Graph API”, depending on the scenario:
+    The following permission should be added to the application to allow it to use the Microsoft Graph API, depending on the scenario:
 
     | Operation with object | Permission required                                                                  | Permission type |
     |-----------------------|--------------------------------------------------------------------------------------|-----------------|
@@ -120,15 +120,13 @@ Select **Graph (Microsoft)**, create a connector and give it a descriptive name.
 ![New connector image](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 
-10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID, as you will not be able to run multiple imports in parallel for the same application.
+10. In the MIM synchronization service UI, specify  the Application ID and generated Client Secret. Each management agent configured in MIM Sync should have its own application in Microsoft Entra ID, as you won't be able to run multiple imports in parallel for the same application.
 
-Picture 4. Connectivity page
-
-The connectivity page (Picture 4) contains the Graph API version that is used
-and tenant name. The Client ID and Client Secret represent the Application ID and
+The connectivity page specifies the Graph API version that is to be used
+and the tenant domain name. The Client ID and Client Secret represent the Application ID and
 Key value of the application that was previously created in Microsoft Entra ID.
 
-The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you'll need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).  Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
+The connector defaults to the v1.0 and the login and graph endpoints of the Microsoft Graph global service. If your tenant is in a national cloud, then you'll need to change your configuration to use the [endpoints for the national cloud](/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints). Note that certain features of Graph that are in the global service might not be available in all of the national clouds.
 
 11. Make any necessary changes on the Global Parameters page:
 
@@ -179,7 +177,7 @@ The list of attribute types that are supported:
 
 Multivalued attributes (Collection) are also supported for any of a type from the list above.
 
-The connector uses the ‘`id`’ attribute for anchor and DN for all objects. Therefore, rename isn't needed, because Graph API doesn't allow an object to change its `id` attribute.
+The connector uses the `id` attribute for anchor and DN for all objects. Therefore, rename isn't needed, because Graph API doesn't allow an object to change its `id` attribute.
 
 
 ## Access token lifetime
@@ -195,7 +193,7 @@ page size). For example:
 
 In this case there will be two iterations during the import, each of them will return 5000 objects to Sync. So, a new access token will be request twice.
 
-During the export a new access token will be requested for each object that must be added/updated/deleted.
+During the export, a new access token will be requested for each object that must be added/updated/deleted.
 
 ## Query filters
 
@@ -241,20 +239,18 @@ DateTime, Timestamp, Callstack" />
 </source>
 ```
 >[!NOTE]
->If ‘Run this management agent in a separate process’ is enabled, then
+>If `Run this management agent in a separate process` is enabled, then
 `dllhost.exe.config` should be used instead of `miiserver.exe.config`.
 
 **Access token expired error**
 
-Connector might return HTTP error 401 Unauthorized, message “Access token has
-expired.”:
+Connector might return HTTP error 401 Unauthorized, message `Access token has expired.`:
 
 ![Error details image](media/microsoft-identity-manager-2016-ma-graph/ce9e23ffe17e3dac79b58bba31cb5a8d.png)
 
-Picture 6. “Access token has expired.” Error
+Picture 6. `Access token has expired.` Error
 
-The cause of this issue might be configuration of access token lifetime from the
-Azure side. By default, the access token expires after 1 hour. To increase expiration time, see [this article](/azure/active-directory/develop/active-directory-configurable-token-lifetimes).
+The cause of this issue might be configuration of access token lifetime in Microsoft Entra. By default, the access token expires after 1 hour. To increase expiration time, see [this article](/azure/active-directory/develop/active-directory-configurable-token-lifetimes).
 
 Example of this using [Azure AD PowerShell Module Public Preview release](https://www.powershellgallery.com/packages/AzureADPreview)
 
