@@ -19,24 +19,24 @@ Microsoft Entra business-to-business (B2B) collaboration with Microsoft Identity
 ============================================================================================================================
 
 The initial scenario is external user AD account lifecycle
-management.   In this scenario, an organization invites guests into their Microsoft Entra directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications. This access is provided through [Microsoft Entra application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application) or other gateway mechanisms. The Microsoft Entra application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
+management. In this scenario, an organization invites guests into their Microsoft Entra directory, and wishes to give those guests access to on-premises Windows-Integrated Authentication or Kerberos-based applications. This access is provided through [Microsoft Entra application proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application) or other gateway mechanisms. The Microsoft Entra application proxy requires each user to have their own AD DS account, for identification and delegation purposes.
 
 ## Scenario-Specific Guidance
 
 A few assumptions made in the configuration of B2B with MIM and Microsoft Entra ID
 Application Proxy:
 
--   You have an on-premises Active Directory deployed, and Microsoft Identity Manager (MIM) is installed. The MIM Service, MIM Portal, Active Directory Management Agent (AD MA), and FIM Management Agent (FIM MA) are configured with basic settings. For more information, see [Deploy Microsoft Identity Manager 2016 SP2](./microsoft-identity-manager-deploy.md).
+- You have an on-premises Active Directory deployed, and Microsoft Identity Manager (MIM) is installed. The MIM Service, MIM Portal, Active Directory Management Agent (AD MA), and FIM Management Agent (FIM MA) are configured with basic settings. For more information, see [Deploy Microsoft Identity Manager 2016 SP2](./microsoft-identity-manager-deploy.md).
 
--   You follow the instructions in the article to download and install the [Graph connector](microsoft-identity-manager-2016-connector-graph.md).
+- You follow the instructions in the article to download and install the [Graph connector](microsoft-identity-manager-2016-connector-graph.md).
 
--   You have Microsoft Entra Connect configured for synchronizing users and groups to Microsoft Entra ID.
+- You have Microsoft Entra Connect configured for synchronizing users and groups to Microsoft Entra ID.
 
--   You set up Application Proxy connectors and connector groups. If not, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Microsoft Entra ID](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#install-and-register-a-connector) to install and configure.
+- You set up Application Proxy connectors and connector groups. If not, see [Tutorial: Add an on-premises application for remote access through Application Proxy in Microsoft Entra ID](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application#install-and-register-a-connector) to install and configure.
 
--   You publish one or more applications which rely on Windows Integrated Authentication or individual AD accounts via Microsoft Entra application proxy.
+- You publish one or more applications, which rely on Windows Integrated Authentication or individual AD accounts via Microsoft Entra application proxy.
 
--   One or more guests are invited, resulting in one or more users being created in Microsoft Entra ID. For more information, see [Self-service for Microsoft Entra B2B collaboration sign-up](/azure/active-directory/active-directory-b2b-self-service-portal).
+- One or more guests are invited, resulting in one or more users being created in Microsoft Entra ID. For more information, see [Self-service for Microsoft Entra B2B collaboration sign-up](/azure/active-directory/active-directory-b2b-self-service-portal).
 
 ## B2B End to End Deployment Example scenario
 
@@ -46,23 +46,21 @@ Contoso Pharmaceuticals works with Trey Research Inc. as part of their R&D
 Department. Trey Research employees need to access the research reporting
 application provided by Contoso Pharmaceuticals.
 
--   Contoso Pharmaceuticals exists in its own tenant with a custom domain configured.
+- Contoso Pharmaceuticals exists in its own tenant with a custom domain configured.
 
--   Someone invites an external user to the Contoso Pharmaceuticals tenant.
-    The invitation is accepted, and the user can access shared resources.
+- Someone invites an external user to the Contoso Pharmaceuticals tenant. The invitation is accepted, and the user can access shared resources.
 
--   Contoso Pharmaceuticals has published an application via App Proxy. In this scenario, the example application is 
-    the MIM Portal. This would enable a guest user to participate in MIM processes, for example in help desk scenarios or to request access to groups in MIM.
+- Contoso Pharmaceuticals publish an application via App Proxy. In this scenario, the example application is the MIM Portal. This would enable a guest user to participate in MIM processes, for example in help desk scenarios or to request access to groups in MIM.
 
 
 <a name='configure-ad-and-azure-ad-connect-to-exclude-users-added-from-azure-ad'></a>
 
 ## Configure AD and Microsoft Entra Connect to exclude users added from Microsoft Entra ID
 
-By default, Microsoft Entra Connect assumes that non-admin users in Active Directory synchronize into Microsoft Entra ID. If Microsoft Entra Connect finds an existing user in Microsoft Entra ID that matches the user from on-premises AD, Microsoft Entra Connect will match the two accounts and assume that this is an earlier synchronization of the user, and make the on-premises AD authoritative.  However, this default behavior isn't suitable for the B2B flow, where the user account originates in Microsoft Entra ID. 
+By default, Microsoft Entra Connect assumes that non-admin users in Active Directory synchronize into Microsoft Entra ID. If Microsoft Entra Connect finds an existing user in Microsoft Entra ID that matches the user from on-premises AD, it matches the two accounts. The program treats this as a previous synchronization and makes the on-premises AD authoritative. However, this default behavior isn't suitable for the B2B flow, where the user account originates in Microsoft Entra ID.
 
-Therefore, the users brought into AD DS by MIM from Microsoft Entra ID need to be stored in a way that Microsoft Entra ID won't attempt to synchronize those users back to Microsoft Entra ID.
-One way to do this is to create a new organizational unit in AD DS, and configure Microsoft Entra Connect to exclude that organizational unit.  
+Users brought into AD DS by MIM from Microsoft Entra ID must be stored so that Microsoft Entra ID doesn't synchronize them back.
+One way to do this is to create a new organizational unit in AD DS, and configure Microsoft Entra Connect to exclude that organizational unit.
 
 For more information, see [Microsoft Entra Connect Sync: Configure filtering](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering).
 
@@ -70,8 +68,8 @@ For more information, see [Microsoft Entra Connect Sync: Configure filtering](/a
 
 ## Create the Microsoft Entra application 
 
-Note: Before creating in MIM Sync the management agent for the graph connector, make sure you have reviewed the guide to deploying the [Graph Connector](microsoft-identity-manager-2016-connector-graph.md), and created an application with a client ID and secret.
-Ensure that the application has been authorized for least one of these permissions: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All`. 
+Note: Before you create the management agent for the Graph connector in MIM Sync, review the guide to deploying the [Graph Connector](microsoft-identity-manager-2016-connector-graph.md) and create an application with a client ID and secret.
+Ensure that the application is authorized for at least one of these permissions: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` or `Directory.ReadWrite.All`. 
 
 ## Create the New Management Agent
 
@@ -84,7 +82,7 @@ Select **Graph (Microsoft)** and give it a descriptive name.
 ### Connectivity
 
 On the Connectivity page, you must specify the Graph API Version. Production
-ready PAI is **V 1.0**, Non-Production is **Beta**.
+ready PAI is **V 1.0**. Non-Production is **Beta**.
 
 ![Screenshot showing the Graph A P I version selected and a Next button.](media/microsoft-identity-manager-2016-graph-b2b-scenario/6fabfe20af0207f1556f0df18fd16f60.png)
 
@@ -115,19 +113,19 @@ plan to import. You must select at least 'User'.
 
 #### Select Attributes
 
-On the Select Attributes screen, select attributes from Microsoft Entra which will be needed to manage B2B users in AD. The Attribute "ID" is required.  The attributes `userPrincipalName` and `userType` will be used later in this configuration.  Other attributes are optional, including
+On the Select Attributes screen, select attributes from Microsoft Entra that you need to manage B2B users in AD. The Attribute "ID" is required. The attributes `userPrincipalName` and `userType` is used later in this configuration. Other attributes are optional, including
 
--   `displayName`
+- `displayName`
 
--   `mail`
+- `mail`
 
--   `givenName`
+- `givenName`
 
--   `surname`
+- `surname`
 
--   `userPrincipalName`
+- `userPrincipalName`
 
--   `userType`
+- `userType`
 
 ![Screenshot showing the Select Attributes screen with some attributes selected, and an O K button.](media/microsoft-identity-manager-2016-graph-b2b-scenario/58da80f5475cf01a97a6843dd279385c.png)
 
@@ -139,19 +137,19 @@ On the Configure Anchor screen, configuring the anchor attribute is a required s
 
 #### Configure Connector Filter
 
-On the configure Connector Filter page, MIM allows you to filter out objects based on attribute filter. In this scenario for B2B, the goal is to only  bring in Users with the value of the `userType` attribute that equals `Guest`, and not users with the userType that equals `member`.
+On the configure Connector Filter page, MIM allows you to filter out objects based on attribute filter. In this scenario for B2B, the goal is to only bring in Users with the value of the `userType` attribute that equals `Guest`, and not users with the userType that equals `member`.
 
 ![Screenshot showing the Configure Connector Filter page with filters for user selected, and an O K button.](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
 #### Configure Join and Projection Rules
 
-This guide assumes you'll be creating a sync rule.  As configuring Join and Projection rules are handled by sync rule, it isn't needed have to identify a join and projection on the connector itself. Leave default and click ok.
+This guide assumes you're creating a sync rule. A sync rule handles the configuration of Join and Projection rules, so you don't need to identify a join or projection on the connector itself. Leave default and click ok.
 
 ![Screenshot showing the Configure Join and Projection Rules page with an O K button.](media/microsoft-identity-manager-2016-graph-b2b-scenario/34896440ae6ad404e824eb35d8629986.png)
 
 #### Configure Attribute Flow
 
-This guide assumes you'll be creating a sync rule.  Projection isn't needed to define the attribute flow in MIM Sync, as it's handled by the sync rule that is created later. Leave default and click ok.
+This guide assumes you're creating a sync rule. You don't need to define the attribute flow in MIM Sync, because the sync rule created later handles it. Leave default and click ok.
 
 ![Screenshot showing the Configure Attribute Flow page with an O K button.](media/microsoft-identity-manager-2016-graph-b2b-scenario/b7cd0d294d4f361f0551bf2cb774d5f5.png)
 
@@ -200,7 +198,7 @@ In the steps below we begin the mapping of B2B guest account and the attribute f
 
 ![Screenshot showing the Synchronization Rules screen.](media/microsoft-identity-manager-2016-graph-b2b-scenario/e389ee78beac3bf469ddd97bddb5e9d5.png)
 
-The next steps will require the addition of  minimal configuration to the FIM MA and the AD MA.
+The next steps will require the addition of minimal configuration to the FIM MA and the AD MA.
 
 More details can be found here for the configuration
 <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> - How Do I Provision Users to AD DS
@@ -209,7 +207,7 @@ More details can be found here for the configuration
 
 ### Synchronization Rule: Import Guest User to MV to Synchronization Service Metaverse from Microsoft Entra ID<br>
 
-Navigate to the MIM Portal, select Synchronization Rules, and click new.  Create an inbound synchronization rule for the B2B flow via the graph connector.
+Navigate to the MIM Portal, select Synchronization Rules, and click new. Create an inbound synchronization rule for the B2B flow via the graph connector.
 ![Screenshot showing the General tab on the Create Synchronization Rule screen with the synchronization rule name entered.](media/microsoft-identity-manager-2016-graph-b2b-scenario/ba39855f54268aa824cd8d484bae83cf.png)
 
 ![Screenshot showing the Scope tab with Metaverse Resource Type, External System, External System Resource Type, and Filters.](media/microsoft-identity-manager-2016-graph-b2b-scenario/de059b93474c39763f0b27874b716e15.png)
@@ -219,7 +217,7 @@ On the relationship criteria step, be sure to select "Create resource in FIM".
 
 ![Screenshot showing the Inbound Attribute Flow tab on the Synchronization Rule IN screen.](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
 
-Configure the following inbound attribute flow rules.  Be sure to populate the `accountName`,  `userPrincipalName` and `uid` attributes as they'll be used later in this scenario :
+Configure the following inbound attribute flow rules. Be sure to populate the `accountName`, `userPrincipalName` and `uid` attributes as they're used later in this scenario:
 
 | **Initial Flow Only** | **Use as Existence Test** | **Flow (Source Value ⇒ FIM Attribute)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
@@ -236,7 +234,7 @@ Configure the following inbound attribute flow rules.  Be sure to populate the `
 
 ### Synchronization Rule: Create Guest User account to Active Directory 
 
-This synchronization rule creates the user in Active Directory.  Be sure the flow for `dn` must place the user in the organizational unit which was excluded from Microsoft Entra Connect.  Also, update the flow for `unicodePwd` to meet your AD password policy - the user won't need to know the password.  Note the value of `262656` for `userAccountControl` encodes the flags `SMARTCARD_REQUIRED` and `NORMAL_ACCOUNT`.
+This synchronization rule creates the user in Active Directory. Be sure the flow for `dn` must place the user in the organizational unit, which was excluded from Microsoft Entra Connect. Also, update the flow for `unicodePwd` to meet your AD password policy - the user doesn't need to know the password. Note the value of `262656` for `userAccountControl` encodes the flags `SMARTCARD_REQUIRED` and `NORMAL_ACCOUNT`.
 
 ![Screenshot showing the General tab of the Synchronization Rule OUT screen.](media/microsoft-identity-manager-2016-graph-b2b-scenario/3463e11aeb9fb566685e775d4e1b825c.png)
 
@@ -259,11 +257,11 @@ Flow Rules:
 
 ### Optional Synchronization Rule: Import B2B Guest User Objects SID to allow for login to MIM 
 
-This inbound synchronization rule brings the user's SID attribute from Active Directory back into MIM, so the user can access the MIM Portal.  The MIM Portal requires that the user have the attributes `samAccountName`, `domain` and `objectSid` populated in the MIM Service database.
+This inbound synchronization rule brings the user's SID attribute from Active Directory back into MIM, so the user can access the MIM Portal. The MIM Portal requires the user to have the attributes `samAccountName`, `domain` and `objectSid` populated in the MIM Service database.
 
-Configure the source external system as the `ADMA`, as the `objectSid` attribute will be set automatically by AD when MIM creates the user.
+Configure the source external system as the `ADMA`, because AD automatically sets the `objectSid` attribute when MIM creates the user.
  
-Note that if you configure users to be created in MIM Service, ensure that they aren't in scope of any sets intended for employee SSPR management policy rules.  You may need to change your set definitions to exclude users who have been created by the B2B flow. 
+Note that if you configure users to be created in MIM Service, make sure they aren't part of any sets used for employee SSPR management policy rules. You may need to change your set definitions to exclude users created by the B2B flow. 
 
 ![Screenshot showing the General tab of the Synchronization Rule IN screen.](media/microsoft-identity-manager-2016-graph-b2b-scenario/263df23fd588c4229b958aee240071f3.png)
 
@@ -287,27 +285,23 @@ Note that if you configure users to be created in MIM Service, ensure that they 
 Next, we invite the user, and then run the management agent sync rules in the following
 order:
 
--   Full Import and Synchronization on the `MIMMA` Management Agent.  This ensures MIM Sync has the latest synchronization rules configured.
+- Full Import and Synchronization on the `MIMMA` Management Agent. This ensures MIM Sync has the latest synchronization rules configured.
 
--   Full Import and Synchronization on the `ADMA` Management Agent.  This ensures that MIM and Active Directory are consistent.  At this point, there won't yet be any pending exports for guests.
+- Full Import and Synchronization on the `ADMA` Management Agent. This ensures that MIM and Active Directory are consistent. At this point, there are no pending exports for guests.
 
--   Full Import and Synchronization on the B2B Graph Management Agent.  This brings in the guest users into the metaverse.  At this point, one or more accounts will be pending export for `ADMA`.  If there are no pending exports, then check that guest users were imported into the connector space, and that the rules were configured for them to be given AD accounts.
+- Full Import and Synchronization on the B2B Graph Management Agent. This brings in the guest users into the metaverse. At this point, one or more accounts are pending export for `ADMA`. If there are no pending exports, check that guest users were imported into the connector space. Also, make sure the rules are configured to give them AD accounts.
 
--   Export, Delta Import, and Synchronization on the `ADMA` Management
-    Agent.  If the exports failed, then check the rule configuration and determine if there were any missing schema requirements. 
+- Export, Delta Import, and Synchronization on the `ADMA` Management Agent. If the exports failed, then check the rule configuration and determine if there were any missing schema requirements. 
 
--   Export, Delta Import, and Synchronization on the `MIMMA` Management Agent.  When this completes, there should no longer be any pending exports.
+- Export, Delta Import, and Synchronization on the `MIMMA` Management Agent. When this completes, there should no longer be any pending exports.
 
 ![Table listing Management Agents by Name, Type, Description, and State.](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
 
 ## Optional: Application Proxy for B2B guests logging into MIM Portal
 
-Now that we have created the synchronization rules in MIM. In the App Proxy configuration, define use the cloud principal to allow for KCD on app proxy.
-Also, next added the user manually to the manage users and groups. The
-options not to show the user until creation has occurred in MIM to add the guest
-to an office group once provisioned requires a bit more configuration not
-covered in this document.
+Now that we create the synchronization rules in MIM. In the App Proxy configuration, define use the cloud principal to allow for KCD on app proxy.
+Also, next added the user manually to the manage users and groups. Configuring the option to prevent the user from showing until creation in MIM, or to add the guest to an Office group once provisioned, requires additional steps. These steps aren't covered in this document.
 
 ![Screenshot showing the MIM B 2 B manage users and groups screen.](media/microsoft-identity-manager-2016-graph-b2b-scenario/d0f0b253dbbc5edaf22b22f30f94dd3b.png)
 
