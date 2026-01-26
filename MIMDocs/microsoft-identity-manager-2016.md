@@ -13,7 +13,7 @@ manager: benyim
 ms.assetid: b0b39631-66df-4c5f-90c9-a1774346f816
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.topic: article
+ms.topic: whats-new
 ms.service: entra-id-governance
 ms.subservice: ''
 ms.date: 11/18/2024

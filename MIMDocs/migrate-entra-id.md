@@ -9,7 +9,7 @@ author: henrymbuguakiarie
 ms.author: henrymbugua
 reviewer: markwahl-msft
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity

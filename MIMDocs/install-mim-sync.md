@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 ms.date: 11/05/2025
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: microsoft-identity-manager
 
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc

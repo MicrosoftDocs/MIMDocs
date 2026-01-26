@@ -4,7 +4,7 @@ description: Understand how Microsoft BHOLD Suite works with Microsoft Identity 
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 04/08/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 
 ms.service: microsoft-identity-manager
 

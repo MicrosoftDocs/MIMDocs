@@ -5,7 +5,7 @@ author: henrymbuguakiarie
 ms.author: henrymbugua
 
 ms.date: 03/10/2020
-ms.topic: article
+ms.topic: how-to
 ms.service: microsoft-identity-manager
 ms.custom: sfi-image-nochange
 

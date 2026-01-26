@@ -8,7 +8,7 @@ author: markwahl-msft
 ms.author: mwahl
 
 ms.date: 11/10/2024
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-identity-manager
 ms.assetid: 
 
