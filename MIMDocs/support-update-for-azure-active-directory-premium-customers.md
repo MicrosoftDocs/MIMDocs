@@ -8,7 +8,7 @@ author: henrymbuguakiarie
 ms.author: henrymbugua
 
 ms.date: 6/9/2020
-ms.topic: article
+ms.topic: how-to
 ms.service: microsoft-identity-manager
 ms.assetid: 
 

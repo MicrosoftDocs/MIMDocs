@@ -8,7 +8,7 @@ ms.author: henrymbugua
 ms.reviewer: fimguy
 
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.service: microsoft-identity-manager
 
 

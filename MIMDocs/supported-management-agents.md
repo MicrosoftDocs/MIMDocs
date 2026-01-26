@@ -11,7 +11,7 @@ author: henrymbuguakiarie
 editor: ''
 reviewer: markwahl-msft
 
-ms.topic: article
+ms.topic: concept-article
 ms.date: 04/30/2024
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
