@@ -6,7 +6,7 @@ description: As the final step, grant a privileged user access to demonstrate th
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.service: microsoft-identity-manager
 
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07

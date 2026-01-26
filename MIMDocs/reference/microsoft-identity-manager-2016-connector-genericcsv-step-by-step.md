@@ -11,7 +11,7 @@ ms.assetid: c3e8f6d0-1b4a-4e5b-9f7d-8e1a2b3c4d5e
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: powershell
-ms.topic: article
+ms.topic: how-to
 ms.service: entra-id-governance
 ms.subservice: ''
 ms.date: 03/20/2024

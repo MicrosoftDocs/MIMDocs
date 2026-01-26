@@ -10,7 +10,7 @@ editor: ''
 ms.assetid: fd8ccef3-6605-47ba-9219-e0c74ffc0ec9
 ms.workload: identity
 ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-identity-manager
 ms.date: 3/29/2024
 ms.author: henrymbugua

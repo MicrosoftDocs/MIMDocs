@@ -7,7 +7,7 @@ ms.author: henrymbugua
 ms.reviewer: fimguy
 
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.service: microsoft-identity-manager
 
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
