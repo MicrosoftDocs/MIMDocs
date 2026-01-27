@@ -4,7 +4,7 @@ description: BHOLD model allows you to structure data from various sources
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-identity-manager
 ---
 

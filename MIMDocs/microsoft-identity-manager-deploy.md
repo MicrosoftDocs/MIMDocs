@@ -9,7 +9,7 @@ keywords: MIM
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 03/18/2021
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity

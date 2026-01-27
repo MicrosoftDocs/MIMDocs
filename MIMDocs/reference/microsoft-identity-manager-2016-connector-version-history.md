@@ -9,7 +9,7 @@ editor: ''
 reviewer: markwahl-msft
 
 ms.assetid: 6a0c66ab-55df-4669-a0c7-1fe1a091a7f9
-ms.topic: article
+ms.topic: release-notes
 ms.service: entra-id-governance
 ms.subservice: ''
 ms.workload: identity

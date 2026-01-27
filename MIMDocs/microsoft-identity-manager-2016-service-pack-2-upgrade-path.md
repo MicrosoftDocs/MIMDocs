@@ -7,7 +7,7 @@ keywords:
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 09/16/2019
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.service: microsoft-identity-manager
 
 
