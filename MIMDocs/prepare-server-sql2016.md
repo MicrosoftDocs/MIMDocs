@@ -7,7 +7,7 @@ keywords:
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 04/08/2025
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-identity-manager
 
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84

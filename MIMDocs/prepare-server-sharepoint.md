@@ -8,7 +8,7 @@ author: henrymbuguakiarie
 ms.author: henrymbugua
 manager: benyim
 ms.date: 10/23/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-identity-manager
 
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
