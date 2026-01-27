@@ -11,7 +11,7 @@ ms.author: henrymbugua
 reviewer: markwahl-msft
 manager: benyim
 ms.date: 10/23/2023
-ms.topic: article
+ms.topic: release-notes
 ms.service: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity

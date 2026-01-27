@@ -7,7 +7,7 @@ keywords:
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 08/11/2025
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.service: microsoft-identity-manager
 
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
