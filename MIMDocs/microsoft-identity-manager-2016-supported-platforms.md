@@ -7,7 +7,7 @@ keywords:
 author: billmath
 ms.author: billmath
 ms.date: 11/05/2025
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-identity-manager
 
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144

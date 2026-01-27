@@ -7,7 +7,7 @@ keywords:
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 04/08/2025
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: microsoft-identity-manager
 
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d

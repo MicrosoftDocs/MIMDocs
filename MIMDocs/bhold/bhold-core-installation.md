@@ -4,7 +4,7 @@ description: BHOLD suite installation core document
 author: henrymbuguakiarie
 ms.author: henrymbugua
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: microsoft-identity-manager
 ---
 
