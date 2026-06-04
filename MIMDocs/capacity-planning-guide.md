@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 # Capacity planning guide
 
-Microsoft Identity Manager (MIM) lets you create, update, and remove user accounts throughout your organization. It also gives end users the ability to manage their own accounts self-service features. Even in a small environment, all these actions can add up quickly.
+Microsoft Identity Manager (MIM) lets you create, update, and remove user accounts throughout your organization. It also gives end users the ability to manage their own accounts self-service features. Even in a small environment, all these actions can add up quickly. test PR
 
 Before you get started with MIM use this guide, along with test environments, to understand the appropriate scope for your deployment. This article walks through many common factors that you should take into consideration. Since every deployment is unique, however, testing your scenarios in a lab is still the best way to determine the appropriate servers, hardware, or topologies for your needs.
 
